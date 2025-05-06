@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>🔧 Daily DevOps Digest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        a {
+            color: #58a6ff;
+        }
+        a:hover {
+            color: #1f6feb;
+        }
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">🔧 Daily DevOps Digest</h1>
+        <p class="text-center text-muted">Curated from Hacker News, Reddit, and top tech blogs.</p>
+
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All</option>
+                
+                    <option value="Amazon AWS">Amazon AWS</option>
+                
+                    <option value="Netflix">Netflix</option>
+                
+                    <option value="Hacker News">Hacker News</option>
+                
+                    <option value="Reddit">Reddit</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+        
+            <li class="list-group-item mb-2" data-source="Amazon AWS">
+                <a href="https://aws.amazon.com/blogs/opensource/modernizing-snowflake-corporates-kubernetes-infrastructure-with-bottlerocket-and-karpenter/" target="_blank" class="fw-bold text-decoration-none">[Amazon AWS] Modernizing Snowflake Corporate’s Kubernetes Infrastructure with Bottlerocket and Karpenter</a>
+                <p class="mb-1 small text-light">Snowflake Corporate IT Cloud Operations reached a critical juncture in its cloud infrastructure evolution. Managing large-scale containerized workloads on Amazon Elastic Kubernetes Service (Amazon EKS) demanded a modern, secure, and efficient operating system. The existing setup, running on Amazon L</p>
+                <small class="text-secondary">Amazon AWS</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Netflix">
+                <a href="https://netflixtechblog.com/title-launch-observability-at-netflix-scale-8efe69ebd653?source=rss----2615bd06b42e---4" target="_blank" class="fw-bold text-decoration-none">[Netflix] Title Launch Observability at Netflix Scale</a>
+                <p class="mb-1 small text-light">Part 3: System Strategies and ArchitectureBy: Varun KhaitanWith special thanks to my stunning colleagues: Mallika Rao, Esmir Mesic, Hugo MarquesThis blog post is a continuation of Part 2, where we cleared the ambiguity around title launch observability at Netflix. In this installment, we will explor</p>
+                <small class="text-secondary">Netflix</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Amazon AWS">
+                <a href="https://aws.amazon.com/blogs/opensource/aws-cloud-credits-for-open-source-projects-affirming-our-commitment/" target="_blank" class="fw-bold text-decoration-none">[Amazon AWS] AWS Cloud Credits for Open Source Projects: Affirming Our Commitment</a>
+                <p class="mb-1 small text-light">Today, Amazon Web Services is proud to reaffirm our commitment to providing vital infrastructure for free and open source software projects. One of the ways we are doing this is with an extended $3 million annual commitment to the Kubernetes project, the container orchestration platform which underp</p>
+                <small class="text-secondary">Amazon AWS</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Hacker News">
+                <a href="https://cel.cs.brown.edu/blog/an-interactive-debugger-for-rust-trait-errors/" target="_blank" class="fw-bold text-decoration-none">An Interactive Debugger for Rust Trait Errors</a>
+                <p class="mb-1 small text-light">Article URL: https://cel.cs.brown.edu/blog/an-interactive-debugger-for-rust-trait-errors/ Comments URL: https://news.ycombinator.com/item?id=43901985 Points: 21 # Comments: 4</p>
+                <small class="text-secondary">Hacker News</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Hacker News">
+                <a href="https://anukari.com/blog/devlog/an-appeal-to-apple" target="_blank" class="fw-bold text-decoration-none">An Appeal to Apple from Anukari: one tiny macOS detail to make Anukari fast</a>
+                <p class="mb-1 small text-light">Article URL: https://anukari.com/blog/devlog/an-appeal-to-apple Comments URL: https://news.ycombinator.com/item?id=43901619 Points: 75 # Comments: 13</p>
+                <small class="text-secondary">Hacker News</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Hacker News">
+                <a href="https://mako.cc/copyrighteous/google-has-most-of-my-email-because-it-has-all-of-yours" target="_blank" class="fw-bold text-decoration-none">Google has most of my email because it has all of yours (2014)</a>
+                <p class="mb-1 small text-light">Article URL: https://mako.cc/copyrighteous/google-has-most-of-my-email-because-it-has-all-of-yours Comments URL: https://news.ycombinator.com/item?id=43901204 Points: 189 # Comments: 132</p>
+                <small class="text-secondary">Hacker News</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Hacker News">
+                <a href="https://blog.yaakov.online/replacing-kubernetes-with-systemd/" target="_blank" class="fw-bold text-decoration-none">Replacing Kubernetes with systemd (2024)</a>
+                <p class="mb-1 small text-light">Article URL: https://blog.yaakov.online/replacing-kubernetes-with-systemd/ Comments URL: https://news.ycombinator.com/item?id=43899236 Points: 285 # Comments: 159</p>
+                <small class="text-secondary">Hacker News</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Hacker News">
+                <a href="https://github.com/KoljaB/RealtimeVoiceChat" target="_blank" class="fw-bold text-decoration-none">Show HN: Real-time AI Voice Chat at ~500ms Latency</a>
+                <p class="mb-1 small text-light">Article URL: https://github.com/KoljaB/RealtimeVoiceChat Comments URL: https://news.ycombinator.com/item?id=43899028 Points: 379 # Comments: 149</p>
+                <small class="text-secondary">Hacker News</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Hacker News">
+                <a href="https://openai.com/index/evolving-our-structure/" target="_blank" class="fw-bold text-decoration-none">Evolving OpenAI's Structure</a>
+                <p class="mb-1 small text-light">Article URL: https://openai.com/index/evolving-our-structure/ Comments URL: https://news.ycombinator.com/item?id=43897772 Points: 528 # Comments: 563</p>
+                <small class="text-secondary">Hacker News</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Reddit">
+                <a href="https://www.reddit.com/r/devops/comments/1kfyv61/logwhisperer_aipowered_log_summarizer_that_runs/" target="_blank" class="fw-bold text-decoration-none">LogWhisperer – AI-powered log summarizer that runs locally (no OpenAI keys, no cloud)</a>
+                <p class="mb-1 small text-light">I built an open-source CLI tool called LogWhisperer that uses a local LLM to summarize Linux system logs into human-readable summaries. It’s useful for triaging noisy logs, quick postmortems, or just getting a sense of what the hell happened without manually parsing journalctl. Key features: Uses a </p>
+                <small class="text-secondary">Reddit</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Netflix">
+                <a href="https://netflixtechblog.com/how-netflix-accurately-attributes-ebpf-flow-logs-afe6d644a3bc?source=rss----2615bd06b42e---4" target="_blank" class="fw-bold text-decoration-none">[Netflix] How Netflix Accurately Attributes eBPF Flow Logs</a>
+                <p class="mb-1 small text-light">By Cheng Xie, Bryan Shultz, and Christine XuIn a previous blog post, we described how Netflix uses eBPF to capture TCP flow logs at scale for enhanced cloud network insights. In this post, we delve deeper into how Netflix solved a core problem: accurately attributing flow IP addresses to workload id</p>
+                <small class="text-secondary">Netflix</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Netflix">
+                <a href="https://netflixtechblog.com/globalizing-productions-with-netflixs-media-production-suite-fc3c108c0a22?source=rss----2615bd06b42e---4" target="_blank" class="fw-bold text-decoration-none">[Netflix] Globalizing Productions with Netflix’s Media Production Suite</a>
+                <p class="mb-1 small text-light">Jesse Korosi, Thijs van de Kamp, Mayra Vega, Laura Futuro, Anton MargolineThe journey from script to screen is full of challenges in the ever-evolving world of film and television. The industry has always innovated, and over the last decade, it started moving towards cloud-based workflows. However, </p>
+                <small class="text-secondary">Netflix</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Netflix">
+                <a href="https://netflixtechblog.com/foundation-model-for-personalized-recommendation-1a0bd8e02d39?source=rss----2615bd06b42e---4" target="_blank" class="fw-bold text-decoration-none">[Netflix] Foundation Model for Personalized Recommendation</a>
+                <p class="mb-1 small text-light">By Ko-Jen Hsiao, Yesu Feng and Sudarshan LamkhedeMotivationNetflix’s personalized recommender system is a complex system, boasting a variety of specialized machine learned models each catering to distinct needs including “Continue Watching” and “Today’s Top Picks for You.” (Refer to our recent overv</p>
+                <small class="text-secondary">Netflix</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Netflix">
+                <a href="https://netflixtechblog.com/hdr10-now-streaming-on-netflix-c9ab1f4bd72b?source=rss----2615bd06b42e---4" target="_blank" class="fw-bold text-decoration-none">[Netflix] HDR10+ Now Streaming on Netflix</a>
+                <p class="mb-1 small text-light">Roger Quero, Liwei Guo, Jeff Watts, Joseph McCormick, Agata Opalach, Anush MoorthyWe are excited to announce that we are now streaming HDR10+ content on our service for AV1-enabled devices, enhancing the viewing experience for certified HDR10+ devices, which previously only received HDR10 content. T</p>
+                <small class="text-secondary">Netflix</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Amazon AWS">
+                <a href="https://aws.amazon.com/blogs/opensource/video-encoding-on-graviton-in-2025/" target="_blank" class="fw-bold text-decoration-none">[Amazon AWS] Video Encoding on Graviton in 2025</a>
+                <p class="mb-1 small text-light">In 2022, we published a post describing the advantages of running video encoding workloads on AWS Graviton processors. Since that time, AWS launched Graviton4 powered C8g instances which offer up to 30% better performance than Graviton3. On video encoding workloads, Graviton4 performs 12-15% better </p>
+                <small class="text-secondary">Amazon AWS</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Amazon AWS">
+                <a href="https://aws.amazon.com/blogs/opensource/introducing-qontos-prometheus-rds-exporter-an-open-source-solution-to-enhance-monitoring-amazon-rds/" target="_blank" class="fw-bold text-decoration-none">[Amazon AWS] Introducing Qonto’s Prometheus RDS Exporter – An Open Source Solution to Enhance Monitoring Amazon RDS</a>
+                <p class="mb-1 small text-light">Databases are a critical part of most applications and essential to business continuity. To ensure performance, availability, and scalability, Amazon Relational Database Service (Amazon RDS) administrators typically monitor various metrics, such as the usage of CPU, RAM, IOPS, storage, or service qu</p>
+                <small class="text-secondary">Amazon AWS</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Amazon AWS">
+                <a href="https://aws.amazon.com/blogs/opensource/kube-resource-orchestrator-from-experiment-to-community-project/" target="_blank" class="fw-bold text-decoration-none">[Amazon AWS] Kube Resource Orchestrator, From Experiment to Community Project</a>
+                <p class="mb-1 small text-light">When we introduced our new experimental project Kube Resource Orchestrator (kro) in November last year at KubeCon North America, we were thrilled by the initial response. Customers are excited about kro’s simplicity, and we have seen some creative and novel solutions to common problems. We have hear</p>
+                <small class="text-secondary">Amazon AWS</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Hacker News">
+                <a href="https://github.com/andrewn6/fromthetransistor" target="_blank" class="fw-bold text-decoration-none">From the Transistor to the Web Browser, a rough outline for a 12 week course</a>
+                <p class="mb-1 small text-light">Article URL: https://github.com/andrewn6/fromthetransistor Comments URL: https://news.ycombinator.com/item?id=43903206 Points: 14 # Comments: 1</p>
+                <small class="text-secondary">Hacker News</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Hacker News">
+                <a href="https://www.microsoft.com/en-us/microsoft-365/blog/2025/02/28/the-next-chapter-moving-from-skype-to-microsoft-teams/" target="_blank" class="fw-bold text-decoration-none">RIP Skype</a>
+                <p class="mb-1 small text-light">Article URL: https://www.microsoft.com/en-us/microsoft-365/blog/2025/02/28/the-next-chapter-moving-from-skype-to-microsoft-teams/ Comments URL: https://news.ycombinator.com/item?id=43902938 Points: 44 # Comments: 31</p>
+                <small class="text-secondary">Hacker News</small>
+            </li>
+        
+            <li class="list-group-item mb-2" data-source="Hacker News">
+                <a href="https://haacked.com/archive/2012/07/05/turkish-i-problem-and-why-you-should-care.aspx/" target="_blank" class="fw-bold text-decoration-none">The Turkish İ Problem and Why You Should Care (2012)</a>
+                <p class="mb-1 small text-light">Article URL: https://haacked.com/archive/2012/07/05/turkish-i-problem-and-why-you-should-care.aspx/ Comments URL: https://news.ycombinator.com/item?id=43902869 Points: 40 # Comments: 30</p>
+                <small class="text-secondary">Hacker News</small>
+            </li>
+        
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+    document.getElementById('sourceFilter').addEventListener('change', function () {
+        var value = this.value.toLowerCase();
+        document.querySelectorAll('#articleList li').forEach(function (li) {
+            if (value === 'all' || li.dataset.source.toLowerCase() === value) {
+                li.style.display = '';
+            } else {
+                li.style.display = 'none';
+            }
+        });
+    });
+    </script>
+</body>
+</html>

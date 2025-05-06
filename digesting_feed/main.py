@@ -7,12 +7,12 @@ def score_article(article):
     score = sum(1 for kw in keywords if kw in title)
 
     source_weights = {
-        "Netflix": 2,
-        "Amazon AWS": 2,
-        "Google": 2,
+        "Netflix": 3,
+        "Amazon AWS": 3,
+        "Google": 3,
         "Microsoft": 2,
-        "Hacker News": 3,
-        "Reddit": 3
+        "Hacker News": 2,
+        "Reddit": 1
     }
     score += source_weights.get(article["source"], 0)
     return score

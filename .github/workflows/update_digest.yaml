@@ -19,7 +19,7 @@ jobs:
       - name: Install uv and dependencies
         run: |
           pip install uv
-          uv pip install -r pyproject.toml
+          uv pip install -r pyproject.toml --system
 
       - name: Generate Digest
         run: python -m digesting_feed.main

@@ -11,8 +11,8 @@ def score_article(article):
         "Amazon AWS": 2,
         "Google": 2,
         "Microsoft": 2,
-        "Hacker News": 5,
-        "Reddit": 5
+        "Hacker News": 3,
+        "Reddit": 3
     }
     score += source_weights.get(article["source"], 0)
     return score

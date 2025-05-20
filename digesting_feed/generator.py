@@ -1,4 +1,7 @@
 from jinja2 import Template
+from sumy.parsers.plaintext import PlaintextParser
+from sumy.nlp.tokenizers import Tokenizer
+from sumy.summarizers.lsa import LsaSummarizer
 
 HTML_TEMPLATE = """
 <!DOCTYPE html>
@@ -83,7 +86,22 @@ HTML_TEMPLATE = """
 </html>
 """
 
+def summarize_text(text, sentence_count=2):
+    parser = PlaintextParser.from_string(text, Tokenizer("english"))
+    summarizer = LsaSummarizer()
+    summary = summarizer(parser.document, sentence_count)
+    return " ".join(str(sentence) for sentence in summary)
+
 def generate_html(articles, output_file="index.html"):
+    # Summarize each article's summary (or content if available)
+    for article in articles:
+        text = article.get('summary') or article.get('content') or article.get('title')
+        if text and len(text.split()) > 20:  # Only summarize if text is long enough
+            try:
+                summary = summarize_text(text)
+                article['summary'] = summary
+            except Exception as e:
+                pass
     template = Template(HTML_TEMPLATE)
     rendered = template.render(articles=articles)
     with open(output_file, "w", encoding="utf-8") as f:

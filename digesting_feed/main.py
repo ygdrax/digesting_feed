@@ -2,6 +2,8 @@ from .fetcher import fetch_hn_articles, fetch_reddit_articles, fetch_tech_blog_a
 from .generator import generate_html
 
 def score_article(article):
+    """Score an article based on its title and source.
+    Higher scores indicate more relevant articles."""
     title = article["title"].lower()
     keywords = ["devops", "cloud", "kubernetes", "observability", "ai", "infra", "platform", "reliability", "linux", "docker", "automation", "monitoring", "security", "scalability", "performance", "networking"]
     score = sum(1 for kw in keywords if kw in title)
@@ -18,6 +20,7 @@ def score_article(article):
     return score
 
 def main():
+    """Main function to fetch, score, and generate HTML for articles."""
     articles = (
         fetch_hn_articles()
         + fetch_reddit_articles()

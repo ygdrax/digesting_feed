@@ -3,6 +3,12 @@ description: Set up Python environment
 runs:
   using: "composite"
   steps:
-    - uses: actions/setup-python@v4
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
       with:
         python-version: '3.11'
+    - name: Install uv and dependencies
+      shell: bash
+      run: |
+        pip install uv
+        uv pip install -r pyproject.toml --system

@@ -1,23 +1,15 @@
 name: Setup Python
 description: Set up Python environment
-inputs:
-  python-version:
-    description: 'Python version to use'
-    required: false
-    default: '3.12'
 runs:
   using: "composite"
   steps:
-    - name: Set up Python
-      uses: actions/setup-python@v5.6.0
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
       with:
-        python-version: ${{ inputs.python-version }}
+        python-version: '3.11'
     - name: Install uv and dependencies
       shell: bash
-      env:
-        PIP_NO_INPUT: '1'
       run: |
-        set -euo pipefail
         pip install uv
         uv pip install -r pyproject.toml --system
-        uv pip install -e ".[dev]"
+        uv pip install -e ".[dev]" --system

@@ -1,6 +1,7 @@
 """Main module to fetch, score, save, and generate daily devops digest articles."""
 
 from datetime import datetime
+import requests
 from digesting_feed import store
 from .fetcher import fetch_hn_articles, fetch_reddit_articles, fetch_tech_blog_articles
 from .generator import generate_html
@@ -51,17 +52,17 @@ def main():
 
     try:
         fresh_articles.extend(fetch_hn_articles())
-    except Exception as e:
+    except requests.RequestException as e:
         print(f"Failed to fetch Hacker News articles: {e}")
 
     try:
         fresh_articles.extend(fetch_reddit_articles())
-    except Exception as e:
+    except requests.RequestException as e:
         print(f"Failed to fetch Reddit articles: {e}")
 
     try:
         fresh_articles.extend(fetch_tech_blog_articles())
-    except Exception as e:
+    except requests.RequestException as e:
         print(f"Failed to fetch tech blog articles: {e}")
 
     # Load previously saved articles
@@ -70,7 +71,7 @@ def main():
     except FileNotFoundError:
         print("No existing articles found, starting fresh.")
         old_articles = []
-    except Exception as e:
+    except (OSError, IOError) as e:
         print(f"Failed to load existing articles: {e}")
         old_articles = []
 

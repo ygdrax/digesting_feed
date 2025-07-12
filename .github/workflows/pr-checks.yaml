@@ -4,12 +4,11 @@ on:
       - develop
 
 jobs:
-  lint-and-test:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repo
-        uses: ./.github/actions/checkout-repo
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/checkout-repo
 
       - name: Setup Python environment
         uses: ./.github/actions/setup-python

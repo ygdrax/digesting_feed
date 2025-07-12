@@ -30,9 +30,14 @@ def save_articles_to_json(
     all_articles = remove_duplicates_by_link(existing_articles + articles)
 
     # Filter articles older than retention days if needed
-    dates = [
-        datetime.strptime(a["date"], "%Y-%m-%d") for a in all_articles if "date" in a
-    ]
+    dates = []
+    for a in all_articles:
+        if "date" in a:
+            try:
+                dates.append(datetime.strptime(a["date"], "%Y-%m-%d"))
+            except ValueError:
+                # Skip articles with invalid date format
+                continue
     if dates:
         oldest = min(dates)
         newest = max(dates)

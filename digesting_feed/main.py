@@ -47,12 +47,32 @@ def main():
     add date, save, generate HTML."""
 
     # Fetch fresh articles
-    fresh_articles = (
-        fetch_hn_articles() + fetch_reddit_articles() + fetch_tech_blog_articles()
-    )
+    fresh_articles = []
+
+    try:
+        fresh_articles.extend(fetch_hn_articles())
+    except Exception as e:
+        print(f"Failed to fetch Hacker News articles: {e}")
+
+    try:
+        fresh_articles.extend(fetch_reddit_articles())
+    except Exception as e:
+        print(f"Failed to fetch Reddit articles: {e}")
+
+    try:
+        fresh_articles.extend(fetch_tech_blog_articles())
+    except Exception as e:
+        print(f"Failed to fetch tech blog articles: {e}")
 
     # Load previously saved articles
-    old_articles = store.load_articles_from_json()
+    try:
+        old_articles = store.load_articles_from_json()
+    except FileNotFoundError:
+        print("No existing articles found, starting fresh.")
+        old_articles = []
+    except Exception as e:
+        print(f"Failed to load existing articles: {e}")
+        old_articles = []
 
     # Combine fresh and old articles
     combined_articles = fresh_articles + old_articles

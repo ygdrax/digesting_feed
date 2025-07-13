@@ -1,3 +1,6 @@
+"""This module generates an HTML digest of articles with summaries.
+It uses Jinja2 for templating and Sumy for text summarization.
+"""
 from jinja2 import Template
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
@@ -86,22 +89,35 @@ HTML_TEMPLATE = """
 </html>
 """
 
+
 def summarize_text(text, sentence_count=2):
+    """Summarize the given text using Sumy LSA summarizer."""
+    if not text or len(text.split()) < 20:
+        return text
+
     parser = PlaintextParser.from_string(text, Tokenizer("english"))
     summarizer = LsaSummarizer()
     summary = summarizer(parser.document, sentence_count)
     return " ".join(str(sentence) for sentence in summary)
 
+
 def generate_html(articles, output_file="index.html"):
+    """Generate an HTML file from the list of articles."""
+    if not articles:
+        return
+
     # Summarize each article's summary (or content if available)
     for article in articles:
-        text = article.get('summary') or article.get('content') or article.get('title')
+        text = article.get("summary") or article.get("content") or article.get("title")
         if text and len(text.split()) > 20:  # Only summarize if text is long enough
             try:
                 summary = summarize_text(text)
-                article['summary'] = summary
-            except Exception as e:
-                pass
+                article["summary"] = summary
+            except (ValueError, KeyError, AttributeError) as e:
+                article["summary"] = f"Invalid text format - {str(e)}"
+            except MemoryError as e:
+                article["summary"] = f"Insufficient memory for processing - {str(e)}"
+
     template = Template(HTML_TEMPLATE)
     rendered = template.render(articles=articles)
     with open(output_file, "w", encoding="utf-8") as f:

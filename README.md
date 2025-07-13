@@ -9,5 +9,7 @@ source .venv/bin/activate
 
 uv pip install .
 
+python -c "import nltk; nltk.download(['punkt', 'punkt_tab', 'averaged_perceptron_tagger'])"
+
 python -m digesting_feed.main
 ```

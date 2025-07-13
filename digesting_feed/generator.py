@@ -84,13 +84,28 @@ HTML_TEMPLATE = """
     </script>
 </body>
 </html>
-"""
 
+"""
 def summarize_text(text, sentence_count=2):
+    """
+    Summarizes the input text using LSA summarizer.
+
+    Args:
+        text (str): Text to summarize.
+        sentence_count (int): Number of sentences in the summary.
+
+    Returns:
+        str: Summarized text.
+    """
+    if not text or not text.strip():
+        return ""
+
     parser = PlaintextParser.from_string(text, Tokenizer("english"))
     summarizer = LsaSummarizer()
-    summary = summarizer(parser.document, sentence_count)
-    return " ".join(str(sentence) for sentence in summary)
+
+    summary_sentences = summarizer(parser.document, sentence_count)
+    summary = " ".join(str(sentence) for sentence in summary_sentences)
+    return summary
 
 def generate_html(articles, output_file="index.html"):
     # Summarize each article's summary (or content if available)

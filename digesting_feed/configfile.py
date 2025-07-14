@@ -1,0 +1,27 @@
+keywords = {
+    "devops", "cloud", "kubernetes", "observability", "ai", "infra", "platform",
+    "reliability", "linux", "docker", "automation", "monitoring", "security",
+    "scalability", "performance", "networking"
+}
+
+source_weights = {
+    "Netflix": 3,
+    "Amazon AWS": 3,
+    "Google": 3,
+    "Microsoft": 2,
+    "Hacker News": 2,
+    "Reddit": 1,
+}
+
+HN_URL = "https://hnrss.org/frontpage"
+REDDIT_URLS = [
+    "https://www.reddit.com/r/devops/.rss",
+    "https://www.reddit.com/r/sysadmin/.rss"
+]
+
+TECH_BLOG_FEEDS = {
+    "Netflix": "https://netflixtechblog.com/feed",
+    "Amazon AWS": "https://aws.amazon.com/blogs/opensource/feed/",
+    "Google": "https://opensource.googleblog.com/feeds/posts/default",
+    "Microsoft": "https://techcommunity.microsoft.com/gxcuf89792/rss/2.0?board.id=AzureDevOps"
+}

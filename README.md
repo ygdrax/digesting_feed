@@ -7,7 +7,7 @@ pip install uv
 uv venv .venv
 source .venv/bin/activate
 
-uv pip install .
+uv pip install -r requirements.txt
 
 python -m digesting_feed.main
 ```

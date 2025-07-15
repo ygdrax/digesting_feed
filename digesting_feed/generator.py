@@ -1,4 +1,3 @@
-
 import nltk
 from jinja2 import Template
 from sumy.nlp.tokenizers import Tokenizer

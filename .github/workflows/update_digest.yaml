@@ -22,7 +22,16 @@ jobs:
       - name: Install uv and dependencies
         run: |
           pip install uv
-          uv pip install -r pyproject.toml --system
+          uv pip install -r pyproject.toml --system --extra dev
+
+      # - name: Run Pre-commit
+      #   run: pre-commit run --all-files --color always
+
+      - name: Run Ruff
+        run: ruff check digesting_feed
+
+      - name: Run Pylint
+        run: pylint digesting_feed
 
       - name: Generate Digest
         run: python -m digesting_feed.main

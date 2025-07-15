@@ -8,3 +8,27 @@ dependencies = [
     "beautifulsoup4",
     "sumy",
 ]
+
+[project.optional-dependencies]
+dev = [
+  "ruff",
+  "pylint",
+  "pre-commit",
+  "black",
+  "mypy",
+  "pytest",
+  "coverage",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]  # errors, flakes, isort
+ignore = ["E501"]  # ignore line-too-long
+
+[tool.pylint]
+disable = ["missing-docstring"]
+
+# [tool.mypy]
+# strict = true

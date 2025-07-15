@@ -1,8 +1,15 @@
 
+import nltk
 from jinja2 import Template
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.summarizers.lsa import LsaSummarizer
+
+try:
+    nltk.data.find("tokenizers/punkt")
+except LookupError:
+    nltk.download("punkt")
+
 
 HTML_TEMPLATE = """
 <!DOCTYPE html>

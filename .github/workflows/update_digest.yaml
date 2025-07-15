@@ -30,6 +30,10 @@ jobs:
       - name: Run Pylint
         run: pylint digesting_feed
 
+      - name: Download NLTK punkt tokenizer
+        run: |
+          python -m nltk.downloader punkt
+
       - name: Generate Digest
         run: python -m digesting_feed.main
 

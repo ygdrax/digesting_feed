@@ -1,13 +1,22 @@
+import os
+
 import nltk
 from jinja2 import Template
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.summarizers.lsa import LsaSummarizer
 
+# Optionally force a known location for CI
+NLTK_DIR = os.path.join(os.path.expanduser("~"), "nltk_data")
+nltk.data.path.append(NLTK_DIR)
+# nltk.download('wordnet')
+# nltk.download('omw-1.4')
+# nltk.download('punkt_tab')
+# Download if not available
 try:
     nltk.data.find("tokenizers/punkt")
 except LookupError:
-    nltk.download("punkt")
+    nltk.download("punkt", download_dir=NLTK_DIR)
 
 
 HTML_TEMPLATE = """

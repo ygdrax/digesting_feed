@@ -27,9 +27,7 @@ def test_summarize_text_short_input(mock_summarizer_cls, mock_from_string):
     assert "Mocked summary sentence." in summary
 
 
-@patch(
-    "digesting_feed.generator.helper.get_full_path", return_value="static/template.html"
-)
+@patch("digesting_feed.generator.helper.get_full_path", return_value="static/template.html")
 @patch(
     "builtins.open",
     new_callable=mock_open,
@@ -58,8 +56,7 @@ def test_generate_html(mock_file, mock_load_template, mock_summarize):
     ]
 
     mock_load_template.return_value = (
-        "<html>{% for a in articles %}{{ a.title }} - {{ a.summary }}"
-        "{% endfor %}</html>"
+        "<html>{% for a in articles %}{{ a.title }} - {{ a.summary }}" "{% endfor %}</html>"
     )
     mock_summarize.return_value = "Short summary."
 

@@ -36,9 +36,9 @@ def test_score_article(title, source, expected_score):
 @patch("digesting_feed.main.fetch_hn_articles")
 @patch("digesting_feed.main.fetch_reddit_articles")
 @patch("digesting_feed.main.fetch_tech_blog_articles")
-@patch("digesting_feed.main.save_articles_to_json")
+@patch("digesting_feed.main.manage_article.save_articles_to_json")
 @patch("digesting_feed.main.generate_html")
-@patch("digesting_feed.main.store.load_articles_from_json", return_value=[])
+@patch("digesting_feed.main.manage_article.load_articles_from_json", return_value=[])
 def test_main_execution(
     _mock_load_json,
     mock_generate_html,

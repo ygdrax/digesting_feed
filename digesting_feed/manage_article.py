@@ -9,9 +9,7 @@ from .helper import helper
 RETENTION_DAYS = 7
 
 
-def save_articles_to_json(
-    articles: List[Dict], relative_path: str = "data/articles.json"
-):
+def save_articles_to_json(articles: List[Dict], relative_path: str = "data/articles.json"):
     """
     Save articles. Append new articles unless oldest stored article is older than retention period.
 

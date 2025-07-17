@@ -4,7 +4,7 @@ from jinja2 import Template
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer
-from .helper import helper
+from digesting_feed.helper import helper
 
 
 def load_template_from_file(relative_path="static/template.html") -> str:

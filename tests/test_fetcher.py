@@ -30,9 +30,7 @@ def test_fetch_hn_articles(mock_parse):
     mock_entry = MagicMock()
     mock_entry.title = "Hacker News Test"
     mock_entry.link = "https://hn.com/1"
-    mock_entry.get = MagicMock(
-        return_value="<p>Hacker news</p>"
-    )  # for entry.get("summary", "")
+    mock_entry.get = MagicMock(return_value="<p>Hacker news</p>")  # for entry.get("summary", "")
     mock_parse.return_value.entries = [mock_entry]
 
     articles = fetch_hn_articles()
@@ -58,9 +56,7 @@ def test_fetch_reddit_articles(mock_feed_parse, mock_requests_get):
     mock_entry.link = "https://reddit.com/1"
     mock_entry.get = MagicMock(
         side_effect=lambda key, default="": (
-            "<div>Reddit content</div>"
-            if key in ("summary", "description")
-            else default
+            "<div>Reddit content</div>" if key in ("summary", "description") else default
         )
     )
 

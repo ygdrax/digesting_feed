@@ -2,44 +2,22 @@
 
 from datetime import datetime
 import requests
-from digesting_feed import store
-from .fetcher import fetch_hn_articles, fetch_reddit_articles, fetch_tech_blog_articles
-from .generator import generate_html
-from .store import save_articles_to_json
+from digesting_feed import manage_article
+from digesting_feed.helper import env
+from digesting_feed.fetcher import (
+    fetch_hn_articles,
+    fetch_reddit_articles,
+    fetch_tech_blog_articles,
+)
+from digesting_feed.generator import generate_html
 
 
 def score_article(article):
     """Score an article based on its title and source."""
     title = article["title"].lower()
-    keywords = [
-        "devops",
-        "cloud",
-        "kubernetes",
-        "observability",
-        "ai",
-        "infra",
-        "platform",
-        "reliability",
-        "linux",
-        "docker",
-        "automation",
-        "monitoring",
-        "security",
-        "scalability",
-        "performance",
-        "networking",
-    ]
+    keywords = env.load_json_env("KEYWORDS", {})
     score = sum(1 for kw in keywords if kw in title)
-
-    source_weights = {
-        "Netflix": 3,
-        "Amazon AWS": 3,
-        "Google": 3,
-        "Microsoft": 2,
-        "Hacker News": 2,
-        "Reddit": 1,
-    }
-    score += source_weights.get(article["source"], 0)
+    score += env.load_json_env("SOURCE_WEIGHTS", {}).get(article["source"], 0)
     return score
 
 
@@ -67,7 +45,7 @@ def main():
 
     # Load previously saved articles
     try:
-        old_articles = store.load_articles_from_json()
+        old_articles = manage_article.load_articles_from_json()
     except FileNotFoundError:
         print("No existing articles found, starting fresh.")
         old_articles = []
@@ -95,7 +73,7 @@ def main():
             article["date"] = today_str
 
     # Save all unique articles (not limited to top 20)
-    save_articles_to_json(unique_articles)
+    manage_article.save_articles_to_json(unique_articles)
 
     # Generate HTML for all articles
     generate_html(unique_articles)

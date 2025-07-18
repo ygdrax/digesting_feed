@@ -1,36 +1,39 @@
 [project]
+requires-python = "==3.11"
 name = "digesting_feed"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
     "requests",
     "feedparser",
     "jinja2",
     "beautifulsoup4",
     "sumy",
-    "numpy",
-    "nltk",
+    "dotenv",
 ]
 
 [project.optional-dependencies]
 dev = [
-  "ruff",
-  "pylint",
-  "pre-commit",
-  "black",
-  "mypy",
-  "pytest",
-  "coverage",
+    "ruff",
+    "pylint",
+    "black",
+    "pre-commit",
+    "pytest",
+    "pytest-mock",
 ]
+
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+exclude = '''
+/(
+    \.venv
+  | build
+  | dist
+)/
+'''
 
 [tool.ruff]
 line-length = 100
-
-[tool.ruff.lint]
-select = ["E", "F", "I"]  # errors, flakes, isort
-ignore = ["E501"]  # ignore line-too-long
-
-[tool.pylint]
-disable = ["missing-docstring"]
-
-# [tool.mypy]
-# strict = true
+target-version = "py311"
+exclude = ["venv", "build", "dist"]

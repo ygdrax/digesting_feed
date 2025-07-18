@@ -9,30 +9,13 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install uv and dependencies
-        run: |
-          pip install uv
-          uv pip install -r pyproject.toml --system --extra dev
-
-      - name: Run Ruff
-        run: ruff check digesting_feed
-
-      - name: Run Pylint
-        run: pylint digesting_feed
-
-      - name: Download NLTK punkt tokenizer
-        run: |
-          python -m nltk.downloader punkt
+      - name: Setup Python environment
+        uses: ./.github/actions/setup-python
 
       - name: Generate Digest
         run: python -m digesting_feed.main

@@ -1,9 +1,15 @@
+
 """digesting_feed.fetcher
 """
+
+"""Module for fetching articles from various sources like Hacker News, Reddit, and tech blogs."""
+
+
 import re
 import requests
 import feedparser
 from bs4 import BeautifulSoup
+
 from .configfile import HN_URL, REDDIT_URLS, TECH_BLOG_FEEDS
 
 
@@ -18,11 +24,25 @@ def clean_html(raw_html):
     Returns:
         str: Cleaned and truncated plain text.
     """
+
+from digesting_feed.helper import env
+
+HN_URL = env.get_env_var("HN_URL", default=None)
+
+REDDIT_URLS = env.load_json_env("REDDIT_URLS", {})
+
+TECH_BLOG_FEEDS = env.load_json_env("TECH_BLOG_FEEDS", {})
+
+
+def clean_html(raw_html):
+    """Sanitize HTML content to extract text and limit length."""
+
     text = BeautifulSoup(raw_html, "html.parser").get_text()
     return re.sub(r"\s+", " ", text).strip()[:300]
 
 
 def fetch_hn_articles():
+
     """
     Fetch articles from the Hacker News front page RSS feed.
 
@@ -30,6 +50,9 @@ def fetch_hn_articles():
         list of dict: A list of article dictionaries with keys:
             "title", "link", "source", "summary", and "score".
     """
+
+    """Fetch articles from Hacker News RSS feed."""
+
     feed = feedparser.parse(HN_URL)
     return [
         {
@@ -44,6 +67,7 @@ def fetch_hn_articles():
 
 
 def fetch_reddit_articles():
+
     """
     Fetch articles from specified Reddit RSS feeds.
 
@@ -55,6 +79,13 @@ def fetch_reddit_articles():
     headers = {"User-Agent": "digesting_feed"}
     for url in REDDIT_URLS:
         response = requests.get(url, headers=headers, timeout=10)
+
+    """Fetch articles from Reddit feeds."""
+    articles = []
+    headers = {"User-Agent": "digesting_feed"}
+    for url in REDDIT_URLS:
+        response = requests.get(url, headers=headers, timeout=10)  # <-- added timeout
+
         feed = feedparser.parse(response.text)
         for entry in feed.entries:
             summary = entry.get("summary", "") or entry.get("description", "")
@@ -71,6 +102,7 @@ def fetch_reddit_articles():
 
 
 def fetch_tech_blog_articles():
+
     """
     Fetch articles from configured tech blog RSS feeds, limiting
     to the latest 5 entries per feed.
@@ -79,13 +111,20 @@ def fetch_tech_blog_articles():
         list of dict: A list of article dictionaries with keys:
             "title", "link", "source", "summary", and "score".
     """
+
+    """Fetch articles from various tech blogs."""
+
     articles = []
     for name, url in TECH_BLOG_FEEDS.items():
         feed = feedparser.parse(url)
         for entry in feed.entries[:5]:
+
             summary = entry.get("summary", "") or entry.get("content", [{}])[0].get(
                 "value", ""
             )
+
+            summary = entry.get("summary", "") or entry.get("content", [{}])[0].get("value", "")
+
             articles.append(
                 {
                     "title": f"[{name}] {entry.title}",

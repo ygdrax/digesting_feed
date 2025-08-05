@@ -1,10 +1,11 @@
 """Tests for the generator module."""
 
-from unittest.mock import patch, mock_open, MagicMock
+from unittest.mock import mock_open, patch
+
 from digesting_feed.generator import (
-    summarize_text,
     generate_html,
     load_template_from_file,
+    summarize_text,
 )
 
 

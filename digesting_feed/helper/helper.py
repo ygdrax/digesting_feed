@@ -1,6 +1,6 @@
 """Helper  module accros module"""
 
-import os
+from pathlib import Path
 
 
 def get_full_path(relative_path: str, must_exist: bool = False) -> str:
@@ -14,10 +14,10 @@ def get_full_path(relative_path: str, must_exist: bool = False) -> str:
     Returns:
         str: Full absolute path.
     """
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    full_path = os.path.join(base_dir, "..", relative_path)
+    base_dir = Path(__file__).resolve().parent
+    full_path = base_dir / ".." / relative_path
 
-    if must_exist and not os.path.exists(full_path):
+    if must_exist and not full_path.exists():
         raise FileNotFoundError(f"File not found at: {full_path}")
 
-    return os.path.abspath(full_path)
+    return str(full_path.resolve())

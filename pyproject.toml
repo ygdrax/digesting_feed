@@ -38,3 +38,64 @@ exclude = '''
 line-length = 100
 target-version = "py313"
 exclude = ["venv", "build", "dist"]
+
+[tool.ruff.lint]
+# Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
+# Additionally enable:
+# - pycodestyle warnings (`W`)
+# - McCabe complexity (`C901`)
+# - isort (`I`)
+# - pep8-naming (`N`)
+# - pyupgrade (`UP`)
+# - flake8-bugbear (`B`)
+# - flake8-simplify (`SIM`)
+# - flake8-comprehensions (`C4`)
+# - flake8-pie (`PIE`)
+# - flake8-unused-arguments (`ARG`)
+# - flake8-use-pathlib (`PTH`)
+# - pandas-vet (`PD`)
+# - ruff-specific rules (`RUF`)
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "C901", # McCabe complexity
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "SIM", # flake8-simplify
+    "C4",  # flake8-comprehensions
+    "PIE", # flake8-pie
+    "ARG", # flake8-unused-arguments
+    "PTH", # flake8-use-pathlib
+    "RUF", # ruff-specific rules
+]
+
+ignore = [
+    "E501",   # Line too long (handled by black)
+    "B008",   # Do not perform function calls in argument defaults
+    "C901",   # Too complex (let's be more permissive for now)
+    "ARG002", # Unused method argument (common in overrides)
+    "PTH123", # open() should be replaced by Path.open() (keeping for backward compatibility)
+]
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.per-file-ignores]
+# Tests can use magic values, assertions, and imports
+"tests/*" = ["PLR2004", "S101", "ARG", "FBT"]
+
+[tool.ruff.lint.mccabe]
+# McCabe complexity configuration
+max-complexity = 10
+
+[tool.ruff.lint.isort]
+# Use a single line between direct and from import
+split-on-trailing-comma = true
+force-single-line = false

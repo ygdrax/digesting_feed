@@ -1,21 +1,31 @@
 repos:
+  # Basic hooks for common issues
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml
+      - id: check-toml
       - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: debug-statements
 
+  # Ruff linter and formatter (comprehensive Python tooling)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.12.2
+    hooks:
+      # Run the linter with auto-fix
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
+        files: \.py$
+      # Run the formatter
+      - id: ruff-format
+        files: \.py$
+
+  # Black formatter (for additional formatting consistency)
   - repo: https://github.com/psf/black
     rev: 25.1.0
     hooks:
       - id: black
         language_version: python3
-
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.12.2
-    hooks:
-    - id: ruff
-      args: [--fix]
-      files: \.py$

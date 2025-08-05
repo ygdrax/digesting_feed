@@ -1,15 +1,15 @@
 """Module for storing and managing articles in JSON format."""
 
-import os
 import json
 from datetime import datetime, timedelta
-from typing import List, Dict
+from pathlib import Path
+
 from .helper import helper
 
 RETENTION_DAYS = 7
 
 
-def save_articles_to_json(articles: List[Dict], relative_path: str = "data/articles.json"):
+def save_articles_to_json(articles: list[dict], relative_path: str = "data/articles.json"):
     """
     Save articles. Append new articles unless oldest stored article is older than retention period.
 
@@ -18,10 +18,10 @@ def save_articles_to_json(articles: List[Dict], relative_path: str = "data/artic
         relative_path (str): Relative path for JSON storage.
     """
     full_path = helper.get_full_path(relative_path, must_exist=False)
-    os.makedirs(os.path.dirname(full_path), exist_ok=True)
+    Path(full_path).parent.mkdir(parents=True, exist_ok=True)
 
     existing_articles = []
-    if os.path.exists(full_path):
+    if Path(full_path).exists():
         existing_articles = load_articles_from_json(relative_path)
 
     # Combine and deduplicate articles
@@ -53,7 +53,7 @@ def save_articles_to_json(articles: List[Dict], relative_path: str = "data/artic
         json.dump(all_articles, f, ensure_ascii=False, indent=4)
 
 
-def load_articles_from_json(relative_path: str = "data/articles.json") -> List[Dict]:
+def load_articles_from_json(relative_path: str = "data/articles.json") -> list[dict]:
     """
     Load a list of article dictionaries from a JSON file.
 
@@ -64,11 +64,11 @@ def load_articles_from_json(relative_path: str = "data/articles.json") -> List[D
         List[Dict]: List of article dictionaries.
     """
     full_path = helper.get_full_path(relative_path, must_exist=True)
-    with open(full_path, "r", encoding="utf-8") as f:
+    with open(full_path, encoding="utf-8") as f:
         return json.load(f)
 
 
-def remove_duplicates_by_link(articles: List[Dict]) -> List[Dict]:
+def remove_duplicates_by_link(articles: list[dict]) -> list[dict]:
     """
     Remove duplicate articles based on their 'link' field.
 

@@ -1,6 +1,7 @@
 """Tests for the fetcher module."""
 
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
+
 from digesting_feed.fetcher import (
     clean_html,
     fetch_hn_articles,

@@ -1,10 +1,11 @@
 """Tests for the manage_article module."""
 
-import os
-from datetime import datetime, timedelta
-from unittest.mock import patch
-import pytest
 import tempfile
+from datetime import datetime, timedelta
+from pathlib import Path
+from unittest.mock import patch
+
+import pytest
 
 from digesting_feed import manage_article
 
@@ -33,8 +34,8 @@ def temp_file_path():
         path = tmpfile.name
     yield path
     # Cleanup after test run
-    if os.path.exists(path):
-        os.remove(path)
+    if Path(path).exists():
+        Path(path).unlink()
 
 
 @pytest.fixture
@@ -47,12 +48,12 @@ def mock_helper(temp_file_path):
 
 def test_save_and_load_articles(mock_helper, temp_file_path):
     # Make sure the file is empty before saving
-    if os.path.exists(temp_file_path):
-        os.remove(temp_file_path)
+    if Path(temp_file_path).exists():
+        Path(temp_file_path).unlink()
 
     manage_article.save_articles_to_json(MOCK_ARTICLES)
 
-    with open(temp_file_path, "r") as f:
+    with open(temp_file_path) as f:
         content = f.read()
         print("File content after save:", content)
 
@@ -83,8 +84,8 @@ def test_retention_trim(mock_helper, temp_file_path):
     ]
 
     # Clear file before saving
-    if os.path.exists(temp_file_path):
-        os.remove(temp_file_path)
+    if Path(temp_file_path).exists():
+        Path(temp_file_path).unlink()
 
     manage_article.save_articles_to_json(articles)
     loaded = manage_article.load_articles_from_json()

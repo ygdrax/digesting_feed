@@ -1,15 +1,17 @@
 """Main module to fetch, score, save, and generate daily devops digest articles."""
 
 from datetime import datetime
+
 import requests
+
 from digesting_feed import manage_article
-from digesting_feed.helper import env
 from digesting_feed.fetcher import (
     fetch_hn_articles,
     fetch_reddit_articles,
     fetch_tech_blog_articles,
 )
 from digesting_feed.generator import generate_html
+from digesting_feed.helper import env
 
 
 def score_article(article):
@@ -49,7 +51,7 @@ def main():
     except FileNotFoundError:
         print("No existing articles found, starting fresh.")
         old_articles = []
-    except (OSError, IOError) as e:
+    except OSError as e:
         print(f"Failed to load existing articles: {e}")
         old_articles = []
 

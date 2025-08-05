@@ -1,9 +1,11 @@
 """Module for fetching articles from various sources like Hacker News, Reddit, and tech blogs."""
 
 import re
-import requests
+
 import feedparser
+import requests
 from bs4 import BeautifulSoup
+
 from digesting_feed.helper import env
 
 HN_URL = env.get_env_var("HN_URL", default=None)

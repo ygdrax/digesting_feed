@@ -41,10 +41,44 @@ make install-dev  # Install development dependencies
 make run          # Run the digesting feed application
 make test         # Run tests
 make lint         # Run linting (ruff and pylint)
-make format       # Format code with black
+make ruff-fix     # Run ruff with auto-fix and formatting
+make format       # Format code with black and ruff
 make check        # Run all checks (lint, format check, test)
 make clean        # Clean Python cache files and build artifacts
 make clean-all    # Clean everything including virtual environment
+```
+
+### Code Quality Tools
+
+This project uses several tools to maintain code quality:
+
+- **Ruff**: Fast Python linter with auto-fix capabilities
+- **Black**: Code formatter for consistent styling
+- **Pylint**: Additional linting for code quality
+- **Pre-commit**: Git hooks for automated checks
+
+#### Ruff Configuration
+
+Ruff is configured in `pyproject.toml` with comprehensive linting rules including:
+- Pycodestyle (`E`, `W`)
+- Pyflakes (`F`)
+- Import sorting (`I`)
+- Code complexity (`C901`)
+- Modern Python practices (`UP`)
+- Bug prevention (`B`)
+- Code simplification (`SIM`)
+- And many more...
+
+To run ruff manually:
+```bash
+# Check for issues
+ruff check .
+
+# Auto-fix issues
+ruff check --fix .
+
+# Format code
+ruff format .
 ```
 
 ### Run Pre-Commit Hooks

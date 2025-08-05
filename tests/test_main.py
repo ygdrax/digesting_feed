@@ -5,7 +5,7 @@ from unittest.mock import patch
 
 import pytest
 
-from digesting_feed.main import score_article, main
+from digesting_feed.main import main, score_article
 
 # -------------------------
 # Test: score_article

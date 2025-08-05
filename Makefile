@@ -1,6 +1,6 @@
 # Makefile for Digesting Feed project
 
-.PHONY: help install install-dev run clean clean-all test lint format check setup
+.PHONY: help install install-dev run clean clean-all test lint ruff-fix format check setup
 
 # Default target
 help:
@@ -11,7 +11,8 @@ help:
 	@echo "  make run         - Run the digesting feed application"
 	@echo "  make test        - Run tests"
 	@echo "  make lint        - Run linting (ruff and pylint)"
-	@echo "  make format      - Format code with black"
+	@echo "  make ruff-fix    - Run ruff with auto-fix and formatting"
+	@echo "  make format      - Format code with black and ruff"
 	@echo "  make check       - Run all checks (lint, format check, test)"
 	@echo "  make clean       - Clean Python cache files and build artifacts"
 	@echo "  make clean-all   - Clean everything including virtual environment"
@@ -47,16 +48,25 @@ test:
 
 # Run linting
 lint:
-	@echo "Running ruff..."
+	@echo "Running ruff linter..."
 	ruff check .
 	@echo "Running pylint..."
 	pylint digesting_feed/ tests/
+
+# Run ruff with auto-fix
+ruff-fix:
+	@echo "Running ruff with auto-fix..."
+	ruff check --fix .
+	@echo "Running ruff formatter..."
+	ruff format .
 
 # Format code
 format:
 	@echo "Formatting code with black..."
 	black .
-	@echo "Sorting imports with ruff..."
+	@echo "Formatting with ruff..."
+	ruff format .
+	@echo "Fixing imports and other issues with ruff..."
 	ruff check --fix .
 
 # Run all checks

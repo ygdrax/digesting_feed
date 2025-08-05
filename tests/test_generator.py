@@ -8,23 +8,26 @@ from digesting_feed.generator import (
 )
 
 
-@patch("digesting_feed.generator.PlaintextParser.from_string")
-@patch("digesting_feed.generator.LsaSummarizer")
-def test_summarize_text_short_input(mock_summarizer_cls, mock_from_string):
+def test_summarize_text_short_input():
     """Test summarize_text with short input."""
-    mock_doc = MagicMock()
-    mock_parser_instance = MagicMock()
-    mock_parser_instance.document = mock_doc
-    mock_from_string.return_value = mock_parser_instance
-
-    mock_summarizer_instance = MagicMock()
-    mock_summarizer_instance.return_value = ["Mocked summary sentence."]
-    mock_summarizer_cls.return_value = mock_summarizer_instance
-
-    text = "DevOps automates software delivery. It enhances efficiency and scalability."
+    text = "DevOps automates software delivery."
     summary = summarize_text(text, sentence_count=1)
     assert isinstance(summary, str)
-    assert "Mocked summary sentence." in summary
+    assert len(summary) > 0
+
+
+def test_summarize_text_long_input():
+    """Test summarize_text with longer input."""
+    text = ("DevOps automates software delivery and enhances efficiency. "
+            "It combines development and operations teams for faster deployment. "
+            "This approach improves scalability and reduces time to market. "
+            "Organizations benefit from continuous integration and delivery. "
+            "The practice enables rapid response to customer feedback.")
+    summary = summarize_text(text, sentence_count=2)
+    assert isinstance(summary, str)
+    assert len(summary) > 0
+    # Summary should be shorter than original
+    assert len(summary) < len(text)
 
 
 @patch("digesting_feed.generator.helper.get_full_path", return_value="static/template.html")

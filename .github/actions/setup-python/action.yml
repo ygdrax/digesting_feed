@@ -1,5 +1,5 @@
 name: Setup Python
-description: Set up Python 3.11 environment with uv and dependencies
+description: Set up Python 3.13 environment with uv and dependencies
 
 inputs:
   with-dev:
@@ -10,10 +10,10 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v4
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v5
       with:
-        python-version: "3.11"
+        python-version: "3.13"
 
     - name: Upgrade pip and install uv
       shell: bash

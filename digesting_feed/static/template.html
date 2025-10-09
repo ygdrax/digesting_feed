@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>{% if page_title %}{{ page_title }}{% else %}🔧 Daily DevOps Digest{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -44,18 +44,52 @@
 
 <body>
     <div class="container py-5">
-        <h1 class="mb-4 text-center title">🔧 Daily DevOps Digest</h1>
-        <p class="text-center text-muted">Curated from Hacker News, Reddit, and top tech blogs.</p>
+        <h1 class="mb-4 text-center title">
+            {% if is_daily_archive %}
+                � Daily DevOps Digest - {{ archive_date }}
+            {% else %}
+                �🔧 Daily DevOps Digest
+            {% endif %}
+        </h1>
+        <p class="text-center text-muted">
+            {% if is_daily_archive %}
+                Top {{ articles | length }} articles selected for {{ archive_date }}
+            {% else %}
+                Curated from Hacker News, Reddit, and top tech blogs.
+            {% endif %}
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+        </div>
 
-        <!-- Date Filter -->
+        <!-- Date Filter with Enhanced Navigation -->
         <div class="mb-3 text-center">
             <label for="dateFilter" class="form-label me-2">Filter by date:</label>
-            <select id="dateFilter" class="form-select w-auto d-inline-block">
-                <option value="all">All Dates</option>
-                {% for date in articles | map(attribute='date') | unique | sort %}
-                <option value="{{ date }}">{{ date }}</option>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates ({{ articles | length }} articles)</option>
+                {% for date in articles | map(attribute='date') | unique | sort(reverse=true) %}
+                <option value="{{ date }}">{{ date }} ({{ articles | selectattr('date', 'equalto', date) | list | length }} articles)</option>
                 {% endfor %}
             </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    Showing {{ articles | length }} total articles from 
+                    {{ articles | map(attribute='source') | unique | list | length }} sources
+                    {% if articles | map(attribute='date') | unique | list | length > 1 %}
+                    across {{ articles | map(attribute='date') | unique | list | length }} days
+                    {% endif %}
+                </span>
+            </small>
         </div>
 
         <!-- Source Filter -->
@@ -93,7 +127,46 @@
     <script>
         const sourceFilter = document.getElementById('sourceFilter');
         const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
         const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
 
         function filterArticles() {
             const sourceValue = sourceFilter.value.toLowerCase();
@@ -109,10 +182,85 @@
                     li.style.display = 'none';
                 }
             });
+            
+            updateStats();
+            updateNavigationButtons();
         }
 
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
         sourceFilter.addEventListener('change', filterArticles);
         dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
     </script>
 </body>
 

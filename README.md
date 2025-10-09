@@ -15,6 +15,12 @@ source .venv/bin/activate
 
 # Run the application
 make run
+
+# Generate historical report
+python -m digesting_feed.cli report --days 7
+
+# View archive statistics
+python -m digesting_feed.cli stats
 ```
 
 ### Manual Setup
@@ -27,6 +33,44 @@ source .venv/bin/activate
 uv pip install .
 
 python -m digesting_feed.main
+```
+
+## Historical Features
+
+The application now maintains a comprehensive history of articles with the following features:
+
+### Archive Management
+- **Daily Archives**: Articles are automatically archived by date in separate JSON files
+- **Extended Retention**: Archives are kept for 30 days (configurable)
+- **Deduplication**: Intelligent deduplication prevents duplicate articles across dates
+- **Statistics**: Track article counts, sources, and trends over time
+
+### Web Interface Enhancements
+- **Date Navigation**: Browse articles by specific dates with previous/next navigation
+- **Keyboard Shortcuts**: Use arrow keys for date navigation, 'T' for today
+- **Enhanced Filtering**: Filter by date and source with article counts
+- **Archive Index**: Dedicated page for browsing historical archives (`archives.html`)
+- **Historical Reports**: Rich analytics and visualizations (`history_report.html`)
+
+### CLI Tools
+
+The application includes a powerful CLI for managing archives:
+
+```bash
+# Generate a 7-day historical report
+python -m digesting_feed.cli report --days 7 --output report.html
+
+# Show archive statistics
+python -m digesting_feed.cli stats
+
+# Export historical data to JSON
+python -m digesting_feed.cli export --days 30 --output data.json
+
+# List all available archive dates
+python -m digesting_feed.cli list
+
+# Clean up old archives (with dry-run option)
+python -m digesting_feed.cli cleanup --retention 30 --dry-run
 ```
 
 ## Development

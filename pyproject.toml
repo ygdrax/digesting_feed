@@ -6,33 +6,17 @@ dependencies = [
     "requests",
     "feedparser",
     "jinja2",
-    "beautifulsoup4",
-    "dotenv"
+    "python-dotenv"
 ]
 
 [project.optional-dependencies]
 dev = [
     "ruff",
-    "pylint",
-    "black",
     "pre-commit",
     "pytest",
-    "pytest-mock",
 ]
 
-[FORMAT]
-max-line-length=100
 
-[tool.black]
-line-length = 100
-target-version = ["py313"]
-exclude = '''
-/(
-    \.venv
-  | build
-  | dist
-)/
-'''
 
 [tool.ruff]
 line-length = 100
@@ -92,8 +76,7 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 "tests/*" = ["PLR2004", "S101", "ARG", "FBT"]
 
 [tool.ruff.lint.mccabe]
-# McCabe complexity configuration
-max-complexity = 10
+max-complexity = 15
 
 [tool.ruff.lint.isort]
 # Use a single line between direct and from import

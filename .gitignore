@@ -1,16 +1,30 @@
+# Python
 .venv/
 __pycache__/
-**.pyc
+*.pyc
 *.pyo
 *.pyd
-*.egg-info
+*.egg-info/
 build/
-.ruff_cache
-.pytest_cache
+dist/
+.pytest_cache/
+.ruff_cache/
 
+# Generated HTML files are committed for GitHub Pages
+# Only ignore temporary export files
+*_export.json
 
-**/data/*
+# Data files are committed as part of git crawler functionality
+# Keep all archive data for historical tracking
 !**/data/.gitkeep
 
-# PyCharm-specific
-.idea/*
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env

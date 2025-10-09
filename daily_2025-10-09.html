@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - October 09, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                � Daily DevOps Digest - October 09, 2025
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for October 09, 2025
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+        </div>
+
+        <!-- Date Filter with Enhanced Navigation -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-10-09">2025-10-09 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    Showing 25 total articles from 
+                    11 sources
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-09">
+                <a href="https://kubernetes.io/blog/2025/09/19/kubernetes-v1-34-recover-expansion-failure/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.34: Recovery From Volume Expansion Failure (GA)
+                </a>
+                <p class="mb-1 small text-light">There are new API fields available in PVC objects which you can monitor to observe progress of volume expansion. com/kubernetes/kubernetes/issues, along with details about how to reproduce the problem.</p>
+                <small class="text-secondary">Kubernetes | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-09">
+                <a href="https://www.cncf.io/blog/2025/10/07/auditing-user-activity-in-pods-and-nodes-with-the-security-profiles-operator/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Auditing user activity in pods and nodes with the Security-Profiles-Operator
+                </a>
+                <p class="mb-1 small text-light">The application is deployed on Kubernetes, with various containers (in pods) running different workloads. It provides the crucial, unalterable record of actions taken inside the container, closing this critical security gap.</p>
+                <small class="text-secondary">CNCF | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-10-09">
+                <a href="https://www.pulumi.com/blog/10-things-you-can-do-with-neo/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] 10 Things You Can Do With Our Infrastructure Agent, Neo
+                </a>
+                <p class="mb-1 small text-light">Ask Neo: “Create a serverless API with PostgreSQL database and Redis cache on AWS” and it produces fully configured resources with proper networking, security groups, and IAM policies.</p>
+                <small class="text-secondary">Pulumi | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-10-09">
+                <a href="https://www.pulumi.com/blog/deployment-guardrails-with-policy-as-code/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] How to Implement Robust Security Guardrails Using Policy as Code
+                </a>
+                <p class="mb-1 small text-light">Platform teams typically manage this layer with strict access controls because it forms the security backbone of your entire infrastructure. ADVISORY ) Example 3: Cross-Resource Security Policy Problem: When microservices use S3 buckets, encryption should be mandatory.</p>
+                <small class="text-secondary">Pulumi | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-09">
+                <a href="https://www.reddit.com/r/devops/comments/1nzxwbc/infrastructure_as_code_apparently_doesnt_include/" target="_blank" class="fw-bold text-decoration-none">
+                    "Infrastructure as code" apparently doesn't include laptop configuration
+                </a>
+                <p class="mb-1 small text-light">Kubernetes deployments, database migrations, CI/CD pipelines, monitoring, scaling. Docker, kubectl, terraform, AWS CLI, VPN clients, IDE plugins, SSH keys.</p>
+                <small class="text-secondary">Reddit | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-09">
+                <a href="https://netflixtechblog.com/building-a-resilient-data-platform-with-write-ahead-log-at-netflix-127b6712359a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Building a Resilient Data Platform with Write-Ahead Log at Netflix
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows our Data Platform to route different use cases to the most suitable storage system based on performance, durability, and consistency needs. Multi-Table MutationsWAL is used by Key-Value service to build the MutateItems API.</p>
+                <small class="text-secondary">Netflix | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-09">
+                <a href="https://www.docker.com/blog/from-the-captains-chair-pradumna-saraf/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] From the Captain’s Chair: Pradumna Saraf
+                </a>
+                <p class="mb-1 small text-light">He is also a Golang developer and loves educating people through social media and blogs about various DevOps tools like Docker, GitHub Actions, Kubernetes, etc. It showed Docker can also be used for important services like authorization.</p>
+                <small class="text-secondary">Docker | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-09">
+                <a href="https://www.docker.com/blog/docker-model-runner-vulkan-gpu-support/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Unlocking Local AI on Any GPU: Docker Model Runner Now with Vulkan Support
+                </a>
+                <p class="mb-1 small text-light">Vulkan is a modern, cross-platform graphics and compute API. com/docker/model-runnerPlease star the repo to show your support, fork it to experiment, and consider contributing back with your own improvements.</p>
+                <small class="text-secondary">Docker | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-09">
+                <a href="https://www.docker.com/blog/ibm-granite-4-0-models-now-available-on-docker-hub/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] IBM Granite 4.0 Models Now Available on Docker Hub
+                </a>
+                <p class="mb-1 small text-light">You can easily download, share, and upload models on Docker Hub, making it a central hub for both containerized applications and the next wave of generative AI.</p>
+                <small class="text-secondary">Docker | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-09">
+                <a href="https://www.docker.com/blog/unlimited-access-to-docker-hardened-images-because-security-should-be-affordable-always/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Unlimited access to Docker Hardened Images: Because security should be affordable, always
+                </a>
+                <p class="mb-1 small text-light">With Docker Hub, we made containers accessible to every developer, everywhere. Developers especially appreciate how flexible the solution is: migrating is as simple as changing a single line in a Dockerfile.</p>
+                <small class="text-secondary">Docker | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-10-09">
+                <a href="https://www.redhat.com/en/blog/whats-new-in-ansible-automation-platform-2.6" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] What’s new in Red Hat Ansible Automation Platform 2.6
+                </a>
+                <p class="mb-1 small text-light">6 release is headlined by three new features designed to drive key outcomes for automation and IT ops teams. When you upgrade, you can expect to: Unlock more value: The new automation dashboard allows you to measure the value and impact of automation initiatives.</p>
+                <small class="text-secondary">Red Hat | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-10-09">
+                <a href="https://about.gitlab.com/blog/atlassian-ending-data-center-as-gitlab-maintains-deployment-choice/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Atlassian ending Data Center as GitLab maintains deployment choice
+                </a>
+                <p class="mb-1 small text-light">Atlassian's announcement that all Data Center products will reach end-of-life by March 28, 2029, means thousands of organizations must now reconsider their DevSecOps deployment and infrastructure.</p>
+                <small class="text-secondary">GitLab | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-10-09">
+                <a href="https://aws.amazon.com/blogs/aws/new-general-purpose-amazon-ec2-m8a-instances-are-now-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] New general-purpose Amazon EC2 M8a instances are now available
+                </a>
+                <p class="mb-1 small text-light">All of these improvements are built on the AWS Nitro System, which delivers low virtualization overhead, consistent performance, and advanced security across all instance sizes.</p>
+                <small class="text-secondary">Amazon AWS | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-10-09">
+                <a href="https://aws.amazon.com/blogs/aws/announcing-amazon-ecs-managed-instances-for-containerized-applications/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Announcing Amazon ECS Managed Instances for containerized applications
+                </a>
+                <p class="mb-1 small text-light">Today, we’re announcing Amazon ECS Managed Instances, a new compute option for Amazon Elastic Container Service (Amazon ECS) that enables developers to use the full range of Amazon Elastic Compute Cloud (Amazon EC2) capabilities while offloading infrastructure management responsibilities to Amazo...</p>
+                <small class="text-secondary">Amazon AWS | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-09">
+                <a href="https://www.hashicorp.com/blog/do-cloud-right-what-successful-enterprises-are-getting-right-about-cloud-strategy" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Do cloud right: What successful enterprises are getting right about cloud strategy
+                </a>
+                <p class="mb-1 small text-light">IT environments are siloed, as are the platform and security teams responsible for managing the cloud infrastructure. To get control of their cloud infrastructure and security, tactical enterprises should: Implement infrastructure as code (IaC) best practices: IaC helps to speed up provisioning.</p>
+                <small class="text-secondary">HashiCorp | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-09">
+                <a href="https://www.hashicorp.com/blog/cloud-migration-strategy-for-insurance-lessons-from-an-industry-leader" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Cloud migration strategy for insurance: Lessons from an industry leader
+                </a>
+                <p class="mb-1 small text-light">The cloud is key to unlocking more business value for insurance companies. Over 50% of the company’s applications were in the cloud, and many new innovations had been deployed.</p>
+                <small class="text-secondary">HashiCorp | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-09">
+                <a href="https://www.hashicorp.com/blog/why-traditional-secret-scanning-tools-fail-to-address-today-s-secret-management-crisis" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Why traditional secret scanning tools fail to address today's secret management crisis
+                </a>
+                <p class="mb-1 small text-light">Microservice architectures, cloud native deployments, and DevOps practices have accelerated development velocity while exponentially increasing the number of secrets organizations must manage. Container orchestration platforms manage secrets across distributed systems.</p>
+                <small class="text-secondary">HashiCorp | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-09">
+                <a href="https://kubernetes.io/blog/2025/09/25/csi-changed-block-tracking/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing Changed Block Tracking API support (alpha)
+                </a>
+                <p class="mb-1 small text-light">The Changed Block Tracking API addresses these challenges by providing native Kubernetes support for incremental backup capabilities through the CSI interface.</p>
+                <small class="text-secondary">Kubernetes | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-09">
+                <a href="https://kubernetes.io/blog/2025/09/22/kubernetes-v1-34-pod-level-resources/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.34: Pod Level Resources Graduated to Beta
+                </a>
+                <p class="mb-1 small text-light">As a beta feature, Kubernetes allows you to specify the CPU, memory and hugepages resources at the Pod-level. This feature enhances resource management in Kubernetes by offering flexible resource management at both the Pod and container levels.</p>
+                <small class="text-secondary">Kubernetes | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-09">
+                <a href="https://kubernetes.io/blog/2025/09/18/kubernetes-v1-34-dra-consumable-capacity/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.34: DRA Consumable Capacity
+                </a>
+                <p class="mb-1 small text-light">Dynamic Resource Allocation (DRA) is a Kubernetes API for managing scarce resources across Pods and containers. In this blog, we focus on the device sharing feature and dive into a new capability introduced in Kubernetes 1.</p>
+                <small class="text-secondary">Kubernetes | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-09">
+                <a href="https://www.cncf.io/announcements/2025/10/08/cloud-native-computing-foundation-announces-knatives-graduation/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Cloud Native Computing Foundation Announces Knative’s Graduation
+                </a>
+                <p class="mb-1 small text-light">As a Kubernetes-native project, it also complements other cloud native technologies such as observability, networking, and security. The Cloud Native Computing Foundation (CNCF) hosts critical components of the global technology infrastructure, including Kubernetes, Prometheus, and Envoy.</p>
+                <small class="text-secondary">CNCF | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-09">
+                <a href="https://www.cncf.io/blog/2025/10/07/managing-kubernetes-workloads-using-the-app-of-apps-pattern-in-argocd-2/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Managing Kubernetes Workloads Using the App of Apps Pattern in ArgoCD-2
+                </a>
+                <p class="mb-1 small text-light">It brings order to potentially chaotic deployments, improves observability and aligns perfectly with GitOps methodologies. It’s an ideal solution for platform teams, GitOps advocates and anyone managing more than one service in Kubernetes.</p>
+                <small class="text-secondary">CNCF | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-09">
+                <a href="https://blog.cloudflare.com/payload-cms-workers/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Payload on Workers: a full-fledged CMS, running entirely on Cloudflare’s stack
+                </a>
+                <p class="mb-1 small text-light">When people use your application, it spins up at the closest Cloudflare server, ready to go. For applying database migrations during deployment, we used the newly released remote bindings feature of Wrangler to connect to the remote database, using the same binding.</p>
+                <small class="text-secondary">Cloudflare | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-09">
+                <a href="https://blog.cloudflare.com/nationwide-internet-shutdown-in-afghanistan/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Nationwide Internet shutdown in Afghanistan extends localized disruptions
+                </a>
+                <p class="mb-1 small text-light">Cloudflare stopped receiving client traffic from the services when the shutdown began, causing the bytes transferred in response to drop to zero. You can follow the latest state of Internet connectivity in Afghanistan on Cloudflare Radar.</p>
+                <small class="text-secondary">Cloudflare | 2025-10-09</small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-09">
+                <a href="https://blog.cloudflare.com/birthday-week-2025-wrap-up/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] 15 years of helping build a better Internet: a look back at Birthday Week 2025
+                </a>
+                <p class="mb-1 small text-light">edu emails 12 months of free access to our paid developer platform features. Introducing Observatory and Smart Shield New monitoring tools in the Cloudflare dashboard that provide actionable recommendations and one-click fixes for performance issues.</p>
+                <small class="text-secondary">Cloudflare | 2025-10-09</small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

@@ -17,9 +17,9 @@ jobs:
         with:
             with-dev: "true"
 
-      - name: Run pylint
+      - name: Install additional tools
         run: |
-          pylint digesting_feed
+          uv pip install --system pylint black
 
       - name: Run ruff
         run: |

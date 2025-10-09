@@ -24,7 +24,7 @@ runs:
     - name: Install project dependencies with uv
       shell: bash
       run: |
-        uv pip install --system -r pyproject.toml
+        uv pip install --system -e .
         if [[ "${{ inputs.with-dev }}" == "true" ]]; then
           uv pip install --system -e ".[dev]"
         fi

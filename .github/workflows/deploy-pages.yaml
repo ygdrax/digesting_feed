@@ -1,12 +1,14 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy to GitHub Pages
 
 on:
+  schedule:
+    - cron: "0 8 * * *"  # Daily at 8 AM UTC
   push:
     branches: ["main", "develop"]
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -15,7 +17,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  build-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -23,6 +25,79 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python environment
+        uses: ./.github/actions/setup-python
+
+      - name: Generate Digest
+        env:
+          HN_URL: "https://hnrss.org/frontpage"
+          REDDIT_URLS: |
+            [
+              "https://www.reddit.com/r/devops/.rss",
+              "https://www.reddit.com/r/sysadmin/.rss",
+              "https://www.reddit.com/r/kubernetes/.rss"
+            ]
+          TECH_BLOG_FEEDS: |
+            {
+              "Netflix": "https://netflixtechblog.medium.com/feed",
+              "Amazon AWS": "https://aws.amazon.com/blogs/aws/feed/",
+              "Microsoft Azure": "https://azure.microsoft.com/en-us/blog/feed/",
+              "Cloudflare": "https://blog.cloudflare.com/rss/",
+              "Docker": "https://www.docker.com/blog/feed/",
+              "Kubernetes": "https://kubernetes.io/feed.xml",
+              "HashiCorp": "https://www.hashicorp.com/blog/rss.xml",
+              "Red Hat": "https://www.redhat.com/en/rss/blog",
+              "GitLab": "https://about.gitlab.com/blog/all.xml",
+              "CNCF": "https://www.cncf.io/feed/",
+              "Pulumi": "https://www.pulumi.com/blog/rss.xml",
+              "Snyk": "https://snyk.io/blog/rss.xml",
+              "Sentry": "https://blog.sentry.io/feed.xml",
+              "Spotify Engineering": "https://engineering.atspotify.com/feed/",
+              "Engineering at Meta": "https://engineering.fb.com/feed/",
+              "LinkedIn Engineering": "https://engineering.linkedin.com/blog.rss",
+              "Lyft Engineering": "https://eng.lyft.com/feed"
+            }
+          KEYWORDS: |
+            [
+              "kubernetes", "docker", "devops", "cloud", "infrastructure", "container",
+              "microservices", "api", "cicd", "automation", "monitoring", "security",
+              "terraform", "ansible", "jenkins", "github", "gitlab", "aws", "azure",
+              "deployment", "scalability", "observability", "prometheus", "grafana"
+            ]
+          SOURCE_WEIGHTS: |
+            {
+              "Amazon AWS": 3, "Microsoft Azure": 3, "Kubernetes": 3,
+              "Docker": 2, "HashiCorp": 2, "GitLab": 2, "CNCF": 2,
+              "Hacker News": 1, "Reddit": 1
+            }
+        run: python -m digesting_feed.main
+
+      - name: Commit and Push Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add index.html archives.html history_report.html archives/ digesting_feed/data/archives/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update daily digest and reports"
+            git push
+          fi
+
+      - name: Create deployment directory
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp archives.html _site/
+          cp history_report.html _site/
+          if [ -d "archives" ]; then
+            cp -r archives _site/
+          fi
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -30,7 +105,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
       
       - name: Deploy to GitHub Pages
         id: deployment

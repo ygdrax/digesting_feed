@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - October 18, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - October 18, 2025
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for October 18, 2025
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-10-18">2025-10-18 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    12 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="Hacker News">Hacker News</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-18">
+                <a href="https://kubernetes.io/blog/2025/09/19/kubernetes-v1-34-recover-expansion-failure/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.34: Recovery From Volume Expansion Failure (GA)
+                </a>
+                <p class="mb-1 small text-light">There are new API fields available in PVC objects which you can monitor to observe progress of volume expansion. com/kubernetes/kubernetes/issues, along with details about how to reproduce the problem.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-18">
+                <a href="https://www.cncf.io/blog/2025/10/17/why-autonomous-infrastructure-is-the-future-from-intent-to-self-operating-systems/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Why Autonomous Infrastructure is the future: From intent to self-operating systems
+                </a>
+                <p class="mb-1 small text-light">Traditional DevOps platforms require human orchestration and constant oversight.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-18">
+                <a href="https://www.cncf.io/blog/2025/10/17/kubecon-cloudnativecon-north-america-2025-co-located-event-deep-dive-platform-engineering-day/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] KubeCon + CloudNativeCon North America 2025 Co-Located Event Deep Dive: Platform Engineering Day
+                </a>
+                <p class="mb-1 small text-light">Expect even more real-world insights from practitioners who are shaping the next phase of platform engineering. The day will feature two parallel tracks covering topics such as developer experience, API-driven infrastructure, and the evolving future of platform engineering.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-18">
+                <a href="https://blog.cloudflare.com/unpacking-cloudflare-workers-cpu-performance-benchmarks/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Unpacking Cloudflare Workers CPU Performance Benchmarks
+                </a>
+                <p class="mb-1 small text-light">Cloudflare platform improvements Theo's benchmarks covered a variety of frameworks, making it clear that no single JavaScript library could be at fault for the general problem. Tuning OpenNext for performance The platform changes solved most of the problem.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-10-18">
+                <a href="https://www.pulumi.com/blog/10-things-you-can-do-with-neo/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] 10 Things You Can Do With Our Infrastructure Agent, Neo
+                </a>
+                <p class="mb-1 small text-light">Ask Neo: “Create a serverless API with PostgreSQL database and Redis cache on AWS” and it produces fully configured resources with proper networking, security groups, and IAM policies.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-10-18">
+                <a href="https://www.pulumi.com/blog/deployment-guardrails-with-policy-as-code/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] How to Implement Robust Security Guardrails Using Policy as Code
+                </a>
+                <p class="mb-1 small text-light">Platform teams typically manage this layer with strict access controls because it forms the security backbone of your entire infrastructure. ADVISORY ) Example 3: Cross-Resource Security Policy Problem: When microservices use S3 buckets, encryption should be mandatory.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-18">
+                <a href="https://netflixtechblog.com/building-a-resilient-data-platform-with-write-ahead-log-at-netflix-127b6712359a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Building a Resilient Data Platform with Write-Ahead Log at Netflix
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows our Data Platform to route different use cases to the most suitable storage system based on performance, durability, and consistency needs. Multi-Table MutationsWAL is used by Key-Value service to build the MutateItems API.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-10-18">
+                <a href="https://about.gitlab.com/blog/atlassian-ending-data-center-as-gitlab-maintains-deployment-choice/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Atlassian ending Data Center as GitLab maintains deployment choice
+                </a>
+                <p class="mb-1 small text-light">Atlassian's announcement that all Data Center products will reach end-of-life by March 28, 2029, means thousands of organizations must now reconsider their DevSecOps deployment and infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-18">
+                <a href="https://engineering.fb.com/2025/10/14/data-center-engineering/design-for-sustainability-new-design-principles-for-reducing-it-hardware-emissions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Design for Sustainability: New Design Principles for Reducing IT Hardware Emissions
+                </a>
+                <p class="mb-1 small text-light">Modular Rack Designs Modular Design which allows older rack components to be re-used in newer racks. This is particularly important in high-reliability applications where system failure could have significant consequences.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-18">
+                <a href="https://engineering.fb.com/2025/10/14/data-center-engineering/how-meta-is-leveraging-ai-to-improve-the-quality-of-scope-3-emission-estimates-for-it-hardware/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] How Meta Is Leveraging AI To Improve the Quality of Scope 3 Emission Estimates for IT Hardware
+                </a>
+                <p class="mb-1 small text-light">This comprehensive framework allows us to identify high-impact areas for emissions reduction. Therefore, when we receive PCF information, it is crucial to ensure that we map all the components correctly.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-10-18">
+                <a href="https://github.com/carverauto/serviceradar" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: ServiceRadar – open-source Network Observability Platform
+                </a>
+                <p class="mb-1 small text-light">ServiceRadar is an open-source platform for distributed, secure network management and observability, scaling to 100k+ devices. We built ServiceRadar to simplify monitoring hybrid telecom networks, evolving it into a Kubernetes-native solution with Helm and Docker support.</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-18">
+                <a href="https://www.hashicorp.com/blog/20-of-singapore-in-2-years-trust-bank-s-4-keys-to-coding-with-speed-and-security" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] 20% of Singapore in 2 years: Trust Bank’s 4 keys to coding with speed and security
+                </a>
+                <p class="mb-1 small text-light">Every module, from S3 buckets to microservices, comes with security baked in from the start. Infrastructure enables innovation Trust Bank's story illustrates a fundamental truth about modern software development: infrastructure automation enables business innovation.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-18">
+                <a href="https://kubernetes.io/blog/2025/10/18/wg-policy-spotlight-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on Policy Working Group
+                </a>
+                <p class="mb-1 small text-light">Jim Bugwadia: My name is Jim Bugwadia, and I am a co-founder and the CEO at Nirmata which provides solutions that automate security and compliance for cloud-native workloads. This is intended to help organizations meet important security standards in their Kubernetes environments.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-18">
+                <a href="https://kubernetes.io/blog/2025/09/25/csi-changed-block-tracking/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing Changed Block Tracking API support (alpha)
+                </a>
+                <p class="mb-1 small text-light">The Changed Block Tracking API addresses these challenges by providing native Kubernetes support for incremental backup capabilities through the CSI interface.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-18">
+                <a href="https://kubernetes.io/blog/2025/09/22/kubernetes-v1-34-pod-level-resources/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.34: Pod Level Resources Graduated to Beta
+                </a>
+                <p class="mb-1 small text-light">As a beta feature, Kubernetes allows you to specify the CPU, memory and hugepages resources at the Pod-level. This feature enhances resource management in Kubernetes by offering flexible resource management at both the Pod and container levels.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-18">
+                <a href="https://blog.cloudflare.com/load-balancing-monitor-groups-multi-service-health-checks-for-resilient/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Load Balancing Monitor Groups: Multi-Service Health Checks for Resilient Applications
+                </a>
+                <p class="mb-1 small text-light">This feature provides a new way to create sophisticated, multi-service health assessments directly on our platform. This provides a definitive override for essential services, regardless of the status of other monitors in the group.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-18">
+                <a href="https://www.reddit.com/r/devops/comments/1o99ywr/v2_infrawise_model_your_onprem_vs_cloud_cost/" target="_blank" class="fw-bold text-decoration-none">
+                    [V2 🏗️ Infrawise] - Model your On-Prem vs Cloud Cost
+                </a>
+                <p class="mb-1 small text-light">width=1080&format=png&auto=webp&s=609828ff77239e85145afa630c34aaaaf7d1708d # What's new - Presets for various types of businesses (e-commerce, AI/ML, Finance, etc. ) - Energy, compute, storage, GPU, networking, human resources, software licensing, salary, security, and compliance costs.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-18">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1o9bb7o/question_for_anyone_using_barracuda_email_gateway/" target="_blank" class="fw-bold text-decoration-none">
+                    Question for anyone using Barracuda Email Gateway Defense (cloud version)
+                </a>
+                <p class="mb-1 small text-light">Can the quarantine notification frequency be configured per user, or is it strictly a global setting. However, the documentation on BarracudaCampus clearly states that users can configure their own quarantine notification settings.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-18">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1o72vga/my_first_oss_project_pprofoperator_autoprofiling/" target="_blank" class="fw-bold text-decoration-none">
+                    My first OSS project: “pprof-operator” — auto-profiling Go apps in Kubernetes when CPU/memory crosses a threshold
+                </a>
+                <p class="mb-1 small text-light">com/maulindesai/pprof-operator What it is pprof-operator is a Kubernetes operator that helps you automate Go pprof profiling in your cluster. Why I built it I’ve spent a lot of time debugging Go services in Kubernetes, and honestly, getting useful profiling data in production was always a pain.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-18">
+                <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-1-ingesting-and-processing-data-80113e124acc?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 1 — Ingesting and Processing Data…
+                </a>
+                <p class="mb-1 small text-light">This modularity allows for independent service development, deployment, and scaling. This allows teams to choose the most suitable data schemas and storage technologies for their services.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-18">
+                <a href="https://www.docker.com/blog/why-i-still-use-jquery-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Why I Still Use jQuery
+                </a>
+                <p class="mb-1 small text-light">Rewriting these sites to pure JavaScript or a modern framework is a time-consuming, expensive endeavour that can also introduce new challenges and bugs. The minor improvements a new framework can make in this scenario don’t offset the time spent learning a new tool.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-10-18">
+                <a href="https://www.redhat.com/en/blog/energy-efficient-computing-server-platforms-red-hat-enterprise-linux" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Optimizing energy efficiency on Red Hat Enterprise Linux
+                </a>
+                <p class="mb-1 small text-light">The energy efficiency of data centers and high-performance systems is becoming increasingly important. This article breaks down the issue of energy efficiency in modern server platforms, presenting tools and an example methodology for measuring power consumption and performance.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-18">
+                <a href="https://engineering.fb.com/2025/10/17/ai-research/scaling-llm-inference-innovations-tensor-parallelism-context-parallelism-expert-parallelism/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Scaling LLM Inference: Innovations in Tensor Parallelism, Context Parallelism, and Expert Parallelism
+                </a>
+                <p class="mb-1 small text-light">The rapid evolution of large language models (LLMs) has ushered in a new era of AI-powered applications, from conversational agents to advanced content generation. Future challenges in this space include: Cloud fabric design: Optimizing the underlying cloud infrastructure for LLM workloads.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-18">
+                <a href="https://engineering.fb.com/2025/10/16/developer-tools/branching-in-a-sapling-monorepo/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Branching in a Sapling Monorepo
+                </a>
+                <p class="mb-1 small text-light">However, this approach introduces challenges for teams that must manage multiple versions of their code. This resolves the scalability challenge with the repo-level merge commits and still provides merging workflows at the directory level.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-10-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-10-18">
+                <a href="https://www.anildash.com//2025/10/17/the-majority-ai-view/" target="_blank" class="fw-bold text-decoration-none">
+                    The Majority AI View
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.anildash.com//2025/10/17/the-majority-ai-view/ Comments URL: https://news.ycombinator.com/item?id=45625029 Points: 35 # Comments: 15</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-10-18
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

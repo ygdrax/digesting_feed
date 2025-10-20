@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - October 20, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - October 20, 2025
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for October 20, 2025
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-10-20">2025-10-20 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    12 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="Hacker News">Hacker News</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Sentry">Sentry</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-20">
+                <a href="https://www.cncf.io/blog/2025/10/16/efficient-autoscaling-keeping-performance-reliability-and-cost-in-mind-with-open-source-projects/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Efficient autoscaling: Keeping performance, reliability, and cost in mind with open source projects
+                </a>
+                <p class="mb-1 small text-light">” His point resonated with me deeply — even in the AI era, the cloud-native community is still refining the fundamentals of container orchestration, scalability, and efficiency. Before your application’s performance degrades, you need to add resources — which increases cost.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-20">
+                <a href="https://www.reddit.com/r/devops/comments/1obe3k0/security_observability_in_kubernetes_isnt_more/" target="_blank" class="fw-bold text-decoration-none">
+                    Security observability in Kubernetes isn’t more logs, it’s correlation
+                </a>
+                <p class="mb-1 small text-light">What finally worked was treating security observability differently from app observability. I pulled Kubernetes audit logs into the same pipeline as traces, forwarded Falco events, and added selective network flow logs.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-20">
+                <a href="https://www.docker.com/blog/connect-codex-to-mcp-servers-mcp-toolkit/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] How to add MCP Servers to OpenAI’s Codex with Docker MCP Toolkit
+                </a>
+                <p class="mb-1 small text-light">First, we ask Codex to create the container: › Spin up a Neo4j container for me in Docker please. Codex will run the necessary Docker command, and get our Neo4j container running.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-20">
+                <a href="https://engineering.fb.com/2025/10/16/data-center-engineering/10x-backbone-how-meta-is-scaling-backbone-connectivity-for-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] 10X Backbone: How Meta Is Scaling Backbone Connectivity for AI
+                </a>
+                <p class="mb-1 small text-light">While we see growth in both networks, it’s EBB that presents the most challenging scalability problems.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-20">
+                <a href="https://www.cncf.io/blog/2025/10/16/kyverno-vs-kubernetes-policies-how-kyverno-complements-and-completes-kubernetes-policy-types/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Kyverno vs Kubernetes policies: How Kyverno complements and completes Kubernetes policy types
+                </a>
+                <p class="mb-1 small text-light">As you will see below, Kyverno provides critical features that are missing in Kubernetes policies and also helps with policy management at scale.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-20">
+                <a href="https://blog.cloudflare.com/improving-the-trustworthiness-of-javascript-on-the-web/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Improving the trustworthiness of Javascript on the Web
+                </a>
+                <p class="mb-1 small text-light">The web is the most powerful application platform in existence. A smartphone application is essentially just a zip file.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-20">
+                <a href="https://www.reddit.com/r/devops/comments/1oas5py/how_do_you_maintain_observability_across/" target="_blank" class="fw-bold text-decoration-none">
+                    How do you maintain observability across automated workflows?
+                </a>
+                <p class="mb-1 small text-light">I’ve got automations running through several systems (GitHub Actions, webhooks, 3rd-party SaaS), and tracking failures across all of them is a nightmare. I’m thinking of building some centralized logging or alerting, but curious how others handle it at scale. submitted by /u/Dizzy_Whole_9739</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-20">
+                <a href="https://www.reddit.com/r/devops/comments/1obbt1e/cicd_workflow_best_practices_to_avoid_costly/" target="_blank" class="fw-bold text-decoration-none">
+                    CI/CD Workflow Best Practices to Avoid Costly Deployment Disasters
+                </a>
+                <p class="mb-1 small text-light">One that really stood out was this solid blog from API Connects about how to build safer, more consistent CI/CD workflows using best practices. Small missteps in CI/CD can snowball into downtime or angry clients.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-20">
+                <a href="https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] From queries to conversations: Unlock insights about your data using Azure Storage Discovery—now generally available
+                </a>
+                <p class="mb-1 small text-light">Azure Storage Discovery helps you optimize storage costs, comply with security best practices, and drive operational efficiency. The intuitive experience provides advanced data visualizations and actional intelligence that are most important to you.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-20">
+                <a href="https://azure.microsoft.com/en-us/blog/sora-2-now-available-in-azure-ai-foundry/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Sora 2 now available in Azure AI Foundry
+                </a>
+                <p class="mb-1 small text-light">Seamless integration into business workflows, backed by Microsoft’s enterprise-grade safety and security. 10 Please refer to the Azure AI Foundry Models page for future updates in deployment types and availability.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-20">
+                <a href="https://azure.microsoft.com/en-us/blog/oracle-databaseazure-offers-new-features-regions-and-programs-to-unlock-data-and-ai-innovation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Oracle Database@Azure offers new features, regions, and programs to unlock data and AI innovation
+                </a>
+                <p class="mb-1 small text-light">It’s a practical path to iterate on new features while keeping governance and security at the forefront. This enables businesses to harness the power of Microsoft Azure while leveraging Oracle’s industry-leading database technology to achieve greater scalability, performance, and security.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-20">
+                <a href="https://www.docker.com/blog/debug-docker-builds-with-visual-studio-code/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Debug Docker Builds with Visual Studio Code
+                </a>
+                <p class="mb-1 small text-light">Building Docker images is an important component of the software delivery pipeline for modern applications. Update to the latest version of Docker Desktop to ensure you have the latest Docker build tooling.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-10-20">
+                <a href="https://www.redhat.com/en/blog/simplified-patching-red-hat-enterprise-linux-and-red-hat-insights" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Simplified patching with Red Hat Enterprise Linux and Red Hat Insights
+                </a>
+                <p class="mb-1 small text-light">The most common task facing system administrators is patching infrastructure. It's time consuming, it requires coordination with application teams and stakeholders, and it often must happen in segments over time.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-10-20">
+                <a href="https://about.gitlab.com/blog/variable-and-artifact-sharing-in-gitlab-parent-child-pipelines/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Variable and artifact sharing in GitLab parent-child pipelines
+                </a>
+                <p class="mb-1 small text-light">This is where ideas like parent-child pipelines and data exchange in CI/CD setups become incredibly important. - docker push $PRODUCTION_IMAGE - echo "UPSTREAM_CONTAINER_IMAGE=$PRODUCTION_IMAGE" >> prodimage.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-10-20">
+                <a href="https://about.gitlab.com/blog/optimize-gitlab-object-storage-for-scale-and-performance/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Optimize GitLab object storage for scale and performance
+                </a>
+                <p class="mb-1 small text-light">Here's how to configure object storage for maximum performance, security, and reliability across your GitLab components.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-10-20">
+                <a href="https://blog.sentry.io/sentry-ai-code-review-now-in-beta-break-production-less/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Sentry AI code review, now in beta: break production less
+                </a>
+                <p class="mb-1 small text-light">We added some new capabilities to our AI code review that pulls in your Sentry issues to actually predict bugs when you open a pull request. The way he was handling API keys created inconsistent error handling that would have caused a crash during project detection when using the different models.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-10-20">
+                <a href="https://snyk.io/blog/how-mercato-solutions-tackles-appsec-flexibility-conundrum-with-Snyk/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Increasing Agility & Flexibility: How Mercato Solutions tackles the application security vs. flexibility conundrum with Snyk
+                </a>
+                <p class="mb-1 small text-light">Learn how Mercato Solutions, a fast-growing low-code application provider, achieved near-zero security incidents and maintained development flexibility by partnering with Snyk API & Web.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-10-20">
+                <a href="https://snyk.io/blog/snyk-named-a-leader-in-the-2025-gartner-r-magic-quadrant-tm-for-application/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Snyk Named a Leader in the 2025 Gartner® Magic Quadrant™ for Application Security Testing
+                </a>
+                <p class="mb-1 small text-light">Snyk is recognized as a Leader in the 2025 Gartner® Magic Quadrant™ for Application Security Testing (AST), validating our developer-first approach and comprehensive platform for securing the modern SDLC.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-10-20">
+                <a href="https://snyk.io/blog/phishing-campaign-leveraging-the-npm-ecosystem/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Phishing Campaign Leveraging the NPM Ecosystem
+                </a>
+                <p class="mb-1 small text-light">A new phishing campaign weaponizes NPM and the unpkg CDN. Over 175 throwaway packages are used to host scripts that redirect users to credential-harvesting sites. The attack targets enterprise employees through the browser, not developers at install time.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-20">
+                <a href="https://engineering.atspotify.com/2025/9/spotifys-experiments-with-learning-framework/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Beyond Winning: Spotify’s Experiments with Learning Framework
+                </a>
+                <p class="mb-1 small text-light">TL;DR Spotify’s experimentation platform, Confidence, scaled product decision-making across hundreds of... The post Beyond Winning: Spotify’s Experiments with Learning Framework appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-20">
+                <a href="https://engineering.atspotify.com/2025/5/incident-report-spotify-outage-on-april-16-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Incident Report: Spotify Outage on April 16, 2025
+                </a>
+                <p class="mb-1 small text-light">On April 16, Spotify experienced an outage that affected users worldwide. Here is what happened and what we... The post Incident Report: Spotify Outage on April 16, 2025 appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-20">
+                <a href="https://engineering.atspotify.com/2025/4/celebrating-five-years-of-backstage/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Celebrating Five Years of Backstage: From Open Source Project to Enterprise Business
+                </a>
+                <p class="mb-1 small text-light">Did you know that we sell Spotify’s developer productivity tools and support to other companies, from online... The post Celebrating Five Years of Backstage: From Open Source Project to Enterprise Business appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-20">
+                <a href="https://engineering.atspotify.com/2025/4/how-we-release-the-spotify-app-part-1/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] A Behind-the-Scenes Look at How We Release the Spotify App (Part 1)
+                </a>
+                <p class="mb-1 small text-light">Developing and releasing mobile apps at scale is a big challenge. With each weekly release of our mobile app... The post A Behind-the-Scenes Look at How We Release the Spotify App (Part 1) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-20">
+                <a href="https://engineering.atspotify.com/2025/3/certified-backstage-associate-exam-tips/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] An Insider’s Tips for Taking the Certified Backstage Associate (CBA) Exam
+                </a>
+                <p class="mb-1 small text-light">TL;DR There’s a brand new engineering certification in town: Certified Backstage Associate (CBA). Offered... The post An Insider’s Tips for Taking the Certified Backstage Associate (CBA) Exam appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-10-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-10-20">
+                <a href="https://www.dockerstatus.com/pages/incident/533c6539221ae15e3f000031/68f5e1c741c825463df7486c" target="_blank" class="fw-bold text-decoration-none">
+                    Docker Systems Status: Full Service Disruption
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.dockerstatus.com/pages/incident/533c6539221ae15e3f000031/68f5e1c741c825463df7486c Comments URL: https://news.ycombinator.com/item?id=45640877 Points: 37 # Comments: 2</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-10-20
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

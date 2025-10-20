@@ -46,26 +46,33 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             {% if is_daily_archive %}
-                � Daily DevOps Digest - {{ archive_date }}
+                📊 Daily DevOps Digest - {{ archive_date }}
             {% else %}
-                �🔧 Daily DevOps Digest
+                🔧 Daily DevOps Digest
             {% endif %}
         </h1>
         <p class="text-center text-muted">
             {% if is_daily_archive %}
                 Top {{ articles | length }} articles selected for {{ archive_date }}
             {% else %}
-                Curated from Hacker News, Reddit, and top tech blogs.
+                Today's top {{ articles | length }} curated articles from Hacker News, Reddit, and tech blogs.
             {% endif %}
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
+            {% if is_daily_archive %}
+            <a href="{{ path_prefix }}index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="{{ path_prefix }}archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="{{ path_prefix }}history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            {% else %}
             <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
             <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            {% endif %}
         </div>
 
-        <!-- Date Filter with Enhanced Navigation -->
+        {% if is_daily_archive %}
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
         <div class="mb-3 text-center">
             <label for="dateFilter" class="form-label me-2">Filter by date:</label>
             <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
@@ -78,15 +85,20 @@
             <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
             <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
         </div>
+        {% endif %}
 
         <!-- Quick Stats -->
         <div class="mb-3 text-center">
             <small class="text-muted">
                 <span id="statsText">
+                    {% if is_daily_archive %}
                     Showing {{ articles | length }} total articles from 
                     {{ articles | map(attribute='source') | unique | list | length }} sources
                     {% if articles | map(attribute='date') | unique | list | length > 1 %}
                     across {{ articles | map(attribute='date') | unique | list | length }} days
+                    {% endif %}
+                    {% else %}
+                    {{ articles | length }} articles from {{ articles | map(attribute='source') | unique | list | length }} sources • Updated {{ generated_at }}
                     {% endif %}
                 </span>
             </small>
@@ -110,7 +122,13 @@
                     {{ article.title }}
                 </a>
                 <p class="mb-1 small text-light">{{ article.summary }}</p>
-                <small class="text-secondary">{{ article.source }} | {{ article.date }}</small>
+                <small class="text-secondary">
+                    {% if is_daily_archive %}
+                    {{ article.source }} | {{ article.date }}
+                    {% else %}
+                    {{ article.source }}
+                    {% endif %}
+                </small>
             </li>
             {% else %}
             <li class="list-group-item mb-2 text-center text-muted">

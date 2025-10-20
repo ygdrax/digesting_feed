@@ -146,8 +146,12 @@ def summarize_text(text, sentence_count=2):
     return summary if summary else text[:200] + '...'
 
 
-def generate_html(articles, output_file="index.html", max_articles=25):
+def generate_html(articles, output_file="index.html", max_articles=25, date_filter=None):
     """Get static HTML and render articles using a Jinja2 template and writes to default file."""
+    # Filter by date if specified (for index.html to show only today's articles)
+    if date_filter:
+        articles = [article for article in articles if article.get('date') == date_filter]
+    
     # Sort articles by date (newest first) and then by score (highest first)
     sorted_articles = sorted(articles, key=lambda x: (x.get('date', ''), -x.get('score', 0)), reverse=True)
     
@@ -203,6 +207,10 @@ def generate_daily_html(articles, output_file, date_str):
     date_obj = datetime.strptime(date_str, "%Y-%m-%d")
     formatted_date = date_obj.strftime("%B %d, %Y")
     
+    # Determine if we're in a subdirectory and need relative paths
+    is_in_subdir = "/" in output_file or "\\" in output_file
+    path_prefix = "../" if is_in_subdir else ""
+    
     template = Template(template_str)
     rendered = template.render(
         articles=articles,
@@ -210,7 +218,8 @@ def generate_daily_html(articles, output_file, date_str):
         total_articles=len(articles),
         page_title=f"DevOps Digest - {formatted_date}",
         is_daily_archive=True,
-        archive_date=formatted_date
+        archive_date=formatted_date,
+        path_prefix=path_prefix
     )
     
     with open(output_file, "w", encoding="utf-8") as f:
@@ -355,7 +364,7 @@ def _get_archive_index_template():
                 <div class="col-md-6 mb-3">
                     <div class="d-flex justify-content-between align-items-center p-2 border rounded">
                         <div>
-                            <a href="daily_{{ date_info.date }}.html" class="date-link fw-bold">
+                            <a href="archives/daily_{{ date_info.date }}.html" class="date-link fw-bold">
                                 📊 {{ date_info.display_date }}
                             </a>
                             <br>

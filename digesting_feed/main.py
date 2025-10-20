@@ -141,12 +141,22 @@ def generate_reports(articles: List[Dict], archive_manager: ArchiveManager) -> N
     """Generate all HTML reports."""
     today_str = datetime.now().strftime("%Y-%m-%d")
     
-    # Generate today's main digest
-    generate_html(articles, max_articles=25)
+    # Generate today's main digest (index.html shows ONLY today's articles)
+    generate_html(articles, output_file="index.html", max_articles=25, date_filter=today_str)
     
-    # Generate today's daily page 
+    # Generate historical daily pages in archives/ directory
+    import os
+    os.makedirs("archives", exist_ok=True)
+    
+    # Generate daily pages for all available dates
+    available_dates = archive_manager.get_available_dates()
     from digesting_feed.generator import generate_daily_html
-    generate_daily_html(articles, f"daily_{today_str}.html", today_str)
+    
+    for date_str in available_dates:
+        daily_articles = archive_manager.get_archived_articles(date_str)
+        if daily_articles:
+            output_file = f"archives/daily_{date_str}.html"
+            generate_daily_html(daily_articles, output_file, date_str)
     
     try:
         generate_archive_index(archive_manager, "archives.html")

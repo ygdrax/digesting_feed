@@ -197,6 +197,12 @@ class HistoryReporter:
         </p>
         <p class="text-center text-muted small">Generated at {{ generated_at }}</p>
 
+        <!-- Navigation -->
+        <div class="mb-4 text-center">
+            <a href="index.html" class="btn btn-primary me-2">📊 Current Digest</a>
+            <a href="archives.html" class="btn btn-outline-secondary">📚 Browse Archives</a>
+        </div>
+
         <!-- Key Metrics -->
         <div class="row">
             <div class="col-md-3">

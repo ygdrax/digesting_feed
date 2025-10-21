@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - October 21, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - October 21, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for October 21, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-10-21">2025-10-21 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2025-10-21 08:07:24
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,258 +132,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-21">
-                <a href="https://netflixtechblog.com/behind-the-streams-real-time-recommendations-for-live-events-e027cb313f8f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Behind the Streams: Real-Time Recommendations for Live Events Part 3
-                </a>
-                <p class="mb-1 small text-light">Sending dynamic, timely updates concurrently to over a hundred million devices worldwide without creating a thundering herd effect that would overwhelm our cloud services. Request throughput: the capacity of our cloud services to handle requests.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-21">
-                <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-1-ingesting-and-processing-data-80113e124acc?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 1 — Ingesting and Processing Data…
-                </a>
-                <p class="mb-1 small text-light">This modularity allows for independent service development, deployment, and scaling. This allows teams to choose the most suitable data schemas and storage technologies for their services.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-21">
-                <a href="https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Unleash your creativity at scale: Azure AI Foundry’s multimodal revolution
-                </a>
-                <p class="mb-1 small text-light">Try Azure AI Foundry today Today’s announcement joins major innovations we announced last week with the launch of the Microsoft Agent Framework (now in preview), multi-agent workflows in Foundry Agent Service in private preview, unified observability, Voice Live API general availability, and the ...</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-21">
-                <a href="https://azure.microsoft.com/en-us/blog/grok-4-is-now-available-in-azure-ai-foundry-unlock-frontier-intelligence-and-business-ready-capabilities/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Grok 4 is now available in Azure AI Foundry: Unlock frontier intelligence and business-ready capabilities
-                </a>
-                <p class="mb-1 small text-light">Key architectural highlights include: First-principles reasoning: “think mode” One of Grok 4’s headline features is its first-principles reasoning ability. Essentially, the model tries to “think” like a scientist or detective, breaking problems down step by step.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-21">
-                <a href="https://www.docker.com/blog/why-i-still-use-jquery-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Why I Still Use jQuery
-                </a>
-                <p class="mb-1 small text-light">Rewriting these sites to pure JavaScript or a modern framework is a time-consuming, expensive endeavour that can also introduce new challenges and bugs. The minor improvements a new framework can make in this scenario don’t offset the time spent learning a new tool.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-10-21">
-                <a href="https://www.redhat.com/en/blog/energy-efficient-computing-server-platforms-red-hat-enterprise-linux" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Optimizing energy efficiency on Red Hat Enterprise Linux
-                </a>
-                <p class="mb-1 small text-light">The energy efficiency of data centers and high-performance systems is becoming increasingly important. This article breaks down the issue of energy efficiency in modern server platforms, presenting tools and an example methodology for measuring power consumption and performance.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-10-21">
-                <a href="https://about.gitlab.com/blog/claude-haiku-4-5-now-available-in-gitlab-duo-agentic-chat/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Claude Haiku 4.5 now available in GitLab Duo Agentic Chat
-                </a>
-                <p class="mb-1 small text-light">5 alongside other leading models, enhancing their GitLab Duo experience with near-frontier performance at remarkable speed. 5 to accelerate their development workflows with rapid, intelligent responses.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-10-21">
-                <a href="https://blog.sentry.io/unreal-engine-crash-reporting-now-available-on-gaming-consoles/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Unreal Engine crash reporting now available on gaming consoles with trace-connected logs
-                </a>
-                <p class="mb-1 small text-light">Public API changes and new featuresMajor releases give us a good excuse to rethink our APIs and make the breaking changes we’ve been putting off like.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-10-21">
-                <a href="https://www.tomshardware.com/tech-industry/semiconductors/alibaba-says-new-pooling-system-cut-nvidia-gpu-use-by-82-percent" target="_blank" class="fw-bold text-decoration-none">
-                    Alibaba Cloud says it cut Nvidia AI GPU use by 82% with new pooling system
-                </a>
-                <p class="mb-1 small text-light">Paper: https://dl.acm.org/doi/10.1145/3731569.3764815 Comments URL: https://news.ycombinator.com/item?id=45643163 Points: 410 # Comments: 256</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-10-21">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-kiro-waitlist-ebs-volume-clones-ec2-capacity-manager-and-more-october-20-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: Kiro waitlist, EBS Volume Clones, EC2 Capacity Manager, and more (October 20, 2025)
-                </a>
-                <p class="mb-1 small text-light">As your business evolves, you might need to migrate workloads between AWS Regions. Read how to migrate encrypted Amazon EC2 instances across AWS Regions without sharing AWS KMS keys.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-21">
-                <a href="https://www.hashicorp.com/blog/20-of-singapore-in-2-years-trust-bank-s-4-keys-to-coding-with-speed-and-security" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] 20% of Singapore in 2 years: Trust Bank’s 4 keys to coding with speed and security
-                </a>
-                <p class="mb-1 small text-light">Every module, from S3 buckets to microservices, comes with security baked in from the start. Infrastructure enables innovation Trust Bank's story illustrates a fundamental truth about modern software development: infrastructure automation enables business innovation.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-21">
-                <a href="https://kubernetes.io/blog/2025/10/20/seven-kubernetes-pitfalls-and-how-to-avoid/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] 7 Common Kubernetes Pitfalls (and How I Learned to Avoid Them)
-                </a>
-                <p class="mb-1 small text-light">This tends to happen because Kubernetes will consider a container “running” as long as the process inside hasn’t exited. Look into Pod Security Admission (or other solutions like Kyverno) to enforce non-root containers, read-only filesystems, etc.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-21">
-                <a href="https://kubernetes.io/blog/2025/10/18/wg-policy-spotlight-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Spotlight on Policy Working Group
-                </a>
-                <p class="mb-1 small text-light">Jim Bugwadia: My name is Jim Bugwadia, and I am a co-founder and the CEO at Nirmata which provides solutions that automate security and compliance for cloud-native workloads. This is intended to help organizations meet important security standards in their Kubernetes environments.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-21">
-                <a href="https://kubernetes.io/blog/2025/09/25/csi-changed-block-tracking/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing Changed Block Tracking API support (alpha)
-                </a>
-                <p class="mb-1 small text-light">The Changed Block Tracking API addresses these challenges by providing native Kubernetes support for incremental backup capabilities through the CSI interface.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-21">
-                <a href="https://kubernetes.io/blog/2025/09/22/kubernetes-v1-34-pod-level-resources/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.34: Pod Level Resources Graduated to Beta
-                </a>
-                <p class="mb-1 small text-light">As a beta feature, Kubernetes allows you to specify the CPU, memory and hugepages resources at the Pod-level. This feature enhances resource management in Kubernetes by offering flexible resource management at both the Pod and container levels.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-21">
-                <a href="https://www.cncf.io/blog/2025/10/20/adding-distributed-tracing-to-ai-gateway-my-lfx-mentorship-journey/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Adding distributed tracing to AI Gateway: My LFX mentorship journey
-                </a>
-                <p class="mb-1 small text-light">In today’s rapidly evolving AI landscape, effectively monitoring and debugging AI Gateways has become a critical challenge. The key challenge was handling response format differences across different LLM service providers.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-21">
-                <a href="https://blog.cloudflare.com/load-balancing-monitor-groups-multi-service-health-checks-for-resilient/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Load Balancing Monitor Groups: Multi-Service Health Checks for Resilient Applications
-                </a>
-                <p class="mb-1 small text-light">This feature provides a new way to create sophisticated, multi-service health assessments directly on our platform. This provides a definitive override for essential services, regardless of the status of other monitors in the group.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-21">
-                <a href="https://netflixtechblog.com/building-a-resilient-data-platform-with-write-ahead-log-at-netflix-127b6712359a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Building a Resilient Data Platform with Write-Ahead Log at Netflix
-                </a>
-                <p class="mb-1 small text-light">This flexibility allows our Data Platform to route different use cases to the most suitable storage system based on performance, durability, and consistency needs. Multi-Table MutationsWAL is used by Key-Value service to build the MutateItems API.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-21">
-                <a href="https://www.docker.com/blog/open-webui-docker-desktop-model-runner/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Model Runner Meets Open WebUI: A Simpler Way to Run Local AI Models
-                </a>
-                <p class="mb-1 small text-light">This new Docker extension lets you run Docker Model Runner as the inference service behind Open WebUI, powering a richer chat experience. One click, and Docker Model Runner will pull the container and start serving the model locally.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-21">
-                <a href="https://engineering.fb.com/2025/10/20/data-center-engineering/disaggregated-scheduled-fabric-scaling-metas-ai-journey/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Disaggregated Scheduled Fabric: Scaling Meta’s AI Journey
-                </a>
-                <p class="mb-1 small text-light">This is important data because it impacts how much we should overprovision the fabric to support good pacing and maintain steady performance in the event of failures. We tried several solutions to handle these issues, but each presented challenges.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-21">
-                <a href="https://engineering.fb.com/2025/10/14/data-center-engineering/design-for-sustainability-new-design-principles-for-reducing-it-hardware-emissions/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Design for Sustainability: New Design Principles for Reducing IT Hardware Emissions
-                </a>
-                <p class="mb-1 small text-light">Modular Rack Designs Modular Design which allows older rack components to be re-used in newer racks. This is particularly important in high-reliability applications where system failure could have significant consequences.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-21">
                 <a href="https://www.cncf.io/blog/2025/10/17/why-autonomous-infrastructure-is-the-future-from-intent-to-self-operating-systems/" target="_blank" class="fw-bold text-decoration-none">
                     [CNCF] Why Autonomous Infrastructure is the future: From intent to self-operating systems
@@ -374,7 +139,7 @@
                 <p class="mb-1 small text-light">Traditional DevOps platforms require human orchestration and constant oversight.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2025-10-21
                     
                 </small>
             </li>
@@ -386,7 +151,7 @@
                 <p class="mb-1 small text-light">Expect even more real-world insights from practitioners who are shaping the next phase of platform engineering. The day will feature two parallel tracks covering topics such as developer experience, API-driven infrastructure, and the evolving future of platform engineering.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2025-10-21
                     
                 </small>
             </li>
@@ -398,7 +163,7 @@
                 <p class="mb-1 small text-light">Cloudflare platform improvements Theo's benchmarks covered a variety of frameworks, making it clear that no single JavaScript library could be at fault for the general problem. Tuning OpenNext for performance The platform changes solved most of the problem.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2025-10-21
                     
                 </small>
             </li>
@@ -410,7 +175,259 @@
                 <p class="mb-1 small text-light">Ask Neo: “Create a serverless API with PostgreSQL database and Redis cache on AWS” and it produces fully configured resources with proper networking, security groups, and IAM policies.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-21">
+                <a href="https://netflixtechblog.com/building-a-resilient-data-platform-with-write-ahead-log-at-netflix-127b6712359a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Building a Resilient Data Platform with Write-Ahead Log at Netflix
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows our Data Platform to route different use cases to the most suitable storage system based on performance, durability, and consistency needs. Multi-Table MutationsWAL is used by Key-Value service to build the MutateItems API.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-21">
+                <a href="https://www.docker.com/blog/open-webui-docker-desktop-model-runner/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Model Runner Meets Open WebUI: A Simpler Way to Run Local AI Models
+                </a>
+                <p class="mb-1 small text-light">This new Docker extension lets you run Docker Model Runner as the inference service behind Open WebUI, powering a richer chat experience. One click, and Docker Model Runner will pull the container and start serving the model locally.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-21">
+                <a href="https://engineering.fb.com/2025/10/20/data-center-engineering/disaggregated-scheduled-fabric-scaling-metas-ai-journey/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Disaggregated Scheduled Fabric: Scaling Meta’s AI Journey
+                </a>
+                <p class="mb-1 small text-light">This is important data because it impacts how much we should overprovision the fabric to support good pacing and maintain steady performance in the event of failures. We tried several solutions to handle these issues, but each presented challenges.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-21">
+                <a href="https://engineering.fb.com/2025/10/14/data-center-engineering/design-for-sustainability-new-design-principles-for-reducing-it-hardware-emissions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Design for Sustainability: New Design Principles for Reducing IT Hardware Emissions
+                </a>
+                <p class="mb-1 small text-light">Modular Rack Designs Modular Design which allows older rack components to be re-used in newer racks. This is particularly important in high-reliability applications where system failure could have significant consequences.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-10-21">
+                <a href="https://www.tomshardware.com/tech-industry/semiconductors/alibaba-says-new-pooling-system-cut-nvidia-gpu-use-by-82-percent" target="_blank" class="fw-bold text-decoration-none">
+                    Alibaba Cloud says it cut Nvidia AI GPU use by 82% with new pooling system
+                </a>
+                <p class="mb-1 small text-light">Paper: https://dl.acm.org/doi/10.1145/3731569.3764815 Comments URL: https://news.ycombinator.com/item?id=45643163 Points: 410 # Comments: 256</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-10-21">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-kiro-waitlist-ebs-volume-clones-ec2-capacity-manager-and-more-october-20-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Kiro waitlist, EBS Volume Clones, EC2 Capacity Manager, and more (October 20, 2025)
+                </a>
+                <p class="mb-1 small text-light">As your business evolves, you might need to migrate workloads between AWS Regions. Read how to migrate encrypted Amazon EC2 instances across AWS Regions without sharing AWS KMS keys.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-21">
+                <a href="https://www.hashicorp.com/blog/20-of-singapore-in-2-years-trust-bank-s-4-keys-to-coding-with-speed-and-security" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] 20% of Singapore in 2 years: Trust Bank’s 4 keys to coding with speed and security
+                </a>
+                <p class="mb-1 small text-light">Every module, from S3 buckets to microservices, comes with security baked in from the start. Infrastructure enables innovation Trust Bank's story illustrates a fundamental truth about modern software development: infrastructure automation enables business innovation.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-21">
+                <a href="https://kubernetes.io/blog/2025/10/20/seven-kubernetes-pitfalls-and-how-to-avoid/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] 7 Common Kubernetes Pitfalls (and How I Learned to Avoid Them)
+                </a>
+                <p class="mb-1 small text-light">This tends to happen because Kubernetes will consider a container “running” as long as the process inside hasn’t exited. Look into Pod Security Admission (or other solutions like Kyverno) to enforce non-root containers, read-only filesystems, etc.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-21">
+                <a href="https://kubernetes.io/blog/2025/10/18/wg-policy-spotlight-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on Policy Working Group
+                </a>
+                <p class="mb-1 small text-light">Jim Bugwadia: My name is Jim Bugwadia, and I am a co-founder and the CEO at Nirmata which provides solutions that automate security and compliance for cloud-native workloads. This is intended to help organizations meet important security standards in their Kubernetes environments.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-21">
+                <a href="https://kubernetes.io/blog/2025/09/25/csi-changed-block-tracking/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing Changed Block Tracking API support (alpha)
+                </a>
+                <p class="mb-1 small text-light">The Changed Block Tracking API addresses these challenges by providing native Kubernetes support for incremental backup capabilities through the CSI interface.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-21">
+                <a href="https://kubernetes.io/blog/2025/09/22/kubernetes-v1-34-pod-level-resources/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.34: Pod Level Resources Graduated to Beta
+                </a>
+                <p class="mb-1 small text-light">As a beta feature, Kubernetes allows you to specify the CPU, memory and hugepages resources at the Pod-level. This feature enhances resource management in Kubernetes by offering flexible resource management at both the Pod and container levels.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-21">
+                <a href="https://www.cncf.io/blog/2025/10/20/adding-distributed-tracing-to-ai-gateway-my-lfx-mentorship-journey/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Adding distributed tracing to AI Gateway: My LFX mentorship journey
+                </a>
+                <p class="mb-1 small text-light">In today’s rapidly evolving AI landscape, effectively monitoring and debugging AI Gateways has become a critical challenge. The key challenge was handling response format differences across different LLM service providers.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-21">
+                <a href="https://blog.cloudflare.com/load-balancing-monitor-groups-multi-service-health-checks-for-resilient/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Load Balancing Monitor Groups: Multi-Service Health Checks for Resilient Applications
+                </a>
+                <p class="mb-1 small text-light">This feature provides a new way to create sophisticated, multi-service health assessments directly on our platform. This provides a definitive override for essential services, regardless of the status of other monitors in the group.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-21">
+                <a href="https://netflixtechblog.com/behind-the-streams-real-time-recommendations-for-live-events-e027cb313f8f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Behind the Streams: Real-Time Recommendations for Live Events Part 3
+                </a>
+                <p class="mb-1 small text-light">Sending dynamic, timely updates concurrently to over a hundred million devices worldwide without creating a thundering herd effect that would overwhelm our cloud services. Request throughput: the capacity of our cloud services to handle requests.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-21">
+                <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-1-ingesting-and-processing-data-80113e124acc?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 1 — Ingesting and Processing Data…
+                </a>
+                <p class="mb-1 small text-light">This modularity allows for independent service development, deployment, and scaling. This allows teams to choose the most suitable data schemas and storage technologies for their services.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-21">
+                <a href="https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Unleash your creativity at scale: Azure AI Foundry’s multimodal revolution
+                </a>
+                <p class="mb-1 small text-light">Try Azure AI Foundry today Today’s announcement joins major innovations we announced last week with the launch of the Microsoft Agent Framework (now in preview), multi-agent workflows in Foundry Agent Service in private preview, unified observability, Voice Live API general availability, and the ...</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-21">
+                <a href="https://azure.microsoft.com/en-us/blog/grok-4-is-now-available-in-azure-ai-foundry-unlock-frontier-intelligence-and-business-ready-capabilities/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Grok 4 is now available in Azure AI Foundry: Unlock frontier intelligence and business-ready capabilities
+                </a>
+                <p class="mb-1 small text-light">Key architectural highlights include: First-principles reasoning: “think mode” One of Grok 4’s headline features is its first-principles reasoning ability. Essentially, the model tries to “think” like a scientist or detective, breaking problems down step by step.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-21">
+                <a href="https://www.docker.com/blog/why-i-still-use-jquery-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Why I Still Use jQuery
+                </a>
+                <p class="mb-1 small text-light">Rewriting these sites to pure JavaScript or a modern framework is a time-consuming, expensive endeavour that can also introduce new challenges and bugs. The minor improvements a new framework can make in this scenario don’t offset the time spent learning a new tool.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-10-21">
+                <a href="https://www.redhat.com/en/blog/energy-efficient-computing-server-platforms-red-hat-enterprise-linux" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Optimizing energy efficiency on Red Hat Enterprise Linux
+                </a>
+                <p class="mb-1 small text-light">The energy efficiency of data centers and high-performance systems is becoming increasingly important. This article breaks down the issue of energy efficiency in modern server platforms, presenting tools and an example methodology for measuring power consumption and performance.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-10-21">
+                <a href="https://about.gitlab.com/blog/claude-haiku-4-5-now-available-in-gitlab-duo-agentic-chat/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Claude Haiku 4.5 now available in GitLab Duo Agentic Chat
+                </a>
+                <p class="mb-1 small text-light">5 alongside other leading models, enhancing their GitLab Duo experience with near-frontier performance at remarkable speed. 5 to accelerate their development workflows with rapid, intelligent responses.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-10-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-10-21">
+                <a href="https://blog.sentry.io/unreal-engine-crash-reporting-now-available-on-gaming-consoles/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Unreal Engine crash reporting now available on gaming consoles with trace-connected logs
+                </a>
+                <p class="mb-1 small text-light">Public API changes and new featuresMajor releases give us a good excuse to rethink our APIs and make the breaking changes we’ve been putting off like.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-10-21
                     
                 </small>
             </li>

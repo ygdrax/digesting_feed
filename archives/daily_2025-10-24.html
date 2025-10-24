@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - October 24, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - October 24, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for October 24, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-10-24">2025-10-24 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2025-10-24 08:07:00
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,278 +128,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-24">
-                <a href="https://www.reddit.com/r/devops/comments/1oe24mm/who_actually_owns_container_security/" target="_blank" class="fw-bold text-decoration-none">
-                    Who actually owns container security?
-                </a>
-                <p class="mb-1 small text-light">In our company, developers build Dockerfiles, ops teams run Kubernetes and security just scans results. Devs say not my code, ops say not my job and security doesnt have access.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-24">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1odyxcw/our_containers_are_loaded_with_120_vulns_how_to/" target="_blank" class="fw-bold text-decoration-none">
-                    Our containers are loaded with 120+ vulns, how to survive
-                </a>
-                <p class="mb-1 small text-light">Sounds great but honestly our containers are sitting at like 120 to 150 vulns each. Hitting zero in container-heavy environments feels almost impossible.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-24">
-                <a href="https://netflixtechblog.com/behind-the-streams-real-time-recommendations-for-live-events-e027cb313f8f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Behind the Streams: Real-Time Recommendations for Live Events Part 3
-                </a>
-                <p class="mb-1 small text-light">Sending dynamic, timely updates concurrently to over a hundred million devices worldwide without creating a thundering herd effect that would overwhelm our cloud services. Request throughput: the capacity of our cloud services to handle requests.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-24">
-                <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-1-ingesting-and-processing-data-80113e124acc?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 1 — Ingesting and Processing Data…
-                </a>
-                <p class="mb-1 small text-light">This modularity allows for independent service development, deployment, and scaling. This allows teams to choose the most suitable data schemas and storage technologies for their services.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-24">
-                <a href="https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Fully managed cloud-to-cloud transfers with Azure Storage Mover
-                </a>
-                <p class="mb-1 small text-light">In today’s modern world, cloud strategies are evolving rapidly. Azure Storage Mover’s new cloud-to-cloud migration capability enables direct transfers from AWS S3 to Azure Blob.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-24">
-                <a href="https://azure.microsoft.com/en-us/blog/the-signals-loop-fine-tuning-for-world-class-ai-apps-and-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] The Signals Loop: Fine-tuning for world-class AI apps and agents
-                </a>
-                <p class="mb-1 small text-light">When new foundational models are released, they are evaluated with automated metrics to benchmark performance and updated if there are significant gains.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-10-24">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-kiro-waitlist-ebs-volume-clones-ec2-capacity-manager-and-more-october-20-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: Kiro waitlist, EBS Volume Clones, EC2 Capacity Manager, and more (October 20, 2025)
-                </a>
-                <p class="mb-1 small text-light">As your business evolves, you might need to migrate workloads between AWS Regions. Read how to migrate encrypted Amazon EC2 instances across AWS Regions without sharing AWS KMS keys.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-24">
-                <a href="https://www.hashicorp.com/blog/vault-enterprise-1-21-spiffe-auth-fips-140-3-level-1-compliance-granular-secret-recovery" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Vault Enterprise 1.21 gains SPIFFE auth, FIPS 140-3 Level 1 compliance, granular secret recovery, and more
-                </a>
-                <p class="mb-1 small text-light">It enables each workload to be assigned a cryptographically verifiable identity, allowing secure, automated authentication between services without manual configuration.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-24">
-                <a href="https://www.hashicorp.com/blog/do-cloud-wrong-7-red-flags-your-strategy-needs-a-reset" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Do cloud wrong: 7 red flags your strategy needs a reset
-                </a>
-                <p class="mb-1 small text-light">In fact, 52% of organizations consider hybrid cloud complexity their biggest infrastructure challenge, according to the 2025 Cloud Complexity Report. Data remains fragmented, making it harder for platform teams to get critical intelligence about the health and security of their hybrid cloud.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-24">
-                <a href="https://kubernetes.io/blog/2025/10/20/seven-kubernetes-pitfalls-and-how-to-avoid/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] 7 Common Kubernetes Pitfalls (and How I Learned to Avoid Them)
-                </a>
-                <p class="mb-1 small text-light">This tends to happen because Kubernetes will consider a container “running” as long as the process inside hasn’t exited. Look into Pod Security Admission (or other solutions like Kyverno) to enforce non-root containers, read-only filesystems, etc.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-24">
-                <a href="https://kubernetes.io/blog/2025/10/18/wg-policy-spotlight-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Spotlight on Policy Working Group
-                </a>
-                <p class="mb-1 small text-light">Jim Bugwadia: My name is Jim Bugwadia, and I am a co-founder and the CEO at Nirmata which provides solutions that automate security and compliance for cloud-native workloads. This is intended to help organizations meet important security standards in their Kubernetes environments.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-24">
-                <a href="https://kubernetes.io/blog/2025/09/25/csi-changed-block-tracking/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing Changed Block Tracking API support (alpha)
-                </a>
-                <p class="mb-1 small text-light">The Changed Block Tracking API addresses these challenges by providing native Kubernetes support for incremental backup capabilities through the CSI interface.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-24">
-                <a href="https://kubernetes.io/blog/2025/09/22/kubernetes-v1-34-pod-level-resources/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.34: Pod Level Resources Graduated to Beta
-                </a>
-                <p class="mb-1 small text-light">As a beta feature, Kubernetes allows you to specify the CPU, memory and hugepages resources at the Pod-level. This feature enhances resource management in Kubernetes by offering flexible resource management at both the Pod and container levels.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-24">
-                <a href="https://www.cncf.io/blog/2025/10/23/highlights-from-cncfs-first-open-observability-summit/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Highlights from CNCF’s first Open Observability Summit
-                </a>
-                <p class="mb-1 small text-light">I was honored to deliver a keynote at this important event, as well as have my podcast OpenObservability Talks as a partner of the event. That’s right — not just Kubernetes and microservices, but also COBOL and legacy systems.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-24">
-                <a href="https://blog.cloudflare.com/load-balancing-monitor-groups-multi-service-health-checks-for-resilient/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Load Balancing Monitor Groups: Multi-Service Health Checks for Resilient Applications
-                </a>
-                <p class="mb-1 small text-light">This feature provides a new way to create sophisticated, multi-service health assessments directly on our platform. This provides a definitive override for essential services, regardless of the status of other monitors in the group.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-24">
-                <a href="https://netflixtechblog.com/building-a-resilient-data-platform-with-write-ahead-log-at-netflix-127b6712359a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Building a Resilient Data Platform with Write-Ahead Log at Netflix
-                </a>
-                <p class="mb-1 small text-light">This flexibility allows our Data Platform to route different use cases to the most suitable storage system based on performance, durability, and consistency needs. Multi-Table MutationsWAL is used by Key-Value service to build the MutateItems API.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-24">
-                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft named a Leader in the 2025 Gartner® Magic Quadrant™ for Distributed Hybrid Infrastructure
-                </a>
-                <p class="mb-1 small text-light">Delta Dental of California modernized its core payor system with containerized workloads, improving performance, uptime, and compliance.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-24">
-                <a href="https://www.docker.com/blog/docker-e2b-building-the-future-of-trusted-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker + E2B: Building the Future of Trusted AI
-                </a>
-                <p class="mb-1 small text-light">Today, we’re taking that commitment to the next level through a new partnership with E2B, a company that provides secure cloud sandboxes for AI agents. Just as containers standardized how applications run, Docker is now standardizing how agents connect and act.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-24">
-                <a href="https://www.docker.com/blog/open-webui-docker-desktop-model-runner/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Model Runner Meets Open WebUI: A Simpler Way to Run Local AI Models
-                </a>
-                <p class="mb-1 small text-light">This new Docker extension lets you run Docker Model Runner as the inference service behind Open WebUI, powering a richer chat experience. One click, and Docker Model Runner will pull the container and start serving the model locally.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-24">
-                <a href="https://engineering.fb.com/2025/10/20/data-center-engineering/disaggregated-scheduled-fabric-scaling-metas-ai-journey/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Disaggregated Scheduled Fabric: Scaling Meta’s AI Journey
+                <a href="https://engineering.fb.com/2025/10/23/security/scaling-privacy-infrastructure-for-genai-product-innovation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Scaling Privacy Infrastructure for GenAI Product Innovation
                 </a>
-                <p class="mb-1 small text-light">This is important data because it impacts how much we should overprovision the fabric to support good pacing and maintain steady performance in the event of failures. We tried several solutions to handle these issues, but each presented challenges.</p>
+                <p class="mb-1 small text-light">PAI is a suite of infrastructure services, APIs, and monitoring systems designed to integrate privacy into every aspect of product development. Scalability: Supports thousands of microservices and product teams across Meta’s vast ecosystem.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-24">
-                <a href="https://www.hashicorp.com/blog/15-questions-to-ask-your-cloud-security-team" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] 15 questions to ask your cloud security team
-                </a>
-                <p class="mb-1 small text-light">Manual infrastructure deployments are often the root cause of unknown vulnerabilities and force organizations into a reactive security posture. Human error is a big cause of security problems in the cloud.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-24">
-                <a href="https://blog.cloudflare.com/unpacking-cloudflare-workers-cpu-performance-benchmarks/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Unpacking Cloudflare Workers CPU Performance Benchmarks
-                </a>
-                <p class="mb-1 small text-light">Cloudflare platform improvements Theo's benchmarks covered a variety of frameworks, making it clear that no single JavaScript library could be at fault for the general problem. Tuning OpenNext for performance The platform changes solved most of the problem.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-10-24">
-                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
-                </a>
-                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
+                    Engineering at Meta | 2025-10-24
                     
                 </small>
             </li>
@@ -394,19 +147,283 @@
                 <p class="mb-1 small text-light">A context lake contains things that matter: Your infrastructure programs, resource definitions, API schemas, service dependencies. What grounded AI enables The first generation of DevOps automated deployment.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-24">
+                <a href="https://www.hashicorp.com/blog/15-questions-to-ask-your-cloud-security-team" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] 15 questions to ask your cloud security team
+                </a>
+                <p class="mb-1 small text-light">Manual infrastructure deployments are often the root cause of unknown vulnerabilities and force organizations into a reactive security posture. Human error is a big cause of security problems in the cloud.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-24">
+                <a href="https://blog.cloudflare.com/unpacking-cloudflare-workers-cpu-performance-benchmarks/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Unpacking Cloudflare Workers CPU Performance Benchmarks
+                </a>
+                <p class="mb-1 small text-light">Cloudflare platform improvements Theo's benchmarks covered a variety of frameworks, making it clear that no single JavaScript library could be at fault for the general problem. Tuning OpenNext for performance The platform changes solved most of the problem.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-10-24">
+                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
+                </a>
+                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-24">
+                <a href="https://netflixtechblog.com/building-a-resilient-data-platform-with-write-ahead-log-at-netflix-127b6712359a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Building a Resilient Data Platform with Write-Ahead Log at Netflix
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows our Data Platform to route different use cases to the most suitable storage system based on performance, durability, and consistency needs. Multi-Table MutationsWAL is used by Key-Value service to build the MutateItems API.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-24">
+                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft named a Leader in the 2025 Gartner® Magic Quadrant™ for Distributed Hybrid Infrastructure
+                </a>
+                <p class="mb-1 small text-light">Delta Dental of California modernized its core payor system with containerized workloads, improving performance, uptime, and compliance.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-24">
+                <a href="https://www.docker.com/blog/docker-e2b-building-the-future-of-trusted-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker + E2B: Building the Future of Trusted AI
+                </a>
+                <p class="mb-1 small text-light">Today, we’re taking that commitment to the next level through a new partnership with E2B, a company that provides secure cloud sandboxes for AI agents. Just as containers standardized how applications run, Docker is now standardizing how agents connect and act.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-24">
+                <a href="https://www.docker.com/blog/open-webui-docker-desktop-model-runner/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Model Runner Meets Open WebUI: A Simpler Way to Run Local AI Models
+                </a>
+                <p class="mb-1 small text-light">This new Docker extension lets you run Docker Model Runner as the inference service behind Open WebUI, powering a richer chat experience. One click, and Docker Model Runner will pull the container and start serving the model locally.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-10-24
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-24">
-                <a href="https://engineering.fb.com/2025/10/23/security/scaling-privacy-infrastructure-for-genai-product-innovation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Scaling Privacy Infrastructure for GenAI Product Innovation
+                <a href="https://engineering.fb.com/2025/10/20/data-center-engineering/disaggregated-scheduled-fabric-scaling-metas-ai-journey/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Disaggregated Scheduled Fabric: Scaling Meta’s AI Journey
                 </a>
-                <p class="mb-1 small text-light">PAI is a suite of infrastructure services, APIs, and monitoring systems designed to integrate privacy into every aspect of product development. Scalability: Supports thousands of microservices and product teams across Meta’s vast ecosystem.</p>
+                <p class="mb-1 small text-light">This is important data because it impacts how much we should overprovision the fabric to support good pacing and maintain steady performance in the event of failures. We tried several solutions to handle these issues, but each presented challenges.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-10-24">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-kiro-waitlist-ebs-volume-clones-ec2-capacity-manager-and-more-october-20-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Kiro waitlist, EBS Volume Clones, EC2 Capacity Manager, and more (October 20, 2025)
+                </a>
+                <p class="mb-1 small text-light">As your business evolves, you might need to migrate workloads between AWS Regions. Read how to migrate encrypted Amazon EC2 instances across AWS Regions without sharing AWS KMS keys.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-24">
+                <a href="https://www.hashicorp.com/blog/vault-enterprise-1-21-spiffe-auth-fips-140-3-level-1-compliance-granular-secret-recovery" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Vault Enterprise 1.21 gains SPIFFE auth, FIPS 140-3 Level 1 compliance, granular secret recovery, and more
+                </a>
+                <p class="mb-1 small text-light">It enables each workload to be assigned a cryptographically verifiable identity, allowing secure, automated authentication between services without manual configuration.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-24">
+                <a href="https://www.hashicorp.com/blog/do-cloud-wrong-7-red-flags-your-strategy-needs-a-reset" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Do cloud wrong: 7 red flags your strategy needs a reset
+                </a>
+                <p class="mb-1 small text-light">In fact, 52% of organizations consider hybrid cloud complexity their biggest infrastructure challenge, according to the 2025 Cloud Complexity Report. Data remains fragmented, making it harder for platform teams to get critical intelligence about the health and security of their hybrid cloud.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-24">
+                <a href="https://kubernetes.io/blog/2025/10/20/seven-kubernetes-pitfalls-and-how-to-avoid/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] 7 Common Kubernetes Pitfalls (and How I Learned to Avoid Them)
+                </a>
+                <p class="mb-1 small text-light">This tends to happen because Kubernetes will consider a container “running” as long as the process inside hasn’t exited. Look into Pod Security Admission (or other solutions like Kyverno) to enforce non-root containers, read-only filesystems, etc.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-24">
+                <a href="https://kubernetes.io/blog/2025/10/18/wg-policy-spotlight-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on Policy Working Group
+                </a>
+                <p class="mb-1 small text-light">Jim Bugwadia: My name is Jim Bugwadia, and I am a co-founder and the CEO at Nirmata which provides solutions that automate security and compliance for cloud-native workloads. This is intended to help organizations meet important security standards in their Kubernetes environments.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-24">
+                <a href="https://kubernetes.io/blog/2025/09/25/csi-changed-block-tracking/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing Changed Block Tracking API support (alpha)
+                </a>
+                <p class="mb-1 small text-light">The Changed Block Tracking API addresses these challenges by providing native Kubernetes support for incremental backup capabilities through the CSI interface.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-24">
+                <a href="https://kubernetes.io/blog/2025/09/22/kubernetes-v1-34-pod-level-resources/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.34: Pod Level Resources Graduated to Beta
+                </a>
+                <p class="mb-1 small text-light">As a beta feature, Kubernetes allows you to specify the CPU, memory and hugepages resources at the Pod-level. This feature enhances resource management in Kubernetes by offering flexible resource management at both the Pod and container levels.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-24">
+                <a href="https://www.cncf.io/blog/2025/10/23/highlights-from-cncfs-first-open-observability-summit/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Highlights from CNCF’s first Open Observability Summit
+                </a>
+                <p class="mb-1 small text-light">I was honored to deliver a keynote at this important event, as well as have my podcast OpenObservability Talks as a partner of the event. That’s right — not just Kubernetes and microservices, but also COBOL and legacy systems.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-24">
+                <a href="https://blog.cloudflare.com/load-balancing-monitor-groups-multi-service-health-checks-for-resilient/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Load Balancing Monitor Groups: Multi-Service Health Checks for Resilient Applications
+                </a>
+                <p class="mb-1 small text-light">This feature provides a new way to create sophisticated, multi-service health assessments directly on our platform. This provides a definitive override for essential services, regardless of the status of other monitors in the group.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-24">
+                <a href="https://www.reddit.com/r/devops/comments/1oe24mm/who_actually_owns_container_security/" target="_blank" class="fw-bold text-decoration-none">
+                    Who actually owns container security?
+                </a>
+                <p class="mb-1 small text-light">In our company, developers build Dockerfiles, ops teams run Kubernetes and security just scans results. Devs say not my code, ops say not my job and security doesnt have access.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-24">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1odyxcw/our_containers_are_loaded_with_120_vulns_how_to/" target="_blank" class="fw-bold text-decoration-none">
+                    Our containers are loaded with 120+ vulns, how to survive
+                </a>
+                <p class="mb-1 small text-light">Sounds great but honestly our containers are sitting at like 120 to 150 vulns each. Hitting zero in container-heavy environments feels almost impossible.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-24">
+                <a href="https://netflixtechblog.com/behind-the-streams-real-time-recommendations-for-live-events-e027cb313f8f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Behind the Streams: Real-Time Recommendations for Live Events Part 3
+                </a>
+                <p class="mb-1 small text-light">Sending dynamic, timely updates concurrently to over a hundred million devices worldwide without creating a thundering herd effect that would overwhelm our cloud services. Request throughput: the capacity of our cloud services to handle requests.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-24">
+                <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-1-ingesting-and-processing-data-80113e124acc?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 1 — Ingesting and Processing Data…
+                </a>
+                <p class="mb-1 small text-light">This modularity allows for independent service development, deployment, and scaling. This allows teams to choose the most suitable data schemas and storage technologies for their services.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-24">
+                <a href="https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Fully managed cloud-to-cloud transfers with Azure Storage Mover
+                </a>
+                <p class="mb-1 small text-light">In today’s modern world, cloud strategies are evolving rapidly. Azure Storage Mover’s new cloud-to-cloud migration capability enables direct transfers from AWS S3 to Azure Blob.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-10-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-24">
+                <a href="https://azure.microsoft.com/en-us/blog/the-signals-loop-fine-tuning-for-world-class-ai-apps-and-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] The Signals Loop: Fine-tuning for world-class AI apps and agents
+                </a>
+                <p class="mb-1 small text-light">When new foundational models are released, they are evaluated with automated metrics to benchmark performance and updated if there are significant gains.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-10-24
                     
                 </small>
             </li>

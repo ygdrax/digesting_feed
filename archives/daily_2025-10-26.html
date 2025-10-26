@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - October 26, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - October 26, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for October 26, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-10-26">2025-10-26 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2025-10-26 08:05:51
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,278 +126,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-10-26">
-                <a href="https://genai-showdown.specr.net/" target="_blank" class="fw-bold text-decoration-none">
-                    GenAI Image Editing Showdown
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://genai-showdown.specr.net/ Comments URL: https://news.ycombinator.com/item?id=45708795 Points: 58 # Comments: 17</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-26">
-                <a href="https://www.reddit.com/r/devops/comments/1og11pb/spent_too_much_time_stripping_down_a_base_image/" target="_blank" class="fw-bold text-decoration-none">
-                    Spent too much time stripping down a base image to reduce CVEs and now it breaks on every update. How do you maintain custom containers long-term?
-                </a>
-                <p class="mb-1 small text-light">So I went down the rabbit hole of manually removing packages from ubuntu:latest to cut down our CVE count. Fast forward 2 weeks and every apt update breaks something different.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-26">
-                <a href="https://www.reddit.com/r/devops/comments/1og40lu/how_are_you_managing_your_aws_infrastructure/" target="_blank" class="fw-bold text-decoration-none">
-                    How are you managing your AWS infrastructure?
-                </a>
-                <p class="mb-1 small text-light">View Poll submitted by /u/Background-Flight323</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-26">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1og0w1j/compliance_wants_cishardened_containers_but/" target="_blank" class="fw-bold text-decoration-none">
-                    Compliance wants CIS-hardened containers but Alpine/Distroless don't have the packages we need. What's your strategy for minimal + customizable images?
-                </a>
-                <p class="mb-1 small text-light">Compliance is breathing down my neck for CIS-hardened containers but our Alpine/distroless approach breaks when devs need specific packages. Daily rebuilds help with patch currency but doesn't solve the base compatibility issue.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-26">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1ogaxv0/kubernetes_133_usernamespace_support_is_is/" target="_blank" class="fw-bold text-decoration-none">
-                    Kubernetes 1.33, usernamespace support. Is is working on pod only? (not for deployment / statefulset)
-                </a>
-                <p class="mb-1 small text-light">io/docs/tasks/configure-pod-container/user-namespaces/ It seems this feature only works on pod only. `hostUser: false` I cannot make it to work on deployment nor statefulsets.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-26">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1od84th/k8sgitopschaoslab_kubernetes_gitops_homelab_with/" target="_blank" class="fw-bold text-decoration-none">
-                    k8s-gitops-chaos-lab: Kubernetes GitOps Homelab with Flux, Linkerd, Cert-Manager, Chaos Mesh, Keda & Prometheus
-                </a>
-                <p class="mb-1 small text-light">Hello, I've built a containerized Kubernetes environment for experimenting with GitOps workflows, KEDA autoscaling, and chaos testing.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-26">
-                <a href="https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] From queries to conversations: Unlock insights about your data using Azure Storage Discovery—now generally available
+                <a href="https://azure.microsoft.com/en-us/blog/accelerating-open-source-infrastructure-development-for-frontier-ai-at-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Accelerating open-source infrastructure development for frontier AI at scale
                 </a>
-                <p class="mb-1 small text-light">Azure Storage Discovery helps you optimize storage costs, comply with security best practices, and drive operational efficiency. The intuitive experience provides advanced data visualizations and actional intelligence that are most important to you.</p>
+                <p class="mb-1 small text-light">Microsoft’s next generation HXU is an upcoming OCP contribution that enables liquid cooling for high-performance AI systems in air-cooled datacenters, supporting global scalability and rapid deployment.</p>
                 <small class="text-secondary">
                     
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-26">
-                <a href="https://azure.microsoft.com/en-us/blog/sora-2-now-available-in-azure-ai-foundry/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Sora 2 now available in Azure AI Foundry
-                </a>
-                <p class="mb-1 small text-light">Seamless integration into business workflows, backed by Microsoft’s enterprise-grade safety and security. 10 Please refer to the Azure AI Foundry Models page for future updates in deployment types and availability.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-26">
-                <a href="https://azure.microsoft.com/en-us/blog/oracle-databaseazure-offers-new-features-regions-and-programs-to-unlock-data-and-ai-innovation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Oracle Database@Azure offers new features, regions, and programs to unlock data and AI innovation
-                </a>
-                <p class="mb-1 small text-light">It’s a practical path to iterate on new features while keeping governance and security at the forefront. This enables businesses to harness the power of Microsoft Azure while leveraging Oracle’s industry-leading database technology to achieve greater scalability, performance, and security.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-10-26">
-                <a href="https://about.gitlab.com/blog/variable-and-artifact-sharing-in-gitlab-parent-child-pipelines/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Variable and artifact sharing in GitLab parent-child pipelines
-                </a>
-                <p class="mb-1 small text-light">This is where ideas like parent-child pipelines and data exchange in CI/CD setups become incredibly important. - docker push $PRODUCTION_IMAGE - echo "UPSTREAM_CONTAINER_IMAGE=$PRODUCTION_IMAGE" >> prodimage.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-10-26">
-                <a href="https://blog.sentry.io/unreal-engine-crash-reporting-now-available-on-gaming-consoles/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Unreal Engine crash reporting now available on gaming consoles with trace-connected logs
-                </a>
-                <p class="mb-1 small text-light">Public API changes and new featuresMajor releases give us a good excuse to rethink our APIs and make the breaking changes we’ve been putting off like.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-10-26">
-                <a href="https://snyk.io/blog/devseccon-2025-recap-securing-the-ai-revolution-together/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] DevSecCon 2025 Recap: Securing the AI Revolution Together
-                </a>
-                <p class="mb-1 small text-light">AI is changing development. Our DevSecCon 2025 recap covers the 3 critical stages: AI-Accelerated DevSecOps, securing code at the first prompt, and taming AI-native app chaos with Evo by Snyk.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-10-26">
-                <a href="https://snyk.io/blog/how-mercato-solutions-tackles-appsec-flexibility-conundrum-with-Snyk/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Increasing Agility & Flexibility: How Mercato Solutions tackles the application security vs. flexibility conundrum with Snyk
-                </a>
-                <p class="mb-1 small text-light">Learn how Mercato Solutions, a fast-growing low-code application provider, achieved near-zero security incidents and maintained development flexibility by partnering with Snyk API & Web.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-26">
-                <a href="https://engineering.atspotify.com/2025/9/spotifys-experiments-with-learning-framework/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Beyond Winning: Spotify’s Experiments with Learning Framework
-                </a>
-                <p class="mb-1 small text-light">TL;DR Spotify’s experimentation platform, Confidence, scaled product decision-making across hundreds of... The post Beyond Winning: Spotify’s Experiments with Learning Framework appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-26">
-                <a href="https://engineering.atspotify.com/2025/5/incident-report-spotify-outage-on-april-16-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Incident Report: Spotify Outage on April 16, 2025
-                </a>
-                <p class="mb-1 small text-light">On April 16, Spotify experienced an outage that affected users worldwide. Here is what happened and what we... The post Incident Report: Spotify Outage on April 16, 2025 appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-26">
-                <a href="https://engineering.atspotify.com/2025/4/celebrating-five-years-of-backstage/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Celebrating Five Years of Backstage: From Open Source Project to Enterprise Business
-                </a>
-                <p class="mb-1 small text-light">Did you know that we sell Spotify’s developer productivity tools and support to other companies, from online... The post Celebrating Five Years of Backstage: From Open Source Project to Enterprise Business appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-26">
-                <a href="https://engineering.atspotify.com/2025/4/how-we-release-the-spotify-app-part-1/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] A Behind-the-Scenes Look at How We Release the Spotify App (Part 1)
-                </a>
-                <p class="mb-1 small text-light">Developing and releasing mobile apps at scale is a big challenge. With each weekly release of our mobile app... The post A Behind-the-Scenes Look at How We Release the Spotify App (Part 1) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-26">
-                <a href="https://engineering.atspotify.com/2025/3/certified-backstage-associate-exam-tips/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] An Insider’s Tips for Taking the Certified Backstage Associate (CBA) Exam
-                </a>
-                <p class="mb-1 small text-light">TL;DR There’s a brand new engineering certification in town: Certified Backstage Associate (CBA). Offered... The post An Insider’s Tips for Taking the Certified Backstage Associate (CBA) Exam appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-26">
-                <a href="https://engineering.fb.com/2025/10/17/ai-research/scaling-llm-inference-innovations-tensor-parallelism-context-parallelism-expert-parallelism/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Scaling LLM Inference: Innovations in Tensor Parallelism, Context Parallelism, and Expert Parallelism
-                </a>
-                <p class="mb-1 small text-light">The rapid evolution of large language models (LLMs) has ushered in a new era of AI-powered applications, from conversational agents to advanced content generation. Future challenges in this space include: Cloud fabric design: Optimizing the underlying cloud infrastructure for LLM workloads.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-26">
-                <a href="https://engineering.fb.com/2025/10/16/developer-tools/branching-in-a-sapling-monorepo/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Branching in a Sapling Monorepo
-                </a>
-                <p class="mb-1 small text-light">However, this approach introduces challenges for teams that must manage multiple versions of their code. This resolves the scalability challenge with the repo-level merge commits and still provides merging workflows at the directory level.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-10-26">
-                <a href="https://aws.amazon.com/blogs/aws/aws-customer-carbon-footprint-tool-now-includes-scope-3-emissions/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Customer Carbon Footprint Tool Expands: Additional emissions categories including Scope 3 are now available
-                </a>
-                <p class="mb-1 small text-light">AWS prioritizes the most detailed and accurate methods for components that contribute significantly to overall emissions. You can also find emissions resulting from your usage of AWS services and across all AWS Regions.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-26">
-                <a href="https://www.cncf.io/blog/2025/10/25/connecting-distributed-kubernetes-with-cilium-and-sd-wan-building-an-intelligent-network-fabric/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Connecting distributed Kubernetes with Cilium and SD-WAN: Building an intelligent network fabric
-                </a>
-                <p class="mb-1 small text-light">Learn how Kubernetes-native traffic management and SD-WAN integration can deliver consistent security, observability, and performance across distributed clusters.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-26">
-                <a href="https://blog.cloudflare.com/improving-the-trustworthiness-of-javascript-on-the-web/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Improving the trustworthiness of Javascript on the Web
-                </a>
-                <p class="mb-1 small text-light">The web is the most powerful application platform in existence. A smartphone application is essentially just a zip file.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
+                    Microsoft Azure | 2025-10-26
                     
                 </small>
             </li>
@@ -392,19 +145,283 @@
                 <p class="mb-1 small text-light">While we see growth in both networks, it’s EBB that presents the most challenging scalability problems.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-10-26">
+                <a href="https://aws.amazon.com/blogs/aws/aws-customer-carbon-footprint-tool-now-includes-scope-3-emissions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Customer Carbon Footprint Tool Expands: Additional emissions categories including Scope 3 are now available
+                </a>
+                <p class="mb-1 small text-light">AWS prioritizes the most detailed and accurate methods for components that contribute significantly to overall emissions. You can also find emissions resulting from your usage of AWS services and across all AWS Regions.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-26">
+                <a href="https://www.cncf.io/blog/2025/10/25/connecting-distributed-kubernetes-with-cilium-and-sd-wan-building-an-intelligent-network-fabric/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Connecting distributed Kubernetes with Cilium and SD-WAN: Building an intelligent network fabric
+                </a>
+                <p class="mb-1 small text-light">Learn how Kubernetes-native traffic management and SD-WAN integration can deliver consistent security, observability, and performance across distributed clusters.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-26">
+                <a href="https://blog.cloudflare.com/improving-the-trustworthiness-of-javascript-on-the-web/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Improving the trustworthiness of Javascript on the Web
+                </a>
+                <p class="mb-1 small text-light">The web is the most powerful application platform in existence. A smartphone application is essentially just a zip file.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-26">
+                <a href="https://www.reddit.com/r/devops/comments/1og11pb/spent_too_much_time_stripping_down_a_base_image/" target="_blank" class="fw-bold text-decoration-none">
+                    Spent too much time stripping down a base image to reduce CVEs and now it breaks on every update. How do you maintain custom containers long-term?
+                </a>
+                <p class="mb-1 small text-light">So I went down the rabbit hole of manually removing packages from ubuntu:latest to cut down our CVE count. Fast forward 2 weeks and every apt update breaks something different.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-26">
+                <a href="https://www.reddit.com/r/devops/comments/1og40lu/how_are_you_managing_your_aws_infrastructure/" target="_blank" class="fw-bold text-decoration-none">
+                    How are you managing your AWS infrastructure?
+                </a>
+                <p class="mb-1 small text-light">View Poll submitted by /u/Background-Flight323</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-26">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1og0w1j/compliance_wants_cishardened_containers_but/" target="_blank" class="fw-bold text-decoration-none">
+                    Compliance wants CIS-hardened containers but Alpine/Distroless don't have the packages we need. What's your strategy for minimal + customizable images?
+                </a>
+                <p class="mb-1 small text-light">Compliance is breathing down my neck for CIS-hardened containers but our Alpine/distroless approach breaks when devs need specific packages. Daily rebuilds help with patch currency but doesn't solve the base compatibility issue.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-26">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1ogaxv0/kubernetes_133_usernamespace_support_is_is/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubernetes 1.33, usernamespace support. Is is working on pod only? (not for deployment / statefulset)
+                </a>
+                <p class="mb-1 small text-light">io/docs/tasks/configure-pod-container/user-namespaces/ It seems this feature only works on pod only. `hostUser: false` I cannot make it to work on deployment nor statefulsets.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-26">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1od84th/k8sgitopschaoslab_kubernetes_gitops_homelab_with/" target="_blank" class="fw-bold text-decoration-none">
+                    k8s-gitops-chaos-lab: Kubernetes GitOps Homelab with Flux, Linkerd, Cert-Manager, Chaos Mesh, Keda & Prometheus
+                </a>
+                <p class="mb-1 small text-light">Hello, I've built a containerized Kubernetes environment for experimenting with GitOps workflows, KEDA autoscaling, and chaos testing.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-26
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-26">
-                <a href="https://azure.microsoft.com/en-us/blog/accelerating-open-source-infrastructure-development-for-frontier-ai-at-scale/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Accelerating open-source infrastructure development for frontier AI at scale
+                <a href="https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] From queries to conversations: Unlock insights about your data using Azure Storage Discovery—now generally available
                 </a>
-                <p class="mb-1 small text-light">Microsoft’s next generation HXU is an upcoming OCP contribution that enables liquid cooling for high-performance AI systems in air-cooled datacenters, supporting global scalability and rapid deployment.</p>
+                <p class="mb-1 small text-light">Azure Storage Discovery helps you optimize storage costs, comply with security best practices, and drive operational efficiency. The intuitive experience provides advanced data visualizations and actional intelligence that are most important to you.</p>
                 <small class="text-secondary">
                     
-                    Microsoft Azure
+                    Microsoft Azure | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-26">
+                <a href="https://azure.microsoft.com/en-us/blog/sora-2-now-available-in-azure-ai-foundry/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Sora 2 now available in Azure AI Foundry
+                </a>
+                <p class="mb-1 small text-light">Seamless integration into business workflows, backed by Microsoft’s enterprise-grade safety and security. 10 Please refer to the Azure AI Foundry Models page for future updates in deployment types and availability.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-26">
+                <a href="https://azure.microsoft.com/en-us/blog/oracle-databaseazure-offers-new-features-regions-and-programs-to-unlock-data-and-ai-innovation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Oracle Database@Azure offers new features, regions, and programs to unlock data and AI innovation
+                </a>
+                <p class="mb-1 small text-light">It’s a practical path to iterate on new features while keeping governance and security at the forefront. This enables businesses to harness the power of Microsoft Azure while leveraging Oracle’s industry-leading database technology to achieve greater scalability, performance, and security.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-10-26">
+                <a href="https://about.gitlab.com/blog/variable-and-artifact-sharing-in-gitlab-parent-child-pipelines/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Variable and artifact sharing in GitLab parent-child pipelines
+                </a>
+                <p class="mb-1 small text-light">This is where ideas like parent-child pipelines and data exchange in CI/CD setups become incredibly important. - docker push $PRODUCTION_IMAGE - echo "UPSTREAM_CONTAINER_IMAGE=$PRODUCTION_IMAGE" >> prodimage.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-10-26">
+                <a href="https://blog.sentry.io/unreal-engine-crash-reporting-now-available-on-gaming-consoles/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Unreal Engine crash reporting now available on gaming consoles with trace-connected logs
+                </a>
+                <p class="mb-1 small text-light">Public API changes and new featuresMajor releases give us a good excuse to rethink our APIs and make the breaking changes we’ve been putting off like.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-10-26">
+                <a href="https://snyk.io/blog/devseccon-2025-recap-securing-the-ai-revolution-together/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] DevSecCon 2025 Recap: Securing the AI Revolution Together
+                </a>
+                <p class="mb-1 small text-light">AI is changing development. Our DevSecCon 2025 recap covers the 3 critical stages: AI-Accelerated DevSecOps, securing code at the first prompt, and taming AI-native app chaos with Evo by Snyk.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-10-26">
+                <a href="https://snyk.io/blog/how-mercato-solutions-tackles-appsec-flexibility-conundrum-with-Snyk/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Increasing Agility & Flexibility: How Mercato Solutions tackles the application security vs. flexibility conundrum with Snyk
+                </a>
+                <p class="mb-1 small text-light">Learn how Mercato Solutions, a fast-growing low-code application provider, achieved near-zero security incidents and maintained development flexibility by partnering with Snyk API & Web.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-26">
+                <a href="https://engineering.atspotify.com/2025/9/spotifys-experiments-with-learning-framework/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Beyond Winning: Spotify’s Experiments with Learning Framework
+                </a>
+                <p class="mb-1 small text-light">TL;DR Spotify’s experimentation platform, Confidence, scaled product decision-making across hundreds of... The post Beyond Winning: Spotify’s Experiments with Learning Framework appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-26">
+                <a href="https://engineering.atspotify.com/2025/5/incident-report-spotify-outage-on-april-16-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Incident Report: Spotify Outage on April 16, 2025
+                </a>
+                <p class="mb-1 small text-light">On April 16, Spotify experienced an outage that affected users worldwide. Here is what happened and what we... The post Incident Report: Spotify Outage on April 16, 2025 appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-26">
+                <a href="https://engineering.atspotify.com/2025/4/celebrating-five-years-of-backstage/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Celebrating Five Years of Backstage: From Open Source Project to Enterprise Business
+                </a>
+                <p class="mb-1 small text-light">Did you know that we sell Spotify’s developer productivity tools and support to other companies, from online... The post Celebrating Five Years of Backstage: From Open Source Project to Enterprise Business appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-26">
+                <a href="https://engineering.atspotify.com/2025/4/how-we-release-the-spotify-app-part-1/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] A Behind-the-Scenes Look at How We Release the Spotify App (Part 1)
+                </a>
+                <p class="mb-1 small text-light">Developing and releasing mobile apps at scale is a big challenge. With each weekly release of our mobile app... The post A Behind-the-Scenes Look at How We Release the Spotify App (Part 1) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-26">
+                <a href="https://engineering.atspotify.com/2025/3/certified-backstage-associate-exam-tips/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] An Insider’s Tips for Taking the Certified Backstage Associate (CBA) Exam
+                </a>
+                <p class="mb-1 small text-light">TL;DR There’s a brand new engineering certification in town: Certified Backstage Associate (CBA). Offered... The post An Insider’s Tips for Taking the Certified Backstage Associate (CBA) Exam appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-26">
+                <a href="https://engineering.fb.com/2025/10/17/ai-research/scaling-llm-inference-innovations-tensor-parallelism-context-parallelism-expert-parallelism/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Scaling LLM Inference: Innovations in Tensor Parallelism, Context Parallelism, and Expert Parallelism
+                </a>
+                <p class="mb-1 small text-light">The rapid evolution of large language models (LLMs) has ushered in a new era of AI-powered applications, from conversational agents to advanced content generation. Future challenges in this space include: Cloud fabric design: Optimizing the underlying cloud infrastructure for LLM workloads.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-26">
+                <a href="https://engineering.fb.com/2025/10/16/developer-tools/branching-in-a-sapling-monorepo/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Branching in a Sapling Monorepo
+                </a>
+                <p class="mb-1 small text-light">However, this approach introduces challenges for teams that must manage multiple versions of their code. This resolves the scalability challenge with the repo-level merge commits and still provides merging workflows at the directory level.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-10-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-10-26">
+                <a href="https://genai-showdown.specr.net/" target="_blank" class="fw-bold text-decoration-none">
+                    GenAI Image Editing Showdown
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://genai-showdown.specr.net/ Comments URL: https://news.ycombinator.com/item?id=45708795 Points: 58 # Comments: 17</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-10-26
                     
                 </small>
             </li>

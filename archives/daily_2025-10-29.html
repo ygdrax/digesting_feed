@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - October 29, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - October 29, 2025
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for October 29, 2025
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-10-29">2025-10-29 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    11 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Sentry">Sentry</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-29">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1oiynuk/debugging_like_a_pro_direct_network_access_to/" target="_blank" class="fw-bold text-decoration-none">
+                    Debugging Like a Pro: Direct Network Access to Containers in Kubernetes with VeilNet
+                </a>
+                <p class="mb-1 small text-light">NodePort exposes containers directly — convenient, but not safe. A feature that others, like Tailscale, have lacked for years.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-29">
+                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft named a Leader in the 2025 Gartner® Magic Quadrant™ for Distributed Hybrid Infrastructure
+                </a>
+                <p class="mb-1 small text-light">Delta Dental of California modernized its core payor system with containerized workloads, improving performance, uptime, and compliance.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-10-29">
+                <a href="https://www.redhat.com/en/blog/power-confidential-containers-red-hat-openshift-nvidia-gpus" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] The power of confidential containers on Red Hat OpenShift with NVIDIA GPUs
+                </a>
+                <p class="mb-1 small text-light">Yet, this widespread adoption introduces a significant security imperative: as AI workloads scale, so does the risk of unauthorized access to proprietary AI models and the sensitive data they handle.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-10-29">
+                <a href="https://www.redhat.com/en/blog/take-fail-fast-approach-developing-rhel-upgrade-automation" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Take a fail-fast approach for developing RHEL upgrade automation
+                </a>
+                <p class="mb-1 small text-light">In this article, we’ll do a quick review of the key features that help accelerate the roll out of RHEL upgrade automation. We’ll look at what’s worked well, but also at some of the challenges and lessons learned.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-10-29">
+                <a href="https://engineering.fb.com/2025/10/16/data-center-engineering/10x-backbone-how-meta-is-scaling-backbone-connectivity-for-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] 10X Backbone: How Meta Is Scaling Backbone Connectivity for AI
+                </a>
+                <p class="mb-1 small text-light">While we see growth in both networks, it’s EBB that presents the most challenging scalability problems.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-10-29">
+                <a href="https://aws.amazon.com/blogs/aws/build-more-accurate-ai-applications-with-amazon-nova-web-grounding/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Build more accurate AI applications with Amazon Nova Web Grounding
+                </a>
+                <p class="mb-1 small text-light">Because it automatically handles the retrieval and integration of information, it’s an efficient solution for developers who want to focus on building their applications rather than managing complex RAG implementations.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-10-29">
+                <a href="https://aws.amazon.com/blogs/aws/aws-customer-carbon-footprint-tool-now-includes-scope-3-emissions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Customer Carbon Footprint Tool Expands: Additional emissions categories including Scope 3 are now available
+                </a>
+                <p class="mb-1 small text-light">AWS prioritizes the most detailed and accurate methods for components that contribute significantly to overall emissions. You can also find emissions resulting from your usage of AWS services and across all AWS Regions.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-29">
+                <a href="https://www.hashicorp.com/blog/consul-1-22-and-mcp-server-add-better-security-telemetry-and-ux" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Consul 1.22 and MCP server add better security, telemetry, and UX
+                </a>
+                <p class="mb-1 small text-light">HashiCorp Consul is a global service networking platform that provides multi-runtime service discovery and secure services networking. The initial release provides a production-ready MCP server with a comprehensive read-only API for Consul.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-29">
+                <a href="https://www.cncf.io/blog/2025/10/25/connecting-distributed-kubernetes-with-cilium-and-sd-wan-building-an-intelligent-network-fabric/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Connecting distributed Kubernetes with Cilium and SD-WAN: Building an intelligent network fabric
+                </a>
+                <p class="mb-1 small text-light">Learn how Kubernetes-native traffic management and SD-WAN integration can deliver consistent security, observability, and performance across distributed clusters.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-29">
+                <a href="https://blog.cloudflare.com/pq-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] State of the post-quantum Internet in 2025
+                </a>
+                <p class="mb-1 small text-light">This allows the client to be sure that they’ve done a key agreement with cloudflare. And with 50% deployment (and rising), it’s the new security baseline for the Internet.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-29">
+                <a href="https://blog.cloudflare.com/a-framework-for-measuring-internet-resilience/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] A framework for measuring Internet resilience
+                </a>
+                <p class="mb-1 small text-light">Such area-based metrics are crucial for critical infrastructures to ensure remote areas are not left inaccessible. While BCP-38 does not prevent a network from being targeted, its deployment is a key indicator of collective security responsibility.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-29">
+                <a href="https://blog.cloudflare.com/workers-tracing-now-in-open-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Announcing Workers automatic tracing, now in open beta
+                </a>
+                <p class="mb-1 small text-light">In 2024, we set out to build the best first-party observability of any cloud platform. This enables you to quickly identify which external dependencies are affecting your application's performance.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-29">
+                <a href="https://blog.cloudflare.com/q3-2025-internet-disruption-summary/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Online outages: Q3 2025 Internet disruption summary
+                </a>
+                <p class="mb-1 small text-light">Damage from an earthquake and a fire caused service disruptions, as did a targeted cyberattack.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-29">
+                <a href="https://www.reddit.com/r/devops/comments/1oit22p/rolling_back_to_bare_metal_kubernetes_on_top_of/" target="_blank" class="fw-bold text-decoration-none">
+                    rolling back to bare metal kubernetes on top of Linux?
+                </a>
+                <p class="mb-1 small text-light">Our existing k8s is just running on Linux vms in our vsphere with rancher. we have some workloads in Tanzu but nothing critical.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-29">
+                <a href="https://www.reddit.com/r/devops/comments/1oihbbk/help_cicd_jenkins_github_and_docker/" target="_blank" class="fw-bold text-decoration-none">
+                    Help : CI/CD Jenkins GitHub and Docker
+                </a>
+                <p class="mb-1 small text-light">I set up Docker on WSL to create a realistic VPS simulation. Then, I installed Jenkins in a Docker container on WSL.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-29">
+                <a href="https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Fully managed cloud-to-cloud transfers with Azure Storage Mover
+                </a>
+                <p class="mb-1 small text-light">In today’s modern world, cloud strategies are evolving rapidly. Azure Storage Mover’s new cloud-to-cloud migration capability enables direct transfers from AWS S3 to Azure Blob.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-29">
+                <a href="https://azure.microsoft.com/en-us/blog/the-signals-loop-fine-tuning-for-world-class-ai-apps-and-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] The Signals Loop: Fine-tuning for world-class AI apps and agents
+                </a>
+                <p class="mb-1 small text-light">When new foundational models are released, they are evaluated with automated metrics to benchmark performance and updated if there are significant gains.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-10-29">
+                <a href="https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] From queries to conversations: Unlock insights about your data using Azure Storage Discovery—now generally available
+                </a>
+                <p class="mb-1 small text-light">Azure Storage Discovery helps you optimize storage costs, comply with security best practices, and drive operational efficiency. The intuitive experience provides advanced data visualizations and actional intelligence that are most important to you.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-10-29">
+                <a href="https://www.redhat.com/en/blog/red-hat-distribute-nvidia-cuda-across-red-hat-ai-rhel-and-openshift" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat to distribute NVIDIA CUDA across Red Hat AI, RHEL and OpenShift
+                </a>
+                <p class="mb-1 small text-light">For decades, Red Hat has been focused on providing the foundation for enterprise technology — a flexible, more consistent, and open platform. Today, as AI moves from a science experiment to a core business driver, that mission is more critical than ever.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-10-29">
+                <a href="https://www.redhat.com/en/blog/red-hat-ai-modular-building-blocks-scalable-repeatable-model-customization" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat AI: Modular building blocks for scalable, repeatable model customization
+                </a>
+                <p class="mb-1 small text-light">Taking generative AI (gen AI) from experimentation to enterprise deployment is never one-size-fits-all. These complexities can’t be addressed with generic workflows because real, business-critical deployments demand depth, control, and precision.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-10-29">
+                <a href="https://about.gitlab.com/blog/claude-haiku-4-5-now-available-in-gitlab-duo-agentic-chat/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Claude Haiku 4.5 now available in GitLab Duo Agentic Chat
+                </a>
+                <p class="mb-1 small text-light">5 alongside other leading models, enhancing their GitLab Duo experience with near-frontier performance at remarkable speed. 5 to accelerate their development workflows with rapid, intelligent responses.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-10-29">
+                <a href="https://blog.sentry.io/ai-code-review-30k-bugs-lighter-50-faster/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] AI Code Review: 30K Bugs Lighter, 50% faster
+                </a>
+                <p class="mb-1 small text-light">Last month, we launched AI Code Review, our developer tool that automatically catches bugs, finds performance issues, and helps you ship PRs faster. We ran evals & spot checks to ensure the performance improvements didn’t negatively impact the reviews.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-10-29">
+                <a href="https://blog.sentry.io/unreal-engine-crash-reporting-now-available-on-gaming-consoles/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Unreal Engine crash reporting now available on gaming consoles with trace-connected logs
+                </a>
+                <p class="mb-1 small text-light">Public API changes and new featuresMajor releases give us a good excuse to rethink our APIs and make the breaking changes we’ve been putting off like.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-10-29">
+                <a href="https://snyk.io/blog/devseccon-2025-recap-securing-the-ai-revolution-together/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] DevSecCon 2025 Recap: Securing the AI Revolution Together
+                </a>
+                <p class="mb-1 small text-light">AI is changing development. Our DevSecCon 2025 recap covers the 3 critical stages: AI-Accelerated DevSecOps, securing code at the first prompt, and taming AI-native app chaos with Evo by Snyk.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-10-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-10-29">
+                <a href="https://snyk.io/blog/how-mercato-solutions-tackles-appsec-flexibility-conundrum-with-Snyk/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Increasing Agility & Flexibility: How Mercato Solutions tackles the application security vs. flexibility conundrum with Snyk
+                </a>
+                <p class="mb-1 small text-light">Learn how Mercato Solutions, a fast-growing low-code application provider, achieved near-zero security incidents and maintained development flexibility by partnering with Snyk API & Web.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-10-29
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

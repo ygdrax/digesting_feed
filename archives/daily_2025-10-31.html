@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - October 31, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - October 31, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for October 31, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-10-31">2025-10-31 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2025-10-31 08:06:49
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -112,265 +129,13 @@
         <ul class="list-group" id="articleList">
             
             <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-31">
-                <a href="https://www.reddit.com/r/devops/comments/1okh226/transfer_domain_between_cloudflare_accounts/" target="_blank" class="fw-bold text-decoration-none">
-                    Transfer domain between Cloudflare accounts
+                <a href="https://www.reddit.com/r/kubernetes/comments/1oknpg9/trying_to_make_tenant_provisioning_less_painful/" target="_blank" class="fw-bold text-decoration-none">
+                    Trying to make tenant provisioning less painful. has anyone else wrapped it in a Kubernetes operator?
                 </a>
-                <p class="mb-1 small text-light">submitted by /u/Comprehensive-Cup947</p>
+                <p class="mb-1 small text-light">Hey folks, I’m a DevOps / Platform Engineer who spent the last few years provisioning multi-tenant infrastructure by hand with Terraform. What it does: - Watches an external registry (we started with MySQL) and creates Kubernetes Tenant CRs automatically.</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-31">
-                <a href="https://netflixtechblog.medium.com/data-as-a-product-applying-a-product-mindset-to-data-at-netflix-4a4d1287a31d?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Data as a Product: Applying a Product Mindset to Data at Netflix
-                </a>
-                <p class="mb-1 small text-light">This focus is essential as generative AI models, automation, and new analytics use cases demand higher-quality, well-documented data. Having explicit ownership prevents the common problem of “everyone and no one” being responsible for data issues.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-31">
-                <a href="https://netflixtechblog.com/100x-faster-how-we-supercharged-netflix-maestros-workflow-engine-028e9637f041?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] 100X Faster: How We Supercharged Netflix Maestro’s Workflow Engine
-                </a>
-                <p class="mb-1 small text-light">Maestro API and Step Runtime LayerThis layer offers seamless integrations with other Netflix services (e. Maintaining Scalability While Gaining SpeedWith the new engine, we significantly boost performance by collocating flows and their tasks on the same node throughout their lifecycle.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-31">
-                <a href="https://www.docker.com/blog/connect-mcp-servers-to-claude-desktop-with-mcp-toolkit/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] How to add MCP Servers to Claude Desktop with Docker MCP Toolkit
-                </a>
-                <p class="mb-1 small text-light">This allows it to spawn ephemeral sibling containers for code execution – when Claude requests JavaScript execution, the sandbox container makes Docker API calls to create temporary Node.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-31">
-                <a href="https://www.docker.com/blog/docker-hub-incident-report-october-20-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Hub Incident Report – October 20, 2025
-                </a>
-                <p class="mb-1 small text-light">Timeline & Impact of Events 2025-10-20 06:48 UTC AWS DynamoDB and EC2 APIs begin failing, causing degraded performance across Docker Hub, Build Cloud, Testcontainers Cloud, and other related services.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-31">
-                <a href="https://www.docker.com/blog/build-custom-mcp-catalog/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Your Org, Your Tools: Building a Custom MCP Catalog
-                </a>
-                <p class="mb-1 small text-light">Some have strict security policies that prohibit pulling images directly from Docker Hub. It doesn’t “host” anything — the servers are just regular Docker containers.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-31">
-                <a href="https://www.docker.com/blog/self-hosted-alternatives-control-your-data/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Why More People Are Taking Control of Their Digital Lives with Self-Hosted Alternatives
-                </a>
-                <p class="mb-1 small text-light">That does sound more convenient—until the subscription fee increases, the features change, or the service shuts down overnight. Container platforms like Docker make it even easier to get started.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-10-31">
-                <a href="https://www.redhat.com/en/blog/red-hat-insights-now-red-hat-lightspeed" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat Insights is now Red Hat Lightspeed: Accelerating AI-powered management
-                </a>
-                <p class="mb-1 small text-light">Red Hat Insights is now Red Hat Lightspeed, reflecting our next step in bringing AI-powered management to Red Hat platforms. Red Hat Lightspeed continues to provide you with powerful, p.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-31">
-                <a href="https://engineering.atspotify.com/2025/4/celebrating-five-years-of-backstage/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Celebrating Five Years of Backstage: From Open Source Project to Enterprise Business
-                </a>
-                <p class="mb-1 small text-light">Did you know that we sell Spotify’s developer productivity tools and support to other companies, from online... The post Celebrating Five Years of Backstage: From Open Source Project to Enterprise Business appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-31">
-                <a href="https://www.hashicorp.com/blog/how-to-start-consolidating-your-cybersecurity-tools" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] How to start consolidating your cybersecurity tools
-                </a>
-                <p class="mb-1 small text-light">Secrets management products also act as the main identity broker for service and cloud infrastructure access. The platform should also include native, or same-vendor, secret scanning, public key infrastructure (PKI), and access management solutions.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-31">
-                <a href="https://kubernetes.io/blog/2025/10/06/introducing-headlamp-plugin-for-karpenter/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Introducing Headlamp Plugin for Karpenter - Scaling and Visibility
-                </a>
-                <p class="mb-1 small text-light">Headlamp is an open‑source, extensible Kubernetes SIG UI project designed to let you explore, manage, and debug cluster resources. Karpenter is a Kubernetes Autoscaling SIG node provisioning project that helps clusters scale quickly and efficiently.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-31">
-                <a href="https://www.cncf.io/blog/2025/10/30/dont-just-attend-kubecon-cloudnativecon-merge-forward-your-experience/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Don’t just attend KubeCon + CloudNativeCon, Merge Forward your experience!
-                </a>
-                <p class="mb-1 small text-light">We are so excited that the Merge Forward team will be at KubeCon + CloudNativeCon Atlanta this year.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-31">
-                <a href="https://blog.cloudflare.com/agent-registry/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Beyond IP lists: a registry format for bots and agents
-                </a>
-                <p class="mb-1 small text-light">However, like IP addresses, cryptographic keys are a pseudonymous form of identity. If you offer a security service, allowing your customers to specify the registries/signature-agents they want to let through allows you to gain valuable insight.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-31">
-                <a href="https://blog.cloudflare.com/private-rate-limiting/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Anonymous credentials: rate-limiting bots and agents without compromising privacy
-                </a>
-                <p class="mb-1 small text-light">Cloudflare offers a Browser Rendering service that can bind directly into our Worker. The key feature of ACT is its statefulness: upon successful redemption, the server re-issues a new credential with updated nullifier and counter values.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-31">
-                <a href="https://blog.cloudflare.com/pq-anonymous-credentials/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Policy, privacy and post-quantum: anonymous credentials for everyone
-                </a>
-                <p class="mb-1 small text-light">The design provides strong, composable security guarantees derived directly from the underlying parts. However, for practical deployment, these figures would likely need a significant speedup to be usable in real-time systems.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-10-31">
-                <a href="https://slack.engineering/speedup-e2e-testing/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Optimizing Our E2E Pipeline
-                </a>
-                <p class="mb-1 small text-light">This is critical for ensuring that changes are validated across the entire stack for the Slack application: frontend, backend, database, and the handful of services in between. Deployment: The build is deployed to a QA environment.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-10-31">
-                <a href="https://dropbox.tech/machine-learning/practical-blueprint-evaluating-conversational-ai-at-scale-dash" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] A practical blueprint for evaluating conversational AI at scale
-                </a>
-                <p class="mb-1 small text-light">It brought structure to our workflows by helping us manage datasets, scorers, experiments, automation, tracing, and monitoring. At its core, the platform gave us four key capabilities.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-10-31">
-                <a href="https://dropbox.tech/culture/ai-adoption-productivity-dropbox-cto-ali-dasdan" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Driving AI adoption at Dropbox: a conversation with CTO Ali Dasdan
-                </a>
-                <p class="mb-1 small text-light">It helps automate everyday tasks like writing code, conducting code reviews, generating tests, debugging, and even resolving incidents. For instance, AI reduces the friction of getting started—like writing a test—and allows for exploration and ideation.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-31">
-                <a href="https://www.reddit.com/r/devops/comments/1ok2g4q/the_problem_i_see_with_ai_is_if_the_person_asking/" target="_blank" class="fw-bold text-decoration-none">
-                    The problem I see with AI is if the person asking AI to do something doesn’t understand scale, they could end up with infrastructure issues at the foundation.
-                </a>
-                <p class="mb-1 small text-light">How many times have we had to talk our own people off a ledge for considering Kubernetes when we just need ECS or vice-versa. How many times has management come back from a conference with a new shiny and it then becomes the biggest maintenance headache for every one involved.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-31">
-                <a href="https://netflixtechblog.com/post-training-generative-recommenders-with-advantage-weighted-supervised-finetuning-61a538d717a9?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Post-Training Generative Recommenders with Advantage-Weighted Supervised Finetuning
-                </a>
-                <p class="mb-1 small text-light">Table 1: Reward model performance metricsWe observe that the model’s predictions do not significantly outperform the simple baselines. This design provides essential means to control the learnt bias from uncertain reward models.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-31">
-                <a href="https://www.docker.com/blog/thecube-research-economic-validation-of-docker-development-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] theCUBE Research economic validation of Docker’s development platform
-                </a>
-                <p class="mb-1 small text-light">Docker helps enterprises generate business advantages through deploying new customer experiences that leverage agentic AI applications. Docker enables enterprises to apply proven containerization and DevSecOps practices to agentic AI development and software supply chain security.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-10-31">
-                <a href="https://snyk.io/blog/snyk-cognition-partner-integration/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Snyk and Cognition partner to enhance security for AI-native development
-                </a>
-                <p class="mb-1 small text-light">Enhance AI-native development security with Snyk & Cognition. Discover Snyk for Devin & Windsurf, embedding real-time security intelligence for faster, safer coding.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
+                    Reddit | 2025-10-31
                     
                 </small>
             </li>
@@ -382,7 +147,7 @@
                 <p class="mb-1 small text-light">Distroless: Security through minimalism Distroless containers flip this paradigm by including only the essentials required to run an application — nothing more.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2025-10-31
                     
                 </small>
             </li>
@@ -394,19 +159,271 @@
                 <p class="mb-1 small text-light">Let’s build a greener cloud native future Sustainability Month is more than an event — it’s a global movement. By sharing local insights and collaborating across borders, we can make cloud native technology both innovative and environmentally responsible.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2025-10-31
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-31">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1oknpg9/trying_to_make_tenant_provisioning_less_painful/" target="_blank" class="fw-bold text-decoration-none">
-                    Trying to make tenant provisioning less painful. has anyone else wrapped it in a Kubernetes operator?
+                <a href="https://www.reddit.com/r/devops/comments/1ok2g4q/the_problem_i_see_with_ai_is_if_the_person_asking/" target="_blank" class="fw-bold text-decoration-none">
+                    The problem I see with AI is if the person asking AI to do something doesn’t understand scale, they could end up with infrastructure issues at the foundation.
                 </a>
-                <p class="mb-1 small text-light">Hey folks, I’m a DevOps / Platform Engineer who spent the last few years provisioning multi-tenant infrastructure by hand with Terraform. What it does: - Watches an external registry (we started with MySQL) and creates Kubernetes Tenant CRs automatically.</p>
+                <p class="mb-1 small text-light">How many times have we had to talk our own people off a ledge for considering Kubernetes when we just need ECS or vice-versa. How many times has management come back from a conference with a new shiny and it then becomes the biggest maintenance headache for every one involved.</p>
                 <small class="text-secondary">
                     
-                    Reddit
+                    Reddit | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-31">
+                <a href="https://netflixtechblog.com/post-training-generative-recommenders-with-advantage-weighted-supervised-finetuning-61a538d717a9?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Post-Training Generative Recommenders with Advantage-Weighted Supervised Finetuning
+                </a>
+                <p class="mb-1 small text-light">Table 1: Reward model performance metricsWe observe that the model’s predictions do not significantly outperform the simple baselines. This design provides essential means to control the learnt bias from uncertain reward models.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-31">
+                <a href="https://www.docker.com/blog/thecube-research-economic-validation-of-docker-development-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] theCUBE Research economic validation of Docker’s development platform
+                </a>
+                <p class="mb-1 small text-light">Docker helps enterprises generate business advantages through deploying new customer experiences that leverage agentic AI applications. Docker enables enterprises to apply proven containerization and DevSecOps practices to agentic AI development and software supply chain security.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-10-31">
+                <a href="https://snyk.io/blog/snyk-cognition-partner-integration/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Snyk and Cognition partner to enhance security for AI-native development
+                </a>
+                <p class="mb-1 small text-light">Enhance AI-native development security with Snyk & Cognition. Discover Snyk for Devin & Windsurf, embedding real-time security intelligence for faster, safer coding.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-10-31">
+                <a href="https://www.hashicorp.com/blog/how-to-start-consolidating-your-cybersecurity-tools" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] How to start consolidating your cybersecurity tools
+                </a>
+                <p class="mb-1 small text-light">Secrets management products also act as the main identity broker for service and cloud infrastructure access. The platform should also include native, or same-vendor, secret scanning, public key infrastructure (PKI), and access management solutions.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-10-31">
+                <a href="https://kubernetes.io/blog/2025/10/06/introducing-headlamp-plugin-for-karpenter/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Introducing Headlamp Plugin for Karpenter - Scaling and Visibility
+                </a>
+                <p class="mb-1 small text-light">Headlamp is an open‑source, extensible Kubernetes SIG UI project designed to let you explore, manage, and debug cluster resources. Karpenter is a Kubernetes Autoscaling SIG node provisioning project that helps clusters scale quickly and efficiently.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-10-31">
+                <a href="https://www.cncf.io/blog/2025/10/30/dont-just-attend-kubecon-cloudnativecon-merge-forward-your-experience/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Don’t just attend KubeCon + CloudNativeCon, Merge Forward your experience!
+                </a>
+                <p class="mb-1 small text-light">We are so excited that the Merge Forward team will be at KubeCon + CloudNativeCon Atlanta this year.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-31">
+                <a href="https://blog.cloudflare.com/agent-registry/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Beyond IP lists: a registry format for bots and agents
+                </a>
+                <p class="mb-1 small text-light">However, like IP addresses, cryptographic keys are a pseudonymous form of identity. If you offer a security service, allowing your customers to specify the registries/signature-agents they want to let through allows you to gain valuable insight.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-31">
+                <a href="https://blog.cloudflare.com/private-rate-limiting/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Anonymous credentials: rate-limiting bots and agents without compromising privacy
+                </a>
+                <p class="mb-1 small text-light">Cloudflare offers a Browser Rendering service that can bind directly into our Worker. The key feature of ACT is its statefulness: upon successful redemption, the server re-issues a new credential with updated nullifier and counter values.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-10-31">
+                <a href="https://blog.cloudflare.com/pq-anonymous-credentials/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Policy, privacy and post-quantum: anonymous credentials for everyone
+                </a>
+                <p class="mb-1 small text-light">The design provides strong, composable security guarantees derived directly from the underlying parts. However, for practical deployment, these figures would likely need a significant speedup to be usable in real-time systems.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-10-31">
+                <a href="https://slack.engineering/speedup-e2e-testing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Optimizing Our E2E Pipeline
+                </a>
+                <p class="mb-1 small text-light">This is critical for ensuring that changes are validated across the entire stack for the Slack application: frontend, backend, database, and the handful of services in between. Deployment: The build is deployed to a QA environment.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-10-31">
+                <a href="https://dropbox.tech/machine-learning/practical-blueprint-evaluating-conversational-ai-at-scale-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] A practical blueprint for evaluating conversational AI at scale
+                </a>
+                <p class="mb-1 small text-light">It brought structure to our workflows by helping us manage datasets, scorers, experiments, automation, tracing, and monitoring. At its core, the platform gave us four key capabilities.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-10-31">
+                <a href="https://dropbox.tech/culture/ai-adoption-productivity-dropbox-cto-ali-dasdan" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Driving AI adoption at Dropbox: a conversation with CTO Ali Dasdan
+                </a>
+                <p class="mb-1 small text-light">It helps automate everyday tasks like writing code, conducting code reviews, generating tests, debugging, and even resolving incidents. For instance, AI reduces the friction of getting started—like writing a test—and allows for exploration and ideation.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-10-31">
+                <a href="https://www.reddit.com/r/devops/comments/1okh226/transfer_domain_between_cloudflare_accounts/" target="_blank" class="fw-bold text-decoration-none">
+                    Transfer domain between Cloudflare accounts
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/Comprehensive-Cup947</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-31">
+                <a href="https://netflixtechblog.medium.com/data-as-a-product-applying-a-product-mindset-to-data-at-netflix-4a4d1287a31d?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Data as a Product: Applying a Product Mindset to Data at Netflix
+                </a>
+                <p class="mb-1 small text-light">This focus is essential as generative AI models, automation, and new analytics use cases demand higher-quality, well-documented data. Having explicit ownership prevents the common problem of “everyone and no one” being responsible for data issues.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-10-31">
+                <a href="https://netflixtechblog.com/100x-faster-how-we-supercharged-netflix-maestros-workflow-engine-028e9637f041?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] 100X Faster: How We Supercharged Netflix Maestro’s Workflow Engine
+                </a>
+                <p class="mb-1 small text-light">Maestro API and Step Runtime LayerThis layer offers seamless integrations with other Netflix services (e. Maintaining Scalability While Gaining SpeedWith the new engine, we significantly boost performance by collocating flows and their tasks on the same node throughout their lifecycle.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-31">
+                <a href="https://www.docker.com/blog/connect-mcp-servers-to-claude-desktop-with-mcp-toolkit/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] How to add MCP Servers to Claude Desktop with Docker MCP Toolkit
+                </a>
+                <p class="mb-1 small text-light">This allows it to spawn ephemeral sibling containers for code execution – when Claude requests JavaScript execution, the sandbox container makes Docker API calls to create temporary Node.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-31">
+                <a href="https://www.docker.com/blog/docker-hub-incident-report-october-20-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Hub Incident Report – October 20, 2025
+                </a>
+                <p class="mb-1 small text-light">Timeline & Impact of Events 2025-10-20 06:48 UTC AWS DynamoDB and EC2 APIs begin failing, causing degraded performance across Docker Hub, Build Cloud, Testcontainers Cloud, and other related services.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-31">
+                <a href="https://www.docker.com/blog/build-custom-mcp-catalog/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Your Org, Your Tools: Building a Custom MCP Catalog
+                </a>
+                <p class="mb-1 small text-light">Some have strict security policies that prohibit pulling images directly from Docker Hub. It doesn’t “host” anything — the servers are just regular Docker containers.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-10-31">
+                <a href="https://www.docker.com/blog/self-hosted-alternatives-control-your-data/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Why More People Are Taking Control of Their Digital Lives with Self-Hosted Alternatives
+                </a>
+                <p class="mb-1 small text-light">That does sound more convenient—until the subscription fee increases, the features change, or the service shuts down overnight. Container platforms like Docker make it even easier to get started.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-10-31">
+                <a href="https://www.redhat.com/en/blog/red-hat-insights-now-red-hat-lightspeed" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat Insights is now Red Hat Lightspeed: Accelerating AI-powered management
+                </a>
+                <p class="mb-1 small text-light">Red Hat Insights is now Red Hat Lightspeed, reflecting our next step in bringing AI-powered management to Red Hat platforms. Red Hat Lightspeed continues to provide you with powerful, p.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-10-31">
+                <a href="https://engineering.atspotify.com/2025/4/celebrating-five-years-of-backstage/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Celebrating Five Years of Backstage: From Open Source Project to Enterprise Business
+                </a>
+                <p class="mb-1 small text-light">Did you know that we sell Spotify’s developer productivity tools and support to other companies, from online... The post Celebrating Five Years of Backstage: From Open Source Project to Enterprise Business appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-10-31
                     
                 </small>
             </li>

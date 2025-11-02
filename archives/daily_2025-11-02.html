@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - November 02, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - November 02, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for November 02, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-11-02">2025-11-02 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 10 sources • Updated 2025-11-02 08:06:11
+                    Showing 25 total articles from 
+                    10 sources
+                    
                     
                 </span>
             </small>
@@ -107,278 +124,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-02">
-                <a href="https://github.com/frostyplanet/crossfire-rs" target="_blank" class="fw-bold text-decoration-none">
-                    Crossfire: High-performance lockless spsc/mpsc/mpmc channels for Rust
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://github.com/frostyplanet/crossfire-rs Comments URL: https://news.ycombinator.com/item?id=45787571 Points: 47 # Comments: 3</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-02">
-                <a href="http://www.draeath.net/blog/it/2018/03/13/DFSwithKRB/" target="_blank" class="fw-bold text-decoration-none">
-                    Linux and Windows: A tale of Kerberos, SSSD, DFS, and black magic
-                </a>
-                <p class="mb-1 small text-light">Article URL: http://www.draeath.net/blog/it/2018/03/13/DFSwithKRB/ Comments URL: https://news.ycombinator.com/item?id=45786962 Points: 20 # Comments: 2</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-02">
-                <a href="https://visopsys.org/" target="_blank" class="fw-bold text-decoration-none">
-                    Visopsys: OS maintained by a single developer since 1997
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://visopsys.org/ Comments URL: https://news.ycombinator.com/item?id=45785858 Points: 297 # Comments: 53</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-02">
-                <a href="https://www.reddit.com/r/devops/comments/1om5tqo/hosting_my_cicd_setup_on_a_smaller_eu_cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    Hosting my CI/CD setup on a smaller EU cloud turned out smoother than I expected
-                </a>
-                <p class="mb-1 small text-light">I’ve been testing a few European clouds for my CI/CD setup, mainly Xelon. Anyone else here using EU-based clouds for pipelines or container work.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-02">
-                <a href="https://www.reddit.com/r/devops/comments/1omacjj/how_do_you_track_your_cloud_spend_per_instance/" target="_blank" class="fw-bold text-decoration-none">
-                    How do you track your cloud spend? Per instance daily, or monthly totals across all servers?
-                </a>
-                <p class="mb-1 small text-light">Hey folks, I’m curious how other teams handle cloud cost tracking and reconciliation in day-to-day operations. In our setup, we run about 10 instances with mixed workloads (compute, storage, and network).</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-02">
-                <a href="https://www.reddit.com/r/devops/comments/1olod4p/understanding_docker_multiplatform_builds_with/" target="_blank" class="fw-bold text-decoration-none">
-                    Understanding Docker Multi-platform Builds with QEMU
-                </a>
-                <p class="mb-1 small text-light">https://cefboud.com/posts/qemu-virtualzation-docker-multi-build/ submitted by /u/Helpful_Geologist430</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-02">
-                <a href="https://www.reddit.com/r/devops/comments/1olzbox/a_simple_shell_script_that_creates_rootless/" target="_blank" class="fw-bold text-decoration-none">
-                    A simple shell script that creates rootless podman containers to automate any task, building of github projects, kernels, applications etc
-                </a>
-                <p class="mb-1 small text-light">Description: A simple shell script that uses buildah to create customized OCI/docker images and podman to deploy rootless containers designed to automate compilation/building of github projects, applications and kernels, including any other conainerized task or service.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-02">
-                <a href="https://www.reddit.com/r/devops/comments/1olny1f/need_advice_bitbucket_helm_repo_structure_for/" target="_blank" class="fw-bold text-decoration-none">
-                    Need Advice: Bitbucket Helm Repo Structure for Multi-Service K8s Project + Shared Infra (ArgoCD, Vault, Cert-Manager, etc.)
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/Dependent_Concert446</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-02">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1olu2rc/how_you_track_what_would_break_if_main_cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    How you track what would break if main cloud region goes down
-                </a>
-                <p class="mb-1 small text-light">Turns out half our “redundant” systems depend on the same control plane or managed service anyway. Even our monitoring stack isn’t as isolated as we thought.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-02">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1olpwxz/connection_refused_from_windows_docker_container/" target="_blank" class="fw-bold text-decoration-none">
-                    Connection refused from Windows Docker container with process isolation on Windows Server 2025
-                </a>
-                <p class="mb-1 small text-light">Apologies if it might be a wrong community, but I have posted this question on /r/docker and got no response. 26100 Container: Microsoft Windows Server 2025 Datacenter 10.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-02">
-                <a href="https://netflixtechblog.com/behind-the-streams-real-time-recommendations-for-live-events-e027cb313f8f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Behind the Streams: Real-Time Recommendations for Live Events Part 3
-                </a>
-                <p class="mb-1 small text-light">Sending dynamic, timely updates concurrently to over a hundred million devices worldwide without creating a thundering herd effect that would overwhelm our cloud services. Request throughput: the capacity of our cloud services to handle requests.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-02">
-                <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-1-ingesting-and-processing-data-80113e124acc?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 1 — Ingesting and Processing Data…
-                </a>
-                <p class="mb-1 small text-light">This modularity allows for independent service development, deployment, and scaling. This allows teams to choose the most suitable data schemas and storage technologies for their services.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-02">
-                <a href="https://www.redhat.com/en/blog/state-missouri-scales-automation-unlocks-time-innovation" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] The State of Missouri Scales Automation, Unlocks Time for Innovation
-                </a>
-                <p class="mb-1 small text-light">These citizen services require significant operational rigor, driven by an IT organization focused on delivering technology with speed, consistency, and efficiency.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-11-02">
-                <a href="https://engineering.atspotify.com/2025/9/spotifys-experiments-with-learning-framework/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Beyond Winning: Spotify’s Experiments with Learning Framework
-                </a>
-                <p class="mb-1 small text-light">TL;DR Spotify’s experimentation platform, Confidence, scaled product decision-making across hundreds of... The post Beyond Winning: Spotify’s Experiments with Learning Framework appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-11-02">
-                <a href="https://engineering.atspotify.com/2025/5/incident-report-spotify-outage-on-april-16-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Incident Report: Spotify Outage on April 16, 2025
-                </a>
-                <p class="mb-1 small text-light">On April 16, Spotify experienced an outage that affected users worldwide. Here is what happened and what we... The post Incident Report: Spotify Outage on April 16, 2025 appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-02">
-                <a href="https://sailfishos.org/info/" target="_blank" class="fw-bold text-decoration-none">
-                    SailfishOS: A Linux-based European alternative to dominant mobile OSes
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://sailfishos.org/info/ Comments URL: https://news.ycombinator.com/item?id=45785840 Points: 239 # Comments: 103</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-02">
-                <a href="https://www.hashicorp.com/blog/vault-enterprise-1-21-spiffe-auth-fips-140-3-level-1-compliance-granular-secret-recovery" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Vault Enterprise 1.21 gains SPIFFE auth, FIPS 140-3 Level 1 compliance, granular secret recovery, and more
-                </a>
-                <p class="mb-1 small text-light">It enables each workload to be assigned a cryptographically verifiable identity, allowing secure, automated authentication between services without manual configuration.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-02">
-                <a href="https://kubernetes.io/blog/2025/10/20/seven-kubernetes-pitfalls-and-how-to-avoid/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] 7 Common Kubernetes Pitfalls (and How I Learned to Avoid Them)
-                </a>
-                <p class="mb-1 small text-light">This tends to happen because Kubernetes will consider a container “running” as long as the process inside hasn’t exited. Look into Pod Security Admission (or other solutions like Kyverno) to enforce non-root containers, read-only filesystems, etc.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-02">
-                <a href="https://kubernetes.io/blog/2025/10/18/wg-policy-spotlight-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Spotlight on Policy Working Group
-                </a>
-                <p class="mb-1 small text-light">Jim Bugwadia: My name is Jim Bugwadia, and I am a co-founder and the CEO at Nirmata which provides solutions that automate security and compliance for cloud-native workloads. This is intended to help organizations meet important security standards in their Kubernetes environments.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-02">
-                <a href="https://kubernetes.io/blog/2025/09/25/csi-changed-block-tracking/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing Changed Block Tracking API support (alpha)
-                </a>
-                <p class="mb-1 small text-light">The Changed Block Tracking API addresses these challenges by providing native Kubernetes support for incremental backup capabilities through the CSI interface.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-02">
-                <a href="https://kubernetes.io/blog/2025/09/22/kubernetes-v1-34-pod-level-resources/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.34: Pod Level Resources Graduated to Beta
-                </a>
-                <p class="mb-1 small text-light">As a beta feature, Kubernetes allows you to specify the CPU, memory and hugepages resources at the Pod-level. This feature enhances resource management in Kubernetes by offering flexible resource management at both the Pod and container levels.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-02">
-                <a href="https://engineering.fb.com/2025/10/20/data-center-engineering/disaggregated-scheduled-fabric-scaling-metas-ai-journey/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Disaggregated Scheduled Fabric: Scaling Meta’s AI Journey
+                <a href="https://engineering.fb.com/2025/10/23/security/scaling-privacy-infrastructure-for-genai-product-innovation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Scaling Privacy Infrastructure for GenAI Product Innovation
                 </a>
-                <p class="mb-1 small text-light">This is important data because it impacts how much we should overprovision the fabric to support good pacing and maintain steady performance in the event of failures. We tried several solutions to handle these issues, but each presented challenges.</p>
+                <p class="mb-1 small text-light">PAI is a suite of infrastructure services, APIs, and monitoring systems designed to integrate privacy into every aspect of product development. Scalability: Supports thousands of microservices and product teams across Meta’s vast ecosystem.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-02">
-                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
-                </a>
-                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
+                    Engineering at Meta | 2025-11-02
                     
                 </small>
             </li>
@@ -390,19 +143,283 @@
                 <p class="mb-1 small text-light">A context lake contains things that matter: Your infrastructure programs, resource definitions, API schemas, service dependencies. What grounded AI enables The first generation of DevOps automated deployment.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-02">
+                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
+                </a>
+                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-11-02
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-02">
-                <a href="https://engineering.fb.com/2025/10/23/security/scaling-privacy-infrastructure-for-genai-product-innovation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Scaling Privacy Infrastructure for GenAI Product Innovation
+                <a href="https://engineering.fb.com/2025/10/20/data-center-engineering/disaggregated-scheduled-fabric-scaling-metas-ai-journey/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Disaggregated Scheduled Fabric: Scaling Meta’s AI Journey
                 </a>
-                <p class="mb-1 small text-light">PAI is a suite of infrastructure services, APIs, and monitoring systems designed to integrate privacy into every aspect of product development. Scalability: Supports thousands of microservices and product teams across Meta’s vast ecosystem.</p>
+                <p class="mb-1 small text-light">This is important data because it impacts how much we should overprovision the fabric to support good pacing and maintain steady performance in the event of failures. We tried several solutions to handle these issues, but each presented challenges.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-02">
+                <a href="https://sailfishos.org/info/" target="_blank" class="fw-bold text-decoration-none">
+                    SailfishOS: A Linux-based European alternative to dominant mobile OSes
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://sailfishos.org/info/ Comments URL: https://news.ycombinator.com/item?id=45785840 Points: 239 # Comments: 103</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-02">
+                <a href="https://www.hashicorp.com/blog/vault-enterprise-1-21-spiffe-auth-fips-140-3-level-1-compliance-granular-secret-recovery" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Vault Enterprise 1.21 gains SPIFFE auth, FIPS 140-3 Level 1 compliance, granular secret recovery, and more
+                </a>
+                <p class="mb-1 small text-light">It enables each workload to be assigned a cryptographically verifiable identity, allowing secure, automated authentication between services without manual configuration.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-02">
+                <a href="https://kubernetes.io/blog/2025/10/20/seven-kubernetes-pitfalls-and-how-to-avoid/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] 7 Common Kubernetes Pitfalls (and How I Learned to Avoid Them)
+                </a>
+                <p class="mb-1 small text-light">This tends to happen because Kubernetes will consider a container “running” as long as the process inside hasn’t exited. Look into Pod Security Admission (or other solutions like Kyverno) to enforce non-root containers, read-only filesystems, etc.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-02">
+                <a href="https://kubernetes.io/blog/2025/10/18/wg-policy-spotlight-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on Policy Working Group
+                </a>
+                <p class="mb-1 small text-light">Jim Bugwadia: My name is Jim Bugwadia, and I am a co-founder and the CEO at Nirmata which provides solutions that automate security and compliance for cloud-native workloads. This is intended to help organizations meet important security standards in their Kubernetes environments.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-02">
+                <a href="https://kubernetes.io/blog/2025/09/25/csi-changed-block-tracking/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing Changed Block Tracking API support (alpha)
+                </a>
+                <p class="mb-1 small text-light">The Changed Block Tracking API addresses these challenges by providing native Kubernetes support for incremental backup capabilities through the CSI interface.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-02">
+                <a href="https://kubernetes.io/blog/2025/09/22/kubernetes-v1-34-pod-level-resources/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.34: Pod Level Resources Graduated to Beta
+                </a>
+                <p class="mb-1 small text-light">As a beta feature, Kubernetes allows you to specify the CPU, memory and hugepages resources at the Pod-level. This feature enhances resource management in Kubernetes by offering flexible resource management at both the Pod and container levels.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-02">
+                <a href="https://www.reddit.com/r/devops/comments/1om5tqo/hosting_my_cicd_setup_on_a_smaller_eu_cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    Hosting my CI/CD setup on a smaller EU cloud turned out smoother than I expected
+                </a>
+                <p class="mb-1 small text-light">I’ve been testing a few European clouds for my CI/CD setup, mainly Xelon. Anyone else here using EU-based clouds for pipelines or container work.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-02">
+                <a href="https://www.reddit.com/r/devops/comments/1omacjj/how_do_you_track_your_cloud_spend_per_instance/" target="_blank" class="fw-bold text-decoration-none">
+                    How do you track your cloud spend? Per instance daily, or monthly totals across all servers?
+                </a>
+                <p class="mb-1 small text-light">Hey folks, I’m curious how other teams handle cloud cost tracking and reconciliation in day-to-day operations. In our setup, we run about 10 instances with mixed workloads (compute, storage, and network).</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-02">
+                <a href="https://www.reddit.com/r/devops/comments/1olod4p/understanding_docker_multiplatform_builds_with/" target="_blank" class="fw-bold text-decoration-none">
+                    Understanding Docker Multi-platform Builds with QEMU
+                </a>
+                <p class="mb-1 small text-light">https://cefboud.com/posts/qemu-virtualzation-docker-multi-build/ submitted by /u/Helpful_Geologist430</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-02">
+                <a href="https://www.reddit.com/r/devops/comments/1olzbox/a_simple_shell_script_that_creates_rootless/" target="_blank" class="fw-bold text-decoration-none">
+                    A simple shell script that creates rootless podman containers to automate any task, building of github projects, kernels, applications etc
+                </a>
+                <p class="mb-1 small text-light">Description: A simple shell script that uses buildah to create customized OCI/docker images and podman to deploy rootless containers designed to automate compilation/building of github projects, applications and kernels, including any other conainerized task or service.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-02">
+                <a href="https://www.reddit.com/r/devops/comments/1olny1f/need_advice_bitbucket_helm_repo_structure_for/" target="_blank" class="fw-bold text-decoration-none">
+                    Need Advice: Bitbucket Helm Repo Structure for Multi-Service K8s Project + Shared Infra (ArgoCD, Vault, Cert-Manager, etc.)
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/Dependent_Concert446</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-02">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1olu2rc/how_you_track_what_would_break_if_main_cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    How you track what would break if main cloud region goes down
+                </a>
+                <p class="mb-1 small text-light">Turns out half our “redundant” systems depend on the same control plane or managed service anyway. Even our monitoring stack isn’t as isolated as we thought.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-02">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1olpwxz/connection_refused_from_windows_docker_container/" target="_blank" class="fw-bold text-decoration-none">
+                    Connection refused from Windows Docker container with process isolation on Windows Server 2025
+                </a>
+                <p class="mb-1 small text-light">Apologies if it might be a wrong community, but I have posted this question on /r/docker and got no response. 26100 Container: Microsoft Windows Server 2025 Datacenter 10.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-02">
+                <a href="https://netflixtechblog.com/behind-the-streams-real-time-recommendations-for-live-events-e027cb313f8f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Behind the Streams: Real-Time Recommendations for Live Events Part 3
+                </a>
+                <p class="mb-1 small text-light">Sending dynamic, timely updates concurrently to over a hundred million devices worldwide without creating a thundering herd effect that would overwhelm our cloud services. Request throughput: the capacity of our cloud services to handle requests.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-02">
+                <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-1-ingesting-and-processing-data-80113e124acc?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 1 — Ingesting and Processing Data…
+                </a>
+                <p class="mb-1 small text-light">This modularity allows for independent service development, deployment, and scaling. This allows teams to choose the most suitable data schemas and storage technologies for their services.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-02">
+                <a href="https://www.redhat.com/en/blog/state-missouri-scales-automation-unlocks-time-innovation" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] The State of Missouri Scales Automation, Unlocks Time for Innovation
+                </a>
+                <p class="mb-1 small text-light">These citizen services require significant operational rigor, driven by an IT organization focused on delivering technology with speed, consistency, and efficiency.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-11-02">
+                <a href="https://engineering.atspotify.com/2025/9/spotifys-experiments-with-learning-framework/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Beyond Winning: Spotify’s Experiments with Learning Framework
+                </a>
+                <p class="mb-1 small text-light">TL;DR Spotify’s experimentation platform, Confidence, scaled product decision-making across hundreds of... The post Beyond Winning: Spotify’s Experiments with Learning Framework appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-11-02">
+                <a href="https://engineering.atspotify.com/2025/5/incident-report-spotify-outage-on-april-16-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Incident Report: Spotify Outage on April 16, 2025
+                </a>
+                <p class="mb-1 small text-light">On April 16, Spotify experienced an outage that affected users worldwide. Here is what happened and what we... The post Incident Report: Spotify Outage on April 16, 2025 appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-02">
+                <a href="https://github.com/frostyplanet/crossfire-rs" target="_blank" class="fw-bold text-decoration-none">
+                    Crossfire: High-performance lockless spsc/mpsc/mpmc channels for Rust
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://github.com/frostyplanet/crossfire-rs Comments URL: https://news.ycombinator.com/item?id=45787571 Points: 47 # Comments: 3</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-02">
+                <a href="http://www.draeath.net/blog/it/2018/03/13/DFSwithKRB/" target="_blank" class="fw-bold text-decoration-none">
+                    Linux and Windows: A tale of Kerberos, SSSD, DFS, and black magic
+                </a>
+                <p class="mb-1 small text-light">Article URL: http://www.draeath.net/blog/it/2018/03/13/DFSwithKRB/ Comments URL: https://news.ycombinator.com/item?id=45786962 Points: 20 # Comments: 2</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-11-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-02">
+                <a href="https://visopsys.org/" target="_blank" class="fw-bold text-decoration-none">
+                    Visopsys: OS maintained by a single developer since 1997
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://visopsys.org/ Comments URL: https://news.ycombinator.com/item?id=45785858 Points: 297 # Comments: 53</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-11-02
                     
                 </small>
             </li>

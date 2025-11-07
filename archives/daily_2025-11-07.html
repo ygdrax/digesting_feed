@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - November 07, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - November 07, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for November 07, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-11-07">2025-11-07 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 8 sources • Updated 2025-11-07 08:06:58
+                    Showing 25 total articles from 
+                    8 sources
+                    
                     
                 </span>
             </small>
@@ -103,270 +120,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-07">
-                <a href="https://www.reddit.com/r/devops/comments/1oqniv9/azure_pipeline_limitations_dockercompose1/" target="_blank" class="fw-bold text-decoration-none">
-                    Azure pipeline limitations DockerCompose@1
-                </a>
-                <p class="mb-1 small text-light">Folks, I was trying to build image for a specific service of my compose file but I unable to do with pipeline. I found only below from azure doc, why it is there for only run? not for build? serviceName - Service Name string. Required when action = Run a specific service. submitted by /u/autodevops</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-07">
-                <a href="https://www.reddit.com/r/devops/comments/1oq43is/how_i_will_now_handle_waituntilready_problems_in/" target="_blank" class="fw-bold text-decoration-none">
-                    How I will now handle "wait-until-ready" problems in CI/CD
-                </a>
-                <p class="mb-1 small text-light">I ran several time into the same issue in CI/CD pipelines needing to wait for a service to reach a ready state before running the next step. For example, waiting until a service becomes healthy before tests run: watchfor \ -c "curl -s https://api.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-07">
-                <a href="https://www.reddit.com/r/devops/comments/1oqbsfz/does_anyone_integrate_real_exploit_intelligence/" target="_blank" class="fw-bold text-decoration-none">
-                    Does anyone integrate real exploit intelligence into their container security strategy?
-                </a>
-                <p class="mb-1 small text-light">We're drowning in CVE noise across our container fleet. Our security team wants everything patched yesterday but engineering bandwidth is finite.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-07">
-                <a href="https://www.reddit.com/r/devops/comments/1oq5zm1/built_a_github_pr_security_scanner_79_checks_ai/" target="_blank" class="fw-bold text-decoration-none">
-                    Built a GitHub PR security scanner (79+ checks, AI auto-fix). Need beta testers.
-                </a>
-                <p class="mb-1 small text-light">Hey r/devops, I'm Vitor, solo dev who spent 4 months building CodeSlick. dev - automated security analysis for GitHub PRs.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-07">
-                <a href="https://www.reddit.com/r/devops/comments/1oq35l7/how_to_use_a_env_file_with_devcontainerscodespaces/" target="_blank" class="fw-bold text-decoration-none">
-                    How to use a .env File with Devcontainers/Codespaces
-                </a>
-                <p class="mb-1 small text-light">Ever wanted to use "runArgs": \ in your devcontainer. json but get errors when booting the devcontainer for the first time since the file doesn't exist yet.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-07">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1opyk05/enterprise_solutions_to_linux_as_a_mainstream/" target="_blank" class="fw-bold text-decoration-none">
-                    Enterprise solutions to linux as a mainstream user desktop
-                </a>
-                <p class="mb-1 small text-light">This recent post made me think about it. Is it even viable to utilize linux in a business full of end users.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-07">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1opz32r/build_your_kubernetes_platformasaservice_today/" target="_blank" class="fw-bold text-decoration-none">
-                    Build Your Kubernetes Platform-as-a-Service Today | HariKube
-                </a>
-                <p class="mb-1 small text-light">To democratize the advancements needed to overcome the limitations of ETCD and client-side filtering of #Kubernetes, we have #opensource-d a core toolset.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-07">
-                <a href="https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Fully managed cloud-to-cloud transfers with Azure Storage Mover
-                </a>
-                <p class="mb-1 small text-light">In today’s modern world, cloud strategies are evolving rapidly. Azure Storage Mover’s new cloud-to-cloud migration capability enables direct transfers from AWS S3 to Azure Blob.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-07">
-                <a href="https://azure.microsoft.com/en-us/blog/the-signals-loop-fine-tuning-for-world-class-ai-apps-and-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] The Signals Loop: Fine-tuning for world-class AI apps and agents
-                </a>
-                <p class="mb-1 small text-light">When new foundational models are released, they are evaluated with automated metrics to benchmark performance and updated if there are significant gains.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-07">
-                <a href="https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] From queries to conversations: Unlock insights about your data using Azure Storage Discovery—now generally available
-                </a>
-                <p class="mb-1 small text-light">Azure Storage Discovery helps you optimize storage costs, comply with security best practices, and drive operational efficiency. The intuitive experience provides advanced data visualizations and actional intelligence that are most important to you.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-07">
-                <a href="https://aws.amazon.com/blogs/aws/introducing-aws-capabilities-by-region-for-easier-regional-planning-and-faster-global-deployments/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Introducing AWS Capabilities by Region for easier Regional planning and faster global deployments
-                </a>
-                <p class="mb-1 small text-light">Today, I’m excited to introduce AWS Capabilities by Region, a new planning tool that helps you discover and compare AWS services, features, APIs, and AWS CloudFormation resources across Regions.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-07">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-project-rainier-online-amazon-nova-amazon-bedrock-and-more-november-3-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: Project Rainier online, Amazon Nova, Amazon Bedrock, and more (November 3, 2025)
-                </a>
-                <p class="mb-1 small text-light">Amazon Location Service introduces new API key restrictions – You can now create granular security policies with bundle IDs to restrict API access to specific mobile applications, improving access control and strengthening application-level security across location-based workloads.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-07">
-                <a href="https://aws.amazon.com/blogs/aws/build-more-accurate-ai-applications-with-amazon-nova-web-grounding/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Build more accurate AI applications with Amazon Nova Web Grounding
-                </a>
-                <p class="mb-1 small text-light">Because it automatically handles the retrieval and integration of information, it’s an efficient solution for developers who want to focus on building their applications rather than managing complex RAG implementations.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-07">
-                <a href="https://www.hashicorp.com/blog/ai-is-making-developers-faster-but-at-a-cost" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] AI is making developers faster, but at a cost
-                </a>
-                <p class="mb-1 small text-light">Policy as code ensures security and compliance policies are applied to every new build to prevent misconfigurations.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-07">
-                <a href="https://kubernetes.io/blog/2025/11/06/gateway-api-v1-4/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Gateway API 1.4: New Features
-                </a>
-                <p class="mb-1 small text-light">While this reduces the overhead of establishing new connections, it introduces a security risk in the context of API gateways. 1: Service mesh, GRPCRoute, and a whole lot more (May 2024) New Experimental Features in Gateway API v1.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-07">
-                <a href="https://www.cncf.io/blog/2025/11/06/your-complete-guide-to-kubecon-cloudnativecon-north-america-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Your Complete Guide to KubeCon + CloudNativeCon North America 2025
-                </a>
-                <p class="mb-1 small text-light">Learn foundational concepts across networking, storage, security, and application development. Platform Engineering focuses on building, optimizing, and scaling cloud native platforms, with strategies for enhancing CI/CD pipelines and streamlining software delivery.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-07">
-                <a href="https://www.cncf.io/announcements/2025/11/06/cloud-native-computing-foundation-announces-graduation-of-crossplane/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Cloud Native Computing Foundation Announces Graduation of Crossplane
-                </a>
-                <p class="mb-1 small text-light">Crossplane brings the universal contract of declarative APIs to cloud infrastructure, applications, and services.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-07">
-                <a href="https://www.cncf.io/blog/2025/11/06/safely-managing-cilium-network-policies-in-kubernetes-testing-and-simulation-techniques/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Safely managing Cilium network policies in Kubernetes: Testing and simulation techniques
-                </a>
-                <p class="mb-1 small text-light">Network policy changes are among the most frequent operations in a Kubernetes cluster. Hubble is Cilium’s observability component that provides detailed visibility into network traffic and policy decisions across your cluster.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-07">
-                <a href="https://www.cncf.io/blog/2025/11/06/cncf-ambassadors-reflections-on-10-years-of-the-cloud-native-computing-foundation/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] CNCF Ambassador’s reflections on 10 years of the Cloud Native Computing Foundation
-                </a>
-                <p class="mb-1 small text-light">Prometheus has since become a de-facto standard for cloud-native monitoring, and recently reached an important milestone with the long-awaited 3.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-07">
-                <a href="https://blog.cloudflare.com/async-quic-and-http-3-made-easy-tokio-quiche-is-now-open-source/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Async QUIC and HTTP/3 made easy: tokio-quiche is now open-source
-                </a>
-                <p class="mb-1 small text-light">tokio-quiche also powers Cloudflare Warp’s MASQUE client, replacing our WireGuard tunnels with QUIC-based tunnels, and the async version of h3i. However, integrating sans-io libraries into applications is an error-prone and time-consuming process.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-07">
-                <a href="https://blog.cloudflare.com/extract-audio-from-your-videos-with-cloudflare-stream/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Extract audio from your videos with Cloudflare Stream
-                </a>
-                <p class="mb-1 small text-light">We are excited to see how developers use this new capability to build more efficient and exciting applications on Cloudflare Stream. You can try the audio extraction feature by uploading a video to Stream or using the API.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-07">
-                <a href="https://blog.cloudflare.com/fresh-insights-from-old-data-corroborating-reports-of-turkmenistan-ip/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Fresh insights from old data: corroborating reports of Turkmenistan IP unblocking and firewall testing
-                </a>
-                <p class="mb-1 small text-light">Here at Cloudflare, we frequently use and write about data in the present. news article (available in Russian) that reports Turkmenistan experienced “an unprecedented easing in blocking,” causing over 3 billion previously-blocked IP addresses to become reachable.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-07">
                 <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
                     [Microsoft Azure] Microsoft named a Leader in the 2025 Gartner® Magic Quadrant™ for Distributed Hybrid Infrastructure
@@ -374,7 +127,7 @@
                 <p class="mb-1 small text-light">Delta Dental of California modernized its core payor system with containerized workloads, improving performance, uptime, and compliance.</p>
                 <small class="text-secondary">
                     
-                    Microsoft Azure
+                    Microsoft Azure | 2025-11-07
                     
                 </small>
             </li>
@@ -386,7 +139,7 @@
                 <p class="mb-1 small text-light">jpg" The image shows the logo for **Docker**, a popular platform for containerization. Docker uses this iconic whale-container image to represent the concept of packaging and running applications in isolated containers.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2025-11-07
                     
                 </small>
             </li>
@@ -398,7 +151,271 @@
                 <p class="mb-1 small text-light">Infrastructure admins with access to network security tools can run tidy networks, servers, and containers with precise configurations. Security will continue to monitor the environment and the application after release.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-07">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-aws-capabilities-by-region-for-easier-regional-planning-and-faster-global-deployments/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing AWS Capabilities by Region for easier Regional planning and faster global deployments
+                </a>
+                <p class="mb-1 small text-light">Today, I’m excited to introduce AWS Capabilities by Region, a new planning tool that helps you discover and compare AWS services, features, APIs, and AWS CloudFormation resources across Regions.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-07">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-project-rainier-online-amazon-nova-amazon-bedrock-and-more-november-3-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Project Rainier online, Amazon Nova, Amazon Bedrock, and more (November 3, 2025)
+                </a>
+                <p class="mb-1 small text-light">Amazon Location Service introduces new API key restrictions – You can now create granular security policies with bundle IDs to restrict API access to specific mobile applications, improving access control and strengthening application-level security across location-based workloads.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-07">
+                <a href="https://aws.amazon.com/blogs/aws/build-more-accurate-ai-applications-with-amazon-nova-web-grounding/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Build more accurate AI applications with Amazon Nova Web Grounding
+                </a>
+                <p class="mb-1 small text-light">Because it automatically handles the retrieval and integration of information, it’s an efficient solution for developers who want to focus on building their applications rather than managing complex RAG implementations.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-07">
+                <a href="https://www.hashicorp.com/blog/ai-is-making-developers-faster-but-at-a-cost" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] AI is making developers faster, but at a cost
+                </a>
+                <p class="mb-1 small text-light">Policy as code ensures security and compliance policies are applied to every new build to prevent misconfigurations.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-07">
+                <a href="https://kubernetes.io/blog/2025/11/06/gateway-api-v1-4/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Gateway API 1.4: New Features
+                </a>
+                <p class="mb-1 small text-light">While this reduces the overhead of establishing new connections, it introduces a security risk in the context of API gateways. 1: Service mesh, GRPCRoute, and a whole lot more (May 2024) New Experimental Features in Gateway API v1.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-07">
+                <a href="https://www.cncf.io/blog/2025/11/06/your-complete-guide-to-kubecon-cloudnativecon-north-america-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Your Complete Guide to KubeCon + CloudNativeCon North America 2025
+                </a>
+                <p class="mb-1 small text-light">Learn foundational concepts across networking, storage, security, and application development. Platform Engineering focuses on building, optimizing, and scaling cloud native platforms, with strategies for enhancing CI/CD pipelines and streamlining software delivery.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-07">
+                <a href="https://www.cncf.io/announcements/2025/11/06/cloud-native-computing-foundation-announces-graduation-of-crossplane/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Cloud Native Computing Foundation Announces Graduation of Crossplane
+                </a>
+                <p class="mb-1 small text-light">Crossplane brings the universal contract of declarative APIs to cloud infrastructure, applications, and services.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-07">
+                <a href="https://www.cncf.io/blog/2025/11/06/safely-managing-cilium-network-policies-in-kubernetes-testing-and-simulation-techniques/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Safely managing Cilium network policies in Kubernetes: Testing and simulation techniques
+                </a>
+                <p class="mb-1 small text-light">Network policy changes are among the most frequent operations in a Kubernetes cluster. Hubble is Cilium’s observability component that provides detailed visibility into network traffic and policy decisions across your cluster.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-07">
+                <a href="https://www.cncf.io/blog/2025/11/06/cncf-ambassadors-reflections-on-10-years-of-the-cloud-native-computing-foundation/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] CNCF Ambassador’s reflections on 10 years of the Cloud Native Computing Foundation
+                </a>
+                <p class="mb-1 small text-light">Prometheus has since become a de-facto standard for cloud-native monitoring, and recently reached an important milestone with the long-awaited 3.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-07">
+                <a href="https://blog.cloudflare.com/async-quic-and-http-3-made-easy-tokio-quiche-is-now-open-source/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Async QUIC and HTTP/3 made easy: tokio-quiche is now open-source
+                </a>
+                <p class="mb-1 small text-light">tokio-quiche also powers Cloudflare Warp’s MASQUE client, replacing our WireGuard tunnels with QUIC-based tunnels, and the async version of h3i. However, integrating sans-io libraries into applications is an error-prone and time-consuming process.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-07">
+                <a href="https://blog.cloudflare.com/extract-audio-from-your-videos-with-cloudflare-stream/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Extract audio from your videos with Cloudflare Stream
+                </a>
+                <p class="mb-1 small text-light">We are excited to see how developers use this new capability to build more efficient and exciting applications on Cloudflare Stream. You can try the audio extraction feature by uploading a video to Stream or using the API.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-07">
+                <a href="https://blog.cloudflare.com/fresh-insights-from-old-data-corroborating-reports-of-turkmenistan-ip/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Fresh insights from old data: corroborating reports of Turkmenistan IP unblocking and firewall testing
+                </a>
+                <p class="mb-1 small text-light">Here at Cloudflare, we frequently use and write about data in the present. news article (available in Russian) that reports Turkmenistan experienced “an unprecedented easing in blocking,” causing over 3 billion previously-blocked IP addresses to become reachable.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-07">
+                <a href="https://www.reddit.com/r/devops/comments/1oqniv9/azure_pipeline_limitations_dockercompose1/" target="_blank" class="fw-bold text-decoration-none">
+                    Azure pipeline limitations DockerCompose@1
+                </a>
+                <p class="mb-1 small text-light">Folks, I was trying to build image for a specific service of my compose file but I unable to do with pipeline. I found only below from azure doc, why it is there for only run? not for build? serviceName - Service Name string. Required when action = Run a specific service. submitted by /u/autodevops</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-07">
+                <a href="https://www.reddit.com/r/devops/comments/1oq43is/how_i_will_now_handle_waituntilready_problems_in/" target="_blank" class="fw-bold text-decoration-none">
+                    How I will now handle "wait-until-ready" problems in CI/CD
+                </a>
+                <p class="mb-1 small text-light">I ran several time into the same issue in CI/CD pipelines needing to wait for a service to reach a ready state before running the next step. For example, waiting until a service becomes healthy before tests run: watchfor \ -c "curl -s https://api.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-07">
+                <a href="https://www.reddit.com/r/devops/comments/1oqbsfz/does_anyone_integrate_real_exploit_intelligence/" target="_blank" class="fw-bold text-decoration-none">
+                    Does anyone integrate real exploit intelligence into their container security strategy?
+                </a>
+                <p class="mb-1 small text-light">We're drowning in CVE noise across our container fleet. Our security team wants everything patched yesterday but engineering bandwidth is finite.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-07">
+                <a href="https://www.reddit.com/r/devops/comments/1oq5zm1/built_a_github_pr_security_scanner_79_checks_ai/" target="_blank" class="fw-bold text-decoration-none">
+                    Built a GitHub PR security scanner (79+ checks, AI auto-fix). Need beta testers.
+                </a>
+                <p class="mb-1 small text-light">Hey r/devops, I'm Vitor, solo dev who spent 4 months building CodeSlick. dev - automated security analysis for GitHub PRs.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-07">
+                <a href="https://www.reddit.com/r/devops/comments/1oq35l7/how_to_use_a_env_file_with_devcontainerscodespaces/" target="_blank" class="fw-bold text-decoration-none">
+                    How to use a .env File with Devcontainers/Codespaces
+                </a>
+                <p class="mb-1 small text-light">Ever wanted to use "runArgs": \ in your devcontainer. json but get errors when booting the devcontainer for the first time since the file doesn't exist yet.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-07">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1opyk05/enterprise_solutions_to_linux_as_a_mainstream/" target="_blank" class="fw-bold text-decoration-none">
+                    Enterprise solutions to linux as a mainstream user desktop
+                </a>
+                <p class="mb-1 small text-light">This recent post made me think about it. Is it even viable to utilize linux in a business full of end users.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-07">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1opz32r/build_your_kubernetes_platformasaservice_today/" target="_blank" class="fw-bold text-decoration-none">
+                    Build Your Kubernetes Platform-as-a-Service Today | HariKube
+                </a>
+                <p class="mb-1 small text-light">To democratize the advancements needed to overcome the limitations of ETCD and client-side filtering of #Kubernetes, we have #opensource-d a core toolset.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-07">
+                <a href="https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Fully managed cloud-to-cloud transfers with Azure Storage Mover
+                </a>
+                <p class="mb-1 small text-light">In today’s modern world, cloud strategies are evolving rapidly. Azure Storage Mover’s new cloud-to-cloud migration capability enables direct transfers from AWS S3 to Azure Blob.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-07">
+                <a href="https://azure.microsoft.com/en-us/blog/the-signals-loop-fine-tuning-for-world-class-ai-apps-and-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] The Signals Loop: Fine-tuning for world-class AI apps and agents
+                </a>
+                <p class="mb-1 small text-light">When new foundational models are released, they are evaluated with automated metrics to benchmark performance and updated if there are significant gains.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-07">
+                <a href="https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] From queries to conversations: Unlock insights about your data using Azure Storage Discovery—now generally available
+                </a>
+                <p class="mb-1 small text-light">Azure Storage Discovery helps you optimize storage costs, comply with security best practices, and drive operational efficiency. The intuitive experience provides advanced data visualizations and actional intelligence that are most important to you.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-11-07
                     
                 </small>
             </li>

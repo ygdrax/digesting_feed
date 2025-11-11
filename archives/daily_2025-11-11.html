@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - November 11, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - November 11, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for November 11, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-11-11">2025-11-11 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2025-11-11 08:06:52
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,278 +126,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-11">
-                <a href="https://www.reddit.com/r/devops/comments/1ot8f0x/whats_your_goto_api_testing_tool_in_2025_for_cicd/" target="_blank" class="fw-bold text-decoration-none">
-                    What’s your go-to API testing tool in 2025 for CI/CD pipelines?
-                </a>
-                <p class="mb-1 small text-light">Hey everyone, Our team’s been revisiting our API testing and documentation setup as we scale a few services, and we’re realizing how fragmented our toolchain has become.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-11">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1otl4hr/for_those_of_you_with_offices_that_are_mostly/" target="_blank" class="fw-bold text-decoration-none">
-                    For those of you with offices that are mostly cloud infra only with minimal equipment on premises, how do you handle WIFI?
-                </a>
-                <p class="mb-1 small text-light">We moved servers and other critical infrastructure to cloud only and our offices are basically just glorified coffee shops. Only basic networking infra remains (switches, routers, Wifi AP's).</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-11">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1otc548/explain_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    Explain Kubernetes!
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/suman087</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-11">
-                <a href="https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Fully managed cloud-to-cloud transfers with Azure Storage Mover
-                </a>
-                <p class="mb-1 small text-light">In today’s modern world, cloud strategies are evolving rapidly. Azure Storage Mover’s new cloud-to-cloud migration capability enables direct transfers from AWS S3 to Azure Blob.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-11">
-                <a href="https://azure.microsoft.com/en-us/blog/the-signals-loop-fine-tuning-for-world-class-ai-apps-and-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] The Signals Loop: Fine-tuning for world-class AI apps and agents
-                </a>
-                <p class="mb-1 small text-light">When new foundational models are released, they are evaluated with automated metrics to benchmark performance and updated if there are significant gains.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-11">
-                <a href="https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] From queries to conversations: Unlock insights about your data using Azure Storage Discovery—now generally available
-                </a>
-                <p class="mb-1 small text-light">Azure Storage Discovery helps you optimize storage costs, comply with security best practices, and drive operational efficiency. The intuitive experience provides advanced data visualizations and actional intelligence that are most important to you.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-11">
-                <a href="https://www.docker.com/blog/state-of-application-development-survey-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Help Define the Future of Development – Take the Docker State of Application Development Survey 2025
-                </a>
-                <p class="mb-1 small text-light">Welcome to the fourth annual Docker State of Application Development survey. Take the Docker State of Application Development survey now.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-11">
-                <a href="https://www.docker.com/blog/context-aware-devsecops-what-works/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Most DevSecOps Advice Is Useless without Context—Here’s What Actually Works
-                </a>
-                <p class="mb-1 small text-light">Context makes the difference: team size, tech stack, deployment cadence, and even the type of application all shape what’s realistic. Deployment cadences, toolchains, and team structures all shape which specific security measures are practical.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-11">
-                <a href="https://www.docker.com/blog/dynamic-mcps-stop-hardcoding-your-agents-world/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Dynamic MCPs with Docker: Stop Hardcoding Your Agents’ World
-                </a>
-                <p class="mb-1 small text-light">However, the real key to dynamic MCPs is a small but crucial adjustment to the agent’s MCP session. Our MCP servers are already running in Docker containers, and the code mode sandbox is no different.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-11">
-                <a href="https://news.ycombinator.com/item?id=45877517" target="_blank" class="fw-bold text-decoration-none">
-                    Launch HN: Hypercubic (YC F25) – AI for COBOL and Mainframes
-                </a>
-                <p class="mb-1 small text-light">Hypercubic is an AI platform that helps Fortune 500 companies understand, preserve, and modernize their mainframe systems. Today, the average age of a COBOL/mainframe engineer is about 55 and rapidly increasing.</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-11">
-                <a href="https://www.hashicorp.com/blog/hashicorp-at-aws-re-invent-accelerate-every-step-of-your-cloud-journey" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] HashiCorp at AWS re:Invent: Accelerate every step of your cloud journey
-                </a>
-                <p class="mb-1 small text-light">Join HashiCorp specialists for deeper discussions on how to unify infrastructure and security practices in the cloud. Hear directly from AWS and HashiCorp customers about how they’re solving complex infrastructure challenges together.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-11">
-                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
-                </a>
-                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-11">
-                <a href="https://kubernetes.io/blog/2025/10/20/seven-kubernetes-pitfalls-and-how-to-avoid/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] 7 Common Kubernetes Pitfalls (and How I Learned to Avoid Them)
-                </a>
-                <p class="mb-1 small text-light">This tends to happen because Kubernetes will consider a container “running” as long as the process inside hasn’t exited. Look into Pod Security Admission (or other solutions like Kyverno) to enforce non-root containers, read-only filesystems, etc.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-11">
-                <a href="https://kubernetes.io/blog/2025/10/18/wg-policy-spotlight-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Spotlight on Policy Working Group
-                </a>
-                <p class="mb-1 small text-light">Jim Bugwadia: My name is Jim Bugwadia, and I am a co-founder and the CEO at Nirmata which provides solutions that automate security and compliance for cloud-native workloads. This is intended to help organizations meet important security standards in their Kubernetes environments.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-11">
-                <a href="https://www.cncf.io/announcements/2025/11/10/falco-links-real-time-detection-with-forensic-level-analysis-in-the-cloud-native-stack/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Falco Links Real-Time Detection with Forensic-Level Analysis in the Cloud Native Stack
-                </a>
-                <p class="mb-1 small text-light">Platform and security teams working across Kubernetes, containerized environments, and hybrid/multicloud infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-11">
-                <a href="https://www.reddit.com/r/devops/comments/1ot967b/i_am_building_a_lightweight_engine_for_developing/" target="_blank" class="fw-bold text-decoration-none">
-                    I am building a lightweight engine for developing custom distributed CI/CD platforms. It makes building and managing custom CI/CD platforms easier by handling the orchestration so you can focus on how your workflow works
-                </a>
-                <p class="mb-1 small text-light">Leave a github star, if you find the project interesting. https://github.com/open-ug/conveyor submitted by /u/Mother-Pear7629</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-11">
-                <a href="https://netflixtechblog.com/supercharging-the-ml-and-ai-development-experience-at-netflix-b2d5b95c63eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Supercharging the ML and AI Development Experience at Netflix
-                </a>
-                <p class="mb-1 small text-light">Metaflow allows users to:Iterate and ship quickly by minimizing frictionOperate systems reliably in production with minimal overhead, at Netflix scale.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-11">
-                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft named a Leader in the 2025 Gartner® Magic Quadrant™ for Distributed Hybrid Infrastructure
-                </a>
-                <p class="mb-1 small text-light">Delta Dental of California modernized its core payor system with containerized workloads, improving performance, uptime, and compliance.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-11">
-                <a href="https://about.gitlab.com/blog/secure-ai-agent-deployment-to-gke/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Secure AI agent deployment to GKE
-                </a>
-                <p class="mb-1 small text-light">GKE provides enterprise-grade orchestration that connects seamlessly with GitLab CI/CD pipelines through OIDC authentication. Test - GitLab Auto DevOps provides built-in security scans to ensure there are no vulnerabilities.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-11">
-                <a href="https://about.gitlab.com/blog/migrate-from-pipeline-variables-to-pipeline-inputs-for-better-security/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Migrate from pipeline variables to pipeline inputs for better security
-                </a>
-                <p class="mb-1 small text-light">However, as CI/CD security best practices have evolved, we've recognized the need for stronger controls around pipeline customization.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-11">
-                <a href="https://engineering.fb.com/2025/11/10/ml-applications/metas-generative-ads-model-gem-the-central-brain-accelerating-ads-recommendation-ai-innovation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Meta’s Generative Ads Model (GEM): The Central Brain Accelerating Ads Recommendation AI Innovation
+                <a href="https://engineering.fb.com/2025/10/23/security/scaling-privacy-infrastructure-for-genai-product-innovation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Scaling Privacy Infrastructure for GenAI Product Innovation
                 </a>
-                <p class="mb-1 small text-light">GEM introduces architectural innovations that unlock efficient scaling laws, delivering performance gains that scale cost-effectively with data and compute.</p>
+                <p class="mb-1 small text-light">PAI is a suite of infrastructure services, APIs, and monitoring systems designed to integrate privacy into every aspect of product development. Scalability: Supports thousands of microservices and product teams across Meta’s vast ecosystem.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-11">
-                <a href="https://engineering.fb.com/2025/10/20/data-center-engineering/disaggregated-scheduled-fabric-scaling-metas-ai-journey/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Disaggregated Scheduled Fabric: Scaling Meta’s AI Journey
-                </a>
-                <p class="mb-1 small text-light">This is important data because it impacts how much we should overprovision the fabric to support good pacing and maintain steady performance in the event of failures. We tried several solutions to handle these issues, but each presented challenges.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-11">
-                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
-                </a>
-                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
+                    Engineering at Meta | 2025-11-11
                     
                 </small>
             </li>
@@ -392,19 +145,283 @@
                 <p class="mb-1 small text-light">The ProblemWhen application demand requires that we scale up our servers, we get a new instance from AWS. We trust these insights will assist others in navigating the evolving container ecosystem, transforming potential challenges into opportunities for building robust, high-performance platforms.</p>
                 <small class="text-secondary">
                     
-                    Netflix
+                    Netflix | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-11">
+                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
+                </a>
+                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-11">
+                <a href="https://www.reddit.com/r/devops/comments/1ot967b/i_am_building_a_lightweight_engine_for_developing/" target="_blank" class="fw-bold text-decoration-none">
+                    I am building a lightweight engine for developing custom distributed CI/CD platforms. It makes building and managing custom CI/CD platforms easier by handling the orchestration so you can focus on how your workflow works
+                </a>
+                <p class="mb-1 small text-light">Leave a github star, if you find the project interesting. https://github.com/open-ug/conveyor submitted by /u/Mother-Pear7629</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-11">
+                <a href="https://netflixtechblog.com/supercharging-the-ml-and-ai-development-experience-at-netflix-b2d5b95c63eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Supercharging the ML and AI Development Experience at Netflix
+                </a>
+                <p class="mb-1 small text-light">Metaflow allows users to:Iterate and ship quickly by minimizing frictionOperate systems reliably in production with minimal overhead, at Netflix scale.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-11">
+                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft named a Leader in the 2025 Gartner® Magic Quadrant™ for Distributed Hybrid Infrastructure
+                </a>
+                <p class="mb-1 small text-light">Delta Dental of California modernized its core payor system with containerized workloads, improving performance, uptime, and compliance.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-11">
+                <a href="https://about.gitlab.com/blog/secure-ai-agent-deployment-to-gke/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Secure AI agent deployment to GKE
+                </a>
+                <p class="mb-1 small text-light">GKE provides enterprise-grade orchestration that connects seamlessly with GitLab CI/CD pipelines through OIDC authentication. Test - GitLab Auto DevOps provides built-in security scans to ensure there are no vulnerabilities.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-11">
+                <a href="https://about.gitlab.com/blog/migrate-from-pipeline-variables-to-pipeline-inputs-for-better-security/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Migrate from pipeline variables to pipeline inputs for better security
+                </a>
+                <p class="mb-1 small text-light">However, as CI/CD security best practices have evolved, we've recognized the need for stronger controls around pipeline customization.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-11-11
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-11">
-                <a href="https://engineering.fb.com/2025/10/23/security/scaling-privacy-infrastructure-for-genai-product-innovation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Scaling Privacy Infrastructure for GenAI Product Innovation
+                <a href="https://engineering.fb.com/2025/11/10/ml-applications/metas-generative-ads-model-gem-the-central-brain-accelerating-ads-recommendation-ai-innovation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Meta’s Generative Ads Model (GEM): The Central Brain Accelerating Ads Recommendation AI Innovation
                 </a>
-                <p class="mb-1 small text-light">PAI is a suite of infrastructure services, APIs, and monitoring systems designed to integrate privacy into every aspect of product development. Scalability: Supports thousands of microservices and product teams across Meta’s vast ecosystem.</p>
+                <p class="mb-1 small text-light">GEM introduces architectural innovations that unlock efficient scaling laws, delivering performance gains that scale cost-effectively with data and compute.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-11">
+                <a href="https://engineering.fb.com/2025/10/20/data-center-engineering/disaggregated-scheduled-fabric-scaling-metas-ai-journey/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Disaggregated Scheduled Fabric: Scaling Meta’s AI Journey
+                </a>
+                <p class="mb-1 small text-light">This is important data because it impacts how much we should overprovision the fabric to support good pacing and maintain steady performance in the event of failures. We tried several solutions to handle these issues, but each presented challenges.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-11">
+                <a href="https://news.ycombinator.com/item?id=45877517" target="_blank" class="fw-bold text-decoration-none">
+                    Launch HN: Hypercubic (YC F25) – AI for COBOL and Mainframes
+                </a>
+                <p class="mb-1 small text-light">Hypercubic is an AI platform that helps Fortune 500 companies understand, preserve, and modernize their mainframe systems. Today, the average age of a COBOL/mainframe engineer is about 55 and rapidly increasing.</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-11">
+                <a href="https://www.hashicorp.com/blog/hashicorp-at-aws-re-invent-accelerate-every-step-of-your-cloud-journey" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] HashiCorp at AWS re:Invent: Accelerate every step of your cloud journey
+                </a>
+                <p class="mb-1 small text-light">Join HashiCorp specialists for deeper discussions on how to unify infrastructure and security practices in the cloud. Hear directly from AWS and HashiCorp customers about how they’re solving complex infrastructure challenges together.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-11">
+                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
+                </a>
+                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-11">
+                <a href="https://kubernetes.io/blog/2025/10/20/seven-kubernetes-pitfalls-and-how-to-avoid/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] 7 Common Kubernetes Pitfalls (and How I Learned to Avoid Them)
+                </a>
+                <p class="mb-1 small text-light">This tends to happen because Kubernetes will consider a container “running” as long as the process inside hasn’t exited. Look into Pod Security Admission (or other solutions like Kyverno) to enforce non-root containers, read-only filesystems, etc.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-11">
+                <a href="https://kubernetes.io/blog/2025/10/18/wg-policy-spotlight-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on Policy Working Group
+                </a>
+                <p class="mb-1 small text-light">Jim Bugwadia: My name is Jim Bugwadia, and I am a co-founder and the CEO at Nirmata which provides solutions that automate security and compliance for cloud-native workloads. This is intended to help organizations meet important security standards in their Kubernetes environments.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-11">
+                <a href="https://www.cncf.io/announcements/2025/11/10/falco-links-real-time-detection-with-forensic-level-analysis-in-the-cloud-native-stack/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Falco Links Real-Time Detection with Forensic-Level Analysis in the Cloud Native Stack
+                </a>
+                <p class="mb-1 small text-light">Platform and security teams working across Kubernetes, containerized environments, and hybrid/multicloud infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-11">
+                <a href="https://www.reddit.com/r/devops/comments/1ot8f0x/whats_your_goto_api_testing_tool_in_2025_for_cicd/" target="_blank" class="fw-bold text-decoration-none">
+                    What’s your go-to API testing tool in 2025 for CI/CD pipelines?
+                </a>
+                <p class="mb-1 small text-light">Hey everyone, Our team’s been revisiting our API testing and documentation setup as we scale a few services, and we’re realizing how fragmented our toolchain has become.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-11">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1otl4hr/for_those_of_you_with_offices_that_are_mostly/" target="_blank" class="fw-bold text-decoration-none">
+                    For those of you with offices that are mostly cloud infra only with minimal equipment on premises, how do you handle WIFI?
+                </a>
+                <p class="mb-1 small text-light">We moved servers and other critical infrastructure to cloud only and our offices are basically just glorified coffee shops. Only basic networking infra remains (switches, routers, Wifi AP's).</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-11">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1otc548/explain_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    Explain Kubernetes!
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/suman087</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-11">
+                <a href="https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Fully managed cloud-to-cloud transfers with Azure Storage Mover
+                </a>
+                <p class="mb-1 small text-light">In today’s modern world, cloud strategies are evolving rapidly. Azure Storage Mover’s new cloud-to-cloud migration capability enables direct transfers from AWS S3 to Azure Blob.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-11">
+                <a href="https://azure.microsoft.com/en-us/blog/the-signals-loop-fine-tuning-for-world-class-ai-apps-and-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] The Signals Loop: Fine-tuning for world-class AI apps and agents
+                </a>
+                <p class="mb-1 small text-light">When new foundational models are released, they are evaluated with automated metrics to benchmark performance and updated if there are significant gains.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-11">
+                <a href="https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] From queries to conversations: Unlock insights about your data using Azure Storage Discovery—now generally available
+                </a>
+                <p class="mb-1 small text-light">Azure Storage Discovery helps you optimize storage costs, comply with security best practices, and drive operational efficiency. The intuitive experience provides advanced data visualizations and actional intelligence that are most important to you.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-11">
+                <a href="https://www.docker.com/blog/state-of-application-development-survey-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Help Define the Future of Development – Take the Docker State of Application Development Survey 2025
+                </a>
+                <p class="mb-1 small text-light">Welcome to the fourth annual Docker State of Application Development survey. Take the Docker State of Application Development survey now.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-11">
+                <a href="https://www.docker.com/blog/context-aware-devsecops-what-works/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Most DevSecOps Advice Is Useless without Context—Here’s What Actually Works
+                </a>
+                <p class="mb-1 small text-light">Context makes the difference: team size, tech stack, deployment cadence, and even the type of application all shape what’s realistic. Deployment cadences, toolchains, and team structures all shape which specific security measures are practical.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-11">
+                <a href="https://www.docker.com/blog/dynamic-mcps-stop-hardcoding-your-agents-world/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Dynamic MCPs with Docker: Stop Hardcoding Your Agents’ World
+                </a>
+                <p class="mb-1 small text-light">However, the real key to dynamic MCPs is a small but crucial adjustment to the agent’s MCP session. Our MCP servers are already running in Docker containers, and the code mode sandbox is no different.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-11
                     
                 </small>
             </li>

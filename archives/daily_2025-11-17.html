@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - November 17, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - November 17, 2025
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for November 17, 2025
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-11-17">2025-11-17 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    12 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="Hacker News">Hacker News</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Slack Engineering">Slack Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-17">
+                <a href="https://engineering.fb.com/2025/10/23/security/scaling-privacy-infrastructure-for-genai-product-innovation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Scaling Privacy Infrastructure for GenAI Product Innovation
+                </a>
+                <p class="mb-1 small text-light">PAI is a suite of infrastructure services, APIs, and monitoring systems designed to integrate privacy into every aspect of product development. Scalability: Supports thousands of microservices and product teams across Meta’s vast ecosystem.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-17">
+                <a href="https://netflixtechblog.medium.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Mount Mayhem at Netflix: Scaling Containers on Modern CPUs
+                </a>
+                <p class="mb-1 small text-light">The ProblemWhen application demand requires that we scale up our servers, we get a new instance from AWS. We trust these insights will assist others in navigating the evolving container ecosystem, transforming potential challenges into opportunities for building robust, high-performance platforms.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-17">
+                <a href="https://www.hashicorp.com/blog/building-resilient-infrastructure-in-regulated-environments-7-lessons-from-ig-group" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Building resilient infrastructure in regulated environments: 7 Lessons from IG Group’s journey
+                </a>
+                <p class="mb-1 small text-light">This allowed the security team to maintain visibility and consistency across all applications while improving scalability and governance. “The self-service question is always a challenge: How do you balance security with developer flexibility.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-17">
+                <a href="https://blog.cloudflare.com/finding-the-grain-of-sand-in-a-heap-of-salt/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Finding the grain of sand in a heap of Salt
+                </a>
+                <p class="mb-1 small text-light">This system is able to correlate failures with git commits, external service failures and ad hoc releases. And because broken versions are continuously overtaken by newer versions, we need to stop deployments altogether.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-17">
+                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
+                </a>
+                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-17">
+                <a href="https://www.reddit.com/r/devops/comments/1oyomjm/how_do_you_handle_infrastructure_audits_across/" target="_blank" class="fw-bold text-decoration-none">
+                    How do you handle infrastructure audits across multiple monitoring tools?
+                </a>
+                <p class="mb-1 small text-light">Our team just went through an annual audit of our internal tools. Some of the audits we do are the following: Alerts - We have alerts spanning across Cloudwatch, Splunk, Chronosphere, Grafana, and custom cron jobs.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-17">
+                <a href="https://www.reddit.com/r/devops/comments/1oz2y6e/cloud_infrastructure_engineer/" target="_blank" class="fw-bold text-decoration-none">
+                    Cloud Infrastructure Engineer
+                </a>
+                <p class="mb-1 small text-light">Are there any cloud infrastructure engineer in here that can share their interview experience? submitted by /u/NewtAdditional3686</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-17">
+                <a href="https://netflixtechblog.com/supercharging-the-ml-and-ai-development-experience-at-netflix-b2d5b95c63eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Supercharging the ML and AI Development Experience at Netflix
+                </a>
+                <p class="mb-1 small text-light">Metaflow allows users to:Iterate and ship quickly by minimizing frictionOperate systems reliably in production with minimal overhead, at Netflix scale.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-17">
+                <a href="https://about.gitlab.com/blog/secure-ai-agent-deployment-to-gke/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Secure AI agent deployment to GKE
+                </a>
+                <p class="mb-1 small text-light">GKE provides enterprise-grade orchestration that connects seamlessly with GitLab CI/CD pipelines through OIDC authentication. Test - GitLab Auto DevOps provides built-in security scans to ensure there are no vulnerabilities.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-17">
+                <a href="https://about.gitlab.com/blog/migrate-from-pipeline-variables-to-pipeline-inputs-for-better-security/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Migrate from pipeline variables to pipeline inputs for better security
+                </a>
+                <p class="mb-1 small text-light">However, as CI/CD security best practices have evolved, we've recognized the need for stronger controls around pipeline customization.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-17">
+                <a href="https://engineering.fb.com/2025/11/10/ml-applications/metas-generative-ads-model-gem-the-central-brain-accelerating-ads-recommendation-ai-innovation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Meta’s Generative Ads Model (GEM): The Central Brain Accelerating Ads Recommendation AI Innovation
+                </a>
+                <p class="mb-1 small text-light">GEM introduces architectural innovations that unlock efficient scaling laws, delivering performance gains that scale cost-effectively with data and compute.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-17">
+                <a href="https://www.hashicorp.com/blog/spiffe-securing-the-identity-of-agentic-ai-and-non-human-actors" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] SPIFFE: Securing the identity of agentic AI and non-human actors
+                </a>
+                <p class="mb-1 small text-light">Originally developed to help microservices authenticate securely in cloud-native environments, SPIFFE provides a way to issue and validate cryptographically verifiable identities without relying on long-lived secrets like passwords or API keys.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-17">
+                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
+                </a>
+                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-17">
+                <a href="https://kubernetes.io/blog/2025/10/20/seven-kubernetes-pitfalls-and-how-to-avoid/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] 7 Common Kubernetes Pitfalls (and How I Learned to Avoid Them)
+                </a>
+                <p class="mb-1 small text-light">This tends to happen because Kubernetes will consider a container “running” as long as the process inside hasn’t exited. Look into Pod Security Admission (or other solutions like Kyverno) to enforce non-root containers, read-only filesystems, etc.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-17">
+                <a href="https://kubernetes.io/blog/2025/10/18/wg-policy-spotlight-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on Policy Working Group
+                </a>
+                <p class="mb-1 small text-light">Jim Bugwadia: My name is Jim Bugwadia, and I am a co-founder and the CEO at Nirmata which provides solutions that automate security and compliance for cloud-native workloads. This is intended to help organizations meet important security standards in their Kubernetes environments.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-17">
+                <a href="https://www.reddit.com/r/devops/comments/1oz9r39/would_you_be_interested_in_docker_compose_to/" target="_blank" class="fw-bold text-decoration-none">
+                    Would you be interested in docker compose to cloud (no promote)
+                </a>
+                <p class="mb-1 small text-light">Would you be interested in a cloud solution where you can drop your docker-compose file and the platform take care of everything ? As this, the streamline between Dev and app platform could be really easier ? submitted by /u/WesternPerspective53</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-17">
+                <a href="https://aka.ms/AAyjgcy" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Infinite scale: The architecture behind the Azure AI superfactory
+                </a>
+                <p class="mb-1 small text-light">Scott Guthrie is responsible for hyperscale cloud computing solutions and services including Azure, Microsoft’s cloud computing platform, generative AI solutions, data platforms and information and cybersecurity.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-17">
+                <a href="https://azure.microsoft.com/en-us/blog/driving-roi-with-azure-ai-foundry-and-uipath-intelligent-agents-in-real-world-healthcare-workflows/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Driving ROI with Azure AI Foundry and UiPath: Intelligent agents in real-world healthcare workflows
+                </a>
+                <p class="mb-1 small text-light">At Microsoft, we are partnering with UiPath—a preferred enterprise agentic automation platform on Azure—to empower customers with integrated solutions that combine automation and AI at scale.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-17">
+                <a href="https://azure.microsoft.com/en-us/blog/microsoft-strengthens-sovereign-cloud-capabilities-with-new-services/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft strengthens sovereign cloud capabilities with new services
+                </a>
+                <p class="mb-1 small text-light">This new specialization empowers partners to demonstrate deep expertise in delivering secure, compliant, and sovereign cloud solutions across Azure and Microsoft 365 platforms. The post Microsoft strengthens sovereign cloud capabilities with new services appeared first on Microsoft Azure Blog.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-17">
+                <a href="https://www.docker.com/blog/cagent-comes-to-docker-desktop-with-built-in-ide-support-through-acp/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Cagent Comes to Docker Desktop with Built-In IDE Support through ACP
+                </a>
+                <p class="mb-1 small text-light">Getting started Here’s how to start using the bundled version: Update Docker Desktop to version 4. This approach provides flexibility: new users get immediate access through Docker Desktop, while existing users maintain control over their preferred version.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-17">
+                <a href="https://www.docker.com/blog/mcp-horror-stories-whatsapp-data-exfiltration-issue/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] MCP Horror Stories: The WhatsApp Data Exfiltration Attack
+                </a>
+                <p class="mb-1 small text-light">Docker MCP Gateway: Production-Grade Infrastructure Security Docker MCP Gateway provides enterprise-grade MCP security through transparent, container-native protection that operates without requiring client configuration changes.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-17">
+                <a href="https://www.redhat.com/en/blog/alliander-modernises-its-electricity-grid-red-hat-long-term-reliability-balance-rapid-innovation" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Alliander modernises its electricity grid with Red Hat for long-term reliability in balance with rapid innovation
+                </a>
+                <p class="mb-1 small text-light">Deferring replacement isn’t an option, because operations must stay online with up‑to‑date security. Dutch energy infrastructure was built to last for decades, with assets such as power transformers a.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-17">
+                <a href="https://engineering.fb.com/2025/11/11/web/stylex-a-styling-library-for-css-at-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] StyleX: A Styling Library for CSS at Scale
+                </a>
+                <p class="mb-1 small text-light">StyleX is Meta’s styling system for large-scale applications. This API is designed for cacheability and only allows for statically resolvable values.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-17">
+                <a href="https://engineering.fb.com/2025/11/04/video-engineering/video-invisible-watermarking-at-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Video Invisible Watermarking at Scale
+                </a>
+                <p class="mb-1 small text-light">We’re sharing how we overcame the challenges of scaling invisible watermarking, including how we built a CPU-based solution that offers comparable performance to GPUs, but with better operational efficiency. However, the application of solutions to the video problem domain (i.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-11-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-17">
+                <a href="https://roscidus.com/blog/blog/2025/11/16/libdrm-ocaml/" target="_blank" class="fw-bold text-decoration-none">
+                    Linux mode setting, from the comfort of OCaml
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://roscidus.com/blog/blog/2025/11/16/libdrm-ocaml/ Comments URL: https://news.ycombinator.com/item?id=45947822 Points: 65 # Comments: 11</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-11-17
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

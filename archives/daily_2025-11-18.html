@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - November 18, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - November 18, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for November 18, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-11-18">2025-11-18 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 15 sources • Updated 2025-11-18 08:07:06
+                    Showing 25 total articles from 
+                    15 sources
+                    
                     
                 </span>
             </small>
@@ -117,282 +134,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-18">
-                <a href="https://www.reddit.com/r/devops/comments/1p04qn1/centralising_compliance_across_clouds_is_it_worth/" target="_blank" class="fw-bold text-decoration-none">
-                    centralising compliance across clouds. Is it worth building our own pipeline?
-                </a>
-                <p class="mb-1 small text-light">maybe we should build our own internal compliance reporting pipeline instead of relying on native tools. we could pull logs from CloudTrail Azure Monitor GCP Logging, dump everything into a data lake or SIEM run standard queries / dashboards.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-18">
-                <a href="https://www.reddit.com/r/devops/comments/1ozjiz6/looking_for_examples_of_devopsrelated_llm/" target="_blank" class="fw-bold text-decoration-none">
-                    Looking for examples of DevOps-related LLM failures (building a small dataset)
-                </a>
-                <p class="mb-1 small text-light">I've been putting together a small devops -focused dataset - trying to collect cases where LLMs get things wrong in ops or infra tasks (terraform, docker, ci/cd configs, weird shell bugs, etc. It's surprisingly hard to find good "failure" data for devops automation.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-18">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1ozf5pf/tuning_linux_swap_for_kubernetes_a_deep_dive/" target="_blank" class="fw-bold text-decoration-none">
-                    Tuning Linux Swap for Kubernetes: A Deep Dive | Kubernetes
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/grouvi</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-18">
-                <a href="https://netflixtechblog.medium.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Integrating Netflix’s Foundation Model into Personalization applications
-                </a>
-                <p class="mb-1 small text-light">Overall, the subgraph approach allows for a deeper integration and enables the applications to harness the full power of the Foundation Model. A side benefit of this integration approach is that it provides a de facto baseline for new models/applications.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-18">
-                <a href="https://netflixtechblog.medium.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-2-building-a-scalable-storage-layer-ff4a8dbd3d1f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 2 — Building a Scalable Storage Layer
-                </a>
-                <p class="mb-1 small text-light">Workload complexityTraditional graph database solutions often present significant challenges when faced with the demands of Netflix’s high-volume, real-time data environment.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-18">
-                <a href="https://www.docker.com/blog/making-the-most-of-your-docker-hardened-images-trial-part-1/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Making the Most of Your Docker Hardened Images Trial – Part 1
-                </a>
-                <p class="mb-1 small text-light">First steps: Run your first secure, production-ready image Container base images form the foundation of your application security. Docker Hardened Images addresses this at the source.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-18">
-                <a href="https://about.gitlab.com/blog/gitlab-engineer-how-i-improved-my-onboarding-experience-with-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab engineer: How I improved my onboarding experience with AI
-                </a>
-                <p class="mb-1 small text-light">Starting a new job is exciting, and overwhelming. Iteration: The ability to try ideas faster and identify potential improvements, enables faster iteration.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-11-18">
-                <a href="https://blog.sentry.io/ai-code-review-30k-bugs-lighter-50-faster/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] AI Code Review: 30K Bugs Lighter, 50% faster
-                </a>
-                <p class="mb-1 small text-light">Last month, we launched AI Code Review, our developer tool that automatically catches bugs, finds performance issues, and helps you ship PRs faster. We ran evals & spot checks to ensure the performance improvements didn’t negatively impact the reviews.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-18">
-                <a href="https://snyk.io/blog/future-threat-modeling-ai-native-apps/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Secure by Design: The Future of Threat Modeling for AI-Native Applications
-                </a>
-                <p class="mb-1 small text-light">Explore how Snyk's Evo Threat Modeling Agent automates and contextualizes security for AI-native applications, addressing prompt injection, data exfiltration, data poisoning, and agentic vulnerabilities.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-18">
-                <a href="https://snyk.io/blog/agentic-ooda-loop/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] The Agentic OODA Loop: How AI and Humans Learn to Defend Together
-                </a>
-                <p class="mb-1 small text-light">Discover how AI and human security engineers collaborate to defend against evolving threats at machine speed. Learn about the new mindset for adaptive, intelligent, and symbiotic defense in the age of Agentic AI.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-18">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-load-balancers-amazon-dcv-amazon-linux-2023-and-more-november-17-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: AWS Lambda, load balancers, Amazon DCV, Amazon Linux 2023, and more (November 17, 2025)
-                </a>
-                <p class="mb-1 small text-light">AWS Service Reference Information now supports SDK Operation to Action mapping – Besides the serverless news, this is the biggest announcement of the week in my opinion.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-18">
-                <a href="https://www.hashicorp.com/blog/3-strategies-that-reduce-security-friction-in-developer-workflows" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] 3 strategies that reduce security friction in developer workflows
-                </a>
-                <p class="mb-1 small text-light">When checks happen in the IDE or pre-commit hooks, developers can detect and remediate exposed secrets the moment they’re introduced, without waiting for a CI/CD gate or security review. As AI and automation continue to accelerate development, security must evolve with equal speed and proximity.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-18">
-                <a href="https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Ingress NGINX Retirement: What You Need to Know
-                </a>
-                <p class="mb-1 small text-light">(Gateway API is a newer way to achieve many of the same goals. It became very popular due to its tremendous flexibility, breadth of features, and independence from any particular cloud or infrastructure provider.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-18">
-                <a href="https://blog.cloudflare.com/replicate-joins-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Replicate is joining Cloudflare
-                </a>
-                <p class="mb-1 small text-light">We have some big news to share today: Replicate, the leading platform for running AI models, is joining Cloudflare. Our mission for Cloudflare’s Workers developer platform has been to make building and deploying full-stack applications as easy as possible.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-18">
-                <a href="https://blog.cloudflare.com/python-workflows/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] A closer look at Python Workflows, now in beta
-                </a>
-                <p class="mb-1 small text-light">Developers can already use Cloudflare Workflows to build long-running, multi-step applications on Workers. Pyodide provides a foreign function interface (FFI) to JavaScript which allows for calling into JavaScript methods from Python.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-18">
-                <a href="https://blog.cloudflare.com/diy-byoip/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] DIY BYOIP: a new way to Bring Your Own IP prefixes to Cloudflare
-                </a>
-                <p class="mb-1 small text-light">We have automated this process using the gold standard for routing security — the Resource Public Key Infrastructure, RPKI. Let’s say a customer has authority over a range of IP addresses, and they’d like to bring them to Cloudflare.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-18">
-                <a href="https://slack.engineering/speedup-e2e-testing/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Optimizing Our E2E Pipeline
-                </a>
-                <p class="mb-1 small text-light">This is critical for ensuring that changes are validated across the entire stack for the Slack application: frontend, backend, database, and the handful of services in between. Deployment: The build is deployed to a QA environment.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-11-18">
-                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dash uses context engineering for smarter AI
-                </a>
-                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-11-18">
-                <a href="https://dropbox.tech/machine-learning/practical-blueprint-evaluating-conversational-ai-at-scale-dash" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] A practical blueprint for evaluating conversational AI at scale
-                </a>
-                <p class="mb-1 small text-light">It brought structure to our workflows by helping us manage datasets, scorers, experiments, automation, tracing, and monitoring. At its core, the platform gave us four key capabilities.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-18">
-                <a href="https://www.reddit.com/r/devops/comments/1ozndrw/apple_containers_vs_docker_desktop_vs_orbstack/" target="_blank" class="fw-bold text-decoration-none">
-                    Apple Containers vs Docker Desktop vs OrbStack (Updated benchmark)
-                </a>
-                <p class="mb-1 small text-light">So I ran a new round of tests. This time I measured CPU, memory, and startup time across Apple’s container system, Docker Desktop, and OrbStack on both native arm64 images and non native amd64 images.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-18">
-                <a href="https://netflixtechblog.medium.com/unlocking-entertainment-intelligence-with-knowledge-graph-da4b22090141?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Unlocking Entertainment Intelligence with Knowledge Graph
-                </a>
-                <p class="mb-1 small text-light">Rich semantic connectivity allows us to rapidly derive insights without cumbersome joins or manual lookups. This significantly reduces the overhead and complexity typically associated with onboarding new datasets.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-18">
-                <a href="https://www.docker.com/blog/ai-productivity-divide-developers-5x-faster/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Investigating the Great AI Productivity Divide: Why Are Some Developers 5x Faster?
-                </a>
-                <p class="mb-1 small text-light">As a software engineer, producing code is a significant part of my role. Other AI tool categories cover areas like testing, documentation, debugging, and DevOps/deployment practices.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-18">
-                <a href="https://www.redhat.com/en/blog/red-hat-enterprise-linux-delivers-deterministic-performance-industrial-tsn" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat Enterprise Linux delivers deterministic performance for time-sensitive networking
-                </a>
-                <p class="mb-1 small text-light">The industrial world runs on timing and consistency. Whether you're managing complex motion control or critical process loops, network communication must be reliable and predictable.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-18">
                 <a href="https://www.cncf.io/announcements/2025/11/11/cncf-and-slashdata-report-finds-leading-ai-tools-gaining-adoption-in-cloud-native-ecosystems/" target="_blank" class="fw-bold text-decoration-none">
                     [CNCF] CNCF and SlashData Report Finds Leading AI Tools Gaining Adoption in Cloud Native Ecosystems
@@ -400,7 +141,7 @@
                 <p class="mb-1 small text-light">“What this new research affirms is that cloud native principles from scalable infrastructure and orchestration are foundational not just for backend apps, but for inference pipelines and agentic AI systems.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2025-11-18
                     
                 </small>
             </li>
@@ -412,7 +153,283 @@
                 <p class="mb-1 small text-light">For years, security and platform teams have worked to “shift left,” but the tools available have been incomplete. The Solution to Remediation at Scale: AI-Powered Fixes with Pulumi Neo Visibility creates a new problem: an overwhelming backlog.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-18">
+                <a href="https://www.reddit.com/r/devops/comments/1ozndrw/apple_containers_vs_docker_desktop_vs_orbstack/" target="_blank" class="fw-bold text-decoration-none">
+                    Apple Containers vs Docker Desktop vs OrbStack (Updated benchmark)
+                </a>
+                <p class="mb-1 small text-light">So I ran a new round of tests. This time I measured CPU, memory, and startup time across Apple’s container system, Docker Desktop, and OrbStack on both native arm64 images and non native amd64 images.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-18">
+                <a href="https://netflixtechblog.medium.com/unlocking-entertainment-intelligence-with-knowledge-graph-da4b22090141?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Unlocking Entertainment Intelligence with Knowledge Graph
+                </a>
+                <p class="mb-1 small text-light">Rich semantic connectivity allows us to rapidly derive insights without cumbersome joins or manual lookups. This significantly reduces the overhead and complexity typically associated with onboarding new datasets.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-18">
+                <a href="https://www.docker.com/blog/ai-productivity-divide-developers-5x-faster/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Investigating the Great AI Productivity Divide: Why Are Some Developers 5x Faster?
+                </a>
+                <p class="mb-1 small text-light">As a software engineer, producing code is a significant part of my role. Other AI tool categories cover areas like testing, documentation, debugging, and DevOps/deployment practices.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-18">
+                <a href="https://www.redhat.com/en/blog/red-hat-enterprise-linux-delivers-deterministic-performance-industrial-tsn" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat Enterprise Linux delivers deterministic performance for time-sensitive networking
+                </a>
+                <p class="mb-1 small text-light">The industrial world runs on timing and consistency. Whether you're managing complex motion control or critical process loops, network communication must be reliable and predictable.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-18">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-load-balancers-amazon-dcv-amazon-linux-2023-and-more-november-17-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: AWS Lambda, load balancers, Amazon DCV, Amazon Linux 2023, and more (November 17, 2025)
+                </a>
+                <p class="mb-1 small text-light">AWS Service Reference Information now supports SDK Operation to Action mapping – Besides the serverless news, this is the biggest announcement of the week in my opinion.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-18">
+                <a href="https://www.hashicorp.com/blog/3-strategies-that-reduce-security-friction-in-developer-workflows" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] 3 strategies that reduce security friction in developer workflows
+                </a>
+                <p class="mb-1 small text-light">When checks happen in the IDE or pre-commit hooks, developers can detect and remediate exposed secrets the moment they’re introduced, without waiting for a CI/CD gate or security review. As AI and automation continue to accelerate development, security must evolve with equal speed and proximity.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-18">
+                <a href="https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Ingress NGINX Retirement: What You Need to Know
+                </a>
+                <p class="mb-1 small text-light">(Gateway API is a newer way to achieve many of the same goals. It became very popular due to its tremendous flexibility, breadth of features, and independence from any particular cloud or infrastructure provider.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-18">
+                <a href="https://blog.cloudflare.com/replicate-joins-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Replicate is joining Cloudflare
+                </a>
+                <p class="mb-1 small text-light">We have some big news to share today: Replicate, the leading platform for running AI models, is joining Cloudflare. Our mission for Cloudflare’s Workers developer platform has been to make building and deploying full-stack applications as easy as possible.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-18">
+                <a href="https://blog.cloudflare.com/python-workflows/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] A closer look at Python Workflows, now in beta
+                </a>
+                <p class="mb-1 small text-light">Developers can already use Cloudflare Workflows to build long-running, multi-step applications on Workers. Pyodide provides a foreign function interface (FFI) to JavaScript which allows for calling into JavaScript methods from Python.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-18">
+                <a href="https://blog.cloudflare.com/diy-byoip/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] DIY BYOIP: a new way to Bring Your Own IP prefixes to Cloudflare
+                </a>
+                <p class="mb-1 small text-light">We have automated this process using the gold standard for routing security — the Resource Public Key Infrastructure, RPKI. Let’s say a customer has authority over a range of IP addresses, and they’d like to bring them to Cloudflare.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-18">
+                <a href="https://slack.engineering/speedup-e2e-testing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Optimizing Our E2E Pipeline
+                </a>
+                <p class="mb-1 small text-light">This is critical for ensuring that changes are validated across the entire stack for the Slack application: frontend, backend, database, and the handful of services in between. Deployment: The build is deployed to a QA environment.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-11-18">
+                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dash uses context engineering for smarter AI
+                </a>
+                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-11-18">
+                <a href="https://dropbox.tech/machine-learning/practical-blueprint-evaluating-conversational-ai-at-scale-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] A practical blueprint for evaluating conversational AI at scale
+                </a>
+                <p class="mb-1 small text-light">It brought structure to our workflows by helping us manage datasets, scorers, experiments, automation, tracing, and monitoring. At its core, the platform gave us four key capabilities.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-18">
+                <a href="https://www.reddit.com/r/devops/comments/1p04qn1/centralising_compliance_across_clouds_is_it_worth/" target="_blank" class="fw-bold text-decoration-none">
+                    centralising compliance across clouds. Is it worth building our own pipeline?
+                </a>
+                <p class="mb-1 small text-light">maybe we should build our own internal compliance reporting pipeline instead of relying on native tools. we could pull logs from CloudTrail Azure Monitor GCP Logging, dump everything into a data lake or SIEM run standard queries / dashboards.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-18">
+                <a href="https://www.reddit.com/r/devops/comments/1ozjiz6/looking_for_examples_of_devopsrelated_llm/" target="_blank" class="fw-bold text-decoration-none">
+                    Looking for examples of DevOps-related LLM failures (building a small dataset)
+                </a>
+                <p class="mb-1 small text-light">I've been putting together a small devops -focused dataset - trying to collect cases where LLMs get things wrong in ops or infra tasks (terraform, docker, ci/cd configs, weird shell bugs, etc. It's surprisingly hard to find good "failure" data for devops automation.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-18">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1ozf5pf/tuning_linux_swap_for_kubernetes_a_deep_dive/" target="_blank" class="fw-bold text-decoration-none">
+                    Tuning Linux Swap for Kubernetes: A Deep Dive | Kubernetes
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/grouvi</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-18">
+                <a href="https://netflixtechblog.medium.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Integrating Netflix’s Foundation Model into Personalization applications
+                </a>
+                <p class="mb-1 small text-light">Overall, the subgraph approach allows for a deeper integration and enables the applications to harness the full power of the Foundation Model. A side benefit of this integration approach is that it provides a de facto baseline for new models/applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-18">
+                <a href="https://netflixtechblog.medium.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-2-building-a-scalable-storage-layer-ff4a8dbd3d1f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 2 — Building a Scalable Storage Layer
+                </a>
+                <p class="mb-1 small text-light">Workload complexityTraditional graph database solutions often present significant challenges when faced with the demands of Netflix’s high-volume, real-time data environment.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-18">
+                <a href="https://www.docker.com/blog/making-the-most-of-your-docker-hardened-images-trial-part-1/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Making the Most of Your Docker Hardened Images Trial – Part 1
+                </a>
+                <p class="mb-1 small text-light">First steps: Run your first secure, production-ready image Container base images form the foundation of your application security. Docker Hardened Images addresses this at the source.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-18">
+                <a href="https://about.gitlab.com/blog/gitlab-engineer-how-i-improved-my-onboarding-experience-with-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab engineer: How I improved my onboarding experience with AI
+                </a>
+                <p class="mb-1 small text-light">Starting a new job is exciting, and overwhelming. Iteration: The ability to try ideas faster and identify potential improvements, enables faster iteration.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-11-18">
+                <a href="https://blog.sentry.io/ai-code-review-30k-bugs-lighter-50-faster/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] AI Code Review: 30K Bugs Lighter, 50% faster
+                </a>
+                <p class="mb-1 small text-light">Last month, we launched AI Code Review, our developer tool that automatically catches bugs, finds performance issues, and helps you ship PRs faster. We ran evals & spot checks to ensure the performance improvements didn’t negatively impact the reviews.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-18">
+                <a href="https://snyk.io/blog/future-threat-modeling-ai-native-apps/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Secure by Design: The Future of Threat Modeling for AI-Native Applications
+                </a>
+                <p class="mb-1 small text-light">Explore how Snyk's Evo Threat Modeling Agent automates and contextualizes security for AI-native applications, addressing prompt injection, data exfiltration, data poisoning, and agentic vulnerabilities.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-11-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-18">
+                <a href="https://snyk.io/blog/agentic-ooda-loop/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The Agentic OODA Loop: How AI and Humans Learn to Defend Together
+                </a>
+                <p class="mb-1 small text-light">Discover how AI and human security engineers collaborate to defend against evolving threats at machine speed. Learn about the new mindset for adaptive, intelligent, and symbiotic defense in the age of Agentic AI.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-11-18
                     
                 </small>
             </li>

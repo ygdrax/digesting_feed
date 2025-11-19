@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - November 19, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - November 19, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for November 19, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-11-19">2025-11-19 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2025-11-19 08:06:57
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,282 +130,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-19">
-                <a href="https://www.reddit.com/r/devops/comments/1p10asi/feedback_antigravity_ide_for_devops_any_feedback/" target="_blank" class="fw-bold text-decoration-none">
-                    [Feedback] Antigravity IDE for DevOps: Any feedback on integrations & automation?
-                </a>
-                <p class="mb-1 small text-light">- Anyone tested Chrome extension/API or CI/CD integrations. - How's the support for Docker, containerized dev flows, pipelines.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-19">
-                <a href="https://www.reddit.com/r/devops/comments/1p0aa5g/a_few_weeks_back_dockerhub_was_done_along_with/" target="_blank" class="fw-bold text-decoration-none">
-                    a few weeks back dockerhub was done, along with abunch of others- now cloudflare
-                </a>
-                <p class="mb-1 small text-light">this sounds like a devops problem, but it could be IT physical problem as well- data center fails. as an up and coming devops, i would like to be ready for anything, and this is interesting to me.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-19">
-                <a href="https://www.reddit.com/r/devops/comments/1p0qgka/ai_and_cloud_service_perception_survey_for/" target="_blank" class="fw-bold text-decoration-none">
-                    Ai and Cloud service perception survey for University (Anonymous)
-                </a>
-                <p class="mb-1 small text-light">Hello! If any of you lovely people have a couple minutes spare could you please do my survey, its for a marketing campaign I'm making at University. Cheers! https://forms.gle/Gmr4hqbnvRq6LxQz9 submitted by /u/sayitwithchest</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-19">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1p09nye/cloudflare_down_again/" target="_blank" class="fw-bold text-decoration-none">
-                    Cloudflare down... again?
-                </a>
-                <p class="mb-1 small text-light">Seems so in the UK - can't even login to cloudflare lol edit - the login button now works and I can get to 2FA - but upon entering it takes me back to the login page. So still broke submitted by /u/moonski</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-19">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1p0li15/as_cto_im_pleased_to_announce_our_platform/" target="_blank" class="fw-bold text-decoration-none">
-                    As CTO, I’m pleased to announce our platform outperformed Cloudflare during the incident,....
-                </a>
-                <p class="mb-1 small text-light">....maintaining flawless availability across our primary production environment at http://localhost:3000, a testament to the robustness of our enterprise architecture. submitted by /u/HiddenBattery7453</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-19">
-                <a href="https://netflixtechblog.medium.com/heterogeneous-treatment-effects-at-netflix-da5c3dd58833?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Heterogeneous Treatment Effects at Netflix
-                </a>
-                <p class="mb-1 small text-light">We’ll share how our OCI platform enables rapid segmentation and exploration of HTEs. When we update them with new features or bug fixes, we want to ensure that every update works as expected.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-19">
-                <a href="https://www.docker.com/blog/docker-unsloth-build-custom-models-faster/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker + Unsloth: Build Custom Models, Faster
-                </a>
-                <p class="mb-1 small text-light">Docker Model Runner lets you spin them up instantly and run them as easily as containers, without worrying about dependency issues. Just like containers standardized application deployment, we’re now doing the same for AI.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-19">
-                <a href="https://www.redhat.com/en/blog/red-hat-performance-and-scale-engineering" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat Performance and Scale Engineering
-                </a>
-                <p class="mb-1 small text-light">Red Hat's most recent posts about Performance, Scale, Chaos and more. We also work to find any component bottlenecks by pushing VM live migration lim.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-19">
-                <a href="https://www.redhat.com/en/blog/openshift-virtualization-now-generally-available-azure-red-hat-openshift" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] OpenShift Virtualization now generally available on Azure Red Hat OpenShift
-                </a>
-                <p class="mb-1 small text-light">But for modern IT leaders, the real challenge isn't just migrating. They must also balance the need to maintain critical, existing VM-based applications with the pressure to embrace new technologies like cloud-native containers and, increasingly, AI.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-11-19">
-                <a href="https://engineering.atspotify.com/2025/11/shuffle-making-random-feel-more-human/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Shuffle: Making Random Feel More Human
-                </a>
-                <p class="mb-1 small text-light">Shuffle has always been one of Spotify’s most-used features, and also one of the most misunderstood. For... The post Shuffle: Making Random Feel More Human appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-19">
-                <a href="https://aws.amazon.com/blogs/aws/accelerate-large-scale-ai-applications-with-the-new-amazon-ec2-p6-b300-instances/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Accelerate large-scale AI applications with the new Amazon EC2 P6-B300 instances
-                </a>
-                <p class="mb-1 small text-light">Today, we’re announcing the general availability of Amazon Elastic Compute Cloud (Amazon EC2) P6-B300 instances, our next-generation GPU platform accelerated by NVIDIA Blackwell Ultra GPUs.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-19">
-                <a href="https://kubernetes.io/blog/2025/11/06/gateway-api-v1-4/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Gateway API 1.4: New Features
-                </a>
-                <p class="mb-1 small text-light">While this reduces the overhead of establishing new connections, it introduces a security risk in the context of API gateways. 1: Service mesh, GRPCRoute, and a whole lot more (May 2024) New Experimental Features in Gateway API v1.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-19">
-                <a href="https://www.cncf.io/blog/2025/11/18/top-5-hard-earned-lessons-from-the-experts-on-managing-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Top 5 hard-earned lessons from the experts on managing Kubernetes
-                </a>
-                <p class="mb-1 small text-light">Kubernetes has transformed how modern organizations deploy and operate scalable infrastructure, and the hype around automated cloud native orchestration has made its adoption nearly ubiquitous over the past 10+ years.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-19">
-                <a href="https://www.cncf.io/announcements/2025/11/12/helm-marks-10-years-with-release-of-version-4/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Helm Marks 10 Years With Release of Version 4
-                </a>
-                <p class="mb-1 small text-light">The target audience includes platform engineers, DevOps teams, Kubernetes administrators, open-source contributors, and enterprise users managing modern cloud-native infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-19">
-                <a href="https://www.cncf.io/announcements/2025/11/12/cncf-honors-innovators-and-defenders-with-2025-community-awards-at-kubecon-cloudnativecon-north-america/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] CNCF Honors Innovators and Defenders with 2025 Community Awards at KubeCon + CloudNativeCon North America
-                </a>
-                <p class="mb-1 small text-light">These awards celebrate those committed to shaping the cloud native ecosystem, acknowledging outstanding contributions in areas such as technical leadership, documentation, mentorship, and end-user implementation.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-19">
-                <a href="https://www.cncf.io/announcements/2025/11/11/cncf-and-slashdata-survey-finds-cloud-native-ecosystem-surges-to-15-6m-developers/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] CNCF and SlashData Survey Finds Cloud Native Ecosystem Surges to 15.6M Developers
-                </a>
-                <p class="mb-1 small text-light">“From platform engineering to AI, developers are incorporating cloud native technologies to meet reliability, scalability and operational needs.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-19">
-                <a href="https://blog.cloudflare.com/connecting-to-production-the-architecture-of-remote-bindings/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Connecting to production: the architecture of remote bindings
-                </a>
-                <p class="mb-1 small text-light">It enables one key unique feature: binding to remote resources while locally developing. The obvious solution was perhaps to use the Cloudflare API.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2025-11-19">
-                <a href="https://eng.lyft.com/lyftlearn-evolution-rethinking-ml-platform-architecture-547de6c950e1?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
-                    [Lyft Engineering] LyftLearn Evolution: Rethinking ML Platform Architecture
-                </a>
-                <p class="mb-1 small text-light">K8s Orchestration Service translated job requests into Kubernetes resources. Observability relied on our standard monitoring infrastructure, not on AWS CloudWatch.</p>
-                <small class="text-secondary">
-                    
-                    Lyft Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-19">
-                <a href="https://www.docker.com/blog/launch-chat-ui-agent-docker-vercel-ai-sdk/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Launch a Chat UI Agent with Docker and the Vercel AI SDK
-                </a>
-                <p class="mb-1 small text-light">js AI Chatbot template from Vercel, then containerize it using a battle-tested Dockerfile from demo repo. dockerfile: Dockerfile ports: - "3000:3000" environment: OPENAI_API_KEY: ${OPENAI_API_KEY} This ensures your API key is passed securely into the container.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-19">
-                <a href="https://www.redhat.com/en/blog/red-hat-ansible-certified-collection-amazonai-automate-ai-infrastructure" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Automation unleashed: Introducing the new Red Hat Certified Ansible Collection amazon.ai for generative AI
-                </a>
-                <p class="mb-1 small text-light">Generative AI demands infrastructure that’s not only powerful but repeatable, auditable, and scalable. ai, addresses this problem by bringing infrastructure-as-code principles to AI and operational monitoring.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-19">
-                <a href="https://snyk.io/blog/snyk-continue-partner-integration/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Snyk and Continue Partner to Embed AI-Powered Security into Every Step of the Developer Workflow
-                </a>
-                <p class="mb-1 small text-light">Snyk is excited to announce a new partnership with Continue, which will embed AI-powered security into every step of the SDLC. This partnership allows developers to scan code, dependencies, and IaC using natural language commands and get context-aware fix suggestions instantly, whether leveraging Agents in Continue Mission Control, an IDE extension, or a CLI.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-19">
-                <a href="https://snyk.io/blog/forrester-tei-snyk-roi/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Organizations Achieve 288% ROI with The Snyk AI Trust Platform, According to New Forrester TEI Study
-                </a>
-                <p class="mb-1 small text-light">Organizations achieve 288% ROI with the Snyk AI Trust Platform, according to a new Forrester TEI study. Improve developer productivity, enhance security, and consolidate AppSec tools with Snyk.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-19">
-                <a href="https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Efficient Optimization With Ax, an Open Platform for Adaptive Experimentation
-                </a>
-                <p class="mb-1 small text-light">Adaptive experimentation offers a solution to this problem by actively proposing new configurations for sequential evaluation, leveraging insights gained from previous evaluations This year, we released version 1.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-19">
                 <a href="https://aws.amazon.com/blogs/aws/new-amazon-bedrock-service-tiers-help-you-match-ai-workload-performance-with-cost/" target="_blank" class="fw-bold text-decoration-none">
                     [Amazon AWS] New Amazon Bedrock service tiers help you match AI workload performance with cost
@@ -396,7 +137,7 @@
                 <p class="mb-1 small text-light">Today, Amazon Bedrock introduces new service tiers that give you more control over your AI workload costs while maintaining the performance levels your applications need. The AWS Pricing Calculator helps you estimate costs for different service tiers by entering your expected workload for each tier.</p>
                 <small class="text-secondary">
                     
-                    Amazon AWS
+                    Amazon AWS | 2025-11-19
                     
                 </small>
             </li>
@@ -408,7 +149,283 @@
                 <p class="mb-1 small text-light">Kubernetes automation is entering a new era where infrastructure as code, policy enforcement, and AI-driven orchestration work together to manage cloud environments intelligently.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-19">
+                <a href="https://www.docker.com/blog/launch-chat-ui-agent-docker-vercel-ai-sdk/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Launch a Chat UI Agent with Docker and the Vercel AI SDK
+                </a>
+                <p class="mb-1 small text-light">js AI Chatbot template from Vercel, then containerize it using a battle-tested Dockerfile from demo repo. dockerfile: Dockerfile ports: - "3000:3000" environment: OPENAI_API_KEY: ${OPENAI_API_KEY} This ensures your API key is passed securely into the container.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-19">
+                <a href="https://www.redhat.com/en/blog/red-hat-ansible-certified-collection-amazonai-automate-ai-infrastructure" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Automation unleashed: Introducing the new Red Hat Certified Ansible Collection amazon.ai for generative AI
+                </a>
+                <p class="mb-1 small text-light">Generative AI demands infrastructure that’s not only powerful but repeatable, auditable, and scalable. ai, addresses this problem by bringing infrastructure-as-code principles to AI and operational monitoring.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-19">
+                <a href="https://snyk.io/blog/snyk-continue-partner-integration/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Snyk and Continue Partner to Embed AI-Powered Security into Every Step of the Developer Workflow
+                </a>
+                <p class="mb-1 small text-light">Snyk is excited to announce a new partnership with Continue, which will embed AI-powered security into every step of the SDLC. This partnership allows developers to scan code, dependencies, and IaC using natural language commands and get context-aware fix suggestions instantly, whether leveraging Agents in Continue Mission Control, an IDE extension, or a CLI.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-19">
+                <a href="https://snyk.io/blog/forrester-tei-snyk-roi/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Organizations Achieve 288% ROI with The Snyk AI Trust Platform, According to New Forrester TEI Study
+                </a>
+                <p class="mb-1 small text-light">Organizations achieve 288% ROI with the Snyk AI Trust Platform, according to a new Forrester TEI study. Improve developer productivity, enhance security, and consolidate AppSec tools with Snyk.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-19">
+                <a href="https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Efficient Optimization With Ax, an Open Platform for Adaptive Experimentation
+                </a>
+                <p class="mb-1 small text-light">Adaptive experimentation offers a solution to this problem by actively proposing new configurations for sequential evaluation, leveraging insights gained from previous evaluations This year, we released version 1.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-19">
+                <a href="https://aws.amazon.com/blogs/aws/accelerate-large-scale-ai-applications-with-the-new-amazon-ec2-p6-b300-instances/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Accelerate large-scale AI applications with the new Amazon EC2 P6-B300 instances
+                </a>
+                <p class="mb-1 small text-light">Today, we’re announcing the general availability of Amazon Elastic Compute Cloud (Amazon EC2) P6-B300 instances, our next-generation GPU platform accelerated by NVIDIA Blackwell Ultra GPUs.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-19">
+                <a href="https://kubernetes.io/blog/2025/11/06/gateway-api-v1-4/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Gateway API 1.4: New Features
+                </a>
+                <p class="mb-1 small text-light">While this reduces the overhead of establishing new connections, it introduces a security risk in the context of API gateways. 1: Service mesh, GRPCRoute, and a whole lot more (May 2024) New Experimental Features in Gateway API v1.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-19">
+                <a href="https://www.cncf.io/blog/2025/11/18/top-5-hard-earned-lessons-from-the-experts-on-managing-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Top 5 hard-earned lessons from the experts on managing Kubernetes
+                </a>
+                <p class="mb-1 small text-light">Kubernetes has transformed how modern organizations deploy and operate scalable infrastructure, and the hype around automated cloud native orchestration has made its adoption nearly ubiquitous over the past 10+ years.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-19">
+                <a href="https://www.cncf.io/announcements/2025/11/12/helm-marks-10-years-with-release-of-version-4/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Helm Marks 10 Years With Release of Version 4
+                </a>
+                <p class="mb-1 small text-light">The target audience includes platform engineers, DevOps teams, Kubernetes administrators, open-source contributors, and enterprise users managing modern cloud-native infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-19">
+                <a href="https://www.cncf.io/announcements/2025/11/12/cncf-honors-innovators-and-defenders-with-2025-community-awards-at-kubecon-cloudnativecon-north-america/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] CNCF Honors Innovators and Defenders with 2025 Community Awards at KubeCon + CloudNativeCon North America
+                </a>
+                <p class="mb-1 small text-light">These awards celebrate those committed to shaping the cloud native ecosystem, acknowledging outstanding contributions in areas such as technical leadership, documentation, mentorship, and end-user implementation.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-19">
+                <a href="https://www.cncf.io/announcements/2025/11/11/cncf-and-slashdata-survey-finds-cloud-native-ecosystem-surges-to-15-6m-developers/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] CNCF and SlashData Survey Finds Cloud Native Ecosystem Surges to 15.6M Developers
+                </a>
+                <p class="mb-1 small text-light">“From platform engineering to AI, developers are incorporating cloud native technologies to meet reliability, scalability and operational needs.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-19">
+                <a href="https://blog.cloudflare.com/connecting-to-production-the-architecture-of-remote-bindings/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Connecting to production: the architecture of remote bindings
+                </a>
+                <p class="mb-1 small text-light">It enables one key unique feature: binding to remote resources while locally developing. The obvious solution was perhaps to use the Cloudflare API.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2025-11-19">
+                <a href="https://eng.lyft.com/lyftlearn-evolution-rethinking-ml-platform-architecture-547de6c950e1?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
+                    [Lyft Engineering] LyftLearn Evolution: Rethinking ML Platform Architecture
+                </a>
+                <p class="mb-1 small text-light">K8s Orchestration Service translated job requests into Kubernetes resources. Observability relied on our standard monitoring infrastructure, not on AWS CloudWatch.</p>
+                <small class="text-secondary">
+                    
+                    Lyft Engineering | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-19">
+                <a href="https://www.reddit.com/r/devops/comments/1p10asi/feedback_antigravity_ide_for_devops_any_feedback/" target="_blank" class="fw-bold text-decoration-none">
+                    [Feedback] Antigravity IDE for DevOps: Any feedback on integrations & automation?
+                </a>
+                <p class="mb-1 small text-light">- Anyone tested Chrome extension/API or CI/CD integrations. - How's the support for Docker, containerized dev flows, pipelines.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-19">
+                <a href="https://www.reddit.com/r/devops/comments/1p0aa5g/a_few_weeks_back_dockerhub_was_done_along_with/" target="_blank" class="fw-bold text-decoration-none">
+                    a few weeks back dockerhub was done, along with abunch of others- now cloudflare
+                </a>
+                <p class="mb-1 small text-light">this sounds like a devops problem, but it could be IT physical problem as well- data center fails. as an up and coming devops, i would like to be ready for anything, and this is interesting to me.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-19">
+                <a href="https://www.reddit.com/r/devops/comments/1p0qgka/ai_and_cloud_service_perception_survey_for/" target="_blank" class="fw-bold text-decoration-none">
+                    Ai and Cloud service perception survey for University (Anonymous)
+                </a>
+                <p class="mb-1 small text-light">Hello! If any of you lovely people have a couple minutes spare could you please do my survey, its for a marketing campaign I'm making at University. Cheers! https://forms.gle/Gmr4hqbnvRq6LxQz9 submitted by /u/sayitwithchest</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-19">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1p09nye/cloudflare_down_again/" target="_blank" class="fw-bold text-decoration-none">
+                    Cloudflare down... again?
+                </a>
+                <p class="mb-1 small text-light">Seems so in the UK - can't even login to cloudflare lol edit - the login button now works and I can get to 2FA - but upon entering it takes me back to the login page. So still broke submitted by /u/moonski</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-19">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1p0li15/as_cto_im_pleased_to_announce_our_platform/" target="_blank" class="fw-bold text-decoration-none">
+                    As CTO, I’m pleased to announce our platform outperformed Cloudflare during the incident,....
+                </a>
+                <p class="mb-1 small text-light">....maintaining flawless availability across our primary production environment at http://localhost:3000, a testament to the robustness of our enterprise architecture. submitted by /u/HiddenBattery7453</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-19">
+                <a href="https://netflixtechblog.medium.com/heterogeneous-treatment-effects-at-netflix-da5c3dd58833?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Heterogeneous Treatment Effects at Netflix
+                </a>
+                <p class="mb-1 small text-light">We’ll share how our OCI platform enables rapid segmentation and exploration of HTEs. When we update them with new features or bug fixes, we want to ensure that every update works as expected.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-19">
+                <a href="https://www.docker.com/blog/docker-unsloth-build-custom-models-faster/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker + Unsloth: Build Custom Models, Faster
+                </a>
+                <p class="mb-1 small text-light">Docker Model Runner lets you spin them up instantly and run them as easily as containers, without worrying about dependency issues. Just like containers standardized application deployment, we’re now doing the same for AI.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-19">
+                <a href="https://www.redhat.com/en/blog/red-hat-performance-and-scale-engineering" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat Performance and Scale Engineering
+                </a>
+                <p class="mb-1 small text-light">Red Hat's most recent posts about Performance, Scale, Chaos and more. We also work to find any component bottlenecks by pushing VM live migration lim.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-19">
+                <a href="https://www.redhat.com/en/blog/openshift-virtualization-now-generally-available-azure-red-hat-openshift" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] OpenShift Virtualization now generally available on Azure Red Hat OpenShift
+                </a>
+                <p class="mb-1 small text-light">But for modern IT leaders, the real challenge isn't just migrating. They must also balance the need to maintain critical, existing VM-based applications with the pressure to embrace new technologies like cloud-native containers and, increasingly, AI.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-11-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-11-19">
+                <a href="https://engineering.atspotify.com/2025/11/shuffle-making-random-feel-more-human/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Shuffle: Making Random Feel More Human
+                </a>
+                <p class="mb-1 small text-light">Shuffle has always been one of Spotify’s most-used features, and also one of the most misunderstood. For... The post Shuffle: Making Random Feel More Human appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-11-19
                     
                 </small>
             </li>

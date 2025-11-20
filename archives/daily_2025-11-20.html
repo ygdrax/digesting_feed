@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - November 20, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - November 20, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for November 20, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-11-20">2025-11-20 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2025-11-20 08:06:59
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,282 +128,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-20">
-                <a href="https://www.reddit.com/r/devops/comments/1p1uh6c/qa_tests_blocking_our_cicd_pipeline_45min_per_run/" target="_blank" class="fw-bold text-decoration-none">
-                    QA tests blocking our CI/CD pipeline 45min per run, how do you handle this bottleneck?
-                </a>
-                <p class="mb-1 small text-light">We've got about 800 automated tests in the pipeline and they're killing our deployment velocity. We need tests that run fast, don't randomly fail, and catch real issues.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-20">
-                <a href="https://www.reddit.com/r/devops/comments/1p15v9t/anyone_else_struggling_because_dev_devops_and/" target="_blank" class="fw-bold text-decoration-none">
-                    Anyone else struggling because dev, devops and security never see the same context
-                </a>
-                <p class="mb-1 small text-light">DevOps ends up maintaining integrations for every scanner/security tool under the sun, each with its own policies and YAML changes. Security gets flooded with findings that rarely map cleanly back to an owner, a commit, or a service.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-20">
-                <a href="https://www.reddit.com/r/devops/comments/1p1wruf/whats_the_biggest_bottleneck_in_your_cicd/" target="_blank" class="fw-bold text-decoration-none">
-                    what’s the biggest bottleneck in your CI/CD pipeline today?
-                </a>
-                <p class="mb-1 small text-light">ours used to be flaky test environments. wondering what slows other teams down. submitted by /u/Futurismtechnologies</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-20">
-                <a href="https://www.reddit.com/r/devops/comments/1p1fiw9/is_maintaining_a_vpc_rented_servers_really_that/" target="_blank" class="fw-bold text-decoration-none">
-                    Is maintaining a VPC/ rented servers really that much more effort than what the cloud providers offer?
-                </a>
-                <p class="mb-1 small text-light">AWS: I want to just pay someone else to deal with the operational headaches, that’s the big appeal. And honestly, the complexity feels like overkill for a small-scale product that won’t need half the stuff AWS provides.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-20">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1p1jvsb/yesterdays_cloudflare_outage_exposed_a_huge_blind/" target="_blank" class="fw-bold text-decoration-none">
-                    Yesterday’s Cloudflare outage exposed a huge blind spot in our monitoring stack
-                </a>
-                <p class="mb-1 small text-light">It turned out to be Cloudflare’s Bot Management bug (feature file doubled in size, exceeded their own limits). The bigger issue: none of our monitoring products can reliably distinguish between an origin failure and an edge/CDN failure.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-20">
-                <a href="https://aka.ms/AAyjgcy" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Infinite scale: The architecture behind the Azure AI superfactory
-                </a>
-                <p class="mb-1 small text-light">Scott Guthrie is responsible for hyperscale cloud computing solutions and services including Azure, Microsoft’s cloud computing platform, generative AI solutions, data platforms and information and cybersecurity.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-20">
-                <a href="https://azure.microsoft.com/en-us/blog/driving-roi-with-azure-ai-foundry-and-uipath-intelligent-agents-in-real-world-healthcare-workflows/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Driving ROI with Azure AI Foundry and UiPath: Intelligent agents in real-world healthcare workflows
-                </a>
-                <p class="mb-1 small text-light">At Microsoft, we are partnering with UiPath—a preferred enterprise agentic automation platform on Azure—to empower customers with integrated solutions that combine automation and AI at scale.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-20">
-                <a href="https://azure.microsoft.com/en-us/blog/microsoft-strengthens-sovereign-cloud-capabilities-with-new-services/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft strengthens sovereign cloud capabilities with new services
-                </a>
-                <p class="mb-1 small text-light">This new specialization empowers partners to demonstrate deep expertise in delivering secure, compliant, and sovereign cloud solutions across Azure and Microsoft 365 platforms. The post Microsoft strengthens sovereign cloud capabilities with new services appeared first on Microsoft Azure Blog.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-20">
-                <a href="https://www.docker.com/blog/top-mcp-servers-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] 6 Must-Have MCP Servers (and How to Use Them)
-                </a>
-                <p class="mb-1 small text-light">How it’s used with Docker: While Obsidian itself is a desktop app, install the community plugin that enables the local REST API. It provides the essential isolation, configuration, and security to experiment and build with confidence, knowing you’re protected from the various real threats.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-20">
-                <a href="https://www.redhat.com/en/blog/forging-open-path" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Forging the open path: How Red Hat engineering is adopting AI and what it means for open source
-                </a>
-                <p class="mb-1 small text-light">We believe it's important to share what we're doing, what we're learning, and how we see this shaping the future of open source collaboration. To be clear, this isn't a publicity piece about a single, perfect tool or an instant success.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-20">
-                <a href="https://www.hashicorp.com/blog/how-to-reduce-cloud-waste-it-boils-down-to-3-steps" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] How to reduce cloud waste: It boils down to 3 steps
-                </a>
-                <p class="mb-1 small text-light">For example, Gartner’s forecast has worldwide end-user spending on public cloud services catapulting to $723. The more significant issue with many applications is that a simple “lift and shift” can cost dearly when migrated from on-premises resources to the cloud.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-20">
-                <a href="https://www.hashicorp.com/blog/spiffe-securing-the-identity-of-agentic-ai-and-non-human-actors" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] SPIFFE: Securing the identity of agentic AI and non-human actors
-                </a>
-                <p class="mb-1 small text-light">Originally developed to help microservices authenticate securely in cloud-native environments, SPIFFE provides a way to issue and validate cryptographically verifiable identities without relying on long-lived secrets like passwords or API keys.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-20">
-                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
-                </a>
-                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-20">
-                <a href="https://kubernetes.io/blog/2025/10/20/seven-kubernetes-pitfalls-and-how-to-avoid/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] 7 Common Kubernetes Pitfalls (and How I Learned to Avoid Them)
-                </a>
-                <p class="mb-1 small text-light">This tends to happen because Kubernetes will consider a container “running” as long as the process inside hasn’t exited. Look into Pod Security Admission (or other solutions like Kyverno) to enforce non-root containers, read-only filesystems, etc.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-20">
-                <a href="https://kubernetes.io/blog/2025/10/18/wg-policy-spotlight-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Spotlight on Policy Working Group
-                </a>
-                <p class="mb-1 small text-light">Jim Bugwadia: My name is Jim Bugwadia, and I am a co-founder and the CEO at Nirmata which provides solutions that automate security and compliance for cloud-native workloads. This is intended to help organizations meet important security standards in their Kubernetes environments.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-20">
-                <a href="https://www.cncf.io/blog/2025/11/19/what-is-platform-engineering/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] What is platform engineering?
-                </a>
-                <p class="mb-1 small text-light">These tools can include IDEs, CLIs, project templates, code versioning, CI/CD pipelines, container orchestration tools, configuration management tools, and observability systems.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-20">
-                <a href="https://blog.cloudflare.com/18-november-2025-outage/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Cloudflare outage on November 18, 2025
-                </a>
-                <p class="mb-1 small text-light">The following services were impacted:Service / ProductImpact descriptionCore CDN and security servicesHTTP 5xx status codes. Again, the limit exists because for performance reasons we preallocate memory for the features.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-20">
-                <a href="https://about.gitlab.com/blog/secure-ai-agent-deployment-to-gke/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Secure AI agent deployment to GKE
-                </a>
-                <p class="mb-1 small text-light">GKE provides enterprise-grade orchestration that connects seamlessly with GitLab CI/CD pipelines through OIDC authentication. Test - GitLab Auto DevOps provides built-in security scans to ensure there are no vulnerabilities.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-20">
-                <a href="https://about.gitlab.com/blog/migrate-from-pipeline-variables-to-pipeline-inputs-for-better-security/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Migrate from pipeline variables to pipeline inputs for better security
-                </a>
-                <p class="mb-1 small text-light">However, as CI/CD security best practices have evolved, we've recognized the need for stronger controls around pipeline customization.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-20">
-                <a href="https://snyk.io/blog/securing-low-code-agentic-ai-mcp-guardrails/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Beyond Automation: Securing Low-Code Agentic AI with MCP Guardrails
-                </a>
-                <p class="mb-1 small text-light">Explore how Model Context Protocol (MCP) servers and integrated security scanning workflows are redefining guardrails for low-code/no-code (LCNC) and AI-driven development environments.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-20">
-                <a href="https://www.hashicorp.com/blog/building-resilient-infrastructure-in-regulated-environments-7-lessons-from-ig-group" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Building resilient infrastructure in regulated environments: 7 Lessons from IG Group’s journey
-                </a>
-                <p class="mb-1 small text-light">This allowed the security team to maintain visibility and consistency across all applications while improving scalability and governance. “The self-service question is always a challenge: How do you balance security with developer flexibility.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-20">
-                <a href="https://blog.cloudflare.com/finding-the-grain-of-sand-in-a-heap-of-salt/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Finding the grain of sand in a heap of Salt
-                </a>
-                <p class="mb-1 small text-light">This system is able to correlate failures with git commits, external service failures and ad hoc releases. And because broken versions are continuously overtaken by newer versions, we need to stop deployments altogether.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-20">
-                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
-                </a>
-                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-20">
                 <a href="https://netflixtechblog.medium.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
                     [Netflix] Mount Mayhem at Netflix: Scaling Containers on Modern CPUs
@@ -394,7 +135,7 @@
                 <p class="mb-1 small text-light">The ProblemWhen application demand requires that we scale up our servers, we get a new instance from AWS. We trust these insights will assist others in navigating the evolving container ecosystem, transforming potential challenges into opportunities for building robust, high-performance platforms.</p>
                 <small class="text-secondary">
                     
-                    Netflix
+                    Netflix | 2025-11-20
                     
                 </small>
             </li>
@@ -406,7 +147,283 @@
                 <p class="mb-1 small text-light">Whether it was a financial risk engine, a crypto trading service, or an AI inference model, it was containerized. The MCP Gateway enables containerised AI-tool orchestration with isolation, unified control, and observability, extending this same container-secure foundation into the AI era.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-20">
+                <a href="https://www.hashicorp.com/blog/building-resilient-infrastructure-in-regulated-environments-7-lessons-from-ig-group" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Building resilient infrastructure in regulated environments: 7 Lessons from IG Group’s journey
+                </a>
+                <p class="mb-1 small text-light">This allowed the security team to maintain visibility and consistency across all applications while improving scalability and governance. “The self-service question is always a challenge: How do you balance security with developer flexibility.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-20">
+                <a href="https://blog.cloudflare.com/finding-the-grain-of-sand-in-a-heap-of-salt/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Finding the grain of sand in a heap of Salt
+                </a>
+                <p class="mb-1 small text-light">This system is able to correlate failures with git commits, external service failures and ad hoc releases. And because broken versions are continuously overtaken by newer versions, we need to stop deployments altogether.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-20">
+                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
+                </a>
+                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-20">
+                <a href="https://about.gitlab.com/blog/secure-ai-agent-deployment-to-gke/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Secure AI agent deployment to GKE
+                </a>
+                <p class="mb-1 small text-light">GKE provides enterprise-grade orchestration that connects seamlessly with GitLab CI/CD pipelines through OIDC authentication. Test - GitLab Auto DevOps provides built-in security scans to ensure there are no vulnerabilities.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-20">
+                <a href="https://about.gitlab.com/blog/migrate-from-pipeline-variables-to-pipeline-inputs-for-better-security/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Migrate from pipeline variables to pipeline inputs for better security
+                </a>
+                <p class="mb-1 small text-light">However, as CI/CD security best practices have evolved, we've recognized the need for stronger controls around pipeline customization.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-20">
+                <a href="https://snyk.io/blog/securing-low-code-agentic-ai-mcp-guardrails/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Beyond Automation: Securing Low-Code Agentic AI with MCP Guardrails
+                </a>
+                <p class="mb-1 small text-light">Explore how Model Context Protocol (MCP) servers and integrated security scanning workflows are redefining guardrails for low-code/no-code (LCNC) and AI-driven development environments.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-20">
+                <a href="https://www.hashicorp.com/blog/how-to-reduce-cloud-waste-it-boils-down-to-3-steps" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] How to reduce cloud waste: It boils down to 3 steps
+                </a>
+                <p class="mb-1 small text-light">For example, Gartner’s forecast has worldwide end-user spending on public cloud services catapulting to $723. The more significant issue with many applications is that a simple “lift and shift” can cost dearly when migrated from on-premises resources to the cloud.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-20">
+                <a href="https://www.hashicorp.com/blog/spiffe-securing-the-identity-of-agentic-ai-and-non-human-actors" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] SPIFFE: Securing the identity of agentic AI and non-human actors
+                </a>
+                <p class="mb-1 small text-light">Originally developed to help microservices authenticate securely in cloud-native environments, SPIFFE provides a way to issue and validate cryptographically verifiable identities without relying on long-lived secrets like passwords or API keys.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-20">
+                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
+                </a>
+                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-20">
+                <a href="https://kubernetes.io/blog/2025/10/20/seven-kubernetes-pitfalls-and-how-to-avoid/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] 7 Common Kubernetes Pitfalls (and How I Learned to Avoid Them)
+                </a>
+                <p class="mb-1 small text-light">This tends to happen because Kubernetes will consider a container “running” as long as the process inside hasn’t exited. Look into Pod Security Admission (or other solutions like Kyverno) to enforce non-root containers, read-only filesystems, etc.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-20">
+                <a href="https://kubernetes.io/blog/2025/10/18/wg-policy-spotlight-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on Policy Working Group
+                </a>
+                <p class="mb-1 small text-light">Jim Bugwadia: My name is Jim Bugwadia, and I am a co-founder and the CEO at Nirmata which provides solutions that automate security and compliance for cloud-native workloads. This is intended to help organizations meet important security standards in their Kubernetes environments.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-20">
+                <a href="https://www.cncf.io/blog/2025/11/19/what-is-platform-engineering/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] What is platform engineering?
+                </a>
+                <p class="mb-1 small text-light">These tools can include IDEs, CLIs, project templates, code versioning, CI/CD pipelines, container orchestration tools, configuration management tools, and observability systems.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-20">
+                <a href="https://blog.cloudflare.com/18-november-2025-outage/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cloudflare outage on November 18, 2025
+                </a>
+                <p class="mb-1 small text-light">The following services were impacted:Service / ProductImpact descriptionCore CDN and security servicesHTTP 5xx status codes. Again, the limit exists because for performance reasons we preallocate memory for the features.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-20">
+                <a href="https://www.reddit.com/r/devops/comments/1p1uh6c/qa_tests_blocking_our_cicd_pipeline_45min_per_run/" target="_blank" class="fw-bold text-decoration-none">
+                    QA tests blocking our CI/CD pipeline 45min per run, how do you handle this bottleneck?
+                </a>
+                <p class="mb-1 small text-light">We've got about 800 automated tests in the pipeline and they're killing our deployment velocity. We need tests that run fast, don't randomly fail, and catch real issues.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-20">
+                <a href="https://www.reddit.com/r/devops/comments/1p15v9t/anyone_else_struggling_because_dev_devops_and/" target="_blank" class="fw-bold text-decoration-none">
+                    Anyone else struggling because dev, devops and security never see the same context
+                </a>
+                <p class="mb-1 small text-light">DevOps ends up maintaining integrations for every scanner/security tool under the sun, each with its own policies and YAML changes. Security gets flooded with findings that rarely map cleanly back to an owner, a commit, or a service.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-20">
+                <a href="https://www.reddit.com/r/devops/comments/1p1wruf/whats_the_biggest_bottleneck_in_your_cicd/" target="_blank" class="fw-bold text-decoration-none">
+                    what’s the biggest bottleneck in your CI/CD pipeline today?
+                </a>
+                <p class="mb-1 small text-light">ours used to be flaky test environments. wondering what slows other teams down. submitted by /u/Futurismtechnologies</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-20">
+                <a href="https://www.reddit.com/r/devops/comments/1p1fiw9/is_maintaining_a_vpc_rented_servers_really_that/" target="_blank" class="fw-bold text-decoration-none">
+                    Is maintaining a VPC/ rented servers really that much more effort than what the cloud providers offer?
+                </a>
+                <p class="mb-1 small text-light">AWS: I want to just pay someone else to deal with the operational headaches, that’s the big appeal. And honestly, the complexity feels like overkill for a small-scale product that won’t need half the stuff AWS provides.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-20">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1p1jvsb/yesterdays_cloudflare_outage_exposed_a_huge_blind/" target="_blank" class="fw-bold text-decoration-none">
+                    Yesterday’s Cloudflare outage exposed a huge blind spot in our monitoring stack
+                </a>
+                <p class="mb-1 small text-light">It turned out to be Cloudflare’s Bot Management bug (feature file doubled in size, exceeded their own limits). The bigger issue: none of our monitoring products can reliably distinguish between an origin failure and an edge/CDN failure.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-20">
+                <a href="https://aka.ms/AAyjgcy" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Infinite scale: The architecture behind the Azure AI superfactory
+                </a>
+                <p class="mb-1 small text-light">Scott Guthrie is responsible for hyperscale cloud computing solutions and services including Azure, Microsoft’s cloud computing platform, generative AI solutions, data platforms and information and cybersecurity.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-20">
+                <a href="https://azure.microsoft.com/en-us/blog/driving-roi-with-azure-ai-foundry-and-uipath-intelligent-agents-in-real-world-healthcare-workflows/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Driving ROI with Azure AI Foundry and UiPath: Intelligent agents in real-world healthcare workflows
+                </a>
+                <p class="mb-1 small text-light">At Microsoft, we are partnering with UiPath—a preferred enterprise agentic automation platform on Azure—to empower customers with integrated solutions that combine automation and AI at scale.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-11-20">
+                <a href="https://azure.microsoft.com/en-us/blog/microsoft-strengthens-sovereign-cloud-capabilities-with-new-services/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft strengthens sovereign cloud capabilities with new services
+                </a>
+                <p class="mb-1 small text-light">This new specialization empowers partners to demonstrate deep expertise in delivering secure, compliant, and sovereign cloud solutions across Azure and Microsoft 365 platforms. The post Microsoft strengthens sovereign cloud capabilities with new services appeared first on Microsoft Azure Blog.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-20">
+                <a href="https://www.docker.com/blog/top-mcp-servers-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] 6 Must-Have MCP Servers (and How to Use Them)
+                </a>
+                <p class="mb-1 small text-light">How it’s used with Docker: While Obsidian itself is a desktop app, install the community plugin that enables the local REST API. It provides the essential isolation, configuration, and security to experiment and build with confidence, knowing you’re protected from the various real threats.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-20">
+                <a href="https://www.redhat.com/en/blog/forging-open-path" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Forging the open path: How Red Hat engineering is adopting AI and what it means for open source
+                </a>
+                <p class="mb-1 small text-light">We believe it's important to share what we're doing, what we're learning, and how we see this shaping the future of open source collaboration. To be clear, this isn't a publicity piece about a single, perfect tool or an instant success.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-11-20
                     
                 </small>
             </li>

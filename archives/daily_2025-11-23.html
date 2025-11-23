@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - November 23, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - November 23, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for November 23, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-11-23">2025-11-23 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2025-11-23 08:06:17
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,282 +130,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-23">
-                <a href="https://arxiv.org/abs/2509.01063" target="_blank" class="fw-bold text-decoration-none">
-                    An Economy of AI Agents
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://arxiv.org/abs/2509.01063 Comments URL: https://news.ycombinator.com/item?id=46020096 Points: 55 # Comments: 26</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-23">
-                <a href="https://forty.news" target="_blank" class="fw-bold text-decoration-none">
-                    Show HN: Forty.News – Daily news, but on a 40-year delay
-                </a>
-                <p class="mb-1 small text-light">Generation: Uses those extracted facts as the ground truth to write new headlines and story summaries. js (Caskada for the LLM pipeline orchestration), Gemini for OCR/Scoring.</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-23">
-                <a href="https://www.reddit.com/r/devops/comments/1p42s0p/cloud_build_trigger_error_failed_to_trigger_build/" target="_blank" class="fw-bold text-decoration-none">
-                    Cloud Build Trigger Error: "Failed to trigger build" with service account - Need Help!
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/Iwillhelpyou_</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-23">
-                <a href="https://www.reddit.com/r/devops/comments/1p3tg5p/whats_working_to_automate_the_code_review_process/" target="_blank" class="fw-bold text-decoration-none">
-                    what's working to automate the code review process in your ci/cd pipeline?
-                </a>
-                <p class="mb-1 small text-light">Our current setup is pretty basic: lint, unit tests, security scan with snyk. All good but they don't catch logic issues or code quality problems, our seniors still have to manually review everything which takes forever.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-23">
-                <a href="https://www.reddit.com/r/devops/comments/1p3rkc7/how_long_does_it_typically_take_you_to_prepare_a/" target="_blank" class="fw-bold text-decoration-none">
-                    How long does it typically take you to prepare a fully configured cloud environment (staging or production)? (Including networking, security, logging, access controls, etc.)
-                </a>
-                <p class="mb-1 small text-light">💡 Vote and comment: what slows down the process the most? View Poll submitted by /u/Soni4_91</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-11-23">
-                <a href="https://engineering.atspotify.com/2025/4/celebrating-five-years-of-backstage/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Celebrating Five Years of Backstage: From Open Source Project to Enterprise Business
-                </a>
-                <p class="mb-1 small text-light">Did you know that we sell Spotify’s developer productivity tools and support to other companies, from online... The post Celebrating Five Years of Backstage: From Open Source Project to Enterprise Business appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-23">
-                <a href="https://engineering.fb.com/2025/11/20/security/key-transparency-comes-to-messenger/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Key Transparency Comes to Messenger
-                </a>
-                <p class="mb-1 small text-light">Key transparency provides messaging users with a verifiable and auditable record of public keys. To address this, we’ve added a new security feature, based on key transparency, that allows users to verify these keys without having to compare them manually with their contacts.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-23">
-                <a href="https://engineering.fb.com/2025/11/17/connectivity/core-2africa-system-completion-future-connectivity/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Announcing the Completion of the Core 2Africa System: Building the Future of Connectivity Together
-                </a>
-                <p class="mb-1 small text-light">We incorporated undersea optical wavelength switching, enabling flexible bandwidth management and supporting evolving demands for AI, cloud, and high-bandwidth applications.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-23">
-                <a href="https://engineering.fb.com/2025/11/17/ios/enhancing-hdr-on-instagram-for-ios-with-dolby-vision/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Enhancing HDR on Instagram for iOS With Dolby Vision
-                </a>
-                <p class="mb-1 small text-light">Maybe a new iPhone or iOS version would produce different values, then we’d be using the wrong ones. Challenge #1: The extant specification was for carriage of metadata within an HEVC bitstream.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-23">
-                <a href="https://sacbear.com/xfinity-wont-fix-internet/" target="_blank" class="fw-bold text-decoration-none">
-                    A monopoly ISP refuses to fix upstream infrastructure
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://sacbear.com/xfinity-wont-fix-internet/ Comments URL: https://news.ycombinator.com/item?id=46019685 Points: 201 # Comments: 78</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-23">
-                <a href="https://www.hashicorp.com/blog/how-to-reduce-cloud-waste-it-boils-down-to-3-steps" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] How to reduce cloud waste: It boils down to 3 steps
-                </a>
-                <p class="mb-1 small text-light">For example, Gartner’s forecast has worldwide end-user spending on public cloud services catapulting to $723. The more significant issue with many applications is that a simple “lift and shift” can cost dearly when migrated from on-premises resources to the cloud.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-23">
-                <a href="https://www.hashicorp.com/blog/spiffe-securing-the-identity-of-agentic-ai-and-non-human-actors" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] SPIFFE: Securing the identity of agentic AI and non-human actors
-                </a>
-                <p class="mb-1 small text-light">Originally developed to help microservices authenticate securely in cloud-native environments, SPIFFE provides a way to issue and validate cryptographically verifiable identities without relying on long-lived secrets like passwords or API keys.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-23">
-                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
-                </a>
-                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-23">
-                <a href="https://kubernetes.io/blog/2025/10/20/seven-kubernetes-pitfalls-and-how-to-avoid/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] 7 Common Kubernetes Pitfalls (and How I Learned to Avoid Them)
-                </a>
-                <p class="mb-1 small text-light">This tends to happen because Kubernetes will consider a container “running” as long as the process inside hasn’t exited. Look into Pod Security Admission (or other solutions like Kyverno) to enforce non-root containers, read-only filesystems, etc.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-23">
-                <a href="https://kubernetes.io/blog/2025/10/18/wg-policy-spotlight-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Spotlight on Policy Working Group
-                </a>
-                <p class="mb-1 small text-light">Jim Bugwadia: My name is Jim Bugwadia, and I am a co-founder and the CEO at Nirmata which provides solutions that automate security and compliance for cloud-native workloads. This is intended to help organizations meet important security standards in their Kubernetes environments.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-23">
-                <a href="https://www.cncf.io/blog/2025/11/19/what-is-platform-engineering/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] What is platform engineering?
-                </a>
-                <p class="mb-1 small text-light">These tools can include IDEs, CLIs, project templates, code versioning, CI/CD pipelines, container orchestration tools, configuration management tools, and observability systems.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-23">
-                <a href="https://blog.cloudflare.com/18-november-2025-outage/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Cloudflare outage on November 18, 2025
-                </a>
-                <p class="mb-1 small text-light">The following services were impacted:Service / ProductImpact descriptionCore CDN and security servicesHTTP 5xx status codes. Again, the limit exists because for performance reasons we preallocate memory for the features.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-23">
-                <a href="https://www.reddit.com/r/devops/comments/1p4duz7/cybersecurity_role_at_decent_company_vs/" target="_blank" class="fw-bold text-decoration-none">
-                    Cybersecurity Role at decent company vs Cybersecurity/DevOps Role at AI Startup
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/mypovdoesmatter</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-23">
-                <a href="https://about.gitlab.com/blog/secure-ai-agent-deployment-to-gke/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Secure AI agent deployment to GKE
-                </a>
-                <p class="mb-1 small text-light">GKE provides enterprise-grade orchestration that connects seamlessly with GitLab CI/CD pipelines through OIDC authentication. Test - GitLab Auto DevOps provides built-in security scans to ensure there are no vulnerabilities.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-23">
-                <a href="https://snyk.io/blog/securing-low-code-agentic-ai-mcp-guardrails/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Beyond Automation: Securing Low-Code Agentic AI with MCP Guardrails
-                </a>
-                <p class="mb-1 small text-light">Explore how Model Context Protocol (MCP) servers and integrated security scanning workflows are redefining guardrails for low-code/no-code (LCNC) and AI-driven development environments.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-23">
-                <a href="https://www.hashicorp.com/blog/building-resilient-infrastructure-in-regulated-environments-7-lessons-from-ig-group" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Building resilient infrastructure in regulated environments: 7 Lessons from IG Group’s journey
-                </a>
-                <p class="mb-1 small text-light">This allowed the security team to maintain visibility and consistency across all applications while improving scalability and governance. “The self-service question is always a challenge: How do you balance security with developer flexibility.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-23">
-                <a href="https://blog.cloudflare.com/finding-the-grain-of-sand-in-a-heap-of-salt/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Finding the grain of sand in a heap of Salt
-                </a>
-                <p class="mb-1 small text-light">This system is able to correlate failures with git commits, external service failures and ad hoc releases. And because broken versions are continuously overtaken by newer versions, we need to stop deployments altogether.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-23">
-                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
-                </a>
-                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-23">
                 <a href="https://netflixtechblog.medium.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
                     [Netflix] Mount Mayhem at Netflix: Scaling Containers on Modern CPUs
@@ -396,7 +137,7 @@
                 <p class="mb-1 small text-light">The ProblemWhen application demand requires that we scale up our servers, we get a new instance from AWS. We trust these insights will assist others in navigating the evolving container ecosystem, transforming potential challenges into opportunities for building robust, high-performance platforms.</p>
                 <small class="text-secondary">
                     
-                    Netflix
+                    Netflix | 2025-11-23
                     
                 </small>
             </li>
@@ -408,7 +149,283 @@
                 <p class="mb-1 small text-light">Whether it was a financial risk engine, a crypto trading service, or an AI inference model, it was containerized. The MCP Gateway enables containerised AI-tool orchestration with isolation, unified control, and observability, extending this same container-secure foundation into the AI era.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-23">
+                <a href="https://www.hashicorp.com/blog/building-resilient-infrastructure-in-regulated-environments-7-lessons-from-ig-group" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Building resilient infrastructure in regulated environments: 7 Lessons from IG Group’s journey
+                </a>
+                <p class="mb-1 small text-light">This allowed the security team to maintain visibility and consistency across all applications while improving scalability and governance. “The self-service question is always a challenge: How do you balance security with developer flexibility.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-23">
+                <a href="https://blog.cloudflare.com/finding-the-grain-of-sand-in-a-heap-of-salt/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Finding the grain of sand in a heap of Salt
+                </a>
+                <p class="mb-1 small text-light">This system is able to correlate failures with git commits, external service failures and ad hoc releases. And because broken versions are continuously overtaken by newer versions, we need to stop deployments altogether.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-23">
+                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
+                </a>
+                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-23">
+                <a href="https://www.reddit.com/r/devops/comments/1p4duz7/cybersecurity_role_at_decent_company_vs/" target="_blank" class="fw-bold text-decoration-none">
+                    Cybersecurity Role at decent company vs Cybersecurity/DevOps Role at AI Startup
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/mypovdoesmatter</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-23">
+                <a href="https://about.gitlab.com/blog/secure-ai-agent-deployment-to-gke/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Secure AI agent deployment to GKE
+                </a>
+                <p class="mb-1 small text-light">GKE provides enterprise-grade orchestration that connects seamlessly with GitLab CI/CD pipelines through OIDC authentication. Test - GitLab Auto DevOps provides built-in security scans to ensure there are no vulnerabilities.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-23">
+                <a href="https://snyk.io/blog/securing-low-code-agentic-ai-mcp-guardrails/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Beyond Automation: Securing Low-Code Agentic AI with MCP Guardrails
+                </a>
+                <p class="mb-1 small text-light">Explore how Model Context Protocol (MCP) servers and integrated security scanning workflows are redefining guardrails for low-code/no-code (LCNC) and AI-driven development environments.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-23">
+                <a href="https://sacbear.com/xfinity-wont-fix-internet/" target="_blank" class="fw-bold text-decoration-none">
+                    A monopoly ISP refuses to fix upstream infrastructure
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://sacbear.com/xfinity-wont-fix-internet/ Comments URL: https://news.ycombinator.com/item?id=46019685 Points: 201 # Comments: 78</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-23">
+                <a href="https://www.hashicorp.com/blog/how-to-reduce-cloud-waste-it-boils-down-to-3-steps" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] How to reduce cloud waste: It boils down to 3 steps
+                </a>
+                <p class="mb-1 small text-light">For example, Gartner’s forecast has worldwide end-user spending on public cloud services catapulting to $723. The more significant issue with many applications is that a simple “lift and shift” can cost dearly when migrated from on-premises resources to the cloud.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-23">
+                <a href="https://www.hashicorp.com/blog/spiffe-securing-the-identity-of-agentic-ai-and-non-human-actors" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] SPIFFE: Securing the identity of agentic AI and non-human actors
+                </a>
+                <p class="mb-1 small text-light">Originally developed to help microservices authenticate securely in cloud-native environments, SPIFFE provides a way to issue and validate cryptographically verifiable identities without relying on long-lived secrets like passwords or API keys.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-23">
+                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
+                </a>
+                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-23">
+                <a href="https://kubernetes.io/blog/2025/10/20/seven-kubernetes-pitfalls-and-how-to-avoid/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] 7 Common Kubernetes Pitfalls (and How I Learned to Avoid Them)
+                </a>
+                <p class="mb-1 small text-light">This tends to happen because Kubernetes will consider a container “running” as long as the process inside hasn’t exited. Look into Pod Security Admission (or other solutions like Kyverno) to enforce non-root containers, read-only filesystems, etc.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-23">
+                <a href="https://kubernetes.io/blog/2025/10/18/wg-policy-spotlight-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on Policy Working Group
+                </a>
+                <p class="mb-1 small text-light">Jim Bugwadia: My name is Jim Bugwadia, and I am a co-founder and the CEO at Nirmata which provides solutions that automate security and compliance for cloud-native workloads. This is intended to help organizations meet important security standards in their Kubernetes environments.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-23">
+                <a href="https://www.cncf.io/blog/2025/11/19/what-is-platform-engineering/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] What is platform engineering?
+                </a>
+                <p class="mb-1 small text-light">These tools can include IDEs, CLIs, project templates, code versioning, CI/CD pipelines, container orchestration tools, configuration management tools, and observability systems.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-23">
+                <a href="https://blog.cloudflare.com/18-november-2025-outage/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cloudflare outage on November 18, 2025
+                </a>
+                <p class="mb-1 small text-light">The following services were impacted:Service / ProductImpact descriptionCore CDN and security servicesHTTP 5xx status codes. Again, the limit exists because for performance reasons we preallocate memory for the features.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-23">
+                <a href="https://www.reddit.com/r/devops/comments/1p42s0p/cloud_build_trigger_error_failed_to_trigger_build/" target="_blank" class="fw-bold text-decoration-none">
+                    Cloud Build Trigger Error: "Failed to trigger build" with service account - Need Help!
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/Iwillhelpyou_</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-23">
+                <a href="https://www.reddit.com/r/devops/comments/1p3tg5p/whats_working_to_automate_the_code_review_process/" target="_blank" class="fw-bold text-decoration-none">
+                    what's working to automate the code review process in your ci/cd pipeline?
+                </a>
+                <p class="mb-1 small text-light">Our current setup is pretty basic: lint, unit tests, security scan with snyk. All good but they don't catch logic issues or code quality problems, our seniors still have to manually review everything which takes forever.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-23">
+                <a href="https://www.reddit.com/r/devops/comments/1p3rkc7/how_long_does_it_typically_take_you_to_prepare_a/" target="_blank" class="fw-bold text-decoration-none">
+                    How long does it typically take you to prepare a fully configured cloud environment (staging or production)? (Including networking, security, logging, access controls, etc.)
+                </a>
+                <p class="mb-1 small text-light">💡 Vote and comment: what slows down the process the most? View Poll submitted by /u/Soni4_91</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-11-23">
+                <a href="https://engineering.atspotify.com/2025/4/celebrating-five-years-of-backstage/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Celebrating Five Years of Backstage: From Open Source Project to Enterprise Business
+                </a>
+                <p class="mb-1 small text-light">Did you know that we sell Spotify’s developer productivity tools and support to other companies, from online... The post Celebrating Five Years of Backstage: From Open Source Project to Enterprise Business appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-23">
+                <a href="https://engineering.fb.com/2025/11/20/security/key-transparency-comes-to-messenger/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Key Transparency Comes to Messenger
+                </a>
+                <p class="mb-1 small text-light">Key transparency provides messaging users with a verifiable and auditable record of public keys. To address this, we’ve added a new security feature, based on key transparency, that allows users to verify these keys without having to compare them manually with their contacts.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-23">
+                <a href="https://engineering.fb.com/2025/11/17/connectivity/core-2africa-system-completion-future-connectivity/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Announcing the Completion of the Core 2Africa System: Building the Future of Connectivity Together
+                </a>
+                <p class="mb-1 small text-light">We incorporated undersea optical wavelength switching, enabling flexible bandwidth management and supporting evolving demands for AI, cloud, and high-bandwidth applications.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-23">
+                <a href="https://engineering.fb.com/2025/11/17/ios/enhancing-hdr-on-instagram-for-ios-with-dolby-vision/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Enhancing HDR on Instagram for iOS With Dolby Vision
+                </a>
+                <p class="mb-1 small text-light">Maybe a new iPhone or iOS version would produce different values, then we’d be using the wrong ones. Challenge #1: The extant specification was for carriage of metadata within an HEVC bitstream.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-23">
+                <a href="https://arxiv.org/abs/2509.01063" target="_blank" class="fw-bold text-decoration-none">
+                    An Economy of AI Agents
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://arxiv.org/abs/2509.01063 Comments URL: https://news.ycombinator.com/item?id=46020096 Points: 55 # Comments: 26</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-11-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-23">
+                <a href="https://forty.news" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: Forty.News – Daily news, but on a 40-year delay
+                </a>
+                <p class="mb-1 small text-light">Generation: Uses those extracted facts as the ground truth to write new headlines and story summaries. js (Caskada for the LLM pipeline orchestration), Gemini for OCR/Scoring.</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-11-23
                     
                 </small>
             </li>

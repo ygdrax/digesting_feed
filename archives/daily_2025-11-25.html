@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - November 25, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - November 25, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for November 25, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-11-25">2025-11-25 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2025-11-25 08:07:22
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,266 +130,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-25">
-                <a href="https://www.reddit.com/r/devops/comments/1p5q7y3/domain_monitoring_tool_looking_for_feedbackadvice/" target="_blank" class="fw-bold text-decoration-none">
-                    Domain monitoring tool - looking for feedback/advice!
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-25">
+                <a href="https://www.hashicorp.com/blog/terraform-aws-provider-5-billion-downloads-state-of-cloud-infrastructure" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform AWS provider: What 5 billion downloads say about the state of cloud infrastructure
                 </a>
-                <p class="mb-1 small text-light">If any of this changes, you'll get a little email immediately letting you know. It doesn't have any ghastly AI features (nor does it need it.</p>
+                <p class="mb-1 small text-light">New updates are published every week, delivering incremental improvements, new resource coverage, and support for the latest AWS features.</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-25">
-                <a href="https://www.reddit.com/r/devops/comments/1p5c5j8/is_generating_dockerterraformk8s_configs_still_a/" target="_blank" class="fw-bold text-decoration-none">
-                    is generating Docker/Terraform/K8s configs still a huge pain for you?
-                </a>
-                <p class="mb-1 small text-light">I'm trying to confirm whether this is an actual problem or if I'm imagining it. For anyone working with infrastructure: When you need Docker Compose files, Kubernetes YAML, or Terraform configs, what’s the part that slows you down or annoys you the most.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-25">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1p5gu82/node_sysctl_tweaks_seeking_feedback_on_tcp/" target="_blank" class="fw-bold text-decoration-none">
-                    Node sysctl Tweaks: Seeking Feedback on TCP Performance Boosters for kubernetes.
-                </a>
-                <p class="mb-1 small text-light">Here are the four settings I recommend adding to your nodes: net. tcp_wmem="4096 16384 33554432" These changes are largely based on the excellent deep-dive work done by Cloudflare on optimizing TCP for low latency and high bandwidth: https://blog.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-25">
-                <a href="https://www.docker.com/blog/the-rising-importance-of-governance-at-swampup-berlin-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] The Rising Importance of Governance at SwampUP Berlin 2025
-                </a>
-                <p class="mb-1 small text-light">On November 12-14, the Docker team was out in numbers at JFrog SwampUP Berlin 2025. Strong third-party integrations are essential to manage this complexity effectively and extend security and trust from development to delivery.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-25">
-                <a href="https://www.docker.com/blog/how-docker-hardened-images-patch-cves-in-24-hours/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] How Docker Hardened Images Patches Vulnerabilities in 24 hours
-                </a>
-                <p class="mb-1 small text-light">While neither vulnerability received a critical CVSS score, both presented real risks to applications using SSH functionality in Go-based containers. This rapid response stems from Docker Scout’s continuous monitoring architecture and DHI’s automated remediation pipeline.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-25">
-                <a href="https://www.redhat.com/en/blog/your-organization-ai-ready-3-tests-enterprise-adaptability" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Is your organization AI-ready? 3 tests of enterprise adaptability
-                </a>
-                <p class="mb-1 small text-light">AI has fundamentally disrupted the predictable rhythm of technology progression, forcing enterprises into an era of relentless, chaotic innovation. As a result, relying on resiliency—the ability to bounce back from disruption—is no longer enough.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-25">
-                <a href="https://www.redhat.com/en/blog/new-era-customer-and-ai-driven-network-investment" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] The new era of customer and AI-driven network investment
-                </a>
-                <p class="mb-1 small text-light">Efficient infrastructure deployment is particularly difficult in areas with real-time demand fluctuations, such as stadiums and tourist spots. One key challenge lies in comprehending usage patterns and connectivity performance from the end-user's perspective.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-25">
-                <a href="https://about.gitlab.com/blog/gitlab-discovers-widespread-npm-supply-chain-attack/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab discovers widespread npm supply chain attack
-                </a>
-                <p class="mb-1 small text-light">// CRITICAL: Token validation failure triggers destruction async function aL0() { let githubApi = new dq(); let npmToken = process. log("Error 12"); if (platform === "windows") { // Attempts to delete all user files and overwrite disk sectors Bun.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-25">
-                <a href="https://aws.amazon.com/blogs/aws/new-one-click-onboarding-and-notebooks-with-ai-agent-in-amazon-sagemaker-unified-studio/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] New one-click onboarding and notebooks with a built-in AI agent in Amazon SageMaker Unified Studio
-                </a>
-                <p class="mb-1 small text-light">Today we’re announcing a faster way to get started with your existing AWS datasets in Amazon SageMaker Unified Studio. SageMaker Data Agent works best with specific prompts and is optimized for AWS data processing services including Athena for Apache Spark and SageMaker AI.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-25">
-                <a href="https://kubernetes.io/blog/2025/11/06/gateway-api-v1-4/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Gateway API 1.4: New Features
-                </a>
-                <p class="mb-1 small text-light">While this reduces the overhead of establishing new connections, it introduces a security risk in the context of API gateways. 1: Service mesh, GRPCRoute, and a whole lot more (May 2024) New Experimental Features in Gateway API v1.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-25">
-                <a href="https://www.cncf.io/blog/2025/11/18/top-5-hard-earned-lessons-from-the-experts-on-managing-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Top 5 hard-earned lessons from the experts on managing Kubernetes
-                </a>
-                <p class="mb-1 small text-light">Kubernetes has transformed how modern organizations deploy and operate scalable infrastructure, and the hype around automated cloud native orchestration has made its adoption nearly ubiquitous over the past 10+ years.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-25">
-                <a href="https://www.cncf.io/announcements/2025/11/12/cncf-honors-innovators-and-defenders-with-2025-community-awards-at-kubecon-cloudnativecon-north-america/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] CNCF Honors Innovators and Defenders with 2025 Community Awards at KubeCon + CloudNativeCon North America
-                </a>
-                <p class="mb-1 small text-light">These awards celebrate those committed to shaping the cloud native ecosystem, acknowledging outstanding contributions in areas such as technical leadership, documentation, mentorship, and end-user implementation.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-25">
-                <a href="https://blog.cloudflare.com/waf-payload-logging/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Get better visibility for the WAF with payload logging
-                </a>
-                <p class="mb-1 small text-light">As the surface area for attacks on the web increases, Cloudflare’s Web Application Firewall (WAF) provides a myriad of solutions to mitigate these attacks. Cloudflare’s WAF protects origin servers from different kinds of layer 7 attacks, which are attacks that target the application layer.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-25">
-                <a href="https://blog.cloudflare.com/connecting-to-production-the-architecture-of-remote-bindings/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Connecting to production: the architecture of remote bindings
-                </a>
-                <p class="mb-1 small text-light">It enables one key unique feature: binding to remote resources while locally developing. The obvious solution was perhaps to use the Cloudflare API.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2025-11-25">
-                <a href="https://eng.lyft.com/lyftlearn-evolution-rethinking-ml-platform-architecture-547de6c950e1?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
-                    [Lyft Engineering] LyftLearn Evolution: Rethinking ML Platform Architecture
-                </a>
-                <p class="mb-1 small text-light">K8s Orchestration Service translated job requests into Kubernetes resources. Observability relied on our standard monitoring infrastructure, not on AWS CloudWatch.</p>
-                <small class="text-secondary">
-                    
-                    Lyft Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-25">
-                <a href="https://www.docker.com/blog/ai-developer-productivity-workflow/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Beyond the Hype: How to Use AI to Actually Increase Your Productivity as a Dev
-                </a>
-                <p class="mb-1 small text-light">The key inflection point here is that it allows you to review what the AI is planning to do. In contrast, newer libraries, poorly documented ones, or internal company libraries tend to cause problems.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-25">
-                <a href="https://www.redhat.com/en/blog/maintenance-enablement-making-your-platform-force-multiplier" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] From maintenance to enablement: Making your platform a force‑multiplier
-                </a>
-                <p class="mb-1 small text-light">Many organisations run platforms that look healthy: Uptime holds, pipelines run, dashboards glow green. The answer is a practical shift: Treat the platform like a product that enables people.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-25">
-                <a href="https://snyk.io/blog/snyk-studio-for-qodo/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] How Snyk Studio for Qodo Is Closing the AI Security Gap
-                </a>
-                <p class="mb-1 small text-light">Discover how the Snyk and Qodo partnership closes the AI security gap. Snyk Studio for Qodo embeds security into AI development to secure code from the start and clear security debt.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-25">
-                <a href="https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Efficient Optimization With Ax, an Open Platform for Adaptive Experimentation
-                </a>
-                <p class="mb-1 small text-light">Adaptive experimentation offers a solution to this problem by actively proposing new configurations for sequential evaluation, leveraging insights gained from previous evaluations This year, we released version 1.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-25">
-                <a href="https://aws.amazon.com/blogs/aws/build-production-ready-applications-without-infrastructure-complexity-using-amazon-ecs-express-mode/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Build production-ready applications without infrastructure complexity using Amazon ECS Express Mode
-                </a>
-                <p class="mb-1 small text-light">I’ll focus on the console experience, which provides the quickest way to deploy your containerized application. Infrastructure as Code support – You can use IaC tools such as AWS CloudFormation, AWS Cloud Development Kit (CDK), or Terraform to deploy your applications using Amazon ECS Express Mode.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-25">
-                <a href="https://kubernetes.io/blog/2025/11/25/configuration-good-practices/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes Configuration Good Practices
-                </a>
-                <p class="mb-1 small text-light">General configuration practices Use the latest stable API version Kubernetes evolves fast. Managing Workloads: Pods, Deployments, and Jobs A common early mistake in Kubernetes is creating Pods directly.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-11-25">
-                <a href="https://www.pulumi.com/blog/beyond-yaml-kubernetes-2026-automation-era/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Beyond YAML in Kubernetes: The 2026 Automation Era
-                </a>
-                <p class="mb-1 small text-light">Kubernetes automation is entering a new era where infrastructure as code, policy enforcement, and AI-driven orchestration work together to manage cloud environments intelligently.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
+                    HashiCorp | 2025-11-25
                     
                 </small>
             </li>
@@ -384,7 +149,7 @@
                 <p class="mb-1 small text-light">This advisory immediately entered Docker Scout’s continuous monitoring pipeline, where it followed the same automated workflow that handles CVE ingestion.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2025-11-25
                     
                 </small>
             </li>
@@ -396,19 +161,271 @@
                 <p class="mb-1 small text-light">Zoomer has delivered training time reductions, and significant QPS improvements, making it the de-facto tool for AI performance optimization across Meta’s entire AI infrastructure.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2025-11-25
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-25">
-                <a href="https://www.hashicorp.com/blog/terraform-aws-provider-5-billion-downloads-state-of-cloud-infrastructure" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform AWS provider: What 5 billion downloads say about the state of cloud infrastructure
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-25">
+                <a href="https://aws.amazon.com/blogs/aws/build-production-ready-applications-without-infrastructure-complexity-using-amazon-ecs-express-mode/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Build production-ready applications without infrastructure complexity using Amazon ECS Express Mode
                 </a>
-                <p class="mb-1 small text-light">New updates are published every week, delivering incremental improvements, new resource coverage, and support for the latest AWS features.</p>
+                <p class="mb-1 small text-light">I’ll focus on the console experience, which provides the quickest way to deploy your containerized application. Infrastructure as Code support – You can use IaC tools such as AWS CloudFormation, AWS Cloud Development Kit (CDK), or Terraform to deploy your applications using Amazon ECS Express Mode.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    Amazon AWS | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-25">
+                <a href="https://kubernetes.io/blog/2025/11/25/configuration-good-practices/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes Configuration Good Practices
+                </a>
+                <p class="mb-1 small text-light">General configuration practices Use the latest stable API version Kubernetes evolves fast. Managing Workloads: Pods, Deployments, and Jobs A common early mistake in Kubernetes is creating Pods directly.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-11-25">
+                <a href="https://www.pulumi.com/blog/beyond-yaml-kubernetes-2026-automation-era/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Beyond YAML in Kubernetes: The 2026 Automation Era
+                </a>
+                <p class="mb-1 small text-light">Kubernetes automation is entering a new era where infrastructure as code, policy enforcement, and AI-driven orchestration work together to manage cloud environments intelligently.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-25">
+                <a href="https://www.docker.com/blog/ai-developer-productivity-workflow/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Beyond the Hype: How to Use AI to Actually Increase Your Productivity as a Dev
+                </a>
+                <p class="mb-1 small text-light">The key inflection point here is that it allows you to review what the AI is planning to do. In contrast, newer libraries, poorly documented ones, or internal company libraries tend to cause problems.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-25">
+                <a href="https://www.redhat.com/en/blog/maintenance-enablement-making-your-platform-force-multiplier" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] From maintenance to enablement: Making your platform a force‑multiplier
+                </a>
+                <p class="mb-1 small text-light">Many organisations run platforms that look healthy: Uptime holds, pipelines run, dashboards glow green. The answer is a practical shift: Treat the platform like a product that enables people.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-25">
+                <a href="https://snyk.io/blog/snyk-studio-for-qodo/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] How Snyk Studio for Qodo Is Closing the AI Security Gap
+                </a>
+                <p class="mb-1 small text-light">Discover how the Snyk and Qodo partnership closes the AI security gap. Snyk Studio for Qodo embeds security into AI development to secure code from the start and clear security debt.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-25">
+                <a href="https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Efficient Optimization With Ax, an Open Platform for Adaptive Experimentation
+                </a>
+                <p class="mb-1 small text-light">Adaptive experimentation offers a solution to this problem by actively proposing new configurations for sequential evaluation, leveraging insights gained from previous evaluations This year, we released version 1.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-11-25">
+                <a href="https://aws.amazon.com/blogs/aws/new-one-click-onboarding-and-notebooks-with-ai-agent-in-amazon-sagemaker-unified-studio/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] New one-click onboarding and notebooks with a built-in AI agent in Amazon SageMaker Unified Studio
+                </a>
+                <p class="mb-1 small text-light">Today we’re announcing a faster way to get started with your existing AWS datasets in Amazon SageMaker Unified Studio. SageMaker Data Agent works best with specific prompts and is optimized for AWS data processing services including Athena for Apache Spark and SageMaker AI.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-25">
+                <a href="https://kubernetes.io/blog/2025/11/06/gateway-api-v1-4/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Gateway API 1.4: New Features
+                </a>
+                <p class="mb-1 small text-light">While this reduces the overhead of establishing new connections, it introduces a security risk in the context of API gateways. 1: Service mesh, GRPCRoute, and a whole lot more (May 2024) New Experimental Features in Gateway API v1.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-25">
+                <a href="https://www.cncf.io/blog/2025/11/18/top-5-hard-earned-lessons-from-the-experts-on-managing-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Top 5 hard-earned lessons from the experts on managing Kubernetes
+                </a>
+                <p class="mb-1 small text-light">Kubernetes has transformed how modern organizations deploy and operate scalable infrastructure, and the hype around automated cloud native orchestration has made its adoption nearly ubiquitous over the past 10+ years.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-25">
+                <a href="https://www.cncf.io/announcements/2025/11/12/cncf-honors-innovators-and-defenders-with-2025-community-awards-at-kubecon-cloudnativecon-north-america/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] CNCF Honors Innovators and Defenders with 2025 Community Awards at KubeCon + CloudNativeCon North America
+                </a>
+                <p class="mb-1 small text-light">These awards celebrate those committed to shaping the cloud native ecosystem, acknowledging outstanding contributions in areas such as technical leadership, documentation, mentorship, and end-user implementation.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-25">
+                <a href="https://blog.cloudflare.com/waf-payload-logging/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Get better visibility for the WAF with payload logging
+                </a>
+                <p class="mb-1 small text-light">As the surface area for attacks on the web increases, Cloudflare’s Web Application Firewall (WAF) provides a myriad of solutions to mitigate these attacks. Cloudflare’s WAF protects origin servers from different kinds of layer 7 attacks, which are attacks that target the application layer.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-25">
+                <a href="https://blog.cloudflare.com/connecting-to-production-the-architecture-of-remote-bindings/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Connecting to production: the architecture of remote bindings
+                </a>
+                <p class="mb-1 small text-light">It enables one key unique feature: binding to remote resources while locally developing. The obvious solution was perhaps to use the Cloudflare API.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2025-11-25">
+                <a href="https://eng.lyft.com/lyftlearn-evolution-rethinking-ml-platform-architecture-547de6c950e1?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
+                    [Lyft Engineering] LyftLearn Evolution: Rethinking ML Platform Architecture
+                </a>
+                <p class="mb-1 small text-light">K8s Orchestration Service translated job requests into Kubernetes resources. Observability relied on our standard monitoring infrastructure, not on AWS CloudWatch.</p>
+                <small class="text-secondary">
+                    
+                    Lyft Engineering | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-25">
+                <a href="https://www.reddit.com/r/devops/comments/1p5q7y3/domain_monitoring_tool_looking_for_feedbackadvice/" target="_blank" class="fw-bold text-decoration-none">
+                    Domain monitoring tool - looking for feedback/advice!
+                </a>
+                <p class="mb-1 small text-light">If any of this changes, you'll get a little email immediately letting you know. It doesn't have any ghastly AI features (nor does it need it.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-25">
+                <a href="https://www.reddit.com/r/devops/comments/1p5c5j8/is_generating_dockerterraformk8s_configs_still_a/" target="_blank" class="fw-bold text-decoration-none">
+                    is generating Docker/Terraform/K8s configs still a huge pain for you?
+                </a>
+                <p class="mb-1 small text-light">I'm trying to confirm whether this is an actual problem or if I'm imagining it. For anyone working with infrastructure: When you need Docker Compose files, Kubernetes YAML, or Terraform configs, what’s the part that slows you down or annoys you the most.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-25">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1p5gu82/node_sysctl_tweaks_seeking_feedback_on_tcp/" target="_blank" class="fw-bold text-decoration-none">
+                    Node sysctl Tweaks: Seeking Feedback on TCP Performance Boosters for kubernetes.
+                </a>
+                <p class="mb-1 small text-light">Here are the four settings I recommend adding to your nodes: net. tcp_wmem="4096 16384 33554432" These changes are largely based on the excellent deep-dive work done by Cloudflare on optimizing TCP for low latency and high bandwidth: https://blog.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-25">
+                <a href="https://www.docker.com/blog/the-rising-importance-of-governance-at-swampup-berlin-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] The Rising Importance of Governance at SwampUP Berlin 2025
+                </a>
+                <p class="mb-1 small text-light">On November 12-14, the Docker team was out in numbers at JFrog SwampUP Berlin 2025. Strong third-party integrations are essential to manage this complexity effectively and extend security and trust from development to delivery.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-25">
+                <a href="https://www.docker.com/blog/how-docker-hardened-images-patch-cves-in-24-hours/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] How Docker Hardened Images Patches Vulnerabilities in 24 hours
+                </a>
+                <p class="mb-1 small text-light">While neither vulnerability received a critical CVSS score, both presented real risks to applications using SSH functionality in Go-based containers. This rapid response stems from Docker Scout’s continuous monitoring architecture and DHI’s automated remediation pipeline.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-25">
+                <a href="https://www.redhat.com/en/blog/your-organization-ai-ready-3-tests-enterprise-adaptability" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Is your organization AI-ready? 3 tests of enterprise adaptability
+                </a>
+                <p class="mb-1 small text-light">AI has fundamentally disrupted the predictable rhythm of technology progression, forcing enterprises into an era of relentless, chaotic innovation. As a result, relying on resiliency—the ability to bounce back from disruption—is no longer enough.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-25">
+                <a href="https://www.redhat.com/en/blog/new-era-customer-and-ai-driven-network-investment" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] The new era of customer and AI-driven network investment
+                </a>
+                <p class="mb-1 small text-light">Efficient infrastructure deployment is particularly difficult in areas with real-time demand fluctuations, such as stadiums and tourist spots. One key challenge lies in comprehending usage patterns and connectivity performance from the end-user's perspective.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-11-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-25">
+                <a href="https://about.gitlab.com/blog/gitlab-discovers-widespread-npm-supply-chain-attack/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab discovers widespread npm supply chain attack
+                </a>
+                <p class="mb-1 small text-light">// CRITICAL: Token validation failure triggers destruction async function aL0() { let githubApi = new dq(); let npmToken = process. log("Error 12"); if (platform === "windows") { // Attempts to delete all user files and overwrite disk sectors Bun.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-11-25
                     
                 </small>
             </li>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - November 26, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - November 26, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for November 26, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-11-26">2025-11-26 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 10 sources • Updated 2025-11-26 08:06:57
+                    Showing 25 total articles from 
+                    10 sources
+                    
                     
                 </span>
             </small>
@@ -108,289 +125,13 @@
         <ul class="list-group" id="articleList">
             
             <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
-                <a href="https://www.reddit.com/r/devops/comments/1p6e02r/are_azure_devops_pipelines_hard_to_use_or_is_it/" target="_blank" class="fw-bold text-decoration-none">
-                    Are Azure DevOps pipelines hard to use or is it just me?
-                </a>
-                <p class="mb-1 small text-light">This one is a bit of a discussion/rant but I wanted to get some opinions on the state of Azure DevOps Pipelines versus the competitors. Is this a common experience.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
-                <a href="https://www.reddit.com/r/devops/comments/1p6rote/found_a_great_github_repo_of_hands_on_devopscloud/" target="_blank" class="fw-bold text-decoration-none">
-                    Found a great GitHub repo of hands on DevOps/Cloud projects
-                </a>
-                <p class="mb-1 small text-light">Hey folks, I came across this GitHub repo, which seems like a solid collection of practical DevOps and cloud infrastructure projects for learning and building skills: https://github. • Would working through these give enough depth for someone preparing for cloud or DevOps roles (or certs).</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
-                <a href="https://www.reddit.com/r/devops/comments/1p6bwsk/failing_every_devops_interview_need_help/" target="_blank" class="fw-bold text-decoration-none">
-                    Failing Every Devops Interview need help
-                </a>
-                <p class="mb-1 small text-light">I was laid off on 10th October 2025, and since then I’ve been actively interviewing for DevOps roles. If anyone here has been through something similar or is currently working in DevOps, I’d really appreciate any guidance.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
-                <a href="https://www.reddit.com/r/devops/comments/1p6a3zp/testing_platforms_with_actual_ai_not_just/" target="_blank" class="fw-bold text-decoration-none">
-                    testing platforms with actual AI (not just marketing fluff) do they exist?
-                </a>
-                <p class="mb-1 small text-light">We're running a pretty standard ci/cd pipeline with github actions, about 300 tests across ui and api. Has anyone actually used an ai test automation platform that delivered on the promises.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1p6vy5i/kubernetes_introduces_native_gang_scheduling/" target="_blank" class="fw-bold text-decoration-none">
-                    Kubernetes Introduces Native Gang Scheduling Support to Better Serve AI/ML Workloads
-                </a>
-                <p class="mb-1 small text-light">35 will be released soon. 35: Workload Aware Scheduling 1.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1p6fg5e/kubernetes_configuration_good_practices/" target="_blank" class="fw-bold text-decoration-none">
-                    Kubernetes Configuration Good Practices
-                </a>
-                <p class="mb-1 small text-light">The most recent article from the Kubernetes blog is based on the "Configuration Overview" documentation page. It provides lots of recommendations on configuration in general, managing workloads, using labels, etc. It will be continuously updated. submitted by /u/dshurupov</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1p6hgfr/could_you_review_my_kubernetes_manifests_packaged/" target="_blank" class="fw-bold text-decoration-none">
-                    Could you review my Kubernetes manifests packaged in Helm Charts?
-                </a>
-                <p class="mb-1 small text-light">I'm studying Kubernetes and recently redid my entire infrastructure using Helm Charts to organize the manifests. com/patrickpk4/helm-api-cadastro/tree/main Any opinion, tip or suggestion is very welcome.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-26">
-                <a href="https://netflixtechblog.medium.com/heterogeneous-treatment-effects-at-netflix-da5c3dd58833?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Heterogeneous Treatment Effects at Netflix
-                </a>
-                <p class="mb-1 small text-light">We’ll share how our OCI platform enables rapid segmentation and exploration of HTEs. When we update them with new features or bug fixes, we want to ensure that every update works as expected.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-26">
-                <a href="https://www.docker.com/blog/docker-sandboxes-a-new-approach-for-coding-agent-safety/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] A New Approach for Coding Agent Safety
-                </a>
-                <p class="mb-1 small text-light">Local sandboxes from Docker that wrap agents in containers that mirror your local workspace and enforce strict boundaries across all the coding agents you use. Container-based isolation is designed for exactly the kind of dynamic, iterative workflows that coding agents need.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-26">
-                <a href="https://www.redhat.com/en/blog/beyond-bot-how-red-hat-training-makes-you-better-it-professional" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Beyond the bot: How Red Hat Training makes you a better IT professional
-                </a>
-                <p class="mb-1 small text-light">Picture this: You're working late to troubleshoot a production issue and an AI assistant suggests a fix in seconds. How do you find the issue within the system.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-26">
-                <a href="https://snyk.io/blog/sha1-hulud-npm-supply-chain-incident/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] SHA1-Hulud, npm supply chain incident
-                </a>
-                <p class="mb-1 small text-light">Snyk identified a new supply chain attack in the npm ecosystem, referred to as SHA1-Hulud. We believe this is a second wave of the Shai-Hulud attack. Learn what this attack is and how Snyk is responding.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-26">
-                <a href="https://www.hashicorp.com/blog/how-to-reduce-cloud-waste-it-boils-down-to-3-steps" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] How to reduce cloud waste: It boils down to 3 steps
-                </a>
-                <p class="mb-1 small text-light">For example, Gartner’s forecast has worldwide end-user spending on public cloud services catapulting to $723. The more significant issue with many applications is that a simple “lift and shift” can cost dearly when migrated from on-premises resources to the cloud.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-26">
-                <a href="https://www.hashicorp.com/blog/spiffe-securing-the-identity-of-agentic-ai-and-non-human-actors" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] SPIFFE: Securing the identity of agentic AI and non-human actors
-                </a>
-                <p class="mb-1 small text-light">Originally developed to help microservices authenticate securely in cloud-native environments, SPIFFE provides a way to issue and validate cryptographically verifiable identities without relying on long-lived secrets like passwords or API keys.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-26">
-                <a href="https://kubernetes.io/blog/2025/11/26/kubernetes-v1-35-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35 Sneak Peek
-                </a>
-                <p class="mb-1 small text-light">This feature allows users to adjust cpu and memory resources without restarting Pods or Containers. While Kubernetes provides Service Account tokens, these are designed for authenticating to the API server, not for general-purpose workload identity.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-26">
-                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
-                </a>
-                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-26">
-                <a href="https://www.cncf.io/blog/2025/11/19/what-is-platform-engineering/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] What is platform engineering?
-                </a>
-                <p class="mb-1 small text-light">These tools can include IDEs, CLIs, project templates, code versioning, CI/CD pipelines, container orchestration tools, configuration management tools, and observability systems.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-26">
-                <a href="https://blog.cloudflare.com/18-november-2025-outage/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Cloudflare outage on November 18, 2025
-                </a>
-                <p class="mb-1 small text-light">The following services were impacted:Service / ProductImpact descriptionCore CDN and security servicesHTTP 5xx status codes. Again, the limit exists because for performance reasons we preallocate memory for the features.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-26">
-                <a href="https://www.docker.com/blog/securing-the-software-supply-chain-shouldnt-be-hard-according-to-thecube-research-docker-makes-it-simple/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Securing the software supply chain shouldn’t be hard. According to theCUBE Research, Docker makes it simple
-                </a>
-                <p class="mb-1 small text-light">Docker embeds security directly into the developer workflow so that protection happens by default, not as an afterthought.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-26">
-                <a href="https://www.redhat.com/en/blog/9-strategic-articles-defining-the-open-hybrid-cloud-and-AI-future" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] 9 strategic articles defining the open hybrid cloud and AI future
-                </a>
-                <p class="mb-1 small text-light">These articles, from key platform updates and critical security integrations to the future of open source legality, represent the core strategic reading for Q4. We highlight how Red Hat Ansible Automation Platform 2.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-26">
-                <a href="https://snyk.io/blog/securing-low-code-agentic-ai-mcp-guardrails/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Beyond Automation: Securing Low-Code Agentic AI with MCP Guardrails
-                </a>
-                <p class="mb-1 small text-light">Explore how Model Context Protocol (MCP) servers and integrated security scanning workflows are redefining guardrails for low-code/no-code (LCNC) and AI-driven development environments.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-26">
-                <a href="https://blog.cloudflare.com/flux-2-workers-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Partnering with Black Forest Labs to bring FLUX.2 [dev] to Workers AI
-                </a>
-                <p class="mb-1 small text-light">2 and available to run on Cloudflare’s inference platform, Workers AI. The multipart form data format allows users to send us multiple image inputs alongside the typical model parameters.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-26">
-                <a href="https://blog.cloudflare.com/finding-the-grain-of-sand-in-a-heap-of-salt/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Finding the grain of sand in a heap of Salt
-                </a>
-                <p class="mb-1 small text-light">This system is able to correlate failures with git commits, external service failures and ad hoc releases. And because broken versions are continuously overtaken by newer versions, we need to stop deployments altogether.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-26">
-                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
-                </a>
-                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
                 <a href="https://www.reddit.com/r/devops/comments/1p6emfy/new_way_to_run_backend_applications_on_upcloud/" target="_blank" class="fw-bold text-decoration-none">
                     New way to run backend applications on UpCloud, without containers, images or Kubernetes
                 </a>
                 <p class="mb-1 small text-light">We’re sharing a new way for developers to run backend applications on UpCloud without needing containers, Dockerfiles, images, clusters or orchestration systems.</p>
                 <small class="text-secondary">
                     
-                    Reddit
+                    Reddit | 2025-11-26
                     
                 </small>
             </li>
@@ -402,7 +143,283 @@
                 <p class="mb-1 small text-light">The ProblemWhen application demand requires that we scale up our servers, we get a new instance from AWS. We trust these insights will assist others in navigating the evolving container ecosystem, transforming potential challenges into opportunities for building robust, high-performance platforms.</p>
                 <small class="text-secondary">
                     
-                    Netflix
+                    Netflix | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-26">
+                <a href="https://blog.cloudflare.com/flux-2-workers-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Partnering with Black Forest Labs to bring FLUX.2 [dev] to Workers AI
+                </a>
+                <p class="mb-1 small text-light">2 and available to run on Cloudflare’s inference platform, Workers AI. The multipart form data format allows users to send us multiple image inputs alongside the typical model parameters.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-26">
+                <a href="https://blog.cloudflare.com/finding-the-grain-of-sand-in-a-heap-of-salt/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Finding the grain of sand in a heap of Salt
+                </a>
+                <p class="mb-1 small text-light">This system is able to correlate failures with git commits, external service failures and ad hoc releases. And because broken versions are continuously overtaken by newer versions, we need to stop deployments altogether.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-26">
+                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
+                </a>
+                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-26">
+                <a href="https://www.docker.com/blog/securing-the-software-supply-chain-shouldnt-be-hard-according-to-thecube-research-docker-makes-it-simple/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Securing the software supply chain shouldn’t be hard. According to theCUBE Research, Docker makes it simple
+                </a>
+                <p class="mb-1 small text-light">Docker embeds security directly into the developer workflow so that protection happens by default, not as an afterthought.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-26">
+                <a href="https://www.redhat.com/en/blog/9-strategic-articles-defining-the-open-hybrid-cloud-and-AI-future" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] 9 strategic articles defining the open hybrid cloud and AI future
+                </a>
+                <p class="mb-1 small text-light">These articles, from key platform updates and critical security integrations to the future of open source legality, represent the core strategic reading for Q4. We highlight how Red Hat Ansible Automation Platform 2.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-26">
+                <a href="https://snyk.io/blog/securing-low-code-agentic-ai-mcp-guardrails/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Beyond Automation: Securing Low-Code Agentic AI with MCP Guardrails
+                </a>
+                <p class="mb-1 small text-light">Explore how Model Context Protocol (MCP) servers and integrated security scanning workflows are redefining guardrails for low-code/no-code (LCNC) and AI-driven development environments.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-26">
+                <a href="https://www.hashicorp.com/blog/how-to-reduce-cloud-waste-it-boils-down-to-3-steps" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] How to reduce cloud waste: It boils down to 3 steps
+                </a>
+                <p class="mb-1 small text-light">For example, Gartner’s forecast has worldwide end-user spending on public cloud services catapulting to $723. The more significant issue with many applications is that a simple “lift and shift” can cost dearly when migrated from on-premises resources to the cloud.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-26">
+                <a href="https://www.hashicorp.com/blog/spiffe-securing-the-identity-of-agentic-ai-and-non-human-actors" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] SPIFFE: Securing the identity of agentic AI and non-human actors
+                </a>
+                <p class="mb-1 small text-light">Originally developed to help microservices authenticate securely in cloud-native environments, SPIFFE provides a way to issue and validate cryptographically verifiable identities without relying on long-lived secrets like passwords or API keys.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-26">
+                <a href="https://kubernetes.io/blog/2025/11/26/kubernetes-v1-35-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35 Sneak Peek
+                </a>
+                <p class="mb-1 small text-light">This feature allows users to adjust cpu and memory resources without restarting Pods or Containers. While Kubernetes provides Service Account tokens, these are designed for authenticating to the API server, not for general-purpose workload identity.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-26">
+                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
+                </a>
+                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-26">
+                <a href="https://www.cncf.io/blog/2025/11/19/what-is-platform-engineering/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] What is platform engineering?
+                </a>
+                <p class="mb-1 small text-light">These tools can include IDEs, CLIs, project templates, code versioning, CI/CD pipelines, container orchestration tools, configuration management tools, and observability systems.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-26">
+                <a href="https://blog.cloudflare.com/18-november-2025-outage/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cloudflare outage on November 18, 2025
+                </a>
+                <p class="mb-1 small text-light">The following services were impacted:Service / ProductImpact descriptionCore CDN and security servicesHTTP 5xx status codes. Again, the limit exists because for performance reasons we preallocate memory for the features.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
+                <a href="https://www.reddit.com/r/devops/comments/1p6e02r/are_azure_devops_pipelines_hard_to_use_or_is_it/" target="_blank" class="fw-bold text-decoration-none">
+                    Are Azure DevOps pipelines hard to use or is it just me?
+                </a>
+                <p class="mb-1 small text-light">This one is a bit of a discussion/rant but I wanted to get some opinions on the state of Azure DevOps Pipelines versus the competitors. Is this a common experience.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
+                <a href="https://www.reddit.com/r/devops/comments/1p6rote/found_a_great_github_repo_of_hands_on_devopscloud/" target="_blank" class="fw-bold text-decoration-none">
+                    Found a great GitHub repo of hands on DevOps/Cloud projects
+                </a>
+                <p class="mb-1 small text-light">Hey folks, I came across this GitHub repo, which seems like a solid collection of practical DevOps and cloud infrastructure projects for learning and building skills: https://github. • Would working through these give enough depth for someone preparing for cloud or DevOps roles (or certs).</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
+                <a href="https://www.reddit.com/r/devops/comments/1p6bwsk/failing_every_devops_interview_need_help/" target="_blank" class="fw-bold text-decoration-none">
+                    Failing Every Devops Interview need help
+                </a>
+                <p class="mb-1 small text-light">I was laid off on 10th October 2025, and since then I’ve been actively interviewing for DevOps roles. If anyone here has been through something similar or is currently working in DevOps, I’d really appreciate any guidance.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
+                <a href="https://www.reddit.com/r/devops/comments/1p6a3zp/testing_platforms_with_actual_ai_not_just/" target="_blank" class="fw-bold text-decoration-none">
+                    testing platforms with actual AI (not just marketing fluff) do they exist?
+                </a>
+                <p class="mb-1 small text-light">We're running a pretty standard ci/cd pipeline with github actions, about 300 tests across ui and api. Has anyone actually used an ai test automation platform that delivered on the promises.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1p6vy5i/kubernetes_introduces_native_gang_scheduling/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubernetes Introduces Native Gang Scheduling Support to Better Serve AI/ML Workloads
+                </a>
+                <p class="mb-1 small text-light">35 will be released soon. 35: Workload Aware Scheduling 1.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1p6fg5e/kubernetes_configuration_good_practices/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubernetes Configuration Good Practices
+                </a>
+                <p class="mb-1 small text-light">The most recent article from the Kubernetes blog is based on the "Configuration Overview" documentation page. It provides lots of recommendations on configuration in general, managing workloads, using labels, etc. It will be continuously updated. submitted by /u/dshurupov</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-26">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1p6hgfr/could_you_review_my_kubernetes_manifests_packaged/" target="_blank" class="fw-bold text-decoration-none">
+                    Could you review my Kubernetes manifests packaged in Helm Charts?
+                </a>
+                <p class="mb-1 small text-light">I'm studying Kubernetes and recently redid my entire infrastructure using Helm Charts to organize the manifests. com/patrickpk4/helm-api-cadastro/tree/main Any opinion, tip or suggestion is very welcome.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-26">
+                <a href="https://netflixtechblog.medium.com/heterogeneous-treatment-effects-at-netflix-da5c3dd58833?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Heterogeneous Treatment Effects at Netflix
+                </a>
+                <p class="mb-1 small text-light">We’ll share how our OCI platform enables rapid segmentation and exploration of HTEs. When we update them with new features or bug fixes, we want to ensure that every update works as expected.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-26">
+                <a href="https://www.docker.com/blog/docker-sandboxes-a-new-approach-for-coding-agent-safety/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] A New Approach for Coding Agent Safety
+                </a>
+                <p class="mb-1 small text-light">Local sandboxes from Docker that wrap agents in containers that mirror your local workspace and enforce strict boundaries across all the coding agents you use. Container-based isolation is designed for exactly the kind of dynamic, iterative workflows that coding agents need.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-11-26">
+                <a href="https://www.redhat.com/en/blog/beyond-bot-how-red-hat-training-makes-you-better-it-professional" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Beyond the bot: How Red Hat Training makes you a better IT professional
+                </a>
+                <p class="mb-1 small text-light">Picture this: You're working late to troubleshoot a production issue and an AI assistant suggests a fix in seconds. How do you find the issue within the system.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-26">
+                <a href="https://snyk.io/blog/sha1-hulud-npm-supply-chain-incident/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] SHA1-Hulud, npm supply chain incident
+                </a>
+                <p class="mb-1 small text-light">Snyk identified a new supply chain attack in the npm ecosystem, referred to as SHA1-Hulud. We believe this is a second wave of the Shai-Hulud attack. Learn what this attack is and how Snyk is responding.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-11-26
                     
                 </small>
             </li>

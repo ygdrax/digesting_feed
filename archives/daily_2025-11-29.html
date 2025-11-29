@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - November 29, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - November 29, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for November 29, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-11-29">2025-11-29 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2025-11-29 08:06:24
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,282 +130,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-29">
-                <a href="https://www.airbus.com/en/newsroom/press-releases/2025-11-airbus-update-on-a320-family-precautionary-fleet-action" target="_blank" class="fw-bold text-decoration-none">
-                    Airbus A320 – intense solar radiation may corrupt data critical for flight
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.airbus.com/en/newsroom/press-releases/2025-11-airbus-update-on-a320-family-precautionary-fleet-action Comments URL: https://news.ycombinator.com/item?id=46083004 Points: 258 # Comments: 49</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-29">
-                <a href="https://www.reddit.com/r/devops/comments/1p918pk/anyone_here_taken_the_cnpe_cloud_native_platform/" target="_blank" class="fw-bold text-decoration-none">
-                    Anyone here taken the CNPE (Cloud Native Platform Engineer) certification?
-                </a>
-                <p class="mb-1 small text-light">Hey all, The CNPE certification is now available, and I’m curious, has anyone here taken it yet? What was your experience? Difficulty level? Worth it for platform engineers? Would love to hear your thoughts before I go for it. submitted by /u/Umman2005</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-29">
-                <a href="https://www.reddit.com/r/devops/comments/1p8vyxi/zero_downtime_deployments_without_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    Zero downtime deployments without Kubernetes
-                </a>
-                <p class="mb-1 small text-light">Hey guys, One of the nicest feature of Kubernetes are zero downtime deployments. What do you guys use to have zero downtime deployments when you do not use Kubernetes.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-29">
-                <a href="https://netflixtechblog.medium.com/heterogeneous-treatment-effects-at-netflix-da5c3dd58833?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Heterogeneous Treatment Effects at Netflix
-                </a>
-                <p class="mb-1 small text-light">We’ll share how our OCI platform enables rapid segmentation and exploration of HTEs. When we update them with new features or bug fixes, we want to ensure that every update works as expected.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-29">
-                <a href="https://www.docker.com/blog/docker-sandboxes-a-new-approach-for-coding-agent-safety/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] A New Approach for Coding Agent Safety
-                </a>
-                <p class="mb-1 small text-light">Local sandboxes from Docker that wrap agents in containers that mirror your local workspace and enforce strict boundaries across all the coding agents you use. Container-based isolation is designed for exactly the kind of dynamic, iterative workflows that coding agents need.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-29">
-                <a href="https://about.gitlab.com/blog/gitlab-discovers-widespread-npm-supply-chain-attack/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab discovers widespread npm supply chain attack
-                </a>
-                <p class="mb-1 small text-light">// CRITICAL: Token validation failure triggers destruction async function aL0() { let githubApi = new dq(); let npmToken = process. log("Error 12"); if (platform === "windows") { // Attempts to delete all user files and overwrite disk sectors Bun.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-29">
-                <a href="https://snyk.io/blog/sha1-hulud-npm-supply-chain-incident/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] SHA1-Hulud, npm supply chain incident
-                </a>
-                <p class="mb-1 small text-light">Snyk identified a new supply chain attack in the npm ecosystem, referred to as SHA1-Hulud. We believe this is a second wave of the Shai-Hulud attack. Learn what this attack is and how Snyk is responding.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-11-29">
-                <a href="https://engineering.atspotify.com/2025/5/incident-report-spotify-outage-on-april-16-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Incident Report: Spotify Outage on April 16, 2025
-                </a>
-                <p class="mb-1 small text-light">On April 16, Spotify experienced an outage that affected users worldwide. Here is what happened and what we... The post Incident Report: Spotify Outage on April 16, 2025 appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-29">
-                <a href="https://engineering.fb.com/2025/11/20/security/key-transparency-comes-to-messenger/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Key Transparency Comes to Messenger
-                </a>
-                <p class="mb-1 small text-light">Key transparency provides messaging users with a verifiable and auditable record of public keys. To address this, we’ve added a new security feature, based on key transparency, that allows users to verify these keys without having to compare them manually with their contacts.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-29">
-                <a href="https://engineering.fb.com/2025/11/17/connectivity/core-2africa-system-completion-future-connectivity/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Announcing the Completion of the Core 2Africa System: Building the Future of Connectivity Together
-                </a>
-                <p class="mb-1 small text-light">We incorporated undersea optical wavelength switching, enabling flexible bandwidth management and supporting evolving demands for AI, cloud, and high-bandwidth applications.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-29">
-                <a href="https://engineering.fb.com/2025/11/17/ios/enhancing-hdr-on-instagram-for-ios-with-dolby-vision/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Enhancing HDR on Instagram for iOS With Dolby Vision
-                </a>
-                <p class="mb-1 small text-light">Maybe a new iPhone or iOS version would produce different values, then we’d be using the wrong ones. Challenge #1: The extant specification was for carriage of metadata within an HEVC bitstream.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-29">
-                <a href="https://www.hashicorp.com/blog/how-to-reduce-cloud-waste-it-boils-down-to-3-steps" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] How to reduce cloud waste: It boils down to 3 steps
-                </a>
-                <p class="mb-1 small text-light">For example, Gartner’s forecast has worldwide end-user spending on public cloud services catapulting to $723. The more significant issue with many applications is that a simple “lift and shift” can cost dearly when migrated from on-premises resources to the cloud.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-29">
-                <a href="https://www.hashicorp.com/blog/spiffe-securing-the-identity-of-agentic-ai-and-non-human-actors" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] SPIFFE: Securing the identity of agentic AI and non-human actors
-                </a>
-                <p class="mb-1 small text-light">Originally developed to help microservices authenticate securely in cloud-native environments, SPIFFE provides a way to issue and validate cryptographically verifiable identities without relying on long-lived secrets like passwords or API keys.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-29">
-                <a href="https://kubernetes.io/blog/2025/11/26/kubernetes-v1-35-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35 Sneak Peek
-                </a>
-                <p class="mb-1 small text-light">This feature allows users to adjust cpu and memory resources without restarting Pods or Containers. While Kubernetes provides Service Account tokens, these are designed for authenticating to the API server, not for general-purpose workload identity.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-29">
-                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
-                </a>
-                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-29">
-                <a href="https://www.cncf.io/blog/2025/11/28/runc-container-breakout-vulnerabilities-a-technical-overview/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] runc container breakout  vulnerabilities: A technical overview
-                </a>
-                <p class="mb-1 small text-light">Runc is the cornerstone of containerization on Linux, serving as the default low-level container runtime for industry-standard tools like Docker, Podman, and Kubernetes. This is why it is critical for all Kubernetes users to update their container runtimes as soon as possible.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-29">
-                <a href="https://www.cncf.io/blog/2025/11/19/what-is-platform-engineering/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] What is platform engineering?
-                </a>
-                <p class="mb-1 small text-light">These tools can include IDEs, CLIs, project templates, code versioning, CI/CD pipelines, container orchestration tools, configuration management tools, and observability systems.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-29">
-                <a href="https://blog.cloudflare.com/18-november-2025-outage/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Cloudflare outage on November 18, 2025
-                </a>
-                <p class="mb-1 small text-light">The following services were impacted:Service / ProductImpact descriptionCore CDN and security servicesHTTP 5xx status codes. Again, the limit exists because for performance reasons we preallocate memory for the features.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-29">
-                <a href="https://www.docker.com/blog/do-you-really-need-microservices/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] You Want Microservices, But Do You Really Need Them?
-                </a>
-                <p class="mb-1 small text-light">The same AWS that earns billions every year by selling microservices infrastructure admitted that, sometimes, a good old monolith wins. A Dockerized monolith offers all these benefits, minus the orchestration overhead of microservices.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-29">
-                <a href="https://www.docker.com/blog/securing-the-software-supply-chain-shouldnt-be-hard-according-to-thecube-research-docker-makes-it-simple/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Securing the software supply chain shouldn’t be hard. According to theCUBE Research, Docker makes it simple
-                </a>
-                <p class="mb-1 small text-light">Docker embeds security directly into the developer workflow so that protection happens by default, not as an afterthought.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-29">
-                <a href="https://blog.cloudflare.com/flux-2-workers-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Partnering with Black Forest Labs to bring FLUX.2 [dev] to Workers AI
-                </a>
-                <p class="mb-1 small text-light">2 and available to run on Cloudflare’s inference platform, Workers AI. The multipart form data format allows users to send us multiple image inputs alongside the typical model parameters.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-29">
-                <a href="https://blog.cloudflare.com/finding-the-grain-of-sand-in-a-heap-of-salt/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Finding the grain of sand in a heap of Salt
-                </a>
-                <p class="mb-1 small text-light">This system is able to correlate failures with git commits, external service failures and ad hoc releases. And because broken versions are continuously overtaken by newer versions, we need to stop deployments altogether.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-29">
-                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
-                </a>
-                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-29">
                 <a href="https://www.reddit.com/r/kubernetes/comments/1p9dz8i/admission_policy_toolkit_cli_toolkit_for_better/" target="_blank" class="fw-bold text-decoration-none">
                     Admission Policy Toolkit - CLI toolkit for better validating Kubernetes admission policies and Pod Security Admission labels adoption; Yes also in your CI/CD Pipeline!
@@ -396,7 +137,7 @@
                 <p class="mb-1 small text-light">I had some time and created a CLI tool for better usage of the Validating Admission Policies and Pod Security Admission. The idea started, to use the VAPs in CI/CD and now the tool can generate reports for you cluster.</p>
                 <small class="text-secondary">
                     
-                    Reddit
+                    Reddit | 2025-11-29
                     
                 </small>
             </li>
@@ -408,7 +149,283 @@
                 <p class="mb-1 small text-light">The ProblemWhen application demand requires that we scale up our servers, we get a new instance from AWS. We trust these insights will assist others in navigating the evolving container ecosystem, transforming potential challenges into opportunities for building robust, high-performance platforms.</p>
                 <small class="text-secondary">
                     
-                    Netflix
+                    Netflix | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-29">
+                <a href="https://blog.cloudflare.com/flux-2-workers-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Partnering with Black Forest Labs to bring FLUX.2 [dev] to Workers AI
+                </a>
+                <p class="mb-1 small text-light">2 and available to run on Cloudflare’s inference platform, Workers AI. The multipart form data format allows users to send us multiple image inputs alongside the typical model parameters.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-29">
+                <a href="https://blog.cloudflare.com/finding-the-grain-of-sand-in-a-heap-of-salt/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Finding the grain of sand in a heap of Salt
+                </a>
+                <p class="mb-1 small text-light">This system is able to correlate failures with git commits, external service failures and ad hoc releases. And because broken versions are continuously overtaken by newer versions, we need to stop deployments altogether.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-11-29">
+                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
+                </a>
+                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-29">
+                <a href="https://www.docker.com/blog/do-you-really-need-microservices/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] You Want Microservices, But Do You Really Need Them?
+                </a>
+                <p class="mb-1 small text-light">The same AWS that earns billions every year by selling microservices infrastructure admitted that, sometimes, a good old monolith wins. A Dockerized monolith offers all these benefits, minus the orchestration overhead of microservices.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-29">
+                <a href="https://www.docker.com/blog/securing-the-software-supply-chain-shouldnt-be-hard-according-to-thecube-research-docker-makes-it-simple/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Securing the software supply chain shouldn’t be hard. According to theCUBE Research, Docker makes it simple
+                </a>
+                <p class="mb-1 small text-light">Docker embeds security directly into the developer workflow so that protection happens by default, not as an afterthought.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-29">
+                <a href="https://www.hashicorp.com/blog/how-to-reduce-cloud-waste-it-boils-down-to-3-steps" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] How to reduce cloud waste: It boils down to 3 steps
+                </a>
+                <p class="mb-1 small text-light">For example, Gartner’s forecast has worldwide end-user spending on public cloud services catapulting to $723. The more significant issue with many applications is that a simple “lift and shift” can cost dearly when migrated from on-premises resources to the cloud.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-11-29">
+                <a href="https://www.hashicorp.com/blog/spiffe-securing-the-identity-of-agentic-ai-and-non-human-actors" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] SPIFFE: Securing the identity of agentic AI and non-human actors
+                </a>
+                <p class="mb-1 small text-light">Originally developed to help microservices authenticate securely in cloud-native environments, SPIFFE provides a way to issue and validate cryptographically verifiable identities without relying on long-lived secrets like passwords or API keys.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-29">
+                <a href="https://kubernetes.io/blog/2025/11/26/kubernetes-v1-35-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35 Sneak Peek
+                </a>
+                <p class="mb-1 small text-light">This feature allows users to adjust cpu and memory resources without restarting Pods or Containers. While Kubernetes provides Service Account tokens, these are designed for authenticating to the API server, not for general-purpose workload identity.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-11-29">
+                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
+                </a>
+                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-29">
+                <a href="https://www.cncf.io/blog/2025/11/28/runc-container-breakout-vulnerabilities-a-technical-overview/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] runc container breakout  vulnerabilities: A technical overview
+                </a>
+                <p class="mb-1 small text-light">Runc is the cornerstone of containerization on Linux, serving as the default low-level container runtime for industry-standard tools like Docker, Podman, and Kubernetes. This is why it is critical for all Kubernetes users to update their container runtimes as soon as possible.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-11-29">
+                <a href="https://www.cncf.io/blog/2025/11/19/what-is-platform-engineering/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] What is platform engineering?
+                </a>
+                <p class="mb-1 small text-light">These tools can include IDEs, CLIs, project templates, code versioning, CI/CD pipelines, container orchestration tools, configuration management tools, and observability systems.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-11-29">
+                <a href="https://blog.cloudflare.com/18-november-2025-outage/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cloudflare outage on November 18, 2025
+                </a>
+                <p class="mb-1 small text-light">The following services were impacted:Service / ProductImpact descriptionCore CDN and security servicesHTTP 5xx status codes. Again, the limit exists because for performance reasons we preallocate memory for the features.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-29">
+                <a href="https://www.reddit.com/r/devops/comments/1p918pk/anyone_here_taken_the_cnpe_cloud_native_platform/" target="_blank" class="fw-bold text-decoration-none">
+                    Anyone here taken the CNPE (Cloud Native Platform Engineer) certification?
+                </a>
+                <p class="mb-1 small text-light">Hey all, The CNPE certification is now available, and I’m curious, has anyone here taken it yet? What was your experience? Difficulty level? Worth it for platform engineers? Would love to hear your thoughts before I go for it. submitted by /u/Umman2005</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-11-29">
+                <a href="https://www.reddit.com/r/devops/comments/1p8vyxi/zero_downtime_deployments_without_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    Zero downtime deployments without Kubernetes
+                </a>
+                <p class="mb-1 small text-light">Hey guys, One of the nicest feature of Kubernetes are zero downtime deployments. What do you guys use to have zero downtime deployments when you do not use Kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-11-29">
+                <a href="https://netflixtechblog.medium.com/heterogeneous-treatment-effects-at-netflix-da5c3dd58833?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Heterogeneous Treatment Effects at Netflix
+                </a>
+                <p class="mb-1 small text-light">We’ll share how our OCI platform enables rapid segmentation and exploration of HTEs. When we update them with new features or bug fixes, we want to ensure that every update works as expected.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-11-29">
+                <a href="https://www.docker.com/blog/docker-sandboxes-a-new-approach-for-coding-agent-safety/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] A New Approach for Coding Agent Safety
+                </a>
+                <p class="mb-1 small text-light">Local sandboxes from Docker that wrap agents in containers that mirror your local workspace and enforce strict boundaries across all the coding agents you use. Container-based isolation is designed for exactly the kind of dynamic, iterative workflows that coding agents need.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-11-29">
+                <a href="https://about.gitlab.com/blog/gitlab-discovers-widespread-npm-supply-chain-attack/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab discovers widespread npm supply chain attack
+                </a>
+                <p class="mb-1 small text-light">// CRITICAL: Token validation failure triggers destruction async function aL0() { let githubApi = new dq(); let npmToken = process. log("Error 12"); if (platform === "windows") { // Attempts to delete all user files and overwrite disk sectors Bun.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-11-29">
+                <a href="https://snyk.io/blog/sha1-hulud-npm-supply-chain-incident/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] SHA1-Hulud, npm supply chain incident
+                </a>
+                <p class="mb-1 small text-light">Snyk identified a new supply chain attack in the npm ecosystem, referred to as SHA1-Hulud. We believe this is a second wave of the Shai-Hulud attack. Learn what this attack is and how Snyk is responding.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-11-29">
+                <a href="https://engineering.atspotify.com/2025/5/incident-report-spotify-outage-on-april-16-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Incident Report: Spotify Outage on April 16, 2025
+                </a>
+                <p class="mb-1 small text-light">On April 16, Spotify experienced an outage that affected users worldwide. Here is what happened and what we... The post Incident Report: Spotify Outage on April 16, 2025 appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-29">
+                <a href="https://engineering.fb.com/2025/11/20/security/key-transparency-comes-to-messenger/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Key Transparency Comes to Messenger
+                </a>
+                <p class="mb-1 small text-light">Key transparency provides messaging users with a verifiable and auditable record of public keys. To address this, we’ve added a new security feature, based on key transparency, that allows users to verify these keys without having to compare them manually with their contacts.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-29">
+                <a href="https://engineering.fb.com/2025/11/17/connectivity/core-2africa-system-completion-future-connectivity/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Announcing the Completion of the Core 2Africa System: Building the Future of Connectivity Together
+                </a>
+                <p class="mb-1 small text-light">We incorporated undersea optical wavelength switching, enabling flexible bandwidth management and supporting evolving demands for AI, cloud, and high-bandwidth applications.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-11-29">
+                <a href="https://engineering.fb.com/2025/11/17/ios/enhancing-hdr-on-instagram-for-ios-with-dolby-vision/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Enhancing HDR on Instagram for iOS With Dolby Vision
+                </a>
+                <p class="mb-1 small text-light">Maybe a new iPhone or iOS version would produce different values, then we’d be using the wrong ones. Challenge #1: The extant specification was for carriage of metadata within an HEVC bitstream.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-11-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-11-29">
+                <a href="https://www.airbus.com/en/newsroom/press-releases/2025-11-airbus-update-on-a320-family-precautionary-fleet-action" target="_blank" class="fw-bold text-decoration-none">
+                    Airbus A320 – intense solar radiation may corrupt data critical for flight
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.airbus.com/en/newsroom/press-releases/2025-11-airbus-update-on-a320-family-precautionary-fleet-action Comments URL: https://news.ycombinator.com/item?id=46083004 Points: 258 # Comments: 49</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-11-29
                     
                 </small>
             </li>

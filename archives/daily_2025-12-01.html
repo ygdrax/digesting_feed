@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - December 01, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - December 01, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for December 01, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-12-01">2025-12-01 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2025-12-01 08:08:20
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,266 +132,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-12-01">
-                <a href="https://www.tpart.net/about-x210ai/" target="_blank" class="fw-bold text-decoration-none">
-                    X210Ai is a new motherboard to upgrade ThinkPad X201/200
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-01">
+                <a href="https://www.hashicorp.com/blog/terraform-aws-provider-5-billion-downloads-state-of-cloud-infrastructure" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform AWS provider: What 5 billion downloads say about the state of cloud infrastructure
                 </a>
-                <p class="mb-1 small text-light">Article URL: https://www.tpart.net/about-x210ai/ Comments URL: https://news.ycombinator.com/item?id=46103097 Points: 65 # Comments: 15</p>
+                <p class="mb-1 small text-light">New updates are published every week, delivering incremental improvements, new resource coverage, and support for the latest AWS features.</p>
                 <small class="text-secondary">
                     
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-12-01">
-                <a href="https://codeberg.org/fairyglade/ly" target="_blank" class="fw-bold text-decoration-none">
-                    Ly – A lightweight TUI (ncurses-like) display manager for Linux and BSD
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://codeberg.org/fairyglade/ly Comments URL: https://news.ycombinator.com/item?id=46101996 Points: 30 # Comments: 0</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-01">
-                <a href="https://www.reddit.com/r/devops/comments/1pam23g/microservices_dependency_maintenance_hell_which/" target="_blank" class="fw-bold text-decoration-none">
-                    Microservices Dependency Maintenance Hell: Which Bot gives Maximum Value for Minimum Noise?
-                </a>
-                <p class="mb-1 small text-light">If this is true, it's the silver bullet for low-noise, high-impact security automation. Has anyone truly leveraged Frogbot's Contextual Analysis across a large fleet of microservices.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-01">
-                <a href="https://www.reddit.com/r/devops/comments/1pal8o3/how_do_you_design_cicd_evaluation_tracking_for/" target="_blank" class="fw-bold text-decoration-none">
-                    How do you design CI/CD + evaluation tracking for Generative AI systems?
-                </a>
-                <p class="mb-1 small text-light">Hi everyone, my experience mainly on R&D AI Engineer. Now, I need to figure out or setup a CI/CD pipeline to save time and standardize development process for my team.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-01">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1pazape/kubernetes_x_jobsethow_coevolving_makes_ai_jobs/" target="_blank" class="fw-bold text-decoration-none">
-                    Kubernetes x JobSet：How CoEvolving Makes AI Jobs Restart 10× Faster
-                </a>
-                <p class="mb-1 small text-light">com/2025/12/01/kubernetes-x-jobset%ef%bc%9ahow-coevolving-makes-ai-jobs-restart-10x-faster/ - this blog talks about using in-place pod restart in jobset to save time for restarting a jobset. 34, you can use container exit policy for container restart; In next v1.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-01">
-                <a href="https://www.redhat.com/en/blog/sovereignty-emerges-defining-cloud-challenge-emea-enterprises" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Sovereignty emerges as the defining cloud challenge for EMEA enterprises
-                </a>
-                <p class="mb-1 small text-light">Sovereignty concerns are the greatest barrier to cloud adoption for large enterprises across EMEA, as cited by 63% of respondents to a Red Hat survey of over 900 IT managers, directors and AI engineers across nine countries.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-01">
-                <a href="https://engineering.atspotify.com/2025/11/context-engineering-background-coding-agents-part-2/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Background Coding Agents: Context Engineering (Part 2)
-                </a>
-                <p class="mb-1 small text-light">In Part 2, we explore context engineering for background coding agents and what makes a good migration prompt. The post Background Coding Agents: Context Engineering (Part 2) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-01">
-                <a href="https://engineering.atspotify.com/2025/11/shuffle-making-random-feel-more-human/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Shuffle: Making Random Feel More Human
-                </a>
-                <p class="mb-1 small text-light">Shuffle has always been one of Spotify’s most-used features, and also one of the most misunderstood. For... The post Shuffle: Making Random Feel More Human appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-01">
-                <a href="https://engineering.atspotify.com/2025/11/spotifys-background-coding-agent-part-1/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] 1,500+ PRs Later: Spotify’s Journey with Our Background Coding Agent (Part 1)
-                </a>
-                <p class="mb-1 small text-light">For years, developer productivity has improved through better tooling. We have smarter IDEs, faster builds,... The post 1,500+ PRs Later: Spotify’s Journey with Our Background Coding Agent (Part 1) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-01">
-                <a href="https://engineering.atspotify.com/2025/9/spotifys-experiments-with-learning-framework/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Beyond Winning: Spotify’s Experiments with Learning Framework
-                </a>
-                <p class="mb-1 small text-light">TL;DR Spotify’s experimentation platform, Confidence, scaled product decision-making across hundreds of... The post Beyond Winning: Spotify’s Experiments with Learning Framework appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-01">
-                <a href="https://aws.amazon.com/blogs/aws/aws-clean-rooms-launches-privacy-enhancing-synthetic-dataset-generation-for-ml-model-training/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Clean Rooms launches privacy-enhancing synthetic dataset generation for ML model training
-                </a>
-                <p class="mb-1 small text-light">However, using granular data such as user-level event data from multiple parties raises significant privacy concerns and compliance challenges. The feature is available in all commercial AWS Regions where AWS Clean Rooms is available.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-01">
-                <a href="https://aws.amazon.com/blogs/aws/aws-partner-central-now-available-in-aws-management-console/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Partner Central now available in AWS Management Console
-                </a>
-                <p class="mb-1 small text-light">Many of our most successful Partners began as AWS customers—first using our services to build their own infrastructure and solutions, then expanding to create offerings for others.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-01">
-                <a href="https://kubernetes.io/blog/2025/11/06/gateway-api-v1-4/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Gateway API 1.4: New Features
-                </a>
-                <p class="mb-1 small text-light">While this reduces the overhead of establishing new connections, it introduces a security risk in the context of API gateways. 1: Service mesh, GRPCRoute, and a whole lot more (May 2024) New Experimental Features in Gateway API v1.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-01">
-                <a href="https://blog.cloudflare.com/waf-payload-logging/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Get better visibility for the WAF with payload logging
-                </a>
-                <p class="mb-1 small text-light">As the surface area for attacks on the web increases, Cloudflare’s Web Application Firewall (WAF) provides a myriad of solutions to mitigate these attacks. Cloudflare’s WAF protects origin servers from different kinds of layer 7 attacks, which are attacks that target the application layer.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2025-12-01">
-                <a href="https://eng.lyft.com/lyftlearn-evolution-rethinking-ml-platform-architecture-547de6c950e1?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
-                    [Lyft Engineering] LyftLearn Evolution: Rethinking ML Platform Architecture
-                </a>
-                <p class="mb-1 small text-light">K8s Orchestration Service translated job requests into Kubernetes resources. Observability relied on our standard monitoring infrastructure, not on AWS CloudWatch.</p>
-                <small class="text-secondary">
-                    
-                    Lyft Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-01">
-                <a href="https://www.reddit.com/r/devops/comments/1paj5ej/endtoend_cloud_infra_deployments/" target="_blank" class="fw-bold text-decoration-none">
-                    End-to-end cloud infra deployments
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/theshawnshop</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-01">
-                <a href="https://www.redhat.com/en/blog/deterministic-performance-red-hat-enterprise-linux-industrial-edge" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Deterministic performance: Why Red Hat Enterprise Linux is the engine for industrial edge
-                </a>
-                <p class="mb-1 small text-light">In industrial environments, the drive toward smart manufacturing means blending the worlds of operational technology (OT) and information technology (IT). This unification demands a reliable platform that provides low latency as well as predictable latency—what we call deterministic performance.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-01">
-                <a href="https://snyk.io/blog/snyk-studio-for-qodo/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] How Snyk Studio for Qodo Is Closing the AI Security Gap
-                </a>
-                <p class="mb-1 small text-light">Discover how the Snyk and Qodo partnership closes the AI security gap. Snyk Studio for Qodo embeds security into AI development to secure code from the start and clear security debt.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-12-01">
-                <a href="https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Efficient Optimization With Ax, an Open Platform for Adaptive Experimentation
-                </a>
-                <p class="mb-1 small text-light">Adaptive experimentation offers a solution to this problem by actively proposing new configurations for sequential evaluation, leveraging insights gained from previous evaluations This year, we released version 1.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-01">
-                <a href="https://kubernetes.io/blog/2025/11/25/configuration-good-practices/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes Configuration Good Practices
-                </a>
-                <p class="mb-1 small text-light">General configuration practices Use the latest stable API version Kubernetes evolves fast. Managing Workloads: Pods, Deployments, and Jobs A common early mistake in Kubernetes is creating Pods directly.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-01">
-                <a href="https://www.cncf.io/blog/2025/11/27/from-chaos-to-clarity-how-opentelemetry-unified-observability-across-clouds/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] From chaos to clarity: How OpenTelemetry unified observability across clouds
-                </a>
-                <p class="mb-1 small text-light">The problem: Observability tool sprawl Let’s break down what was happening before OpenTelemetry: Multiple tools for the same purpose Metrics: Prometheus (on-prem) + CloudWatch (AWS) + Azure Monitor (Azure).</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-01">
-                <a href="https://www.pulumi.com/blog/beyond-yaml-kubernetes-2026-automation-era/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Beyond YAML in Kubernetes: The 2026 Automation Era
-                </a>
-                <p class="mb-1 small text-light">Kubernetes automation is entering a new era where infrastructure as code, policy enforcement, and AI-driven orchestration work together to manage cloud environments intelligently.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
+                    HashiCorp | 2025-12-01
                     
                 </small>
             </li>
@@ -386,7 +151,7 @@
                 <p class="mb-1 small text-light">This advisory immediately entered Docker Scout’s continuous monitoring pipeline, where it followed the same automated workflow that handles CVE ingestion.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2025-12-01
                     
                 </small>
             </li>
@@ -398,19 +163,271 @@
                 <p class="mb-1 small text-light">Zoomer has delivered training time reductions, and significant QPS improvements, making it the de-facto tool for AI performance optimization across Meta’s entire AI infrastructure.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2025-12-01
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-01">
-                <a href="https://www.hashicorp.com/blog/terraform-aws-provider-5-billion-downloads-state-of-cloud-infrastructure" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform AWS provider: What 5 billion downloads say about the state of cloud infrastructure
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-01">
+                <a href="https://kubernetes.io/blog/2025/11/25/configuration-good-practices/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes Configuration Good Practices
                 </a>
-                <p class="mb-1 small text-light">New updates are published every week, delivering incremental improvements, new resource coverage, and support for the latest AWS features.</p>
+                <p class="mb-1 small text-light">General configuration practices Use the latest stable API version Kubernetes evolves fast. Managing Workloads: Pods, Deployments, and Jobs A common early mistake in Kubernetes is creating Pods directly.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    Kubernetes | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-01">
+                <a href="https://www.cncf.io/blog/2025/11/27/from-chaos-to-clarity-how-opentelemetry-unified-observability-across-clouds/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] From chaos to clarity: How OpenTelemetry unified observability across clouds
+                </a>
+                <p class="mb-1 small text-light">The problem: Observability tool sprawl Let’s break down what was happening before OpenTelemetry: Multiple tools for the same purpose Metrics: Prometheus (on-prem) + CloudWatch (AWS) + Azure Monitor (Azure).</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-01">
+                <a href="https://www.pulumi.com/blog/beyond-yaml-kubernetes-2026-automation-era/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Beyond YAML in Kubernetes: The 2026 Automation Era
+                </a>
+                <p class="mb-1 small text-light">Kubernetes automation is entering a new era where infrastructure as code, policy enforcement, and AI-driven orchestration work together to manage cloud environments intelligently.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-01">
+                <a href="https://www.reddit.com/r/devops/comments/1paj5ej/endtoend_cloud_infra_deployments/" target="_blank" class="fw-bold text-decoration-none">
+                    End-to-end cloud infra deployments
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/theshawnshop</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-01">
+                <a href="https://www.redhat.com/en/blog/deterministic-performance-red-hat-enterprise-linux-industrial-edge" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Deterministic performance: Why Red Hat Enterprise Linux is the engine for industrial edge
+                </a>
+                <p class="mb-1 small text-light">In industrial environments, the drive toward smart manufacturing means blending the worlds of operational technology (OT) and information technology (IT). This unification demands a reliable platform that provides low latency as well as predictable latency—what we call deterministic performance.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-01">
+                <a href="https://snyk.io/blog/snyk-studio-for-qodo/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] How Snyk Studio for Qodo Is Closing the AI Security Gap
+                </a>
+                <p class="mb-1 small text-light">Discover how the Snyk and Qodo partnership closes the AI security gap. Snyk Studio for Qodo embeds security into AI development to secure code from the start and clear security debt.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-12-01">
+                <a href="https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Efficient Optimization With Ax, an Open Platform for Adaptive Experimentation
+                </a>
+                <p class="mb-1 small text-light">Adaptive experimentation offers a solution to this problem by actively proposing new configurations for sequential evaluation, leveraging insights gained from previous evaluations This year, we released version 1.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-01">
+                <a href="https://aws.amazon.com/blogs/aws/aws-clean-rooms-launches-privacy-enhancing-synthetic-dataset-generation-for-ml-model-training/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Clean Rooms launches privacy-enhancing synthetic dataset generation for ML model training
+                </a>
+                <p class="mb-1 small text-light">However, using granular data such as user-level event data from multiple parties raises significant privacy concerns and compliance challenges. The feature is available in all commercial AWS Regions where AWS Clean Rooms is available.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-01">
+                <a href="https://aws.amazon.com/blogs/aws/aws-partner-central-now-available-in-aws-management-console/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Partner Central now available in AWS Management Console
+                </a>
+                <p class="mb-1 small text-light">Many of our most successful Partners began as AWS customers—first using our services to build their own infrastructure and solutions, then expanding to create offerings for others.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-01">
+                <a href="https://kubernetes.io/blog/2025/11/06/gateway-api-v1-4/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Gateway API 1.4: New Features
+                </a>
+                <p class="mb-1 small text-light">While this reduces the overhead of establishing new connections, it introduces a security risk in the context of API gateways. 1: Service mesh, GRPCRoute, and a whole lot more (May 2024) New Experimental Features in Gateway API v1.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-01">
+                <a href="https://blog.cloudflare.com/waf-payload-logging/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Get better visibility for the WAF with payload logging
+                </a>
+                <p class="mb-1 small text-light">As the surface area for attacks on the web increases, Cloudflare’s Web Application Firewall (WAF) provides a myriad of solutions to mitigate these attacks. Cloudflare’s WAF protects origin servers from different kinds of layer 7 attacks, which are attacks that target the application layer.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2025-12-01">
+                <a href="https://eng.lyft.com/lyftlearn-evolution-rethinking-ml-platform-architecture-547de6c950e1?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
+                    [Lyft Engineering] LyftLearn Evolution: Rethinking ML Platform Architecture
+                </a>
+                <p class="mb-1 small text-light">K8s Orchestration Service translated job requests into Kubernetes resources. Observability relied on our standard monitoring infrastructure, not on AWS CloudWatch.</p>
+                <small class="text-secondary">
+                    
+                    Lyft Engineering | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-01">
+                <a href="https://www.reddit.com/r/devops/comments/1pam23g/microservices_dependency_maintenance_hell_which/" target="_blank" class="fw-bold text-decoration-none">
+                    Microservices Dependency Maintenance Hell: Which Bot gives Maximum Value for Minimum Noise?
+                </a>
+                <p class="mb-1 small text-light">If this is true, it's the silver bullet for low-noise, high-impact security automation. Has anyone truly leveraged Frogbot's Contextual Analysis across a large fleet of microservices.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-01">
+                <a href="https://www.reddit.com/r/devops/comments/1pal8o3/how_do_you_design_cicd_evaluation_tracking_for/" target="_blank" class="fw-bold text-decoration-none">
+                    How do you design CI/CD + evaluation tracking for Generative AI systems?
+                </a>
+                <p class="mb-1 small text-light">Hi everyone, my experience mainly on R&D AI Engineer. Now, I need to figure out or setup a CI/CD pipeline to save time and standardize development process for my team.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-01">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pazape/kubernetes_x_jobsethow_coevolving_makes_ai_jobs/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubernetes x JobSet：How CoEvolving Makes AI Jobs Restart 10× Faster
+                </a>
+                <p class="mb-1 small text-light">com/2025/12/01/kubernetes-x-jobset%ef%bc%9ahow-coevolving-makes-ai-jobs-restart-10x-faster/ - this blog talks about using in-place pod restart in jobset to save time for restarting a jobset. 34, you can use container exit policy for container restart; In next v1.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-01">
+                <a href="https://www.redhat.com/en/blog/sovereignty-emerges-defining-cloud-challenge-emea-enterprises" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Sovereignty emerges as the defining cloud challenge for EMEA enterprises
+                </a>
+                <p class="mb-1 small text-light">Sovereignty concerns are the greatest barrier to cloud adoption for large enterprises across EMEA, as cited by 63% of respondents to a Red Hat survey of over 900 IT managers, directors and AI engineers across nine countries.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-01">
+                <a href="https://engineering.atspotify.com/2025/11/context-engineering-background-coding-agents-part-2/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Background Coding Agents: Context Engineering (Part 2)
+                </a>
+                <p class="mb-1 small text-light">In Part 2, we explore context engineering for background coding agents and what makes a good migration prompt. The post Background Coding Agents: Context Engineering (Part 2) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-01">
+                <a href="https://engineering.atspotify.com/2025/11/shuffle-making-random-feel-more-human/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Shuffle: Making Random Feel More Human
+                </a>
+                <p class="mb-1 small text-light">Shuffle has always been one of Spotify’s most-used features, and also one of the most misunderstood. For... The post Shuffle: Making Random Feel More Human appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-01">
+                <a href="https://engineering.atspotify.com/2025/11/spotifys-background-coding-agent-part-1/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] 1,500+ PRs Later: Spotify’s Journey with Our Background Coding Agent (Part 1)
+                </a>
+                <p class="mb-1 small text-light">For years, developer productivity has improved through better tooling. We have smarter IDEs, faster builds,... The post 1,500+ PRs Later: Spotify’s Journey with Our Background Coding Agent (Part 1) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-01">
+                <a href="https://engineering.atspotify.com/2025/9/spotifys-experiments-with-learning-framework/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Beyond Winning: Spotify’s Experiments with Learning Framework
+                </a>
+                <p class="mb-1 small text-light">TL;DR Spotify’s experimentation platform, Confidence, scaled product decision-making across hundreds of... The post Beyond Winning: Spotify’s Experiments with Learning Framework appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-12-01">
+                <a href="https://www.tpart.net/about-x210ai/" target="_blank" class="fw-bold text-decoration-none">
+                    X210Ai is a new motherboard to upgrade ThinkPad X201/200
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.tpart.net/about-x210ai/ Comments URL: https://news.ycombinator.com/item?id=46103097 Points: 65 # Comments: 15</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-12-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-12-01">
+                <a href="https://codeberg.org/fairyglade/ly" target="_blank" class="fw-bold text-decoration-none">
+                    Ly – A lightweight TUI (ncurses-like) display manager for Linux and BSD
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://codeberg.org/fairyglade/ly Comments URL: https://news.ycombinator.com/item?id=46101996 Points: 30 # Comments: 0</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-12-01
                     
                 </small>
             </li>

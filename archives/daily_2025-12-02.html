@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - December 02, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - December 02, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for December 02, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-12-02">2025-12-02 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 10 sources • Updated 2025-12-02 08:07:22
+                    Showing 25 total articles from 
+                    10 sources
+                    
                     
                 </span>
             </small>
@@ -107,278 +124,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
-                <a href="https://www.reddit.com/r/devops/comments/1pc1b36/helm_container_images_across_clusters_need_better/" target="_blank" class="fw-bold text-decoration-none">
-                    Helm + container images across clusters... need better options
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-02">
+                <a href="https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-3/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Pulumi Kubernetes Operator v2.3.0: Preview Mode and Structured Configuration
                 </a>
-                <p class="mb-1 small text-light">submitted by /u/Timely-Dinner5772</p>
+                <p class="mb-1 small text-light">0 GA release, this update addresses long-standing community requests while maintaining full backwards compatibility. These features enable safer, more sophisticated infrastructure management patterns for platform engineering teams.</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
-                <a href="https://www.reddit.com/r/devops/comments/1pc1rb2/collaboration_devops_engineer_for_a_decentralized/" target="_blank" class="fw-bold text-decoration-none">
-                    [Collaboration] DevOps Engineer for a Decentralized AI Compute Network (DistriAI)
-                </a>
-                <p class="mb-1 small text-light">Think DePIN × AI orchestration, with an emphasis on performance, security, and reliability.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
-                <a href="https://www.reddit.com/r/devops/comments/1pbd14u/best_container_image_security_tool_for_growing/" target="_blank" class="fw-bold text-decoration-none">
-                    Best container image security tool for growing company?
-                </a>
-                <p class="mb-1 small text-light">Mentioned it here earlier but now leading a devops team following a quick departure by the person who hired me. I’m looking for something that handles vulnerability fatigue, CI/CD, etc.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
-                <a href="https://www.reddit.com/r/devops/comments/1pblub0/the_hidden_cost_of_cold_starts_defeating_ebs_lazy/" target="_blank" class="fw-bold text-decoration-none">
-                    The Hidden Cost of “Cold Starts”: Defeating EBS Lazy Loading in AI Pipelines
-                </a>
-                <p class="mb-1 small text-light">So i was working on ML Workload Optimization and faced some issues regarding Lazy Start and First Touch Latency. These are the things which we miss while doing the optimization for our high throught pipelines.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
-                <a href="https://www.reddit.com/r/devops/comments/1pbu14k/smbs_struggling_with_clouddevopssre_lets/" target="_blank" class="fw-bold text-decoration-none">
-                    SMBs struggling with Cloud/DevOps/SRE? Let’s collaborate.
-                </a>
-                <p class="mb-1 small text-light">Hey everyone- I’m looking to collaborate with SMBs that want reliable, scalable, and cost-efficient cloud infrastructure without hiring a full in-house DevOps/SRE team.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1pc2mcm/agent_sandbox_prewarming_pool_makes_secure/" target="_blank" class="fw-bold text-decoration-none">
-                    Agent Sandbox: Pre-Warming Pool Makes Secure Containers Cold-Start Lightning Fast
-                </a>
-                <p class="mb-1 small text-light">com/2025/12/02/agent-sandbox-pre-warming-pool-makes-secure-containers-cold-start-lightning-fast/ Agent Sandbox provides a secure, isolated, and efficient execution environment for AI agents. This blog explores the project, its integration with gVisor and Kata Containers, and future trends.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1pb9odp/unified_opensource_observability_solution_for/" target="_blank" class="fw-bold text-decoration-none">
-                    Unified Open-Source Observability Solution for Kubernetes
-                </a>
-                <p class="mb-1 small text-light">I’m looking for recommendations from the community. What open-source tools or platforms do you suggest for complete observability on Kubernetes — covering metrics, logs, traces, alerting, dashboards, etc.? Would love to hear what you're using and what you’d recommend. Thanks! submitted by /u/st_nam</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-02">
-                <a href="https://aws.amazon.com/blogs/aws/introducing-aws-transform-custom-crush-tech-debt-with-ai-powered-code-modernization/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Introducing AWS Transform custom: Crush tech debt with AI-powered code modernization
-                </a>
-                <p class="mb-1 small text-light">Infrastructure and enterprise-scale transformations The challenge of keeping up with evolving APIs and SDKs becomes particularly acute in cloud-based environments where services are continuously improving.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-02">
-                <a href="https://www.hashicorp.com/blog/how-to-reduce-cloud-waste-it-boils-down-to-3-steps" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] How to reduce cloud waste: It boils down to 3 steps
-                </a>
-                <p class="mb-1 small text-light">For example, Gartner’s forecast has worldwide end-user spending on public cloud services catapulting to $723. The more significant issue with many applications is that a simple “lift and shift” can cost dearly when migrated from on-premises resources to the cloud.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-02">
-                <a href="https://kubernetes.io/blog/2025/11/26/kubernetes-v1-35-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35 Sneak Peek
-                </a>
-                <p class="mb-1 small text-light">This feature allows users to adjust cpu and memory resources without restarting Pods or Containers. While Kubernetes provides Service Account tokens, these are designed for authenticating to the API server, not for general-purpose workload identity.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-02">
-                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
-                </a>
-                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-02">
-                <a href="https://www.cncf.io/blog/2025/12/01/a-guide-to-restarting-pods-in-kubernetes-using-kubectl/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] A guide to restarting pods in Kubernetes using kubectl
-                </a>
-                <p class="mb-1 small text-light">It allows you to manage pods, deployments, and other resources from the terminal, helping you troubleshoot Kubernetes issues. Knowing when to restart a Kubernetes pod is key to maintaining application stability and performance.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-02">
-                <a href="https://www.cncf.io/blog/2025/11/28/runc-container-breakout-vulnerabilities-a-technical-overview/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] runc container breakout  vulnerabilities: A technical overview
-                </a>
-                <p class="mb-1 small text-light">Runc is the cornerstone of containerization on Linux, serving as the default low-level container runtime for industry-standard tools like Docker, Podman, and Kubernetes. This is why it is critical for all Kubernetes users to update their container runtimes as soon as possible.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-02">
-                <a href="https://blog.cloudflare.com/18-november-2025-outage/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Cloudflare outage on November 18, 2025
-                </a>
-                <p class="mb-1 small text-light">The following services were impacted:Service / ProductImpact descriptionCore CDN and security servicesHTTP 5xx status codes. Again, the limit exists because for performance reasons we preallocate memory for the features.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-12-02">
-                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Streamlining Security Investigations with Agents
-                </a>
-                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1pc0ubd/fips_1403_containers_without_killing_our_cicd/" target="_blank" class="fw-bold text-decoration-none">
-                    FIPS 140-3 containers without killing our CI/CD.. anyone solved this at real scale?
-                </a>
-                <p class="mb-1 small text-light">Hey, we are trying to get proper FIPS 140-3 validated container images into production without making every single release take forever. Like, shipping validated containers multiple times a week without the whole team aging 10 years.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1pb7d7u/looking_for_a_truly_simple_singlebinary/" target="_blank" class="fw-bold text-decoration-none">
-                    Looking for a Truly Simple, Single-Binary, Kubernetes-Native CI/CD Pipeline. Does It Exist?
-                </a>
-                <p class="mb-1 small text-light">Either the system grows too many moving parts or the Kubernetes operator isn't maintained well. Lately I've been building various Kubernetes operators, both public and private, and if this is still an unsolved problem I'm considering designing something new to address it.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-02">
-                <a href="https://www.docker.com/blog/do-you-really-need-microservices/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] You Want Microservices, But Do You Really Need Them?
-                </a>
-                <p class="mb-1 small text-light">The same AWS that earns billions every year by selling microservices infrastructure admitted that, sometimes, a good old monolith wins. A Dockerized monolith offers all these benefits, minus the orchestration overhead of microservices.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-02">
-                <a href="https://www.docker.com/blog/securing-the-software-supply-chain-shouldnt-be-hard-according-to-thecube-research-docker-makes-it-simple/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Securing the software supply chain shouldn’t be hard. According to theCUBE Research, Docker makes it simple
-                </a>
-                <p class="mb-1 small text-light">Docker embeds security directly into the developer workflow so that protection happens by default, not as an afterthought.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-02">
-                <a href="https://www.redhat.com/en/blog/frequently-asked-questions-about-red-hat-ansible-automation-platform-26" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Frequently asked questions about Red Hat Ansible Automation Platform 2.6
-                </a>
-                <p class="mb-1 small text-light">6, and introduced several new features including an automation dashboard, a self-service automation portal, and the Ansible Lightspeed intelligent assistant. We hosted a follow-up webinar, What’s new with Ansible Automation Platform 2.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-02">
-                <a href="https://aws.amazon.com/blogs/aws/aws-transform-for-mainframe-introduces-reimagine-capabilities-and-automated-testing-functionality/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Transform for mainframe introduces Reimagine capabilities and automated testing functionality
-                </a>
-                <p class="mb-1 small text-light">Deploy and test to deploy the generated microservices to Amazon Web Services (AWS) using IaC and to test the functionality of the modernized application.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-02">
-                <a href="https://blog.cloudflare.com/flux-2-workers-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Partnering with Black Forest Labs to bring FLUX.2 [dev] to Workers AI
-                </a>
-                <p class="mb-1 small text-light">2 and available to run on Cloudflare’s inference platform, Workers AI. The multipart form data format allows users to send us multiple image inputs alongside the typical model parameters.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-12-02">
-                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
-                </a>
-                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
+                    Pulumi | 2025-12-02
                     
                 </small>
             </li>
@@ -390,19 +143,283 @@
                 <p class="mb-1 small text-light">Are there any good reasons anymore to use a Virtual Machine (leaving alone emulation needs for cross-compiling) over Docker or devcontainers when developing an application. I keep hearing that at this point there is no reason as even container security can be hardened.</p>
                 <small class="text-secondary">
                     
-                    Reddit
+                    Reddit | 2025-12-02
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-02">
-                <a href="https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-3/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Pulumi Kubernetes Operator v2.3.0: Preview Mode and Structured Configuration
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-02">
+                <a href="https://aws.amazon.com/blogs/aws/aws-transform-for-mainframe-introduces-reimagine-capabilities-and-automated-testing-functionality/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Transform for mainframe introduces Reimagine capabilities and automated testing functionality
                 </a>
-                <p class="mb-1 small text-light">0 GA release, this update addresses long-standing community requests while maintaining full backwards compatibility. These features enable safer, more sophisticated infrastructure management patterns for platform engineering teams.</p>
+                <p class="mb-1 small text-light">Deploy and test to deploy the generated microservices to Amazon Web Services (AWS) using IaC and to test the functionality of the modernized application.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Amazon AWS | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-02">
+                <a href="https://blog.cloudflare.com/flux-2-workers-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Partnering with Black Forest Labs to bring FLUX.2 [dev] to Workers AI
+                </a>
+                <p class="mb-1 small text-light">2 and available to run on Cloudflare’s inference platform, Workers AI. The multipart form data format allows users to send us multiple image inputs alongside the typical model parameters.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-12-02">
+                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
+                </a>
+                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pc0ubd/fips_1403_containers_without_killing_our_cicd/" target="_blank" class="fw-bold text-decoration-none">
+                    FIPS 140-3 containers without killing our CI/CD.. anyone solved this at real scale?
+                </a>
+                <p class="mb-1 small text-light">Hey, we are trying to get proper FIPS 140-3 validated container images into production without making every single release take forever. Like, shipping validated containers multiple times a week without the whole team aging 10 years.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pb7d7u/looking_for_a_truly_simple_singlebinary/" target="_blank" class="fw-bold text-decoration-none">
+                    Looking for a Truly Simple, Single-Binary, Kubernetes-Native CI/CD Pipeline. Does It Exist?
+                </a>
+                <p class="mb-1 small text-light">Either the system grows too many moving parts or the Kubernetes operator isn't maintained well. Lately I've been building various Kubernetes operators, both public and private, and if this is still an unsolved problem I'm considering designing something new to address it.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-02">
+                <a href="https://www.docker.com/blog/do-you-really-need-microservices/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] You Want Microservices, But Do You Really Need Them?
+                </a>
+                <p class="mb-1 small text-light">The same AWS that earns billions every year by selling microservices infrastructure admitted that, sometimes, a good old monolith wins. A Dockerized monolith offers all these benefits, minus the orchestration overhead of microservices.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-02">
+                <a href="https://www.docker.com/blog/securing-the-software-supply-chain-shouldnt-be-hard-according-to-thecube-research-docker-makes-it-simple/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Securing the software supply chain shouldn’t be hard. According to theCUBE Research, Docker makes it simple
+                </a>
+                <p class="mb-1 small text-light">Docker embeds security directly into the developer workflow so that protection happens by default, not as an afterthought.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-02">
+                <a href="https://www.redhat.com/en/blog/frequently-asked-questions-about-red-hat-ansible-automation-platform-26" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Frequently asked questions about Red Hat Ansible Automation Platform 2.6
+                </a>
+                <p class="mb-1 small text-light">6, and introduced several new features including an automation dashboard, a self-service automation portal, and the Ansible Lightspeed intelligent assistant. We hosted a follow-up webinar, What’s new with Ansible Automation Platform 2.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-02">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-aws-transform-custom-crush-tech-debt-with-ai-powered-code-modernization/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing AWS Transform custom: Crush tech debt with AI-powered code modernization
+                </a>
+                <p class="mb-1 small text-light">Infrastructure and enterprise-scale transformations The challenge of keeping up with evolving APIs and SDKs becomes particularly acute in cloud-based environments where services are continuously improving.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-02">
+                <a href="https://www.hashicorp.com/blog/how-to-reduce-cloud-waste-it-boils-down-to-3-steps" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] How to reduce cloud waste: It boils down to 3 steps
+                </a>
+                <p class="mb-1 small text-light">For example, Gartner’s forecast has worldwide end-user spending on public cloud services catapulting to $723. The more significant issue with many applications is that a simple “lift and shift” can cost dearly when migrated from on-premises resources to the cloud.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-02">
+                <a href="https://kubernetes.io/blog/2025/11/26/kubernetes-v1-35-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35 Sneak Peek
+                </a>
+                <p class="mb-1 small text-light">This feature allows users to adjust cpu and memory resources without restarting Pods or Containers. While Kubernetes provides Service Account tokens, these are designed for authenticating to the API server, not for general-purpose workload identity.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-02">
+                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
+                </a>
+                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-02">
+                <a href="https://www.cncf.io/blog/2025/12/01/a-guide-to-restarting-pods-in-kubernetes-using-kubectl/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] A guide to restarting pods in Kubernetes using kubectl
+                </a>
+                <p class="mb-1 small text-light">It allows you to manage pods, deployments, and other resources from the terminal, helping you troubleshoot Kubernetes issues. Knowing when to restart a Kubernetes pod is key to maintaining application stability and performance.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-02">
+                <a href="https://www.cncf.io/blog/2025/11/28/runc-container-breakout-vulnerabilities-a-technical-overview/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] runc container breakout  vulnerabilities: A technical overview
+                </a>
+                <p class="mb-1 small text-light">Runc is the cornerstone of containerization on Linux, serving as the default low-level container runtime for industry-standard tools like Docker, Podman, and Kubernetes. This is why it is critical for all Kubernetes users to update their container runtimes as soon as possible.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-02">
+                <a href="https://blog.cloudflare.com/18-november-2025-outage/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cloudflare outage on November 18, 2025
+                </a>
+                <p class="mb-1 small text-light">The following services were impacted:Service / ProductImpact descriptionCore CDN and security servicesHTTP 5xx status codes. Again, the limit exists because for performance reasons we preallocate memory for the features.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-12-02">
+                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Streamlining Security Investigations with Agents
+                </a>
+                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
+                <a href="https://www.reddit.com/r/devops/comments/1pc1b36/helm_container_images_across_clusters_need_better/" target="_blank" class="fw-bold text-decoration-none">
+                    Helm + container images across clusters... need better options
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/Timely-Dinner5772</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
+                <a href="https://www.reddit.com/r/devops/comments/1pc1rb2/collaboration_devops_engineer_for_a_decentralized/" target="_blank" class="fw-bold text-decoration-none">
+                    [Collaboration] DevOps Engineer for a Decentralized AI Compute Network (DistriAI)
+                </a>
+                <p class="mb-1 small text-light">Think DePIN × AI orchestration, with an emphasis on performance, security, and reliability.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
+                <a href="https://www.reddit.com/r/devops/comments/1pbd14u/best_container_image_security_tool_for_growing/" target="_blank" class="fw-bold text-decoration-none">
+                    Best container image security tool for growing company?
+                </a>
+                <p class="mb-1 small text-light">Mentioned it here earlier but now leading a devops team following a quick departure by the person who hired me. I’m looking for something that handles vulnerability fatigue, CI/CD, etc.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
+                <a href="https://www.reddit.com/r/devops/comments/1pblub0/the_hidden_cost_of_cold_starts_defeating_ebs_lazy/" target="_blank" class="fw-bold text-decoration-none">
+                    The Hidden Cost of “Cold Starts”: Defeating EBS Lazy Loading in AI Pipelines
+                </a>
+                <p class="mb-1 small text-light">So i was working on ML Workload Optimization and faced some issues regarding Lazy Start and First Touch Latency. These are the things which we miss while doing the optimization for our high throught pipelines.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
+                <a href="https://www.reddit.com/r/devops/comments/1pbu14k/smbs_struggling_with_clouddevopssre_lets/" target="_blank" class="fw-bold text-decoration-none">
+                    SMBs struggling with Cloud/DevOps/SRE? Let’s collaborate.
+                </a>
+                <p class="mb-1 small text-light">Hey everyone- I’m looking to collaborate with SMBs that want reliable, scalable, and cost-efficient cloud infrastructure without hiring a full in-house DevOps/SRE team.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pc2mcm/agent_sandbox_prewarming_pool_makes_secure/" target="_blank" class="fw-bold text-decoration-none">
+                    Agent Sandbox: Pre-Warming Pool Makes Secure Containers Cold-Start Lightning Fast
+                </a>
+                <p class="mb-1 small text-light">com/2025/12/02/agent-sandbox-pre-warming-pool-makes-secure-containers-cold-start-lightning-fast/ Agent Sandbox provides a secure, isolated, and efficient execution environment for AI agents. This blog explores the project, its integration with gVisor and Kata Containers, and future trends.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-02">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pb9odp/unified_opensource_observability_solution_for/" target="_blank" class="fw-bold text-decoration-none">
+                    Unified Open-Source Observability Solution for Kubernetes
+                </a>
+                <p class="mb-1 small text-light">I’m looking for recommendations from the community. What open-source tools or platforms do you suggest for complete observability on Kubernetes — covering metrics, logs, traces, alerting, dashboards, etc.? Would love to hear what you're using and what you’d recommend. Thanks! submitted by /u/st_nam</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-02
                     
                 </small>
             </li>

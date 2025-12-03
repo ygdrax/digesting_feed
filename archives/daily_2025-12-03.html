@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - December 03, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - December 03, 2025
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for December 03, 2025
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-12-03">2025-12-03 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    12 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-03">
+                <a href="https://www.hashicorp.com/blog/day-2-infrastructure-management-with-terraform-actions" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform actions now generally available, simplifying Day 2 infrastructure management
+                </a>
+                <p class="mb-1 small text-light">In today’s hybrid and multi-cloud world, there has been an explosion of new applications, tools, and services that organizations can now use to become more efficient.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-03">
+                <a href="https://azure.microsoft.com/en-us/blog/announcing-azure-copilot-agents-and-ai-infrastructure-innovations/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Announcing Azure Copilot agents and AI infrastructure innovations
+                </a>
+                <p class="mb-1 small text-light">This year at Microsoft Ignite 2025, we’re showing how Microsoft Azure modernizes cloud infrastructure at global scale—built for reliability, security, and performance in the AI era. Most run a mix of systems that span decades—from mission-critical databases to new cloud-native services.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-03">
+                <a href="https://www.cncf.io/blog/2025/11/20/an-architectural-decision-containers-on-bare-metal-or-on-virtual-machines/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] An architectural decision: Containers on bare metal or on virtual machines
+                </a>
+                <p class="mb-1 small text-light">Building and running modern applications begins with selecting Kubernetes distribution as a baseline. Historically, running workloads in containers on bare metal appealed to organizations that prioritized maximum performance and minimal infrastructure overhead.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-03">
+                <a href="https://www.pulumi.com/blog/pulumi-kubernetes-operator-and-kargo/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Change Management with the Pulumi Kubernetes Operator and Kargo
+                </a>
+                <p class="mb-1 small text-light">While it’s commonly used for application deployments, it also works for infrastructure code managed by PKO. This example enables automatic promotion for preview and deployment stages: apiVersion: kargo.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-03">
+                <a href="https://www.reddit.com/r/devops/comments/1pcsb6m/hiring_streaming_infrastructure_engineer_build/" target="_blank" class="fw-bold text-decoration-none">
+                    📢 [HIRING] Streaming Infrastructure Engineer – Build IRL Hosting Platform (Small scale)
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/kyylexox</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-03">
+                <a href="https://www.reddit.com/r/devops/comments/1pcpgk5/did_anyone_interview_for_security_engineer_roles/" target="_blank" class="fw-bold text-decoration-none">
+                    Did anyone interview for Security Engineer roles (Platform Security, AppSec, Al Security, or DevSecOps) at Al companies like OpenAl, Anthropic, xAI, or Meta Al?
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/No-Bit5316</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-03">
+                <a href="https://netflixtechblog.medium.com/unlocking-entertainment-intelligence-with-knowledge-graph-da4b22090141?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Unlocking Entertainment Intelligence with Knowledge Graph
+                </a>
+                <p class="mb-1 small text-light">Rich semantic connectivity allows us to rapidly derive insights without cumbersome joins or manual lookups. This significantly reduces the overhead and complexity typically associated with onboarding new datasets.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-03">
+                <a href="https://azure.microsoft.com/en-us/blog/azure-at-microsoft-ignite-2025-all-the-intelligent-cloud-news-explained/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Azure at Microsoft Ignite 2025: All the intelligent cloud news explained
+                </a>
+                <p class="mb-1 small text-light">Azure provides that with built-in security, governance, and observability, so you can innovate boldly without compromise. Now in preview, this integration helps protect cloud-native applications across the full app lifecycle, from code to cloud.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-03">
+                <a href="https://www.docker.com/blog/building-ai-agents-shouldnt-be-hard-according-to-thecube-research-docker-makes-it-easy/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Building AI agents shouldn’t be hard. According to theCUBE Research, Docker makes it easy
+                </a>
+                <p class="mb-1 small text-light">Docker is emerging as essential infrastructure for standardized, portable, and scalable AI environments. Whether you’re connecting an LLM to a database or linking services into a full agentic workflow, Docker makes it plug-and-play.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-03">
+                <a href="https://www.docker.com/blog/security-that-strengthens-the-ecosystem-dockers-upstream-approach-to-cve-2025-12735/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Security that strengthens the ecosystem: Docker’s upstream approach to CVE-2025-12735
+                </a>
+                <p class="mb-1 small text-light">Web applications, data processing pipelines, AI tools, and analytics platforms all get safer because the fix lives where it belongs. This is possible because Docker’s security architecture is designed for a high-speed workflow without sacrificing thoroughness or attention to detail.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-03">
+                <a href="https://snyk.io/blog/snyk-log-sniffer/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Snyk Log Sniffer: AI-Powered Audit Log Insights for Security Leaders
+                </a>
+                <p class="mb-1 small text-light">Introducing Log Sniffer: an innovative open source solution powered by Google Gemini AI that transforms Snyk audit logs into instant, actionable security and engineering intelligence.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-03">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-s3-storage-lens-adds-performance-metrics-support-for-billions-of-prefixes-and-export-to-s3-tables/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon S3 Storage Lens adds performance metrics, support for billions of prefixes, and export to S3 Tables
+                </a>
+                <p class="mb-1 small text-light">For example, the service helps you identify small objects in a bucket or prefix that can slow down application performance. This integration enables cross-account and cross-Region analysis, custom dashboard creation, and data correlation with other AWS services.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-03">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-bedrock-agentcore-adds-quality-evaluations-and-policy-controls-for-deploying-trusted-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon Bedrock AgentCore adds quality evaluations and policy controls for deploying trusted AI agents
+                </a>
+                <p class="mb-1 small text-light">AgentCore Code Interpreter provides Workday Planning Agent with secure data protection and essential features for financial data exploration. Because the results are in CloudWatch, you can use all of its feature to create, for example, alarms and automations.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-03">
+                <a href="https://aws.amazon.com/blogs/aws/build-multi-step-applications-and-ai-workflows-with-aws-lambda-durable-functions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Build multi-step applications and AI workflows with AWS Lambda durable functions
+                </a>
+                <p class="mb-1 small text-light">Building these traditionally required significant effort to implement state management, handle failures, and integrate multiple infrastructure services. You can review the source code, contribute improvements, and stay updated with the latest features.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-03">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-rds-for-oracle-and-rds-for-sql-server-add-new-capabilities-to-enhance-performance-and-optimize-costs/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] New capabilities to optimize costs and improve scalability on Amazon RDS for SQL Server and Oracle
+                </a>
+                <p class="mb-1 small text-light">This release brings significant cost savings to your development and testing environments, while maintaining consistency with your production configurations.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-03">
+                <a href="https://www.hashicorp.com/blog/re-invent-2025-how-hashicorp-and-aws-are-simplifying-cloud-operations" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] re:Invent 2025: How HashiCorp and AWS are simplifying cloud operations
+                </a>
+                <p class="mb-1 small text-light">Terraform delivers launch-day support for new AWS services The Terraform AWS provider is the integration that allows teams to define, provision, and manage AWS resources using Terraform’s declarative configuration language.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-03">
+                <a href="https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Ingress NGINX Retirement: What You Need to Know
+                </a>
+                <p class="mb-1 small text-light">(Gateway API is a newer way to achieve many of the same goals. It became very popular due to its tremendous flexibility, breadth of features, and independence from any particular cloud or infrastructure provider.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-03">
+                <a href="https://blog.cloudflare.com/why-replicate-joining-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Why Replicate is joining Cloudflare
+                </a>
+                <p class="mb-1 small text-light">Then we built Replicate as the platform to run Cog models as API endpoints in the cloud. The modern AI stack has model inference, but also microservices, content delivery, object storage, caching, databases, telemetry, etc.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-12-03">
+                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dash uses context engineering for smarter AI
+                </a>
+                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-12-03">
+                <a href="https://dropbox.tech/machine-learning/practical-blueprint-evaluating-conversational-ai-at-scale-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] A practical blueprint for evaluating conversational AI at scale
+                </a>
+                <p class="mb-1 small text-light">It brought structure to our workflows by helping us manage datasets, scorers, experiments, automation, tracing, and monitoring. At its core, the platform gave us four key capabilities.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-03">
+                <a href="https://www.reddit.com/r/devops/comments/1pcio1c/rss_feeds_devops_cloud_etc/" target="_blank" class="fw-bold text-decoration-none">
+                    RSS Feeds - DevOps, Cloud, etc
+                </a>
+                <p class="mb-1 small text-light">Kind of a fun post here but wanted to refresh my Reeder app and do some spring cleaning.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-03">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1pcxa7b/how_do_you_keep_up_with_security_when_the_attack/" target="_blank" class="fw-bold text-decoration-none">
+                    How do you keep up with security when "The Attack Surface" includes every cloud setting, mobile device, and SaaS tool?
+                </a>
+                <p class="mb-1 small text-light">It feels like security vendors keep selling us tools that focus on only one silo (Vulnerability Scanning, Cloud Posture Management, etc. Reactive Firefighting: We spend all our time fixing the loudest, but not necessarily the most critical, issues.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-03">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pcaw8i/kubernetes_135_changes_around_security_new/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubernetes 1.35 - Changes around security - New features and deprecations
+                </a>
+                <p class="mb-1 small text-light">Hi all, there's been a few round ups on the new stuff in Kubernetes 1. 😅 The list of enhancements I detected that had impact on security: Changes in Kubernetes 1.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-03">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pcr8n1/how_to_choose_the_inference_orchestration/" target="_blank" class="fw-bold text-decoration-none">
+                    How to choose the inference orchestration solution? AIBrix or Kthena or Dynamo?
+                </a>
+                <p class="mb-1 small text-light">https://pacoxu.wordpress.com/2025/12/03/how-to-choose-the-inference-orchestration-solution-aibrix-or-kthena-or-dynamo/ Workload Orchestration Projects llm-d - Dual LWS architecture for P/D Kthena - Volcano-based Serving Group AIBrix - StormService for P/D Dynamo - NVIDIA inference platform RBG - LWS-inspired batch scheduler Pattern llm-d Kthena AIBrix Dynamo RBG LWS-based ✓ (dual) ✗ ✗ ✓ (option) ✓ (inspired) P/D disaggregation ✓ ✓ ✓ ✓ ✓ Intelligent routing ✓ ✓ ✓ ✓ ✓ KV cache management LMCache Native Distributed Native Native submitted by /u/Electronic_Role_5981</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-03">
+                <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] AV1 — Now Powering 30% of Netflix Streaming
+                </a>
+                <p class="mb-1 small text-light">However, because film grain is inherently random, faithfully representing it in digital video requires a significant amount of data. Continuous improvements to its performance and compatibility have made dav1d the preferred choice for a wide range of platforms and practical applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-12-03
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

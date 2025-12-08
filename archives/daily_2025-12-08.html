@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - December 08, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - December 08, 2025
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for December 08, 2025
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-12-08">2025-12-08 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    12 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="Hacker News">Hacker News</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Sentry">Sentry</option>
+                
+                <option value="Slack Engineering">Slack Engineering</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-08">
+                <a href="https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-3/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Pulumi Kubernetes Operator v2.3.0: Preview Mode and Structured Configuration
+                </a>
+                <p class="mb-1 small text-light">0 GA release, this update addresses long-standing community requests while maintaining full backwards compatibility. These features enable safer, more sophisticated infrastructure management patterns for platform engineering teams.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-08">
+                <a href="https://www.reddit.com/r/devops/comments/1ph5bzp/ai_is_going_to_run_cloud_infrastructure_whether/" target="_blank" class="fw-bold text-decoration-none">
+                    AI Is Going To Run Cloud Infrastructure. Whether You Believe It Or Not.
+                </a>
+                <p class="mb-1 small text-light">Provisioning cloud resources isn’t more complex than plenty of work AI already handles. Cloud infrastructure will be AI-run.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-08">
+                <a href="https://www.redhat.com/en/blog/red-hat-openshift-sandboxed-containers-111-and-red-hat-build-trustee-10-accelerate-confidential-computing-across-hybrid-cloud" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat OpenShift sandboxed containers 1.11 and Red Hat build of Trustee 1.0 accelerate confidential computing across the hybrid cloud
+                </a>
+                <p class="mb-1 small text-light">Red Hat is excited to announce the release of Red Hat OpenShift sandboxed containers 1. Organizations can now protect their most sensitive workloads with hardware-based memory encryption and attestation capabilities across cloud and on-premises infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-08">
+                <a href="https://blog.cloudflare.com/flux-2-workers-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Partnering with Black Forest Labs to bring FLUX.2 [dev] to Workers AI
+                </a>
+                <p class="mb-1 small text-light">2 and available to run on Cloudflare’s inference platform, Workers AI. The multipart form data format allows users to send us multiple image inputs alongside the typical model parameters.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-12-08">
+                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
+                </a>
+                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-08">
+                <a href="https://kubernetes.io/blog/2025/11/26/kubernetes-v1-35-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35 Sneak Peek
+                </a>
+                <p class="mb-1 small text-light">This feature allows users to adjust cpu and memory resources without restarting Pods or Containers. While Kubernetes provides Service Account tokens, these are designed for authenticating to the API server, not for general-purpose workload identity.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-08">
+                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
+                </a>
+                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-08">
+                <a href="https://www.cncf.io/blog/2025/12/04/my-first-kubecon-cloudnativecon-a-journey-through-community-inclusivity-and-neurodiversity/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] My first KubeCon + CloudNativeCon: A journey through community, inclusivity, and neurodiversity
+                </a>
+                <p class="mb-1 small text-light">Merge Forward provides a safe place for people to share experiences, find community, and ask for help without judgment. And KubeCon + CloudNativeCon proved just how needed this work is.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-08">
+                <a href="https://www.cncf.io/blog/2025/12/01/a-guide-to-restarting-pods-in-kubernetes-using-kubectl/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] A guide to restarting pods in Kubernetes using kubectl
+                </a>
+                <p class="mb-1 small text-light">It allows you to manage pods, deployments, and other resources from the terminal, helping you troubleshoot Kubernetes issues. Knowing when to restart a Kubernetes pod is key to maintaining application stability and performance.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-08">
+                <a href="https://www.cncf.io/blog/2025/11/28/runc-container-breakout-vulnerabilities-a-technical-overview/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] runc container breakout  vulnerabilities: A technical overview
+                </a>
+                <p class="mb-1 small text-light">Runc is the cornerstone of containerization on Linux, serving as the default low-level container runtime for industry-standard tools like Docker, Podman, and Kubernetes. This is why it is critical for all Kubernetes users to update their container runtimes as soon as possible.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-12-08">
+                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Streamlining Security Investigations with Agents
+                </a>
+                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-08">
+                <a href="https://www.pulumi.com/blog/future-cloud-infrastructure-10-trends-shaping-2024-and-beyond/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Future of the Cloud: 10 Trends Shaping 2026 and Beyond
+                </a>
+                <p class="mb-1 small text-light">Modern cloud teams use: Infrastructure as Code for consistent multi-cloud provisioning and environment standardization, forming the backbone of AI infrastructure orchestration Reusable components and internal platforms to define scalable architecture patterns and accelerate delivery across Kubern...</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-08">
+                <a href="https://www.reddit.com/r/devops/comments/1pgl9ug/how_do_you_balance_simplicity_and_performance_in/" target="_blank" class="fw-bold text-decoration-none">
+                    How do you balance simplicity and performance in your cloud setup?
+                </a>
+                <p class="mb-1 small text-light">The app itself is a multi-container setup with a backend API, frontend, reverse proxy, and a PostgreSQL database. The problem was that builds on the server were slow, and setting up a proper CI/CD pipeline for multiple containers became more complicated than expected.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-08">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1pgl5lj/anyone_monitoring_what_employees_paste_into_ai/" target="_blank" class="fw-bold text-decoration-none">
+                    Anyone monitoring what employees paste into AI browsers?
+                </a>
+                <p class="mb-1 small text-light">Sure, productivity gains are nice, but feels like we just opened a massive data exfiltration vector. Traditional DLP doesn't catch this stuff since it's all HTTPS to legitimate domains.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-08">
+                <a href="https://www.redhat.com/en/blog/solving-tool-overload-one-automation-step-time" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Solving tool overload, one automation step at a time
+                </a>
+                <p class="mb-1 small text-light">This complexity makes efficient management and integration a significant obstacle, especially as organizations accelerate their investment in hybrid IT ecosystems, cloud services, and cloud-native application modernization.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-12-08">
+                <a href="https://about.gitlab.com/blog/migration-from-azure-devops-to-gitlab/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Guide: Migrate from Azure DevOps to GitLab
+                </a>
+                <p class="mb-1 small text-light">With Congregate and professional services tools, we support additional assets such as wikis, work items, CI/CD variables, container images, packages, pipelines, and more (see this feature matrix). Integrations, CI/CD Variables, Deploy Keys Service Connections External auth to services/clouds.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-12-08">
+                <a href="https://about.gitlab.com/blog/continuously-deploying-the-largest-gitlab-instance/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] How we deploy the largest GitLab instance 12 times daily
+                </a>
+                <p class="mb-1 small text-light">Rapid deployment cycles mean we can respond to customer feedback within hours, ship security patches immediately, and validate new features in production before scaling them.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-12-08">
+                <a href="https://about.gitlab.com/blog/gitlab-discovers-widespread-npm-supply-chain-attack/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab discovers widespread npm supply chain attack
+                </a>
+                <p class="mb-1 small text-light">// CRITICAL: Token validation failure triggers destruction async function aL0() { let githubApi = new dq(); let npmToken = process. log("Error 12"); if (platform === "windows") { // Attempts to delete all user files and overwrite disk sectors Bun.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-08">
+                <a href="https://blog.sentry.io/sentry-just-got-an-upgrade-and-its-all-free/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] AI updates for all Sentry users
+                </a>
+                <p class="mb-1 small text-light">Get a first take on what’s causing an issueWhen you hit a new issue, the first question is usually “Where do I start. Sentry’s MCP can access data about your organizations, projects, teams, issues, errors, releases, performance and more.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-08">
+                <a href="https://snyk.io/blog/run-automcp-libraries-mcp-servers/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Run AutoMCP To Supercharge Your AI Agent with Libraries MCP Servers
+                </a>
+                <p class="mb-1 small text-light">Supercharge your AI agent! Learn how AutoMCP integrates Model Context Protocol (MCP) servers and Snyk Studio for secure, context-aware AI-driven development.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-08">
+                <a href="https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Security Advisory: Critical RCE Vulnerabilities in React Server Components (CVE-2025-55182)
+                </a>
+                <p class="mb-1 small text-light">Critical RCE vulnerabilities (CVE-2025-55182/CVE-2025-66478) were found in React Server Components and Next.js via unsafe deserialization. Immediate upgrade to patched versions is mandatory to prevent unauthenticated remote code execution. Learn how to detect and mitigate the critical flaw.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-12-08">
+                <a href="https://engineering.fb.com/2025/11/20/security/key-transparency-comes-to-messenger/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Key Transparency Comes to Messenger
+                </a>
+                <p class="mb-1 small text-light">Key transparency provides messaging users with a verifiable and auditable record of public keys. To address this, we’ve added a new security feature, based on key transparency, that allows users to verify these keys without having to compare them manually with their contacts.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-12-08">
+                <a href="https://engineering.fb.com/2025/11/17/connectivity/core-2africa-system-completion-future-connectivity/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Announcing the Completion of the Core 2Africa System: Building the Future of Connectivity Together
+                </a>
+                <p class="mb-1 small text-light">We incorporated undersea optical wavelength switching, enabling flexible bandwidth management and supporting evolving demands for AI, cloud, and high-bandwidth applications.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-12-08">
+                <a href="https://engineering.fb.com/2025/11/17/ios/enhancing-hdr-on-instagram-for-ios-with-dolby-vision/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Enhancing HDR on Instagram for iOS With Dolby Vision
+                </a>
+                <p class="mb-1 small text-light">Maybe a new iPhone or iOS version would produce different values, then we’d be using the wrong ones. Challenge #1: The extant specification was for carriage of metadata within an HEVC bitstream.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-12-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2025-12-08">
+                <a href="https://www.damnsmalllinux.org/" target="_blank" class="fw-bold text-decoration-none">
+                    Damn Small Linux
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.damnsmalllinux.org/ Comments URL: https://news.ycombinator.com/item?id=46187387 Points: 63 # Comments: 11</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2025-12-08
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

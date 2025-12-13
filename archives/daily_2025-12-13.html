@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - December 13, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - December 13, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for December 13, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-12-13">2025-12-13 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2025-12-13 08:06:33
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,278 +126,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-13">
-                <a href="https://www.reddit.com/r/devops/comments/1pku5b6/is_the_promise_of_aidriven_incident_management/" target="_blank" class="fw-bold text-decoration-none">
-                    Is the promise of "AI-driven" incident management just marketing hype for DevOps teams?
-                </a>
-                <p class="mb-1 small text-light">We are constantly evaluating new platforms to streamline our on-call workflow and reduce alert fatigue. I’m skeptical about whether these AIOps platforms truly deliver significant value for a team that already has well-defined runbooks and decent observability.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-13">
-                <a href="https://www.reddit.com/r/devops/comments/1pko996/eks_cicd_security_gates_too_many_false_positives/" target="_blank" class="fw-bold text-decoration-none">
-                    EKS CI/CD security gates, too many false positives?
-                </a>
-                <p class="mb-1 small text-light">We’ve been trying this security gate in our EKS pipelines. Right now we poll /api/v1/scans after Helm dry-run It works, but it’s clunky.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-13">
-                <a href="https://www.reddit.com/r/devops/comments/1pkthr3/tracking_dependencies_across_a_large_deployment/" target="_blank" class="fw-bold text-decoration-none">
-                    TRACKING DEPENDENCIES ACROSS A LARGE DEPLOYMENT PIPELINE
-                </a>
-                <p class="mb-1 small text-light">We have a large deployment environment where there are multiple custom tenants running different versions of code via release channels. I can run custom sboms against those tags but quickly hit the GH API limits.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-13">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1pkurgt/kubernetes_ingress_nginx_with_modsecurity_waf_eol/" target="_blank" class="fw-bold text-decoration-none">
-                    Kubernetes Ingress Nginx with ModSecurity WAF EOL?
-                </a>
-                <p class="mb-1 small text-light">Hi folks, as the most of you know, that ingress-nginx is EOL in march 2026, the same must migrate to another ingress controller. WAF middleware in traefik for example is for enterprise customers availably only.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-13">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1pisgbi/are_containers_with_persistent_storage_possible/" target="_blank" class="fw-bold text-decoration-none">
-                    Are containers with persistent storage possible?
-                </a>
-                <p class="mb-1 small text-light">With podman-rootless if we run a container, everything inside is persistent across stops / restarts until it is deleted. I am able to work with podman and provide a great persistent environment that stays until the container is deleted.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-13">
-                <a href="https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Introducing GPT-5.2 in Microsoft Foundry: The new standard for enterprise AI
-                </a>
-                <p class="mb-1 small text-light">2 series is built on new architecture, delivering superior performance, efficiency, and reasoning depth compared to prior generations. Application Modernization: Make rapid progress in refactoring services, generating tests, and producing migration plans with risk and rollback criteria.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-13">
-                <a href="https://www.docker.com/blog/aws-reinvent-kiro-docker-sandboxes-mcp-catalog/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Highlights from AWS re:Invent: Supercharging Kiro with Docker Sandboxes and MCP Catalog
-                </a>
-                <p class="mb-1 small text-light">At the recent AWS re:Invent, Docker focused on a very real developer problem: how to run AI agents locally without giving them access to your machine, credentials, or filesystem.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-13">
-                <a href="https://www.docker.com/blog/add-mcp-server-to-chatgpt/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] How to Add MCP Servers to ChatGPT with Docker MCP Toolkit
-                </a>
-                <p class="mb-1 small text-light">js Sandbox enables ChatGPT to execute JavaScript in isolated Docker containers. When ChatGPT requests JavaScript execution: Sandbox container makes Docker API calls Creates temporary Node.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-13">
-                <a href="https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon Bedrock adds reinforcement ﬁne-tuning simplifying how developers build smarter, more accurate AI models
-                </a>
-                <p class="mb-1 small text-light">For enhanced security, I can configure virtual private cloud (VPC) settings and AWS Key Management Service (AWS KMS) encryption to meet my organization’s compliance requirements.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-13">
-                <a href="https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] New serverless customization in Amazon SageMaker AI accelerates model fine-tuning
-                </a>
-                <p class="mb-1 small text-light">The new customization capability provides an easy-to-use interface for the latest fine-tuning techniques like reinforcement learning, so you can accelerate the AI model customization process from months to days.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-13">
-                <a href="https://aws.amazon.com/blogs/aws/introducing-checkpointless-and-elastic-training-on-amazon-sagemaker-hyperpod/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Introducing checkpointless and elastic training on Amazon SageMaker HyperPod
-                </a>
-                <p class="mb-1 small text-light">Rather than spending time managing training infrastructure, these new training techniques mean that your team can concentrate entirely on enhancing model performance, ultimately getting your AI models to market faster.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-13">
-                <a href="https://www.hashicorp.com/blog/hashicorp-year-in-review-2025-lessons-in-simplifying-the-cloud" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] HashiCorp year in review 2025: Lessons in simplifying the cloud
-                </a>
-                <p class="mb-1 small text-light">Most organizations now run across multiple public clouds, private environments, and emerging GPU platforms. HCP Vault Dedicated and AWS PrivateLink enable secure, low-latency, private connectivity that simplifies networking and reduces security risk.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-13">
-                <a href="https://kubernetes.io/blog/2025/11/06/gateway-api-v1-4/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Gateway API 1.4: New Features
-                </a>
-                <p class="mb-1 small text-light">While this reduces the overhead of establishing new connections, it introduces a security risk in the context of API gateways. 1: Service mesh, GRPCRoute, and a whole lot more (May 2024) New Experimental Features in Gateway API v1.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-13">
-                <a href="https://www.cncf.io/blog/2025/12/09/building-microservices-the-easy-way-with-dapr/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Building microservices the easy way with Dapr
-                </a>
-                <p class="mb-1 small text-light">Cloud Native Spotlight: KEDA & Dapr Projects | OpenObservability Talks The need that sparked Dapr Building microservices is hard. Dapr provides an application runtime for building microservices on Kubernetes.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-13">
-                <a href="https://blog.cloudflare.com/5-december-2025-outage/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Cloudflare outage on December 5, 2025
+                <a href="https://blog.cloudflare.com/shift-left-enterprise-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Shifting left at enterprise scale: how we manage Cloudflare with Infrastructure as Code
                 </a>
-                <p class="mb-1 small text-light">Cloudflare's Web Application Firewall (WAF) provides customers with protection against malicious payloads, allowing them to be detected and blocked.</p>
+                <p class="mb-1 small text-light">Furthermore, using the Cloudflare Terraform Provider internally allows us to actively dogfood the experience and improve it for our customers. Lesson 3: automation is key Cloudflare innovates quickly, so our set of products and APIs is ever-growing.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2025-12-13">
-                <a href="https://eng.lyft.com/lyftlearn-evolution-rethinking-ml-platform-architecture-547de6c950e1?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
-                    [Lyft Engineering] LyftLearn Evolution: Rethinking ML Platform Architecture
-                </a>
-                <p class="mb-1 small text-light">K8s Orchestration Service translated job requests into Kubernetes resources. Observability relied on our standard monitoring infrastructure, not on AWS CloudWatch.</p>
-                <small class="text-secondary">
-                    
-                    Lyft Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-13">
-                <a href="https://www.pulumi.com/blog/dependent-resource-replacements/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] New in Pulumi IaC: `replaceWith` Resource Option
-                </a>
-                <p class="mb-1 small text-light">If two services maintain open connections in the application layer, replacing one should trigger replacement of the other. In code import * as pulumi from "@pulumi/pulumi"; import * as aws from "@pulumi/aws"; const database = new aws.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-13">
-                <a href="https://www.docker.com/blog/ai-insider-threat-shadow-ai-risk-controls/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Is AI the New Insider Threat?
-                </a>
-                <p class="mb-1 small text-light">Employees don’t see themselves as creating security problems; they’re solving bottlenecks. With cloud file-sharing, security teams could trace uploads, monitor accounts created with corporate emails, or detect suspicious network traffic.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-12-13">
-                <a href="https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Efficient Optimization With Ax, an Open Platform for Adaptive Experimentation
-                </a>
-                <p class="mb-1 small text-light">Adaptive experimentation offers a solution to this problem by actively proposing new configurations for sequential evaluation, leveraging insights gained from previous evaluations This year, we released version 1.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-13">
-                <a href="https://www.hashicorp.com/blog/a-research-backed-look-at-why-cloud-ops-is-breaking-at-ai-s-doorstep" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] A research-backed look at why cloud ops is breaking at AI’s doorstep
-                </a>
-                <p class="mb-1 small text-light">Given this, it’s perhaps no surprise that 47% of companies listed security as the top cloud infrastructure challenge, per the complexity report. Root cause #1: Tool sprawl The systems intended to help streamline infrastructure and security operations can quickly become roadblocks.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-13">
-                <a href="https://kubernetes.io/blog/2025/11/25/configuration-good-practices/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes Configuration Good Practices
-                </a>
-                <p class="mb-1 small text-light">General configuration practices Use the latest stable API version Kubernetes evolves fast. Managing Workloads: Pods, Deployments, and Jobs A common early mistake in Kubernetes is creating Pods directly.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-13">
-                <a href="https://www.cncf.io/blog/2025/12/09/exploring-ai-observability-and-community-at-oss-summit-korea-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Exploring AI, observability and community at OSS Summit Korea 2025
-                </a>
-                <p class="mb-1 small text-light">Here are a few of the most interesting talks I attended, focusing heavily on AI, Observability, and LLM performance. About me I’m Akash Jaiswal and I work at Oracle as a Software Engineer in the Cloud and DevOps space.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-13">
-                <a href="https://blog.cloudflare.com/waf-rules-react-vulnerability/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Cloudflare WAF proactively protects against React vulnerability
-                </a>
-                <p class="mb-1 small text-light">Cloudflare has deployed a new protection to address a vulnerability in React Server Components (RSC). In response, Cloudflare has deployed new rules across its network, with the default action set to Block.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
+                    Cloudflare | 2025-12-13
                     
                 </small>
             </li>
@@ -392,19 +145,283 @@
                 <p class="mb-1 small text-light">Zoomer has delivered training time reductions, and significant QPS improvements, making it the de-facto tool for AI performance optimization across Meta’s entire AI infrastructure.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-13">
+                <a href="https://www.hashicorp.com/blog/a-research-backed-look-at-why-cloud-ops-is-breaking-at-ai-s-doorstep" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] A research-backed look at why cloud ops is breaking at AI’s doorstep
+                </a>
+                <p class="mb-1 small text-light">Given this, it’s perhaps no surprise that 47% of companies listed security as the top cloud infrastructure challenge, per the complexity report. Root cause #1: Tool sprawl The systems intended to help streamline infrastructure and security operations can quickly become roadblocks.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-13">
+                <a href="https://kubernetes.io/blog/2025/11/25/configuration-good-practices/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes Configuration Good Practices
+                </a>
+                <p class="mb-1 small text-light">General configuration practices Use the latest stable API version Kubernetes evolves fast. Managing Workloads: Pods, Deployments, and Jobs A common early mistake in Kubernetes is creating Pods directly.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-13">
+                <a href="https://www.cncf.io/blog/2025/12/09/exploring-ai-observability-and-community-at-oss-summit-korea-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Exploring AI, observability and community at OSS Summit Korea 2025
+                </a>
+                <p class="mb-1 small text-light">Here are a few of the most interesting talks I attended, focusing heavily on AI, Observability, and LLM performance. About me I’m Akash Jaiswal and I work at Oracle as a Software Engineer in the Cloud and DevOps space.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-12-13
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-13">
-                <a href="https://blog.cloudflare.com/shift-left-enterprise-scale/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Shifting left at enterprise scale: how we manage Cloudflare with Infrastructure as Code
+                <a href="https://blog.cloudflare.com/waf-rules-react-vulnerability/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cloudflare WAF proactively protects against React vulnerability
                 </a>
-                <p class="mb-1 small text-light">Furthermore, using the Cloudflare Terraform Provider internally allows us to actively dogfood the experience and improve it for our customers. Lesson 3: automation is key Cloudflare innovates quickly, so our set of products and APIs is ever-growing.</p>
+                <p class="mb-1 small text-light">Cloudflare has deployed a new protection to address a vulnerability in React Server Components (RSC). In response, Cloudflare has deployed new rules across its network, with the default action set to Block.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-13">
+                <a href="https://www.docker.com/blog/ai-insider-threat-shadow-ai-risk-controls/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Is AI the New Insider Threat?
+                </a>
+                <p class="mb-1 small text-light">Employees don’t see themselves as creating security problems; they’re solving bottlenecks. With cloud file-sharing, security teams could trace uploads, monitor accounts created with corporate emails, or detect suspicious network traffic.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-12-13">
+                <a href="https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Efficient Optimization With Ax, an Open Platform for Adaptive Experimentation
+                </a>
+                <p class="mb-1 small text-light">Adaptive experimentation offers a solution to this problem by actively proposing new configurations for sequential evaluation, leveraging insights gained from previous evaluations This year, we released version 1.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-13">
+                <a href="https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon Bedrock adds reinforcement ﬁne-tuning simplifying how developers build smarter, more accurate AI models
+                </a>
+                <p class="mb-1 small text-light">For enhanced security, I can configure virtual private cloud (VPC) settings and AWS Key Management Service (AWS KMS) encryption to meet my organization’s compliance requirements.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-13">
+                <a href="https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] New serverless customization in Amazon SageMaker AI accelerates model fine-tuning
+                </a>
+                <p class="mb-1 small text-light">The new customization capability provides an easy-to-use interface for the latest fine-tuning techniques like reinforcement learning, so you can accelerate the AI model customization process from months to days.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-13">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-checkpointless-and-elastic-training-on-amazon-sagemaker-hyperpod/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing checkpointless and elastic training on Amazon SageMaker HyperPod
+                </a>
+                <p class="mb-1 small text-light">Rather than spending time managing training infrastructure, these new training techniques mean that your team can concentrate entirely on enhancing model performance, ultimately getting your AI models to market faster.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-13">
+                <a href="https://www.hashicorp.com/blog/hashicorp-year-in-review-2025-lessons-in-simplifying-the-cloud" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] HashiCorp year in review 2025: Lessons in simplifying the cloud
+                </a>
+                <p class="mb-1 small text-light">Most organizations now run across multiple public clouds, private environments, and emerging GPU platforms. HCP Vault Dedicated and AWS PrivateLink enable secure, low-latency, private connectivity that simplifies networking and reduces security risk.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-13">
+                <a href="https://kubernetes.io/blog/2025/11/06/gateway-api-v1-4/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Gateway API 1.4: New Features
+                </a>
+                <p class="mb-1 small text-light">While this reduces the overhead of establishing new connections, it introduces a security risk in the context of API gateways. 1: Service mesh, GRPCRoute, and a whole lot more (May 2024) New Experimental Features in Gateway API v1.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-13">
+                <a href="https://www.cncf.io/blog/2025/12/09/building-microservices-the-easy-way-with-dapr/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Building microservices the easy way with Dapr
+                </a>
+                <p class="mb-1 small text-light">Cloud Native Spotlight: KEDA & Dapr Projects | OpenObservability Talks The need that sparked Dapr Building microservices is hard. Dapr provides an application runtime for building microservices on Kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-13">
+                <a href="https://blog.cloudflare.com/5-december-2025-outage/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cloudflare outage on December 5, 2025
+                </a>
+                <p class="mb-1 small text-light">Cloudflare's Web Application Firewall (WAF) provides customers with protection against malicious payloads, allowing them to be detected and blocked.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2025-12-13">
+                <a href="https://eng.lyft.com/lyftlearn-evolution-rethinking-ml-platform-architecture-547de6c950e1?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
+                    [Lyft Engineering] LyftLearn Evolution: Rethinking ML Platform Architecture
+                </a>
+                <p class="mb-1 small text-light">K8s Orchestration Service translated job requests into Kubernetes resources. Observability relied on our standard monitoring infrastructure, not on AWS CloudWatch.</p>
+                <small class="text-secondary">
+                    
+                    Lyft Engineering | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-13">
+                <a href="https://www.pulumi.com/blog/dependent-resource-replacements/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] New in Pulumi IaC: `replaceWith` Resource Option
+                </a>
+                <p class="mb-1 small text-light">If two services maintain open connections in the application layer, replacing one should trigger replacement of the other. In code import * as pulumi from "@pulumi/pulumi"; import * as aws from "@pulumi/aws"; const database = new aws.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-13">
+                <a href="https://www.reddit.com/r/devops/comments/1pku5b6/is_the_promise_of_aidriven_incident_management/" target="_blank" class="fw-bold text-decoration-none">
+                    Is the promise of "AI-driven" incident management just marketing hype for DevOps teams?
+                </a>
+                <p class="mb-1 small text-light">We are constantly evaluating new platforms to streamline our on-call workflow and reduce alert fatigue. I’m skeptical about whether these AIOps platforms truly deliver significant value for a team that already has well-defined runbooks and decent observability.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-13">
+                <a href="https://www.reddit.com/r/devops/comments/1pko996/eks_cicd_security_gates_too_many_false_positives/" target="_blank" class="fw-bold text-decoration-none">
+                    EKS CI/CD security gates, too many false positives?
+                </a>
+                <p class="mb-1 small text-light">We’ve been trying this security gate in our EKS pipelines. Right now we poll /api/v1/scans after Helm dry-run It works, but it’s clunky.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-13">
+                <a href="https://www.reddit.com/r/devops/comments/1pkthr3/tracking_dependencies_across_a_large_deployment/" target="_blank" class="fw-bold text-decoration-none">
+                    TRACKING DEPENDENCIES ACROSS A LARGE DEPLOYMENT PIPELINE
+                </a>
+                <p class="mb-1 small text-light">We have a large deployment environment where there are multiple custom tenants running different versions of code via release channels. I can run custom sboms against those tags but quickly hit the GH API limits.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-13">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pkurgt/kubernetes_ingress_nginx_with_modsecurity_waf_eol/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubernetes Ingress Nginx with ModSecurity WAF EOL?
+                </a>
+                <p class="mb-1 small text-light">Hi folks, as the most of you know, that ingress-nginx is EOL in march 2026, the same must migrate to another ingress controller. WAF middleware in traefik for example is for enterprise customers availably only.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-13">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pisgbi/are_containers_with_persistent_storage_possible/" target="_blank" class="fw-bold text-decoration-none">
+                    Are containers with persistent storage possible?
+                </a>
+                <p class="mb-1 small text-light">With podman-rootless if we run a container, everything inside is persistent across stops / restarts until it is deleted. I am able to work with podman and provide a great persistent environment that stays until the container is deleted.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-13">
+                <a href="https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Introducing GPT-5.2 in Microsoft Foundry: The new standard for enterprise AI
+                </a>
+                <p class="mb-1 small text-light">2 series is built on new architecture, delivering superior performance, efficiency, and reasoning depth compared to prior generations. Application Modernization: Make rapid progress in refactoring services, generating tests, and producing migration plans with risk and rollback criteria.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-13">
+                <a href="https://www.docker.com/blog/aws-reinvent-kiro-docker-sandboxes-mcp-catalog/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Highlights from AWS re:Invent: Supercharging Kiro with Docker Sandboxes and MCP Catalog
+                </a>
+                <p class="mb-1 small text-light">At the recent AWS re:Invent, Docker focused on a very real developer problem: how to run AI agents locally without giving them access to your machine, credentials, or filesystem.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-12-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-13">
+                <a href="https://www.docker.com/blog/add-mcp-server-to-chatgpt/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] How to Add MCP Servers to ChatGPT with Docker MCP Toolkit
+                </a>
+                <p class="mb-1 small text-light">js Sandbox enables ChatGPT to execute JavaScript in isolated Docker containers. When ChatGPT requests JavaScript execution: Sandbox container makes Docker API calls Creates temporary Node.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-12-13
                     
                 </small>
             </li>

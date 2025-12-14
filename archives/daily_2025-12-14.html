@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - December 14, 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - December 14, 2025
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for December 14, 2025
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-12-14">2025-12-14 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    12 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Slack Engineering">Slack Engineering</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-14">
+                <a href="https://www.pulumi.com/blog/the-superintelligence-flywheel/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] The Superintelligence Flywheel: Infrastructure for the AI Era
+                </a>
+                <p class="mb-1 small text-light">Infrastructure platforms that aren’t inherently multi-cloud simply can’t serve these requirements, forcing teams to adopt many fragmented tools and workflows.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-14">
+                <a href="https://azure.microsoft.com/en-us/blog/microsofts-commitment-to-supporting-cloud-infrastructure-demand-in-the-united-states/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft’s commitment to supporting cloud infrastructure demand in the United States
+                </a>
+                <p class="mb-1 small text-light">Today, we are sharing progress on our infrastructure expansions across the United States that are supporting the tremendous growth in customer demand for cloud and AI services.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-14">
+                <a href="https://www.hashicorp.com/blog/a-cloud-engineering-lead-s-7-lessons-about-speed-vs-security" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] A cloud engineering lead’s 7 lessons about speed vs. security
+                </a>
+                <p class="mb-1 small text-light">In his story, the key component to comprehensive development governance, while still maintaining the developer velocity typical for modern cloud environments, was a platform mindset.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-12-14">
+                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
+                </a>
+                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-14">
+                <a href="https://www.pulumi.com/blog/ai-predictions-2026-devops-guide/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] AI Predictions for 2026: A DevOps Engineer's Guide
+                </a>
+                <p class="mb-1 small text-light">AWS validated this direction at re:Invent 2025 by announcing “frontier agents” including Kiro for autonomous coding, along with dedicated security and DevOps agents. For DevOps engineers, this shift means building robust validation infrastructure becomes critical.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-14">
+                <a href="https://www.pulumi.com/blog/aws-reinvent-2025-roundup/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] AWS built an integrated AI Agent training pipeline and they want you to rent it
+                </a>
+                <p class="mb-1 small text-light">AWS re:Invent 2025 delivered myriad of announcements across AI, silicon, and cloud infrastructure. AWS dropped four new foundation models (Lite, Pro, Sonic, Omni) spanning text, multimodal, and speech.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-14">
+                <a href="https://www.reddit.com/r/devops/comments/1plns7z/building_a_qemukvm_based_virtual_home_lab_with/" target="_blank" class="fw-bold text-decoration-none">
+                    Building a QEMU/KVM based virtual home lab with automated Linux VM provisioning and resource management with local domain control
+                </a>
+                <p class="mb-1 small text-light">I have been building and using an automation toolkit for running a complete virtual home lab on KVM/QEMU. Perfect for spinning up Kubernetes clusters, testing multi-node setups, or experimenting with any Linux-based infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-14">
+                <a href="https://kubernetes.io/blog/2025/11/26/kubernetes-v1-35-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35 Sneak Peek
+                </a>
+                <p class="mb-1 small text-light">This feature allows users to adjust cpu and memory resources without restarting Pods or Containers. While Kubernetes provides Service Account tokens, these are designed for authenticating to the API server, not for general-purpose workload identity.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-14">
+                <a href="https://kubernetes.io/blog/2025/11/09/steering-committee-results-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing the 2025 Steering Committee Election Results
+                </a>
+                <p class="mb-1 small text-light">The Kubernetes Steering Committee consists of 7 seats, 4 of which were up for election in 2025. Incoming committee members serve a term of 2 years, and all members are elected by the Kubernetes Community.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-14">
+                <a href="https://www.cncf.io/announcements/2025/12/10/cncf-unveils-schedule-for-kubecon-cloudnativecon-europe-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] CNCF Unveils Schedule for KubeCon + CloudNativeCon Europe 2026
+                </a>
+                <p class="mb-1 small text-light">The report further highlights that the cloud native ecosystem is entering a new maturity phase where automation, observability, and resilience drive competitive advantage.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-14">
+                <a href="https://www.cncf.io/blog/2025/12/10/optimizing-kyverno-cli-performance-my-lfx-mentorship-journey/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Optimizing Kyverno CLI performance: My LFX mentorship journey
+                </a>
+                <p class="mb-1 small text-light">Kyverno is a cloud-native policy engine that runs in a Kubernetes cluster. It enforces best practices for security and compliance for platforms and applications through policies as code.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2025-12-14">
+                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Streamlining Security Investigations with Agents
+                </a>
+                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-14">
+                <a href="https://www.reddit.com/r/devops/comments/1plyiz1/multi_region_ai_deployment_and_every_country_has/" target="_blank" class="fw-bold text-decoration-none">
+                    Multi region AI deployment and every country has different data residency laws, compliance is impossible.
+                </a>
+                <p class="mb-1 small text-light">We tried regional deployments but then we have data sync problems and model consistency issues, tried to centralize but that violates residency laws. feels like we need different deployment per country which is impossible to maintain.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-14">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pm8nhi/kubernetes_k3s_and_tailscale_homelab/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubernetes (k3s) and Tailscale homelab
+                </a>
+                <p class="mb-1 small text-light">The Problems: I am constantly running into dns issues with pihole tailscale and ubuntu systemd-resolved. " I have looked up on various blogs and youtube videos but i am not able to resolve my issue.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-14">
+                <a href="https://netflixtechblog.medium.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Integrating Netflix’s Foundation Model into Personalization applications
+                </a>
+                <p class="mb-1 small text-light">Overall, the subgraph approach allows for a deeper integration and enables the applications to harness the full power of the Foundation Model. A side benefit of this integration approach is that it provides a de facto baseline for new models/applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-14">
+                <a href="https://netflixtechblog.medium.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-2-building-a-scalable-storage-layer-ff4a8dbd3d1f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 2 — Building a Scalable Storage Layer
+                </a>
+                <p class="mb-1 small text-light">Workload complexityTraditional graph database solutions often present significant challenges when faced with the demands of Netflix’s high-volume, real-time data environment.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-14">
+                <a href="https://netflixtechblog.medium.com/heterogeneous-treatment-effects-at-netflix-da5c3dd58833?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Heterogeneous Treatment Effects at Netflix
+                </a>
+                <p class="mb-1 small text-light">We’ll share how our OCI platform enables rapid segmentation and exploration of HTEs. When we update them with new features or bug fixes, we want to ensure that every update works as expected.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-14">
+                <a href="https://azure.microsoft.com/en-us/blog/actioning-agentic-ai-5-ways-to-build-with-news-from-microsoft-ignite-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Actioning agentic AI: 5 ways to build with news from Microsoft Ignite 2025
+                </a>
+                <p class="mb-1 small text-light">Our Azure platform announcements resonated because they help solve real problems—and now, the work begins.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-14">
+                <a href="https://azure.microsoft.com/en-us/blog/new-options-for-ai-powered-innovation-resiliency-and-control-with-microsoft-azure/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] New options for AI-powered innovation, resiliency, and control with Microsoft Azure
+                </a>
+                <p class="mb-1 small text-light">Microsoft’s strategy spans both our public cloud, private cloud, and edge technology, giving customers a unified platform for operations, applications, and data with the right balance of flexibility and control.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-14">
+                <a href="https://www.redhat.com/en/blog/implementing-best-practices-controlled-network-environment-ray-clusters-red-hat-openshift-ai-30" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Implementing best practices: Controlled network environment for Ray clusters in Red Hat OpenShift AI 3.0
+                </a>
+                <p class="mb-1 small text-light">The Ray framework is powerful, but as the official documentation emphasizes, developers or platform providers are responsible for their own security.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-12-14">
+                <a href="https://about.gitlab.com/blog/migration-from-azure-devops-to-gitlab/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Guide: Migrate from Azure DevOps to GitLab
+                </a>
+                <p class="mb-1 small text-light">With Congregate and professional services tools, we support additional assets such as wikis, work items, CI/CD variables, container images, packages, pipelines, and more (see this feature matrix). Integrations, CI/CD Variables, Deploy Keys Service Connections External auth to services/clouds.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-14">
+                <a href="https://snyk.io/blog/snyk-kiro-partner-integration/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] When Speed Meets Security: Snyk Studio for Kiro
+                </a>
+                <p class="mb-1 small text-light">Snyk Studio for Kiro ensures rapid, secure AI innovation. Stop security backlogs and prevent new risks at inception to ship with confidence, even with AI coding assistants.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-14">
+                <a href="https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3)
+                </a>
+                <p class="mb-1 small text-light">The system we built to ensure our AI agents produce predictable, trustworthy code. The post Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-14">
+                <a href="https://engineering.atspotify.com/2025/11/context-engineering-background-coding-agents-part-2/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Background Coding Agents: Context Engineering (Part 2)
+                </a>
+                <p class="mb-1 small text-light">We explore context engineering for background coding agents and what makes a good migration prompt. The post Background Coding Agents: Context Engineering (Part 2) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-12-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-14">
+                <a href="https://engineering.atspotify.com/2025/11/shuffle-making-random-feel-more-human/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Shuffle: Making Random Feel More Human
+                </a>
+                <p class="mb-1 small text-light">Shuffle has always been one of Spotify’s most-used features, and also one of the most misunderstood. For... The post Shuffle: Making Random Feel More Human appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-12-14
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

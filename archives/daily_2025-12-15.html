@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - December 15, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - December 15, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for December 15, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-12-15">2025-12-15 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2025-12-15 08:08:37
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,278 +126,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-15">
-                <a href="https://www.reddit.com/r/devops/comments/1pmmriy/how_do_i_become_a_clouddevops_engineer_as_a/" target="_blank" class="fw-bold text-decoration-none">
-                    How do I become a Cloud/DevOps Engineer as a Front-End Developer
-                </a>
-                <p class="mb-1 small text-light">I have 3 years of professional experience. I want to make a career change. Please Advise. submitted by /u/flackobrt</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-15">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1pm9t2u/kubernetes_is_the_secret_behind_nvidias_ai/" target="_blank" class="fw-bold text-decoration-none">
-                    Kubernetes is THE Secret Behind NVIDIA's AI Factories!
-                </a>
-                <p class="mb-1 small text-light">Hi everyone, I have been exploring how open-source and cloud-native technologies are redefining AI startups. NVIDIA built an entire cloud-native stack and acquired Run.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-15">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1pm9pe1/why_openai_and_anthropic_cant_live_without/" target="_blank" class="fw-bold text-decoration-none">
-                    Why OpenAI and Anthropic Can't Live Without Kubernetes
-                </a>
-                <p class="mb-1 small text-light">🔹 AlphaSense migrated fully to Kubernetes: deployments dropped from hours to minutes, and releases jumped 30×. 🔹 Norna AI avoided hiring a full DevOps team by using managed Kubernetes help improve productivity up 10×.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-15">
-                <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] AV1 — Now Powering 30% of Netflix Streaming
-                </a>
-                <p class="mb-1 small text-light">However, because film grain is inherently random, faithfully representing it in digital video requires a significant amount of data. Continuous improvements to its performance and compatibility have made dav1d the preferred choice for a wide range of platforms and practical applications.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-15">
-                <a href="https://www.docker.com/blog/docker-model-runner-vllm-windows/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Model Runner now supports vLLM on Windows
-                </a>
-                <p class="mb-1 small text-light">Until now, vLLM support in Docker Model Runner was limited to Docker Engine on Linux. 54) WSL2 backend enabled in Docker Desktop NVIDIA GPU with updated drivers with compute capability >= 8.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-15">
-                <a href="https://www.redhat.com/en/blog/incident-responder-security-steward-my-journey-understanding-red-hats-open-approach-vulnerability-management" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] From incident responder to security steward: My journey to understanding Red Hat's open approach to vulnerability management
-                </a>
-                <p class="mb-1 small text-light">For years, my career in cybersecurity was defined by a sense of urgency and criticality. My days were a blur of alerts, patch deployments, and the relentless pressure to mitigate risk and restore operations.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-15">
-                <a href="https://blog.sentry.io/agent-monitoring-net-apps/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] A better way to monitor your AI agents in .NET apps
-                </a>
-                <p class="mb-1 small text-light">We launched agent monitoring earlier this year, allowing our users to instrument LLM usage and tool calls in their applications. OpenAI , which provides us with IChatClient implementation with OpenAI APIs.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-15">
-                <a href="https://blog.sentry.io/meet-web-vitals-performance-issues/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Meet Web Vitals Performance Issues
-                </a>
-                <p class="mb-1 small text-light">We’ve introduced a new type of Performance Issues, Web Vitals Performance Issues. Today we’re releasing a slick update to Sentry’s built-in Web Vitals features, Web Vitals Performance Issues.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-15">
-                <a href="https://blog.sentry.io/sentry-just-got-an-upgrade-and-its-all-free/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] AI updates for all Sentry users
-                </a>
-                <p class="mb-1 small text-light">Get a first take on what’s causing an issueWhen you hit a new issue, the first question is usually “Where do I start. Sentry’s MCP can access data about your organizations, projects, teams, issues, errors, releases, performance and more.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-15">
-                <a href="https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Security Advisory: Critical RCE Vulnerabilities in React Server Components (CVE-2025-55182)
-                </a>
-                <p class="mb-1 small text-light">Critical RCE vulnerabilities (CVE-2025-55182/CVE-2025-66478) were found in React Server Components and Next.js via unsafe deserialization. Immediate upgrade to patched versions is mandatory to prevent unauthenticated remote code execution. Learn how to detect and mitigate the critical flaw.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-15">
-                <a href="https://snyk.io/blog/run-automcp-libraries-mcp-servers/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Run AutoMCP To Supercharge Your AI Agent with Libraries MCP Servers
-                </a>
-                <p class="mb-1 small text-light">Supercharge your AI agent! Learn how AutoMCP integrates Model Context Protocol (MCP) servers and Snyk Studio for secure, context-aware AI-driven development.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-15">
-                <a href="https://www.hashicorp.com/blog/boundary-0-21-improves-remote-access-security-and-ux-for-rdp-connections" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Boundary 0.21 improves remote access security and UX for RDP connections
+                <a href="https://www.hashicorp.com/blog/5-lessons-for-enabling-self-service-and-ai-driven-infrastructure-despite-legacy-tech-at-a-national-bank" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] 5 Lessons for enabling self-service and AI-driven infrastructure despite legacy tech at a national bank
                 </a>
-                <p class="mb-1 small text-light">Once on the network, users can connect to individual infrastructure resources (Linux/Windows hosts, databases, web applications, Kubernetes clusters, etc. The Windows credential challenge Organizations with significant Windows infrastructure face a persistent security challenge.</p>
+                <p class="mb-1 small text-light">The key to accomplishing this is abstraction; creating a centralized platform that allows new infrastructure to be built and services to operate while still accessing essential legacy data and workflows.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-15">
-                <a href="https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Ingress NGINX Retirement: What You Need to Know
-                </a>
-                <p class="mb-1 small text-light">(Gateway API is a newer way to achieve many of the same goals. It became very popular due to its tremendous flexibility, breadth of features, and independence from any particular cloud or infrastructure provider.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-15">
-                <a href="https://www.cncf.io/blog/2025/12/11/lima-v2-0-new-features-for-secure-ai-workflows/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Lima v2.0: New features for secure AI workflows
-                </a>
-                <p class="mb-1 small text-light">0 Plugins Lima now provides the plugin infrastructure that allows third-parties to implement new features without modifying Lima itself: VM driver plugins: for additional hypervisors. This allows running Lima as a separate user account for enhanced security, using “Alcoholless” Homebrew.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-15">
-                <a href="https://blog.cloudflare.com/react2shell-rsc-vulnerabilities-exploitation-threat-brief/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] React2Shell and related RSC vulnerabilities threat brief: early exploitation activity and threat actor techniques
-                </a>
-                <p class="mb-1 small text-light">How Cloudflare is protecting customers Cloudflare’s protection strategy is multi-layered, relying on both the inherent security model of its platform and immediate, proactive updates to its Web Application Firewall (WAF).</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-15">
-                <a href="https://blog.cloudflare.com/python-workers-advancements/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Python Workers redux: fast cold starts, packages, and a uv-first workflow
-                </a>
-                <p class="mb-1 small text-light">4x faster than AWS Lambda without SnapStart and 3x faster than Google Cloud Run.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-12-15">
-                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dash uses context engineering for smarter AI
-                </a>
-                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-12-15">
-                <a href="https://dropbox.tech/machine-learning/practical-blueprint-evaluating-conversational-ai-at-scale-dash" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] A practical blueprint for evaluating conversational AI at scale
-                </a>
-                <p class="mb-1 small text-light">It brought structure to our workflows by helping us manage datasets, scorers, experiments, automation, tracing, and monitoring. At its core, the platform gave us four key capabilities.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-15">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1pn0uji/devops_engineer_looking_for_kubernetes_and/" target="_blank" class="fw-bold text-decoration-none">
-                    Devops engineer looking for kubernetes and monitoring work
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/saiyamjain74</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-15">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1pk6zv0/feels_like_i_have_the_same_pipeline_deployed_over/" target="_blank" class="fw-bold text-decoration-none">
-                    Feels like I have the same pipeline deployed over and over again for services. Where to next with learning and automation?
-                </a>
-                <p class="mb-1 small text-light">yaml It's all starting to blend together and am wondering, where should I take these next for my learning endeavors. The only one still active is the tfvisualizer project.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-15">
-                <a href="https://netflixtechblog.medium.com/unlocking-entertainment-intelligence-with-knowledge-graph-da4b22090141?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Unlocking Entertainment Intelligence with Knowledge Graph
-                </a>
-                <p class="mb-1 small text-light">Rich semantic connectivity allows us to rapidly derive insights without cumbersome joins or manual lookups. This significantly reduces the overhead and complexity typically associated with onboarding new datasets.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-15">
-                <a href="https://www.docker.com/blog/private-mcp-catalogs-oci-composable-enterprise-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Private MCP Catalogs and the Path to Composable Enterprise AI
-                </a>
-                <p class="mb-1 small text-light">Cloud-native computing created feedback loops where infrastructure became code, deployments became declarative, and operational knowledge became shareable artifacts. First, containers provide hermetic but customizable and context-rich security boundaries.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-15">
-                <a href="https://snyk.io/blog/snyk-log-sniffer/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Snyk Log Sniffer: AI-Powered Audit Log Insights for Security Leaders
-                </a>
-                <p class="mb-1 small text-light">Introducing Log Sniffer: an innovative open source solution powered by Google Gemini AI that transforms Snyk audit logs into instant, actionable security and engineering intelligence.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
+                    HashiCorp | 2025-12-15
                     
                 </small>
             </li>
@@ -392,19 +145,283 @@
                 <p class="mb-1 small text-light">Every team that starts experimenting with generative AI (gen AI) eventually runs into the same wall: scaling it. These are the same kinds of infrastructure and operations challenges we have seen in other workloads, but now applied to AI systems that demand far more resources.</p>
                 <small class="text-secondary">
                     
-                    Red Hat
+                    Red Hat | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-15">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pn0uji/devops_engineer_looking_for_kubernetes_and/" target="_blank" class="fw-bold text-decoration-none">
+                    Devops engineer looking for kubernetes and monitoring work
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/saiyamjain74</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-15">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pk6zv0/feels_like_i_have_the_same_pipeline_deployed_over/" target="_blank" class="fw-bold text-decoration-none">
+                    Feels like I have the same pipeline deployed over and over again for services. Where to next with learning and automation?
+                </a>
+                <p class="mb-1 small text-light">yaml It's all starting to blend together and am wondering, where should I take these next for my learning endeavors. The only one still active is the tfvisualizer project.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-15">
+                <a href="https://netflixtechblog.medium.com/unlocking-entertainment-intelligence-with-knowledge-graph-da4b22090141?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Unlocking Entertainment Intelligence with Knowledge Graph
+                </a>
+                <p class="mb-1 small text-light">Rich semantic connectivity allows us to rapidly derive insights without cumbersome joins or manual lookups. This significantly reduces the overhead and complexity typically associated with onboarding new datasets.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-15">
+                <a href="https://www.docker.com/blog/private-mcp-catalogs-oci-composable-enterprise-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Private MCP Catalogs and the Path to Composable Enterprise AI
+                </a>
+                <p class="mb-1 small text-light">Cloud-native computing created feedback loops where infrastructure became code, deployments became declarative, and operational knowledge became shareable artifacts. First, containers provide hermetic but customizable and context-rich security boundaries.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-15">
+                <a href="https://snyk.io/blog/snyk-log-sniffer/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Snyk Log Sniffer: AI-Powered Audit Log Insights for Security Leaders
+                </a>
+                <p class="mb-1 small text-light">Introducing Log Sniffer: an innovative open source solution powered by Google Gemini AI that transforms Snyk audit logs into instant, actionable security and engineering intelligence.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-12-15
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-15">
-                <a href="https://www.hashicorp.com/blog/5-lessons-for-enabling-self-service-and-ai-driven-infrastructure-despite-legacy-tech-at-a-national-bank" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] 5 Lessons for enabling self-service and AI-driven infrastructure despite legacy tech at a national bank
+                <a href="https://www.hashicorp.com/blog/boundary-0-21-improves-remote-access-security-and-ux-for-rdp-connections" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Boundary 0.21 improves remote access security and UX for RDP connections
                 </a>
-                <p class="mb-1 small text-light">The key to accomplishing this is abstraction; creating a centralized platform that allows new infrastructure to be built and services to operate while still accessing essential legacy data and workflows.</p>
+                <p class="mb-1 small text-light">Once on the network, users can connect to individual infrastructure resources (Linux/Windows hosts, databases, web applications, Kubernetes clusters, etc. The Windows credential challenge Organizations with significant Windows infrastructure face a persistent security challenge.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-15">
+                <a href="https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Ingress NGINX Retirement: What You Need to Know
+                </a>
+                <p class="mb-1 small text-light">(Gateway API is a newer way to achieve many of the same goals. It became very popular due to its tremendous flexibility, breadth of features, and independence from any particular cloud or infrastructure provider.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-15">
+                <a href="https://www.cncf.io/blog/2025/12/11/lima-v2-0-new-features-for-secure-ai-workflows/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Lima v2.0: New features for secure AI workflows
+                </a>
+                <p class="mb-1 small text-light">0 Plugins Lima now provides the plugin infrastructure that allows third-parties to implement new features without modifying Lima itself: VM driver plugins: for additional hypervisors. This allows running Lima as a separate user account for enhanced security, using “Alcoholless” Homebrew.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-15">
+                <a href="https://blog.cloudflare.com/react2shell-rsc-vulnerabilities-exploitation-threat-brief/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] React2Shell and related RSC vulnerabilities threat brief: early exploitation activity and threat actor techniques
+                </a>
+                <p class="mb-1 small text-light">How Cloudflare is protecting customers Cloudflare’s protection strategy is multi-layered, relying on both the inherent security model of its platform and immediate, proactive updates to its Web Application Firewall (WAF).</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-15">
+                <a href="https://blog.cloudflare.com/python-workers-advancements/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Python Workers redux: fast cold starts, packages, and a uv-first workflow
+                </a>
+                <p class="mb-1 small text-light">4x faster than AWS Lambda without SnapStart and 3x faster than Google Cloud Run.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-12-15">
+                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dash uses context engineering for smarter AI
+                </a>
+                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-12-15">
+                <a href="https://dropbox.tech/machine-learning/practical-blueprint-evaluating-conversational-ai-at-scale-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] A practical blueprint for evaluating conversational AI at scale
+                </a>
+                <p class="mb-1 small text-light">It brought structure to our workflows by helping us manage datasets, scorers, experiments, automation, tracing, and monitoring. At its core, the platform gave us four key capabilities.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-15">
+                <a href="https://www.reddit.com/r/devops/comments/1pmmriy/how_do_i_become_a_clouddevops_engineer_as_a/" target="_blank" class="fw-bold text-decoration-none">
+                    How do I become a Cloud/DevOps Engineer as a Front-End Developer
+                </a>
+                <p class="mb-1 small text-light">I have 3 years of professional experience. I want to make a career change. Please Advise. submitted by /u/flackobrt</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-15">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pm9t2u/kubernetes_is_the_secret_behind_nvidias_ai/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubernetes is THE Secret Behind NVIDIA's AI Factories!
+                </a>
+                <p class="mb-1 small text-light">Hi everyone, I have been exploring how open-source and cloud-native technologies are redefining AI startups. NVIDIA built an entire cloud-native stack and acquired Run.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-15">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pm9pe1/why_openai_and_anthropic_cant_live_without/" target="_blank" class="fw-bold text-decoration-none">
+                    Why OpenAI and Anthropic Can't Live Without Kubernetes
+                </a>
+                <p class="mb-1 small text-light">🔹 AlphaSense migrated fully to Kubernetes: deployments dropped from hours to minutes, and releases jumped 30×. 🔹 Norna AI avoided hiring a full DevOps team by using managed Kubernetes help improve productivity up 10×.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-15">
+                <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] AV1 — Now Powering 30% of Netflix Streaming
+                </a>
+                <p class="mb-1 small text-light">However, because film grain is inherently random, faithfully representing it in digital video requires a significant amount of data. Continuous improvements to its performance and compatibility have made dav1d the preferred choice for a wide range of platforms and practical applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-15">
+                <a href="https://www.docker.com/blog/docker-model-runner-vllm-windows/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Model Runner now supports vLLM on Windows
+                </a>
+                <p class="mb-1 small text-light">Until now, vLLM support in Docker Model Runner was limited to Docker Engine on Linux. 54) WSL2 backend enabled in Docker Desktop NVIDIA GPU with updated drivers with compute capability >= 8.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-15">
+                <a href="https://www.redhat.com/en/blog/incident-responder-security-steward-my-journey-understanding-red-hats-open-approach-vulnerability-management" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] From incident responder to security steward: My journey to understanding Red Hat's open approach to vulnerability management
+                </a>
+                <p class="mb-1 small text-light">For years, my career in cybersecurity was defined by a sense of urgency and criticality. My days were a blur of alerts, patch deployments, and the relentless pressure to mitigate risk and restore operations.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-15">
+                <a href="https://blog.sentry.io/agent-monitoring-net-apps/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] A better way to monitor your AI agents in .NET apps
+                </a>
+                <p class="mb-1 small text-light">We launched agent monitoring earlier this year, allowing our users to instrument LLM usage and tool calls in their applications. OpenAI , which provides us with IChatClient implementation with OpenAI APIs.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-15">
+                <a href="https://blog.sentry.io/meet-web-vitals-performance-issues/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Meet Web Vitals Performance Issues
+                </a>
+                <p class="mb-1 small text-light">We’ve introduced a new type of Performance Issues, Web Vitals Performance Issues. Today we’re releasing a slick update to Sentry’s built-in Web Vitals features, Web Vitals Performance Issues.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-15">
+                <a href="https://blog.sentry.io/sentry-just-got-an-upgrade-and-its-all-free/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] AI updates for all Sentry users
+                </a>
+                <p class="mb-1 small text-light">Get a first take on what’s causing an issueWhen you hit a new issue, the first question is usually “Where do I start. Sentry’s MCP can access data about your organizations, projects, teams, issues, errors, releases, performance and more.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-15">
+                <a href="https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Security Advisory: Critical RCE Vulnerabilities in React Server Components (CVE-2025-55182)
+                </a>
+                <p class="mb-1 small text-light">Critical RCE vulnerabilities (CVE-2025-55182/CVE-2025-66478) were found in React Server Components and Next.js via unsafe deserialization. Immediate upgrade to patched versions is mandatory to prevent unauthenticated remote code execution. Learn how to detect and mitigate the critical flaw.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-12-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-15">
+                <a href="https://snyk.io/blog/run-automcp-libraries-mcp-servers/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Run AutoMCP To Supercharge Your AI Agent with Libraries MCP Servers
+                </a>
+                <p class="mb-1 small text-light">Supercharge your AI agent! Learn how AutoMCP integrates Model Context Protocol (MCP) servers and Snyk Studio for secure, context-aware AI-driven development.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-12-15
                     
                 </small>
             </li>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - December 21, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - December 21, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for December 21, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-12-21">2025-12-21 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2025-12-21 08:06:37
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,254 +128,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-21">
-                <a href="https://www.reddit.com/r/devops/comments/1prgdd1/are_we_ready_for_automating_our_devops_and_cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    Are we ready for automating our devops and cloud tasks
-                </a>
-                <p class="mb-1 small text-light">We already automate a lot: Terraform / Pulumi for infra CI/CD pipelines for delivery Autoscaling, self-healing, policy-as-code But despite all this, many day-to-day DevOps tasks are still: Manual Error-prone Knowledge-siloed Dependent on “that one person who knows prod” Examples: Debugging failed...</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-21">
-                <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] AV1 — Now Powering 30% of Netflix Streaming
-                </a>
-                <p class="mb-1 small text-light">However, because film grain is inherently random, faithfully representing it in digital video requires a significant amount of data. Continuous improvements to its performance and compatibility have made dav1d the preferred choice for a wide range of platforms and practical applications.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-21">
-                <a href="https://netflixtechblog.medium.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Integrating Netflix’s Foundation Model into Personalization applications
-                </a>
-                <p class="mb-1 small text-light">Overall, the subgraph approach allows for a deeper integration and enables the applications to harness the full power of the Foundation Model. A side benefit of this integration approach is that it provides a de facto baseline for new models/applications.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-21">
-                <a href="https://netflixtechblog.medium.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-2-building-a-scalable-storage-layer-ff4a8dbd3d1f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 2 — Building a Scalable Storage Layer
-                </a>
-                <p class="mb-1 small text-light">Workload complexityTraditional graph database solutions often present significant challenges when faced with the demands of Netflix’s high-volume, real-time data environment.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-21">
-                <a href="https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Introducing GPT-5.2 in Microsoft Foundry: The new standard for enterprise AI
-                </a>
-                <p class="mb-1 small text-light">2 series is built on new architecture, delivering superior performance, efficiency, and reasoning depth compared to prior generations. Application Modernization: Make rapid progress in refactoring services, generating tests, and producing migration plans with risk and rollback criteria.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-21">
-                <a href="https://azure.microsoft.com/en-us/blog/actioning-agentic-ai-5-ways-to-build-with-news-from-microsoft-ignite-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Actioning agentic AI: 5 ways to build with news from Microsoft Ignite 2025
-                </a>
-                <p class="mb-1 small text-light">Our Azure platform announcements resonated because they help solve real problems—and now, the work begins.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-21">
-                <a href="https://www.docker.com/blog/2025-recap-the-year-software-development-changed-shape/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] 2025 Recap: The Year Software Development Changed Shape
-                </a>
-                <p class="mb-1 small text-light">Security Went From “Filters” to “Blast Radius” The real problem wasn’t what models say. By the end, agents were doing operational work: updating infrastructure, resolving customer issues, moving money, managing SaaS tools.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-21">
-                <a href="https://www.redhat.com/en/blog/why-should-your-organization-standardize-red-hat-enterprise-linux-today" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Why should your organization standardize on Red Hat Enterprise Linux today?
-                </a>
-                <p class="mb-1 small text-light">I am currently collaborating with my product marketing team on content explaining why organizations—whether they currently use Red Hat Enterprise Linux (RHEL) or not—should standardize on RHEL today.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-21">
-                <a href="https://www.redhat.com/en/blog/ga-support-red-hat-openshift-vmware-vsphere-foundation-9-and-vmware-cloud-foundation-9" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat OpenShift expands support for VMware vSphere Foundation 9 and VMware Cloud Foundation 9
-                </a>
-                <p class="mb-1 small text-light">20 running on VMware vSphere Foundation 9 (VVF9) and VMware Cloud Foundation 9 (VCF9). As organizations continue to modernize their infrastructure, Red Hat remains committed to providing a stable, certified, and high-performance foundation for Kubernetes workloads across diverse environments.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-21">
-                <a href="https://www.redhat.com/en/blog/data-driven-automation-red-hat-ansible-automation-platform" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Turning automation spend into a measurable advantage
-                </a>
-                <p class="mb-1 small text-light">IT automation is no longer optional for executives; it is a critical strategy. Organizations have moved beyond simple scripting to focus on speed and impact, using automation to power growth and reduce risk.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-21">
-                <a href="https://blog.sentry.io/agent-monitoring-net-apps/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] A better way to monitor your AI agents in .NET apps
-                </a>
-                <p class="mb-1 small text-light">We launched agent monitoring earlier this year, allowing our users to instrument LLM usage and tool calls in their applications. OpenAI , which provides us with IChatClient implementation with OpenAI APIs.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-21">
-                <a href="https://blog.sentry.io/meet-web-vitals-performance-issues/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Meet Web Vitals Performance Issues
-                </a>
-                <p class="mb-1 small text-light">We’ve introduced a new type of Performance Issues, Web Vitals Performance Issues. Today we’re releasing a slick update to Sentry’s built-in Web Vitals features, Web Vitals Performance Issues.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-21">
-                <a href="https://blog.sentry.io/sentry-just-got-an-upgrade-and-its-all-free/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] AI updates for all Sentry users
-                </a>
-                <p class="mb-1 small text-light">Get a first take on what’s causing an issueWhen you hit a new issue, the first question is usually “Where do I start. Sentry’s MCP can access data about your organizations, projects, teams, issues, errors, releases, performance and more.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-21">
-                <a href="https://snyk.io/blog/evo-adds-cyclonedx/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Evo Adds CycloneDX Support to Give Full AI Visibility
-                </a>
-                <p class="mb-1 small text-light">Enterprises face a critical visibility gap in AI models, creating security and compliance risks. Evo's new integration with CycloneDX 1.6 delivers intelligent, actionable AI-BOMs, providing complete oversight and robust governance for your entire AI supply chain.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-21">
-                <a href="https://snyk.io/blog/snyk-genesis-mission/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] How Snyk Helps Federal Agencies Prepare for the Genesis Mission Era of AI-Driven Science
-                </a>
-                <p class="mb-1 small text-light">Snyk helps Federal Agencies secure software for the White House's Genesis Mission, accelerating AI-driven science. Implement Secure by Design for the supply chain, cloud, and pipelines.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-21">
-                <a href="https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Security Advisory: Critical RCE Vulnerabilities in React Server Components (CVE-2025-55182)
-                </a>
-                <p class="mb-1 small text-light">Critical RCE vulnerabilities (CVE-2025-55182/CVE-2025-66478) were found in React Server Components and Next.js via unsafe deserialization. Immediate upgrade to patched versions is mandatory to prevent unauthenticated remote code execution. Learn how to detect and mitigate the critical flaw.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-21">
-                <a href="https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3)
-                </a>
-                <p class="mb-1 small text-light">The system we built to ensure our AI agents produce predictable, trustworthy code. The post Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-21">
-                <a href="https://kubernetes.io/blog/2025/12/17/kubernetes-v1-35-release/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35: Timbernetes (The World Tree Release)
-                </a>
-                <p class="mb-1 small text-light">This feature allows users to adjust CPU and memory resources without restarting Pods or Containers. The node-declaration features framework allows nodes to declare their supported Kubernetes features.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-21">
-                <a href="https://www.cncf.io/blog/2025/12/17/kubevirt-undergoes-ostif-security-audit/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] KubeVirt undergoes OSTIF security audit
+                <a href="https://www.cncf.io/announcements/2025/12/17/cncf-welcomes-12-new-silver-members-emphasizing-a-growing-need-for-observability-and-automation/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] CNCF Welcomes 12 New Silver Members Emphasizing a Growing Need for Observability and Automation
                 </a>
-                <p class="mb-1 small text-light">The Open Source Technology Improvement Fund (OSTIF) is proud to share the results of a recent security audit of KubeVirt, a Kubernetes virtualization API and runtime for managing virtual machines.</p>
+                <p class="mb-1 small text-light">Hunter provides Kubernetes expertise across on-prem, AWS, Azure, and Google Cloud environments, enabling secure infrastructure deployments for the Department of Defense and Federal agencies.</p>
                 <small class="text-secondary">
                     
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-12-21">
-                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dash uses context engineering for smarter AI
-                </a>
-                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-21">
-                <a href="https://www.pulumi.com/blog/pulumi-cloud-dark-mode/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Introducing Dark Mode for Pulumi Cloud
-                </a>
-                <p class="mb-1 small text-light">Pulumi Cloud helps teams manage and operate their cloud infrastructure in one place, from state and secrets to deployments, visibility, and policy enforcement. This update is enabled by recent work from our User Experience team to introduce a shared design system across Pulumi Cloud.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
+                    CNCF | 2025-12-21
                     
                 </small>
             </li>
@@ -370,7 +147,7 @@
                 <p class="mb-1 small text-light">github It’s built for small DevOps teams (1–10 people) who don’t want to run Keycloak, Dex, or a full IAM stack just to give someone cluster access. This isn’t trying to replace Keycloak — it’s focused on simple, Kubernetes-native user lifecycle management.</p>
                 <small class="text-secondary">
                     
-                    Reddit
+                    Reddit | 2025-12-21
                     
                 </small>
             </li>
@@ -382,7 +159,7 @@
                 <p class="mb-1 small text-light">I’ve noticed that in many small teams and startups, most production incidents happen during infrastructure changes rather than application code changes.</p>
                 <small class="text-secondary">
                     
-                    Reddit
+                    Reddit | 2025-12-21
                     
                 </small>
             </li>
@@ -394,19 +171,259 @@
                 <p class="mb-1 small text-light">The philosophy of Docker Hardened Images Base images define your application’s security from the very first layer, so it’s critical to know exactly what goes into them. It’s exciting to see Docker continue to invest in open collaboration and secure container infrastructure.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-21">
+                <a href="https://kubernetes.io/blog/2025/12/17/kubernetes-v1-35-release/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35: Timbernetes (The World Tree Release)
+                </a>
+                <p class="mb-1 small text-light">This feature allows users to adjust CPU and memory resources without restarting Pods or Containers. The node-declaration features framework allows nodes to declare their supported Kubernetes features.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-21
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-21">
-                <a href="https://www.cncf.io/announcements/2025/12/17/cncf-welcomes-12-new-silver-members-emphasizing-a-growing-need-for-observability-and-automation/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] CNCF Welcomes 12 New Silver Members Emphasizing a Growing Need for Observability and Automation
+                <a href="https://www.cncf.io/blog/2025/12/17/kubevirt-undergoes-ostif-security-audit/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] KubeVirt undergoes OSTIF security audit
                 </a>
-                <p class="mb-1 small text-light">Hunter provides Kubernetes expertise across on-prem, AWS, Azure, and Google Cloud environments, enabling secure infrastructure deployments for the Department of Defense and Federal agencies.</p>
+                <p class="mb-1 small text-light">The Open Source Technology Improvement Fund (OSTIF) is proud to share the results of a recent security audit of KubeVirt, a Kubernetes virtualization API and runtime for managing virtual machines.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-12-21">
+                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dash uses context engineering for smarter AI
+                </a>
+                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-21">
+                <a href="https://www.pulumi.com/blog/pulumi-cloud-dark-mode/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Introducing Dark Mode for Pulumi Cloud
+                </a>
+                <p class="mb-1 small text-light">Pulumi Cloud helps teams manage and operate their cloud infrastructure in one place, from state and secrets to deployments, visibility, and policy enforcement. This update is enabled by recent work from our User Experience team to introduce a shared design system across Pulumi Cloud.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-21">
+                <a href="https://www.reddit.com/r/devops/comments/1prgdd1/are_we_ready_for_automating_our_devops_and_cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    Are we ready for automating our devops and cloud tasks
+                </a>
+                <p class="mb-1 small text-light">We already automate a lot: Terraform / Pulumi for infra CI/CD pipelines for delivery Autoscaling, self-healing, policy-as-code But despite all this, many day-to-day DevOps tasks are still: Manual Error-prone Knowledge-siloed Dependent on “that one person who knows prod” Examples: Debugging failed...</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-21">
+                <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] AV1 — Now Powering 30% of Netflix Streaming
+                </a>
+                <p class="mb-1 small text-light">However, because film grain is inherently random, faithfully representing it in digital video requires a significant amount of data. Continuous improvements to its performance and compatibility have made dav1d the preferred choice for a wide range of platforms and practical applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-21">
+                <a href="https://netflixtechblog.medium.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Integrating Netflix’s Foundation Model into Personalization applications
+                </a>
+                <p class="mb-1 small text-light">Overall, the subgraph approach allows for a deeper integration and enables the applications to harness the full power of the Foundation Model. A side benefit of this integration approach is that it provides a de facto baseline for new models/applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-21">
+                <a href="https://netflixtechblog.medium.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-2-building-a-scalable-storage-layer-ff4a8dbd3d1f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 2 — Building a Scalable Storage Layer
+                </a>
+                <p class="mb-1 small text-light">Workload complexityTraditional graph database solutions often present significant challenges when faced with the demands of Netflix’s high-volume, real-time data environment.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-21">
+                <a href="https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Introducing GPT-5.2 in Microsoft Foundry: The new standard for enterprise AI
+                </a>
+                <p class="mb-1 small text-light">2 series is built on new architecture, delivering superior performance, efficiency, and reasoning depth compared to prior generations. Application Modernization: Make rapid progress in refactoring services, generating tests, and producing migration plans with risk and rollback criteria.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-21">
+                <a href="https://azure.microsoft.com/en-us/blog/actioning-agentic-ai-5-ways-to-build-with-news-from-microsoft-ignite-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Actioning agentic AI: 5 ways to build with news from Microsoft Ignite 2025
+                </a>
+                <p class="mb-1 small text-light">Our Azure platform announcements resonated because they help solve real problems—and now, the work begins.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-21">
+                <a href="https://www.docker.com/blog/2025-recap-the-year-software-development-changed-shape/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] 2025 Recap: The Year Software Development Changed Shape
+                </a>
+                <p class="mb-1 small text-light">Security Went From “Filters” to “Blast Radius” The real problem wasn’t what models say. By the end, agents were doing operational work: updating infrastructure, resolving customer issues, moving money, managing SaaS tools.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-21">
+                <a href="https://www.redhat.com/en/blog/why-should-your-organization-standardize-red-hat-enterprise-linux-today" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Why should your organization standardize on Red Hat Enterprise Linux today?
+                </a>
+                <p class="mb-1 small text-light">I am currently collaborating with my product marketing team on content explaining why organizations—whether they currently use Red Hat Enterprise Linux (RHEL) or not—should standardize on RHEL today.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-21">
+                <a href="https://www.redhat.com/en/blog/ga-support-red-hat-openshift-vmware-vsphere-foundation-9-and-vmware-cloud-foundation-9" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat OpenShift expands support for VMware vSphere Foundation 9 and VMware Cloud Foundation 9
+                </a>
+                <p class="mb-1 small text-light">20 running on VMware vSphere Foundation 9 (VVF9) and VMware Cloud Foundation 9 (VCF9). As organizations continue to modernize their infrastructure, Red Hat remains committed to providing a stable, certified, and high-performance foundation for Kubernetes workloads across diverse environments.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-21">
+                <a href="https://www.redhat.com/en/blog/data-driven-automation-red-hat-ansible-automation-platform" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Turning automation spend into a measurable advantage
+                </a>
+                <p class="mb-1 small text-light">IT automation is no longer optional for executives; it is a critical strategy. Organizations have moved beyond simple scripting to focus on speed and impact, using automation to power growth and reduce risk.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-21">
+                <a href="https://blog.sentry.io/agent-monitoring-net-apps/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] A better way to monitor your AI agents in .NET apps
+                </a>
+                <p class="mb-1 small text-light">We launched agent monitoring earlier this year, allowing our users to instrument LLM usage and tool calls in their applications. OpenAI , which provides us with IChatClient implementation with OpenAI APIs.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-21">
+                <a href="https://blog.sentry.io/meet-web-vitals-performance-issues/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Meet Web Vitals Performance Issues
+                </a>
+                <p class="mb-1 small text-light">We’ve introduced a new type of Performance Issues, Web Vitals Performance Issues. Today we’re releasing a slick update to Sentry’s built-in Web Vitals features, Web Vitals Performance Issues.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-21">
+                <a href="https://blog.sentry.io/sentry-just-got-an-upgrade-and-its-all-free/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] AI updates for all Sentry users
+                </a>
+                <p class="mb-1 small text-light">Get a first take on what’s causing an issueWhen you hit a new issue, the first question is usually “Where do I start. Sentry’s MCP can access data about your organizations, projects, teams, issues, errors, releases, performance and more.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-21">
+                <a href="https://snyk.io/blog/evo-adds-cyclonedx/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Evo Adds CycloneDX Support to Give Full AI Visibility
+                </a>
+                <p class="mb-1 small text-light">Enterprises face a critical visibility gap in AI models, creating security and compliance risks. Evo's new integration with CycloneDX 1.6 delivers intelligent, actionable AI-BOMs, providing complete oversight and robust governance for your entire AI supply chain.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-21">
+                <a href="https://snyk.io/blog/snyk-genesis-mission/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] How Snyk Helps Federal Agencies Prepare for the Genesis Mission Era of AI-Driven Science
+                </a>
+                <p class="mb-1 small text-light">Snyk helps Federal Agencies secure software for the White House's Genesis Mission, accelerating AI-driven science. Implement Secure by Design for the supply chain, cloud, and pipelines.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-21">
+                <a href="https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Security Advisory: Critical RCE Vulnerabilities in React Server Components (CVE-2025-55182)
+                </a>
+                <p class="mb-1 small text-light">Critical RCE vulnerabilities (CVE-2025-55182/CVE-2025-66478) were found in React Server Components and Next.js via unsafe deserialization. Immediate upgrade to patched versions is mandatory to prevent unauthenticated remote code execution. Learn how to detect and mitigate the critical flaw.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-12-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-21">
+                <a href="https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3)
+                </a>
+                <p class="mb-1 small text-light">The system we built to ensure our AI agents produce predictable, trustworthy code. The post Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-12-21
                     
                 </small>
             </li>

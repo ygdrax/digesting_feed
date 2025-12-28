@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - December 28, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - December 28, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for December 28, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-12-28">2025-12-28 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2025-12-28 08:06:43
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,266 +130,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-28">
-                <a href="https://www.reddit.com/r/devops/comments/1px0nqn/hetznerk3s_v244_is_out_open_source_tool_for/" target="_blank" class="fw-bold text-decoration-none">
-                    hetzner-k3s v2.4.4 is out - Open source tool for Kubernetes on Hetzner Cloud
-                </a>
-                <p class="mb-1 small text-light">For those not familiar with it, it's by far the easiest way to set up cheap Kubernetes on Hetzner Cloud. This new version improves network requests handling when talking to the Hetzner Cloud API, as well as the custom local firewall setup for large clusters.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-28">
-                <a href="https://www.reddit.com/r/devops/comments/1px0lkj/what_are_the_things_that_devops_engineer_should/" target="_blank" class="fw-bold text-decoration-none">
-                    What are the things that DevOps Engineer should care/do during the DB Maintenance?
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/Weird_Giraffe6223</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-28">
-                <a href="https://blog.sentry.io/meet-web-vitals-performance-issues/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Meet Web Vitals Performance Issues
-                </a>
-                <p class="mb-1 small text-light">We’ve introduced a new type of Performance Issues, Web Vitals Performance Issues. Today we’re releasing a slick update to Sentry’s built-in Web Vitals features, Web Vitals Performance Issues.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-28">
-                <a href="https://blog.sentry.io/sentry-just-got-an-upgrade-and-its-all-free/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] AI updates for all Sentry users
-                </a>
-                <p class="mb-1 small text-light">Get a first take on what’s causing an issueWhen you hit a new issue, the first question is usually “Where do I start. Sentry’s MCP can access data about your organizations, projects, teams, issues, errors, releases, performance and more.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-28">
-                <a href="https://snyk.io/blog/evo-adds-cyclonedx/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Evo Adds CycloneDX Support to Give Full AI Visibility
-                </a>
-                <p class="mb-1 small text-light">Enterprises face a critical visibility gap in AI models, creating security and compliance risks. Evo's new integration with CycloneDX 1.6 delivers intelligent, actionable AI-BOMs, providing complete oversight and robust governance for your entire AI supply chain.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-28">
-                <a href="https://snyk.io/blog/snyk-genesis-mission/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] How Snyk Helps Federal Agencies Prepare for the Genesis Mission Era of AI-Driven Science
-                </a>
-                <p class="mb-1 small text-light">Snyk helps Federal Agencies secure software for the White House's Genesis Mission, accelerating AI-driven science. Implement Secure by Design for the supply chain, cloud, and pipelines.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-28">
-                <a href="https://engineering.atspotify.com/2025/11/context-engineering-background-coding-agents-part-2/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Background Coding Agents: Context Engineering (Part 2)
-                </a>
-                <p class="mb-1 small text-light">We explore context engineering for background coding agents and what makes a good migration prompt. The post Background Coding Agents: Context Engineering (Part 2) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-28">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: Amazon ECS, Amazon CloudWatch, Amazon Cognito and more (December 15, 2025)
-                </a>
-                <p class="mb-1 small text-light">We’ll be taking a break and returning in January to continue bringing you the latest AWS releases and updates. From groundbreaking AI capabilities to transformative infrastructure innovations, AWS has delivered an incredible year of releases that have reshaped what’s possible in the cloud.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-28">
-                <a href="https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon Bedrock adds reinforcement ﬁne-tuning simplifying how developers build smarter, more accurate AI models
-                </a>
-                <p class="mb-1 small text-light">For enhanced security, I can configure virtual private cloud (VPC) settings and AWS Key Management Service (AWS KMS) encryption to meet my organization’s compliance requirements.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-28">
-                <a href="https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] New serverless customization in Amazon SageMaker AI accelerates model fine-tuning
-                </a>
-                <p class="mb-1 small text-light">The new customization capability provides an easy-to-use interface for the latest fine-tuning techniques like reinforcement learning, so you can accelerate the AI model customization process from months to days.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-28">
-                <a href="https://aws.amazon.com/blogs/aws/introducing-checkpointless-and-elastic-training-on-amazon-sagemaker-hyperpod/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Introducing checkpointless and elastic training on Amazon SageMaker HyperPod
-                </a>
-                <p class="mb-1 small text-light">Rather than spending time managing training infrastructure, these new training techniques mean that your team can concentrate entirely on enhancing model performance, ultimately getting your AI models to market faster.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-28">
-                <a href="https://www.hashicorp.com/blog/terraform-adds-native-monorepo-support-stack-component-configurations-and-more" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform adds native monorepo support, Stack component configurations, and more
-                </a>
-                <p class="mb-1 small text-light">What’s new: We're excited to introduce flexible module publishing for both HCP Terraform and Terraform Enterprise to solve this challenge.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-28">
-                <a href="https://www.hashicorp.com/blog/terraform-stacks-explained" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform Stacks, explained
-                </a>
-                <p class="mb-1 small text-light">This blog covers the challenges Terraform Stacks solve, their benefits, use cases, how they work, their features, and future roadmap. To manage deployments more effectively at scale, Stacks has a deployment groups feature, which replaces the public beta's orchestration rules.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-28">
-                <a href="https://kubernetes.io/blog/2025/12/21/preventing-etcd-zombies/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Avoiding Zombie Cluster Members When Upgrading to etcd v3.6
-                </a>
-                <p class="mb-1 small text-light">Issue summary Recently, the etcd community addressed an issue that may appear when users upgrade from v3. Wait and confirm that all members are healthy post-update.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-28">
-                <a href="https://kubernetes.io/blog/2025/12/18/kubernetes-v1-35-job-managedby-for-jobs-goes-ga/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35: Job Managed By Goes GA
-                </a>
-                <p class="mb-1 small text-light">managedBy allows this granularity on a per-Job basis. managedBy field is rapidly becoming the standard interface for delegating control in the Kubernetes batch ecosystem.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-28">
-                <a href="https://www.cncf.io/blog/2025/12/18/the-mentorship-flywheel-how-cncf-is-growing-the-next-generation-of-cloud-native-leaders/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] The mentorship flywheel: How CNCF is growing the next generation of cloud native leaders
-                </a>
-                <p class="mb-1 small text-light">So I took a Docker course; that course mentioned Kubernetes, so I took a Kubernetes course. Docker led to Kubernetes, which led to understanding the CNCF ecosystem, which led to discovering Kyverno.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-28">
-                <a href="https://www.cncf.io/blog/2025/12/18/cilium-releases-2025-annual-report-a-decade-of-cloud-native-networking/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Cilium releases 2025 annual report: A decade of cloud native networking
-                </a>
-                <p class="mb-1 small text-light">A decade on from its first commit in 2015, 2025 marks a significant milestone for the Cilium project.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-28">
-                <a href="https://blog.cloudflare.com/r2-sql-aggregations/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Announcing support for GROUP BY, SUM, and other aggregation queries in R2 SQL
-                </a>
-                <p class="mb-1 small text-light">Splitting aggregate functions into pre-aggregates allows us to horizontally scale computation of aggregation, making use of vast compute resources available in Cloudflare’s network. Shuffling of aggregation data To address the challenges of random data distribution, we introduce a shuffling stage.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-12-28">
-                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
-                </a>
-                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-28">
-                <a href="https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] How Temporal Powers Reliable Cloud Operations at Netflix
-                </a>
-                <p class="mb-1 small text-light">Despite all of this, Clouddriver must be as reliable as reasonably possible as a core platform service. The child workflow will execute Activities which handle the actual cloud provider API calls to mutate infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-12-28">
-                <a href="https://about.gitlab.com/blog/gitlab-18-7-advancing-ai-automation/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab 18.7: Advancing AI automation, governance, and developer experience
-                </a>
-                <p class="mb-1 small text-light">7 release adds important building blocks to support GitLab Duo Agent Platform’s upcoming GA. Stay up to date with GitLabTo make sure you’re getting the latest features, security updates, and performance improvements, we recommend keeping your GitLab instance up to date.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-12-28">
-                <a href="https://engineering.fb.com/2025/12/15/android/how-ai-transforming-secure-by-default-mobile-frameworks-adoption/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] How AI Is Transforming the Adoption of Secure-by-Default Mobile Frameworks
+                <a href="https://engineering.fb.com/2025/11/21/data-infrastructure/zoomer-powering-ai-performance-meta-intelligent-debugging-optimization/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Zoomer: Powering AI Performance at Meta’s Scale Through Intelligent Debugging and Optimization
                 </a>
-                <p class="mb-1 small text-light">Building a secure framework on top of Android APIs, for example, requires a thoughtful balance between security, usability, and maintainability. However, each security framework should be usable across all apps and OS versions for a particular platform.</p>
+                <p class="mb-1 small text-light">Zoomer has delivered training time reductions, and significant QPS improvements, making it the de-facto tool for AI performance optimization across Meta’s entire AI infrastructure.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2025-12-28
                     
                 </small>
             </li>
@@ -384,7 +149,7 @@
                 <p class="mb-1 small text-light">Co-hosted with local communities, the initiative aimed to create space for discussions on sustainability efforts within the cloud-native ecosystem. SCI for Web: Bringing together members to define sustainability standards for web and cloud-native systems.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2025-12-28
                     
                 </small>
             </li>
@@ -396,19 +161,271 @@
                 <p class="mb-1 small text-light">Microsoft, Instagram, and YouTube all moved higher; Amazon Web Services (AWS) dropped one spot lower, while TikTok fell four spots. HTTP/3, standardized in 2022, marked a significant update, running on top of a new transport protocol known as QUIC.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-28">
+                <a href="https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How Temporal Powers Reliable Cloud Operations at Netflix
+                </a>
+                <p class="mb-1 small text-light">Despite all of this, Clouddriver must be as reliable as reasonably possible as a core platform service. The child workflow will execute Activities which handle the actual cloud provider API calls to mutate infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2025-12-28">
+                <a href="https://about.gitlab.com/blog/gitlab-18-7-advancing-ai-automation/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab 18.7: Advancing AI automation, governance, and developer experience
+                </a>
+                <p class="mb-1 small text-light">7 release adds important building blocks to support GitLab Duo Agent Platform’s upcoming GA. Stay up to date with GitLabTo make sure you’re getting the latest features, security updates, and performance improvements, we recommend keeping your GitLab instance up to date.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2025-12-28
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-12-28">
-                <a href="https://engineering.fb.com/2025/11/21/data-infrastructure/zoomer-powering-ai-performance-meta-intelligent-debugging-optimization/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Zoomer: Powering AI Performance at Meta’s Scale Through Intelligent Debugging and Optimization
+                <a href="https://engineering.fb.com/2025/12/15/android/how-ai-transforming-secure-by-default-mobile-frameworks-adoption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] How AI Is Transforming the Adoption of Secure-by-Default Mobile Frameworks
                 </a>
-                <p class="mb-1 small text-light">Zoomer has delivered training time reductions, and significant QPS improvements, making it the de-facto tool for AI performance optimization across Meta’s entire AI infrastructure.</p>
+                <p class="mb-1 small text-light">Building a secure framework on top of Android APIs, for example, requires a thoughtful balance between security, usability, and maintainability. However, each security framework should be usable across all apps and OS versions for a particular platform.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-28">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Amazon ECS, Amazon CloudWatch, Amazon Cognito and more (December 15, 2025)
+                </a>
+                <p class="mb-1 small text-light">We’ll be taking a break and returning in January to continue bringing you the latest AWS releases and updates. From groundbreaking AI capabilities to transformative infrastructure innovations, AWS has delivered an incredible year of releases that have reshaped what’s possible in the cloud.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-28">
+                <a href="https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon Bedrock adds reinforcement ﬁne-tuning simplifying how developers build smarter, more accurate AI models
+                </a>
+                <p class="mb-1 small text-light">For enhanced security, I can configure virtual private cloud (VPC) settings and AWS Key Management Service (AWS KMS) encryption to meet my organization’s compliance requirements.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-28">
+                <a href="https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] New serverless customization in Amazon SageMaker AI accelerates model fine-tuning
+                </a>
+                <p class="mb-1 small text-light">The new customization capability provides an easy-to-use interface for the latest fine-tuning techniques like reinforcement learning, so you can accelerate the AI model customization process from months to days.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2025-12-28">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-checkpointless-and-elastic-training-on-amazon-sagemaker-hyperpod/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing checkpointless and elastic training on Amazon SageMaker HyperPod
+                </a>
+                <p class="mb-1 small text-light">Rather than spending time managing training infrastructure, these new training techniques mean that your team can concentrate entirely on enhancing model performance, ultimately getting your AI models to market faster.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-28">
+                <a href="https://www.hashicorp.com/blog/terraform-adds-native-monorepo-support-stack-component-configurations-and-more" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform adds native monorepo support, Stack component configurations, and more
+                </a>
+                <p class="mb-1 small text-light">What’s new: We're excited to introduce flexible module publishing for both HCP Terraform and Terraform Enterprise to solve this challenge.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-28">
+                <a href="https://www.hashicorp.com/blog/terraform-stacks-explained" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform Stacks, explained
+                </a>
+                <p class="mb-1 small text-light">This blog covers the challenges Terraform Stacks solve, their benefits, use cases, how they work, their features, and future roadmap. To manage deployments more effectively at scale, Stacks has a deployment groups feature, which replaces the public beta's orchestration rules.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-28">
+                <a href="https://kubernetes.io/blog/2025/12/21/preventing-etcd-zombies/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Avoiding Zombie Cluster Members When Upgrading to etcd v3.6
+                </a>
+                <p class="mb-1 small text-light">Issue summary Recently, the etcd community addressed an issue that may appear when users upgrade from v3. Wait and confirm that all members are healthy post-update.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-28">
+                <a href="https://kubernetes.io/blog/2025/12/18/kubernetes-v1-35-job-managedby-for-jobs-goes-ga/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35: Job Managed By Goes GA
+                </a>
+                <p class="mb-1 small text-light">managedBy allows this granularity on a per-Job basis. managedBy field is rapidly becoming the standard interface for delegating control in the Kubernetes batch ecosystem.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-28">
+                <a href="https://www.cncf.io/blog/2025/12/18/the-mentorship-flywheel-how-cncf-is-growing-the-next-generation-of-cloud-native-leaders/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] The mentorship flywheel: How CNCF is growing the next generation of cloud native leaders
+                </a>
+                <p class="mb-1 small text-light">So I took a Docker course; that course mentioned Kubernetes, so I took a Kubernetes course. Docker led to Kubernetes, which led to understanding the CNCF ecosystem, which led to discovering Kyverno.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2025-12-28">
+                <a href="https://www.cncf.io/blog/2025/12/18/cilium-releases-2025-annual-report-a-decade-of-cloud-native-networking/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Cilium releases 2025 annual report: A decade of cloud native networking
+                </a>
+                <p class="mb-1 small text-light">A decade on from its first commit in 2015, 2025 marks a significant milestone for the Cilium project.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2025-12-28">
+                <a href="https://blog.cloudflare.com/r2-sql-aggregations/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Announcing support for GROUP BY, SUM, and other aggregation queries in R2 SQL
+                </a>
+                <p class="mb-1 small text-light">Splitting aggregate functions into pre-aggregates allows us to horizontally scale computation of aggregation, making use of vast compute resources available in Cloudflare’s network. Shuffling of aggregation data To address the challenges of random data distribution, we introduce a shuffling stage.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-12-28">
+                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
+                </a>
+                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-28">
+                <a href="https://www.reddit.com/r/devops/comments/1px0nqn/hetznerk3s_v244_is_out_open_source_tool_for/" target="_blank" class="fw-bold text-decoration-none">
+                    hetzner-k3s v2.4.4 is out - Open source tool for Kubernetes on Hetzner Cloud
+                </a>
+                <p class="mb-1 small text-light">For those not familiar with it, it's by far the easiest way to set up cheap Kubernetes on Hetzner Cloud. This new version improves network requests handling when talking to the Hetzner Cloud API, as well as the custom local firewall setup for large clusters.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-28">
+                <a href="https://www.reddit.com/r/devops/comments/1px0lkj/what_are_the_things_that_devops_engineer_should/" target="_blank" class="fw-bold text-decoration-none">
+                    What are the things that DevOps Engineer should care/do during the DB Maintenance?
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/Weird_Giraffe6223</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-28">
+                <a href="https://blog.sentry.io/meet-web-vitals-performance-issues/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Meet Web Vitals Performance Issues
+                </a>
+                <p class="mb-1 small text-light">We’ve introduced a new type of Performance Issues, Web Vitals Performance Issues. Today we’re releasing a slick update to Sentry’s built-in Web Vitals features, Web Vitals Performance Issues.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-28">
+                <a href="https://blog.sentry.io/sentry-just-got-an-upgrade-and-its-all-free/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] AI updates for all Sentry users
+                </a>
+                <p class="mb-1 small text-light">Get a first take on what’s causing an issueWhen you hit a new issue, the first question is usually “Where do I start. Sentry’s MCP can access data about your organizations, projects, teams, issues, errors, releases, performance and more.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-28">
+                <a href="https://snyk.io/blog/evo-adds-cyclonedx/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Evo Adds CycloneDX Support to Give Full AI Visibility
+                </a>
+                <p class="mb-1 small text-light">Enterprises face a critical visibility gap in AI models, creating security and compliance risks. Evo's new integration with CycloneDX 1.6 delivers intelligent, actionable AI-BOMs, providing complete oversight and robust governance for your entire AI supply chain.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-28">
+                <a href="https://snyk.io/blog/snyk-genesis-mission/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] How Snyk Helps Federal Agencies Prepare for the Genesis Mission Era of AI-Driven Science
+                </a>
+                <p class="mb-1 small text-light">Snyk helps Federal Agencies secure software for the White House's Genesis Mission, accelerating AI-driven science. Implement Secure by Design for the supply chain, cloud, and pipelines.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-12-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2025-12-28">
+                <a href="https://engineering.atspotify.com/2025/11/context-engineering-background-coding-agents-part-2/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Background Coding Agents: Context Engineering (Part 2)
+                </a>
+                <p class="mb-1 small text-light">We explore context engineering for background coding agents and what makes a good migration prompt. The post Background Coding Agents: Context Engineering (Part 2) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2025-12-28
                     
                 </small>
             </li>

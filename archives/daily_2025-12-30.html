@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - December 30, 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - December 30, 2025
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for December 30, 2025
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2025-12-30">2025-12-30 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2025-12-30 08:07:32
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -114,265 +131,13 @@
         <ul class="list-group" id="articleList">
             
             <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-30">
-                <a href="https://www.reddit.com/r/devops/comments/1pym5hv/im_building_a_devops_simulation_what_realworld/" target="_blank" class="fw-bold text-decoration-none">
-                    I’m building a DevOps simulation, what real-world pain points should I add to make it feel authentic
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pz67sn/thoughts_of_ai_driven_devops_tools_like/" target="_blank" class="fw-bold text-decoration-none">
+                    thoughts of Ai driven devops tools like composeops cloud for kubernetes
                 </a>
-                <p class="mb-1 small text-light">The problem: I’m not a real DevOps engineer. I’m a developer who ends up doing DevOps because the companies I work for are too cheap to hire one.</p>
+                <p class="mb-1 small text-light">Seeing some AI-powered DevOps platforms lately, like ComposeOps Cloud, that claim to automate deployments, scaling, and even self-heal workloads. Curious if anyone has real experience with tools like this in Kubernetes. Do they actually help, or just add complexity? submitted by /u/LoadOk3187</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-30">
-                <a href="https://www.reddit.com/r/devops/comments/1pyjhc7/chainguard_vs_docker_hdi/" target="_blank" class="fw-bold text-decoration-none">
-                    Chainguard vs Docker HDI
-                </a>
-                <p class="mb-1 small text-light">Docker releasing their hardened images for free - does that affect Chainguard at all or are people fully locked in? submitted by /u/Otherwise-Ad5811</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-30">
-                <a href="https://www.reddit.com/r/devops/comments/1pywwap/macbook_pro_vs_air_for_devops_vms/" target="_blank" class="fw-bold text-decoration-none">
-                    MacBook Pro vs Air for DevOps & VMs
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/c00chiman</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-30">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1pws0ax/how_to_get_top_kubernetesdevops_jobs/" target="_blank" class="fw-bold text-decoration-none">
-                    How to get top kubernetes/devops jobs?
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/saiyamjain74</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-30">
-                <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] AV1 — Now Powering 30% of Netflix Streaming
-                </a>
-                <p class="mb-1 small text-light">However, because film grain is inherently random, faithfully representing it in digital video requires a significant amount of data. Continuous improvements to its performance and compatibility have made dav1d the preferred choice for a wide range of platforms and practical applications.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-30">
-                <a href="https://netflixtechblog.medium.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Integrating Netflix’s Foundation Model into Personalization applications
-                </a>
-                <p class="mb-1 small text-light">Overall, the subgraph approach allows for a deeper integration and enables the applications to harness the full power of the Foundation Model. A side benefit of this integration approach is that it provides a de facto baseline for new models/applications.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-30">
-                <a href="https://netflixtechblog.medium.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-2-building-a-scalable-storage-layer-ff4a8dbd3d1f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 2 — Building a Scalable Storage Layer
-                </a>
-                <p class="mb-1 small text-light">Workload complexityTraditional graph database solutions often present significant challenges when faced with the demands of Netflix’s high-volume, real-time data environment.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-30">
-                <a href="https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Introducing GPT-5.2 in Microsoft Foundry: The new standard for enterprise AI
-                </a>
-                <p class="mb-1 small text-light">2 series is built on new architecture, delivering superior performance, efficiency, and reasoning depth compared to prior generations. Application Modernization: Make rapid progress in refactoring services, generating tests, and producing migration plans with risk and rollback criteria.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-30">
-                <a href="https://azure.microsoft.com/en-us/blog/actioning-agentic-ai-5-ways-to-build-with-news-from-microsoft-ignite-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Actioning agentic AI: 5 ways to build with news from Microsoft Ignite 2025
-                </a>
-                <p class="mb-1 small text-light">Our Azure platform announcements resonated because they help solve real problems—and now, the work begins.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-30">
-                <a href="https://www.docker.com/blog/2025-recap-the-year-software-development-changed-shape/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] 2025 Recap: The Year Software Development Changed Shape
-                </a>
-                <p class="mb-1 small text-light">Security Went From “Filters” to “Blast Radius” The real problem wasn’t what models say. By the end, agents were doing operational work: updating infrastructure, resolving customer issues, moving money, managing SaaS tools.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-30">
-                <a href="https://www.redhat.com/en/blog/why-should-your-organization-standardize-red-hat-enterprise-linux-today" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Why should your organization standardize on Red Hat Enterprise Linux today?
-                </a>
-                <p class="mb-1 small text-light">I am currently collaborating with my product marketing team on content explaining why organizations—whether they currently use Red Hat Enterprise Linux (RHEL) or not—should standardize on RHEL today.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-30">
-                <a href="https://www.redhat.com/en/blog/ga-support-red-hat-openshift-vmware-vsphere-foundation-9-and-vmware-cloud-foundation-9" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat OpenShift expands support for VMware vSphere Foundation 9 and VMware Cloud Foundation 9
-                </a>
-                <p class="mb-1 small text-light">20 running on VMware vSphere Foundation 9 (VVF9) and VMware Cloud Foundation 9 (VCF9). As organizations continue to modernize their infrastructure, Red Hat remains committed to providing a stable, certified, and high-performance foundation for Kubernetes workloads across diverse environments.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-30">
-                <a href="https://www.redhat.com/en/blog/data-driven-automation-red-hat-ansible-automation-platform" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Turning automation spend into a measurable advantage
-                </a>
-                <p class="mb-1 small text-light">IT automation is no longer optional for executives; it is a critical strategy. Organizations have moved beyond simple scripting to focus on speed and impact, using automation to power growth and reduce risk.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-30">
-                <a href="https://blog.sentry.io/agent-monitoring-net-apps/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] A better way to monitor your AI agents in .NET apps
-                </a>
-                <p class="mb-1 small text-light">We launched agent monitoring earlier this year, allowing our users to instrument LLM usage and tool calls in their applications. OpenAI , which provides us with IChatClient implementation with OpenAI APIs.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-30">
-                <a href="https://snyk.io/blog/shai-hulud-3-0/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] The Holiday Whisper: Shai-Hulud 3.0
-                </a>
-                <p class="mb-1 small text-light">A refined variant of the Shai-Hulud malware, dubbed The Golden Path, has been discovered targeting the npm ecosystem during the holiday season. Security teams are encouraged to prioritize structural hardening, such as disabling lifecycle scripts, to mitigate risks during this testing phase.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-12-30">
-                <a href="https://engineering.fb.com/2025/12/22/developer-tools/python-typing-survey-2025-code-quality-flexibility-typing-adoption/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Python Typing Survey 2025: Code Quality and Flexibility As Top Reasons for Typing Adoption
-                </a>
-                <p class="mb-1 small text-light">Enhanced Tooling and IDE Support: The type system significantly improves IDE features like autocomplete/IntelliSense, jump-to-definition, and inline type hints, leading to a better developer experience. Community platforms are gaining traction as sources for updates and new features.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-12-30">
-                <a href="https://engineering.fb.com/2025/12/17/virtual-reality/meta-ray-ban-display-from-zero-to-polish/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] How We Built Meta Ray-Ban Display: From Zero to Polish
-                </a>
-                <p class="mb-1 small text-light">We’re going behind the scenes of the Meta Ray-Ban Display, Meta’s most advanced AI glasses yet. Send us feedback on Instagram, Threads, or X.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-30">
-                <a href="https://www.hashicorp.com/blog/new-year-new-cloud-strategy-5-shifts-cloud-leaders-will-be-making-in-2026" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] New year, new cloud strategy: 5 shifts cloud leaders will be making in 2026
-                </a>
-                <p class="mb-1 small text-light">Platform teams standardize on infrastructure as code automation Whether businesses are in the tactical, strategic, or transformative stage of their cloud adoption journey, they’re prioritizing AI-driven automation.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-30">
-                <a href="https://kubernetes.io/blog/2025/12/29/kubernetes-v1-35-introducing-workload-aware-scheduling/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35: Introducing Workload Aware Scheduling
-                </a>
-                <p class="mb-1 small text-light">35 release of Kubernetes delivered the first tranche of workload aware scheduling improvements. Commenting on the workload aware scheduling tracking issue Filing a new issue in the Kubernetes repository.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-12-30">
-                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dash uses context engineering for smarter AI
-                </a>
-                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-30">
-                <a href="https://www.pulumi.com/blog/pulumi-cloud-dark-mode/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Introducing Dark Mode for Pulumi Cloud
-                </a>
-                <p class="mb-1 small text-light">Pulumi Cloud helps teams manage and operate their cloud infrastructure in one place, from state and secrets to deployments, visibility, and policy enforcement. This update is enabled by recent work from our User Experience team to introduce a shared design system across Pulumi Cloud.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-30">
-                <a href="https://www.docker.com/blog/docker-hardened-images-for-every-developer/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] A Safer Container Ecosystem with Docker: Free Docker Hardened Images
-                </a>
-                <p class="mb-1 small text-light">The philosophy of Docker Hardened Images Base images define your application’s security from the very first layer, so it’s critical to know exactly what goes into them. It’s exciting to see Docker continue to invest in open collaboration and secure container infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Docker
+                    Reddit | 2025-12-30
                     
                 </small>
             </li>
@@ -384,7 +149,7 @@
                 <p class="mb-1 small text-light">The new Pod field, supplementalGroupsPolicy, was introduced as an opt-in alpha feature for Kubernetes v1. This feature allows you to implement more precise control over supplemental groups in Linux containers that can strengthen the security posture particularly in accessing volumes.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2025-12-30
                     
                 </small>
             </li>
@@ -396,19 +161,271 @@
                 <p class="mb-1 small text-light">Because of the team’s familiarity with cloud-native concepts, we took this (literally) to the edge. The best place to find answers regarding cutting-edge use cases of Kubernetes is, of course, KubeCon + CloudNativeCon.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-30">
+                <a href="https://www.docker.com/blog/docker-hardened-images-for-every-developer/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] A Safer Container Ecosystem with Docker: Free Docker Hardened Images
+                </a>
+                <p class="mb-1 small text-light">The philosophy of Docker Hardened Images Base images define your application’s security from the very first layer, so it’s critical to know exactly what goes into them. It’s exciting to see Docker continue to invest in open collaboration and secure container infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2025-12-30">
+                <a href="https://www.hashicorp.com/blog/new-year-new-cloud-strategy-5-shifts-cloud-leaders-will-be-making-in-2026" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] New year, new cloud strategy: 5 shifts cloud leaders will be making in 2026
+                </a>
+                <p class="mb-1 small text-light">Platform teams standardize on infrastructure as code automation Whether businesses are in the tactical, strategic, or transformative stage of their cloud adoption journey, they’re prioritizing AI-driven automation.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2025-12-30">
+                <a href="https://kubernetes.io/blog/2025/12/29/kubernetes-v1-35-introducing-workload-aware-scheduling/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35: Introducing Workload Aware Scheduling
+                </a>
+                <p class="mb-1 small text-light">35 release of Kubernetes delivered the first tranche of workload aware scheduling improvements. Commenting on the workload aware scheduling tracking issue Filing a new issue in the Kubernetes repository.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2025-12-30">
+                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dash uses context engineering for smarter AI
+                </a>
+                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2025-12-30">
+                <a href="https://www.pulumi.com/blog/pulumi-cloud-dark-mode/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Introducing Dark Mode for Pulumi Cloud
+                </a>
+                <p class="mb-1 small text-light">Pulumi Cloud helps teams manage and operate their cloud infrastructure in one place, from state and secrets to deployments, visibility, and policy enforcement. This update is enabled by recent work from our User Experience team to introduce a shared design system across Pulumi Cloud.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2025-12-30
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-30">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1pz67sn/thoughts_of_ai_driven_devops_tools_like/" target="_blank" class="fw-bold text-decoration-none">
-                    thoughts of Ai driven devops tools like composeops cloud for kubernetes
+                <a href="https://www.reddit.com/r/devops/comments/1pym5hv/im_building_a_devops_simulation_what_realworld/" target="_blank" class="fw-bold text-decoration-none">
+                    I’m building a DevOps simulation, what real-world pain points should I add to make it feel authentic
                 </a>
-                <p class="mb-1 small text-light">Seeing some AI-powered DevOps platforms lately, like ComposeOps Cloud, that claim to automate deployments, scaling, and even self-heal workloads. Curious if anyone has real experience with tools like this in Kubernetes. Do they actually help, or just add complexity? submitted by /u/LoadOk3187</p>
+                <p class="mb-1 small text-light">The problem: I’m not a real DevOps engineer. I’m a developer who ends up doing DevOps because the companies I work for are too cheap to hire one.</p>
                 <small class="text-secondary">
                     
-                    Reddit
+                    Reddit | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-30">
+                <a href="https://www.reddit.com/r/devops/comments/1pyjhc7/chainguard_vs_docker_hdi/" target="_blank" class="fw-bold text-decoration-none">
+                    Chainguard vs Docker HDI
+                </a>
+                <p class="mb-1 small text-light">Docker releasing their hardened images for free - does that affect Chainguard at all or are people fully locked in? submitted by /u/Otherwise-Ad5811</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-30">
+                <a href="https://www.reddit.com/r/devops/comments/1pywwap/macbook_pro_vs_air_for_devops_vms/" target="_blank" class="fw-bold text-decoration-none">
+                    MacBook Pro vs Air for DevOps & VMs
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/c00chiman</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2025-12-30">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1pws0ax/how_to_get_top_kubernetesdevops_jobs/" target="_blank" class="fw-bold text-decoration-none">
+                    How to get top kubernetes/devops jobs?
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/saiyamjain74</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-30">
+                <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] AV1 — Now Powering 30% of Netflix Streaming
+                </a>
+                <p class="mb-1 small text-light">However, because film grain is inherently random, faithfully representing it in digital video requires a significant amount of data. Continuous improvements to its performance and compatibility have made dav1d the preferred choice for a wide range of platforms and practical applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-30">
+                <a href="https://netflixtechblog.medium.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Integrating Netflix’s Foundation Model into Personalization applications
+                </a>
+                <p class="mb-1 small text-light">Overall, the subgraph approach allows for a deeper integration and enables the applications to harness the full power of the Foundation Model. A side benefit of this integration approach is that it provides a de facto baseline for new models/applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2025-12-30">
+                <a href="https://netflixtechblog.medium.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-2-building-a-scalable-storage-layer-ff4a8dbd3d1f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 2 — Building a Scalable Storage Layer
+                </a>
+                <p class="mb-1 small text-light">Workload complexityTraditional graph database solutions often present significant challenges when faced with the demands of Netflix’s high-volume, real-time data environment.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-30">
+                <a href="https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Introducing GPT-5.2 in Microsoft Foundry: The new standard for enterprise AI
+                </a>
+                <p class="mb-1 small text-light">2 series is built on new architecture, delivering superior performance, efficiency, and reasoning depth compared to prior generations. Application Modernization: Make rapid progress in refactoring services, generating tests, and producing migration plans with risk and rollback criteria.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2025-12-30">
+                <a href="https://azure.microsoft.com/en-us/blog/actioning-agentic-ai-5-ways-to-build-with-news-from-microsoft-ignite-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Actioning agentic AI: 5 ways to build with news from Microsoft Ignite 2025
+                </a>
+                <p class="mb-1 small text-light">Our Azure platform announcements resonated because they help solve real problems—and now, the work begins.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2025-12-30">
+                <a href="https://www.docker.com/blog/2025-recap-the-year-software-development-changed-shape/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] 2025 Recap: The Year Software Development Changed Shape
+                </a>
+                <p class="mb-1 small text-light">Security Went From “Filters” to “Blast Radius” The real problem wasn’t what models say. By the end, agents were doing operational work: updating infrastructure, resolving customer issues, moving money, managing SaaS tools.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-30">
+                <a href="https://www.redhat.com/en/blog/why-should-your-organization-standardize-red-hat-enterprise-linux-today" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Why should your organization standardize on Red Hat Enterprise Linux today?
+                </a>
+                <p class="mb-1 small text-light">I am currently collaborating with my product marketing team on content explaining why organizations—whether they currently use Red Hat Enterprise Linux (RHEL) or not—should standardize on RHEL today.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-30">
+                <a href="https://www.redhat.com/en/blog/ga-support-red-hat-openshift-vmware-vsphere-foundation-9-and-vmware-cloud-foundation-9" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat OpenShift expands support for VMware vSphere Foundation 9 and VMware Cloud Foundation 9
+                </a>
+                <p class="mb-1 small text-light">20 running on VMware vSphere Foundation 9 (VVF9) and VMware Cloud Foundation 9 (VCF9). As organizations continue to modernize their infrastructure, Red Hat remains committed to providing a stable, certified, and high-performance foundation for Kubernetes workloads across diverse environments.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2025-12-30">
+                <a href="https://www.redhat.com/en/blog/data-driven-automation-red-hat-ansible-automation-platform" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Turning automation spend into a measurable advantage
+                </a>
+                <p class="mb-1 small text-light">IT automation is no longer optional for executives; it is a critical strategy. Organizations have moved beyond simple scripting to focus on speed and impact, using automation to power growth and reduce risk.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2025-12-30">
+                <a href="https://blog.sentry.io/agent-monitoring-net-apps/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] A better way to monitor your AI agents in .NET apps
+                </a>
+                <p class="mb-1 small text-light">We launched agent monitoring earlier this year, allowing our users to instrument LLM usage and tool calls in their applications. OpenAI , which provides us with IChatClient implementation with OpenAI APIs.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2025-12-30">
+                <a href="https://snyk.io/blog/shai-hulud-3-0/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The Holiday Whisper: Shai-Hulud 3.0
+                </a>
+                <p class="mb-1 small text-light">A refined variant of the Shai-Hulud malware, dubbed The Golden Path, has been discovered targeting the npm ecosystem during the holiday season. Security teams are encouraged to prioritize structural hardening, such as disabling lifecycle scripts, to mitigate risks during this testing phase.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-12-30">
+                <a href="https://engineering.fb.com/2025/12/22/developer-tools/python-typing-survey-2025-code-quality-flexibility-typing-adoption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Python Typing Survey 2025: Code Quality and Flexibility As Top Reasons for Typing Adoption
+                </a>
+                <p class="mb-1 small text-light">Enhanced Tooling and IDE Support: The type system significantly improves IDE features like autocomplete/IntelliSense, jump-to-definition, and inline type hints, leading to a better developer experience. Community platforms are gaining traction as sources for updates and new features.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-12-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2025-12-30">
+                <a href="https://engineering.fb.com/2025/12/17/virtual-reality/meta-ray-ban-display-from-zero-to-polish/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] How We Built Meta Ray-Ban Display: From Zero to Polish
+                </a>
+                <p class="mb-1 small text-light">We’re going behind the scenes of the Meta Ray-Ban Display, Meta’s most advanced AI glasses yet. Send us feedback on Instagram, Threads, or X.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2025-12-30
                     
                 </small>
             </li>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - January 04, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - January 04, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for January 04, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-01-04">2026-01-04 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2026-01-04 08:06:57
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,282 +126,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-04">
-                <a href="https://www.reddit.com/r/devops/comments/1q2t5ma/devopsplatform_engineers_what_have_you_built_on/" target="_blank" class="fw-bold text-decoration-none">
-                    DevOps/Platform engineers: what have you built on your own?
-                </a>
-                <p class="mb-1 small text-light">Hey folks, I’m a platform engineer (Azure, AWS, Kubernetes, Terraform, Python, CI/CD, some Go). I’m trying to understand: What kinds of products actually make sense for someone with a DevOps / platform engineering background.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-04">
-                <a href="https://www.reddit.com/r/devops/comments/1q3dmd4/built_an_ai_devops_assistant_for_aws_need_feedback/" target="_blank" class="fw-bold text-decoration-none">
-                    Built an AI DevOps assistant for AWS, NEED feedback..
-                </a>
-                <p class="mb-1 small text-light">Hey everyone, My cofounder and I are building an AI-powered DevOps assistant aimed at startups and engineering teams using AWS. 🙏 It’s basically a chat-based DevOps co-pilot that connects to your AWS account and helps you manage infra using natural language.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-04">
-                <a href="https://www.reddit.com/r/devops/comments/1q30td5/how_to_get_into_devops_cloud_at_entry_level/" target="_blank" class="fw-bold text-decoration-none">
-                    How to get into DevOps / Cloud at entry level?
-                </a>
-                <p class="mb-1 small text-light">Right now, my focus is on cloud and DevOps-related topics. I’m learning microservices, Docker, Docker Compose, Swarm and Kubernetes, and comparing orchestration tools as part of my course.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-04">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1q38aqu/lsi_megaraid_card_failing_foreign_configuration/" target="_blank" class="fw-bold text-decoration-none">
-                    LSI Megaraid Card Failing, Foreign Configuration not working on new card
-                </a>
-                <p class="mb-1 small text-light">I have a LSI Megaraid SAS 9260-8i card that I'm assuming is failing. I've tried updating the firmware (same, latest one) and throwing more cooling at it but same issue.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-04">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1q37y90/bobs_business_uk_for_security_training/" target="_blank" class="fw-bold text-decoration-none">
-                    Bob’s Business UK for Security training
-                </a>
-                <p class="mb-1 small text-light">Has anyone here (preferably in the UK) used Bob's Business for cybersecurity training for their staff? How was it? I know the name is stupid, but apparently they are legit? submitted by /u/DemonEggy</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-04">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1q3cvns/my_attempt_at_kubernetes_node_labelling_operator/" target="_blank" class="fw-bold text-decoration-none">
-                    my attempt at kubernetes node labelling operator.
-                </a>
-                <p class="mb-1 small text-light">- Auto-Detection - Automatically discovers GPUs (NVIDIA/AMD), SR-IOV devices, high-memory nodes, CPU architecture. - Policy-Driven Labeling - Define labeling policies as Kubernetes Custom Resources and let the operator handle the rest.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-04">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1q2yevu/does_this_aws_ec2_private_kubernetes_deployment/" target="_blank" class="fw-bold text-decoration-none">
-                    Does This AWS EC2 Private Kubernetes Deployment Method Work?
-                </a>
-                <p class="mb-1 small text-light">Could someone please confirm if the approach in this article works as expected.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-04">
-                <a href="https://netflixtechblog.com/netflix-live-origin-41f1b0ad5371?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Netflix Live Origin
-                </a>
-                <p class="mb-1 small text-light">Live Streaming Distribution and Origin ArchitectureNetflix Live Origin is a multi-tenant microservice operating on EC2 instances within the AWS cloud. The implementation of epoch locking at the cloud encoder enables the origin to select a segment from either encoding pipeline.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-04">
-                <a href="https://snyk.io/blog/evo-adds-cyclonedx/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Evo Adds CycloneDX Support to Give Full AI Visibility
-                </a>
-                <p class="mb-1 small text-light">Enterprises face a critical visibility gap in AI models, creating security and compliance risks. Evo's new integration with CycloneDX 1.6 delivers intelligent, actionable AI-BOMs, providing complete oversight and robust governance for your entire AI supply chain.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-04">
-                <a href="https://snyk.io/blog/snyk-genesis-mission/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] How Snyk Helps Federal Agencies Prepare for the Genesis Mission Era of AI-Driven Science
-                </a>
-                <p class="mb-1 small text-light">Snyk helps Federal Agencies secure software for the White House's Genesis Mission, accelerating AI-driven science. Implement Secure by Design for the supply chain, cloud, and pipelines.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-04">
-                <a href="https://kubernetes.io/blog/2025/12/31/kubernetes-v1-35-structured-zpages/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes 1.35: Enhanced Debugging with Versioned z-pages APIs
-                </a>
-                <p class="mb-1 small text-light">Introduced as an alpha feature in Kubernetes 1. Important considerations Alpha feature status The structured z-page responses are an alpha feature in Kubernetes 1.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-04">
-                <a href="https://blog.cloudflare.com/h1-2025-transparency-report/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Innovating to address streaming abuse — and our latest transparency report
-                </a>
-                <p class="mb-1 small text-light">Indeed, the same actors who infringe legitimate intellectual property rights with unauthorized streaming may seek to misuse Cloudflare’s services, impacting performance, costs, and reliability for other users.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-01-04">
-                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Streamlining Security Investigations with Agents
-                </a>
-                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-01-04">
-                <a href="https://www.pulumi.com/blog/2025-product-launches/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Pulumi 2025: Neo, Next-Gen Policies, and Platform Engineering at Scale
-                </a>
-                <p class="mb-1 small text-light">Pulumi IAM provides the unified framework for fine-grained authorization needed to confidently manage modern cloud infrastructure: Custom Roles: Define reusable permissions with fine-grained scopes tailored to your organization’s specific needs Least Privilege Enforcement: Control precisely who c...</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-01-04">
-                <a href="https://www.pulumi.com/blog/all-iac-including-terraform-and-hcl/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Pulumi for All Your IaC — Including Terraform and HCL
-                </a>
-                <p class="mb-1 small text-light">The TL;DR Pulumi Cloud now manages Terraform/OpenTofu with full visibility, governance, and agentic AI included. when code-generating IaC or supporting simple developer self-service CI/CD pipelines where a handful of lines of YAML do the trick).</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-04">
-                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-gartner-magic-quadrant-for-ai-application-development-platforms/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft named a Leader in Gartner® Magic Quadrant™ for AI Application Development Platforms
-                </a>
-                <p class="mb-1 small text-light">Foundry Agent Service supports multi-agent orchestration where agents can handle off tasks, coordinate decisions, and drive end to end business processes: deployable directly into Copilot or your applications.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-04">
-                <a href="https://www.docker.com/blog/from-the-captains-chair-igor-aleksandrov/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] From the Captain’s Chair: Igor Aleksandrov
-                </a>
-                <p class="mb-1 small text-light">We chose our first Rails application to containerize and started writing our first Dockerfile. Today, I write extensively about Rails containerization best practices, from image slimming techniques to sophisticated CI/CD pipelines.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-04">
-                <a href="https://www.docker.com/blog/docker-hardened-images-security-independently-validated-by-srlabs/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Hardened Images: Security Independently Validated by SRLabs
-                </a>
-                <p class="mb-1 small text-light">Their assessment: “Non root, minimal container images significantly reduce attack vectors compared to traditional images. In their words: “Docker Hardened Images deliver on their public security promises for today’s threat landscape.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-04">
-                <a href="https://www.docker.com/blog/develop-deploy-voice-ai-apps/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Develop and deploy voice AI apps using Docker
-                </a>
-                <p class="mb-1 small text-light">The Docker container provides a reliable and reproducible environment for developing software locally on your own machine and then shipping it to the cloud. For complex AI applications, Docker provides a suite of tools that makes it easy for developers and platform engineers to build and deploy.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-04">
-                <a href="https://snyk.io/blog/old-ai-security-vs-evo/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Old AI Security vs Evo: Watch Agentic Security Replace Weeks of Manual Work
-                </a>
-                <p class="mb-1 small text-light">The rise of GenAI brings complex, non-deterministic security risks that traditional methods can't handle. Discover Evo by Snyk, the world's first agentic security orchestration system for AI-native defense.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-01-04">
-                <a href="https://engineering.fb.com/2025/12/19/data-infrastructure/drp-metas-root-cause-analysis-platform-at-scale/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] DrP: Meta’s Root Cause Analysis Platform at Scale
-                </a>
-                <p class="mb-1 small text-light">DrP’s key components include: Expressive SDK: The DrP SDK allows engineers to codify investigation workflows into analyzers. Analyzer chaining: For dependent service analysis, the SDK’s APIs allow for seamless chaining of analyzers, passing context and obtaining outputs.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-04">
-                <a href="https://blog.cloudflare.com/fail-small-resilience-plan/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Code Orange: Fail Small — our resilience plan following recent incidents
-                </a>
-                <p class="mb-1 small text-light">This pattern exposed a serious gap in how we deploy configuration changes at Cloudflare, versus how we release software updates. For each new binary release, the deployment must successfully complete multiple gates before it can serve worldwide traffic.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-01-04">
-                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
-                </a>
-                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-04">
                 <a href="https://www.hashicorp.com/blog/infrastructure-as-demos-a-terraform-selling-platform-built-on-terraform" target="_blank" class="fw-bold text-decoration-none">
                     [HashiCorp] Infrastructure as demos: A Terraform-selling platform, built on Terraform
@@ -392,7 +133,7 @@
                 <p class="mb-1 small text-light">We called this new self-service internal platform “Demos done right” (DDR) and powered it with HCP Terraform, Vault, and Boundary. The solution: A Terraform-powered self-service platform (DDR) We knew we had the tools to solve this problem.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-01-04
                     
                 </small>
             </li>
@@ -404,7 +145,283 @@
                 <p class="mb-1 small text-light">However, the reality is that disruptive maintenance requires careful planning, and as Cloudflare grew, managing these complexities through manual coordination between our infrastructure and network operations specialists became nearly impossible.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-04">
+                <a href="https://blog.cloudflare.com/fail-small-resilience-plan/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Code Orange: Fail Small — our resilience plan following recent incidents
+                </a>
+                <p class="mb-1 small text-light">This pattern exposed a serious gap in how we deploy configuration changes at Cloudflare, versus how we release software updates. For each new binary release, the deployment must successfully complete multiple gates before it can serve worldwide traffic.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-01-04">
+                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
+                </a>
+                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-04">
+                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-gartner-magic-quadrant-for-ai-application-development-platforms/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft named a Leader in Gartner® Magic Quadrant™ for AI Application Development Platforms
+                </a>
+                <p class="mb-1 small text-light">Foundry Agent Service supports multi-agent orchestration where agents can handle off tasks, coordinate decisions, and drive end to end business processes: deployable directly into Copilot or your applications.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-04">
+                <a href="https://www.docker.com/blog/from-the-captains-chair-igor-aleksandrov/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] From the Captain’s Chair: Igor Aleksandrov
+                </a>
+                <p class="mb-1 small text-light">We chose our first Rails application to containerize and started writing our first Dockerfile. Today, I write extensively about Rails containerization best practices, from image slimming techniques to sophisticated CI/CD pipelines.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-04">
+                <a href="https://www.docker.com/blog/docker-hardened-images-security-independently-validated-by-srlabs/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Hardened Images: Security Independently Validated by SRLabs
+                </a>
+                <p class="mb-1 small text-light">Their assessment: “Non root, minimal container images significantly reduce attack vectors compared to traditional images. In their words: “Docker Hardened Images deliver on their public security promises for today’s threat landscape.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-04">
+                <a href="https://www.docker.com/blog/develop-deploy-voice-ai-apps/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Develop and deploy voice AI apps using Docker
+                </a>
+                <p class="mb-1 small text-light">The Docker container provides a reliable and reproducible environment for developing software locally on your own machine and then shipping it to the cloud. For complex AI applications, Docker provides a suite of tools that makes it easy for developers and platform engineers to build and deploy.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-04">
+                <a href="https://snyk.io/blog/old-ai-security-vs-evo/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Old AI Security vs Evo: Watch Agentic Security Replace Weeks of Manual Work
+                </a>
+                <p class="mb-1 small text-light">The rise of GenAI brings complex, non-deterministic security risks that traditional methods can't handle. Discover Evo by Snyk, the world's first agentic security orchestration system for AI-native defense.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-01-04">
+                <a href="https://engineering.fb.com/2025/12/19/data-infrastructure/drp-metas-root-cause-analysis-platform-at-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] DrP: Meta’s Root Cause Analysis Platform at Scale
+                </a>
+                <p class="mb-1 small text-light">DrP’s key components include: Expressive SDK: The DrP SDK allows engineers to codify investigation workflows into analyzers. Analyzer chaining: For dependent service analysis, the SDK’s APIs allow for seamless chaining of analyzers, passing context and obtaining outputs.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-04">
+                <a href="https://kubernetes.io/blog/2025/12/31/kubernetes-v1-35-structured-zpages/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes 1.35: Enhanced Debugging with Versioned z-pages APIs
+                </a>
+                <p class="mb-1 small text-light">Introduced as an alpha feature in Kubernetes 1. Important considerations Alpha feature status The structured z-page responses are an alpha feature in Kubernetes 1.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-04">
+                <a href="https://blog.cloudflare.com/h1-2025-transparency-report/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Innovating to address streaming abuse — and our latest transparency report
+                </a>
+                <p class="mb-1 small text-light">Indeed, the same actors who infringe legitimate intellectual property rights with unauthorized streaming may seek to misuse Cloudflare’s services, impacting performance, costs, and reliability for other users.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-01-04">
+                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Streamlining Security Investigations with Agents
+                </a>
+                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-01-04">
+                <a href="https://www.pulumi.com/blog/2025-product-launches/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Pulumi 2025: Neo, Next-Gen Policies, and Platform Engineering at Scale
+                </a>
+                <p class="mb-1 small text-light">Pulumi IAM provides the unified framework for fine-grained authorization needed to confidently manage modern cloud infrastructure: Custom Roles: Define reusable permissions with fine-grained scopes tailored to your organization’s specific needs Least Privilege Enforcement: Control precisely who c...</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-01-04">
+                <a href="https://www.pulumi.com/blog/all-iac-including-terraform-and-hcl/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Pulumi for All Your IaC — Including Terraform and HCL
+                </a>
+                <p class="mb-1 small text-light">The TL;DR Pulumi Cloud now manages Terraform/OpenTofu with full visibility, governance, and agentic AI included. when code-generating IaC or supporting simple developer self-service CI/CD pipelines where a handful of lines of YAML do the trick).</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-04">
+                <a href="https://www.reddit.com/r/devops/comments/1q2t5ma/devopsplatform_engineers_what_have_you_built_on/" target="_blank" class="fw-bold text-decoration-none">
+                    DevOps/Platform engineers: what have you built on your own?
+                </a>
+                <p class="mb-1 small text-light">Hey folks, I’m a platform engineer (Azure, AWS, Kubernetes, Terraform, Python, CI/CD, some Go). I’m trying to understand: What kinds of products actually make sense for someone with a DevOps / platform engineering background.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-04">
+                <a href="https://www.reddit.com/r/devops/comments/1q3dmd4/built_an_ai_devops_assistant_for_aws_need_feedback/" target="_blank" class="fw-bold text-decoration-none">
+                    Built an AI DevOps assistant for AWS, NEED feedback..
+                </a>
+                <p class="mb-1 small text-light">Hey everyone, My cofounder and I are building an AI-powered DevOps assistant aimed at startups and engineering teams using AWS. 🙏 It’s basically a chat-based DevOps co-pilot that connects to your AWS account and helps you manage infra using natural language.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-04">
+                <a href="https://www.reddit.com/r/devops/comments/1q30td5/how_to_get_into_devops_cloud_at_entry_level/" target="_blank" class="fw-bold text-decoration-none">
+                    How to get into DevOps / Cloud at entry level?
+                </a>
+                <p class="mb-1 small text-light">Right now, my focus is on cloud and DevOps-related topics. I’m learning microservices, Docker, Docker Compose, Swarm and Kubernetes, and comparing orchestration tools as part of my course.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-04">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1q38aqu/lsi_megaraid_card_failing_foreign_configuration/" target="_blank" class="fw-bold text-decoration-none">
+                    LSI Megaraid Card Failing, Foreign Configuration not working on new card
+                </a>
+                <p class="mb-1 small text-light">I have a LSI Megaraid SAS 9260-8i card that I'm assuming is failing. I've tried updating the firmware (same, latest one) and throwing more cooling at it but same issue.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-04">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1q37y90/bobs_business_uk_for_security_training/" target="_blank" class="fw-bold text-decoration-none">
+                    Bob’s Business UK for Security training
+                </a>
+                <p class="mb-1 small text-light">Has anyone here (preferably in the UK) used Bob's Business for cybersecurity training for their staff? How was it? I know the name is stupid, but apparently they are legit? submitted by /u/DemonEggy</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-04">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1q3cvns/my_attempt_at_kubernetes_node_labelling_operator/" target="_blank" class="fw-bold text-decoration-none">
+                    my attempt at kubernetes node labelling operator.
+                </a>
+                <p class="mb-1 small text-light">- Auto-Detection - Automatically discovers GPUs (NVIDIA/AMD), SR-IOV devices, high-memory nodes, CPU architecture. - Policy-Driven Labeling - Define labeling policies as Kubernetes Custom Resources and let the operator handle the rest.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-04">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1q2yevu/does_this_aws_ec2_private_kubernetes_deployment/" target="_blank" class="fw-bold text-decoration-none">
+                    Does This AWS EC2 Private Kubernetes Deployment Method Work?
+                </a>
+                <p class="mb-1 small text-light">Could someone please confirm if the approach in this article works as expected.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-04">
+                <a href="https://netflixtechblog.com/netflix-live-origin-41f1b0ad5371?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Netflix Live Origin
+                </a>
+                <p class="mb-1 small text-light">Live Streaming Distribution and Origin ArchitectureNetflix Live Origin is a multi-tenant microservice operating on EC2 instances within the AWS cloud. The implementation of epoch locking at the cloud encoder enables the origin to select a segment from either encoding pipeline.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-04">
+                <a href="https://snyk.io/blog/evo-adds-cyclonedx/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Evo Adds CycloneDX Support to Give Full AI Visibility
+                </a>
+                <p class="mb-1 small text-light">Enterprises face a critical visibility gap in AI models, creating security and compliance risks. Evo's new integration with CycloneDX 1.6 delivers intelligent, actionable AI-BOMs, providing complete oversight and robust governance for your entire AI supply chain.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-01-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-04">
+                <a href="https://snyk.io/blog/snyk-genesis-mission/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] How Snyk Helps Federal Agencies Prepare for the Genesis Mission Era of AI-Driven Science
+                </a>
+                <p class="mb-1 small text-light">Snyk helps Federal Agencies secure software for the White House's Genesis Mission, accelerating AI-driven science. Implement Secure by Design for the supply chain, cloud, and pipelines.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-01-04
                     
                 </small>
             </li>

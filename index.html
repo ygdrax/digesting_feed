@@ -70,7 +70,7 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2026-01-05 08:12:21
+                    25 articles from 11 sources • Updated 2026-01-06 08:08:13
                     
                 </span>
             </small>
@@ -82,42 +82,38 @@
             <select id="sourceFilter" class="form-select w-auto d-inline-block">
                 <option value="all">All Sources</option>
                 
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
                 <option value="CNCF">CNCF</option>
                 
-                <option value="Docker">Docker</option>
-                
                 <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="Hacker News">Hacker News</option>
                 
                 <option value="HashiCorp">HashiCorp</option>
                 
                 <option value="Kubernetes">Kubernetes</option>
                 
-                <option value="Microsoft Azure">Microsoft Azure</option>
-                
                 <option value="Netflix">Netflix</option>
                 
-                <option value="Pulumi">Pulumi</option>
-                
-                <option value="Red Hat">Red Hat</option>
-                
                 <option value="Reddit">Reddit</option>
-                
-                <option value="Sentry">Sentry</option>
-                
-                <option value="Snyk">Snyk</option>
-                
-                <option value="Spotify Engineering">Spotify Engineering</option>
                 
             </select>
         </div>
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-05">
-                <a href="https://www.reddit.com/r/devops/comments/1q3ugf8/company_i_work_for_realized_ai_cant_replace/" target="_blank" class="fw-bold text-decoration-none">
-                    Company I work for realized AI can’t replace DevOps and now Hiring again
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-06">
+                <a href="https://www.reddit.com/r/devops/comments/1q4tpos/open_source_observability_podcast_foss_leaders/" target="_blank" class="fw-bold text-decoration-none">
+                    Open Source Observability Podcast - FOSS Leaders & Tips for DevOps/SRE Beginners
                 </a>
-                <p class="mb-1 small text-light">" but imo These folks haven’t dealt with complex infrastructure beyond boilerplate to think AI can automate DevOps. If you enjoy working in DevOps, there are still plenty of opportunities out there and likely more going forward.</p>
+                <p class="mb-1 small text-light">So far I've been grateful to interview DevRels from Valkey (BSD Redis fork), Altinity (Clickhouse support), and the co-founder of DevOpsDays. Observability is expensive, and related open source tools can remove barriers to growth for users and entrepreneurs around the world.</p>
                 <small class="text-secondary">
                     
                     Reddit
@@ -125,11 +121,11 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-05">
-                <a href="https://www.reddit.com/r/devops/comments/1q3utve/another_helm_chart_for_garage_minio_alternative/" target="_blank" class="fw-bold text-decoration-none">
-                    Another Helm Chart for Garage (MinIO Alternative for Homelabs & Small Deployments)
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-06">
+                <a href="https://www.reddit.com/r/devops/comments/1q4pvy6/wrote_a_deep_dive_on_sandboxing_for_ai_agents/" target="_blank" class="fw-bold text-decoration-none">
+                    Wrote a deep dive on sandboxing for AI agents: containers vs gVisor vs microVMs vs Wasm, and when each makes sense
                 </a>
-                <p class="mb-1 small text-light">I have published a Helm chart that goes way beyond the official one, making Garage a drop-in replacement for MinIO with a much smoother experience for Kubernetes users. Gateway API support: Native support for Kubernetes Gateway API (plus Ingress), so you’re ready for modern K8s networking.</p>
+                <p class="mb-1 small text-light">dev/blog/sandboxes-for-ai Wrote this after spending too long untangling the "just use Docker" vs "you need VMs" debate for AI agent sandboxing. I think the problem is that the word "sandbox" gets applied to four different isolation boundaries with very different security properties.</p>
                 <small class="text-secondary">
                     
                     Reddit
@@ -137,11 +133,11 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-05">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1q1m4ep/built_an_operator_for_cronjob_monitoring_looking/" target="_blank" class="fw-bold text-decoration-none">
-                    Built an operator for CronJob monitoring, looking for feedback
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-06">
+                <a href="https://www.reddit.com/r/devops/comments/1q55epw/my_thoughts_on_comparing_paas_services_against/" target="_blank" class="fw-bold text-decoration-none">
+                    My thoughts on comparing PaaS services against Docker, what are yours?
                 </a>
-                <p class="mb-1 small text-light">Yeah, you can set up Prometheus alerts for CronJob failures. com/iLLeniumStudios/cronjob-guardian Curious what you'd want from something like this and I'd be happy to implement them if there's a need https://preview.</p>
+                <p class="mb-1 small text-light">Hey folks, I'm curious to get your thoughts on the tradeoff when choosing to run a service (let's say a HTTP API for the sake of discussion) in Docker containers, or on PaaS like Azure App Service or AWS App Runner.</p>
                 <small class="text-secondary">
                     
                     Reddit
@@ -149,179 +145,71 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-05">
-                <a href="https://netflixtechblog.medium.com/towards-generalizable-and-efficient-large-scale-generative-recommenders-a7db648aa257?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Towards Generalizable and Efficient Large-Scale Generative Recommenders
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-01-06">
+                <a href="https://github.com/Adversis/tailsnitch" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: Tailsnitch – A security auditor for Tailscale
                 </a>
-                <p class="mb-1 small text-light">Our large-scale evaluations reveal significant alignment challenges when applying these models to downstream applications. It is also worth noting that our approach enables further scaling of model size, balancing performance improvements against serving costs.</p>
+                <p class="mb-1 small text-light">Article URL: https://github.com/Adversis/tailsnitch Comments URL: https://news.ycombinator.com/item?id=46501137 Points: 231 # Comments: 22</p>
                 <small class="text-secondary">
                     
-                    Netflix
+                    Hacker News
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-05">
-                <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] AV1 — Now Powering 30% of Netflix Streaming
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-06">
+                <a href="https://aws.amazon.com/blogs/aws/happy-new-year-aws-weekly-roundup-10000-aideas-competition-amazon-ec2-amazon-ecs-managed-instances-and-more-january-5-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Happy New Year! AWS Weekly Roundup: 10,000 AIdeas Competition, Amazon EC2, Amazon ECS Managed Instances and more (January 5, 2026)
                 </a>
-                <p class="mb-1 small text-light">However, because film grain is inherently random, faithfully representing it in digital video requires a significant amount of data. Continuous improvements to its performance and compatibility have made dav1d the preferred choice for a wide range of platforms and practical applications.</p>
+                <p class="mb-1 small text-light">M8gn instances feature the latest 6th generation AWS Nitro Cards, and offer up to 600 Gbps network bandwidth, the highest network bandwidth among network-optimized EC2 instances.</p>
                 <small class="text-secondary">
                     
-                    Netflix
+                    Amazon AWS
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-05">
-                <a href="https://netflixtechblog.medium.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Integrating Netflix’s Foundation Model into Personalization applications
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-06">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Amazon ECS, Amazon CloudWatch, Amazon Cognito and more (December 15, 2025)
                 </a>
-                <p class="mb-1 small text-light">Overall, the subgraph approach allows for a deeper integration and enables the applications to harness the full power of the Foundation Model. A side benefit of this integration approach is that it provides a de facto baseline for new models/applications.</p>
+                <p class="mb-1 small text-light">We’ll be taking a break and returning in January to continue bringing you the latest AWS releases and updates. From groundbreaking AI capabilities to transformative infrastructure innovations, AWS has delivered an incredible year of releases that have reshaped what’s possible in the cloud.</p>
                 <small class="text-secondary">
                     
-                    Netflix
+                    Amazon AWS
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-05">
-                <a href="https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Introducing GPT-5.2 in Microsoft Foundry: The new standard for enterprise AI
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-06">
+                <a href="https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon Bedrock adds reinforcement ﬁne-tuning simplifying how developers build smarter, more accurate AI models
                 </a>
-                <p class="mb-1 small text-light">2 series is built on new architecture, delivering superior performance, efficiency, and reasoning depth compared to prior generations. Application Modernization: Make rapid progress in refactoring services, generating tests, and producing migration plans with risk and rollback criteria.</p>
+                <p class="mb-1 small text-light">For enhanced security, I can configure virtual private cloud (VPC) settings and AWS Key Management Service (AWS KMS) encryption to meet my organization’s compliance requirements.</p>
                 <small class="text-secondary">
                     
-                    Microsoft Azure
+                    Amazon AWS
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-05">
-                <a href="https://azure.microsoft.com/en-us/blog/actioning-agentic-ai-5-ways-to-build-with-news-from-microsoft-ignite-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Actioning agentic AI: 5 ways to build with news from Microsoft Ignite 2025
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-06">
+                <a href="https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] New serverless customization in Amazon SageMaker AI accelerates model fine-tuning
                 </a>
-                <p class="mb-1 small text-light">Our Azure platform announcements resonated because they help solve real problems—and now, the work begins.</p>
+                <p class="mb-1 small text-light">The new customization capability provides an easy-to-use interface for the latest fine-tuning techniques like reinforcement learning, so you can accelerate the AI model customization process from months to days.</p>
                 <small class="text-secondary">
                     
-                    Microsoft Azure
+                    Amazon AWS
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-05">
-                <a href="https://www.docker.com/blog/2025-recap-the-year-software-development-changed-shape/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] 2025 Recap: The Year Software Development Changed Shape
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-06">
+                <a href="https://www.hashicorp.com/blog/terraform-adds-native-monorepo-support-stack-component-configurations-and-more" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform adds native monorepo support, Stack component configurations, and more
                 </a>
-                <p class="mb-1 small text-light">Security Went From “Filters” to “Blast Radius” The real problem wasn’t what models say. By the end, agents were doing operational work: updating infrastructure, resolving customer issues, moving money, managing SaaS tools.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-05">
-                <a href="https://www.redhat.com/en/blog/why-should-your-organization-standardize-red-hat-enterprise-linux-today" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Why should your organization standardize on Red Hat Enterprise Linux today?
-                </a>
-                <p class="mb-1 small text-light">I am currently collaborating with my product marketing team on content explaining why organizations—whether they currently use Red Hat Enterprise Linux (RHEL) or not—should standardize on RHEL today.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-05">
-                <a href="https://www.redhat.com/en/blog/ga-support-red-hat-openshift-vmware-vsphere-foundation-9-and-vmware-cloud-foundation-9" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat OpenShift expands support for VMware vSphere Foundation 9 and VMware Cloud Foundation 9
-                </a>
-                <p class="mb-1 small text-light">20 running on VMware vSphere Foundation 9 (VVF9) and VMware Cloud Foundation 9 (VCF9). As organizations continue to modernize their infrastructure, Red Hat remains committed to providing a stable, certified, and high-performance foundation for Kubernetes workloads across diverse environments.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-01-05">
-                <a href="https://blog.sentry.io/agent-monitoring-net-apps/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] A better way to monitor your AI agents in .NET apps
-                </a>
-                <p class="mb-1 small text-light">We launched agent monitoring earlier this year, allowing our users to instrument LLM usage and tool calls in their applications. OpenAI , which provides us with IChatClient implementation with OpenAI APIs.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-05">
-                <a href="https://snyk.io/blog/shai-hulud-3-0/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] The Holiday Whisper: Shai-Hulud 3.0
-                </a>
-                <p class="mb-1 small text-light">A refined variant of the Shai-Hulud malware, dubbed The Golden Path, has been discovered targeting the npm ecosystem during the holiday season. Security teams are encouraged to prioritize structural hardening, such as disabling lifecycle scripts, to mitigate risks during this testing phase.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-05">
-                <a href="https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Security Advisory: Critical RCE Vulnerabilities in React Server Components (CVE-2025-55182)
-                </a>
-                <p class="mb-1 small text-light">Critical RCE vulnerabilities (CVE-2025-55182/CVE-2025-66478) were found in React Server Components and Next.js via unsafe deserialization. Immediate upgrade to patched versions is mandatory to prevent unauthenticated remote code execution. Learn how to detect and mitigate the critical flaw.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-01-05">
-                <a href="https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3)
-                </a>
-                <p class="mb-1 small text-light">The system we built to ensure our AI agents produce predictable, trustworthy code. The post Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-01-05">
-                <a href="https://engineering.atspotify.com/2025/11/context-engineering-background-coding-agents-part-2/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Background Coding Agents: Context Engineering (Part 2)
-                </a>
-                <p class="mb-1 small text-light">We explore context engineering for background coding agents and what makes a good migration prompt. The post Background Coding Agents: Context Engineering (Part 2) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-01-05">
-                <a href="https://engineering.atspotify.com/2025/11/shuffle-making-random-feel-more-human/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Shuffle: Making Random Feel More Human
-                </a>
-                <p class="mb-1 small text-light">Shuffle has always been one of Spotify’s most-used features, and also one of the most misunderstood. For... The post Shuffle: Making Random Feel More Human appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-05">
-                <a href="https://www.hashicorp.com/blog/new-year-new-cloud-strategy-5-shifts-cloud-leaders-will-be-making-in-2026" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] New year, new cloud strategy: 5 shifts cloud leaders will be making in 2026
-                </a>
-                <p class="mb-1 small text-light">Platform teams standardize on infrastructure as code automation Whether businesses are in the tactical, strategic, or transformative stage of their cloud adoption journey, they’re prioritizing AI-driven automation.</p>
+                <p class="mb-1 small text-light">What’s new: We're excited to introduce flexible module publishing for both HCP Terraform and Terraform Enterprise to solve this challenge.</p>
                 <small class="text-secondary">
                     
                     HashiCorp
@@ -329,11 +217,23 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-05">
-                <a href="https://kubernetes.io/blog/2025/12/29/kubernetes-v1-35-introducing-workload-aware-scheduling/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35: Introducing Workload Aware Scheduling
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-06">
+                <a href="https://www.hashicorp.com/blog/terraform-stacks-explained" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform Stacks, explained
                 </a>
-                <p class="mb-1 small text-light">35 release of Kubernetes delivered the first tranche of workload aware scheduling improvements. Commenting on the workload aware scheduling tracking issue Filing a new issue in the Kubernetes repository.</p>
+                <p class="mb-1 small text-light">This blog covers the challenges Terraform Stacks solve, their benefits, use cases, how they work, their features, and future roadmap. To manage deployments more effectively at scale, Stacks has a deployment groups feature, which replaces the public beta's orchestration rules.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-06">
+                <a href="https://kubernetes.io/blog/2026/01/02/kubernetes-v1-35-restart-all-containers/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35: New level of efficiency with in-place Pod restart
+                </a>
+                <p class="mb-1 small text-light">This alpha feature extends the Container Restart Rules feature, which graduated to beta in Kubernetes 1. This feature introduces a Kubernetes-native solution, improving system robustness and allowing application developers to concentrate on their core training logic.</p>
                 <small class="text-secondary">
                     
                     Kubernetes
@@ -341,11 +241,35 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-01-05">
-                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dash uses context engineering for smarter AI
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-01-06">
+                <a href="https://www.cncf.io/blog/2025/12/18/the-mentorship-flywheel-how-cncf-is-growing-the-next-generation-of-cloud-native-leaders/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] The mentorship flywheel: How CNCF is growing the next generation of cloud native leaders
                 </a>
-                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
+                <p class="mb-1 small text-light">So I took a Docker course; that course mentioned Kubernetes, so I took a Kubernetes course. Docker led to Kubernetes, which led to understanding the CNCF ecosystem, which led to discovering Kyverno.</p>
+                <small class="text-secondary">
+                    
+                    CNCF
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-06">
+                <a href="https://blog.cloudflare.com/r2-sql-aggregations/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Announcing support for GROUP BY, SUM, and other aggregation queries in R2 SQL
+                </a>
+                <p class="mb-1 small text-light">Splitting aggregate functions into pre-aggregates allows us to horizontally scale computation of aggregation, making use of vast compute resources available in Cloudflare’s network. Shuffling of aggregation data To address the challenges of random data distribution, we introduce a shuffling stage.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-01-06">
+                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
+                </a>
+                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
                 <small class="text-secondary">
                     
                     Dropbox Tech
@@ -353,23 +277,11 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-01-05">
-                <a href="https://www.pulumi.com/blog/pulumi-cloud-dark-mode/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Introducing Dark Mode for Pulumi Cloud
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-06">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1q4wfck/worried_about_my_future_in_devops_cybersecurity/" target="_blank" class="fw-bold text-decoration-none">
+                    Worried about my future in DevOps / Cybersecurity because of AI – need honest advice
                 </a>
-                <p class="mb-1 small text-light">Pulumi Cloud helps teams manage and operate their cloud infrastructure in one place, from state and secrets to deployments, visibility, and policy enforcement. This update is enabled by recent work from our User Experience team to introduce a shared design system across Pulumi Cloud.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-05">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1q412c7/multicloud_kubernetes_for_25month_using_talos/" target="_blank" class="fw-bold text-decoration-none">
-                    Multi-cloud Kubernetes for $25/month using Talos, KubeSpan, and Tailscale
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/inventivepotter</p>
+                <p class="mb-1 small text-light">I have around 2 years of experience in DevOps and I’m currently studying for the CKAa. For people already working in DevOps, SRE, or Cybersecurity: • Do you feel the same way.</p>
                 <small class="text-secondary">
                     
                     Reddit
@@ -377,23 +289,47 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-05">
-                <a href="https://www.docker.com/blog/docker-hardened-images-for-every-developer/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] A Safer Container Ecosystem with Docker: Free Docker Hardened Images
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-06">
+                <a href="https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How Temporal Powers Reliable Cloud Operations at Netflix
                 </a>
-                <p class="mb-1 small text-light">The philosophy of Docker Hardened Images Base images define your application’s security from the very first layer, so it’s critical to know exactly what goes into them. It’s exciting to see Docker continue to invest in open collaboration and secure container infrastructure.</p>
+                <p class="mb-1 small text-light">Despite all of this, Clouddriver must be as reliable as reasonably possible as a core platform service. The child workflow will execute Activities which handle the actual cloud provider API calls to mutate infrastructure.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Netflix
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-05">
-                <a href="https://kubernetes.io/blog/2025/12/23/kubernetes-v1-35-fine-grained-supplementalgroups-control-ga/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35: Fine-grained Supplemental Groups Control Graduates to GA
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-01-06">
+                <a href="https://about.gitlab.com/blog/gitlab-18-7-advancing-ai-automation/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab 18.7: Advancing AI automation, governance, and developer experience
                 </a>
-                <p class="mb-1 small text-light">The new Pod field, supplementalGroupsPolicy, was introduced as an opt-in alpha feature for Kubernetes v1. This feature allows you to implement more precise control over supplemental groups in Linux containers that can strengthen the security posture particularly in accessing volumes.</p>
+                <p class="mb-1 small text-light">7 release adds important building blocks to support GitLab Duo Agent Platform’s upcoming GA. Stay up to date with GitLabTo make sure you’re getting the latest features, security updates, and performance improvements, we recommend keeping your GitLab instance up to date.</p>
+                <small class="text-secondary">
+                    
+                    GitLab
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-01-06">
+                <a href="https://engineering.fb.com/2025/12/15/android/how-ai-transforming-secure-by-default-mobile-frameworks-adoption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] How AI Is Transforming the Adoption of Secure-by-Default Mobile Frameworks
+                </a>
+                <p class="mb-1 small text-light">Building a secure framework on top of Android APIs, for example, requires a thoughtful balance between security, usability, and maintainability. However, each security framework should be usable across all apps and OS versions for a particular platform.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-06">
+                <a href="https://kubernetes.io/blog/2026/01/05/kubernetes-v1-35-numeric-toleration-operators/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35: Extended Toleration Operators to Support Numeric Comparisons (Alpha)
+                </a>
+                <p class="mb-1 small text-light">Many production Kubernetes clusters blend on-demand (higher-SLA) and spot/preemptible (lower-SLA) nodes to optimize costs while maintaining reliability for critical workloads.</p>
                 <small class="text-secondary">
                     
                     Kubernetes
@@ -401,14 +337,74 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-01-05">
-                <a href="https://www.cncf.io/blog/2025/12/29/how-to-integrate-kairos-architecturally-into-an-edge-ai-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] How to integrate Kairos architecturally into an edge AI platform
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-06">
+                <a href="https://kubernetes.io/blog/2025/12/30/kubernetes-v1-35-watch-based-route-reconciliation-in-ccm/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35: Watch Based Route Reconciliation in the Cloud Controller Manager
                 </a>
-                <p class="mb-1 small text-light">Because of the team’s familiarity with cloud-native concepts, we took this (literally) to the edge. The best place to find answers regarding cutting-edge use cases of Kubernetes is, of course, KubeCon + CloudNativeCon.</p>
+                <p class="mb-1 small text-light">A new feature gate is being introduced in v1. The feature gate CloudControllerManagerWatchBasedRoutesReconciliation has been introduced to k8s.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-01-06">
+                <a href="https://www.cncf.io/blog/2026/01/05/deploying-harbor-on-kubernetes-using-helm/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Deploying Harbor on Kubernetes using Helm
+                </a>
+                <p class="mb-1 small text-light">Deploying Harbor on Kubernetes offers several advantages: Scalability: Kubernetes enables horizontal scaling of Harbor components based on demand. Summary: Deploying Harbor on Kubernetes provides a robust, scalable, and cloud-native solution for container image management.</p>
                 <small class="text-secondary">
                     
                     CNCF
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-01-06">
+                <a href="https://www.cncf.io/blog/2025/12/24/bringing-sustainability-back-into-the-conversation-cncf-cloud-native-sustainability-month-tokyo/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Bringing sustainability back into the conversation: CNCF Cloud Native Sustainability Month Tokyo
+                </a>
+                <p class="mb-1 small text-light">Co-hosted with local communities, the initiative aimed to create space for discussions on sustainability efforts within the cloud-native ecosystem. SCI for Web: Bringing together members to define sustainability standards for web and cloud-native systems.</p>
+                <small class="text-secondary">
+                    
+                    CNCF
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-06">
+                <a href="https://blog.cloudflare.com/radar-2025-year-in-review/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] The 2025 Cloudflare Radar Year in Review: The rise of AI, post-quantum, and record-breaking DDoS attacks
+                </a>
+                <p class="mb-1 small text-light">Microsoft, Instagram, and YouTube all moved higher; Amazon Web Services (AWS) dropped one spot lower, while TikTok fell four spots. HTTP/3, standardized in 2022, marked a significant update, running on top of a new transport protocol known as QUIC.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-06">
+                <a href="https://www.reddit.com/r/devops/comments/1q4yo7h/advice_on_iac_cicd_for_a_growing_cloudflare/" target="_blank" class="fw-bold text-decoration-none">
+                    Advice on IaC / CI/CD for a growing Cloudflare Workers stack? Also: where do you find CF-fluent DevOps folks
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/Ok_Dimension_5804</p>
+                <small class="text-secondary">
+                    
+                    Reddit
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-01-06">
+                <a href="https://engineering.fb.com/2025/11/21/data-infrastructure/zoomer-powering-ai-performance-meta-intelligent-debugging-optimization/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Zoomer: Powering AI Performance at Meta’s Scale Through Intelligent Debugging and Optimization
+                </a>
+                <p class="mb-1 small text-light">Zoomer has delivered training time reductions, and significant QPS improvements, making it the de-facto tool for AI performance optimization across Meta’s entire AI infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta
                     
                 </small>
             </li>

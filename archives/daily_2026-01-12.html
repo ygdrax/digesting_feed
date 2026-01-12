@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - January 12, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - January 12, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for January 12, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-01-12">2026-01-12 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-01-12 08:08:21
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,282 +128,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-12">
-                <a href="https://www.reddit.com/r/devops/comments/1qa13np/need_advice_on_switching_to_devops_or_platform/" target="_blank" class="fw-bold text-decoration-none">
-                    Need advice on switching to DevOps or Platform Engineer role
-                </a>
-                <p class="mb-1 small text-light">Because of financial issues I had to take up a developer role at a service-based firm in 2024 and I got stuck with a 2-year bond. I used GitHub Actions, secrets, Docker, and custom Bash scripts for deployments and rollbacks across multiple branches.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-12">
-                <a href="https://www.reddit.com/r/devops/comments/1q9tup1/anyone_else_finding_ai_code_review_tools_useless/" target="_blank" class="fw-bold text-decoration-none">
-                    Anyone else finding AI code review tools useless once you hit 10+ microservices?
-                </a>
-                <p class="mb-1 small text-light">The problem: we run ~30 microservices across 4 repos. The tool flags verbose utility functions while missing actual security issues that span services.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-12">
-                <a href="https://www.reddit.com/r/devops/comments/1q9y4tc/showcase_highdensity_architecture_running_100/" target="_blank" class="fw-bold text-decoration-none">
-                    [Showcase] High-density architecture: Running 100+ containers on a single VPS with Traefik and FrankenPHP
-                </a>
-                <p class="mb-1 small text-light">The Architecture: Currently running ~30 projects and close to 100 containers on one node with high-density. Ingress/Routing: Traefik (Auto-discovery of new docker containers is a lifesaver).</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-12">
-                <a href="https://www.reddit.com/r/devops/comments/1qa6m73/how_do_you_balance_ai_learning_tools_with_security/" target="_blank" class="fw-bold text-decoration-none">
-                    How do you balance AI learning tools with security?
-                </a>
-                <p class="mb-1 small text-light">Now transitioning to a DevOps role at a company where security is critical, and I want to make sure I'm not sharing any company code with AI services. I'm working with Docker, Terraform, Ansible, and other infrastructure configs.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-12">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1qanouj/would_you_let_ai_run_your_kubernetes_cluster/" target="_blank" class="fw-bold text-decoration-none">
-                    Would you let AI run your Kubernetes cluster?
-                </a>
-                <p class="mb-1 small text-light">AI has made insane progress in some fields over the past few years. So I’m curious about the community’s take: • Would you allow AI agents to actively manage your cluster.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-12">
-                <a href="https://www.redhat.com/en/blog/smarter-troubleshooting-new-mcp-server-red-hat-enterprise-linux-now-developer-preview" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Smarter troubleshooting with the new MCP server for Red Hat Enterprise Linux (now in developer preview)
-                </a>
-                <p class="mb-1 small text-light">But as environments grow more complex, the cognitive load required to effectively decipher logs and troubleshoot issues has been increasing. Today, we are excited to announce the developer preview of a new Model Context Protocol (MCP) server for RHEL.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-01-12">
-                <a href="https://about.gitlab.com/blog/ai-is-reshaping-devsecops-attend-gitlab-transcend-to-see-whats-next/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] AI is reshaping DevSecOps: Attend GitLab Transcend to see what’s next
-                </a>
-                <p class="mb-1 small text-light">It's intelligent orchestration that brings software teams and their AI agents together across projects and release cycles, with enterprise-grade security, governance, and compliance built in.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-12">
-                <a href="https://snyk.io/blog/shai-hulud-post-mortem/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Beyond Detection: Building a Resilient Software Supply Chain (Lessons from the Shai-Hulud Post-Mortem)
-                </a>
-                <p class="mb-1 small text-light">The Shai-Hulud npm incident exposed the limitations of reactive security in modern software supply chains. To survive the next major attack, organizations must shift toward a multi-layered strategy of proactive prevention, real-time intelligence, and automated action.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-12">
-                <a href="https://aws.amazon.com/blogs/aws/happy-new-year-aws-weekly-roundup-10000-aideas-competition-amazon-ec2-amazon-ecs-managed-instances-and-more-january-5-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Happy New Year! AWS Weekly Roundup: 10,000 AIdeas Competition, Amazon EC2, Amazon ECS Managed Instances and more (January 5, 2026)
-                </a>
-                <p class="mb-1 small text-light">M8gn instances feature the latest 6th generation AWS Nitro Cards, and offer up to 600 Gbps network bandwidth, the highest network bandwidth among network-optimized EC2 instances.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-12">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: Amazon ECS, Amazon CloudWatch, Amazon Cognito and more (December 15, 2025)
-                </a>
-                <p class="mb-1 small text-light">We’ll be taking a break and returning in January to continue bringing you the latest AWS releases and updates. From groundbreaking AI capabilities to transformative infrastructure innovations, AWS has delivered an incredible year of releases that have reshaped what’s possible in the cloud.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-12">
-                <a href="https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon Bedrock adds reinforcement ﬁne-tuning simplifying how developers build smarter, more accurate AI models
-                </a>
-                <p class="mb-1 small text-light">For enhanced security, I can configure virtual private cloud (VPC) settings and AWS Key Management Service (AWS KMS) encryption to meet my organization’s compliance requirements.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-12">
-                <a href="https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] New serverless customization in Amazon SageMaker AI accelerates model fine-tuning
-                </a>
-                <p class="mb-1 small text-light">The new customization capability provides an easy-to-use interface for the latest fine-tuning techniques like reinforcement learning, so you can accelerate the AI model customization process from months to days.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-12">
-                <a href="https://www.hashicorp.com/blog/terraform-adds-native-monorepo-support-stack-component-configurations-and-more" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform adds native monorepo support, Stack component configurations, and more
-                </a>
-                <p class="mb-1 small text-light">What’s new: We're excited to introduce flexible module publishing for both HCP Terraform and Terraform Enterprise to solve this challenge.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-12">
-                <a href="https://kubernetes.io/blog/2026/01/08/kubernetes-v1-35-mutable-pv-nodeaffinity/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35: Mutable PersistentVolume Node Affinity (alpha)
-                </a>
-                <p class="mb-1 small text-light">The PersistentVolume node affinity API dates back to Kubernetes v1. However, even if the volume is migrated to regional storage, Kubernetes still prevents scheduling Pods to other zones because of the node affinity recorded in the PV object.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-12">
-                <a href="https://kubernetes.io/blog/2026/01/02/kubernetes-v1-35-restart-all-containers/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35: New level of efficiency with in-place Pod restart
-                </a>
-                <p class="mb-1 small text-light">This alpha feature extends the Container Restart Rules feature, which graduated to beta in Kubernetes 1. This feature introduces a Kubernetes-native solution, improving system robustness and allowing application developers to concentrate on their core training logic.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-12">
-                <a href="https://blog.cloudflare.com/r2-sql-aggregations/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Announcing support for GROUP BY, SUM, and other aggregation queries in R2 SQL
-                </a>
-                <p class="mb-1 small text-light">Splitting aggregate functions into pre-aggregates allows us to horizontally scale computation of aggregation, making use of vast compute resources available in Cloudflare’s network. Shuffling of aggregation data To address the challenges of random data distribution, we introduce a shuffling stage.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-01-12">
-                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
-                </a>
-                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-12">
-                <a href="https://www.reddit.com/r/devops/comments/1qa73w2/open_source_tool_for_mysql_imports_in_cicd/" target="_blank" class="fw-bold text-decoration-none">
-                    Open source tool for MySQL imports in CI/CD pipelines and constrained environments
-                </a>
-                <p class="mb-1 small text-light">DevOps-relevant features: - Session persistence: Import state survives restarts, can be scripted to resume - Pre-query optimization: Disables autocommit and constraints for bulk loading - Planned REST API: Expose import functionality for pipeline integration (on roadmap) - Progress webhooks: Also...</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-12">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1qa3hlv/my_containers_never_fail_why_do_i_need_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    My containers never fail. Why do I need Kubernetes?
-                </a>
-                <p class="mb-1 small text-light">If you: Run a few containers Restart them manually when needed Rarely hit traffic spikes Don’t do frequent deployments Aren’t serving thousands of concurrent users You probably don’t need Kubernetes.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-12">
-                <a href="https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] How Temporal Powers Reliable Cloud Operations at Netflix
-                </a>
-                <p class="mb-1 small text-light">Despite all of this, Clouddriver must be as reliable as reasonably possible as a core platform service. The child workflow will execute Activities which handle the actual cloud provider API calls to mutate infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-01-12">
-                <a href="https://engineering.fb.com/2025/12/15/android/how-ai-transforming-secure-by-default-mobile-frameworks-adoption/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] How AI Is Transforming the Adoption of Secure-by-Default Mobile Frameworks
-                </a>
-                <p class="mb-1 small text-light">Building a secure framework on top of Android APIs, for example, requires a thoughtful balance between security, usability, and maintainability. However, each security framework should be usable across all apps and OS versions for a particular platform.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-12">
-                <a href="https://kubernetes.io/blog/2026/01/05/kubernetes-v1-35-numeric-toleration-operators/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35: Extended Toleration Operators to Support Numeric Comparisons (Alpha)
-                </a>
-                <p class="mb-1 small text-light">Many production Kubernetes clusters blend on-demand (higher-SLA) and spot/preemptible (lower-SLA) nodes to optimize costs while maintaining reliability for critical workloads.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-01-12">
-                <a href="https://www.cncf.io/blog/2026/01/05/deploying-harbor-on-kubernetes-using-helm/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Deploying Harbor on Kubernetes using Helm
-                </a>
-                <p class="mb-1 small text-light">Deploying Harbor on Kubernetes offers several advantages: Scalability: Kubernetes enables horizontal scaling of Harbor components based on demand. Summary: Deploying Harbor on Kubernetes provides a robust, scalable, and cloud-native solution for container image management.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-12">
                 <a href="https://www.redhat.com/en/blog/navigating-secure-ai-deployment-architecture-enhancing-ai-system-security-and-safety" target="_blank" class="fw-bold text-decoration-none">
                     [Red Hat] Navigating secure AI deployment: Architecture for enhancing AI system security and safety
@@ -394,7 +135,7 @@
                 <p class="mb-1 small text-light">In this article, we'll examine the architectural considerations for deploying AI systems that are both secure and safe. A resilient AI architecture must be designed with a defense-in-depth philosophy, integrating controls that address both traditional cybersecurity threats and.</p>
                 <small class="text-secondary">
                     
-                    Red Hat
+                    Red Hat | 2026-01-12
                     
                 </small>
             </li>
@@ -406,7 +147,283 @@
                 <p class="mb-1 small text-light">Zoomer has delivered training time reductions, and significant QPS improvements, making it the de-facto tool for AI performance optimization across Meta’s entire AI infrastructure.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-12">
+                <a href="https://kubernetes.io/blog/2026/01/05/kubernetes-v1-35-numeric-toleration-operators/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35: Extended Toleration Operators to Support Numeric Comparisons (Alpha)
+                </a>
+                <p class="mb-1 small text-light">Many production Kubernetes clusters blend on-demand (higher-SLA) and spot/preemptible (lower-SLA) nodes to optimize costs while maintaining reliability for critical workloads.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-01-12">
+                <a href="https://www.cncf.io/blog/2026/01/05/deploying-harbor-on-kubernetes-using-helm/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Deploying Harbor on Kubernetes using Helm
+                </a>
+                <p class="mb-1 small text-light">Deploying Harbor on Kubernetes offers several advantages: Scalability: Kubernetes enables horizontal scaling of Harbor components based on demand. Summary: Deploying Harbor on Kubernetes provides a robust, scalable, and cloud-native solution for container image management.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-12">
+                <a href="https://www.reddit.com/r/devops/comments/1qa73w2/open_source_tool_for_mysql_imports_in_cicd/" target="_blank" class="fw-bold text-decoration-none">
+                    Open source tool for MySQL imports in CI/CD pipelines and constrained environments
+                </a>
+                <p class="mb-1 small text-light">DevOps-relevant features: - Session persistence: Import state survives restarts, can be scripted to resume - Pre-query optimization: Disables autocommit and constraints for bulk loading - Planned REST API: Expose import functionality for pipeline integration (on roadmap) - Progress webhooks: Also...</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-12">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qa3hlv/my_containers_never_fail_why_do_i_need_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    My containers never fail. Why do I need Kubernetes?
+                </a>
+                <p class="mb-1 small text-light">If you: Run a few containers Restart them manually when needed Rarely hit traffic spikes Don’t do frequent deployments Aren’t serving thousands of concurrent users You probably don’t need Kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-12">
+                <a href="https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How Temporal Powers Reliable Cloud Operations at Netflix
+                </a>
+                <p class="mb-1 small text-light">Despite all of this, Clouddriver must be as reliable as reasonably possible as a core platform service. The child workflow will execute Activities which handle the actual cloud provider API calls to mutate infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-01-12">
+                <a href="https://engineering.fb.com/2025/12/15/android/how-ai-transforming-secure-by-default-mobile-frameworks-adoption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] How AI Is Transforming the Adoption of Secure-by-Default Mobile Frameworks
+                </a>
+                <p class="mb-1 small text-light">Building a secure framework on top of Android APIs, for example, requires a thoughtful balance between security, usability, and maintainability. However, each security framework should be usable across all apps and OS versions for a particular platform.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-12">
+                <a href="https://aws.amazon.com/blogs/aws/happy-new-year-aws-weekly-roundup-10000-aideas-competition-amazon-ec2-amazon-ecs-managed-instances-and-more-january-5-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Happy New Year! AWS Weekly Roundup: 10,000 AIdeas Competition, Amazon EC2, Amazon ECS Managed Instances and more (January 5, 2026)
+                </a>
+                <p class="mb-1 small text-light">M8gn instances feature the latest 6th generation AWS Nitro Cards, and offer up to 600 Gbps network bandwidth, the highest network bandwidth among network-optimized EC2 instances.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-12">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Amazon ECS, Amazon CloudWatch, Amazon Cognito and more (December 15, 2025)
+                </a>
+                <p class="mb-1 small text-light">We’ll be taking a break and returning in January to continue bringing you the latest AWS releases and updates. From groundbreaking AI capabilities to transformative infrastructure innovations, AWS has delivered an incredible year of releases that have reshaped what’s possible in the cloud.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-12">
+                <a href="https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon Bedrock adds reinforcement ﬁne-tuning simplifying how developers build smarter, more accurate AI models
+                </a>
+                <p class="mb-1 small text-light">For enhanced security, I can configure virtual private cloud (VPC) settings and AWS Key Management Service (AWS KMS) encryption to meet my organization’s compliance requirements.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-12">
+                <a href="https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] New serverless customization in Amazon SageMaker AI accelerates model fine-tuning
+                </a>
+                <p class="mb-1 small text-light">The new customization capability provides an easy-to-use interface for the latest fine-tuning techniques like reinforcement learning, so you can accelerate the AI model customization process from months to days.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-12">
+                <a href="https://www.hashicorp.com/blog/terraform-adds-native-monorepo-support-stack-component-configurations-and-more" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform adds native monorepo support, Stack component configurations, and more
+                </a>
+                <p class="mb-1 small text-light">What’s new: We're excited to introduce flexible module publishing for both HCP Terraform and Terraform Enterprise to solve this challenge.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-12">
+                <a href="https://kubernetes.io/blog/2026/01/08/kubernetes-v1-35-mutable-pv-nodeaffinity/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35: Mutable PersistentVolume Node Affinity (alpha)
+                </a>
+                <p class="mb-1 small text-light">The PersistentVolume node affinity API dates back to Kubernetes v1. However, even if the volume is migrated to regional storage, Kubernetes still prevents scheduling Pods to other zones because of the node affinity recorded in the PV object.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-12">
+                <a href="https://kubernetes.io/blog/2026/01/02/kubernetes-v1-35-restart-all-containers/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35: New level of efficiency with in-place Pod restart
+                </a>
+                <p class="mb-1 small text-light">This alpha feature extends the Container Restart Rules feature, which graduated to beta in Kubernetes 1. This feature introduces a Kubernetes-native solution, improving system robustness and allowing application developers to concentrate on their core training logic.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-12">
+                <a href="https://blog.cloudflare.com/r2-sql-aggregations/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Announcing support for GROUP BY, SUM, and other aggregation queries in R2 SQL
+                </a>
+                <p class="mb-1 small text-light">Splitting aggregate functions into pre-aggregates allows us to horizontally scale computation of aggregation, making use of vast compute resources available in Cloudflare’s network. Shuffling of aggregation data To address the challenges of random data distribution, we introduce a shuffling stage.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-01-12">
+                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
+                </a>
+                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-12">
+                <a href="https://www.reddit.com/r/devops/comments/1qa13np/need_advice_on_switching_to_devops_or_platform/" target="_blank" class="fw-bold text-decoration-none">
+                    Need advice on switching to DevOps or Platform Engineer role
+                </a>
+                <p class="mb-1 small text-light">Because of financial issues I had to take up a developer role at a service-based firm in 2024 and I got stuck with a 2-year bond. I used GitHub Actions, secrets, Docker, and custom Bash scripts for deployments and rollbacks across multiple branches.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-12">
+                <a href="https://www.reddit.com/r/devops/comments/1q9tup1/anyone_else_finding_ai_code_review_tools_useless/" target="_blank" class="fw-bold text-decoration-none">
+                    Anyone else finding AI code review tools useless once you hit 10+ microservices?
+                </a>
+                <p class="mb-1 small text-light">The problem: we run ~30 microservices across 4 repos. The tool flags verbose utility functions while missing actual security issues that span services.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-12">
+                <a href="https://www.reddit.com/r/devops/comments/1q9y4tc/showcase_highdensity_architecture_running_100/" target="_blank" class="fw-bold text-decoration-none">
+                    [Showcase] High-density architecture: Running 100+ containers on a single VPS with Traefik and FrankenPHP
+                </a>
+                <p class="mb-1 small text-light">The Architecture: Currently running ~30 projects and close to 100 containers on one node with high-density. Ingress/Routing: Traefik (Auto-discovery of new docker containers is a lifesaver).</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-12">
+                <a href="https://www.reddit.com/r/devops/comments/1qa6m73/how_do_you_balance_ai_learning_tools_with_security/" target="_blank" class="fw-bold text-decoration-none">
+                    How do you balance AI learning tools with security?
+                </a>
+                <p class="mb-1 small text-light">Now transitioning to a DevOps role at a company where security is critical, and I want to make sure I'm not sharing any company code with AI services. I'm working with Docker, Terraform, Ansible, and other infrastructure configs.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-12">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qanouj/would_you_let_ai_run_your_kubernetes_cluster/" target="_blank" class="fw-bold text-decoration-none">
+                    Would you let AI run your Kubernetes cluster?
+                </a>
+                <p class="mb-1 small text-light">AI has made insane progress in some fields over the past few years. So I’m curious about the community’s take: • Would you allow AI agents to actively manage your cluster.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-12">
+                <a href="https://www.redhat.com/en/blog/smarter-troubleshooting-new-mcp-server-red-hat-enterprise-linux-now-developer-preview" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Smarter troubleshooting with the new MCP server for Red Hat Enterprise Linux (now in developer preview)
+                </a>
+                <p class="mb-1 small text-light">But as environments grow more complex, the cognitive load required to effectively decipher logs and troubleshoot issues has been increasing. Today, we are excited to announce the developer preview of a new Model Context Protocol (MCP) server for RHEL.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-01-12">
+                <a href="https://about.gitlab.com/blog/ai-is-reshaping-devsecops-attend-gitlab-transcend-to-see-whats-next/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] AI is reshaping DevSecOps: Attend GitLab Transcend to see what’s next
+                </a>
+                <p class="mb-1 small text-light">It's intelligent orchestration that brings software teams and their AI agents together across projects and release cycles, with enterprise-grade security, governance, and compliance built in.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-01-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-12">
+                <a href="https://snyk.io/blog/shai-hulud-post-mortem/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Beyond Detection: Building a Resilient Software Supply Chain (Lessons from the Shai-Hulud Post-Mortem)
+                </a>
+                <p class="mb-1 small text-light">The Shai-Hulud npm incident exposed the limitations of reactive security in modern software supply chains. To survive the next major attack, organizations must shift toward a multi-layered strategy of proactive prevention, real-time intelligence, and automated action.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-01-12
                     
                 </small>
             </li>

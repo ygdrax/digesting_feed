@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - January 13, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - January 13, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for January 13, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-01-13">2026-01-13 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2026-01-13 08:07:32
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -110,289 +127,13 @@
         <ul class="list-group" id="articleList">
             
             <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-13">
-                <a href="https://www.hashicorp.com/blog/the-risks-of-cybersecurity-tool-sprawl-and-why-we-need-consolidation" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] The risks of cybersecurity tool sprawl: Why consolidation is a strategic priority
-                </a>
-                <p class="mb-1 small text-light">Some organizations now rely on anywhere from 45 to 83 separate cybersecurity tools. How to start your cybersecurity consolidation initiative Tool sprawl is a growing problem, but it’s also a solvable one.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-13">
-                <a href="https://www.hashicorp.com/blog/how-to-start-consolidating-your-cybersecurity-tools" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] How to start consolidating your cybersecurity tools
-                </a>
-                <p class="mb-1 small text-light">Secrets management products also act as the main identity broker for service and cloud infrastructure access. The platform should also include native, or same-vendor, secret scanning, public key infrastructure (PKI), and access management solutions.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-13">
-                <a href="https://kubernetes.io/blog/2026/01/09/kubernetes-v1-35-kuberc-credential-plugin-allowlist/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35: Restricting executables invoked by kubeconfigs via exec plugin allowList added to kuberc
-                </a>
-                <p class="mb-1 small text-light">Don't get me wrong, this is an incredible feature that allows you to authenticate to the cluster with external identity providers. The new features are in beta and available without using any feature gates.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-13">
-                <a href="https://blog.cloudflare.com/bgp-route-leak-venezuela/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] A closer look at a BGP anomaly in Venezuela
-                </a>
-                <p class="mb-1 small text-light">capture and arrest of Venezuelan leader Nicolás Maduro, a cybersecurity newsletter examined Cloudflare Radar data and took note of a routing leak in Venezuela on January 2.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-13">
-                <a href="https://blog.cloudflare.com/h1-2025-transparency-report/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Innovating to address streaming abuse — and our latest transparency report
-                </a>
-                <p class="mb-1 small text-light">Indeed, the same actors who infringe legitimate intellectual property rights with unauthorized streaming may seek to misuse Cloudflare’s services, impacting performance, costs, and reliability for other users.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-01-13">
-                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Streamlining Security Investigations with Agents
-                </a>
-                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-01-13">
-                <a href="https://www.pulumi.com/blog/kubernetes-configmap-revisions-with-pulumi/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Kubernetes ConfigMap Revisions with Pulumi
-                </a>
-                <p class="mb-1 small text-light">ConfigMaps in Kubernetes don’t have built-in revision support, which can create challenges when deploying applications with canary strategies.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-01-13">
-                <a href="https://www.pulumi.com/blog/introducing-stash-resource/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Introducing the Stash Resource in Pulumi IaC
-                </a>
-                <p class="mb-1 small text-light">Infrastructure code often produces values that need to persist beyond a single deployment. On subsequent deployments by different users, input will update to show the new user, but output will continue returning the original deployer’s name.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-01-13">
-                <a href="https://www.pulumi.com/blog/2025-product-launches/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Pulumi 2025: Neo, Next-Gen Policies, and Platform Engineering at Scale
-                </a>
-                <p class="mb-1 small text-light">Pulumi IAM provides the unified framework for fine-grained authorization needed to confidently manage modern cloud infrastructure: Custom Roles: Define reusable permissions with fine-grained scopes tailored to your organization’s specific needs Least Privilege Enforcement: Control precisely who c...</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-13">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1qatrnc/which_has_higher_market_value_a_developer_who/" target="_blank" class="fw-bold text-decoration-none">
-                    Which has higher market value: a developer who knows infrastructure, or an infrastructure engineer who knows IaC?
-                </a>
-                <p class="mb-1 small text-light">On one hand, you have developers who understand infrastructure (cloud, servers, networking, etc. On the other hand, you have infrastructure engineers (sysadmin) who are proficient in IaC tools like Terraform, CloudFormation, or Ansible and can automate and manage infrastructure efficiently.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-13">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1qbjjdq/which_open_source_docker_image_do_you_use_today/" target="_blank" class="fw-bold text-decoration-none">
-                    Which open source docker image do you use today for container security these days?
-                </a>
-                <p class="mb-1 small text-light">It’s fast, easy to gate builds, and catches both OS and app dependency issues reliably. For runtime, I’ve tested Falco with eBPF, but rule tuning and noise become real problems once you scale.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-13">
-                <a href="https://azure.microsoft.com/en-us/blog/microsofts-strategic-ai-datacenter-planning-enables-seamless-large-scale-nvidia-rubin-deployments/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft’s strategic AI datacenter planning enables seamless, large-scale NVIDIA Rubin deployments
-                </a>
-                <p class="mb-1 small text-light">CES 2026 showcases the arrival of the NVIDIA Rubin platform, along with Azure’s proven readiness for deployment. Azure’s systems approach Azure is engineered for compute, networking, storage, software, and infrastructure all working together as one integrated platform.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-13">
-                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-gartner-magic-quadrant-for-ai-application-development-platforms/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft named a Leader in Gartner® Magic Quadrant™ for AI Application Development Platforms
-                </a>
-                <p class="mb-1 small text-light">Foundry Agent Service supports multi-agent orchestration where agents can handle off tasks, coordinate decisions, and drive end to end business processes: deployable directly into Copilot or your applications.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-13">
-                <a href="https://www.docker.com/blog/security-is-a-developer-experience-problem-rooted-in-our-foundations/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Security Is a Developer Experience Problem, Rooted in Our Foundations
-                </a>
-                <p class="mb-1 small text-light">The issue is not that developers care too little about security. When Docker launched in 2013, containers were unfamiliar.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-13">
-                <a href="https://www.docker.com/blog/deterministic-ai-testing-with-session-recording-in-cagent/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Deterministic AI Testing with Session Recording in cagent
-                </a>
-                <p class="mb-1 small text-light">Analyze code for best practices, security issues, performance concerns, and readability. go for security issues" In CI, replay without API keys or network access: cagent exec code-reviewer.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-13">
-                <a href="https://www.docker.com/blog/from-the-captains-chair-igor-aleksandrov/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] From the Captain’s Chair: Igor Aleksandrov
-                </a>
-                <p class="mb-1 small text-light">We chose our first Rails application to containerize and started writing our first Dockerfile. Today, I write extensively about Rails containerization best practices, from image slimming techniques to sophisticated CI/CD pipelines.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-13">
-                <a href="https://www.docker.com/blog/docker-hardened-images-security-independently-validated-by-srlabs/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Hardened Images: Security Independently Validated by SRLabs
-                </a>
-                <p class="mb-1 small text-light">Their assessment: “Non root, minimal container images significantly reduce attack vectors compared to traditional images. In their words: “Docker Hardened Images deliver on their public security promises for today’s threat landscape.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-01-13">
-                <a href="https://about.gitlab.com/blog/vulnerability-triage-made-simple-with-gitlab-security-analyst-agent/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] AI-powered vulnerability triaging with GitLab Duo Security Agent
-                </a>
-                <p class="mb-1 small text-light">How to add integrated security scanners in GitLabGitLab provides built-in security scanners that integrate seamlessly into your CI/CD pipelines.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-13">
-                <a href="https://snyk.io/blog/old-ai-security-vs-evo/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Old AI Security vs Evo: Watch Agentic Security Replace Weeks of Manual Work
-                </a>
-                <p class="mb-1 small text-light">The rise of GenAI brings complex, non-deterministic security risks that traditional methods can't handle. Discover Evo by Snyk, the world's first agentic security orchestration system for AI-native defense.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-01-13">
-                <a href="https://engineering.fb.com/2025/12/19/data-infrastructure/drp-metas-root-cause-analysis-platform-at-scale/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] DrP: Meta’s Root Cause Analysis Platform at Scale
-                </a>
-                <p class="mb-1 small text-light">DrP’s key components include: Expressive SDK: The DrP SDK allows engineers to codify investigation workflows into analyzers. Analyzer chaining: For dependent service analysis, the SDK’s APIs allow for seamless chaining of analyzers, passing context and obtaining outputs.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-13">
-                <a href="https://www.hashicorp.com/blog/hybrid-cloud-explained-what-it-is-what-it-isn-t-and-why-having-a-plan-matters" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Hybrid cloud, explained: What it is, what it isn’t, and why having a plan matters in 2026
-                </a>
-                <p class="mb-1 small text-light">For 52% of businesses, hybrid cloud is a top infrastructure management challenge, according to the 2025 Cloud Complexity Survey.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-13">
-                <a href="https://blog.cloudflare.com/fail-small-resilience-plan/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Code Orange: Fail Small — our resilience plan following recent incidents
-                </a>
-                <p class="mb-1 small text-light">This pattern exposed a serious gap in how we deploy configuration changes at Cloudflare, versus how we release software updates. For each new binary release, the deployment must successfully complete multiple gates before it can serve worldwide traffic.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-01-13">
-                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
-                </a>
-                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-13">
                 <a href="https://www.hashicorp.com/blog/how-airfrance-klm-built-secure-automation-platform-global-scale-terraform-vault-ansible" target="_blank" class="fw-bold text-decoration-none">
                     [HashiCorp] How AirFrance-KLM built a secure automation platform at global scale with Terraform, Vault, and Ansible
                 </a>
                 <p class="mb-1 small text-light">Compliance-by-construction Before Terraform, Air France-KLM already operated a mature, secure automation platform built around a large internal service catalog.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-01-13
                     
                 </small>
             </li>
@@ -404,7 +145,283 @@
                 <p class="mb-1 small text-light">However, the reality is that disruptive maintenance requires careful planning, and as Cloudflare grew, managing these complexities through manual coordination between our infrastructure and network operations specialists became nearly impossible.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-13">
+                <a href="https://www.hashicorp.com/blog/hybrid-cloud-explained-what-it-is-what-it-isn-t-and-why-having-a-plan-matters" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Hybrid cloud, explained: What it is, what it isn’t, and why having a plan matters in 2026
+                </a>
+                <p class="mb-1 small text-light">For 52% of businesses, hybrid cloud is a top infrastructure management challenge, according to the 2025 Cloud Complexity Survey.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-13">
+                <a href="https://blog.cloudflare.com/fail-small-resilience-plan/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Code Orange: Fail Small — our resilience plan following recent incidents
+                </a>
+                <p class="mb-1 small text-light">This pattern exposed a serious gap in how we deploy configuration changes at Cloudflare, versus how we release software updates. For each new binary release, the deployment must successfully complete multiple gates before it can serve worldwide traffic.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-01-13">
+                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
+                </a>
+                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-13">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1qatrnc/which_has_higher_market_value_a_developer_who/" target="_blank" class="fw-bold text-decoration-none">
+                    Which has higher market value: a developer who knows infrastructure, or an infrastructure engineer who knows IaC?
+                </a>
+                <p class="mb-1 small text-light">On one hand, you have developers who understand infrastructure (cloud, servers, networking, etc. On the other hand, you have infrastructure engineers (sysadmin) who are proficient in IaC tools like Terraform, CloudFormation, or Ansible and can automate and manage infrastructure efficiently.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-13">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qbjjdq/which_open_source_docker_image_do_you_use_today/" target="_blank" class="fw-bold text-decoration-none">
+                    Which open source docker image do you use today for container security these days?
+                </a>
+                <p class="mb-1 small text-light">It’s fast, easy to gate builds, and catches both OS and app dependency issues reliably. For runtime, I’ve tested Falco with eBPF, but rule tuning and noise become real problems once you scale.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-13">
+                <a href="https://azure.microsoft.com/en-us/blog/microsofts-strategic-ai-datacenter-planning-enables-seamless-large-scale-nvidia-rubin-deployments/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft’s strategic AI datacenter planning enables seamless, large-scale NVIDIA Rubin deployments
+                </a>
+                <p class="mb-1 small text-light">CES 2026 showcases the arrival of the NVIDIA Rubin platform, along with Azure’s proven readiness for deployment. Azure’s systems approach Azure is engineered for compute, networking, storage, software, and infrastructure all working together as one integrated platform.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-13">
+                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-gartner-magic-quadrant-for-ai-application-development-platforms/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft named a Leader in Gartner® Magic Quadrant™ for AI Application Development Platforms
+                </a>
+                <p class="mb-1 small text-light">Foundry Agent Service supports multi-agent orchestration where agents can handle off tasks, coordinate decisions, and drive end to end business processes: deployable directly into Copilot or your applications.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-13">
+                <a href="https://www.docker.com/blog/security-is-a-developer-experience-problem-rooted-in-our-foundations/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Security Is a Developer Experience Problem, Rooted in Our Foundations
+                </a>
+                <p class="mb-1 small text-light">The issue is not that developers care too little about security. When Docker launched in 2013, containers were unfamiliar.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-13">
+                <a href="https://www.docker.com/blog/deterministic-ai-testing-with-session-recording-in-cagent/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Deterministic AI Testing with Session Recording in cagent
+                </a>
+                <p class="mb-1 small text-light">Analyze code for best practices, security issues, performance concerns, and readability. go for security issues" In CI, replay without API keys or network access: cagent exec code-reviewer.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-13">
+                <a href="https://www.docker.com/blog/from-the-captains-chair-igor-aleksandrov/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] From the Captain’s Chair: Igor Aleksandrov
+                </a>
+                <p class="mb-1 small text-light">We chose our first Rails application to containerize and started writing our first Dockerfile. Today, I write extensively about Rails containerization best practices, from image slimming techniques to sophisticated CI/CD pipelines.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-13">
+                <a href="https://www.docker.com/blog/docker-hardened-images-security-independently-validated-by-srlabs/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Hardened Images: Security Independently Validated by SRLabs
+                </a>
+                <p class="mb-1 small text-light">Their assessment: “Non root, minimal container images significantly reduce attack vectors compared to traditional images. In their words: “Docker Hardened Images deliver on their public security promises for today’s threat landscape.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-01-13">
+                <a href="https://about.gitlab.com/blog/vulnerability-triage-made-simple-with-gitlab-security-analyst-agent/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] AI-powered vulnerability triaging with GitLab Duo Security Agent
+                </a>
+                <p class="mb-1 small text-light">How to add integrated security scanners in GitLabGitLab provides built-in security scanners that integrate seamlessly into your CI/CD pipelines.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-13">
+                <a href="https://snyk.io/blog/old-ai-security-vs-evo/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Old AI Security vs Evo: Watch Agentic Security Replace Weeks of Manual Work
+                </a>
+                <p class="mb-1 small text-light">The rise of GenAI brings complex, non-deterministic security risks that traditional methods can't handle. Discover Evo by Snyk, the world's first agentic security orchestration system for AI-native defense.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-01-13">
+                <a href="https://engineering.fb.com/2025/12/19/data-infrastructure/drp-metas-root-cause-analysis-platform-at-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] DrP: Meta’s Root Cause Analysis Platform at Scale
+                </a>
+                <p class="mb-1 small text-light">DrP’s key components include: Expressive SDK: The DrP SDK allows engineers to codify investigation workflows into analyzers. Analyzer chaining: For dependent service analysis, the SDK’s APIs allow for seamless chaining of analyzers, passing context and obtaining outputs.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-13">
+                <a href="https://www.hashicorp.com/blog/the-risks-of-cybersecurity-tool-sprawl-and-why-we-need-consolidation" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] The risks of cybersecurity tool sprawl: Why consolidation is a strategic priority
+                </a>
+                <p class="mb-1 small text-light">Some organizations now rely on anywhere from 45 to 83 separate cybersecurity tools. How to start your cybersecurity consolidation initiative Tool sprawl is a growing problem, but it’s also a solvable one.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-13">
+                <a href="https://www.hashicorp.com/blog/how-to-start-consolidating-your-cybersecurity-tools" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] How to start consolidating your cybersecurity tools
+                </a>
+                <p class="mb-1 small text-light">Secrets management products also act as the main identity broker for service and cloud infrastructure access. The platform should also include native, or same-vendor, secret scanning, public key infrastructure (PKI), and access management solutions.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-13">
+                <a href="https://kubernetes.io/blog/2026/01/09/kubernetes-v1-35-kuberc-credential-plugin-allowlist/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35: Restricting executables invoked by kubeconfigs via exec plugin allowList added to kuberc
+                </a>
+                <p class="mb-1 small text-light">Don't get me wrong, this is an incredible feature that allows you to authenticate to the cluster with external identity providers. The new features are in beta and available without using any feature gates.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-13">
+                <a href="https://blog.cloudflare.com/bgp-route-leak-venezuela/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] A closer look at a BGP anomaly in Venezuela
+                </a>
+                <p class="mb-1 small text-light">capture and arrest of Venezuelan leader Nicolás Maduro, a cybersecurity newsletter examined Cloudflare Radar data and took note of a routing leak in Venezuela on January 2.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-13">
+                <a href="https://blog.cloudflare.com/h1-2025-transparency-report/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Innovating to address streaming abuse — and our latest transparency report
+                </a>
+                <p class="mb-1 small text-light">Indeed, the same actors who infringe legitimate intellectual property rights with unauthorized streaming may seek to misuse Cloudflare’s services, impacting performance, costs, and reliability for other users.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-01-13">
+                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Streamlining Security Investigations with Agents
+                </a>
+                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-01-13">
+                <a href="https://www.pulumi.com/blog/kubernetes-configmap-revisions-with-pulumi/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Kubernetes ConfigMap Revisions with Pulumi
+                </a>
+                <p class="mb-1 small text-light">ConfigMaps in Kubernetes don’t have built-in revision support, which can create challenges when deploying applications with canary strategies.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-01-13">
+                <a href="https://www.pulumi.com/blog/introducing-stash-resource/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Introducing the Stash Resource in Pulumi IaC
+                </a>
+                <p class="mb-1 small text-light">Infrastructure code often produces values that need to persist beyond a single deployment. On subsequent deployments by different users, input will update to show the new user, but output will continue returning the original deployer’s name.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-01-13
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-01-13">
+                <a href="https://www.pulumi.com/blog/2025-product-launches/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Pulumi 2025: Neo, Next-Gen Policies, and Platform Engineering at Scale
+                </a>
+                <p class="mb-1 small text-light">Pulumi IAM provides the unified framework for fine-grained authorization needed to confidently manage modern cloud infrastructure: Custom Roles: Define reusable permissions with fine-grained scopes tailored to your organization’s specific needs Least Privilege Enforcement: Control precisely who c...</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-01-13
                     
                 </small>
             </li>

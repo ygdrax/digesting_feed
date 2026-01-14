@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - January 14, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - January 14, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for January 14, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-01-14">2026-01-14 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2026-01-14 08:07:23
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,282 +126,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-14">
-                <a href="https://www.reddit.com/r/devops/comments/1qcecqt/devcontainers_question/" target="_blank" class="fw-bold text-decoration-none">
-                    Devcontainers question
-                </a>
-                <p class="mb-1 small text-light">Just a quick question because I came across a youtube video where the creator was talking about doing everything out of devcontainers. why can't these things just be setup in a devcontainer so when work issues a temp laptop or a new laptop, boom I am good to go.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-14">
-                <a href="https://www.reddit.com/r/devops/comments/1qchlhr/long_running_browser_automation_keeps_failing_not/" target="_blank" class="fw-bold text-decoration-none">
-                    Long running browser automation keeps failing, not sure what I’m missing
-                </a>
-                <p class="mb-1 small text-light">I’ve been building a few automation scripts for browser based workflows like signing into apps, navigating dashboards, and pulling structured data. For people running browser automation in production, how do you usually approach stability.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-14">
-                <a href="https://www.reddit.com/r/devops/comments/1qbpaay/my_review_of_orca_security_for_cloud_based_vuln/" target="_blank" class="fw-bold text-decoration-none">
-                    My review of Orca security for cloud based vuln management
-                </a>
-                <p class="mb-1 small text-light">Been a Tenable shop for vuln management for years, brought on Orca about a year ago. Context: 80+ AWS accounts at any given time.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-14">
-                <a href="https://www.reddit.com/r/devops/comments/1qbvwtp/network_engineer_moving_into_cloud_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    Network Engineer moving into Cloud / Kubernetes
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/Professional-Tax788</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-14">
-                <a href="https://www.reddit.com/r/devops/comments/1qc7kln/deployments_kept_failing_in_production_for_the/" target="_blank" class="fw-bold text-decoration-none">
-                    Deployments kept failing in production for the dumbest reason
-                </a>
-                <p class="mb-1 small text-light">Figured out the issue was just services not knowing where to find each other. Sounds like an obvious solution in hindsight but we wasted so much time thinking it was code problems.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-14">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1qaqrfc/kubernetes_k8s_security_what_are_your_best/" target="_blank" class="fw-bold text-decoration-none">
-                    Kubernetes (K8s) security - What are YOUR best practices 2026?
-                </a>
-                <p class="mb-1 small text-light">I have been reading a bunch of blogs and articles about Kubernetes and container security. What are the container security practices that often get overlooked but actually make a difference.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-14">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1qba1q1/use_cloud_controller_manager_to_integrate/" target="_blank" class="fw-bold text-decoration-none">
-                    Use Cloud Controller Manager to integrate Kubernetes with OpenStack
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/-NaniBot-</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-14">
-                <a href="https://netflixtechblog.com/towards-generalizable-and-efficient-large-scale-generative-recommenders-a7db648aa257?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Towards Generalizable and Efficient Large-Scale Generative Recommenders
-                </a>
-                <p class="mb-1 small text-light">Our large-scale evaluations reveal significant alignment challenges when applying these models to downstream applications. It is also worth noting that our approach enables further scaling of model size, balancing performance improvements against serving costs.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-14">
-                <a href="https://netflixtechblog.com/netflix-live-origin-41f1b0ad5371?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Netflix Live Origin
-                </a>
-                <p class="mb-1 small text-light">Live Streaming Distribution and Origin ArchitectureNetflix Live Origin is a multi-tenant microservice operating on EC2 instances within the AWS cloud. The implementation of epoch locking at the cloud encoder enables the origin to select a segment from either encoding pipeline.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-14">
-                <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] AV1 — Now Powering 30% of Netflix Streaming
-                </a>
-                <p class="mb-1 small text-light">However, because film grain is inherently random, faithfully representing it in digital video requires a significant amount of data. Continuous improvements to its performance and compatibility have made dav1d the preferred choice for a wide range of platforms and practical applications.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-14">
-                <a href="https://netflixtechblog.medium.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Integrating Netflix’s Foundation Model into Personalization applications
-                </a>
-                <p class="mb-1 small text-light">Overall, the subgraph approach allows for a deeper integration and enables the applications to harness the full power of the Foundation Model. A side benefit of this integration approach is that it provides a de facto baseline for new models/applications.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-14">
-                <a href="https://www.microsoft.com/en-us/industry/blog/healthcare/2026/01/11/bridging-the-gap-between-ai-and-medicine-claude-in-microsoft-foundry-advances-capabilities-for-healthcare-and-life-sciences-customers/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Bridging the gap between AI and medicine: Claude in Microsoft Foundry advances capabilities for healthcare and life sciences customers
-                </a>
-                <p class="mb-1 small text-light">Powered by the latest advances in Claude intelligence These domain-specific capabilities build on major improvements in Claude’s underlying models.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-14">
-                <a href="https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Introducing GPT-5.2 in Microsoft Foundry: The new standard for enterprise AI
-                </a>
-                <p class="mb-1 small text-light">2 series is built on new architecture, delivering superior performance, efficiency, and reasoning depth compared to prior generations. Application Modernization: Make rapid progress in refactoring services, generating tests, and producing migration plans with risk and rollback criteria.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-14">
-                <a href="https://www.docker.com/blog/2025-recap-the-year-software-development-changed-shape/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] 2025 Recap: The Year Software Development Changed Shape
-                </a>
-                <p class="mb-1 small text-light">Security Went From “Filters” to “Blast Radius” The real problem wasn’t what models say. By the end, agents were doing operational work: updating infrastructure, resolving customer issues, moving money, managing SaaS tools.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-14">
-                <a href="https://www.redhat.com/en/blog/red-hat-performance-and-scale-engineering" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat Performance and Scale Engineering
-                </a>
-                <p class="mb-1 small text-light">Red Hat's most recent posts about Performance, Scale, Chaos and more. We established the architecture for a scaling strategy that goes beyond traditional CPU and memory metrics, using AI inference-specific service-level indicators (SLI).</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-14">
-                <a href="https://www.redhat.com/en/blog/manage-clusters-and-applications-scale-argo-cd-agent-red-hat-openshift-gitops" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Manage clusters and applications at scale with Argo CD Agent on Red Hat OpenShift GitOps
-                </a>
-                <p class="mb-1 small text-light">Organizations using Kubernetes and OpenShift have widely adopted the GitOps methodology to manage clusters and applications, with Argo CD being the leading open source GitOps solution on Kubernetes.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-14">
-                <a href="https://www.redhat.com/en/blog/fedramp-high-authorized-red-hat-openshift-service-aws-govcloud" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat OpenShift Service on AWS with hosted control planes in AWS GovCloud is FedRAMP High Authorized
-                </a>
-                <p class="mb-1 small text-light">After much anticipation, Red Hat OpenShift Service on AWS (ROSA) with hosted control planes in AWS GovCloud is now authorized against the FedRAMP High baseline controls in accordance with the Rev 5 authorization path.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-01-14">
-                <a href="https://www.ycombinator.com/companies/sei/jobs/Rn0KPXR-devops-platform-ai-infrastructure-engineer" target="_blank" class="fw-bold text-decoration-none">
-                    Sei (YC W22) Is Hiring a DevOps Engineer (India/In-Office/Chennai/Gurgaon)
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.ycombinator.com/companies/sei/jobs/Rn0KPXR-devops-platform-ai-infrastructure-engineer Comments URL: https://news.ycombinator.com/item?id=46610967 Points: 0 # Comments: 0</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-14">
-                <a href="https://kubernetes.io/blog/2026/01/07/kubernetes-v1-35-csi-sa-tokens-secrets-field-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35: A Better Way to Pass Service Account Tokens to CSI Drivers
-                </a>
-                <p class="mb-1 small text-light">35 introduces a beta solution to address this: CSI Driver Opt-in for Service Account Tokens via Secrets Field. About the beta release The CSIServiceAccountTokenSecrets feature gate is enabled by default on both kubelet and kube-apiserver.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-01-14">
-                <a href="https://www.cncf.io/announcements/2026/01/07/viettel-joins-the-cloud-native-computing-foundation-as-a-gold-member/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Viettel Joins the Cloud Native Computing Foundation as a Gold Member
-                </a>
-                <p class="mb-1 small text-light">” Viettel operates one of Southeast Asia’s largest open source cloud infrastructures, with extensive production deployments of OpenStack and Kubernetes supporting enterprise, government, and critical national infrastructure workloads.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-01-14">
-                <a href="https://www.cncf.io/blog/2026/01/07/holmesgpt-agentic-troubleshooting-built-for-the-cloud-native-era/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] HolmesGPT: Agentic troubleshooting built for the cloud native era
-                </a>
-                <p class="mb-1 small text-light">You’re running monitoring queries, flipping between Grafana and Application Insights, checking container logs, and scrolling through traces — all while someone’s asking for an ETA in the incident channel.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-14">
-                <a href="https://blog.cloudflare.com/iran-protests-internet-shutdown/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] What we know about Iran’s Internet shutdown
-                </a>
-                <p class="mb-1 small text-light">In November 2019, protests erupted following the announcement of a significant increase in fuel prices. 5%, falling from over 48 million /48s (blocks of 2^80 IPv6 addresses) to just over 737,000 /48s.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-01-14">
-                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dash uses context engineering for smarter AI
-                </a>
-                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-14">
                 <a href="https://www.hashicorp.com/blog/how-geico-lowered-its-300m-cloud-spend-and-decoupled-security-from-the-network" target="_blank" class="fw-bold text-decoration-none">
                     [HashiCorp] How GEICO lowered its $300M cloud spend and decoupled security from the network
@@ -392,7 +133,7 @@
                 <p class="mb-1 small text-light">Their solution: move security up the stack and enforce policy as close to users and workloads as possible. ”— Ammar Zuberi, Distinguished Infrastructure Engineer, GEICO Just as importantly, Vault brought standardization to their security practices.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-01-14
                     
                 </small>
             </li>
@@ -404,7 +145,283 @@
                 <p class="mb-1 small text-light">Cloud native technologies, built around containers, microservices, and orchestration tools like Kubernetes, emphasize scalability, resilience, and agility.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-01-14">
+                <a href="https://www.ycombinator.com/companies/sei/jobs/Rn0KPXR-devops-platform-ai-infrastructure-engineer" target="_blank" class="fw-bold text-decoration-none">
+                    Sei (YC W22) Is Hiring a DevOps Engineer (India/In-Office/Chennai/Gurgaon)
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.ycombinator.com/companies/sei/jobs/Rn0KPXR-devops-platform-ai-infrastructure-engineer Comments URL: https://news.ycombinator.com/item?id=46610967 Points: 0 # Comments: 0</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-14">
+                <a href="https://kubernetes.io/blog/2026/01/07/kubernetes-v1-35-csi-sa-tokens-secrets-field-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35: A Better Way to Pass Service Account Tokens to CSI Drivers
+                </a>
+                <p class="mb-1 small text-light">35 introduces a beta solution to address this: CSI Driver Opt-in for Service Account Tokens via Secrets Field. About the beta release The CSIServiceAccountTokenSecrets feature gate is enabled by default on both kubelet and kube-apiserver.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-01-14">
+                <a href="https://www.cncf.io/announcements/2026/01/07/viettel-joins-the-cloud-native-computing-foundation-as-a-gold-member/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Viettel Joins the Cloud Native Computing Foundation as a Gold Member
+                </a>
+                <p class="mb-1 small text-light">” Viettel operates one of Southeast Asia’s largest open source cloud infrastructures, with extensive production deployments of OpenStack and Kubernetes supporting enterprise, government, and critical national infrastructure workloads.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-01-14">
+                <a href="https://www.cncf.io/blog/2026/01/07/holmesgpt-agentic-troubleshooting-built-for-the-cloud-native-era/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] HolmesGPT: Agentic troubleshooting built for the cloud native era
+                </a>
+                <p class="mb-1 small text-light">You’re running monitoring queries, flipping between Grafana and Application Insights, checking container logs, and scrolling through traces — all while someone’s asking for an ETA in the incident channel.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-14">
+                <a href="https://blog.cloudflare.com/iran-protests-internet-shutdown/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] What we know about Iran’s Internet shutdown
+                </a>
+                <p class="mb-1 small text-light">In November 2019, protests erupted following the announcement of a significant increase in fuel prices. 5%, falling from over 48 million /48s (blocks of 2^80 IPv6 addresses) to just over 737,000 /48s.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-01-14">
+                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dash uses context engineering for smarter AI
+                </a>
+                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-14">
+                <a href="https://www.reddit.com/r/devops/comments/1qcecqt/devcontainers_question/" target="_blank" class="fw-bold text-decoration-none">
+                    Devcontainers question
+                </a>
+                <p class="mb-1 small text-light">Just a quick question because I came across a youtube video where the creator was talking about doing everything out of devcontainers. why can't these things just be setup in a devcontainer so when work issues a temp laptop or a new laptop, boom I am good to go.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-14">
+                <a href="https://www.reddit.com/r/devops/comments/1qchlhr/long_running_browser_automation_keeps_failing_not/" target="_blank" class="fw-bold text-decoration-none">
+                    Long running browser automation keeps failing, not sure what I’m missing
+                </a>
+                <p class="mb-1 small text-light">I’ve been building a few automation scripts for browser based workflows like signing into apps, navigating dashboards, and pulling structured data. For people running browser automation in production, how do you usually approach stability.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-14">
+                <a href="https://www.reddit.com/r/devops/comments/1qbpaay/my_review_of_orca_security_for_cloud_based_vuln/" target="_blank" class="fw-bold text-decoration-none">
+                    My review of Orca security for cloud based vuln management
+                </a>
+                <p class="mb-1 small text-light">Been a Tenable shop for vuln management for years, brought on Orca about a year ago. Context: 80+ AWS accounts at any given time.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-14">
+                <a href="https://www.reddit.com/r/devops/comments/1qbvwtp/network_engineer_moving_into_cloud_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    Network Engineer moving into Cloud / Kubernetes
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/Professional-Tax788</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-14">
+                <a href="https://www.reddit.com/r/devops/comments/1qc7kln/deployments_kept_failing_in_production_for_the/" target="_blank" class="fw-bold text-decoration-none">
+                    Deployments kept failing in production for the dumbest reason
+                </a>
+                <p class="mb-1 small text-light">Figured out the issue was just services not knowing where to find each other. Sounds like an obvious solution in hindsight but we wasted so much time thinking it was code problems.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-14">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qaqrfc/kubernetes_k8s_security_what_are_your_best/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubernetes (K8s) security - What are YOUR best practices 2026?
+                </a>
+                <p class="mb-1 small text-light">I have been reading a bunch of blogs and articles about Kubernetes and container security. What are the container security practices that often get overlooked but actually make a difference.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-14">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qba1q1/use_cloud_controller_manager_to_integrate/" target="_blank" class="fw-bold text-decoration-none">
+                    Use Cloud Controller Manager to integrate Kubernetes with OpenStack
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/-NaniBot-</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-14">
+                <a href="https://netflixtechblog.com/towards-generalizable-and-efficient-large-scale-generative-recommenders-a7db648aa257?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Towards Generalizable and Efficient Large-Scale Generative Recommenders
+                </a>
+                <p class="mb-1 small text-light">Our large-scale evaluations reveal significant alignment challenges when applying these models to downstream applications. It is also worth noting that our approach enables further scaling of model size, balancing performance improvements against serving costs.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-14">
+                <a href="https://netflixtechblog.com/netflix-live-origin-41f1b0ad5371?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Netflix Live Origin
+                </a>
+                <p class="mb-1 small text-light">Live Streaming Distribution and Origin ArchitectureNetflix Live Origin is a multi-tenant microservice operating on EC2 instances within the AWS cloud. The implementation of epoch locking at the cloud encoder enables the origin to select a segment from either encoding pipeline.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-14">
+                <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] AV1 — Now Powering 30% of Netflix Streaming
+                </a>
+                <p class="mb-1 small text-light">However, because film grain is inherently random, faithfully representing it in digital video requires a significant amount of data. Continuous improvements to its performance and compatibility have made dav1d the preferred choice for a wide range of platforms and practical applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-14">
+                <a href="https://netflixtechblog.medium.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Integrating Netflix’s Foundation Model into Personalization applications
+                </a>
+                <p class="mb-1 small text-light">Overall, the subgraph approach allows for a deeper integration and enables the applications to harness the full power of the Foundation Model. A side benefit of this integration approach is that it provides a de facto baseline for new models/applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-14">
+                <a href="https://www.microsoft.com/en-us/industry/blog/healthcare/2026/01/11/bridging-the-gap-between-ai-and-medicine-claude-in-microsoft-foundry-advances-capabilities-for-healthcare-and-life-sciences-customers/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Bridging the gap between AI and medicine: Claude in Microsoft Foundry advances capabilities for healthcare and life sciences customers
+                </a>
+                <p class="mb-1 small text-light">Powered by the latest advances in Claude intelligence These domain-specific capabilities build on major improvements in Claude’s underlying models.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-14">
+                <a href="https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Introducing GPT-5.2 in Microsoft Foundry: The new standard for enterprise AI
+                </a>
+                <p class="mb-1 small text-light">2 series is built on new architecture, delivering superior performance, efficiency, and reasoning depth compared to prior generations. Application Modernization: Make rapid progress in refactoring services, generating tests, and producing migration plans with risk and rollback criteria.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-14">
+                <a href="https://www.docker.com/blog/2025-recap-the-year-software-development-changed-shape/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] 2025 Recap: The Year Software Development Changed Shape
+                </a>
+                <p class="mb-1 small text-light">Security Went From “Filters” to “Blast Radius” The real problem wasn’t what models say. By the end, agents were doing operational work: updating infrastructure, resolving customer issues, moving money, managing SaaS tools.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-14">
+                <a href="https://www.redhat.com/en/blog/red-hat-performance-and-scale-engineering" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat Performance and Scale Engineering
+                </a>
+                <p class="mb-1 small text-light">Red Hat's most recent posts about Performance, Scale, Chaos and more. We established the architecture for a scaling strategy that goes beyond traditional CPU and memory metrics, using AI inference-specific service-level indicators (SLI).</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-14">
+                <a href="https://www.redhat.com/en/blog/manage-clusters-and-applications-scale-argo-cd-agent-red-hat-openshift-gitops" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Manage clusters and applications at scale with Argo CD Agent on Red Hat OpenShift GitOps
+                </a>
+                <p class="mb-1 small text-light">Organizations using Kubernetes and OpenShift have widely adopted the GitOps methodology to manage clusters and applications, with Argo CD being the leading open source GitOps solution on Kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-01-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-14">
+                <a href="https://www.redhat.com/en/blog/fedramp-high-authorized-red-hat-openshift-service-aws-govcloud" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat OpenShift Service on AWS with hosted control planes in AWS GovCloud is FedRAMP High Authorized
+                </a>
+                <p class="mb-1 small text-light">After much anticipation, Red Hat OpenShift Service on AWS (ROSA) with hosted control planes in AWS GovCloud is now authorized against the FedRAMP High baseline controls in accordance with the Rev 5 authorization path.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-01-14
                     
                 </small>
             </li>

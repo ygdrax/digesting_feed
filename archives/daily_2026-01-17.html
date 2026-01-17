@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - January 17, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - January 17, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for January 17, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-01-17">2026-01-17 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-01-17 08:06:24
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,282 +132,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-17">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1qekbz0/how_do_we_find_a_reliable_it_services_firm_to/" target="_blank" class="fw-bold text-decoration-none">
-                    How do we find a reliable IT Services firm to manage our infrastructure locally?
-                </a>
-                <p class="mb-1 small text-light">We are a small business with a virtualized environment. Currently VMware with Veeam, but moving away from VMware (XCP-NG or Proxmox seem likely candidates).</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-17">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1qeagkn/built_a_kubernetes_operator_for_garage_selfhosted/" target="_blank" class="fw-bold text-decoration-none">
-                    Built a Kubernetes operator for Garage (self-hosted S3-compatible storage)
-                </a>
-                <p class="mb-1 small text-light">The problem: deploying Garage clusters manually was tedious. The operator discovers nodes via Admin API and handles the full mesh connectivity automatically.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-17">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1qdh0zm/kubetail_realtime_kubernetes_logging_dashboard/" target="_blank" class="fw-bold text-decoration-none">
-                    Kubetail: Real-time Kubernetes logging dashboard - January 2026 update
-                </a>
-                <p class="mb-1 small text-light">In case you aren't familiar with Kubetail, we're an open-source logging dashboard for Kubernetes, optimized for tailing logs across multi-container workloads in real-time. /kubetail logs -f --in-cluster deployments/my-app We're excited to see what you can do with the CLI tool running inside docker.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-17">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1qdvq9f/with_27yrs_and_security_background_should_i_pivot/" target="_blank" class="fw-bold text-decoration-none">
-                    With 27+yrs and Security Background should I pivot to Kubernetes?
-                </a>
-                <p class="mb-1 small text-light">I have CISSP, CCSP, Sec+, AWS SAA and working to get the AWS networking and Security. Is it Docker, Kubernetes, Terraform etc or is there a different road map to it.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-17">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1qdqzr3/create_your_talos_linux_cluster_in_hetzner_with/" target="_blank" class="fw-bold text-decoration-none">
-                    Create your Talos Linux cluster in Hetzner with KSail
-                </a>
-                <p class="mb-1 small text-light">tech/creating-development-kubernetes-clusters-on-hetzner-with-ksail-and-talos You can also learn how to create a kind, k3d or talos cluster in Docker with KSail 🐳 https://devantler. tech/local-kubernetes-development-with-ksail-and-talos Good luck, and feel free to share.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-17">
-                <a href="https://netflixtechblog.com/towards-generalizable-and-efficient-large-scale-generative-recommenders-a7db648aa257?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Towards Generalizable and Efficient Large-Scale Generative Recommenders
-                </a>
-                <p class="mb-1 small text-light">Our large-scale evaluations reveal significant alignment challenges when applying these models to downstream applications. It is also worth noting that our approach enables further scaling of model size, balancing performance improvements against serving costs.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-17">
-                <a href="https://netflixtechblog.com/netflix-live-origin-41f1b0ad5371?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Netflix Live Origin
-                </a>
-                <p class="mb-1 small text-light">Live Streaming Distribution and Origin ArchitectureNetflix Live Origin is a multi-tenant microservice operating on EC2 instances within the AWS cloud. The implementation of epoch locking at the cloud encoder enables the origin to select a segment from either encoding pipeline.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-17">
-                <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] AV1 — Now Powering 30% of Netflix Streaming
-                </a>
-                <p class="mb-1 small text-light">However, because film grain is inherently random, faithfully representing it in digital video requires a significant amount of data. Continuous improvements to its performance and compatibility have made dav1d the preferred choice for a wide range of platforms and practical applications.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-17">
-                <a href="https://netflixtechblog.medium.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Integrating Netflix’s Foundation Model into Personalization applications
-                </a>
-                <p class="mb-1 small text-light">Overall, the subgraph approach allows for a deeper integration and enables the applications to harness the full power of the Foundation Model. A side benefit of this integration approach is that it provides a de facto baseline for new models/applications.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-17">
-                <a href="https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Introducing GPT-5.2 in Microsoft Foundry: The new standard for enterprise AI
-                </a>
-                <p class="mb-1 small text-light">2 series is built on new architecture, delivering superior performance, efficiency, and reasoning depth compared to prior generations. Application Modernization: Make rapid progress in refactoring services, generating tests, and producing migration plans with risk and rollback criteria.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-17">
-                <a href="https://www.docker.com/blog/making-small-llms-smarter/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Making (Very) Small LLMs Smarter
-                </a>
-                <p class="mb-1 small text-light">Hello, I’m Philippe, and I am a Principal Solutions Architect helping customers with their usage of Docker. Docker Agentic Compose configuration Let’s start with the Docker Agentic Compose project structure: services: golang-expert: build: context:.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-17">
-                <a href="https://www.redhat.com/en/blog/red-hat-performance-and-scale-engineering" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat Performance and Scale Engineering
-                </a>
-                <p class="mb-1 small text-light">Red Hat's most recent posts about Performance, Scale, Chaos and more. We established the architecture for a scaling strategy that goes beyond traditional CPU and memory metrics, using AI inference-specific service-level indicators (SLI).</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-17">
-                <a href="https://www.redhat.com/en/blog/revolutionizing-learning-how-fords-kubernetes-community-sparks-technological-innovation" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Revolutionizing learning: How Ford's Kubernetes community sparks technological innovation
-                </a>
-                <p class="mb-1 small text-light">As traditional learning methods fall short in the fast-paced world of cloud computing and container orchestration, Ford has pivoted to a more agile approach to technology education: an internal Kubernetes user group that has transformed how its teams learn, collaborate, and innovate.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-17">
-                <a href="https://www.redhat.com/en/blog/new-efficiency-upgrades-red-hat-advanced-cluster-management-kubernetes-215" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] New efficiency upgrades in Red Hat Advanced Cluster Management for Kubernetes 2.15
-                </a>
-                <p class="mb-1 small text-light">If you’re a platform engineer or SRE, you know that managing infrastructure and efficiently managing it are two very different things. You’ve been able to run virtual machines (VMs) alongside containers in Red Hat Advanced Cluster Management for a while now.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-01-17">
-                <a href="https://about.gitlab.com/blog/introducing-gitlab-credits/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Introducing GitLab Credits, usage-based pricing for GitLab Duo Agent Platform
-                </a>
-                <p class="mb-1 small text-light">GitLab Credits addresses these issues as our new virtual currency for usage-based pricing, starting with GitLab Duo Agent Platform. 8 release (with the planned Duo Agent Platform general availability).</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-01-17">
-                <a href="https://blog.sentry.io/paginating-large-datasets-in-production-why-offset-fails-and-cursors-win/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Paginating large datasets in production: Why OFFSET fails and cursors win
-                </a>
-                <p class="mb-1 small text-light">Many of the bugs, edge cases, and performance issues will come to the surface after you launch, when the user stampede puts a serious strain on your application. Cursor-based pagination wins by a landslide in real-world performance and stability.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-17">
-                <a href="https://snyk.io/blog/evo-adds-cyclonedx/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Evo Adds CycloneDX Support to Give Full AI Visibility
-                </a>
-                <p class="mb-1 small text-light">Enterprises face a critical visibility gap in AI models, creating security and compliance risks. Evo's new integration with CycloneDX 1.6 delivers intelligent, actionable AI-BOMs, providing complete oversight and robust governance for your entire AI supply chain.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-01-17">
-                <a href="https://engineering.atspotify.com/2026/1/why-we-use-separate-tech-stacks-for-personalization-and-experimentation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Why We Use Separate Tech Stacks for Personalization and Experimentation
-                </a>
-                <p class="mb-1 small text-light">The technical and practical rationale for a clear separation between these domains. The post Why We Use Separate Tech Stacks for Personalization and Experimentation appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-01-17">
-                <a href="https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3)
-                </a>
-                <p class="mb-1 small text-light">The system we built to ensure our AI agents produce predictable, trustworthy code. The post Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-17">
-                <a href="https://kubernetes.io/blog/2026/01/07/kubernetes-v1-35-csi-sa-tokens-secrets-field-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35: A Better Way to Pass Service Account Tokens to CSI Drivers
-                </a>
-                <p class="mb-1 small text-light">35 introduces a beta solution to address this: CSI Driver Opt-in for Service Account Tokens via Secrets Field. About the beta release The CSIServiceAccountTokenSecrets feature gate is enabled by default on both kubelet and kube-apiserver.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-17">
-                <a href="https://blog.cloudflare.com/astro-joins-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Astro is joining Cloudflare
-                </a>
-                <p class="mb-1 small text-light">You can deploy Astro to any platform or cloud, and we’re committed to supporting Astro developers everywhere. When you start a new project with Wix Vibe, behind the scenes you’re creating an Astro site, running on Cloudflare.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-17">
-                <a href="https://blog.cloudflare.com/iran-protests-internet-shutdown/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] What we know about Iran’s Internet shutdown
-                </a>
-                <p class="mb-1 small text-light">In November 2019, protests erupted following the announcement of a significant increase in fuel prices. 5%, falling from over 48 million /48s (blocks of 2^80 IPv6 addresses) to just over 737,000 /48s.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-01-17">
-                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dash uses context engineering for smarter AI
-                </a>
-                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-17">
                 <a href="https://www.hashicorp.com/blog/how-geico-lowered-its-300m-cloud-spend-and-decoupled-security-from-the-network" target="_blank" class="fw-bold text-decoration-none">
                     [HashiCorp] How GEICO lowered its $300M cloud spend and decoupled security from the network
@@ -398,7 +139,7 @@
                 <p class="mb-1 small text-light">Their solution: move security up the stack and enforce policy as close to users and workloads as possible. ”— Ammar Zuberi, Distinguished Infrastructure Engineer, GEICO Just as importantly, Vault brought standardization to their security practices.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-01-17
                     
                 </small>
             </li>
@@ -410,7 +151,283 @@
                 <p class="mb-1 small text-light">Cloud native technologies, built around containers, microservices, and orchestration tools like Kubernetes, emphasize scalability, resilience, and agility.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-17">
+                <a href="https://kubernetes.io/blog/2026/01/07/kubernetes-v1-35-csi-sa-tokens-secrets-field-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35: A Better Way to Pass Service Account Tokens to CSI Drivers
+                </a>
+                <p class="mb-1 small text-light">35 introduces a beta solution to address this: CSI Driver Opt-in for Service Account Tokens via Secrets Field. About the beta release The CSIServiceAccountTokenSecrets feature gate is enabled by default on both kubelet and kube-apiserver.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-17">
+                <a href="https://blog.cloudflare.com/astro-joins-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Astro is joining Cloudflare
+                </a>
+                <p class="mb-1 small text-light">You can deploy Astro to any platform or cloud, and we’re committed to supporting Astro developers everywhere. When you start a new project with Wix Vibe, behind the scenes you’re creating an Astro site, running on Cloudflare.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-17">
+                <a href="https://blog.cloudflare.com/iran-protests-internet-shutdown/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] What we know about Iran’s Internet shutdown
+                </a>
+                <p class="mb-1 small text-light">In November 2019, protests erupted following the announcement of a significant increase in fuel prices. 5%, falling from over 48 million /48s (blocks of 2^80 IPv6 addresses) to just over 737,000 /48s.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-01-17">
+                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dash uses context engineering for smarter AI
+                </a>
+                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-17">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1qekbz0/how_do_we_find_a_reliable_it_services_firm_to/" target="_blank" class="fw-bold text-decoration-none">
+                    How do we find a reliable IT Services firm to manage our infrastructure locally?
+                </a>
+                <p class="mb-1 small text-light">We are a small business with a virtualized environment. Currently VMware with Veeam, but moving away from VMware (XCP-NG or Proxmox seem likely candidates).</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-17">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qeagkn/built_a_kubernetes_operator_for_garage_selfhosted/" target="_blank" class="fw-bold text-decoration-none">
+                    Built a Kubernetes operator for Garage (self-hosted S3-compatible storage)
+                </a>
+                <p class="mb-1 small text-light">The problem: deploying Garage clusters manually was tedious. The operator discovers nodes via Admin API and handles the full mesh connectivity automatically.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-17">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qdh0zm/kubetail_realtime_kubernetes_logging_dashboard/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubetail: Real-time Kubernetes logging dashboard - January 2026 update
+                </a>
+                <p class="mb-1 small text-light">In case you aren't familiar with Kubetail, we're an open-source logging dashboard for Kubernetes, optimized for tailing logs across multi-container workloads in real-time. /kubetail logs -f --in-cluster deployments/my-app We're excited to see what you can do with the CLI tool running inside docker.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-17">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qdvq9f/with_27yrs_and_security_background_should_i_pivot/" target="_blank" class="fw-bold text-decoration-none">
+                    With 27+yrs and Security Background should I pivot to Kubernetes?
+                </a>
+                <p class="mb-1 small text-light">I have CISSP, CCSP, Sec+, AWS SAA and working to get the AWS networking and Security. Is it Docker, Kubernetes, Terraform etc or is there a different road map to it.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-17">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qdqzr3/create_your_talos_linux_cluster_in_hetzner_with/" target="_blank" class="fw-bold text-decoration-none">
+                    Create your Talos Linux cluster in Hetzner with KSail
+                </a>
+                <p class="mb-1 small text-light">tech/creating-development-kubernetes-clusters-on-hetzner-with-ksail-and-talos You can also learn how to create a kind, k3d or talos cluster in Docker with KSail 🐳 https://devantler. tech/local-kubernetes-development-with-ksail-and-talos Good luck, and feel free to share.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-17">
+                <a href="https://netflixtechblog.com/towards-generalizable-and-efficient-large-scale-generative-recommenders-a7db648aa257?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Towards Generalizable and Efficient Large-Scale Generative Recommenders
+                </a>
+                <p class="mb-1 small text-light">Our large-scale evaluations reveal significant alignment challenges when applying these models to downstream applications. It is also worth noting that our approach enables further scaling of model size, balancing performance improvements against serving costs.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-17">
+                <a href="https://netflixtechblog.com/netflix-live-origin-41f1b0ad5371?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Netflix Live Origin
+                </a>
+                <p class="mb-1 small text-light">Live Streaming Distribution and Origin ArchitectureNetflix Live Origin is a multi-tenant microservice operating on EC2 instances within the AWS cloud. The implementation of epoch locking at the cloud encoder enables the origin to select a segment from either encoding pipeline.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-17">
+                <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] AV1 — Now Powering 30% of Netflix Streaming
+                </a>
+                <p class="mb-1 small text-light">However, because film grain is inherently random, faithfully representing it in digital video requires a significant amount of data. Continuous improvements to its performance and compatibility have made dav1d the preferred choice for a wide range of platforms and practical applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-17">
+                <a href="https://netflixtechblog.medium.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Integrating Netflix’s Foundation Model into Personalization applications
+                </a>
+                <p class="mb-1 small text-light">Overall, the subgraph approach allows for a deeper integration and enables the applications to harness the full power of the Foundation Model. A side benefit of this integration approach is that it provides a de facto baseline for new models/applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-17">
+                <a href="https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Introducing GPT-5.2 in Microsoft Foundry: The new standard for enterprise AI
+                </a>
+                <p class="mb-1 small text-light">2 series is built on new architecture, delivering superior performance, efficiency, and reasoning depth compared to prior generations. Application Modernization: Make rapid progress in refactoring services, generating tests, and producing migration plans with risk and rollback criteria.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-17">
+                <a href="https://www.docker.com/blog/making-small-llms-smarter/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Making (Very) Small LLMs Smarter
+                </a>
+                <p class="mb-1 small text-light">Hello, I’m Philippe, and I am a Principal Solutions Architect helping customers with their usage of Docker. Docker Agentic Compose configuration Let’s start with the Docker Agentic Compose project structure: services: golang-expert: build: context:.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-17">
+                <a href="https://www.redhat.com/en/blog/red-hat-performance-and-scale-engineering" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat Performance and Scale Engineering
+                </a>
+                <p class="mb-1 small text-light">Red Hat's most recent posts about Performance, Scale, Chaos and more. We established the architecture for a scaling strategy that goes beyond traditional CPU and memory metrics, using AI inference-specific service-level indicators (SLI).</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-17">
+                <a href="https://www.redhat.com/en/blog/revolutionizing-learning-how-fords-kubernetes-community-sparks-technological-innovation" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Revolutionizing learning: How Ford's Kubernetes community sparks technological innovation
+                </a>
+                <p class="mb-1 small text-light">As traditional learning methods fall short in the fast-paced world of cloud computing and container orchestration, Ford has pivoted to a more agile approach to technology education: an internal Kubernetes user group that has transformed how its teams learn, collaborate, and innovate.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-17">
+                <a href="https://www.redhat.com/en/blog/new-efficiency-upgrades-red-hat-advanced-cluster-management-kubernetes-215" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] New efficiency upgrades in Red Hat Advanced Cluster Management for Kubernetes 2.15
+                </a>
+                <p class="mb-1 small text-light">If you’re a platform engineer or SRE, you know that managing infrastructure and efficiently managing it are two very different things. You’ve been able to run virtual machines (VMs) alongside containers in Red Hat Advanced Cluster Management for a while now.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-01-17">
+                <a href="https://about.gitlab.com/blog/introducing-gitlab-credits/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Introducing GitLab Credits, usage-based pricing for GitLab Duo Agent Platform
+                </a>
+                <p class="mb-1 small text-light">GitLab Credits addresses these issues as our new virtual currency for usage-based pricing, starting with GitLab Duo Agent Platform. 8 release (with the planned Duo Agent Platform general availability).</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-01-17">
+                <a href="https://blog.sentry.io/paginating-large-datasets-in-production-why-offset-fails-and-cursors-win/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Paginating large datasets in production: Why OFFSET fails and cursors win
+                </a>
+                <p class="mb-1 small text-light">Many of the bugs, edge cases, and performance issues will come to the surface after you launch, when the user stampede puts a serious strain on your application. Cursor-based pagination wins by a landslide in real-world performance and stability.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-17">
+                <a href="https://snyk.io/blog/evo-adds-cyclonedx/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Evo Adds CycloneDX Support to Give Full AI Visibility
+                </a>
+                <p class="mb-1 small text-light">Enterprises face a critical visibility gap in AI models, creating security and compliance risks. Evo's new integration with CycloneDX 1.6 delivers intelligent, actionable AI-BOMs, providing complete oversight and robust governance for your entire AI supply chain.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-01-17">
+                <a href="https://engineering.atspotify.com/2026/1/why-we-use-separate-tech-stacks-for-personalization-and-experimentation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Why We Use Separate Tech Stacks for Personalization and Experimentation
+                </a>
+                <p class="mb-1 small text-light">The technical and practical rationale for a clear separation between these domains. The post Why We Use Separate Tech Stacks for Personalization and Experimentation appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-01-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-01-17">
+                <a href="https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3)
+                </a>
+                <p class="mb-1 small text-light">The system we built to ensure our AI agents produce predictable, trustworthy code. The post Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-01-17
                     
                 </small>
             </li>

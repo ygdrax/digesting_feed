@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - January 21, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - January 21, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for January 21, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-01-21">2026-01-21 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 15 sources • Updated 2026-01-21 08:08:13
+                    Showing 25 total articles from 
+                    15 sources
+                    
                     
                 </span>
             </small>
@@ -117,242 +134,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-21">
-                <a href="https://www.reddit.com/r/devops/comments/1qi8w8n/migrating_a_large_elasticsearch_cluster_in/" target="_blank" class="fw-bold text-decoration-none">
-                    Migrating a large Elasticsearch cluster in production (100M+ docs). Looking for DevOps lessons and monitoring advice.
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-01-21">
+                <a href="https://www.cncf.io/announcements/2026/01/20/kubernetes-established-as-the-de-facto-operating-system-for-ai-as-production-use-hits-82-in-2025-cncf-annual-cloud-native-survey/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Kubernetes Established as the De Facto ‘Operating System’ for AI as Production Use Hits 82% in 2025 CNCF Annual Cloud Native Survey
                 </a>
-                <p class="mb-1 small text-light">I also expect this migration to take hours (possibly longer), which makes monitoring and observability during the process critical.</p>
+                <p class="mb-1 small text-light">The CNCF survey highlights the adoption of cloud native technologies like Kubernetes and AI infrastructure, emphasizing modern scalable systems.</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-21">
-                <a href="https://www.reddit.com/r/devops/comments/1qhzfrs/looking_for_a_cloudagnostic_bash_automation/" target="_blank" class="fw-bold text-decoration-none">
-                    Looking for a Cloud-Agnostic Bash Automation Solution (Azure / AWS / GCP)
-                </a>
-                <p class="mb-1 small text-light">Hi everyone, I want to build a cloud automation system using Bash scripting that allows me to manage my work dynamically across cloud platforms.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-21">
-                <a href="https://www.reddit.com/r/devops/comments/1qi2p8k/cicd_gates_for_ring_0_kernel_deployments/" target="_blank" class="fw-bold text-decoration-none">
-                    CI/CD Gates for "Ring 0" / Kernel Deployments (Post-CrowdStrike Analysis)
-                </a>
-                <p class="mb-1 small text-light">Hey all, I'm trying to harden our deployment pipelines for high-privilege artifacts (kernel drivers, sidecars) after seeing the CrowdStrike mess. Key Availability: BitLocker keys accessible via API for recovery scripts.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-21">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1qiezxc/rkubernetes_over_taken_with_ai_slop_projects/" target="_blank" class="fw-bold text-decoration-none">
-                    r/kubernetes over taken with AI slop projects
-                </a>
-                <p class="mb-1 small text-light">Is it me, or is this sub overrun with AI-slop repos being posted all day, every day. I used to see meaningful tools and updates from users who care about the community and wanted a place to interact.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-21">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1qi4ioe/i_built_a_free_opensource_kubernetes_security/" target="_blank" class="fw-bold text-decoration-none">
-                    I built a free, open-source Kubernetes security documentation site — feedback welcome
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/spikedlel</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-21">
-                <a href="https://azure.microsoft.com/en-us/blog/design-your-ai-and-agent-strategy-with-microsoft-marketplace/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Chart your AI and agent strategy with Microsoft Marketplace
-                </a>
-                <p class="mb-1 small text-light">You can also own your IP, which can be essential in industries like financial services or advanced manufacturing. Prepackaged models available through Marketplace can accelerate building your solution with faster deployment because teams don’t have to build their stack.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-21">
-                <a href="https://www.microsoft.com/en-us/industry/blog/healthcare/2026/01/11/bridging-the-gap-between-ai-and-medicine-claude-in-microsoft-foundry-advances-capabilities-for-healthcare-and-life-sciences-customers/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Bridging the gap between AI and medicine: Claude in Microsoft Foundry advances capabilities for healthcare and life sciences customers
-                </a>
-                <p class="mb-1 small text-light">Powered by the latest advances in Claude intelligence These domain-specific capabilities build on major improvements in Claude’s underlying models.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-21">
-                <a href="https://www.docker.com/blog/safer-docker-hub-pulls-via-a-sonatype-protected-proxy/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Safer Docker Hub Pulls via a Sonatype-Protected Proxy
-                </a>
-                <p class="mb-1 small text-light">This provides teams a standard, dependable entry point for base images. Combining this workflow with curated sources such as Docker Official Images or Docker Hardened Images provides a stable, vetted baseline for the entire organization.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-21">
-                <a href="https://www.redhat.com/en/blog/manual-agentic-streamlining-it-processes-red-hat-openshift-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] From manual to agentic: streamlining IT processes with Red Hat OpenShift AI
-                </a>
-                <p class="mb-1 small text-light">To this end, we’ve created an it-self-service-agent AI quickstart that shows you how to automate IT processes within your organization using agentic AI on Red Hat OpenShift AI.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-01-21">
-                <a href="https://about.gitlab.com/blog/introducing-gitlab-credits/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Introducing GitLab Credits, usage-based pricing for GitLab Duo Agent Platform
-                </a>
-                <p class="mb-1 small text-light">GitLab Credits addresses these issues as our new virtual currency for usage-based pricing, starting with GitLab Duo Agent Platform. 8 release (with the planned Duo Agent Platform general availability).</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-01-21">
-                <a href="https://github.com/ef1500/libbbf" target="_blank" class="fw-bold text-decoration-none">
-                    Libbbf: Bound Book Format, A high-performance container for comics and manga
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://github.com/ef1500/libbbf Comments URL: https://news.ycombinator.com/item?id=46701114 Points: 39 # Comments: 15</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-21">
-                <a href="https://aws.amazon.com/blogs/aws/opening-the-aws-european-sovereign-cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Opening the AWS European Sovereign Cloud
-                </a>
-                <p class="mb-1 small text-light">Public sector entities and businesses in highly regulated industries need cloud infrastructure that provides enhanced sovereignty controls that maintain the innovation, security, and reliability they expect from modern cloud services.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-21">
-                <a href="https://kubernetes.io/blog/2026/01/08/kubernetes-v1-35-mutable-pv-nodeaffinity/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.35: Mutable PersistentVolume Node Affinity (alpha)
-                </a>
-                <p class="mb-1 small text-light">The PersistentVolume node affinity API dates back to Kubernetes v1. However, even if the volume is migrated to regional storage, Kubernetes still prevents scheduling Pods to other zones because of the node affinity recorded in the PV object.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-21">
-                <a href="https://blog.cloudflare.com/cname-a-record-order-dns-standards/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] What came first: the CNAME or the A record?
-                </a>
-                <p class="mb-1 small text-light">The change was introduced on December 2, 2025, released to our testing environment on December 10, and began deployment on January 7, 2026. Cisco has published a service document describing the issue.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-01-21">
-                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
-                </a>
-                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-01-21">
-                <a href="https://www.pulumi.com/blog/self-verifying-ai-agents-vercels-agent-browser-in-the-ralph-wiggum-loop/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Self-Verifying AI Agents: Vercel's Agent-Browser in the Ralph Wiggum Loop
-                </a>
-                <p class="mb-1 small text-light">The context problem with browser automation Playwright MCP gives you powerful browser control, but it comes with overhead. The infrastructure changes are straightforward: // Analytics events table const analyticsTable = new aws.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-21">
-                <a href="https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] How Temporal Powers Reliable Cloud Operations at Netflix
-                </a>
-                <p class="mb-1 small text-light">Despite all of this, Clouddriver must be as reliable as reasonably possible as a core platform service. The child workflow will execute Activities which handle the actual cloud provider API calls to mutate infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-21">
-                <a href="https://www.microsoft.com/en-us/security/blog/2026/01/14/microsoft-named-a-leader-in-idc-marketscape-for-unified-ai-governance-platforms/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft named a Leader in IDC MarketScape for Unified AI Governance Platforms
-                </a>
-                <p class="mb-1 small text-light">Strengthen your security strategy with Microsoft AI governance solutionsAgentic and generative AI are reshaping business processes, creating a new frontier for security and governance.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-21">
-                <a href="https://snyk.io/blog/servicenow-virtual-agent-vulnerability/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] ServiceNow's Virtual Agent Vulnerability Shows Why AI Security Needs Traditional AppSec Foundations
-                </a>
-                <p class="mb-1 small text-light">The critical ServiceNow Virtual Agent vulnerability highlights a vital lesson: securing agentic AI requires a return to traditional AppSec foundations. While AI can amplify risks, the root causes often stem from classic failures in authentication and authorization.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-01-21">
-                <a href="https://engineering.fb.com/2026/01/14/ml-applications/adapting-the-facebook-reels-recsys-ai-model-based-on-user-feedback/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Adapting the Facebook Reels RecSys AI Model Based on User Feedback
-                </a>
-                <p class="mb-1 small text-light">Delivering personalized video recommendations is a common challenge for user satisfaction and long-term engagement on large-scale social platforms. Online Performance: Large-scale A/B testing with over 10 million users confirmed these improvements in real-world settings.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
+                    CNCF | 2026-01-21
                     
                 </small>
             </li>
@@ -364,7 +153,7 @@
                 <p class="mb-1 small text-light">Many production Kubernetes clusters blend on-demand (higher-SLA) and spot/preemptible (lower-SLA) nodes to optimize costs while maintaining reliability for critical workloads.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-01-21
                     
                 </small>
             </li>
@@ -376,7 +165,7 @@
                 <p class="mb-1 small text-light">The CNCF Annual Cloud Native Survey confirms a long-developing trend: Kubernetes has moved from container orchestration to becoming the backbone of modern infrastructure—including AI.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-01-21
                     
                 </small>
             </li>
@@ -388,7 +177,7 @@
                 <p class="mb-1 small text-light">This is the core challenge of GPU resource management in Kubernetes — the scheduler has no concept of actual utilization. For example, device plugins focus on allocation, while autoscaling addresses capacity rather than reclaiming idle resources.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-01-21
                     
                 </small>
             </li>
@@ -400,19 +189,247 @@
                 <p class="mb-1 small text-light">Secure Automation for On-Premises Infrastructure This release is powerful for self-hosted Pulumi Cloud deployments where security and compliance requirements are often even more stringent.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-01-21
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-01-21">
-                <a href="https://www.cncf.io/announcements/2026/01/20/kubernetes-established-as-the-de-facto-operating-system-for-ai-as-production-use-hits-82-in-2025-cncf-annual-cloud-native-survey/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Kubernetes Established as the De Facto ‘Operating System’ for AI as Production Use Hits 82% in 2025 CNCF Annual Cloud Native Survey
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-21">
+                <a href="https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How Temporal Powers Reliable Cloud Operations at Netflix
                 </a>
-                <p class="mb-1 small text-light">The CNCF survey highlights the adoption of cloud native technologies like Kubernetes and AI infrastructure, emphasizing modern scalable systems.</p>
+                <p class="mb-1 small text-light">Despite all of this, Clouddriver must be as reliable as reasonably possible as a core platform service. The child workflow will execute Activities which handle the actual cloud provider API calls to mutate infrastructure.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    Netflix | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-21">
+                <a href="https://www.microsoft.com/en-us/security/blog/2026/01/14/microsoft-named-a-leader-in-idc-marketscape-for-unified-ai-governance-platforms/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft named a Leader in IDC MarketScape for Unified AI Governance Platforms
+                </a>
+                <p class="mb-1 small text-light">Strengthen your security strategy with Microsoft AI governance solutionsAgentic and generative AI are reshaping business processes, creating a new frontier for security and governance.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-01-21">
+                <a href="https://snyk.io/blog/servicenow-virtual-agent-vulnerability/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] ServiceNow's Virtual Agent Vulnerability Shows Why AI Security Needs Traditional AppSec Foundations
+                </a>
+                <p class="mb-1 small text-light">The critical ServiceNow Virtual Agent vulnerability highlights a vital lesson: securing agentic AI requires a return to traditional AppSec foundations. While AI can amplify risks, the root causes often stem from classic failures in authentication and authorization.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-01-21">
+                <a href="https://engineering.fb.com/2026/01/14/ml-applications/adapting-the-facebook-reels-recsys-ai-model-based-on-user-feedback/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Adapting the Facebook Reels RecSys AI Model Based on User Feedback
+                </a>
+                <p class="mb-1 small text-light">Delivering personalized video recommendations is a common challenge for user satisfaction and long-term engagement on large-scale social platforms. Online Performance: Large-scale A/B testing with over 10 million users confirmed these improvements in real-world settings.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-01-21">
+                <a href="https://github.com/ef1500/libbbf" target="_blank" class="fw-bold text-decoration-none">
+                    Libbbf: Bound Book Format, A high-performance container for comics and manga
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://github.com/ef1500/libbbf Comments URL: https://news.ycombinator.com/item?id=46701114 Points: 39 # Comments: 15</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-21">
+                <a href="https://aws.amazon.com/blogs/aws/opening-the-aws-european-sovereign-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Opening the AWS European Sovereign Cloud
+                </a>
+                <p class="mb-1 small text-light">Public sector entities and businesses in highly regulated industries need cloud infrastructure that provides enhanced sovereignty controls that maintain the innovation, security, and reliability they expect from modern cloud services.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-21">
+                <a href="https://kubernetes.io/blog/2026/01/08/kubernetes-v1-35-mutable-pv-nodeaffinity/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.35: Mutable PersistentVolume Node Affinity (alpha)
+                </a>
+                <p class="mb-1 small text-light">The PersistentVolume node affinity API dates back to Kubernetes v1. However, even if the volume is migrated to regional storage, Kubernetes still prevents scheduling Pods to other zones because of the node affinity recorded in the PV object.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-21">
+                <a href="https://blog.cloudflare.com/cname-a-record-order-dns-standards/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] What came first: the CNAME or the A record?
+                </a>
+                <p class="mb-1 small text-light">The change was introduced on December 2, 2025, released to our testing environment on December 10, and began deployment on January 7, 2026. Cisco has published a service document describing the issue.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-01-21">
+                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
+                </a>
+                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-01-21">
+                <a href="https://www.pulumi.com/blog/self-verifying-ai-agents-vercels-agent-browser-in-the-ralph-wiggum-loop/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Self-Verifying AI Agents: Vercel's Agent-Browser in the Ralph Wiggum Loop
+                </a>
+                <p class="mb-1 small text-light">The context problem with browser automation Playwright MCP gives you powerful browser control, but it comes with overhead. The infrastructure changes are straightforward: // Analytics events table const analyticsTable = new aws.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-21">
+                <a href="https://www.reddit.com/r/devops/comments/1qi8w8n/migrating_a_large_elasticsearch_cluster_in/" target="_blank" class="fw-bold text-decoration-none">
+                    Migrating a large Elasticsearch cluster in production (100M+ docs). Looking for DevOps lessons and monitoring advice.
+                </a>
+                <p class="mb-1 small text-light">I also expect this migration to take hours (possibly longer), which makes monitoring and observability during the process critical.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-21">
+                <a href="https://www.reddit.com/r/devops/comments/1qhzfrs/looking_for_a_cloudagnostic_bash_automation/" target="_blank" class="fw-bold text-decoration-none">
+                    Looking for a Cloud-Agnostic Bash Automation Solution (Azure / AWS / GCP)
+                </a>
+                <p class="mb-1 small text-light">Hi everyone, I want to build a cloud automation system using Bash scripting that allows me to manage my work dynamically across cloud platforms.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-21">
+                <a href="https://www.reddit.com/r/devops/comments/1qi2p8k/cicd_gates_for_ring_0_kernel_deployments/" target="_blank" class="fw-bold text-decoration-none">
+                    CI/CD Gates for "Ring 0" / Kernel Deployments (Post-CrowdStrike Analysis)
+                </a>
+                <p class="mb-1 small text-light">Hey all, I'm trying to harden our deployment pipelines for high-privilege artifacts (kernel drivers, sidecars) after seeing the CrowdStrike mess. Key Availability: BitLocker keys accessible via API for recovery scripts.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-21">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qiezxc/rkubernetes_over_taken_with_ai_slop_projects/" target="_blank" class="fw-bold text-decoration-none">
+                    r/kubernetes over taken with AI slop projects
+                </a>
+                <p class="mb-1 small text-light">Is it me, or is this sub overrun with AI-slop repos being posted all day, every day. I used to see meaningful tools and updates from users who care about the community and wanted a place to interact.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-21">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qi4ioe/i_built_a_free_opensource_kubernetes_security/" target="_blank" class="fw-bold text-decoration-none">
+                    I built a free, open-source Kubernetes security documentation site — feedback welcome
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/spikedlel</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-21">
+                <a href="https://azure.microsoft.com/en-us/blog/design-your-ai-and-agent-strategy-with-microsoft-marketplace/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Chart your AI and agent strategy with Microsoft Marketplace
+                </a>
+                <p class="mb-1 small text-light">You can also own your IP, which can be essential in industries like financial services or advanced manufacturing. Prepackaged models available through Marketplace can accelerate building your solution with faster deployment because teams don’t have to build their stack.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-21">
+                <a href="https://www.microsoft.com/en-us/industry/blog/healthcare/2026/01/11/bridging-the-gap-between-ai-and-medicine-claude-in-microsoft-foundry-advances-capabilities-for-healthcare-and-life-sciences-customers/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Bridging the gap between AI and medicine: Claude in Microsoft Foundry advances capabilities for healthcare and life sciences customers
+                </a>
+                <p class="mb-1 small text-light">Powered by the latest advances in Claude intelligence These domain-specific capabilities build on major improvements in Claude’s underlying models.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-21">
+                <a href="https://www.docker.com/blog/safer-docker-hub-pulls-via-a-sonatype-protected-proxy/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Safer Docker Hub Pulls via a Sonatype-Protected Proxy
+                </a>
+                <p class="mb-1 small text-light">This provides teams a standard, dependable entry point for base images. Combining this workflow with curated sources such as Docker Official Images or Docker Hardened Images provides a stable, vetted baseline for the entire organization.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-21">
+                <a href="https://www.redhat.com/en/blog/manual-agentic-streamlining-it-processes-red-hat-openshift-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] From manual to agentic: streamlining IT processes with Red Hat OpenShift AI
+                </a>
+                <p class="mb-1 small text-light">To this end, we’ve created an it-self-service-agent AI quickstart that shows you how to automate IT processes within your organization using agentic AI on Red Hat OpenShift AI.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-01-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-01-21">
+                <a href="https://about.gitlab.com/blog/introducing-gitlab-credits/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Introducing GitLab Credits, usage-based pricing for GitLab Duo Agent Platform
+                </a>
+                <p class="mb-1 small text-light">GitLab Credits addresses these issues as our new virtual currency for usage-based pricing, starting with GitLab Duo Agent Platform. 8 release (with the planned Duo Agent Platform general availability).</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-01-21
                     
                 </small>
             </li>

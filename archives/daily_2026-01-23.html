@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - January 23, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - January 23, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for January 23, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-01-23">2026-01-23 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    12 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Sentry">Sentry</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-01-23">
+                <a href="https://www.hashicorp.com/blog/how-geico-lowered-its-300m-cloud-spend-and-decoupled-security-from-the-network" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] How GEICO lowered its $300M cloud spend and decoupled security from the network
+                </a>
+                <p class="mb-1 small text-light">Their solution: move security up the stack and enforce policy as close to users and workloads as possible. ”— Ammar Zuberi, Distinguished Infrastructure Engineer, GEICO Just as importantly, Vault brought standardization to their security practices.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-23">
+                <a href="https://www.docker.com/blog/fips-dependencies-and-prebuilt-binaries/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Your Dependencies Don’t Care About Your FIPS Configuration
+                </a>
+                <p class="mb-1 small text-light">However, the application started throwing cryptography module errors from the Postgres Rubygem module. ” The skills teams build solving FIPS problems today translate directly to broader supply chain security challenges.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-01-23">
+                <a href="https://blog.sentry.io/monitoring-microservices-distributed-systems-with-sentry/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Monitoring microservices and distributed systems with Sentry
+                </a>
+                <p class="mb-1 small text-light">PrerequisitesYou need no experience with microservices to understand this article. Tips for monitoring microservices and distributed systemsHere’s the short version:Sentry automatically creates spans for most operations without manual instrumentation.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-01-23">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-kiro-cli-latest-features-aws-european-sovereign-cloud-ec2-x8i-instances-and-more-january-19-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Kiro CLI latest features, AWS European Sovereign Cloud, EC2 X8i instances, and more (January 19, 2026)
+                </a>
+                <p class="mb-1 small text-light">The cloud is ready to meet the most stringent sovereignty requirements of European customers with a comprehensive set of AWS services. This approach delivers a scalable solution with enterprise-level security controls, providing complete continuous integration and delivery (CI/CD) automation.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-01-23">
+                <a href="https://kubernetes.io/blog/2026/01/19/clientcmd-apiserver-access/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Uniform API server access using clientcmd
+                </a>
+                <p class="mb-1 small text-light">Config that can issue requests to an API server. Available features clientcmd allows programs to handle kubeconfig selection (using KUBECONFIG); context selection; namespace selection; client certificates and private keys; user impersonation; HTTP Basic authentication support (username/password).</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-23">
+                <a href="https://blog.cloudflare.com/acme-path-vulnerability/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] How we mitigated a vulnerability in Cloudflare’s ACME validation logic
+                </a>
+                <p class="mb-1 small text-light">This code change only allows the set of security features to be disabled in the event that the request matches a valid ACME HTTP-01 challenge token for the hostname.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-23">
+                <a href="https://blog.cloudflare.com/astro-joins-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Astro is joining Cloudflare
+                </a>
+                <p class="mb-1 small text-light">You can deploy Astro to any platform or cloud, and we’re committed to supporting Astro developers everywhere. When you start a new project with Wix Vibe, behind the scenes you’re creating an Astro site, running on Cloudflare.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-01-23">
+                <a href="https://blog.cloudflare.com/iran-protests-internet-shutdown/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] What we know about Iran’s Internet shutdown
+                </a>
+                <p class="mb-1 small text-light">In November 2019, protests erupted following the announcement of a significant increase in fuel prices. 5%, falling from over 48 million /48s (blocks of 2^80 IPv6 addresses) to just over 737,000 /48s.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-01-23">
+                <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dash uses context engineering for smarter AI
+                </a>
+                <p class="mb-1 small text-light">In practice, these definitions also consume a significant number of tokens, a resource that directly impacts both cost and performance. Sending only what’s essential improves both performance and the quality of the entire agentic flow.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-01-23">
+                <a href="https://www.pulumi.com/blog/triggering-resource-replacements/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] New in Pulumi IaC: `replacementTrigger` Resource Option
+                </a>
+                <p class="mb-1 small text-light">const today = new Date() const keyManager = new KeyManagerResource("key-manager", {}, { replacementTrigger: today. Year()) keyManager, err := NewKeyManagerResource(ctx, "key-manager", &KeyManagerResourceArgs{}, pulumi.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-23">
+                <a href="https://www.reddit.com/r/devops/comments/1qkjko7/terraform_aws_infrastructure_framework_multienv/" target="_blank" class="fw-bold text-decoration-none">
+                    Terraform AWS Infrastructure Framework (Multi-Env, Name-Based, Scales by Config)
+                </a>
+                <p class="mb-1 small text-light">🚀 Excited to share my latest open-source project: a Terraform framework for AWS focused on multi-environment infrastructure management. Terraform #AWS #InfrastructureAsCode #DevOps #CloudEngineering #EKS #Kubernetes #OpenSource #CloudArchitecture #SRE submitted by /u/Dry-Attitude1899.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-23">
+                <a href="https://www.reddit.com/r/devops/comments/1qjttqe/ci_cd_pipeline_from_a_platform_perspective/" target="_blank" class="fw-bold text-decoration-none">
+                    CI CD pipeline from a platform perspective
+                </a>
+                <p class="mb-1 small text-light">Hi All, I have a few queries about CI CD best practices when it comes to workflow ownership by platform team. 2: Do we have any best practices when it comes to such offerings from a platform team.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-23">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1qk6mok/latest_ms_update_were_continuing_to_review_what/" target="_blank" class="fw-bold text-decoration-none">
+                    Latest MS update: "We're continuing to review what actions are required to restore the affected infrastructure to a heathy [sic] state and rebalance the service traffic to achieve recovery." -Ruh roh
+                </a>
+                <p class="mb-1 small text-light">The kind of thing you say when you have no idea what's going on. submitted by /u/Dunlocke</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-23">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1qkd64f/am_i_missing_something_or_is_maintaining/" target="_blank" class="fw-bold text-decoration-none">
+                    Am I missing something or is *maintaining* Kubernetes not that bad?
+                </a>
+                <p class="mb-1 small text-light">it scared me off it so we ran our little app's containers (like maybe 300 users) in AWS ECS. at this point I run k3s instead of docker on my own machine.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-23">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qjscp3/helm_container_images_across_clusters_need_better/" target="_blank" class="fw-bold text-decoration-none">
+                    Helm + container images across clusters... need better options
+                </a>
+                <p class="mb-1 small text-light">Running container images via Helm across clusters is a mess. Every small change in image or values can break stuff.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-01-23">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qjn23u/singlestore_delivers_aipowered_cybersecurity_at/" target="_blank" class="fw-bold text-decoration-none">
+                    SingleStore Delivers AI-powered Cybersecurity at Armis, Nucleus Security and Lumana
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/singlestore</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-23">
+                <a href="https://netflixtechblog.com/towards-generalizable-and-efficient-large-scale-generative-recommenders-a7db648aa257?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Towards Generalizable and Efficient Large-Scale Generative Recommenders
+                </a>
+                <p class="mb-1 small text-light">Our large-scale evaluations reveal significant alignment challenges when applying these models to downstream applications. It is also worth noting that our approach enables further scaling of model size, balancing performance improvements against serving costs.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-23">
+                <a href="https://netflixtechblog.com/netflix-live-origin-41f1b0ad5371?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Netflix Live Origin
+                </a>
+                <p class="mb-1 small text-light">Live Streaming Distribution and Origin ArchitectureNetflix Live Origin is a multi-tenant microservice operating on EC2 instances within the AWS cloud. The implementation of epoch locking at the cloud encoder enables the origin to select a segment from either encoding pipeline.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-23">
+                <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] AV1 — Now Powering 30% of Netflix Streaming
+                </a>
+                <p class="mb-1 small text-light">However, because film grain is inherently random, faithfully representing it in digital video requires a significant amount of data. Continuous improvements to its performance and compatibility have made dav1d the preferred choice for a wide range of platforms and practical applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-01-23">
+                <a href="https://netflixtechblog.medium.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Integrating Netflix’s Foundation Model into Personalization applications
+                </a>
+                <p class="mb-1 small text-light">Overall, the subgraph approach allows for a deeper integration and enables the applications to harness the full power of the Foundation Model. A side benefit of this integration approach is that it provides a de facto baseline for new models/applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-01-23">
+                <a href="https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Introducing GPT-5.2 in Microsoft Foundry: The new standard for enterprise AI
+                </a>
+                <p class="mb-1 small text-light">2 series is built on new architecture, delivering superior performance, efficiency, and reasoning depth compared to prior generations. Application Modernization: Make rapid progress in refactoring services, generating tests, and producing migration plans with risk and rollback criteria.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-23">
+                <a href="https://www.docker.com/blog/mcp-servers-docker-toolkit-cagent-gateway/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Using MCP Servers: From Quick Tools to Multi-Agent Systems
+                </a>
+                <p class="mb-1 small text-light">Secrets management: MCPs often need credentials (API keys, tokens, etc. Docker’s MCP Catalog is a curated, containerized registry of MCP servers.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-01-23">
+                <a href="https://www.docker.com/blog/making-small-llms-smarter/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Making (Very) Small LLMs Smarter
+                </a>
+                <p class="mb-1 small text-light">Hello, I’m Philippe, and I am a Principal Solutions Architect helping customers with their usage of Docker. Docker Agentic Compose configuration Let’s start with the Docker Agentic Compose project structure: services: golang-expert: build: context:.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-23">
+                <a href="https://www.redhat.com/en/blog/red-hat-performance-and-scale-engineering" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat Performance and Scale Engineering
+                </a>
+                <p class="mb-1 small text-light">Red Hat's most recent posts about Performance, Scale, Chaos and more. We established the architecture for a scaling strategy that goes beyond traditional CPU and memory metrics, using AI inference-specific service-level indicators (SLI).</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-01-23
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-01-23">
+                <a href="https://www.redhat.com/en/blog/Understanding-security-embargoes-at-Red-Hat" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Understanding security embargoes at Red Hat
+                </a>
+                <p class="mb-1 small text-light">The primary goal of an embargo is customer protection. If a severe vulnerability is disclosed immediately upon discovery by way of "full disclosure" without an available patch, malicious actors have a window of opportunity to exploit systems while us.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-01-23
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

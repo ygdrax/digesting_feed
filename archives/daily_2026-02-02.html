@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - February 02, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - February 02, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for February 02, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-02-02">2026-02-02 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-02-02 08:15:20
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,266 +132,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-02">
-                <a href="https://www.reddit.com/r/devops/comments/1qsyjdw/european_infrastructure_engineers_whats_happening/" target="_blank" class="fw-bold text-decoration-none">
-                    European infrastructure engineers - What's happening inside your companies regarding your dependency on US hyperscalers?
-                </a>
-                <p class="mb-1 small text-light">Everybody follows the news and sees what's going on. This shift was already initiated last year by moving towards Kubernetes, but we still use a dozen AWS services.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-02">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1qtaqw9/need_advice_on_best_security_awareness_training/" target="_blank" class="fw-bold text-decoration-none">
-                    Need advice on best security awareness training vendors
-                </a>
-                <p class="mb-1 small text-light">Been shopping around for security awareness training platforms and holy crap some of these vendors are straight up predatory. The whole industry feels like used car salesmen discovered cybersecurity.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-02">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1qt7w0g/struggle_to_learn_devopscloud_native_skills/" target="_blank" class="fw-bold text-decoration-none">
-                    struggle to learn devops/cloud native skills
-                </a>
-                <p class="mb-1 small text-light">I'm trying to understand when/how i missed the natural progression to learning skills like cloud devops, PaaS services, containers, IaC, CI/CD, kubernetes, etc.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-02">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1qt68y4/deploy_openclaw_securely_on_kubernetes_with/" target="_blank" class="fw-bold text-decoration-none">
-                    Deploy OpenClaw Securely on Kubernetes with ArgoCD and Helm
-                </a>
-                <p class="mb-1 small text-light">Been running OpenClaw for a bit and realized there wasn't a Helm chart for it. Chart includes a Chromium sidecar for browser automation and an init container for declaratively installing skills.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-02">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1qqfia5/ingress_nginx_joint_statement_from_the_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    Ingress NGINX: Joint Statement from the Kubernetes Steering and Security Response Committees
-                </a>
-                <p class="mb-1 small text-light">In March 2026, Kubernetes will retire Ingress NGINX, a piece of critical infrastructure for about half of cloud native environments. There will be no more releases for bug fixes, security patches, or any updates of any kind after the project is retired.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-02">
-                <a href="https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3)
-                </a>
-                <p class="mb-1 small text-light">The system we built to ensure our AI agents produce predictable, trustworthy code. The post Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-02">
-                <a href="https://engineering.atspotify.com/2025/11/context-engineering-background-coding-agents-part-2/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Background Coding Agents: Context Engineering (Part 2)
-                </a>
-                <p class="mb-1 small text-light">We explore context engineering for background coding agents and what makes a good migration prompt. The post Background Coding Agents: Context Engineering (Part 2) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-02">
-                <a href="https://engineering.atspotify.com/2025/11/shuffle-making-random-feel-more-human/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Shuffle: Making Random Feel More Human
-                </a>
-                <p class="mb-1 small text-light">Shuffle has always been one of Spotify’s most-used features, and also one of the most misunderstood. For... The post Shuffle: Making Random Feel More Human appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-02-02">
-                <a href="https://aws.amazon.com/blogs/aws/opening-the-aws-european-sovereign-cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Opening the AWS European Sovereign Cloud
-                </a>
-                <p class="mb-1 small text-light">Public sector entities and businesses in highly regulated industries need cloud infrastructure that provides enhanced sovereignty controls that maintain the innovation, security, and reliability they expect from modern cloud services.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-02-02">
-                <a href="https://www.cncf.io/blog/2026/01/26/k0s-in-2025-a-year-of-community-growth-governance-and-kubernetes-innovation/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] k0s in 2025: A year of community growth, governance, and Kubernetes innovation
-                </a>
-                <p class="mb-1 small text-light">Key improvements included: Stable releases The k0s project had a total of 39 stable releases done in total. As Kubernetes introduces new APIs, container runtimes, and network stack changes, k0s ensures timely support and testing for seamless adoption.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-02-02">
-                <a href="https://www.cncf.io/blog/2026/01/23/the-autonomous-enterprise-and-the-four-pillars-of-platform-control-2026-forecast/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] The autonomous enterprise and the four pillars of platform control: 2026 forecast
-                </a>
-                <p class="mb-1 small text-light">“I need a secure, scalable service for my application in AWS US-East”), and the AI Agent fully composes, validates, and provisions the compliant infrastructure according to the pre-defined golden path.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-02">
-                <a href="https://blog.cloudflare.com/q4-2025-internet-disruption-summary/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Cable cuts, storms, and DNS: a look at Internet disruptions in Q4 2025
-                </a>
-                <p class="mb-1 small text-light">In addition, incidents at several hyperscaler cloud platforms and Cloudflare impacted the availability of websites and applications.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-02-02">
-                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
-                </a>
-                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-02-02">
-                <a href="https://www.pulumi.com/blog/pulumi-agent-skills/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Pulumi Agent Skills: Best practices and more for AI coding assistants
+                <a href="https://www.pulumi.com/blog/pulumi-service-provider-insights-resources/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Manage Cloud Visibility and Governance with Infrastructure as Code
                 </a>
-                <p class="mb-1 small text-light">CloudFormation to Pulumi covers the complete AWS CloudFormation migration workflow, from template conversion and stack import to handling CloudFormation-specific constructs. Pulumi Automation API covers programmatic orchestration of Pulumi operations.</p>
+                <p class="mb-1 small text-light">With these new resources, you can: Discover all cloud resources across AWS, Azure, GCP, Kubernetes, or OCI environments, including resources not managed by Pulumi Import discovered resources into Pulumi management using Visual Import to bring unmanaged infrastructure under IaC control Enforce com...</p>
                 <small class="text-secondary">
                     
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-02-02">
-                <a href="https://www.pulumi.com/blog/deploy-openclaw-aws-hetzner/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Deploy OpenClaw on AWS or Hetzner Securely with Pulumi and Tailscale
-                </a>
-                <p class="mb-1 small text-light">Setting up ESC for secrets management Deploying OpenClaw means handling sensitive credentials: API keys, auth tokens, cloud provider secrets.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-02">
-                <a href="https://netflixtechblog.com/the-ai-evolution-of-graph-search-at-netflix-d416ec5b1151?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] The AI Evolution of Graph Search at Netflix
-                </a>
-                <p class="mb-1 small text-light">This is the first in a three-part series where we will detail our journey: how we implemented these solutions, evaluated their performance, and ultimately evolved them into a self-managed platform.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-02">
-                <a href="https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] How Temporal Powers Reliable Cloud Operations at Netflix
-                </a>
-                <p class="mb-1 small text-light">Despite all of this, Clouddriver must be as reliable as reasonably possible as a core platform service. The child workflow will execute Activities which handle the actual cloud provider API calls to mutate infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-02-02">
-                <a href="https://www.microsoft.com/en-us/security/blog/2026/01/14/microsoft-named-a-leader-in-idc-marketscape-for-unified-ai-governance-platforms/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft named a Leader in IDC MarketScape for Unified AI Governance Platforms
-                </a>
-                <p class="mb-1 small text-light">Strengthen your security strategy with Microsoft AI governance solutionsAgentic and generative AI are reshaping business processes, creating a new frontier for security and governance.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-02-02">
-                <a href="https://www.docker.com/blog/clawdbot-docker-model-runner-private-personal-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Clawdbot with Docker Model Runner, a Private Personal AI Assistant
-                </a>
-                <p class="mb-1 small text-light">By combining Clawdbot with Docker Model Runner (DMR), you can build a high-performance, agentic personal assistant while keeping full control over your data, infrastructure, and spending.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-02-02">
-                <a href="https://www.redhat.com/en/blog/how-banco-do-brasil-uses-hyperautomation-and-platform-engineering-drive-efficiency" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] How Banco do Brasil uses hyperautomation and platform engineering to drive efficiency
-                </a>
-                <p class="mb-1 small text-light">We learned how they evolved from a siloed community Kubernetes environment to a highly efficient, hybrid multicloud platform powered by Red Hat OpenShift. Scalability through capabilities and hyperautomationA primary tak.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-02-02">
-                <a href="https://snyk.io/blog/servicenow-virtual-agent-vulnerability/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] ServiceNow's Virtual Agent Vulnerability Shows Why AI Security Needs Traditional AppSec Foundations
-                </a>
-                <p class="mb-1 small text-light">The critical ServiceNow Virtual Agent vulnerability highlights a vital lesson: securing agentic AI requires a return to traditional AppSec foundations. While AI can amplify risks, the root causes often stem from classic failures in authentication and authorization.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-02">
-                <a href="https://engineering.fb.com/2026/01/14/ml-applications/adapting-the-facebook-reels-recsys-ai-model-based-on-user-feedback/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Adapting the Facebook Reels RecSys AI Model Based on User Feedback
-                </a>
-                <p class="mb-1 small text-light">Delivering personalized video recommendations is a common challenge for user satisfaction and long-term engagement on large-scale social platforms. Online Performance: Large-scale A/B testing with over 10 million users confirmed these improvements in real-world settings.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
+                    Pulumi | 2026-02-02
                     
                 </small>
             </li>
@@ -386,7 +151,7 @@
                 <p class="mb-1 small text-light">This risk is amplified by manual, error-prone key rotation, which significantly broadens the infrastructure's attack surface. Terraform also has a policy as code engine — Sentinel — for security guardrails that protect every deployment.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-02-02
                     
                 </small>
             </li>
@@ -398,19 +163,271 @@
                 <p class="mb-1 small text-light">Meet Moltworker, a middleware Worker and adapted scripts that allows running Moltbot on Cloudflare's Sandbox SDK and our Developer Platform APIs.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-02">
+                <a href="https://netflixtechblog.com/the-ai-evolution-of-graph-search-at-netflix-d416ec5b1151?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] The AI Evolution of Graph Search at Netflix
+                </a>
+                <p class="mb-1 small text-light">This is the first in a three-part series where we will detail our journey: how we implemented these solutions, evaluated their performance, and ultimately evolved them into a self-managed platform.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-02">
+                <a href="https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How Temporal Powers Reliable Cloud Operations at Netflix
+                </a>
+                <p class="mb-1 small text-light">Despite all of this, Clouddriver must be as reliable as reasonably possible as a core platform service. The child workflow will execute Activities which handle the actual cloud provider API calls to mutate infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-02-02">
+                <a href="https://www.microsoft.com/en-us/security/blog/2026/01/14/microsoft-named-a-leader-in-idc-marketscape-for-unified-ai-governance-platforms/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft named a Leader in IDC MarketScape for Unified AI Governance Platforms
+                </a>
+                <p class="mb-1 small text-light">Strengthen your security strategy with Microsoft AI governance solutionsAgentic and generative AI are reshaping business processes, creating a new frontier for security and governance.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-02-02">
+                <a href="https://www.docker.com/blog/clawdbot-docker-model-runner-private-personal-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Clawdbot with Docker Model Runner, a Private Personal AI Assistant
+                </a>
+                <p class="mb-1 small text-light">By combining Clawdbot with Docker Model Runner (DMR), you can build a high-performance, agentic personal assistant while keeping full control over your data, infrastructure, and spending.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-02-02">
+                <a href="https://www.redhat.com/en/blog/how-banco-do-brasil-uses-hyperautomation-and-platform-engineering-drive-efficiency" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] How Banco do Brasil uses hyperautomation and platform engineering to drive efficiency
+                </a>
+                <p class="mb-1 small text-light">We learned how they evolved from a siloed community Kubernetes environment to a highly efficient, hybrid multicloud platform powered by Red Hat OpenShift. Scalability through capabilities and hyperautomationA primary tak.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-02-02">
+                <a href="https://snyk.io/blog/servicenow-virtual-agent-vulnerability/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] ServiceNow's Virtual Agent Vulnerability Shows Why AI Security Needs Traditional AppSec Foundations
+                </a>
+                <p class="mb-1 small text-light">The critical ServiceNow Virtual Agent vulnerability highlights a vital lesson: securing agentic AI requires a return to traditional AppSec foundations. While AI can amplify risks, the root causes often stem from classic failures in authentication and authorization.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-02">
+                <a href="https://engineering.fb.com/2026/01/14/ml-applications/adapting-the-facebook-reels-recsys-ai-model-based-on-user-feedback/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Adapting the Facebook Reels RecSys AI Model Based on User Feedback
+                </a>
+                <p class="mb-1 small text-light">Delivering personalized video recommendations is a common challenge for user satisfaction and long-term engagement on large-scale social platforms. Online Performance: Large-scale A/B testing with over 10 million users confirmed these improvements in real-world settings.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-02-02">
+                <a href="https://aws.amazon.com/blogs/aws/opening-the-aws-european-sovereign-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Opening the AWS European Sovereign Cloud
+                </a>
+                <p class="mb-1 small text-light">Public sector entities and businesses in highly regulated industries need cloud infrastructure that provides enhanced sovereignty controls that maintain the innovation, security, and reliability they expect from modern cloud services.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-02-02">
+                <a href="https://www.cncf.io/blog/2026/01/26/k0s-in-2025-a-year-of-community-growth-governance-and-kubernetes-innovation/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] k0s in 2025: A year of community growth, governance, and Kubernetes innovation
+                </a>
+                <p class="mb-1 small text-light">Key improvements included: Stable releases The k0s project had a total of 39 stable releases done in total. As Kubernetes introduces new APIs, container runtimes, and network stack changes, k0s ensures timely support and testing for seamless adoption.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-02-02">
+                <a href="https://www.cncf.io/blog/2026/01/23/the-autonomous-enterprise-and-the-four-pillars-of-platform-control-2026-forecast/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] The autonomous enterprise and the four pillars of platform control: 2026 forecast
+                </a>
+                <p class="mb-1 small text-light">“I need a secure, scalable service for my application in AWS US-East”), and the AI Agent fully composes, validates, and provisions the compliant infrastructure according to the pre-defined golden path.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-02">
+                <a href="https://blog.cloudflare.com/q4-2025-internet-disruption-summary/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cable cuts, storms, and DNS: a look at Internet disruptions in Q4 2025
+                </a>
+                <p class="mb-1 small text-light">In addition, incidents at several hyperscaler cloud platforms and Cloudflare impacted the availability of websites and applications.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-02-02">
+                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
+                </a>
+                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-02-02
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-02-02">
-                <a href="https://www.pulumi.com/blog/pulumi-service-provider-insights-resources/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Manage Cloud Visibility and Governance with Infrastructure as Code
+                <a href="https://www.pulumi.com/blog/pulumi-agent-skills/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Pulumi Agent Skills: Best practices and more for AI coding assistants
                 </a>
-                <p class="mb-1 small text-light">With these new resources, you can: Discover all cloud resources across AWS, Azure, GCP, Kubernetes, or OCI environments, including resources not managed by Pulumi Import discovered resources into Pulumi management using Visual Import to bring unmanaged infrastructure under IaC control Enforce com...</p>
+                <p class="mb-1 small text-light">CloudFormation to Pulumi covers the complete AWS CloudFormation migration workflow, from template conversion and stack import to handling CloudFormation-specific constructs. Pulumi Automation API covers programmatic orchestration of Pulumi operations.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-02-02">
+                <a href="https://www.pulumi.com/blog/deploy-openclaw-aws-hetzner/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Deploy OpenClaw on AWS or Hetzner Securely with Pulumi and Tailscale
+                </a>
+                <p class="mb-1 small text-light">Setting up ESC for secrets management Deploying OpenClaw means handling sensitive credentials: API keys, auth tokens, cloud provider secrets.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-02">
+                <a href="https://www.reddit.com/r/devops/comments/1qsyjdw/european_infrastructure_engineers_whats_happening/" target="_blank" class="fw-bold text-decoration-none">
+                    European infrastructure engineers - What's happening inside your companies regarding your dependency on US hyperscalers?
+                </a>
+                <p class="mb-1 small text-light">Everybody follows the news and sees what's going on. This shift was already initiated last year by moving towards Kubernetes, but we still use a dozen AWS services.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-02">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1qtaqw9/need_advice_on_best_security_awareness_training/" target="_blank" class="fw-bold text-decoration-none">
+                    Need advice on best security awareness training vendors
+                </a>
+                <p class="mb-1 small text-light">Been shopping around for security awareness training platforms and holy crap some of these vendors are straight up predatory. The whole industry feels like used car salesmen discovered cybersecurity.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-02">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1qt7w0g/struggle_to_learn_devopscloud_native_skills/" target="_blank" class="fw-bold text-decoration-none">
+                    struggle to learn devops/cloud native skills
+                </a>
+                <p class="mb-1 small text-light">I'm trying to understand when/how i missed the natural progression to learning skills like cloud devops, PaaS services, containers, IaC, CI/CD, kubernetes, etc.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-02">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qt68y4/deploy_openclaw_securely_on_kubernetes_with/" target="_blank" class="fw-bold text-decoration-none">
+                    Deploy OpenClaw Securely on Kubernetes with ArgoCD and Helm
+                </a>
+                <p class="mb-1 small text-light">Been running OpenClaw for a bit and realized there wasn't a Helm chart for it. Chart includes a Chromium sidecar for browser automation and an init container for declaratively installing skills.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-02">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1qqfia5/ingress_nginx_joint_statement_from_the_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    Ingress NGINX: Joint Statement from the Kubernetes Steering and Security Response Committees
+                </a>
+                <p class="mb-1 small text-light">In March 2026, Kubernetes will retire Ingress NGINX, a piece of critical infrastructure for about half of cloud native environments. There will be no more releases for bug fixes, security patches, or any updates of any kind after the project is retired.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-02">
+                <a href="https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3)
+                </a>
+                <p class="mb-1 small text-light">The system we built to ensure our AI agents produce predictable, trustworthy code. The post Background Coding Agents: Predictable Results Through Strong Feedback Loops (Part 3) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-02">
+                <a href="https://engineering.atspotify.com/2025/11/context-engineering-background-coding-agents-part-2/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Background Coding Agents: Context Engineering (Part 2)
+                </a>
+                <p class="mb-1 small text-light">We explore context engineering for background coding agents and what makes a good migration prompt. The post Background Coding Agents: Context Engineering (Part 2) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-02-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-02">
+                <a href="https://engineering.atspotify.com/2025/11/shuffle-making-random-feel-more-human/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Shuffle: Making Random Feel More Human
+                </a>
+                <p class="mb-1 small text-light">Shuffle has always been one of Spotify’s most-used features, and also one of the most misunderstood. For... The post Shuffle: Making Random Feel More Human appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-02-02
                     
                 </small>
             </li>

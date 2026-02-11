@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - February 11, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - February 11, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for February 11, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-02-11">2026-02-11 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-02-11 08:17:01
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,278 +132,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-11">
-                <a href="https://www.reddit.com/r/devops/comments/1r1aqiz/serviceradar_zerotrust_opensource_network/" target="_blank" class="fw-bold text-decoration-none">
-                    ServiceRadar - Zero-Trust Opensource Network Management and Observability platform
-                </a>
-                <p class="mb-1 small text-light">We are excited to announce some new features in ServiceRadar and an updated demo site.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-11">
-                <a href="https://www.reddit.com/r/devops/comments/1r1fw5y/learning_ai_deployment_mlops_awsgcpazure_how/" target="_blank" class="fw-bold text-decoration-none">
-                    Learning AI deployment & MLOps (AWS/GCP/Azure). How would you approach jobs & interviews in this space?
-                </a>
-                <p class="mb-1 small text-light">This includes deploying LLM-based services to AWS, GCP, Azure and Vercel, working with MLOps, RAG, agents, Bedrock, SageMaker, as well as topics like observability, security and scalability.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-11">
-                <a href="https://netflixtechblog.com/high-throughput-graph-abstraction-at-netflix-part-i-e88063e6f6d5?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] High-Throughput Graph Abstraction at Netflix: Part I
-                </a>
-                <p class="mb-1 small text-light">The Key-Value (KV) Abstraction stores the latest view of nodes and edges, serving as the real-time index for all queries. Further, to ensure correctness of asynchronous deletes during concurrent updates, the Last-Write-Wins (LWW) conflict resolution mechanism is essential.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-11">
-                <a href="https://netflixtechblog.medium.com/the-data-canary-how-netflix-validates-catalog-metadata-18b699d58e36?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] The Data Canary: How Netflix Validates Catalog Metadata
-                </a>
-                <p class="mb-1 small text-light">The impact was immediate: missing metadata prevented manifest generation, causing failures in our catalog service and playback issues. Emergent Issues: While each upstream data source has independent validation, problems often only manifest in the final transformed state.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-11">
-                <a href="https://netflixtechblog.com/data-bridge-how-netflix-simplifies-data-movement-36d10d91c313?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Data Bridge: How Netflix simplifies data movement
-                </a>
-                <p class="mb-1 small text-light">We’ll outline the problems caused by prior tool fragmentation and explain how Data Bridge addresses these issues by separating user intent from implementation. A few years ago, the newly formed Data Movement Platform team was tasked with consolidating that fragmented landscape.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-11">
-                <a href="https://netflixtechblog.com/towards-generalizable-and-efficient-large-scale-generative-recommenders-a7db648aa257?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Towards Generalizable and Efficient Large-Scale Generative Recommenders
-                </a>
-                <p class="mb-1 small text-light">Our large-scale evaluations reveal significant alignment challenges when applying these models to downstream applications. It is also worth noting that our approach enables further scaling of model size, balancing performance improvements against serving costs.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-02-11">
-                <a href="https://azure.microsoft.com/en-us/blog/postgresql-on-azure-supercharged-for-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] PostgreSQL on Azure supercharged for AI
-                </a>
-                <p class="mb-1 small text-light">The database reimagined New AI applications require databases that are not only reliable, extensible, and secure, but also AI-ready. For applications that rely on relevance and speed, our DiskANN vector indexing delivers high-performance similarity search.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-02-11">
-                <a href="https://blogs.microsoft.com/blog/2026/01/26/maia-200-the-ai-accelerator-built-for-inference/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Maia 200: The AI accelerator built for inference
-                </a>
-                <p class="mb-1 small text-light">Scott Guthrie is responsible for hyperscale cloud computing solutions and services including Azure, Microsoft’s cloud computing platform, generative AI solutions, data platforms and information and cybersecurity.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-02-11">
-                <a href="https://www.docker.com/blog/hardened-images-free-now-what/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Hardened Images Are Free. Now What?
-                </a>
-                <p class="mb-1 small text-light">For security teams, this changes the economics of container vulnerability management. DHI includes security fixes from Docker’s security team, which simplifies security response.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-02-11">
-                <a href="https://www.docker.com/blog/atlassian-remote-mcp-server-getting-started-with-docker/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Get Started with the Atlassian Rovo MCP Server Using Docker
-                </a>
-                <p class="mb-1 small text-light">Docker securely manages your credentials and allows you to reuse them across multiple MCP clients. Learn more Get started with MCP Catalog and Toolkit Explore the Docker MCP Catalog: Discover containerized, security-hardened MCP servers Read more about the Docker MCP Toolkit: Official Documentation.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-02-11">
-                <a href="https://www.redhat.com/en/blog/more-meets-eye-behind-scenes-red-hat-enterprise-linux-10-part-5" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] More than meets the eye: Behind the scenes of Red Hat Enterprise Linux 10 (Part 5)
-                </a>
-                <p class="mb-1 small text-light">This series takes a look at the people and planning that went into building and releasing Red Hat Enterprise Linux 10. From the earliest conceptual stages to the launch at Red Hat Summit 2025, we’ll hear firsthand accounts of how RHEL 10 came into being.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-02-11">
-                <a href="https://entire.io/blog/hello-entire-world/" target="_blank" class="fw-bold text-decoration-none">
-                    Ex-GitHub CEO launches a new developer platform for AI agents
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://entire.io/blog/hello-entire-world/ Comments URL: https://news.ycombinator.com/item?id=46961345 Points: 462 # Comments: 422</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-02-11">
-                <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-c8id-m8id-and-r8id-instances-with-up-to-22-8-tb-local-nvme-storage-are-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon EC2 C8id, M8id, and R8id instances with up to 22.8 TB local NVMe storage are generally available
-                </a>
-                <p class="mb-1 small text-light">They deliver the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-02-11">
-                <a href="https://www.hashicorp.com/blog/how-world-bank-manages-hybrid-cloud-complexity-with-terraform" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] How World Bank manages hybrid cloud complexity with Terraform
-                </a>
-                <p class="mb-1 small text-light">Platform engineering strategy Their platform engineering strategy is built on four pillars: Developer experience Internal developer portal for self-service capabilities Golden paths for apps, data, and AI applications Scorecards to track platform quality and usage Security by design Security poli...</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-02-11">
-                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
-                </a>
-                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-02-11">
-                <a href="https://www.pulumi.com/blog/how-we-built-platybot-an-ai-powered-analytics-assistant/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] How We Built Platybot: An AI-Powered Analytics Assistant
+                <a href="https://www.pulumi.com/blog/neo-task-sharing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Neo: Share Tasks for Collaborative AI Infrastructure Operations
                 </a>
-                <p class="mb-1 small text-light">Deploying with Pulumi Platybot’s infrastructure runs on AWS and is managed entirely with Pulumi IaC. Here’s a representative snippet of the Fargate service definition: const service = new awsx.</p>
+                <p class="mb-1 small text-light">Neo shows its work, but until now that context was only viewable by the user that initiated the conversation. We built this with security as a core constraint.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-02-11">
-                <a href="https://www.pulumi.com/blog/announcing-openapi-support-pulumi-cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Announcing OpenAPI support for the Pulumi Cloud REST API
-                </a>
-                <p class="mb-1 small text-light">We’re thrilled to announce that the Pulumi Cloud REST API is now described by an OpenAPI 3. Load the spec into Swagger UI, Redoc, or another viewer to browse the Pulumi Cloud API interactively.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-11">
-                <a href="https://www.reddit.com/r/devops/comments/1r1o6sy/devops_engineers_what_does_your_current_network/" target="_blank" class="fw-bold text-decoration-none">
-                    DevOps Engineers. What does your current network monitoring setup cost you, and what does it fail to tell you?
-                </a>
-                <p class="mb-1 small text-light">Title says it all. (Grafana, Datadog, Prometheus, CloudWatch, etc) submitted by /u/purealgo</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-11">
-                <a href="https://netflixtechblog.com/the-ai-evolution-of-graph-search-at-netflix-d416ec5b1151?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] The AI Evolution of Graph Search at Netflix
-                </a>
-                <p class="mb-1 small text-light">This is the first in a three-part series where we will detail our journey: how we implemented these solutions, evaluated their performance, and ultimately evolved them into a self-managed platform.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-11">
-                <a href="https://engineering.fb.com/2026/01/14/ml-applications/adapting-the-facebook-reels-recsys-ai-model-based-on-user-feedback/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Adapting the Facebook Reels RecSys AI Model Based on User Feedback
-                </a>
-                <p class="mb-1 small text-light">Delivering personalized video recommendations is a common challenge for user satisfaction and long-term engagement on large-scale social platforms. Online Performance: Large-scale A/B testing with over 10 million users confirmed these improvements in real-world settings.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-02-11">
-                <a href="https://www.hashicorp.com/blog/how-duke-energy-enforces-cloud-security-at-scale-with-terraform-vault-6-lessons" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] How Duke Energy enforces cloud security at scale with Terraform & Vault, and 6 lessons
-                </a>
-                <p class="mb-1 small text-light">Moving to the cloud, however, meant inheriting new security responsibilities that could only be solved through automation, governance, and a standardized developer experience.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-02-11">
-                <a href="https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Ingress NGINX: Statement from the Kubernetes Steering and Security Response Committees
-                </a>
-                <p class="mb-1 small text-light">In March 2026, Kubernetes will retire Ingress NGINX, a piece of critical infrastructure for about half of cloud native environments. There will be no more releases for bug fixes, security patches, or any updates of any kind after the project is retired.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-11">
-                <a href="https://blog.cloudflare.com/moltworker-self-hosted-ai-agent/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing Moltworker: a self-hosted personal AI agent, minus the minis
-                </a>
-                <p class="mb-1 small text-light">Meet Moltworker, a middleware Worker and adapted scripts that allows running Moltbot on Cloudflare's Sandbox SDK and our Developer Platform APIs.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
+                    Pulumi | 2026-02-11
                     
                 </small>
             </li>
@@ -398,19 +151,283 @@
                 <p class="mb-1 small text-light">However, managing underlying infrastructure can be a significant operational challenge — especially for teams who want to focus on delivering software, not maintaining platforms.</p>
                 <small class="text-secondary">
                     
-                    GitLab
+                    GitLab | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-02-11">
+                <a href="https://www.hashicorp.com/blog/how-duke-energy-enforces-cloud-security-at-scale-with-terraform-vault-6-lessons" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] How Duke Energy enforces cloud security at scale with Terraform & Vault, and 6 lessons
+                </a>
+                <p class="mb-1 small text-light">Moving to the cloud, however, meant inheriting new security responsibilities that could only be solved through automation, governance, and a standardized developer experience.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-02-11">
+                <a href="https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Ingress NGINX: Statement from the Kubernetes Steering and Security Response Committees
+                </a>
+                <p class="mb-1 small text-light">In March 2026, Kubernetes will retire Ingress NGINX, a piece of critical infrastructure for about half of cloud native environments. There will be no more releases for bug fixes, security patches, or any updates of any kind after the project is retired.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-11">
+                <a href="https://blog.cloudflare.com/moltworker-self-hosted-ai-agent/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing Moltworker: a self-hosted personal AI agent, minus the minis
+                </a>
+                <p class="mb-1 small text-light">Meet Moltworker, a middleware Worker and adapted scripts that allows running Moltbot on Cloudflare's Sandbox SDK and our Developer Platform APIs.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-11">
+                <a href="https://www.reddit.com/r/devops/comments/1r1o6sy/devops_engineers_what_does_your_current_network/" target="_blank" class="fw-bold text-decoration-none">
+                    DevOps Engineers. What does your current network monitoring setup cost you, and what does it fail to tell you?
+                </a>
+                <p class="mb-1 small text-light">Title says it all. (Grafana, Datadog, Prometheus, CloudWatch, etc) submitted by /u/purealgo</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-11">
+                <a href="https://netflixtechblog.com/the-ai-evolution-of-graph-search-at-netflix-d416ec5b1151?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] The AI Evolution of Graph Search at Netflix
+                </a>
+                <p class="mb-1 small text-light">This is the first in a three-part series where we will detail our journey: how we implemented these solutions, evaluated their performance, and ultimately evolved them into a self-managed platform.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-11">
+                <a href="https://engineering.fb.com/2026/01/14/ml-applications/adapting-the-facebook-reels-recsys-ai-model-based-on-user-feedback/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Adapting the Facebook Reels RecSys AI Model Based on User Feedback
+                </a>
+                <p class="mb-1 small text-light">Delivering personalized video recommendations is a common challenge for user satisfaction and long-term engagement on large-scale social platforms. Online Performance: Large-scale A/B testing with over 10 million users confirmed these improvements in real-world settings.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-02-11">
+                <a href="https://entire.io/blog/hello-entire-world/" target="_blank" class="fw-bold text-decoration-none">
+                    Ex-GitHub CEO launches a new developer platform for AI agents
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://entire.io/blog/hello-entire-world/ Comments URL: https://news.ycombinator.com/item?id=46961345 Points: 462 # Comments: 422</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-02-11">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-c8id-m8id-and-r8id-instances-with-up-to-22-8-tb-local-nvme-storage-are-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon EC2 C8id, M8id, and R8id instances with up to 22.8 TB local NVMe storage are generally available
+                </a>
+                <p class="mb-1 small text-light">They deliver the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-02-11">
+                <a href="https://www.hashicorp.com/blog/how-world-bank-manages-hybrid-cloud-complexity-with-terraform" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] How World Bank manages hybrid cloud complexity with Terraform
+                </a>
+                <p class="mb-1 small text-light">Platform engineering strategy Their platform engineering strategy is built on four pillars: Developer experience Internal developer portal for self-service capabilities Golden paths for apps, data, and AI applications Scorecards to track platform quality and usage Security by design Security poli...</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-02-11">
+                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
+                </a>
+                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-02-11
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-02-11">
-                <a href="https://www.pulumi.com/blog/neo-task-sharing/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Neo: Share Tasks for Collaborative AI Infrastructure Operations
+                <a href="https://www.pulumi.com/blog/how-we-built-platybot-an-ai-powered-analytics-assistant/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] How We Built Platybot: An AI-Powered Analytics Assistant
                 </a>
-                <p class="mb-1 small text-light">Neo shows its work, but until now that context was only viewable by the user that initiated the conversation. We built this with security as a core constraint.</p>
+                <p class="mb-1 small text-light">Deploying with Pulumi Platybot’s infrastructure runs on AWS and is managed entirely with Pulumi IaC. Here’s a representative snippet of the Fargate service definition: const service = new awsx.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-02-11">
+                <a href="https://www.pulumi.com/blog/announcing-openapi-support-pulumi-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Announcing OpenAPI support for the Pulumi Cloud REST API
+                </a>
+                <p class="mb-1 small text-light">We’re thrilled to announce that the Pulumi Cloud REST API is now described by an OpenAPI 3. Load the spec into Swagger UI, Redoc, or another viewer to browse the Pulumi Cloud API interactively.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-11">
+                <a href="https://www.reddit.com/r/devops/comments/1r1aqiz/serviceradar_zerotrust_opensource_network/" target="_blank" class="fw-bold text-decoration-none">
+                    ServiceRadar - Zero-Trust Opensource Network Management and Observability platform
+                </a>
+                <p class="mb-1 small text-light">We are excited to announce some new features in ServiceRadar and an updated demo site.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-11">
+                <a href="https://www.reddit.com/r/devops/comments/1r1fw5y/learning_ai_deployment_mlops_awsgcpazure_how/" target="_blank" class="fw-bold text-decoration-none">
+                    Learning AI deployment & MLOps (AWS/GCP/Azure). How would you approach jobs & interviews in this space?
+                </a>
+                <p class="mb-1 small text-light">This includes deploying LLM-based services to AWS, GCP, Azure and Vercel, working with MLOps, RAG, agents, Bedrock, SageMaker, as well as topics like observability, security and scalability.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-11">
+                <a href="https://netflixtechblog.com/high-throughput-graph-abstraction-at-netflix-part-i-e88063e6f6d5?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] High-Throughput Graph Abstraction at Netflix: Part I
+                </a>
+                <p class="mb-1 small text-light">The Key-Value (KV) Abstraction stores the latest view of nodes and edges, serving as the real-time index for all queries. Further, to ensure correctness of asynchronous deletes during concurrent updates, the Last-Write-Wins (LWW) conflict resolution mechanism is essential.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-11">
+                <a href="https://netflixtechblog.medium.com/the-data-canary-how-netflix-validates-catalog-metadata-18b699d58e36?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] The Data Canary: How Netflix Validates Catalog Metadata
+                </a>
+                <p class="mb-1 small text-light">The impact was immediate: missing metadata prevented manifest generation, causing failures in our catalog service and playback issues. Emergent Issues: While each upstream data source has independent validation, problems often only manifest in the final transformed state.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-11">
+                <a href="https://netflixtechblog.com/data-bridge-how-netflix-simplifies-data-movement-36d10d91c313?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Data Bridge: How Netflix simplifies data movement
+                </a>
+                <p class="mb-1 small text-light">We’ll outline the problems caused by prior tool fragmentation and explain how Data Bridge addresses these issues by separating user intent from implementation. A few years ago, the newly formed Data Movement Platform team was tasked with consolidating that fragmented landscape.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-11">
+                <a href="https://netflixtechblog.com/towards-generalizable-and-efficient-large-scale-generative-recommenders-a7db648aa257?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Towards Generalizable and Efficient Large-Scale Generative Recommenders
+                </a>
+                <p class="mb-1 small text-light">Our large-scale evaluations reveal significant alignment challenges when applying these models to downstream applications. It is also worth noting that our approach enables further scaling of model size, balancing performance improvements against serving costs.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-02-11">
+                <a href="https://azure.microsoft.com/en-us/blog/postgresql-on-azure-supercharged-for-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] PostgreSQL on Azure supercharged for AI
+                </a>
+                <p class="mb-1 small text-light">The database reimagined New AI applications require databases that are not only reliable, extensible, and secure, but also AI-ready. For applications that rely on relevance and speed, our DiskANN vector indexing delivers high-performance similarity search.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-02-11">
+                <a href="https://blogs.microsoft.com/blog/2026/01/26/maia-200-the-ai-accelerator-built-for-inference/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Maia 200: The AI accelerator built for inference
+                </a>
+                <p class="mb-1 small text-light">Scott Guthrie is responsible for hyperscale cloud computing solutions and services including Azure, Microsoft’s cloud computing platform, generative AI solutions, data platforms and information and cybersecurity.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-02-11">
+                <a href="https://www.docker.com/blog/hardened-images-free-now-what/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Hardened Images Are Free. Now What?
+                </a>
+                <p class="mb-1 small text-light">For security teams, this changes the economics of container vulnerability management. DHI includes security fixes from Docker’s security team, which simplifies security response.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-02-11">
+                <a href="https://www.docker.com/blog/atlassian-remote-mcp-server-getting-started-with-docker/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Get Started with the Atlassian Rovo MCP Server Using Docker
+                </a>
+                <p class="mb-1 small text-light">Docker securely manages your credentials and allows you to reuse them across multiple MCP clients. Learn more Get started with MCP Catalog and Toolkit Explore the Docker MCP Catalog: Discover containerized, security-hardened MCP servers Read more about the Docker MCP Toolkit: Official Documentation.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-02-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-02-11">
+                <a href="https://www.redhat.com/en/blog/more-meets-eye-behind-scenes-red-hat-enterprise-linux-10-part-5" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] More than meets the eye: Behind the scenes of Red Hat Enterprise Linux 10 (Part 5)
+                </a>
+                <p class="mb-1 small text-light">This series takes a look at the people and planning that went into building and releasing Red Hat Enterprise Linux 10. From the earliest conceptual stages to the launch at Red Hat Summit 2025, we’ll hear firsthand accounts of how RHEL 10 came into being.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-02-11
                     
                 </small>
             </li>

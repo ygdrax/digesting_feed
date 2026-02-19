@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - February 19, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - February 19, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for February 19, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-02-19">2026-02-19 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-02-19 08:15:39
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,242 +128,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-19">
-                <a href="https://www.reddit.com/r/devops/comments/1r8659s/how_do_you_give_coding_agents_infrastructure/" target="_blank" class="fw-bold text-decoration-none">
-                    How do you give coding agents Infrastructure knowledge?
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-02-19">
+                <a href="https://www.redhat.com/en/blog/simplify-red-hat-enterprise-linux-provisioning-image-builder-new-red-hat-lightspeed-security-and-management-integrations" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Simplify Red Hat Enterprise Linux provisioning in image builder with new Red Hat Lightspeed security and management integrations
                 </a>
-                <p class="mb-1 small text-light">I tried writing different tools and using various open-source MCP solutions and others, but nothing really gives it real organizational (infrastructure, design, etc. Is there anyone here who works with agents and has solutions for this issue.</p>
+                <p class="mb-1 small text-light">While the name is new, the mission is the same: Provide you with powerful, AI-powered insights that help you work faster, smarter, and with an enhanced security profile.</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-19">
-                <a href="https://www.reddit.com/r/devops/comments/1r8qs8d/would_you_trust_an_ai_agent_in_your_cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    Would you Trust an AI agent in your Cloud Environment?
-                </a>
-                <p class="mb-1 small text-light">and How Cloud Engineering related market be it Devops/SREs/DataEngineers/Cloud engineers is getting effected. - Just want to know you thoughts and your perspective on it.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-19">
-                <a href="https://www.reddit.com/r/devops/comments/1r82g2k/dockadmin_a_15mb_docker_container_for_database/" target="_blank" class="fw-bold text-decoration-none">
-                    DockAdmin — a ~15MB Docker container for database administration. Open source.
-                </a>
-                <p class="mb-1 small text-light">Built a lightweight, Docker-first database admin tool called DockAdmin. Thought it might be useful for fellow devops folks.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-19">
-                <a href="https://www.reddit.com/r/devops/comments/1r8ejcg/show_rdevops_we_built_200_free_reusable_data/" target="_blank" class="fw-bold text-decoration-none">
-                    Show /r/devops: We built 200+ free, reusable data processing pipeline recipes — PII removal, log aggregation, dead letter queues, GDPR routing
-                </a>
-                <p class="mb-1 small text-light">Hey r/devops, After seeing teams rebuild the same data pipeline primitives over and over, we decided to give away ours. Most relevant for DevOps folks: parse-logs — 1,000 lines → 1 structured digest (99.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-19">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1r8m3oq/446_of_my_firewalls_flow_table_is_brazilian/" target="_blank" class="fw-bold text-decoration-none">
-                    44.6% of my firewall's flow table is Brazilian port-scan traffic and the scanning pattern suggests these ISPs are compromised at the infrastructure level, not just individual devices
-                </a>
-                <p class="mb-1 small text-light">I know "Brazilian botnet traffic" isn't new to anyone, but what I found goes beyond the usual background noise. 4 Tbps) and increasingly as residential proxy infrastructure for AI scraping and credential stuffing.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-19">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1r80ads/vibeops_a_secure_readonly_setup_for_aiassisted/" target="_blank" class="fw-bold text-decoration-none">
-                    VibeOps: A Secure read-only setup for AI-Assisted Kubernetes (k8s) Debugging
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/yooui1996</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-19">
-                <a href="https://netflixtechblog.com/automating-rds-postgres-to-aurora-postgres-migration-261ca045447f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Automating RDS Postgres to Aurora Postgres Migration
-                </a>
-                <p class="mb-1 small text-light">Aurora’s cloud-native, distributed architecture provided clear advantages in scalability, high availability, and elasticity compared to traditional single-node PostgreSQL deployments.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-02-19">
-                <a href="https://github.com/a11ce/docker-lisp" target="_blank" class="fw-bold text-decoration-none">
-                    Show HN: A Lisp where each function call runs a Docker container
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://github.com/a11ce/docker-lisp Comments URL: https://news.ycombinator.com/item?id=47069876 Points: 23 # Comments: 8</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-02-19">
-                <a href="https://www.ycombinator.com/companies/metriport/jobs/XC2AF8s-senior-security-engineer" target="_blank" class="fw-bold text-decoration-none">
-                    Metriport (YC S22) is hiring a security engineer to harden healthcare infra
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.ycombinator.com/companies/metriport/jobs/XC2AF8s-senior-security-engineer Comments URL: https://news.ycombinator.com/item?id=47066310 Points: 0 # Comments: 0</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-02-19">
-                <a href="https://kubernetes.io/blog/2026/02/03/introducing-node-readiness-controller/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Introducing Node Readiness Controller
-                </a>
-                <p class="mb-1 small text-light">It provides three primary advantages: Custom Readiness Definitions: Define what ready means for your specific platform. Core concepts and features The controller centers around the NodeReadinessRule (NRR) API, which allows you to define declarative gates for your nodes.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-02-19">
-                <a href="https://www.cncf.io/blog/2026/02/09/what-cncf-project-velocity-in-2025-reveals-about-cloud-natives-future/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] What CNCF Project Velocity in 2025 Reveals About Cloud Native’s Future
-                </a>
-                <p class="mb-1 small text-light">Cloud native is now invisible infrastructure, quietly powering our everyday lives. It’s not just about what’s popular, but what’s sustainable, what’s solving real problems, and what’s likely to shape the next phase of cloud native infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-19">
-                <a href="https://blog.cloudflare.com/markdown-for-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing Markdown for Agents
-                </a>
-                <p class="mb-1 small text-light">The way content and businesses are discovered online is changing rapidly. For agents, their goal is to filter out all non-essential elements and scan the relevant content.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-19">
-                <a href="https://blog.cloudflare.com/ddos-threat-report-2025-q4/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] 2025 Q4 DDoS threat report: A record-setting 31.4 Tbps attack caps a year of massive DDoS assaults
-                </a>
-                <p class="mb-1 small text-light">It is capable of launching DDoS attacks that can cripple critical infrastructure, crash most legacy cloud-based DDoS protection solutions, and even disrupt the connectivity of entire nations.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-02-19">
-                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Streamlining Security Investigations with Agents
-                </a>
-                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-02-19">
-                <a href="https://dropbox.tech/machine-learning/how-low-bit-inference-enables-efficient-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How low-bit inference enables efficient AI
-                </a>
-                <p class="mb-1 small text-light">And making this technology accessible to individuals and businesses means tackling new challenges around efficiency and resource use. This scaling behavior plays a key role in improving both performance and efficiency when running large-scale AI workloads.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-19">
-                <a href="https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling LLM Post-Training at Netflix
-                </a>
-                <p class="mb-1 small text-light">At the base is Mako, Netflix’s internal ML compute platform, which provisions GPUs on AWS. Staying close to the frontier required infrastructure that could move from “offline training loop” to “multi-stage, on-policy orchestration.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-02-19">
-                <a href="https://azure.microsoft.com/en-us/blog/can-high-temperature-superconductors-transform-the-power-infrastructure-of-datacenters/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Can high-temperature superconductors transform the power infrastructure of datacenters?
-                </a>
-                <p class="mb-1 small text-light">Copper and aluminum are good conductors and are used today in most cloud infrastructure wiring and power lines. More importantly, this technology reduces the physical and social footprint of the power infrastructure, reducing the impact on local communities.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-02-19">
-                <a href="https://snyk.io/blog/future-of-ai-agent-security-guardrails/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] The Future of AI Agent Security Is Guardrails
-                </a>
-                <p class="mb-1 small text-light">AI agents introduce new security risks like prompt injection and data exfiltration. Learn how guardrails, hook-based controls, and Arcade’s Contextual Access secure AI agent tool calls in real time.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-19">
-                <a href="https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters
-                </a>
-                <p class="mb-1 small text-light">BAG allows us to seamlessly connect thousands of GPUs across multiple data centers and regions. Building Prometheus and Beyond As a technology, BAG is playing an important role in Meta’s next generation of AI infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-19">
-                <a href="https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Rust at Scale: An Added Layer of Security for WhatsApp
-                </a>
-                <p class="mb-1 small text-light">For example, WhatsApp, like many other applications, allows users to share media and other types of documents. To ensure application security, we first must identify and quantify the sources of risk.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
+                    Red Hat | 2026-02-19
                     
                 </small>
             </li>
@@ -358,7 +147,7 @@
                 <p class="mb-1 small text-light">The event brings together developers, operators, site reliability engineers, platform teams and open source maintainers focused on building and operating cloud native observability systems.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-02-19
                     
                 </small>
             </li>
@@ -370,7 +159,7 @@
                 <p class="mb-1 small text-light">For many applications, performance needs to be global. R2 is object storage built on Cloudflare's global network.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-02-19
                     
                 </small>
             </li>
@@ -382,7 +171,7 @@
                 <p class="mb-1 small text-light">This designation allows for targeted CMA interventions in digital markets, such as imposing detailed conduct requirements, to improve competition. However, Google currently uses that content in both its search generative AI features and in its broader generative AI services.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-02-19
                     
                 </small>
             </li>
@@ -394,19 +183,247 @@
                 <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-02-19
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-02-19">
-                <a href="https://www.redhat.com/en/blog/simplify-red-hat-enterprise-linux-provisioning-image-builder-new-red-hat-lightspeed-security-and-management-integrations" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Simplify Red Hat Enterprise Linux provisioning in image builder with new Red Hat Lightspeed security and management integrations
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-19">
+                <a href="https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling LLM Post-Training at Netflix
                 </a>
-                <p class="mb-1 small text-light">While the name is new, the mission is the same: Provide you with powerful, AI-powered insights that help you work faster, smarter, and with an enhanced security profile.</p>
+                <p class="mb-1 small text-light">At the base is Mako, Netflix’s internal ML compute platform, which provisions GPUs on AWS. Staying close to the frontier required infrastructure that could move from “offline training loop” to “multi-stage, on-policy orchestration.</p>
                 <small class="text-secondary">
                     
-                    Red Hat
+                    Netflix | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-02-19">
+                <a href="https://azure.microsoft.com/en-us/blog/can-high-temperature-superconductors-transform-the-power-infrastructure-of-datacenters/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Can high-temperature superconductors transform the power infrastructure of datacenters?
+                </a>
+                <p class="mb-1 small text-light">Copper and aluminum are good conductors and are used today in most cloud infrastructure wiring and power lines. More importantly, this technology reduces the physical and social footprint of the power infrastructure, reducing the impact on local communities.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-02-19">
+                <a href="https://snyk.io/blog/future-of-ai-agent-security-guardrails/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The Future of AI Agent Security Is Guardrails
+                </a>
+                <p class="mb-1 small text-light">AI agents introduce new security risks like prompt injection and data exfiltration. Learn how guardrails, hook-based controls, and Arcade’s Contextual Access secure AI agent tool calls in real time.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-19">
+                <a href="https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters
+                </a>
+                <p class="mb-1 small text-light">BAG allows us to seamlessly connect thousands of GPUs across multiple data centers and regions. Building Prometheus and Beyond As a technology, BAG is playing an important role in Meta’s next generation of AI infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-19">
+                <a href="https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Rust at Scale: An Added Layer of Security for WhatsApp
+                </a>
+                <p class="mb-1 small text-light">For example, WhatsApp, like many other applications, allows users to share media and other types of documents. To ensure application security, we first must identify and quantify the sources of risk.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-02-19">
+                <a href="https://github.com/a11ce/docker-lisp" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: A Lisp where each function call runs a Docker container
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://github.com/a11ce/docker-lisp Comments URL: https://news.ycombinator.com/item?id=47069876 Points: 23 # Comments: 8</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-02-19">
+                <a href="https://www.ycombinator.com/companies/metriport/jobs/XC2AF8s-senior-security-engineer" target="_blank" class="fw-bold text-decoration-none">
+                    Metriport (YC S22) is hiring a security engineer to harden healthcare infra
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.ycombinator.com/companies/metriport/jobs/XC2AF8s-senior-security-engineer Comments URL: https://news.ycombinator.com/item?id=47066310 Points: 0 # Comments: 0</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-02-19">
+                <a href="https://kubernetes.io/blog/2026/02/03/introducing-node-readiness-controller/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Introducing Node Readiness Controller
+                </a>
+                <p class="mb-1 small text-light">It provides three primary advantages: Custom Readiness Definitions: Define what ready means for your specific platform. Core concepts and features The controller centers around the NodeReadinessRule (NRR) API, which allows you to define declarative gates for your nodes.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-02-19">
+                <a href="https://www.cncf.io/blog/2026/02/09/what-cncf-project-velocity-in-2025-reveals-about-cloud-natives-future/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] What CNCF Project Velocity in 2025 Reveals About Cloud Native’s Future
+                </a>
+                <p class="mb-1 small text-light">Cloud native is now invisible infrastructure, quietly powering our everyday lives. It’s not just about what’s popular, but what’s sustainable, what’s solving real problems, and what’s likely to shape the next phase of cloud native infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-19">
+                <a href="https://blog.cloudflare.com/markdown-for-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing Markdown for Agents
+                </a>
+                <p class="mb-1 small text-light">The way content and businesses are discovered online is changing rapidly. For agents, their goal is to filter out all non-essential elements and scan the relevant content.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-19">
+                <a href="https://blog.cloudflare.com/ddos-threat-report-2025-q4/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] 2025 Q4 DDoS threat report: A record-setting 31.4 Tbps attack caps a year of massive DDoS assaults
+                </a>
+                <p class="mb-1 small text-light">It is capable of launching DDoS attacks that can cripple critical infrastructure, crash most legacy cloud-based DDoS protection solutions, and even disrupt the connectivity of entire nations.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-02-19">
+                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Streamlining Security Investigations with Agents
+                </a>
+                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-02-19">
+                <a href="https://dropbox.tech/machine-learning/how-low-bit-inference-enables-efficient-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How low-bit inference enables efficient AI
+                </a>
+                <p class="mb-1 small text-light">And making this technology accessible to individuals and businesses means tackling new challenges around efficiency and resource use. This scaling behavior plays a key role in improving both performance and efficiency when running large-scale AI workloads.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-19">
+                <a href="https://www.reddit.com/r/devops/comments/1r8659s/how_do_you_give_coding_agents_infrastructure/" target="_blank" class="fw-bold text-decoration-none">
+                    How do you give coding agents Infrastructure knowledge?
+                </a>
+                <p class="mb-1 small text-light">I tried writing different tools and using various open-source MCP solutions and others, but nothing really gives it real organizational (infrastructure, design, etc. Is there anyone here who works with agents and has solutions for this issue.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-19">
+                <a href="https://www.reddit.com/r/devops/comments/1r8qs8d/would_you_trust_an_ai_agent_in_your_cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    Would you Trust an AI agent in your Cloud Environment?
+                </a>
+                <p class="mb-1 small text-light">and How Cloud Engineering related market be it Devops/SREs/DataEngineers/Cloud engineers is getting effected. - Just want to know you thoughts and your perspective on it.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-19">
+                <a href="https://www.reddit.com/r/devops/comments/1r82g2k/dockadmin_a_15mb_docker_container_for_database/" target="_blank" class="fw-bold text-decoration-none">
+                    DockAdmin — a ~15MB Docker container for database administration. Open source.
+                </a>
+                <p class="mb-1 small text-light">Built a lightweight, Docker-first database admin tool called DockAdmin. Thought it might be useful for fellow devops folks.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-19">
+                <a href="https://www.reddit.com/r/devops/comments/1r8ejcg/show_rdevops_we_built_200_free_reusable_data/" target="_blank" class="fw-bold text-decoration-none">
+                    Show /r/devops: We built 200+ free, reusable data processing pipeline recipes — PII removal, log aggregation, dead letter queues, GDPR routing
+                </a>
+                <p class="mb-1 small text-light">Hey r/devops, After seeing teams rebuild the same data pipeline primitives over and over, we decided to give away ours. Most relevant for DevOps folks: parse-logs — 1,000 lines → 1 structured digest (99.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-19">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1r8m3oq/446_of_my_firewalls_flow_table_is_brazilian/" target="_blank" class="fw-bold text-decoration-none">
+                    44.6% of my firewall's flow table is Brazilian port-scan traffic and the scanning pattern suggests these ISPs are compromised at the infrastructure level, not just individual devices
+                </a>
+                <p class="mb-1 small text-light">I know "Brazilian botnet traffic" isn't new to anyone, but what I found goes beyond the usual background noise. 4 Tbps) and increasingly as residential proxy infrastructure for AI scraping and credential stuffing.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-19">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1r80ads/vibeops_a_secure_readonly_setup_for_aiassisted/" target="_blank" class="fw-bold text-decoration-none">
+                    VibeOps: A Secure read-only setup for AI-Assisted Kubernetes (k8s) Debugging
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/yooui1996</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-19">
+                <a href="https://netflixtechblog.com/automating-rds-postgres-to-aurora-postgres-migration-261ca045447f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Automating RDS Postgres to Aurora Postgres Migration
+                </a>
+                <p class="mb-1 small text-light">Aurora’s cloud-native, distributed architecture provided clear advantages in scalability, high availability, and elasticity compared to traditional single-node PostgreSQL deployments.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-19
                     
                 </small>
             </li>

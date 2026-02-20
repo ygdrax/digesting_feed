@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - February 20, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - February 20, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for February 20, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-02-20">2026-02-20 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 15 sources • Updated 2026-02-20 08:15:19
+                    Showing 25 total articles from 
+                    15 sources
+                    
                     
                 </span>
             </small>
@@ -117,282 +134,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-20">
-                <a href="https://www.reddit.com/r/devops/comments/1r9m1n7/i_built_an_uptime_dashboard_that_monitors_69/" target="_blank" class="fw-bold text-decoration-none">
-                    I built an uptime dashboard that monitors 69 developer services (OpenAI, Vercel, Cloudflare, Stripe, etc.); polled every 60 seconds
-                </a>
-                <p class="mb-1 small text-light">I got tired of checking 10 different status pages when something feels slow, so built a tool (https://stackfox.co/stack-status) that polls all the popular developer services every 60 seconds and shows everything on one page with 90-day history. submitted by /u/thestackfox</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-20">
-                <a href="https://www.reddit.com/r/devops/comments/1r9d3m7/whats_your_go_to_way_to_automate_external/" target="_blank" class="fw-bold text-decoration-none">
-                    What’s your go to way to automate external security posture checks for a domain?
-                </a>
-                <p class="mb-1 small text-light">I'm a security researcher and run security programs, and sometimes clients ask for quick external perimeter or posture scans of their domain before a review.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-20">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1r9of2f/state_of_the_art_of_container_security_adrian/" target="_blank" class="fw-bold text-decoration-none">
-                    State of the Art of Container Security • Adrian Mouat & Charles Humble
-                </a>
-                <p class="mb-1 small text-light">In this State of the Art episode, Charles Humble speaks with Adrian Mouat, Developer Relations at Chainguard and author of "Using Docker", about the evolution of container security and the persistent challenge of outdated packages.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-20">
-                <a href="https://netflixtechblog.com/high-throughput-graph-abstraction-at-netflix-part-i-e88063e6f6d5?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] High-Throughput Graph Abstraction at Netflix: Part I
-                </a>
-                <p class="mb-1 small text-light">The Key-Value (KV) Abstraction stores the latest view of nodes and edges, serving as the real-time index for all queries. Further, to ensure correctness of asynchronous deletes during concurrent updates, the Last-Write-Wins (LWW) conflict resolution mechanism is essential.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-20">
-                <a href="https://netflixtechblog.medium.com/the-data-canary-how-netflix-validates-catalog-metadata-18b699d58e36?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] The Data Canary: How Netflix Validates Catalog Metadata
-                </a>
-                <p class="mb-1 small text-light">The impact was immediate: missing metadata prevented manifest generation, causing failures in our catalog service and playback issues. Emergent Issues: While each upstream data source has independent validation, problems often only manifest in the final transformed state.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-20">
-                <a href="https://netflixtechblog.com/data-bridge-how-netflix-simplifies-data-movement-36d10d91c313?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Data Bridge: How Netflix simplifies data movement
-                </a>
-                <p class="mb-1 small text-light">We’ll outline the problems caused by prior tool fragmentation and explain how Data Bridge addresses these issues by separating user intent from implementation. A few years ago, the newly formed Data Movement Platform team was tasked with consolidating that fragmented landscape.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-02-20">
-                <a href="https://azure.microsoft.com/en-us/blog/the-data-behind-the-design-how-pantone-built-agentic-ai-with-an-ai-ready-database/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] The data behind the design: How Pantone built agentic AI with an AI-ready database
-                </a>
-                <p class="mb-1 small text-light">This allows Pantone to iterate without rearchitecting the entire system—an essential capability when working in a fast-moving AI landscape. Just as importantly, Pantone emphasized how rapidly they’ve been able to learn and adapt.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-02-20">
-                <a href="https://azure.microsoft.com/en-us/blog/agentic-cloud-operations-a-new-way-to-run-the-cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Agentic cloud operations: A new way to run the cloud
-                </a>
-                <p class="mb-1 small text-light">Telemetry now streams from every layer—health, configuration, cost, performance, and security—while programmable infrastructure enables action at machine speed. Observability agent provides continuous, full stack visibility and diagnosis across applications and infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-02-20">
-                <a href="https://www.docker.com/blog/context-packing-context-window/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] How to solve the context size issues with context packing with Docker Model Runner and Agentic Compose
-                </a>
-                <p class="mb-1 small text-light">Hello, I’m Philippe, and I am a Principal Solutions Architect helping customers with their usage of Docker. 5B-F16 Then: I added the model in the models section of the service that runs our program.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-02-20">
-                <a href="https://www.redhat.com/en/blog/red-hat-learning-reinvents-virtual-training" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat Learning Subscription Course reimagines virtual training
-                </a>
-                <p class="mb-1 small text-light">Virtual training, which flexibly delivers live, instructor-led learning, has become a core component of modern IT skills development. However, virtual training’s delivery model suffers from some of the same limitations as in-person training.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-02-20">
-                <a href="https://fostrom.io/" target="_blank" class="fw-bold text-decoration-none">
-                    Show HN: Fostrom, an IoT Cloud Platform built for developers
-                </a>
-                <p class="mb-1 small text-light">Fostrom is an IoT Cloud Platform designed for developers to make it really easy to get started and scale fleets. We spent more time figuring out IoT infrastructure than writing automation logic.</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-02-20">
-                <a href="https://theshamblog.com/an-ai-agent-wrote-a-hit-piece-on-me-part-4/" target="_blank" class="fw-bold text-decoration-none">
-                    An AI Agent Published a Hit Piece on Me – The Operator Came Forward
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://theshamblog.com/an-ai-agent-wrote-a-hit-piece-on-me-part-4/ Comments URL: https://news.ycombinator.com/item?id=47083145 Points: 324 # Comments: 270</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-02-20">
-                <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-hpc8a-instances-powered-by-5th-gen-amd-epyc-processors-are-now-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon EC2 Hpc8a Instances powered by 5th Gen AMD EPYC processors are now available
-                </a>
-                <p class="mb-1 small text-light">The new Hpc8a instances deliver up to 40% higher performance, 42% greater memory bandwidth, and up to 25% better price-performance compared to previous generation Hpc7a instances.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-02-20">
-                <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-c8id-m8id-and-r8id-instances-with-up-to-22-8-tb-local-nvme-storage-are-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon EC2 C8id, M8id, and R8id instances with up to 22.8 TB local NVMe storage are generally available
-                </a>
-                <p class="mb-1 small text-light">They deliver the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-02-20">
-                <a href="https://www.hashicorp.com/blog/vault-radar-2025-recap-expanding-visibility-deepening-integration-simplifying-security" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Vault Radar 2025 recap: Expanding visibility, deepening integration, and simplifying security
-                </a>
-                <p class="mb-1 small text-light">As organizations scale their AWS footprint, secrets often move between applications, services, and automation pipelines. This allows security teams to move directly from detection to secure management.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-02-20">
-                <a href="https://www.cncf.io/blog/2026/02/19/state-of-cloud-native-2026-cncf-ctos-insights-and-predictions/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] State of cloud native 2026: CNCF CTO’s insights and predictions
-                </a>
-                <p class="mb-1 small text-light">Over the decade the scope of CNCF has expanded well beyond container orchestration to include observability, service meshes, platform engineering, FinOps and now elements of the AI stack.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-02-20">
-                <a href="https://www.cncf.io/blog/2026/02/13/kubecon-cloudnativecon-europe-2026-co-located-event-deep-dive-telco-day/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] KubeCon + CloudNativeCon Europe 2026 Co-located Event Deep Dive: Telco Day
-                </a>
-                <p class="mb-1 small text-light">As 5G matures and the industry looks toward 6G and beyond, the boundaries between network and cloud infrastructures are blurring. Core themes include Cloud Native AI, observability, and security, with strong alignment to platform engineering principles.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-20">
-                <a href="https://blog.cloudflare.com/ecdysis-rust-graceful-restarts/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Shedding old code with ecdysis: graceful restarts for Rust services at Cloudflare
-                </a>
-                <p class="mb-1 small text-light">When these services need updates, security patches can’t wait. These services handle billions of requests per day and require frequent updates for security patches, feature releases, and configuration changes.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-02-20">
-                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
-                </a>
-                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-02-20">
-                <a href="https://www.pulumi.com/blog/gitops-best-practices-i-wish-i-had-known-before/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] GitOps Best Practices I Wish I Had Known Before
-                </a>
-                <p class="mb-1 small text-light">Put everything in Git: Kubernetes manifests, Helm values, Kustomize overlays, policy rules, even your GitOps tool configuration itself. When you’re running microservices with independent release cadences that step on each other, it’s time to split.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-02-20">
-                <a href="https://www.docker.com/blog/medplum-healthcare-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] How Medplum Secured Their Healthcare Platform with Docker Hardened Images (DHI)
-                </a>
-                <p class="mb-1 small text-light">The security posture improves automatically with each DHI update, without requiring changes to Medplum’s Dockerfiles. DOCKERHUB_TOKEN }} This allows their CI/CD pipeline to pull hardened base images during builds.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-02-20">
-                <a href="https://about.gitlab.com/blog/agentic-ai-enterprise-control-self-hosted-duo-agent-platform-and-byom/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Agentic AI, enterprise control: Self-hosted Duo Agent Platform and BYOM
-                </a>
-                <p class="mb-1 small text-light">Now generally available, Self-Hosted for Online Cloud Licenses introduces a usage-based billing model powered by GitLab Credits. 9 makes Duo Agent Platform a first-class deployment for online cloud licenses.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-20">
-                <a href="https://engineering.fb.com/2026/01/14/ml-applications/adapting-the-facebook-reels-recsys-ai-model-based-on-user-feedback/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Adapting the Facebook Reels RecSys AI Model Based on User Feedback
-                </a>
-                <p class="mb-1 small text-light">Delivering personalized video recommendations is a common challenge for user satisfaction and long-term engagement on large-scale social platforms. Online Performance: Large-scale A/B testing with over 10 million users confirmed these improvements in real-world settings.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-02-20">
                 <a href="https://www.hashicorp.com/blog/saving-banks-from-technical-debt-how-atruvia-built-secure-self-service-infrastructure" target="_blank" class="fw-bold text-decoration-none">
                     [HashiCorp] Saving banks from technical debt: How Atruvia built secure, self-service infrastructure
@@ -400,7 +141,7 @@
                 <p class="mb-1 small text-light">While it supported mission-critical banking services, its core workflows hadn’t caught up with modern development needs. They focused on the public cloud first, where APIs and standardization made automation easier.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-02-20
                     
                 </small>
             </li>
@@ -412,7 +153,283 @@
                 <p class="mb-1 small text-light">In March 2026, Kubernetes will retire Ingress NGINX, a piece of critical infrastructure for about half of cloud native environments. There will be no more releases for bug fixes, security patches, or any updates of any kind after the project is retired.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-02-20">
+                <a href="https://www.docker.com/blog/medplum-healthcare-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] How Medplum Secured Their Healthcare Platform with Docker Hardened Images (DHI)
+                </a>
+                <p class="mb-1 small text-light">The security posture improves automatically with each DHI update, without requiring changes to Medplum’s Dockerfiles. DOCKERHUB_TOKEN }} This allows their CI/CD pipeline to pull hardened base images during builds.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-02-20">
+                <a href="https://about.gitlab.com/blog/agentic-ai-enterprise-control-self-hosted-duo-agent-platform-and-byom/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Agentic AI, enterprise control: Self-hosted Duo Agent Platform and BYOM
+                </a>
+                <p class="mb-1 small text-light">Now generally available, Self-Hosted for Online Cloud Licenses introduces a usage-based billing model powered by GitLab Credits. 9 makes Duo Agent Platform a first-class deployment for online cloud licenses.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-20">
+                <a href="https://engineering.fb.com/2026/01/14/ml-applications/adapting-the-facebook-reels-recsys-ai-model-based-on-user-feedback/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Adapting the Facebook Reels RecSys AI Model Based on User Feedback
+                </a>
+                <p class="mb-1 small text-light">Delivering personalized video recommendations is a common challenge for user satisfaction and long-term engagement on large-scale social platforms. Online Performance: Large-scale A/B testing with over 10 million users confirmed these improvements in real-world settings.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-02-20">
+                <a href="https://fostrom.io/" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: Fostrom, an IoT Cloud Platform built for developers
+                </a>
+                <p class="mb-1 small text-light">Fostrom is an IoT Cloud Platform designed for developers to make it really easy to get started and scale fleets. We spent more time figuring out IoT infrastructure than writing automation logic.</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-02-20">
+                <a href="https://theshamblog.com/an-ai-agent-wrote-a-hit-piece-on-me-part-4/" target="_blank" class="fw-bold text-decoration-none">
+                    An AI Agent Published a Hit Piece on Me – The Operator Came Forward
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://theshamblog.com/an-ai-agent-wrote-a-hit-piece-on-me-part-4/ Comments URL: https://news.ycombinator.com/item?id=47083145 Points: 324 # Comments: 270</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-02-20">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-hpc8a-instances-powered-by-5th-gen-amd-epyc-processors-are-now-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon EC2 Hpc8a Instances powered by 5th Gen AMD EPYC processors are now available
+                </a>
+                <p class="mb-1 small text-light">The new Hpc8a instances deliver up to 40% higher performance, 42% greater memory bandwidth, and up to 25% better price-performance compared to previous generation Hpc7a instances.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-02-20">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-c8id-m8id-and-r8id-instances-with-up-to-22-8-tb-local-nvme-storage-are-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon EC2 C8id, M8id, and R8id instances with up to 22.8 TB local NVMe storage are generally available
+                </a>
+                <p class="mb-1 small text-light">They deliver the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-02-20">
+                <a href="https://www.hashicorp.com/blog/vault-radar-2025-recap-expanding-visibility-deepening-integration-simplifying-security" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Vault Radar 2025 recap: Expanding visibility, deepening integration, and simplifying security
+                </a>
+                <p class="mb-1 small text-light">As organizations scale their AWS footprint, secrets often move between applications, services, and automation pipelines. This allows security teams to move directly from detection to secure management.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-02-20">
+                <a href="https://www.cncf.io/blog/2026/02/19/state-of-cloud-native-2026-cncf-ctos-insights-and-predictions/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] State of cloud native 2026: CNCF CTO’s insights and predictions
+                </a>
+                <p class="mb-1 small text-light">Over the decade the scope of CNCF has expanded well beyond container orchestration to include observability, service meshes, platform engineering, FinOps and now elements of the AI stack.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-02-20">
+                <a href="https://www.cncf.io/blog/2026/02/13/kubecon-cloudnativecon-europe-2026-co-located-event-deep-dive-telco-day/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] KubeCon + CloudNativeCon Europe 2026 Co-located Event Deep Dive: Telco Day
+                </a>
+                <p class="mb-1 small text-light">As 5G matures and the industry looks toward 6G and beyond, the boundaries between network and cloud infrastructures are blurring. Core themes include Cloud Native AI, observability, and security, with strong alignment to platform engineering principles.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-20">
+                <a href="https://blog.cloudflare.com/ecdysis-rust-graceful-restarts/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Shedding old code with ecdysis: graceful restarts for Rust services at Cloudflare
+                </a>
+                <p class="mb-1 small text-light">When these services need updates, security patches can’t wait. These services handle billions of requests per day and require frequent updates for security patches, feature releases, and configuration changes.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-02-20">
+                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
+                </a>
+                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-02-20">
+                <a href="https://www.pulumi.com/blog/gitops-best-practices-i-wish-i-had-known-before/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] GitOps Best Practices I Wish I Had Known Before
+                </a>
+                <p class="mb-1 small text-light">Put everything in Git: Kubernetes manifests, Helm values, Kustomize overlays, policy rules, even your GitOps tool configuration itself. When you’re running microservices with independent release cadences that step on each other, it’s time to split.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-20">
+                <a href="https://www.reddit.com/r/devops/comments/1r9m1n7/i_built_an_uptime_dashboard_that_monitors_69/" target="_blank" class="fw-bold text-decoration-none">
+                    I built an uptime dashboard that monitors 69 developer services (OpenAI, Vercel, Cloudflare, Stripe, etc.); polled every 60 seconds
+                </a>
+                <p class="mb-1 small text-light">I got tired of checking 10 different status pages when something feels slow, so built a tool (https://stackfox.co/stack-status) that polls all the popular developer services every 60 seconds and shows everything on one page with 90-day history. submitted by /u/thestackfox</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-20">
+                <a href="https://www.reddit.com/r/devops/comments/1r9d3m7/whats_your_go_to_way_to_automate_external/" target="_blank" class="fw-bold text-decoration-none">
+                    What’s your go to way to automate external security posture checks for a domain?
+                </a>
+                <p class="mb-1 small text-light">I'm a security researcher and run security programs, and sometimes clients ask for quick external perimeter or posture scans of their domain before a review.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-20">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1r9of2f/state_of_the_art_of_container_security_adrian/" target="_blank" class="fw-bold text-decoration-none">
+                    State of the Art of Container Security • Adrian Mouat & Charles Humble
+                </a>
+                <p class="mb-1 small text-light">In this State of the Art episode, Charles Humble speaks with Adrian Mouat, Developer Relations at Chainguard and author of "Using Docker", about the evolution of container security and the persistent challenge of outdated packages.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-20">
+                <a href="https://netflixtechblog.com/high-throughput-graph-abstraction-at-netflix-part-i-e88063e6f6d5?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] High-Throughput Graph Abstraction at Netflix: Part I
+                </a>
+                <p class="mb-1 small text-light">The Key-Value (KV) Abstraction stores the latest view of nodes and edges, serving as the real-time index for all queries. Further, to ensure correctness of asynchronous deletes during concurrent updates, the Last-Write-Wins (LWW) conflict resolution mechanism is essential.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-20">
+                <a href="https://netflixtechblog.medium.com/the-data-canary-how-netflix-validates-catalog-metadata-18b699d58e36?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] The Data Canary: How Netflix Validates Catalog Metadata
+                </a>
+                <p class="mb-1 small text-light">The impact was immediate: missing metadata prevented manifest generation, causing failures in our catalog service and playback issues. Emergent Issues: While each upstream data source has independent validation, problems often only manifest in the final transformed state.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-20">
+                <a href="https://netflixtechblog.com/data-bridge-how-netflix-simplifies-data-movement-36d10d91c313?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Data Bridge: How Netflix simplifies data movement
+                </a>
+                <p class="mb-1 small text-light">We’ll outline the problems caused by prior tool fragmentation and explain how Data Bridge addresses these issues by separating user intent from implementation. A few years ago, the newly formed Data Movement Platform team was tasked with consolidating that fragmented landscape.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-02-20">
+                <a href="https://azure.microsoft.com/en-us/blog/the-data-behind-the-design-how-pantone-built-agentic-ai-with-an-ai-ready-database/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] The data behind the design: How Pantone built agentic AI with an AI-ready database
+                </a>
+                <p class="mb-1 small text-light">This allows Pantone to iterate without rearchitecting the entire system—an essential capability when working in a fast-moving AI landscape. Just as importantly, Pantone emphasized how rapidly they’ve been able to learn and adapt.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-02-20">
+                <a href="https://azure.microsoft.com/en-us/blog/agentic-cloud-operations-a-new-way-to-run-the-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Agentic cloud operations: A new way to run the cloud
+                </a>
+                <p class="mb-1 small text-light">Telemetry now streams from every layer—health, configuration, cost, performance, and security—while programmable infrastructure enables action at machine speed. Observability agent provides continuous, full stack visibility and diagnosis across applications and infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-02-20">
+                <a href="https://www.docker.com/blog/context-packing-context-window/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] How to solve the context size issues with context packing with Docker Model Runner and Agentic Compose
+                </a>
+                <p class="mb-1 small text-light">Hello, I’m Philippe, and I am a Principal Solutions Architect helping customers with their usage of Docker. 5B-F16 Then: I added the model in the models section of the service that runs our program.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-02-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-02-20">
+                <a href="https://www.redhat.com/en/blog/red-hat-learning-reinvents-virtual-training" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat Learning Subscription Course reimagines virtual training
+                </a>
+                <p class="mb-1 small text-light">Virtual training, which flexibly delivers live, instructor-led learning, has become a core component of modern IT skills development. However, virtual training’s delivery model suffers from some of the same limitations as in-person training.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-02-20
                     
                 </small>
             </li>

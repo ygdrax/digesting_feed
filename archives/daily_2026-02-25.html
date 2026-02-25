@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - February 25, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - February 25, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for February 25, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-02-25">2026-02-25 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2026-02-25 08:16:44
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,282 +130,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-25">
-                <a href="https://www.reddit.com/r/devops/comments/1rdpjt5/cloud_security_what_do_they_do_these_days/" target="_blank" class="fw-bold text-decoration-none">
-                    Cloud Security - What do they do these days?
-                </a>
-                <p class="mb-1 small text-light">Folks, I have a final stage interview for a digital asset / crypto company which is a Cloud Security engineer role, mainly focusing on terraform, AWS, Azure, SAST, and some other security areas.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-25">
-                <a href="https://www.reddit.com/r/devops/comments/1rdbxfc/what_metrics_are_you_using_to_measure_container/" target="_blank" class="fw-bold text-decoration-none">
-                    What metrics are you using to measure container security improvements?
-                </a>
-                <p class="mb-1 small text-light">Leadership keeps asking me to prove our container security efforts are working. I need metrics that show real security improvements without gaming the system.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-25">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1re3i5c/how_to_set_correctly_dynamic_ip_address_to_api/" target="_blank" class="fw-bold text-decoration-none">
-                    How to set correctly dynamic IP address to API server of kubernetes cluster deployed in Talos Linux
-                </a>
-                <p class="mb-1 small text-light">Hello, everyone In advance, I am sorry if this question is too stupid to ask but I do not quite understand this moment I just started working as junior system administrator and the first task I was assigned to deploy simple kubernetes cluster (1 control plane and 2 worker nodes).</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-25">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1rdc55o/ai_models_in_containers_with_ramalama/" target="_blank" class="fw-bold text-decoration-none">
-                    AI Models in Containers with RamaLama
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/piotr_minkowski</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-25">
-                <a href="https://netflixtechblog.medium.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] DataJunction as Netflix’s answer to the missing piece of the modern data stack
-                </a>
-                <p class="mb-1 small text-light">by Olek Gorajek Samuel Redai Yian ShangIntroOur Netflix journey from data to dashboards, particularly within the space of the experimentation platform, always presented a unique set of challenges.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-25">
-                <a href="https://netflixtechblog.com/automating-rds-postgres-to-aurora-postgres-migration-261ca045447f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Automating RDS Postgres to Aurora Postgres Migration
-                </a>
-                <p class="mb-1 small text-light">Aurora’s cloud-native, distributed architecture provided clear advantages in scalability, high availability, and elasticity compared to traditional single-node PostgreSQL deployments.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-02-25">
-                <a href="https://www.redhat.com/en/blog/red-hat-ai-enterprise-bridging-gap-experimentation-production-scale" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat AI Enterprise: Bridging the gap from experimentation to production scale
-                </a>
-                <p class="mb-1 small text-light">Red Hat AI Enterprise is now generally available, offering a unified AI platform designed to simplify the development, deployment, and management of AI-powered applications across the hybrid cloud.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-02-25">
-                <a href="https://www.redhat.com/en/blog/predictable-ai-announcing-january-and-february-validated-model-batches" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Predictable AI: Announcing the January and February validated model batches
-                </a>
-                <p class="mb-1 small text-light">The transition from AI experimentation to production-grade deployment is often the most difficult hurdle for an enterprise. At Red Hat, we believe that choosing a model should come with predictable outcomes, rather than uncertainty.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-02-25">
-                <a href="https://about.gitlab.com/blog/track-vulnerability-remediation-with-the-updated-gitlab-security-dashboard/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Track vulnerability remediation with the updated GitLab Security Dashboard
-                </a>
-                <p class="mb-1 small text-light">The updated GitLab Security Dashboard helps answer these questions with trend tracking, vulnerability age distribution, and risk scoring by project.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-02-25">
-                <a href="https://blog.sentry.io/ai-driven-caching-strategies-instrumentation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] AI-driven caching strategies and instrumentation
-                </a>
-                <p class="mb-1 small text-light">Most bugs, edge cases, and performance issues won't show up until after launch, when real users start hammering your application. Improving hit rates by caching more pages only helps if hot keys stay resident.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-02-25">
-                <a href="https://blog.sentry.io/size-analysis-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Size Analysis is generally available in Sentry
-                </a>
-                <p class="mb-1 small text-light">Automated monitoring in your CI pipelineThe most common way app size grows is incrementally. Let’s look at another scenario: adding a new hero image.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-02-25">
-                <a href="https://kubernetes.io/blog/2026/02/03/introducing-node-readiness-controller/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Introducing Node Readiness Controller
-                </a>
-                <p class="mb-1 small text-light">It provides three primary advantages: Custom Readiness Definitions: Define what ready means for your specific platform. Core concepts and features The controller centers around the NodeReadinessRule (NRR) API, which allows you to define declarative gates for your nodes.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-02-25">
-                <a href="https://www.cncf.io/blog/2026/02/24/making-harbor-production-ready-essential-considerations-for-deployment/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Making Harbor production-ready: Essential considerations for deployment
-                </a>
-                <p class="mb-1 small text-light">, using a Helm chart for Patroni or CloudNativePG) or leverage a managed database service outside the cluster. Maintain regular updates: Regularly update your Harbor Helm chart and underlying Kubernetes components to benefit from the latest security patches and bug fixes.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-25">
-                <a href="https://blog.cloudflare.com/cloudflare-outage-february-20-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Cloudflare outage on February 20, 2026
-                </a>
-                <p class="mb-1 small text-light">Some customers were able to restore their own service by using the Cloudflare dashboard to re-advertise their IP addresses. Cloudflare’s Addressing API The Addressing API is an authoritative dataset of the addresses present on the Cloudflare network.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-02-25">
-                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Streamlining Security Investigations with Agents
-                </a>
-                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-02-25">
-                <a href="https://dropbox.tech/machine-learning/how-low-bit-inference-enables-efficient-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How low-bit inference enables efficient AI
-                </a>
-                <p class="mb-1 small text-light">And making this technology accessible to individuals and businesses means tackling new challenges around efficiency and resource use. This scaling behavior plays a key role in improving both performance and efficiency when running large-scale AI workloads.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-25">
-                <a href="https://www.reddit.com/r/devops/comments/1re4z6d/looking_for_realistic_clouddevops_scenarios_to/" target="_blank" class="fw-bold text-decoration-none">
-                    Looking for Realistic Cloud/DevOps Scenarios to Practice Architecture & Automation
-                </a>
-                <p class="mb-1 small text-light">Hey everyone, I’m currently learning Cloud & DevOps (AWS, Docker, Terraform, CI/CD, etc.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-25">
-                <a href="https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling LLM Post-Training at Netflix
-                </a>
-                <p class="mb-1 small text-light">At the base is Mako, Netflix’s internal ML compute platform, which provisions GPUs on AWS. Staying close to the frontier required infrastructure that could move from “offline training loop” to “multi-stage, on-policy orchestration.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-02-25">
-                <a href="https://www.docker.com/blog/from-the-captains-chair-kristiyan-velkov/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] From the Captain’s Chair: Kristiyan Velkov
-                </a>
-                <p class="mb-1 small text-light">Many front-end developers were avoiding Docker because they believed it was only meant for back-end or DevOps engineers. js application and walking through how to containerize and deploy it to AWS, with practical code examples and clear diagrams.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-02-25">
-                <a href="https://snyk.io/blog/the-ai-security-engineer/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] The Rise of the AI Security Engineer: A New Discipline for an AI-Native World
-                </a>
-                <p class="mb-1 small text-light">As autonomous AI systems transform business, a new profession is emerging to protect them: the AI Security Engineer. Discover why this specialized discipline is becoming a survival imperative for organizations in an AI-native world.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-25">
-                <a href="https://engineering.fb.com/2026/02/24/data-center-engineering/rrcclx-innovating-gpu-communications-amd-platforms-meta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] RCCLX: Innovating GPU communications on AMD platforms
-                </a>
-                <p class="mb-1 small text-light">These features provide significant performance improvements on AMD platforms and we are excited to share this with the community. Torchcomms allows users to have a single API for communication for different platforms.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-25">
-                <a href="https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters
-                </a>
-                <p class="mb-1 small text-light">BAG allows us to seamlessly connect thousands of GPUs across multiple data centers and regions. Building Prometheus and Beyond As a technology, BAG is playing an important role in Meta’s next generation of AI infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-25">
-                <a href="https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Rust at Scale: An Added Layer of Security for WhatsApp
-                </a>
-                <p class="mb-1 small text-light">For example, WhatsApp, like many other applications, allows users to share media and other types of documents. To ensure application security, we first must identify and quantify the sources of risk.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-25">
                 <a href="https://blog.cloudflare.com/vinext/" target="_blank" class="fw-bold text-decoration-none">
                     [Cloudflare] How we rebuilt Next.js with AI in one week
@@ -396,7 +137,7 @@
                 <p class="mb-1 small text-light">If your application uses platform-specific APIs like Durable Objects, KV, or AI bindings, you can't test that code in dev without workarounds. Most importantly Vite output runs on any platform thanks to the Vite Environment API.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-02-25
                     
                 </small>
             </li>
@@ -408,7 +149,283 @@
                 <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-25">
+                <a href="https://www.reddit.com/r/devops/comments/1re4z6d/looking_for_realistic_clouddevops_scenarios_to/" target="_blank" class="fw-bold text-decoration-none">
+                    Looking for Realistic Cloud/DevOps Scenarios to Practice Architecture & Automation
+                </a>
+                <p class="mb-1 small text-light">Hey everyone, I’m currently learning Cloud & DevOps (AWS, Docker, Terraform, CI/CD, etc.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-25">
+                <a href="https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling LLM Post-Training at Netflix
+                </a>
+                <p class="mb-1 small text-light">At the base is Mako, Netflix’s internal ML compute platform, which provisions GPUs on AWS. Staying close to the frontier required infrastructure that could move from “offline training loop” to “multi-stage, on-policy orchestration.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-02-25">
+                <a href="https://www.docker.com/blog/from-the-captains-chair-kristiyan-velkov/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] From the Captain’s Chair: Kristiyan Velkov
+                </a>
+                <p class="mb-1 small text-light">Many front-end developers were avoiding Docker because they believed it was only meant for back-end or DevOps engineers. js application and walking through how to containerize and deploy it to AWS, with practical code examples and clear diagrams.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-02-25">
+                <a href="https://snyk.io/blog/the-ai-security-engineer/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The Rise of the AI Security Engineer: A New Discipline for an AI-Native World
+                </a>
+                <p class="mb-1 small text-light">As autonomous AI systems transform business, a new profession is emerging to protect them: the AI Security Engineer. Discover why this specialized discipline is becoming a survival imperative for organizations in an AI-native world.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-25">
+                <a href="https://engineering.fb.com/2026/02/24/data-center-engineering/rrcclx-innovating-gpu-communications-amd-platforms-meta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] RCCLX: Innovating GPU communications on AMD platforms
+                </a>
+                <p class="mb-1 small text-light">These features provide significant performance improvements on AMD platforms and we are excited to share this with the community. Torchcomms allows users to have a single API for communication for different platforms.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-25">
+                <a href="https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters
+                </a>
+                <p class="mb-1 small text-light">BAG allows us to seamlessly connect thousands of GPUs across multiple data centers and regions. Building Prometheus and Beyond As a technology, BAG is playing an important role in Meta’s next generation of AI infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-25">
+                <a href="https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Rust at Scale: An Added Layer of Security for WhatsApp
+                </a>
+                <p class="mb-1 small text-light">For example, WhatsApp, like many other applications, allows users to share media and other types of documents. To ensure application security, we first must identify and quantify the sources of risk.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-02-25">
+                <a href="https://kubernetes.io/blog/2026/02/03/introducing-node-readiness-controller/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Introducing Node Readiness Controller
+                </a>
+                <p class="mb-1 small text-light">It provides three primary advantages: Custom Readiness Definitions: Define what ready means for your specific platform. Core concepts and features The controller centers around the NodeReadinessRule (NRR) API, which allows you to define declarative gates for your nodes.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-02-25">
+                <a href="https://www.cncf.io/blog/2026/02/24/making-harbor-production-ready-essential-considerations-for-deployment/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Making Harbor production-ready: Essential considerations for deployment
+                </a>
+                <p class="mb-1 small text-light">, using a Helm chart for Patroni or CloudNativePG) or leverage a managed database service outside the cluster. Maintain regular updates: Regularly update your Harbor Helm chart and underlying Kubernetes components to benefit from the latest security patches and bug fixes.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-25">
+                <a href="https://blog.cloudflare.com/cloudflare-outage-february-20-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cloudflare outage on February 20, 2026
+                </a>
+                <p class="mb-1 small text-light">Some customers were able to restore their own service by using the Cloudflare dashboard to re-advertise their IP addresses. Cloudflare’s Addressing API The Addressing API is an authoritative dataset of the addresses present on the Cloudflare network.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-02-25">
+                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Streamlining Security Investigations with Agents
+                </a>
+                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-02-25">
+                <a href="https://dropbox.tech/machine-learning/how-low-bit-inference-enables-efficient-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How low-bit inference enables efficient AI
+                </a>
+                <p class="mb-1 small text-light">And making this technology accessible to individuals and businesses means tackling new challenges around efficiency and resource use. This scaling behavior plays a key role in improving both performance and efficiency when running large-scale AI workloads.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-25">
+                <a href="https://www.reddit.com/r/devops/comments/1rdpjt5/cloud_security_what_do_they_do_these_days/" target="_blank" class="fw-bold text-decoration-none">
+                    Cloud Security - What do they do these days?
+                </a>
+                <p class="mb-1 small text-light">Folks, I have a final stage interview for a digital asset / crypto company which is a Cloud Security engineer role, mainly focusing on terraform, AWS, Azure, SAST, and some other security areas.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-25">
+                <a href="https://www.reddit.com/r/devops/comments/1rdbxfc/what_metrics_are_you_using_to_measure_container/" target="_blank" class="fw-bold text-decoration-none">
+                    What metrics are you using to measure container security improvements?
+                </a>
+                <p class="mb-1 small text-light">Leadership keeps asking me to prove our container security efforts are working. I need metrics that show real security improvements without gaming the system.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-25">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1re3i5c/how_to_set_correctly_dynamic_ip_address_to_api/" target="_blank" class="fw-bold text-decoration-none">
+                    How to set correctly dynamic IP address to API server of kubernetes cluster deployed in Talos Linux
+                </a>
+                <p class="mb-1 small text-light">Hello, everyone In advance, I am sorry if this question is too stupid to ask but I do not quite understand this moment I just started working as junior system administrator and the first task I was assigned to deploy simple kubernetes cluster (1 control plane and 2 worker nodes).</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-25">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1rdc55o/ai_models_in_containers_with_ramalama/" target="_blank" class="fw-bold text-decoration-none">
+                    AI Models in Containers with RamaLama
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/piotr_minkowski</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-25">
+                <a href="https://netflixtechblog.medium.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] DataJunction as Netflix’s answer to the missing piece of the modern data stack
+                </a>
+                <p class="mb-1 small text-light">by Olek Gorajek Samuel Redai Yian ShangIntroOur Netflix journey from data to dashboards, particularly within the space of the experimentation platform, always presented a unique set of challenges.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-25">
+                <a href="https://netflixtechblog.com/automating-rds-postgres-to-aurora-postgres-migration-261ca045447f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Automating RDS Postgres to Aurora Postgres Migration
+                </a>
+                <p class="mb-1 small text-light">Aurora’s cloud-native, distributed architecture provided clear advantages in scalability, high availability, and elasticity compared to traditional single-node PostgreSQL deployments.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-02-25">
+                <a href="https://www.redhat.com/en/blog/red-hat-ai-enterprise-bridging-gap-experimentation-production-scale" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat AI Enterprise: Bridging the gap from experimentation to production scale
+                </a>
+                <p class="mb-1 small text-light">Red Hat AI Enterprise is now generally available, offering a unified AI platform designed to simplify the development, deployment, and management of AI-powered applications across the hybrid cloud.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-02-25">
+                <a href="https://www.redhat.com/en/blog/predictable-ai-announcing-january-and-february-validated-model-batches" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Predictable AI: Announcing the January and February validated model batches
+                </a>
+                <p class="mb-1 small text-light">The transition from AI experimentation to production-grade deployment is often the most difficult hurdle for an enterprise. At Red Hat, we believe that choosing a model should come with predictable outcomes, rather than uncertainty.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-02-25">
+                <a href="https://about.gitlab.com/blog/track-vulnerability-remediation-with-the-updated-gitlab-security-dashboard/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Track vulnerability remediation with the updated GitLab Security Dashboard
+                </a>
+                <p class="mb-1 small text-light">The updated GitLab Security Dashboard helps answer these questions with trend tracking, vulnerability age distribution, and risk scoring by project.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-02-25">
+                <a href="https://blog.sentry.io/ai-driven-caching-strategies-instrumentation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] AI-driven caching strategies and instrumentation
+                </a>
+                <p class="mb-1 small text-light">Most bugs, edge cases, and performance issues won't show up until after launch, when real users start hammering your application. Improving hit rates by caching more pages only helps if hot keys stay resident.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-02-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-02-25">
+                <a href="https://blog.sentry.io/size-analysis-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Size Analysis is generally available in Sentry
+                </a>
+                <p class="mb-1 small text-light">Automated monitoring in your CI pipelineThe most common way app size grows is incrementally. Let’s look at another scenario: adding a new hero image.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-02-25
                     
                 </small>
             </li>

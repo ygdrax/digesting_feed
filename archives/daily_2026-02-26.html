@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - February 26, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - February 26, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for February 26, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-02-26">2026-02-26 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 15 sources • Updated 2026-02-26 08:15:58
+                    Showing 25 total articles from 
+                    15 sources
+                    
                     
                 </span>
             </small>
@@ -117,282 +134,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-26">
-                <a href="https://www.reddit.com/r/devops/comments/1reypmr/explaining_kubernetes_ingress_tls_certificates_to/" target="_blank" class="fw-bold text-decoration-none">
-                    Explaining Kubernetes ingress TLS certificates to a 4 year old
-                </a>
-                <p class="mb-1 small text-light">It was a normal day working from home. I'm starting to wonder how the heck do I explain Kubernetes Ingress TLS Certificates to a 4-year-old.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-26">
-                <a href="https://www.reddit.com/r/devops/comments/1rezupb/cloud_engineer_roadmap_check_networking_linux/" target="_blank" class="fw-bold text-decoration-none">
-                    Cloud Engineer roadmap check: Networking + Linux completed, next steps?
-                </a>
-                <p class="mb-1 small text-light">I’m transitioning to Cloud Engineering from scratch. My goal is to get a junior cloud role in 6–9 months.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-26">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1reynu0/explaining_kubernetes_ingress_tls_certificates_to/" target="_blank" class="fw-bold text-decoration-none">
-                    Explaining Kubernetes Ingress TLS Certificates to a 4-Year-Old
-                </a>
-                <p class="mb-1 small text-light">It was a normal day working from home. I'm starting to wonder how the heck do I explain Kubernetes Ingress TLS Certificates to a 4-year-old.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-26">
-                <a href="https://netflixtechblog.com/high-throughput-graph-abstraction-at-netflix-part-i-e88063e6f6d5?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] High-Throughput Graph Abstraction at Netflix: Part I
-                </a>
-                <p class="mb-1 small text-light">The Key-Value (KV) Abstraction stores the latest view of nodes and edges, serving as the real-time index for all queries. Further, to ensure correctness of asynchronous deletes during concurrent updates, the Last-Write-Wins (LWW) conflict resolution mechanism is essential.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-02-26">
-                <a href="https://www.redhat.com/en/blog/mcp-security-current-situation" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] MCP security: The current situation
-                </a>
-                <p class="mb-1 small text-light">The Model Context Protocol (MCP) is an open protocol designed to standardize how large language models (LLMs) connect to external tools, APIs, and data sources.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-02-26">
-                <a href="https://about.gitlab.com/blog/new-gitlab-metrics-and-registry-features-help-reduce-ci-cd-bottlenecks/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] New GitLab metrics and registry features help reduce CI/CD bottlenecks
-                </a>
-                <p class="mb-1 small text-light">Platform and DevOps engineers spend too much time piecing together visibility across fragmented tools and managing infrastructure that should just work.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-02-26">
-                <a href="https://about.gitlab.com/blog/passkeys-now-available-for-passwordless-sign-in-and-2fa-on-gitlab/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Passkeys now available for passwordless sign-in and 2FA on GitLab
-                </a>
-                <p class="mb-1 small text-light">Passkeys are now available on GitLab, and offer a more secure and convenient way to access your account. You can use passkeys for passwordless sign-in or as a phishing-resistant two-factor authentication (2FA) method.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-02-26">
-                <a href="https://snyk.io/blog/claude-code-remediation-loop-evolution/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Claude Code Security: A Welcome Evolution in the Remediation Loop
-                </a>
-                <p class="mb-1 small text-light">Anthropic's Claude Code Security marks a major shift in vulnerability discovery, but AI-driven development requires more than just reasoning to remain secure. Learn how Snyk’s AI Security Fabric integrates with Claude to close the loop between finding vulnerabilities and fixing them at scale.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-02-26">
-                <a href="https://snyk.io/blog/cline-supply-chain-attack-prompt-injection-github-actions/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] How “Clinejection” Turned an AI Bot into a Supply Chain Attack
-                </a>
-                <p class="mb-1 small text-light">The Clinejection vulnerability chain illustrates a dangerous new era of supply chain attacks where AI agents are turned into exploit vectors. This incident highlights the critical need for hardened CI/CD pipelines and rigorous security for AI-assisted coding tools.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-26">
-                <a href="https://engineering.atspotify.com/2026/2/our-multi-agent-architecture-for-smarter-advertising/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Our Multi-Agent Architecture for Smarter Advertising
-                </a>
-                <p class="mb-1 small text-light">When we kicked this off, we weren’t trying to ship an “AI feature.” We were trying to fix a structural... The post Our Multi-Agent Architecture for Smarter Advertising appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-26">
-                <a href="https://engineering.atspotify.com/2026/2/how-we-release-the-spotify-app-part-2/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] How We Release the Spotify App: A Look Under the Hood (Part 2)
-                </a>
-                <p class="mb-1 small text-light">In Part 2, we will peek under the hood at the tooling that makes the Spotify release process possible. The post How We Release the Spotify App: A Look Under the Hood (Part 2) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-26">
-                <a href="https://engineering.atspotify.com/2026/1/congratulations-to-the-recipients-of-the-2025-spotify-foss-fund/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Congratulations to the recipients of the 2025 Spotify FOSS Fund
-                </a>
-                <p class="mb-1 small text-light">TL;DR Established in 2022 as a way to help support the great open source ecosystem projects that Spotify... The post Congratulations to the recipients of the 2025 Spotify FOSS Fund appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-26">
-                <a href="https://engineering.atspotify.com/2026/1/why-we-use-separate-tech-stacks-for-personalization-and-experimentation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Why We Use Separate Tech Stacks for Personalization and Experimentation
-                </a>
-                <p class="mb-1 small text-light">The technical and practical rationale for a clear separation between these domains. The post Why We Use Separate Tech Stacks for Personalization and Experimentation appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-26">
-                <a href="https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Background Coding Agents: Predictable Results Through Strong Feedback Loops (Honk, Part 3)
-                </a>
-                <p class="mb-1 small text-light">The system we built to ensure our AI agents produce predictable, trustworthy code. The post Background Coding Agents: Predictable Results Through Strong Feedback Loops (Honk, Part 3) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-26">
-                <a href="https://engineering.fb.com/2026/02/11/developer-tools/the-death-of-traditional-testing-agentic-development-jit-testing-revival/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] The Death of Traditional Testing: Agentic Development Broke a 50-Year-Old Field, JiTTesting Can Revive It
-                </a>
-                <p class="mb-1 small text-light">It also means that testing frameworks need to evolve for this rapidly changing landscape. Here are the key steps of the Catching JiTTest process: New code lands in the codebase.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-26">
-                <a href="https://engineering.fb.com/2026/02/04/security/cross-device-passkey-authentication-for-xr-devices-meta-quest/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] No Display? No Problem: Cross-Device Passkey Authentication for XR Devices
-                </a>
-                <p class="mb-1 small text-light">Passkeys are a significant leap forward in authentication, offering a phishing-resistant, cryptographically secure alternative to traditional passwords. No Problem: Cross-Device Passkey Authentication for XR Devices appeared first on Engineering at Meta.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-02-26">
-                <a href="https://www.ycombinator.com/companies/trellis-ai/jobs/7ZlvQkN-lead-deployment-strategist" target="_blank" class="fw-bold text-decoration-none">
-                    Trellis AI (YC W24) is hiring deployment lead to accelerate medication access
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.ycombinator.com/companies/trellis-ai/jobs/7ZlvQkN-lead-deployment-strategist Comments URL: https://news.ycombinator.com/item?id=47154246 Points: 0 # Comments: 0</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-02-26">
-                <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-hpc8a-instances-powered-by-5th-gen-amd-epyc-processors-are-now-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon EC2 Hpc8a Instances powered by 5th Gen AMD EPYC processors are now available
-                </a>
-                <p class="mb-1 small text-light">The new Hpc8a instances deliver up to 40% higher performance, 42% greater memory bandwidth, and up to 25% better price-performance compared to previous generation Hpc7a instances.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-26">
-                <a href="https://blog.cloudflare.com/ecdysis-rust-graceful-restarts/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Shedding old code with ecdysis: graceful restarts for Rust services at Cloudflare
-                </a>
-                <p class="mb-1 small text-light">When these services need updates, security patches can’t wait. These services handle billions of requests per day and require frequent updates for security patches, feature releases, and configuration changes.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-02-26">
-                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
-                </a>
-                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-02-26">
-                <a href="https://www.pulumi.com/blog/gitops-best-practices-i-wish-i-had-known-before/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] GitOps Best Practices I Wish I Had Known Before
-                </a>
-                <p class="mb-1 small text-light">Put everything in Git: Kubernetes manifests, Helm values, Kustomize overlays, policy rules, even your GitOps tool configuration itself. When you’re running microservices with independent release cadences that step on each other, it’s time to split.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-02-26">
-                <a href="https://www.docker.com/blog/openwebui-docker-model-runner/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Open WebUI + Docker Model Runner: Self-Hosted Models, Zero Configuration
-                </a>
-                <p class="mb-1 small text-light">With this update, Open WebUI automatically detects and connects to Docker Model Runner running at localhost:12434. Get started with Docker Model Runner with a simple hello GenAI application.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-02-26">
-                <a href="https://about.gitlab.com/blog/agentic-ai-enterprise-control-self-hosted-duo-agent-platform-and-byom/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Agentic AI, enterprise control: Self-hosted Duo Agent Platform and BYOM
-                </a>
-                <p class="mb-1 small text-light">Now generally available, Self-Hosted for Online Cloud Licenses introduces a usage-based billing model powered by GitLab Credits. 9 makes Duo Agent Platform a first-class deployment for online cloud licenses.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-02-26">
                 <a href="https://www.hashicorp.com/blog/saving-banks-from-technical-debt-how-atruvia-built-secure-self-service-infrastructure" target="_blank" class="fw-bold text-decoration-none">
                     [HashiCorp] Saving banks from technical debt: How Atruvia built secure, self-service infrastructure
@@ -400,7 +141,7 @@
                 <p class="mb-1 small text-light">While it supported mission-critical banking services, its core workflows hadn’t caught up with modern development needs. They focused on the public cloud first, where APIs and standardization made automation easier.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-02-26
                     
                 </small>
             </li>
@@ -412,7 +153,283 @@
                 <p class="mb-1 small text-light">In March 2026, Kubernetes will retire Ingress NGINX, a piece of critical infrastructure for about half of cloud native environments. There will be no more releases for bug fixes, security patches, or any updates of any kind after the project is retired.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-02-26">
+                <a href="https://www.docker.com/blog/openwebui-docker-model-runner/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Open WebUI + Docker Model Runner: Self-Hosted Models, Zero Configuration
+                </a>
+                <p class="mb-1 small text-light">With this update, Open WebUI automatically detects and connects to Docker Model Runner running at localhost:12434. Get started with Docker Model Runner with a simple hello GenAI application.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-02-26">
+                <a href="https://about.gitlab.com/blog/agentic-ai-enterprise-control-self-hosted-duo-agent-platform-and-byom/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Agentic AI, enterprise control: Self-hosted Duo Agent Platform and BYOM
+                </a>
+                <p class="mb-1 small text-light">Now generally available, Self-Hosted for Online Cloud Licenses introduces a usage-based billing model powered by GitLab Credits. 9 makes Duo Agent Platform a first-class deployment for online cloud licenses.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-02-26">
+                <a href="https://www.ycombinator.com/companies/trellis-ai/jobs/7ZlvQkN-lead-deployment-strategist" target="_blank" class="fw-bold text-decoration-none">
+                    Trellis AI (YC W24) is hiring deployment lead to accelerate medication access
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.ycombinator.com/companies/trellis-ai/jobs/7ZlvQkN-lead-deployment-strategist Comments URL: https://news.ycombinator.com/item?id=47154246 Points: 0 # Comments: 0</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-02-26">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-hpc8a-instances-powered-by-5th-gen-amd-epyc-processors-are-now-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon EC2 Hpc8a Instances powered by 5th Gen AMD EPYC processors are now available
+                </a>
+                <p class="mb-1 small text-light">The new Hpc8a instances deliver up to 40% higher performance, 42% greater memory bandwidth, and up to 25% better price-performance compared to previous generation Hpc7a instances.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-02-26">
+                <a href="https://blog.cloudflare.com/ecdysis-rust-graceful-restarts/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Shedding old code with ecdysis: graceful restarts for Rust services at Cloudflare
+                </a>
+                <p class="mb-1 small text-light">When these services need updates, security patches can’t wait. These services handle billions of requests per day and require frequent updates for security patches, feature releases, and configuration changes.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-02-26">
+                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
+                </a>
+                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-02-26">
+                <a href="https://www.pulumi.com/blog/gitops-best-practices-i-wish-i-had-known-before/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] GitOps Best Practices I Wish I Had Known Before
+                </a>
+                <p class="mb-1 small text-light">Put everything in Git: Kubernetes manifests, Helm values, Kustomize overlays, policy rules, even your GitOps tool configuration itself. When you’re running microservices with independent release cadences that step on each other, it’s time to split.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-26">
+                <a href="https://www.reddit.com/r/devops/comments/1reypmr/explaining_kubernetes_ingress_tls_certificates_to/" target="_blank" class="fw-bold text-decoration-none">
+                    Explaining Kubernetes ingress TLS certificates to a 4 year old
+                </a>
+                <p class="mb-1 small text-light">It was a normal day working from home. I'm starting to wonder how the heck do I explain Kubernetes Ingress TLS Certificates to a 4-year-old.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-26">
+                <a href="https://www.reddit.com/r/devops/comments/1rezupb/cloud_engineer_roadmap_check_networking_linux/" target="_blank" class="fw-bold text-decoration-none">
+                    Cloud Engineer roadmap check: Networking + Linux completed, next steps?
+                </a>
+                <p class="mb-1 small text-light">I’m transitioning to Cloud Engineering from scratch. My goal is to get a junior cloud role in 6–9 months.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-02-26">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1reynu0/explaining_kubernetes_ingress_tls_certificates_to/" target="_blank" class="fw-bold text-decoration-none">
+                    Explaining Kubernetes Ingress TLS Certificates to a 4-Year-Old
+                </a>
+                <p class="mb-1 small text-light">It was a normal day working from home. I'm starting to wonder how the heck do I explain Kubernetes Ingress TLS Certificates to a 4-year-old.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-02-26">
+                <a href="https://netflixtechblog.com/high-throughput-graph-abstraction-at-netflix-part-i-e88063e6f6d5?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] High-Throughput Graph Abstraction at Netflix: Part I
+                </a>
+                <p class="mb-1 small text-light">The Key-Value (KV) Abstraction stores the latest view of nodes and edges, serving as the real-time index for all queries. Further, to ensure correctness of asynchronous deletes during concurrent updates, the Last-Write-Wins (LWW) conflict resolution mechanism is essential.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-02-26">
+                <a href="https://www.redhat.com/en/blog/mcp-security-current-situation" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] MCP security: The current situation
+                </a>
+                <p class="mb-1 small text-light">The Model Context Protocol (MCP) is an open protocol designed to standardize how large language models (LLMs) connect to external tools, APIs, and data sources.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-02-26">
+                <a href="https://about.gitlab.com/blog/new-gitlab-metrics-and-registry-features-help-reduce-ci-cd-bottlenecks/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] New GitLab metrics and registry features help reduce CI/CD bottlenecks
+                </a>
+                <p class="mb-1 small text-light">Platform and DevOps engineers spend too much time piecing together visibility across fragmented tools and managing infrastructure that should just work.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-02-26">
+                <a href="https://about.gitlab.com/blog/passkeys-now-available-for-passwordless-sign-in-and-2fa-on-gitlab/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Passkeys now available for passwordless sign-in and 2FA on GitLab
+                </a>
+                <p class="mb-1 small text-light">Passkeys are now available on GitLab, and offer a more secure and convenient way to access your account. You can use passkeys for passwordless sign-in or as a phishing-resistant two-factor authentication (2FA) method.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-02-26">
+                <a href="https://snyk.io/blog/claude-code-remediation-loop-evolution/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Claude Code Security: A Welcome Evolution in the Remediation Loop
+                </a>
+                <p class="mb-1 small text-light">Anthropic's Claude Code Security marks a major shift in vulnerability discovery, but AI-driven development requires more than just reasoning to remain secure. Learn how Snyk’s AI Security Fabric integrates with Claude to close the loop between finding vulnerabilities and fixing them at scale.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-02-26">
+                <a href="https://snyk.io/blog/cline-supply-chain-attack-prompt-injection-github-actions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] How “Clinejection” Turned an AI Bot into a Supply Chain Attack
+                </a>
+                <p class="mb-1 small text-light">The Clinejection vulnerability chain illustrates a dangerous new era of supply chain attacks where AI agents are turned into exploit vectors. This incident highlights the critical need for hardened CI/CD pipelines and rigorous security for AI-assisted coding tools.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-26">
+                <a href="https://engineering.atspotify.com/2026/2/our-multi-agent-architecture-for-smarter-advertising/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Our Multi-Agent Architecture for Smarter Advertising
+                </a>
+                <p class="mb-1 small text-light">When we kicked this off, we weren’t trying to ship an “AI feature.” We were trying to fix a structural... The post Our Multi-Agent Architecture for Smarter Advertising appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-26">
+                <a href="https://engineering.atspotify.com/2026/2/how-we-release-the-spotify-app-part-2/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] How We Release the Spotify App: A Look Under the Hood (Part 2)
+                </a>
+                <p class="mb-1 small text-light">In Part 2, we will peek under the hood at the tooling that makes the Spotify release process possible. The post How We Release the Spotify App: A Look Under the Hood (Part 2) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-26">
+                <a href="https://engineering.atspotify.com/2026/1/congratulations-to-the-recipients-of-the-2025-spotify-foss-fund/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Congratulations to the recipients of the 2025 Spotify FOSS Fund
+                </a>
+                <p class="mb-1 small text-light">TL;DR Established in 2022 as a way to help support the great open source ecosystem projects that Spotify... The post Congratulations to the recipients of the 2025 Spotify FOSS Fund appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-26">
+                <a href="https://engineering.atspotify.com/2026/1/why-we-use-separate-tech-stacks-for-personalization-and-experimentation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Why We Use Separate Tech Stacks for Personalization and Experimentation
+                </a>
+                <p class="mb-1 small text-light">The technical and practical rationale for a clear separation between these domains. The post Why We Use Separate Tech Stacks for Personalization and Experimentation appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-02-26">
+                <a href="https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Background Coding Agents: Predictable Results Through Strong Feedback Loops (Honk, Part 3)
+                </a>
+                <p class="mb-1 small text-light">The system we built to ensure our AI agents produce predictable, trustworthy code. The post Background Coding Agents: Predictable Results Through Strong Feedback Loops (Honk, Part 3) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-26">
+                <a href="https://engineering.fb.com/2026/02/11/developer-tools/the-death-of-traditional-testing-agentic-development-jit-testing-revival/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] The Death of Traditional Testing: Agentic Development Broke a 50-Year-Old Field, JiTTesting Can Revive It
+                </a>
+                <p class="mb-1 small text-light">It also means that testing frameworks need to evolve for this rapidly changing landscape. Here are the key steps of the Catching JiTTest process: New code lands in the codebase.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-02-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-02-26">
+                <a href="https://engineering.fb.com/2026/02/04/security/cross-device-passkey-authentication-for-xr-devices-meta-quest/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] No Display? No Problem: Cross-Device Passkey Authentication for XR Devices
+                </a>
+                <p class="mb-1 small text-light">Passkeys are a significant leap forward in authentication, offering a phishing-resistant, cryptographically secure alternative to traditional passwords. No Problem: Cross-Device Passkey Authentication for XR Devices appeared first on Engineering at Meta.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-02-26
                     
                 </small>
             </li>

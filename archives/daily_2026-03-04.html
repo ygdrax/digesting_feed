@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - March 04, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - March 04, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for March 04, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-03-04">2026-03-04 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2026-03-04 08:11:55
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,246 +126,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-04">
-                <a href="https://www.reddit.com/r/devops/comments/1rjziax/trivy_the_container_scanning_tool_security/" target="_blank" class="fw-bold text-decoration-none">
-                    Trivy (the container scanning tool) security incident 2026-03-01
-                </a>
-                <p class="mb-1 small text-light">com/aquasecurity/trivy/discussions/10265 Does this kind of thing scare this shit out of anyone else. Apparently a GitHub PAT was compromised and a rogue Trivy VSCode extension was released.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-04">
-                <a href="https://www.reddit.com/r/devops/comments/1rezupb/cloud_engineer_roadmap_check_networking_linux/" target="_blank" class="fw-bold text-decoration-none">
-                    Cloud Engineer roadmap check: Networking + Linux completed, next steps?
-                </a>
-                <p class="mb-1 small text-light">I’m transitioning to Cloud Engineering from scratch. My goal is to get a junior cloud role in 6–9 months.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-04">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1rkdqqz/first_time_a_cloud_region_went_down_from_a/" target="_blank" class="fw-bold text-decoration-none">
-                    First time a cloud region went down from a physical attack in UAE. What would it take to actually execute a failover with confidence?
-                </a>
-                <p class="mb-1 small text-light">Multi-region failover is set up on our end. But sitting here watching this unfold, I couldn't execute it cleanly right now if I had to.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-04">
-                <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unlocking-document-understanding-with-mistral-document-ai-in-microsoft-foundry/4495664" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Unlocking document understanding with Mistral Document AI in Microsoft Foundry
-                </a>
-                <p class="mb-1 small text-light">Tasks that took days can be done in minutes, accelerating core business processesAccuracy and consistency: With 99 %+ recognition accuracy and deep layout understanding, Mistral delivers cleaner data and fewer downstream errors – essential in compliance-critical or analytics-driven operationsCost...</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-04">
-                <a href="https://azure.microsoft.com/en-us/blog/instant-access-incremental-snapshots-restore-without-waiting/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Instant access incremental snapshots: Restore without waiting
-                </a>
-                <p class="mb-1 small text-light">Newly restored disks also deliver near-full performance from the start, allowing applications to resume operations immediately. For mission-critical workloads, speed matters—especially when every minute of downtime or degraded performance has real business impact.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-04">
-                <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/claude-sonnet-4-6-in-microsoft-foundry-frontier-performance-for-scale/4494873" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Claude Sonnet 4.6 in Microsoft Foundry-Frontier Performance for Scale
-                </a>
-                <p class="mb-1 small text-light">6 to deliver: Stronger reasoning across code contextsBetter understanding of complex codebasesReliable performance across iterative development cyclesWhether you’re building features, refactoring existing modules, or debugging tricky issues, Sonnet 4.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-04">
-                <a href="https://www.docker.com/blog/announcing-docker-hardened-system-packages/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Announcing Docker Hardened System Packages
-                </a>
-                <p class="mb-1 small text-light">io has moved its production infrastructure to DHI, they share why and how in this recent webinar Medplum, an open-source electronic health records platform (managing data of 20+ million patients) has now standardized to DHI Adobe uses DHI because of great alignment with its security posture and d...</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-04">
-                <a href="https://www.redhat.com/en/blog/whats-new-red-hat-openshift-ai-33-ui-moving-pilot-production" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] What’s new with Red Hat OpenShift AI 3.3 UI: Moving from pilot to production
-                </a>
-                <p class="mb-1 small text-light">With our previous release of Red Hat OpenShift AI, we established a solid foundation for your enterprise AI infrastructure. Today, with the release of OpenShift AI 3.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-04">
-                <a href="https://www.redhat.com/en/blog/speed-trust-how-global-leaders-are-moving-ai-lab-lifecycle" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] The speed of trust: How global leaders are moving AI from lab to lifecycle
-                </a>
-                <p class="mb-1 small text-light">In the enterprise world, the AI hype has officially met the reality check. Organizations are no longer asking if AI can help; they are asking how fast it can deliver value without breaking the bank or the infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-04">
-                <a href="https://www.redhat.com/en/blog/scaling-earth-and-space-ai-models-red-hat-ai-inference-server-and-red-hat-openshift-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Scaling Earth and space AI models with Red Hat AI Inference Server and Red Hat OpenShift AI
-                </a>
-                <p class="mb-1 small text-light">Enterprises can now serve Earth and space AI models—like those developed by NASA and IBM—on Red Hat AI Inference Server, with autoscaling on Red Hat OpenShift AI.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-04">
-                <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-hpc8a-instances-powered-by-5th-gen-amd-epyc-processors-are-now-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon EC2 Hpc8a Instances powered by 5th Gen AMD EPYC processors are now available
-                </a>
-                <p class="mb-1 small text-light">The new Hpc8a instances deliver up to 40% higher performance, 42% greater memory bandwidth, and up to 25% better price-performance compared to previous generation Hpc7a instances.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-04">
-                <a href="https://www.hashicorp.com/blog/everything-as-code-for-your-security-lifecycle" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Everything as code for your security lifecycle
-                </a>
-                <p class="mb-1 small text-light">You can also use Terraform with a service networking platform like Consul to help applications find and talk to each other reliably and securely across on-premises, hybrid, and multi-cloud environments.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-04">
-                <a href="https://www.hashicorp.com/blog/building-day-2-ops-guardrails-with-terraform-and-packer" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Building Day 2 ops guardrails with Terraform and Packer
-                </a>
-                <p class="mb-1 small text-light">Cloud waste now averages 32% of companies' cloud budgets, and a significant percentage of cloud security incidents stem from misconfigurations that are often introduced due to a lack of guardrails.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-04">
-                <a href="https://www.cncf.io/blog/2026/03/03/how-to-get-the-most-out-of-kubecon-cloudnativecon-europe-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] How to Get the Most Out of KubeCon + CloudNativeCon Europe 2026
-                </a>
-                <p class="mb-1 small text-light">Solution Showcase and Project Pavilion A major part of KubeCon + CloudNativeCon happens outside the session rooms. How We Scaled Our Platform With Just Terraform and ArgoCD”Haven’t registered for KubeCon + CloudNativeCon yet.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-04">
-                <a href="https://blog.cloudflare.com/2026-threat-report/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing the 2026 Cloudflare Threat Report
-                </a>
-                <p class="mb-1 small text-light">The new barometer for risk: Measure of Effectiveness (MOE) Cloudforce One has observed a broader shift in attacker psychology. Why build a custom server when a reputation shield (LotX) provides free, nearly untraceable infrastructure with a high delivery rate.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-04">
-                <a href="https://blog.cloudflare.com/email-security-phishing-gap-llm/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] From reactive to proactive: closing the phishing gap with LLMs
-                </a>
-                <p class="mb-1 small text-light">Now, Cloudflare has integrated LLMs into our email security tools to identify threats before they strike.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-04">
-                <a href="https://blog.cloudflare.com/remediation-in-cloudflare-casb/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] See risk, fix risk: introducing Remediation in Cloudflare CASB
-                </a>
-                <p class="mb-1 small text-light">This launch marks a huge advancement for Cloudflare’s Cloud Access Security Broker (CASB). Since its release, Cloudflare’s API-based CASB has focused on providing robust, comprehensive visibility and detection.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-03-04">
-                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
-                </a>
-                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-04">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1rjpunb/ai_for_devopsplatform_engineers/" target="_blank" class="fw-bold text-decoration-none">
-                    AI for DevOps/Platform Engineers
-                </a>
-                <p class="mb-1 small text-light">Hey guys my doubt is that I'm not sure which AI should I use? I have go chatgpt, gemini pro and 4.5 claude, for my daily tasks i've been using gemini, but recently i feel that it works much worse than before, do you have any recommendation(nerver used claude) submitted by /u/Zyberon</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-04">
-                <a href="https://www.docker.com/blog/openwebui-docker-model-runner/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Open WebUI + Docker Model Runner: Self-Hosted Models, Zero Configuration
-                </a>
-                <p class="mb-1 small text-light">With this update, Open WebUI automatically detects and connects to Docker Model Runner running at localhost:12434. Get started with Docker Model Runner with a simple hello GenAI application.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-04">
                 <a href="https://www.hashicorp.com/blog/saving-banks-from-technical-debt-how-atruvia-built-secure-self-service-infrastructure" target="_blank" class="fw-bold text-decoration-none">
                     [HashiCorp] Saving banks from technical debt: How Atruvia built secure, self-service infrastructure
@@ -356,7 +133,7 @@
                 <p class="mb-1 small text-light">While it supported mission-critical banking services, its core workflows hadn’t caught up with modern development needs. They focused on the public cloud first, where APIs and standardization made automation easier.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-03-04
                     
                 </small>
             </li>
@@ -368,7 +145,7 @@
                 <p class="mb-1 small text-light">In March 2026, Kubernetes will retire Ingress NGINX, a piece of critical infrastructure for about half of cloud native environments. There will be no more releases for bug fixes, security patches, or any updates of any kind after the project is retired.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-03-04
                     
                 </small>
             </li>
@@ -380,7 +157,7 @@
                 <p class="mb-1 small text-light">The underlying architecture of Cloudflare’s Threat Intelligence Platform sets it apart from other solutions. Instant Protection via the Firewall API Beyond exports, the platform allows you to close the loop between discovery and defense.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-03-04
                     
                 </small>
             </li>
@@ -392,7 +169,7 @@
                 <p class="mb-1 small text-light">This post outlines how we are extending Cloudy across Phishnet and API CASB to improve decision making, reduce unnecessary noise, and turn complex security signals into clear, actionable insight. Accuracy is critical at this stage as incorrect guidance could introduce real security risk.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-03-04
                     
                 </small>
             </li>
@@ -404,7 +181,247 @@
                 <p class="mb-1 small text-light">The Terraform refactoring runs all triggered self-repair because the restructured HCL modules had issues that terraform plan caught. 43% of DevOps teams need four or more deployment iterations before infrastructure is production-ready.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-04">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1rjpunb/ai_for_devopsplatform_engineers/" target="_blank" class="fw-bold text-decoration-none">
+                    AI for DevOps/Platform Engineers
+                </a>
+                <p class="mb-1 small text-light">Hey guys my doubt is that I'm not sure which AI should I use? I have go chatgpt, gemini pro and 4.5 claude, for my daily tasks i've been using gemini, but recently i feel that it works much worse than before, do you have any recommendation(nerver used claude) submitted by /u/Zyberon</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-04">
+                <a href="https://www.docker.com/blog/openwebui-docker-model-runner/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Open WebUI + Docker Model Runner: Self-Hosted Models, Zero Configuration
+                </a>
+                <p class="mb-1 small text-light">With this update, Open WebUI automatically detects and connects to Docker Model Runner running at localhost:12434. Get started with Docker Model Runner with a simple hello GenAI application.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-04">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-hpc8a-instances-powered-by-5th-gen-amd-epyc-processors-are-now-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon EC2 Hpc8a Instances powered by 5th Gen AMD EPYC processors are now available
+                </a>
+                <p class="mb-1 small text-light">The new Hpc8a instances deliver up to 40% higher performance, 42% greater memory bandwidth, and up to 25% better price-performance compared to previous generation Hpc7a instances.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-04">
+                <a href="https://www.hashicorp.com/blog/everything-as-code-for-your-security-lifecycle" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Everything as code for your security lifecycle
+                </a>
+                <p class="mb-1 small text-light">You can also use Terraform with a service networking platform like Consul to help applications find and talk to each other reliably and securely across on-premises, hybrid, and multi-cloud environments.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-04">
+                <a href="https://www.hashicorp.com/blog/building-day-2-ops-guardrails-with-terraform-and-packer" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Building Day 2 ops guardrails with Terraform and Packer
+                </a>
+                <p class="mb-1 small text-light">Cloud waste now averages 32% of companies' cloud budgets, and a significant percentage of cloud security incidents stem from misconfigurations that are often introduced due to a lack of guardrails.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-04">
+                <a href="https://www.cncf.io/blog/2026/03/03/how-to-get-the-most-out-of-kubecon-cloudnativecon-europe-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] How to Get the Most Out of KubeCon + CloudNativeCon Europe 2026
+                </a>
+                <p class="mb-1 small text-light">Solution Showcase and Project Pavilion A major part of KubeCon + CloudNativeCon happens outside the session rooms. How We Scaled Our Platform With Just Terraform and ArgoCD”Haven’t registered for KubeCon + CloudNativeCon yet.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-04">
+                <a href="https://blog.cloudflare.com/2026-threat-report/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing the 2026 Cloudflare Threat Report
+                </a>
+                <p class="mb-1 small text-light">The new barometer for risk: Measure of Effectiveness (MOE) Cloudforce One has observed a broader shift in attacker psychology. Why build a custom server when a reputation shield (LotX) provides free, nearly untraceable infrastructure with a high delivery rate.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-04">
+                <a href="https://blog.cloudflare.com/email-security-phishing-gap-llm/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] From reactive to proactive: closing the phishing gap with LLMs
+                </a>
+                <p class="mb-1 small text-light">Now, Cloudflare has integrated LLMs into our email security tools to identify threats before they strike.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-04">
+                <a href="https://blog.cloudflare.com/remediation-in-cloudflare-casb/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] See risk, fix risk: introducing Remediation in Cloudflare CASB
+                </a>
+                <p class="mb-1 small text-light">This launch marks a huge advancement for Cloudflare’s Cloud Access Security Broker (CASB). Since its release, Cloudflare’s API-based CASB has focused on providing robust, comprehensive visibility and detection.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-03-04">
+                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
+                </a>
+                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-04">
+                <a href="https://www.reddit.com/r/devops/comments/1rjziax/trivy_the_container_scanning_tool_security/" target="_blank" class="fw-bold text-decoration-none">
+                    Trivy (the container scanning tool) security incident 2026-03-01
+                </a>
+                <p class="mb-1 small text-light">com/aquasecurity/trivy/discussions/10265 Does this kind of thing scare this shit out of anyone else. Apparently a GitHub PAT was compromised and a rogue Trivy VSCode extension was released.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-04">
+                <a href="https://www.reddit.com/r/devops/comments/1rezupb/cloud_engineer_roadmap_check_networking_linux/" target="_blank" class="fw-bold text-decoration-none">
+                    Cloud Engineer roadmap check: Networking + Linux completed, next steps?
+                </a>
+                <p class="mb-1 small text-light">I’m transitioning to Cloud Engineering from scratch. My goal is to get a junior cloud role in 6–9 months.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-04">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1rkdqqz/first_time_a_cloud_region_went_down_from_a/" target="_blank" class="fw-bold text-decoration-none">
+                    First time a cloud region went down from a physical attack in UAE. What would it take to actually execute a failover with confidence?
+                </a>
+                <p class="mb-1 small text-light">Multi-region failover is set up on our end. But sitting here watching this unfold, I couldn't execute it cleanly right now if I had to.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-04">
+                <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unlocking-document-understanding-with-mistral-document-ai-in-microsoft-foundry/4495664" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Unlocking document understanding with Mistral Document AI in Microsoft Foundry
+                </a>
+                <p class="mb-1 small text-light">Tasks that took days can be done in minutes, accelerating core business processesAccuracy and consistency: With 99 %+ recognition accuracy and deep layout understanding, Mistral delivers cleaner data and fewer downstream errors – essential in compliance-critical or analytics-driven operationsCost...</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-04">
+                <a href="https://azure.microsoft.com/en-us/blog/instant-access-incremental-snapshots-restore-without-waiting/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Instant access incremental snapshots: Restore without waiting
+                </a>
+                <p class="mb-1 small text-light">Newly restored disks also deliver near-full performance from the start, allowing applications to resume operations immediately. For mission-critical workloads, speed matters—especially when every minute of downtime or degraded performance has real business impact.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-04">
+                <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/claude-sonnet-4-6-in-microsoft-foundry-frontier-performance-for-scale/4494873" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Claude Sonnet 4.6 in Microsoft Foundry-Frontier Performance for Scale
+                </a>
+                <p class="mb-1 small text-light">6 to deliver: Stronger reasoning across code contextsBetter understanding of complex codebasesReliable performance across iterative development cyclesWhether you’re building features, refactoring existing modules, or debugging tricky issues, Sonnet 4.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-04">
+                <a href="https://www.docker.com/blog/announcing-docker-hardened-system-packages/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Announcing Docker Hardened System Packages
+                </a>
+                <p class="mb-1 small text-light">io has moved its production infrastructure to DHI, they share why and how in this recent webinar Medplum, an open-source electronic health records platform (managing data of 20+ million patients) has now standardized to DHI Adobe uses DHI because of great alignment with its security posture and d...</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-04">
+                <a href="https://www.redhat.com/en/blog/whats-new-red-hat-openshift-ai-33-ui-moving-pilot-production" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] What’s new with Red Hat OpenShift AI 3.3 UI: Moving from pilot to production
+                </a>
+                <p class="mb-1 small text-light">With our previous release of Red Hat OpenShift AI, we established a solid foundation for your enterprise AI infrastructure. Today, with the release of OpenShift AI 3.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-04">
+                <a href="https://www.redhat.com/en/blog/speed-trust-how-global-leaders-are-moving-ai-lab-lifecycle" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] The speed of trust: How global leaders are moving AI from lab to lifecycle
+                </a>
+                <p class="mb-1 small text-light">In the enterprise world, the AI hype has officially met the reality check. Organizations are no longer asking if AI can help; they are asking how fast it can deliver value without breaking the bank or the infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-03-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-04">
+                <a href="https://www.redhat.com/en/blog/scaling-earth-and-space-ai-models-red-hat-ai-inference-server-and-red-hat-openshift-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Scaling Earth and space AI models with Red Hat AI Inference Server and Red Hat OpenShift AI
+                </a>
+                <p class="mb-1 small text-light">Enterprises can now serve Earth and space AI models—like those developed by NASA and IBM—on Red Hat AI Inference Server, with autoscaling on Red Hat OpenShift AI.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-03-04
                     
                 </small>
             </li>

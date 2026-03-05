@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - March 05, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - March 05, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for March 05, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-03-05">2026-03-05 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-03-05 08:13:08
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,254 +128,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-05">
-                <a href="https://www.reddit.com/r/devops/comments/1rijpmf/integrating_ai_for_devops_and_best_practices/" target="_blank" class="fw-bold text-decoration-none">
-                    Integrating AI for DevOps and Best Practices you've found???
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-03-05">
+                <a href="https://roboflow.com/careers" target="_blank" class="fw-bold text-decoration-none">
+                    Roboflow (YC S20) Is Hiring a Security Engineer for AI Infra
                 </a>
-                <p class="mb-1 small text-light">Ok, So I've been in DevOps space for awhile and as a manager for 5 years. I started out learning DevOps through IAC and then platform engineering.</p>
+                <p class="mb-1 small text-light">Article URL: https://roboflow.com/careers Comments URL: https://news.ycombinator.com/item?id=47251163 Points: 0 # Comments: 0</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-05">
-                <a href="https://www.docker.com/blog/docker-model-runner-vllm-metal-macos/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Model Runner Brings vLLM to macOS with Apple Silicon
-                </a>
-                <p class="mb-1 small text-light">Docker Model Runner now supports vllm-metal, a new backend that brings vLLM inference to macOS using Apple Silicon’s Metal GPU. This allows you to: Develop & Test Locally: Build your vLLM-based applications on the same machine you use for coding.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-05">
-                <a href="https://www.redhat.com/en/blog/open-data-and-ai-resilience-premium" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Open data and the AI resilience premium
-                </a>
-                <p class="mb-1 small text-light">For many large companies, AI is on every agenda, yet many leaders are still trying to make sense of what to do next. Instead, they are focusing on what you might call a resilience advantage: working in open, collaborative networks that increase streng.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-05">
-                <a href="https://about.gitlab.com/blog/10-ai-prompts-to-speed-your-teams-software-delivery/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] 10 AI prompts to speed your team’s software delivery
-                </a>
-                <p class="mb-1 small text-light">Each prompt addresses a specific slowdown that emerges when individual productivity increases without corresponding improvements in team processes. This prompt enables developers to find and fix security issues before creating an MR, eliminating the back and forth that delays deployments.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-05">
-                <a href="https://about.gitlab.com/blog/how-gitlab-built-a-security-control-framework-from-scratch/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] How GitLab built a security control framework from scratch
-                </a>
-                <p class="mb-1 small text-light">GitLab's Security Compliance team discovered that existing security control frameworks lacked the customization to fit the platform's multi-product, cloud-native environment.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-05">
-                <a href="https://about.gitlab.com/blog/ai-can-detect-vulnerabilities-but-who-governs-risk/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] AI can detect vulnerabilities, but who governs risk?
-                </a>
-                <p class="mb-1 small text-light">The question on everyone's mind: If AI can write code and secure it, is application security about to become obsolete. As an intelligent orchestration platform, GitLab is built to address this problem.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-05">
-                <a href="https://about.gitlab.com/blog/gitlab-duo-agent-platform-with-claude-accelerates-development/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab Duo Agent Platform with Claude accelerates development
-                </a>
-                <p class="mb-1 small text-light">In this use case, the issue title is the desired application and the issue description lists its specifications. Create pipeline to build container imageThe final use case addresses a common gap: deployment automation.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-05">
-                <a href="https://aws.amazon.com/blogs/aws/introducing-openclaw-on-amazon-lightsail-to-run-your-autonomous-private-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Introducing OpenClaw on Amazon Lightsail to run your autonomous private AI agents
-                </a>
-                <p class="mb-1 small text-light">To enable Bedrock API access, copy the script in the Getting started tab and run copied script into the AWS CloudShell terminal. Things to know Here are key considerations to know about this feature: Permission — You can customize AWS IAM permissions granted to your OpenClaw instance.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-05">
-                <a href="https://aws.amazon.com/blogs/aws/aws-security-hub-extended-offers-full-stack-enterprise-security-with-curated-partner-solutions/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Security Hub Extended offers full-stack enterprise security with curated partner solutions
-                </a>
-                <p class="mb-1 small text-light">At re:Invent 2025, we introduced a completely re-imagined AWS Security Hub that unifies AWS security services, including Amazon GuardDuty and Amazon Inspector into a single experience. Security findings from all solutions are automatically consolidated in AWS Security Hub.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-05">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-4-6-in-amazon-bedrock-kiro-in-govcloud-regions-new-agent-plugins-and-more-february-23-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: Claude Sonnet 4.6 in Amazon Bedrock, Kiro in GovCloud Regions, new Agent Plugins, and more (February 23, 2026)
-                </a>
-                <p class="mb-1 small text-light">Server-Side Encryption by default in Amazon Aurora – Amazon Aurora further strengthens your security posture by automatically applying server-side encryption by default to all new databases clusters using AWS-owned keys.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-05">
-                <a href="https://kubernetes.io/blog/2026/02/12/sig-architecture-api-spotlight/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Spotlight on SIG Architecture: API Governance
-                </a>
-                <p class="mb-1 small text-light">Kubernetes uses APIs everywhere -- externally and internally -- so API Governance is critical to maintaining that integrity. JL: API Machinery provides the actual code and tools that people build APIs on.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-05">
-                <a href="https://kubernetes.io/blog/2026/01/30/new-cgroup-v1-to-v2-cpu-conversion-formula/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] New Conversion from cgroup v1 CPU Shares to v2 CPU Weight
-                </a>
-                <p class="mb-1 small text-light">This enhancement addresses critical issues with CPU priority allocation for Kubernetes workloads when running on systems with cgroup v2. While this approach is simple, the linear mapping imposes a few significant problems and impacts both performance and configuration granularity.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-05">
-                <a href="https://www.cncf.io/blog/2026/03/04/ospology-day-cloud-native-at-kubecon-cloudnativecon-europe/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] OSPOlogy Day Cloud Native at KubeCon + CloudNativeCon Europe
-                </a>
-                <p class="mb-1 small text-light">Peer mentoring and group discussions on cloud strategy management Cloud native management has matured quickly.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-05">
-                <a href="https://blog.cloudflare.com/attack-signature-detection/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Always-on detections: eliminating the WAF “log versus block” trade-off
-                </a>
-                <p class="mb-1 small text-light">Attack Signature Detection Compared to traditional, rule-based systems like the Cloudflare Managed Ruleset, the new detection offers a substantial advancement in web application security.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-05">
-                <a href="https://blog.cloudflare.com/mandatory-authentication-mfa/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Mind the gap: new tools for continuous enforcement from boot to login
-                </a>
-                <p class="mb-1 small text-light">You lose visibility, and your security posture reverts to whatever the local machine allows. Cloudflare’s independent MFA is in closed beta with new customers being onboarded each week.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-05">
-                <a href="https://blog.cloudflare.com/deepfakes-insider-threats-identity-verification/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Defeating the deepfake: stopping laptop farms and insider threats
-                </a>
-                <p class="mb-1 small text-light">In our 2026 Cloudflare Threat Report, we highlight a rapidly accelerating threat vector: the rise of "remote IT worker" fraud. Cloudflare then grants or denies access to the application based on the user’s identity and the Access policies.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-05">
-                <a href="https://blog.cloudflare.com/gateway-authorization-proxy-identity-aware-policies/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Moving from license plates to badges: the Gateway Authorization Proxy
-                </a>
-                <p class="mb-1 small text-light">The problem: sometimes IP addresses aren't enough Back in 2022, we released proxy endpoints that allowed you to route traffic through Cloudflare to apply filtering rules.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-05">
-                <a href="https://blog.cloudflare.com/adaptive-access-user-risk-scoring/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Stop reacting to breaches and start preventing them with User Risk Scoring
-                </a>
-                <p class="mb-1 small text-light">We built our SASE platform, Cloudflare One, to stop that cycle. "Cloudflare’s risk engine continuously evaluates telemetry from across the SASE platform.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-03-05">
-                <a href="https://dropbox.tech/culture/insights-from-our-executive-roundtable-on-ai-and-engineering-productivity" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Insights from our executive roundtable on AI and engineering productivity
-                </a>
-                <p class="mb-1 small text-light">Improving engineering productivity is crucial to the work we do at Dropbox. The more quickly we can deliver high-quality features to our customers, the more value they can get from our products.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-05">
-                <a href="https://www.pulumi.com/blog/how-we-built-a-distributed-work-scheduling-system-for-pulumi-cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] How We Built a Distributed Work Scheduling System for Pulumi Cloud
-                </a>
-                <p class="mb-1 small text-light">Pulumi Cloud orchestrates a growing number of workflow types: Deployments, Insights discovery scans, and policy evaluations. The runner executes the scan locally on the customer’s infrastructure, talking directly to the cloud provider APIs.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-05">
-                <a href="https://www.pulumi.com/blog/handling-deployment-errors/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] New in Pulumi IaC: `onError` Resource Hook
-                </a>
-                <p class="mb-1 small text-light">The example below shows how: import * as pulumi from "@pulumi/pulumi"; const notStartedRetryHook = new pulumi. ErrorHook( "retry-when-not-started", async (args) => { const latestError = args.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
+                    Hacker News | 2026-03-05
                     
                 </small>
             </li>
@@ -370,7 +147,7 @@
                 <p class="mb-1 small text-light">Many of the improvements are also in various stages of deployment. Oddly, multiple uncontextualized modalities hurts the clip popularity ranking model, but adding contextualization significantly improves performance.</p>
                 <small class="text-secondary">
                     
-                    Netflix
+                    Netflix | 2026-03-05
                     
                 </small>
             </li>
@@ -382,7 +159,7 @@
                 <p class="mb-1 small text-light">They don’t understand your containers, your images, or your specific setup. Build and containerize – Take this application and make it run in Docker.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2026-03-05
                     
                 </small>
             </li>
@@ -394,19 +171,259 @@
                 <p class="mb-1 small text-light">The latest updates to Red Hat OpenShift bring significant enhancements to monitoring and troubleshooting directly within OpenShift. It removes the tool sprawl typically associated with Kubernetes, replacing fragmented dashboards with a centralized, hardened, and supported platform.</p>
                 <small class="text-secondary">
                     
-                    Red Hat
+                    Red Hat | 2026-03-05
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-03-05">
-                <a href="https://roboflow.com/careers" target="_blank" class="fw-bold text-decoration-none">
-                    Roboflow (YC S20) Is Hiring a Security Engineer for AI Infra
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-05">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-openclaw-on-amazon-lightsail-to-run-your-autonomous-private-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing OpenClaw on Amazon Lightsail to run your autonomous private AI agents
                 </a>
-                <p class="mb-1 small text-light">Article URL: https://roboflow.com/careers Comments URL: https://news.ycombinator.com/item?id=47251163 Points: 0 # Comments: 0</p>
+                <p class="mb-1 small text-light">To enable Bedrock API access, copy the script in the Getting started tab and run copied script into the AWS CloudShell terminal. Things to know Here are key considerations to know about this feature: Permission — You can customize AWS IAM permissions granted to your OpenClaw instance.</p>
                 <small class="text-secondary">
                     
-                    Hacker News
+                    Amazon AWS | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-05">
+                <a href="https://aws.amazon.com/blogs/aws/aws-security-hub-extended-offers-full-stack-enterprise-security-with-curated-partner-solutions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Security Hub Extended offers full-stack enterprise security with curated partner solutions
+                </a>
+                <p class="mb-1 small text-light">At re:Invent 2025, we introduced a completely re-imagined AWS Security Hub that unifies AWS security services, including Amazon GuardDuty and Amazon Inspector into a single experience. Security findings from all solutions are automatically consolidated in AWS Security Hub.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-05">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-4-6-in-amazon-bedrock-kiro-in-govcloud-regions-new-agent-plugins-and-more-february-23-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Claude Sonnet 4.6 in Amazon Bedrock, Kiro in GovCloud Regions, new Agent Plugins, and more (February 23, 2026)
+                </a>
+                <p class="mb-1 small text-light">Server-Side Encryption by default in Amazon Aurora – Amazon Aurora further strengthens your security posture by automatically applying server-side encryption by default to all new databases clusters using AWS-owned keys.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-05">
+                <a href="https://kubernetes.io/blog/2026/02/12/sig-architecture-api-spotlight/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on SIG Architecture: API Governance
+                </a>
+                <p class="mb-1 small text-light">Kubernetes uses APIs everywhere -- externally and internally -- so API Governance is critical to maintaining that integrity. JL: API Machinery provides the actual code and tools that people build APIs on.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-05">
+                <a href="https://kubernetes.io/blog/2026/01/30/new-cgroup-v1-to-v2-cpu-conversion-formula/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] New Conversion from cgroup v1 CPU Shares to v2 CPU Weight
+                </a>
+                <p class="mb-1 small text-light">This enhancement addresses critical issues with CPU priority allocation for Kubernetes workloads when running on systems with cgroup v2. While this approach is simple, the linear mapping imposes a few significant problems and impacts both performance and configuration granularity.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-05">
+                <a href="https://www.cncf.io/blog/2026/03/04/ospology-day-cloud-native-at-kubecon-cloudnativecon-europe/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] OSPOlogy Day Cloud Native at KubeCon + CloudNativeCon Europe
+                </a>
+                <p class="mb-1 small text-light">Peer mentoring and group discussions on cloud strategy management Cloud native management has matured quickly.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-05">
+                <a href="https://blog.cloudflare.com/attack-signature-detection/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Always-on detections: eliminating the WAF “log versus block” trade-off
+                </a>
+                <p class="mb-1 small text-light">Attack Signature Detection Compared to traditional, rule-based systems like the Cloudflare Managed Ruleset, the new detection offers a substantial advancement in web application security.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-05">
+                <a href="https://blog.cloudflare.com/mandatory-authentication-mfa/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Mind the gap: new tools for continuous enforcement from boot to login
+                </a>
+                <p class="mb-1 small text-light">You lose visibility, and your security posture reverts to whatever the local machine allows. Cloudflare’s independent MFA is in closed beta with new customers being onboarded each week.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-05">
+                <a href="https://blog.cloudflare.com/deepfakes-insider-threats-identity-verification/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Defeating the deepfake: stopping laptop farms and insider threats
+                </a>
+                <p class="mb-1 small text-light">In our 2026 Cloudflare Threat Report, we highlight a rapidly accelerating threat vector: the rise of "remote IT worker" fraud. Cloudflare then grants or denies access to the application based on the user’s identity and the Access policies.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-05">
+                <a href="https://blog.cloudflare.com/gateway-authorization-proxy-identity-aware-policies/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Moving from license plates to badges: the Gateway Authorization Proxy
+                </a>
+                <p class="mb-1 small text-light">The problem: sometimes IP addresses aren't enough Back in 2022, we released proxy endpoints that allowed you to route traffic through Cloudflare to apply filtering rules.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-05">
+                <a href="https://blog.cloudflare.com/adaptive-access-user-risk-scoring/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Stop reacting to breaches and start preventing them with User Risk Scoring
+                </a>
+                <p class="mb-1 small text-light">We built our SASE platform, Cloudflare One, to stop that cycle. "Cloudflare’s risk engine continuously evaluates telemetry from across the SASE platform.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-03-05">
+                <a href="https://dropbox.tech/culture/insights-from-our-executive-roundtable-on-ai-and-engineering-productivity" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Insights from our executive roundtable on AI and engineering productivity
+                </a>
+                <p class="mb-1 small text-light">Improving engineering productivity is crucial to the work we do at Dropbox. The more quickly we can deliver high-quality features to our customers, the more value they can get from our products.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-05">
+                <a href="https://www.pulumi.com/blog/how-we-built-a-distributed-work-scheduling-system-for-pulumi-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] How We Built a Distributed Work Scheduling System for Pulumi Cloud
+                </a>
+                <p class="mb-1 small text-light">Pulumi Cloud orchestrates a growing number of workflow types: Deployments, Insights discovery scans, and policy evaluations. The runner executes the scan locally on the customer’s infrastructure, talking directly to the cloud provider APIs.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-05">
+                <a href="https://www.pulumi.com/blog/handling-deployment-errors/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] New in Pulumi IaC: `onError` Resource Hook
+                </a>
+                <p class="mb-1 small text-light">The example below shows how: import * as pulumi from "@pulumi/pulumi"; const notStartedRetryHook = new pulumi. ErrorHook( "retry-when-not-started", async (args) => { const latestError = args.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-05">
+                <a href="https://www.reddit.com/r/devops/comments/1rijpmf/integrating_ai_for_devops_and_best_practices/" target="_blank" class="fw-bold text-decoration-none">
+                    Integrating AI for DevOps and Best Practices you've found???
+                </a>
+                <p class="mb-1 small text-light">Ok, So I've been in DevOps space for awhile and as a manager for 5 years. I started out learning DevOps through IAC and then platform engineering.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-05">
+                <a href="https://www.docker.com/blog/docker-model-runner-vllm-metal-macos/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Model Runner Brings vLLM to macOS with Apple Silicon
+                </a>
+                <p class="mb-1 small text-light">Docker Model Runner now supports vllm-metal, a new backend that brings vLLM inference to macOS using Apple Silicon’s Metal GPU. This allows you to: Develop & Test Locally: Build your vLLM-based applications on the same machine you use for coding.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-05">
+                <a href="https://www.redhat.com/en/blog/open-data-and-ai-resilience-premium" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Open data and the AI resilience premium
+                </a>
+                <p class="mb-1 small text-light">For many large companies, AI is on every agenda, yet many leaders are still trying to make sense of what to do next. Instead, they are focusing on what you might call a resilience advantage: working in open, collaborative networks that increase streng.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-05">
+                <a href="https://about.gitlab.com/blog/10-ai-prompts-to-speed-your-teams-software-delivery/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] 10 AI prompts to speed your team’s software delivery
+                </a>
+                <p class="mb-1 small text-light">Each prompt addresses a specific slowdown that emerges when individual productivity increases without corresponding improvements in team processes. This prompt enables developers to find and fix security issues before creating an MR, eliminating the back and forth that delays deployments.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-05">
+                <a href="https://about.gitlab.com/blog/how-gitlab-built-a-security-control-framework-from-scratch/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] How GitLab built a security control framework from scratch
+                </a>
+                <p class="mb-1 small text-light">GitLab's Security Compliance team discovered that existing security control frameworks lacked the customization to fit the platform's multi-product, cloud-native environment.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-05">
+                <a href="https://about.gitlab.com/blog/ai-can-detect-vulnerabilities-but-who-governs-risk/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] AI can detect vulnerabilities, but who governs risk?
+                </a>
+                <p class="mb-1 small text-light">The question on everyone's mind: If AI can write code and secure it, is application security about to become obsolete. As an intelligent orchestration platform, GitLab is built to address this problem.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-05">
+                <a href="https://about.gitlab.com/blog/gitlab-duo-agent-platform-with-claude-accelerates-development/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab Duo Agent Platform with Claude accelerates development
+                </a>
+                <p class="mb-1 small text-light">In this use case, the issue title is the desired application and the issue description lists its specifications. Create pipeline to build container imageThe final use case addresses a common gap: deployment automation.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-05
                     
                 </small>
             </li>

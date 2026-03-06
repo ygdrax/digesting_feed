@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - March 06, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - March 06, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for March 06, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-03-06">2026-03-06 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    13 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Slack Engineering">Slack Engineering</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-03-06">
+                <a href="https://engineering.fb.com/2026/03/02/data-infrastructure/investing-in-infrastructure-metas-renewed-commitment-to-jemalloc/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Investing in Infrastructure: Meta’s Renewed Commitment to jemalloc
+                </a>
+                <p class="mb-1 small text-light">Meta recognizes the long-term benefits of jemalloc, a high-performance memory allocator, in its software infrastructure. With the leverage jemalloc provides however, it can be tempting to realize some short-term benefit.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-06">
+                <a href="https://www.cncf.io/blog/2026/03/02/kubecon-cloudnativecon-europe-2026-co-located-event-deep-dive-kubernetes-on-edge-day/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] KubeCon + CloudNativeCon Europe 2026 Co-located Event Deep Dive: Kubernetes on Edge Day
+                </a>
+                <p class="mb-1 small text-light">Submissions span artificial intelligence at the edge, telco deployments, the role and impact of data on Kubernetes, and the importance of observability at scale for distributed systems.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-03-06">
+                <a href="https://slack.engineering/advancing-our-chef-infrastructure-safety-without-disruption/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Advancing Our Chef Infrastructure: Safety Without Disruption
+                </a>
+                <p class="mb-1 small text-light">By contrast, updating prod-1 frequently with the latest version allows us to detect issues closer to when they were introduced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-06">
+                <a href="https://www.pulumi.com/blog/self-hosted-insights/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Run Pulumi Insights on Your Own Infrastructure
+                </a>
+                <p class="mb-1 small text-light">Insights at a glance Insights provides two complementary capabilities that together form a governance lifecycle for your cloud infrastructure. This enables you to map out your cloud estate, evaluate compliance, and then remediate any issues uncovered by policy.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-06">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1rm65vj/the_great_migration_why_every_ai_platform_is/" target="_blank" class="fw-bold text-decoration-none">
+                    The great migration: Why every AI platform is converging on Kubernetes
+                </a>
+                <p class="mb-1 small text-light">Three eras, one platform #Kubernetes https://www.cncf.io/blog/2026/03/05/the-great-migration-why-every-ai-platform-is-converging-on-kubernetes/ https://preview.redd.it/ghn4sp1m9dng1.png?width=1200&format=png&auto=webp&s=1527f015fd26cdbfa892f41246aac88cdcfec695 submitted by /u/Electronic_Role_5981</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-06">
+                <a href="https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling LLM Post-Training at Netflix
+                </a>
+                <p class="mb-1 small text-light">At the base is Mako, Netflix’s internal ML compute platform, which provisions GPUs on AWS. Staying close to the frontier required infrastructure that could move from “offline training loop” to “multi-stage, on-policy orchestration.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-06">
+                <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-series-explore-new-resources-for-building-a-stronger-more-efficient-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Azure IaaS series: Explore new resources for building a stronger, more efficient infrastructure
+                </a>
+                <p class="mb-1 small text-light">It depends on an infrastructure platform that can deliver the right combination of performance, resiliency, security, scalability, and cost efficiency—together.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-06">
+                <a href="http://aka.ms/MicrosoftSovereignCloudDisconnectedBlog" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft Sovereign Cloud adds governance, productivity, and support for large AI models securely running even when completely disconnected
+                </a>
+                <p class="mb-1 small text-light">Azure Local runs critical infrastructure locally, even when disconnected For workloads with specialized requirements, Azure Local provides the on-premises foundation with consistent Azure governance and policy controls.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-06">
+                <a href="https://www.docker.com/blog/from-the-captains-chair-kristiyan-velkov/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] From the Captain’s Chair: Kristiyan Velkov
+                </a>
+                <p class="mb-1 small text-light">Many front-end developers were avoiding Docker because they believed it was only meant for back-end or DevOps engineers. js application and walking through how to containerize and deploy it to AWS, with practical code examples and clear diagrams.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-03-06">
+                <a href="https://snyk.io/blog/the-ai-security-engineer/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The Rise of the AI Security Engineer: A New Discipline for an AI-Native World
+                </a>
+                <p class="mb-1 small text-light">As autonomous AI systems transform business, a new profession is emerging to protect them: the AI Security Engineer. Discover why this specialized discipline is becoming a survival imperative for organizations in an AI-native world.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-03-06">
+                <a href="https://engineering.fb.com/2026/02/24/data-center-engineering/rrcclx-innovating-gpu-communications-amd-platforms-meta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] RCCLX: Innovating GPU Communications on AMD Platforms
+                </a>
+                <p class="mb-1 small text-light">These features provide significant performance improvements on AMD platforms and we are excited to share this with the community. Torchcomms allows users to have a single API for communication for different platforms.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-03-06">
+                <a href="https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters
+                </a>
+                <p class="mb-1 small text-light">BAG allows us to seamlessly connect thousands of GPUs across multiple data centers and regions. Building Prometheus and Beyond As a technology, BAG is playing an important role in Meta’s next generation of AI infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-06">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-partnership-aws-elemental-inference-strands-labs-and-more-march-2-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: OpenAI partnership, AWS Elemental Inference, Strands Labs, and more (March 2, 2026)
+                </a>
+                <p class="mb-1 small text-light">OpenAI-compatible Projects API in Amazon Bedrock — Projects API provides application-level isolation for your generative AI workloads using OpenAI-compatible APIs in the Mantle inference engine in Amazon Bedrock.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-06">
+                <a href="https://kubernetes.io/blog/2026/02/27/ingress-nginx-before-you-migrate/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Before You Migrate: Five Surprising Ingress-NGINX Behaviors You Need to Know
+                </a>
+                <p class="mb-1 small text-light">com http: paths: - path: "/IP" pathType: Exact backend: service: name: httpbin port: number: 8000 --- apiVersion: networking. You can use Istio purely as Gateway API controller with no other service mesh features.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-06">
+                <a href="https://kubernetes.io/blog/2026/02/03/introducing-node-readiness-controller/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Introducing Node Readiness Controller
+                </a>
+                <p class="mb-1 small text-light">It provides three primary advantages: Custom Readiness Definitions: Define what ready means for your specific platform. Core concepts and features The controller centers around the NodeReadinessRule (NRR) API, which allows you to define declarative gates for your nodes.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-06">
+                <a href="https://blog.cloudflare.com/client-dynamic-path-mtu-discovery/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Ending the "silent drop": how Dynamic Path MTU Discovery makes the Cloudflare One Client more resilient
+                </a>
+                <p class="mb-1 small text-light">The “modern security meets legacy infrastructure” challenge To understand the solution, we have to look at how modern security protocols interact with the diversity of global Internet infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-06">
+                <a href="https://blog.cloudflare.com/automatic-return-routing-ip-overlap/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] How Automatic Return Routing solves IP overlap
+                </a>
+                <p class="mb-1 small text-light">The problem arises when these sites try to talk to the Internet or a data center through Cloudflare. We saw immediate 3-5x performance improvements for Cloudflare One Clients, as you can see in the graph above.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-06">
+                <a href="https://blog.cloudflare.com/faster-sase-proxy-mode-quic/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] A QUICker SASE client: re-building Proxy Mode
+                </a>
+                <p class="mb-1 small text-light">In the early days of developing the device client for our SASE platform, Cloudflare One, we prioritized universal compatibility. To take advantage of these performance gains, ensure you are running the latest version of the Cloudflare One Client.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-03-06">
+                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Streamlining Security Investigations with Agents
+                </a>
+                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-03-06">
+                <a href="https://dropbox.tech/machine-learning/how-low-bit-inference-enables-efficient-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How low-bit inference enables efficient AI
+                </a>
+                <p class="mb-1 small text-light">And making this technology accessible to individuals and businesses means tackling new challenges around efficiency and resource use. This scaling behavior plays a key role in improving both performance and efficiency when running large-scale AI workloads.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-06">
+                <a href="https://www.pulumi.com/blog/terraform-state-backend-pulumi-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Now in Public Beta: Store Terraform State in Pulumi Cloud
+                </a>
+                <p class="mb-1 small text-light">Teams that prefer Terraform can keep using it, while platform engineers get centralized visibility across the entire infrastructure estate. How it works Pulumi Cloud implements the Terraform remote backend API.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-06">
+                <a href="https://www.reddit.com/r/devops/comments/1rjfkzh/research_ideas_on_generative_ai_and_expertise_in/" target="_blank" class="fw-bold text-decoration-none">
+                    Research ideas on Generative AI and expertise in tech (cloud as a case study) looking for thoughts
+                </a>
+                <p class="mb-1 small text-light">• What new challenges are emerging for experienced engineers because of GenAI. I’m particularly interested in using the cloud computing industry as a case study.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-06">
+                <a href="https://netflixtechblog.com/optimizing-recommendation-systems-with-jdks-vector-api-30d2830401ec?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Optimizing Recommendation Systems with JDK’s Vector API
+                </a>
+                <p class="mb-1 small text-light">That gives us a clean operational story: services can opt in to the Vector API for maximum performance, but the system remains safe and predictable without it. Have you tried the Vector API in a real service yet.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-06">
+                <a href="https://netflixtechblog.medium.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] DataJunction as Netflix’s answer to the missing piece of the modern data stack
+                </a>
+                <p class="mb-1 small text-light">by Olek Gorajek, Samuel Redai, Yian ShangIntroOur Netflix journey from data to dashboards, particularly within the space of the experimentation platform, always presented a unique set of challenges.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-03-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-06">
+                <a href="https://netflixtechblog.com/automating-rds-postgres-to-aurora-postgres-migration-261ca045447f?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Automating RDS Postgres to Aurora Postgres Migration
+                </a>
+                <p class="mb-1 small text-light">Aurora’s cloud-native, distributed architecture provided clear advantages in scalability, high availability, and elasticity compared to traditional single-node PostgreSQL deployments.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-03-06
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

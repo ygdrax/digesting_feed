@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - March 07, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - March 07, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for March 07, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-03-07">2026-03-07 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    16 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="Hacker News">Hacker News</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Sentry">Sentry</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-03-07">
+                <a href="https://github.com/c0m4r/kula" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: Kula – Lightweight, self-contained Linux server monitoring tool
+                </a>
+                <p class="mb-1 small text-light">I needed something that would allow for real-time monitoring, and installation is as simple as dropping a single file and running it. Kula is the Polish word for "ball," as in "crystal ball.</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-07">
+                <a href="https://www.hashicorp.com/blog/adopting-hashicorp-vaults-transit-engine-high-performance-envelope-encryption-ariso-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] High-performance envelope encryption at Ariso.ai with Vault
+                </a>
+                <p class="mb-1 small text-light">The challenge Prior state Before Vault, we relied on application-level encryption with manually managed keys stored in environment variables.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-07">
+                <a href="https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Ingress NGINX: Statement from the Kubernetes Steering and Security Response Committees
+                </a>
+                <p class="mb-1 small text-light">In March 2026, Kubernetes will retire Ingress NGINX, a piece of critical infrastructure for about half of cloud native environments. There will be no more releases for bug fixes, security patches, or any updates of any kind after the project is retired.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-07">
+                <a href="https://blog.cloudflare.com/unified-data-security/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] From the endpoint to the prompt: a unified data security vision in Cloudflare One
+                </a>
+                <p class="mb-1 small text-light">Cloudflare One already helps protect data in transit with Gateway and DLP, and provides visibility and control at rest through CASB and its API integrations. To get started, explore Cloudflare One or contact our team to learn more about the platform and these new features.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-07">
+                <a href="https://www.pulumi.com/blog/token-efficiency-vs-cognitive-efficiency-choosing-iac-for-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Token Efficiency vs Cognitive Efficiency: Choosing IaC for AI Agents
+                </a>
+                <p class="mb-1 small text-light">The Terraform refactoring runs all triggered self-repair because the restructured HCL modules had issues that terraform plan caught. 43% of DevOps teams need four or more deployment iterations before infrastructure is production-ready.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-07">
+                <a href="https://www.docker.com/blog/women-in-ai-cecilia-liu-docker-mcp-strategy/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Celebrating Women in AI: 3 Questions with Cecilia Liu on Leading Docker’s MCP Strategy
+                </a>
+                <p class="mb-1 small text-light">From shaping product direction to driving AI innovation, Cecilia plays a key role in defining how Docker enables secure, scalable AI tooling. Cecilia leads product management for Docker’s MCP Catalog and Toolkit, our solution for running MCP servers securely and at scale through containerization.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-07">
+                <a href="https://www.docker.com/blog/openwebui-docker-model-runner/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Open WebUI + Docker Model Runner: Self-Hosted Models, Zero Configuration
+                </a>
+                <p class="mb-1 small text-light">With this update, Open WebUI automatically detects and connects to Docker Model Runner running at localhost:12434. Get started with Docker Model Runner with a simple hello GenAI application.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-07">
+                <a href="https://www.hashicorp.com/blog/everything-as-code-for-your-security-lifecycle" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Everything as code for your security lifecycle
+                </a>
+                <p class="mb-1 small text-light">You can also use Terraform with a service networking platform like Consul to help applications find and talk to each other reliably and securely across on-premises, hybrid, and multi-cloud environments.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-07">
+                <a href="https://www.hashicorp.com/blog/building-day-2-ops-guardrails-with-terraform-and-packer" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Building Day 2 ops guardrails with Terraform and Packer
+                </a>
+                <p class="mb-1 small text-light">Cloud waste now averages 32% of companies' cloud budgets, and a significant percentage of cloud security incidents stem from misconfigurations that are often introduced due to a lack of guardrails.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-07">
+                <a href="https://www.cncf.io/blog/2026/03/06/kubecon-cloudnativecon-europe-2026-co-located-event-deep-dive-keycloakcon/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] KubeCon + CloudNativeCon Europe 2026 Co-located Event Deep Dive: KeycloakCon
+                </a>
+                <p class="mb-1 small text-light">As cloud native architectures span more clusters, services, and trust domains, identity and access management have become foundational infrastructure rather than an application-level concern.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-07">
+                <a href="https://www.cncf.io/blog/2026/03/03/how-to-get-the-most-out-of-kubecon-cloudnativecon-europe-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] How to Get the Most Out of KubeCon + CloudNativeCon Europe 2026
+                </a>
+                <p class="mb-1 small text-light">Solution Showcase and Project Pavilion A major part of KubeCon + CloudNativeCon happens outside the session rooms. How We Scaled Our Platform With Just Terraform and ArgoCD”Haven’t registered for KubeCon + CloudNativeCon yet.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-03-07">
+                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
+                </a>
+                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-07">
+                <a href="https://www.reddit.com/r/devops/comments/1rmp4f9/handson_with_ovhcloud_managed_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    Hands-on with OVHcloud Managed Kubernetes
+                </a>
+                <p class="mb-1 small text-light">Been testing EU managed k8s providers one by one for eucloudcost. com/mixxor/opentofu-kubernetes-ovhcloud Full writeup in comments.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-07">
+                <a href="https://www.reddit.com/r/devops/comments/1rjziax/trivy_the_container_scanning_tool_security/" target="_blank" class="fw-bold text-decoration-none">
+                    Trivy (the container scanning tool) security incident 2026-03-01
+                </a>
+                <p class="mb-1 small text-light">com/aquasecurity/trivy/discussions/10265 Does this kind of thing scare this shit out of anyone else. Apparently a GitHub PAT was compromised and a rogue Trivy VSCode extension was released.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-07">
+                <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
+                </a>
+                <p class="mb-1 small text-light">At Netflix, our goal is to entertain the world, which means we must speak the world’s languages. This data helps us understand how subtitle characteristics (e.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-07">
+                <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unlocking-document-understanding-with-mistral-document-ai-in-microsoft-foundry/4495664" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Unlocking document understanding with Mistral Document AI in Microsoft Foundry
+                </a>
+                <p class="mb-1 small text-light">Tasks that took days can be done in minutes, accelerating core business processesAccuracy and consistency: With 99 %+ recognition accuracy and deep layout understanding, Mistral delivers cleaner data and fewer downstream errors – essential in compliance-critical or analytics-driven operationsCost...</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-07">
+                <a href="https://azure.microsoft.com/en-us/blog/instant-access-incremental-snapshots-restore-without-waiting/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Instant access incremental snapshots: Restore without waiting
+                </a>
+                <p class="mb-1 small text-light">Newly restored disks also deliver near-full performance from the start, allowing applications to resume operations immediately. For mission-critical workloads, speed matters—especially when every minute of downtime or degraded performance has real business impact.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-07">
+                <a href="https://www.docker.com/blog/announcing-docker-hardened-system-packages/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Announcing Docker Hardened System Packages
+                </a>
+                <p class="mb-1 small text-light">io has moved its production infrastructure to DHI, they share why and how in this recent webinar Medplum, an open-source electronic health records platform (managing data of 20+ million patients) has now standardized to DHI Adobe uses DHI because of great alignment with its security posture and d...</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-07">
+                <a href="https://www.redhat.com/en/blog/why-future-ai-depends-portable-open-pytorch-ecosystem" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Why the future of AI depends on a portable, open PyTorch ecosystem
+                </a>
+                <p class="mb-1 small text-light">This blog is an adaptation of our keynote presentation at PyTorch Day India. However, as the generative AI era continues, enterprises face a new version of an old challenge.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-07">
+                <a href="https://www.redhat.com/en/blog/mcp-security-implementing-robust-authentication-and-authorization" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] MCP security: Implementing robust authentication and authorization
+                </a>
+                <p class="mb-1 small text-light">As agents move from passive chatbots to autonomous actors capable of planning and executing tasks, MCP provides a structured, interoperable interface layer that enables tool invocation with enhanced security, controlled access to external systems, and more consistent policy enforcement across het...</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-07">
+                <a href="https://about.gitlab.com/blog/complete-guide-to-gitlab-container-scanning/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] A complete guide to GitLab Container Scanning
+                </a>
+                <p class="mb-1 small text-light">Why container scanning mattersSecurity vulnerabilities in container images create risk throughout your application lifecycle.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-07">
+                <a href="https://about.gitlab.com/blog/extend-gitlab-duo-agent-platform-connect-any-tool-with-mcp/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Extend GitLab Duo Agent Platform: Connect any tool with MCP
+                </a>
+                <p class="mb-1 small text-light">Query issues, update tickets, and sync your workflow — all through natural language, without ever leaving your IDE.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-03-07">
+                <a href="https://blog.sentry.io/ai-driven-caching-strategies-instrumentation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] AI-driven caching strategies and instrumentation
+                </a>
+                <p class="mb-1 small text-light">Most bugs, edge cases, and performance issues won't show up until after launch, when real users start hammering your application. Improving hit rates by caching more pages only helps if hot keys stay resident.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-03-07">
+                <a href="https://snyk.io/blog/claude-code-remediation-loop-evolution/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Claude Code Security: A Welcome Evolution in the Remediation Loop
+                </a>
+                <p class="mb-1 small text-light">Anthropic's Claude Code Security marks a major shift in vulnerability discovery, but AI-driven development requires more than just reasoning to remain secure. Learn how Snyk’s AI Security Fabric integrates with Claude to close the loop between finding vulnerabilities and fixing them at scale.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-03-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-03-07">
+                <a href="https://engineering.atspotify.com/2026/2/our-multi-agent-architecture-for-smarter-advertising/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Our Multi-Agent Architecture for Smarter Advertising
+                </a>
+                <p class="mb-1 small text-light">When we kicked this off, we weren’t trying to ship an “AI feature.” We were trying to fix a structural... The post Our Multi-Agent Architecture for Smarter Advertising appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-03-07
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

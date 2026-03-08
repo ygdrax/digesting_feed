@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - March 08, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - March 08, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for March 08, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-03-08">2026-03-08 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    14 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="Hacker News">Hacker News</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-03-08">
+                <a href="https://cacm.acm.org/research/a-decade-of-docker-containers/" target="_blank" class="fw-bold text-decoration-none">
+                    A decade of Docker containers
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://cacm.acm.org/research/a-decade-of-docker-containers/ Comments URL: https://news.ycombinator.com/item?id=47289311 Points: 286 # Comments: 200</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-08">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1rnsc9x/cloud_cost_monitoring_and_management_platforms/" target="_blank" class="fw-bold text-decoration-none">
+                    Cloud Cost Monitoring and Management Platforms
+                </a>
+                <p class="mb-1 small text-light">What is everyone using to monitor, report and manage cost of cloud platforms? Have used VMWare CloudHealth and Nutanix Beam in the past. Obviously VMWare leaves a dirty taste in the mouth, but keen to see what others are currently using. submitted by /u/Lethy_au</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-08">
+                <a href="https://netflixtechblog.com/mediafm-the-multimodal-ai-foundation-for-media-understanding-at-netflix-e8c28df82e2d?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] MediaFM: The Multimodal AI Foundation for Media Understanding at Netflix
+                </a>
+                <p class="mb-1 small text-light">Many of the improvements are also in various stages of deployment. Oddly, multiple uncontextualized modalities hurts the clip popularity ranking model, but adding contextualization significantly improves performance.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-08">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-openclaw-on-amazon-lightsail-to-run-your-autonomous-private-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing OpenClaw on Amazon Lightsail to run your autonomous private AI agents
+                </a>
+                <p class="mb-1 small text-light">To enable Bedrock API access, copy the script in the Getting started tab and run copied script into the AWS CloudShell terminal. Things to know Here are key considerations to know about this feature: Permission — You can customize AWS IAM permissions granted to your OpenClaw instance.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-08">
+                <a href="https://aws.amazon.com/blogs/aws/aws-security-hub-extended-offers-full-stack-enterprise-security-with-curated-partner-solutions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Security Hub Extended offers full-stack enterprise security with curated partner solutions
+                </a>
+                <p class="mb-1 small text-light">At re:Invent 2025, we introduced a completely re-imagined AWS Security Hub that unifies AWS security services, including Amazon GuardDuty and Amazon Inspector into a single experience. Security findings from all solutions are automatically consolidated in AWS Security Hub.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-08">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-4-6-in-amazon-bedrock-kiro-in-govcloud-regions-new-agent-plugins-and-more-february-23-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Claude Sonnet 4.6 in Amazon Bedrock, Kiro in GovCloud Regions, new Agent Plugins, and more (February 23, 2026)
+                </a>
+                <p class="mb-1 small text-light">Server-Side Encryption by default in Amazon Aurora – Amazon Aurora further strengthens your security posture by automatically applying server-side encryption by default to all new databases clusters using AWS-owned keys.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-08">
+                <a href="https://kubernetes.io/blog/2026/02/12/sig-architecture-api-spotlight/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on SIG Architecture: API Governance
+                </a>
+                <p class="mb-1 small text-light">Kubernetes uses APIs everywhere -- externally and internally -- so API Governance is critical to maintaining that integrity. JL: API Machinery provides the actual code and tools that people build APIs on.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-08">
+                <a href="https://kubernetes.io/blog/2026/01/30/new-cgroup-v1-to-v2-cpu-conversion-formula/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] New Conversion from cgroup v1 CPU Shares to v2 CPU Weight
+                </a>
+                <p class="mb-1 small text-light">This enhancement addresses critical issues with CPU priority allocation for Kubernetes workloads when running on systems with cgroup v2. While this approach is simple, the linear mapping imposes a few significant problems and impacts both performance and configuration granularity.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-08">
+                <a href="https://www.cncf.io/blog/2026/03/04/ospology-day-cloud-native-at-kubecon-cloudnativecon-europe/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] OSPOlogy Day Cloud Native at KubeCon + CloudNativeCon Europe
+                </a>
+                <p class="mb-1 small text-light">Peer mentoring and group discussions on cloud strategy management Cloud native management has matured quickly.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-08">
+                <a href="https://blog.cloudflare.com/attack-signature-detection/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Always-on detections: eliminating the WAF “log versus block” trade-off
+                </a>
+                <p class="mb-1 small text-light">Attack Signature Detection Compared to traditional, rule-based systems like the Cloudflare Managed Ruleset, the new detection offers a substantial advancement in web application security.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-03-08">
+                <a href="https://dropbox.tech/culture/insights-from-our-executive-roundtable-on-ai-and-engineering-productivity" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Insights from our executive roundtable on AI and engineering productivity
+                </a>
+                <p class="mb-1 small text-light">Improving engineering productivity is crucial to the work we do at Dropbox. The more quickly we can deliver high-quality features to our customers, the more value they can get from our products.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-08">
+                <a href="https://www.pulumi.com/blog/how-we-built-a-distributed-work-scheduling-system-for-pulumi-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] How We Built a Distributed Work Scheduling System for Pulumi Cloud
+                </a>
+                <p class="mb-1 small text-light">Pulumi Cloud orchestrates a growing number of workflow types: Deployments, Insights discovery scans, and policy evaluations. The runner executes the scan locally on the customer’s infrastructure, talking directly to the cloud provider APIs.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-08">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1rnhsua/aws_load_balancer_controller_adds_general/" target="_blank" class="fw-bold text-decoration-none">
+                    AWS Load Balancer Controller adds general availability support for Kubernetes Gateway API
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/swe129</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-08">
+                <a href="https://azure.microsoft.com/en-us/blog/the-economics-of-enterprise-ai-what-the-forrester-tei-study-reveals-about-microsoft-foundry/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] The economics of enterprise AI: What the Forrester TEI study reveals about Microsoft Foundry
+                </a>
+                <p class="mb-1 small text-light">—Managing director and global head of co-innovation, professional services Department-level budgets favor point solutions, but enterprise-level outcomes require platform thinking.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-08">
+                <a href="https://www.docker.com/blog/docker-model-runner-vllm-metal-macos/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Model Runner Brings vLLM to macOS with Apple Silicon
+                </a>
+                <p class="mb-1 small text-light">Docker Model Runner now supports vllm-metal, a new backend that brings vLLM inference to macOS using Apple Silicon’s Metal GPU. This allows you to: Develop & Test Locally: Build your vLLM-based applications on the same machine you use for coding.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-08">
+                <a href="https://about.gitlab.com/blog/10-ai-prompts-to-speed-your-teams-software-delivery/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] 10 AI prompts to speed your team’s software delivery
+                </a>
+                <p class="mb-1 small text-light">Each prompt addresses a specific slowdown that emerges when individual productivity increases without corresponding improvements in team processes. This prompt enables developers to find and fix security issues before creating an MR, eliminating the back and forth that delays deployments.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-08">
+                <a href="https://about.gitlab.com/blog/how-gitlab-built-a-security-control-framework-from-scratch/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] How GitLab built a security control framework from scratch
+                </a>
+                <p class="mb-1 small text-light">GitLab's Security Compliance team discovered that existing security control frameworks lacked the customization to fit the platform's multi-product, cloud-native environment.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-08">
+                <a href="https://about.gitlab.com/blog/ai-can-detect-vulnerabilities-but-who-governs-risk/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] AI can detect vulnerabilities, but who governs risk?
+                </a>
+                <p class="mb-1 small text-light">The question on everyone's mind: If AI can write code and secure it, is application security about to become obsolete. As an intelligent orchestration platform, GitLab is built to address this problem.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-03-08">
+                <a href="https://engineering.atspotify.com/2026/2/how-we-release-the-spotify-app-part-2/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] How We Release the Spotify App: A Look Under the Hood (Part 2)
+                </a>
+                <p class="mb-1 small text-light">In Part 2, we will peek under the hood at the tooling that makes the Spotify release process possible. The post How We Release the Spotify App: A Look Under the Hood (Part 2) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-03-08">
+                <a href="https://engineering.atspotify.com/2026/1/congratulations-to-the-recipients-of-the-2025-spotify-foss-fund/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Congratulations to the recipients of the 2025 Spotify FOSS Fund
+                </a>
+                <p class="mb-1 small text-light">TL;DR Established in 2022 as a way to help support the great open source ecosystem projects that Spotify... The post Congratulations to the recipients of the 2025 Spotify FOSS Fund appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-03-08">
+                <a href="https://engineering.atspotify.com/2026/1/why-we-use-separate-tech-stacks-for-personalization-and-experimentation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Why We Use Separate Tech Stacks for Personalization and Experimentation
+                </a>
+                <p class="mb-1 small text-light">The technical and practical rationale for a clear separation between these domains. The post Why We Use Separate Tech Stacks for Personalization and Experimentation appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-03-08">
+                <a href="https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Background Coding Agents: Predictable Results Through Strong Feedback Loops (Honk, Part 3)
+                </a>
+                <p class="mb-1 small text-light">The system we built to ensure our AI agents produce predictable, trustworthy code. The post Background Coding Agents: Predictable Results Through Strong Feedback Loops (Honk, Part 3) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-03-08">
+                <a href="https://engineering.fb.com/2026/03/02/video-engineering/ffmpeg-at-meta-media-processing-at-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] FFmpeg at Meta: Media Processing at Scale
+                </a>
+                <p class="mb-1 small text-light">DASH playback allows the app’s video player to dynamically choose an encoding based on signals such as network conditions. For people on our platforms, this means enabling new experiences and improving the reliability of existing ones.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-03-08">
+                <a href="https://engineering.fb.com/2026/02/11/developer-tools/the-death-of-traditional-testing-agentic-development-jit-testing-revival/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] The Death of Traditional Testing: Agentic Development Broke a 50-Year-Old Field, JiTTesting Can Revive It
+                </a>
+                <p class="mb-1 small text-light">It also means that testing frameworks need to evolve for this rapidly changing landscape. Here are the key steps of the Catching JiTTest process: New code lands in the codebase.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-03-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-03-08">
+                <a href="https://github.com/MonoGame/MonoGame" target="_blank" class="fw-bold text-decoration-none">
+                    MonoGame: A .NET framework for making cross-platform games
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://github.com/MonoGame/MonoGame Comments URL: https://news.ycombinator.com/item?id=47293682 Points: 56 # Comments: 24</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-03-08
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - March 10, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - March 10, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for March 10, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-03-10">2026-03-10 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 10 sources • Updated 2026-03-10 08:13:09
+                    Showing 25 total articles from 
+                    10 sources
+                    
                     
                 </span>
             </small>
@@ -108,229 +125,13 @@
         <ul class="list-group" id="articleList">
             
             <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-10">
-                <a href="https://www.reddit.com/r/devops/comments/1rmp4f9/handson_with_ovhcloud_managed_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    Hands-on with OVHcloud Managed Kubernetes
+                <a href="https://www.reddit.com/r/devops/comments/1rp5op3/i_built_an_opensource_tool_that_lets_your_ai/" target="_blank" class="fw-bold text-decoration-none">
+                    I built an open-source tool that lets your AI coding agent scan infrastructure for security misconfigs
                 </a>
-                <p class="mb-1 small text-light">Been testing EU managed k8s providers one by one for eucloudcost. com/mixxor/opentofu-kubernetes-ovhcloud Full writeup in comments.</p>
+                <p class="mb-1 small text-light">Hey r/devops, I've been working on something that scratches an itch I kept running into: AI coding agents are great at generating Terraform, Dockerfiles, K8s manifests, and Helm charts; but there's no built-in step to check whether what they generate is actually secure.</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-10">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1rplv2p/infrastructure_engineer_looking_for_guidance_on/" target="_blank" class="fw-bold text-decoration-none">
-                    Infrastructure Engineer looking for guidance on job transition
-                </a>
-                <p class="mb-1 small text-light">For the past 5 years I've been working as a team lead / Infrastructure Engineer supporting entirely onprem infrastructure across several datacenters and due to a lack of silos I've had good exposure to virtualization (entirely vCenter ESXi), compute (every vendor you can think of including Cisco ...</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-10">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1rpcjod/how_much_infrastructure_do_you_deploy/" target="_blank" class="fw-bold text-decoration-none">
-                    How much infrastructure do you deploy?
-                </a>
-                <p class="mb-1 small text-light">I’m an azure guy and do deployments there everyday with GitHub Actions using terraform. Are you guys doing lots of deployments or are you guys working in software engineering.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-10">
-                <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
-                </a>
-                <p class="mb-1 small text-light">At Netflix, our goal is to entertain the world, which means we must speak the world’s languages. This data helps us understand how subtitle characteristics (e.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-10">
-                <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unlocking-document-understanding-with-mistral-document-ai-in-microsoft-foundry/4495664" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Unlocking document understanding with Mistral Document AI in Microsoft Foundry
-                </a>
-                <p class="mb-1 small text-light">Tasks that took days can be done in minutes, accelerating core business processesAccuracy and consistency: With 99 %+ recognition accuracy and deep layout understanding, Mistral delivers cleaner data and fewer downstream errors – essential in compliance-critical or analytics-driven operationsCost...</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-10">
-                <a href="https://azure.microsoft.com/en-us/blog/instant-access-incremental-snapshots-restore-without-waiting/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Instant access incremental snapshots: Restore without waiting
-                </a>
-                <p class="mb-1 small text-light">Newly restored disks also deliver near-full performance from the start, allowing applications to resume operations immediately. For mission-critical workloads, speed matters—especially when every minute of downtime or degraded performance has real business impact.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-10">
-                <a href="https://www.docker.com/blog/announcing-docker-hardened-system-packages/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Announcing Docker Hardened System Packages
-                </a>
-                <p class="mb-1 small text-light">io has moved its production infrastructure to DHI, they share why and how in this recent webinar Medplum, an open-source electronic health records platform (managing data of 20+ million patients) has now standardized to DHI Adobe uses DHI because of great alignment with its security posture and d...</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-10">
-                <a href="https://www.hashicorp.com/blog/everything-as-code-for-your-security-lifecycle" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Everything as code for your security lifecycle
-                </a>
-                <p class="mb-1 small text-light">You can also use Terraform with a service networking platform like Consul to help applications find and talk to each other reliably and securely across on-premises, hybrid, and multi-cloud environments.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-10">
-                <a href="https://www.hashicorp.com/blog/building-day-2-ops-guardrails-with-terraform-and-packer" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Building Day 2 ops guardrails with Terraform and Packer
-                </a>
-                <p class="mb-1 small text-light">Cloud waste now averages 32% of companies' cloud budgets, and a significant percentage of cloud security incidents stem from misconfigurations that are often introduced due to a lack of guardrails.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-10">
-                <a href="https://www.cncf.io/blog/2026/03/09/kubecon-cloudnativecon-europe-2026-co-located-event-deep-dive-opentofu-day/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] KubeCon + CloudNativeCon Europe 2026 Co-located Event Deep Dive: OpenTofu Day
-                </a>
-                <p class="mb-1 small text-light">The day begins with a state-of-the-project update covering new features, roadmap direction, and community growth. Experience with OpenTofu, Terraform, or another infrastructure-as-code tool will help attendees get the most out of the day.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-10">
-                <a href="https://www.cncf.io/blog/2026/03/09/registry-mirror-authentication-with-kubernetes-secrets/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Registry mirror authentication with Kubernetes secrets
-                </a>
-                <p class="mb-1 small text-light">The solution: Kubelet credential provider plugins Kubernetes introduced the kubelet image credential provider plugin API in version 1. 33, the KubeletServiceAccountTokenForCredentialProviders feature gate enables the kubelet to pass service account tokens to credential provider plugins.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-10">
-                <a href="https://blog.cloudflare.com/vulnerability-scanner/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Active defense: introducing a stateful vulnerability scanner for APIs
-                </a>
-                <p class="mb-1 small text-light">Read on to learn why we are focused on API security scans for this first release. First, Security Insights will list results from our new scans alongside any existing Cloudflare security findings for added context.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-10">
-                <a href="https://blog.cloudflare.com/complexity-is-a-choice-sase-migrations-shouldnt-take-years/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Complexity is a choice. SASE migrations shouldn’t take years.
-                </a>
-                <p class="mb-1 small text-light">“Unlike legacy solutions that require continual care and feeding, Cloudflare Access is lightweight and 'no-touch' after deployment. This rapid elasticity proved that Cloudflare’s easy-to-use SASE platform bypasses legacy deployment hurdles—a transition Adapture characterized as “seamless.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-03-10">
-                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
-                </a>
-                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-10">
-                <a href="https://www.pulumi.com/blog/treating-prompts-like-code/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Treating Prompts Like Code: A Content Engineer's AI Workflow
-                </a>
-                <p class="mb-1 small text-light">The real problem AI solves Everyone talks about AI making you faster. This matters most when running automation in CI/CD.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-10">
-                <a href="https://www.pulumi.com/blog/expanded-version-control-support/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Expanded Version Control Support in Pulumi Cloud
-                </a>
-                <p class="mb-1 small text-light">Your version control provider shouldn’t limit your infrastructure workflows. Pulumi Cloud now works with GitHub, GitHub Enterprise Server, Azure DevOps, and GitLab.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-10">
-                <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-series-explore-new-resources-for-building-a-stronger-more-efficient-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Azure IaaS series: Explore new resources for building a stronger, more efficient infrastructure
-                </a>
-                <p class="mb-1 small text-light">It depends on an infrastructure platform that can deliver the right combination of performance, resiliency, security, scalability, and cost efficiency—together.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-10">
-                <a href="https://www.docker.com/blog/women-in-ai-cecilia-liu-docker-mcp-strategy/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Celebrating Women in AI: 3 Questions with Cecilia Liu on Leading Docker’s MCP Strategy
-                </a>
-                <p class="mb-1 small text-light">From shaping product direction to driving AI innovation, Cecilia plays a key role in defining how Docker enables secure, scalable AI tooling. Cecilia leads product management for Docker’s MCP Catalog and Toolkit, our solution for running MCP servers securely and at scale through containerization.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-10">
-                <a href="https://www.docker.com/blog/openwebui-docker-model-runner/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Open WebUI + Docker Model Runner: Self-Hosted Models, Zero Configuration
-                </a>
-                <p class="mb-1 small text-light">With this update, Open WebUI automatically detects and connects to Docker Model Runner running at localhost:12434. Get started with Docker Model Runner with a simple hello GenAI application.</p>
-                <small class="text-secondary">
-                    
-                    Docker
+                    Reddit | 2026-03-10
                     
                 </small>
             </li>
@@ -342,7 +143,7 @@
                 <p class="mb-1 small text-light">The challenge Prior state Before Vault, we relied on application-level encryption with manually managed keys stored in environment variables.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-03-10
                     
                 </small>
             </li>
@@ -354,7 +155,7 @@
                 <p class="mb-1 small text-light">This enables: AI Inference Security Guard against malicious prompts and prompt injection attacks. Key features include: External AI Service Integration Secure access to cloud-based AI services (OpenAI, Vertex AI, Bedrock, etc.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-03-10
                     
                 </small>
             </li>
@@ -366,7 +167,7 @@
                 <p class="mb-1 small text-light">In December 2025, Cloudflare received reports of HTTP/1. Pingora deployments within Cloudflare are not directly exposed to ingress traffic, and we found that production traffic that arrived at Pingora services were not subject to these misinterpretations.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-03-10
                     
                 </small>
             </li>
@@ -378,7 +179,7 @@
                 <p class="mb-1 small text-light">Cloudflare One already helps protect data in transit with Gateway and DLP, and provides visibility and control at rest through CASB and its API integrations. To get started, explore Cloudflare One or contact our team to learn more about the platform and these new features.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-03-10
                     
                 </small>
             </li>
@@ -390,19 +191,235 @@
                 <p class="mb-1 small text-light">The Terraform refactoring runs all triggered self-repair because the restructured HCL modules had issues that terraform plan caught. 43% of DevOps teams need four or more deployment iterations before infrastructure is production-ready.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-10">
+                <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-series-explore-new-resources-for-building-a-stronger-more-efficient-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Azure IaaS series: Explore new resources for building a stronger, more efficient infrastructure
+                </a>
+                <p class="mb-1 small text-light">It depends on an infrastructure platform that can deliver the right combination of performance, resiliency, security, scalability, and cost efficiency—together.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-10">
+                <a href="https://www.docker.com/blog/women-in-ai-cecilia-liu-docker-mcp-strategy/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Celebrating Women in AI: 3 Questions with Cecilia Liu on Leading Docker’s MCP Strategy
+                </a>
+                <p class="mb-1 small text-light">From shaping product direction to driving AI innovation, Cecilia plays a key role in defining how Docker enables secure, scalable AI tooling. Cecilia leads product management for Docker’s MCP Catalog and Toolkit, our solution for running MCP servers securely and at scale through containerization.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-10">
+                <a href="https://www.docker.com/blog/openwebui-docker-model-runner/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Open WebUI + Docker Model Runner: Self-Hosted Models, Zero Configuration
+                </a>
+                <p class="mb-1 small text-light">With this update, Open WebUI automatically detects and connects to Docker Model Runner running at localhost:12434. Get started with Docker Model Runner with a simple hello GenAI application.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-10">
+                <a href="https://www.hashicorp.com/blog/everything-as-code-for-your-security-lifecycle" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Everything as code for your security lifecycle
+                </a>
+                <p class="mb-1 small text-light">You can also use Terraform with a service networking platform like Consul to help applications find and talk to each other reliably and securely across on-premises, hybrid, and multi-cloud environments.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-10">
+                <a href="https://www.hashicorp.com/blog/building-day-2-ops-guardrails-with-terraform-and-packer" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Building Day 2 ops guardrails with Terraform and Packer
+                </a>
+                <p class="mb-1 small text-light">Cloud waste now averages 32% of companies' cloud budgets, and a significant percentage of cloud security incidents stem from misconfigurations that are often introduced due to a lack of guardrails.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-10">
+                <a href="https://www.cncf.io/blog/2026/03/09/kubecon-cloudnativecon-europe-2026-co-located-event-deep-dive-opentofu-day/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] KubeCon + CloudNativeCon Europe 2026 Co-located Event Deep Dive: OpenTofu Day
+                </a>
+                <p class="mb-1 small text-light">The day begins with a state-of-the-project update covering new features, roadmap direction, and community growth. Experience with OpenTofu, Terraform, or another infrastructure-as-code tool will help attendees get the most out of the day.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-10">
+                <a href="https://www.cncf.io/blog/2026/03/09/registry-mirror-authentication-with-kubernetes-secrets/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Registry mirror authentication with Kubernetes secrets
+                </a>
+                <p class="mb-1 small text-light">The solution: Kubelet credential provider plugins Kubernetes introduced the kubelet image credential provider plugin API in version 1. 33, the KubeletServiceAccountTokenForCredentialProviders feature gate enables the kubelet to pass service account tokens to credential provider plugins.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-10">
+                <a href="https://blog.cloudflare.com/vulnerability-scanner/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Active defense: introducing a stateful vulnerability scanner for APIs
+                </a>
+                <p class="mb-1 small text-light">Read on to learn why we are focused on API security scans for this first release. First, Security Insights will list results from our new scans alongside any existing Cloudflare security findings for added context.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-10">
+                <a href="https://blog.cloudflare.com/complexity-is-a-choice-sase-migrations-shouldnt-take-years/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Complexity is a choice. SASE migrations shouldn’t take years.
+                </a>
+                <p class="mb-1 small text-light">“Unlike legacy solutions that require continual care and feeding, Cloudflare Access is lightweight and 'no-touch' after deployment. This rapid elasticity proved that Cloudflare’s easy-to-use SASE platform bypasses legacy deployment hurdles—a transition Adapture characterized as “seamless.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-03-10">
+                <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Inside the feature store powering real-time AI in Dropbox Dash
+                </a>
+                <p class="mb-1 small text-light">Co-located with inference workloads and leveraging Dropbox’s hybrid cloud infrastructure, Dynovault avoids the delay of public internet calls and reliably delivers ~20ms client-side latency while balancing cost and geographic scalability.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-10">
+                <a href="https://www.pulumi.com/blog/treating-prompts-like-code/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Treating Prompts Like Code: A Content Engineer's AI Workflow
+                </a>
+                <p class="mb-1 small text-light">The real problem AI solves Everyone talks about AI making you faster. This matters most when running automation in CI/CD.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-10">
+                <a href="https://www.pulumi.com/blog/expanded-version-control-support/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Expanded Version Control Support in Pulumi Cloud
+                </a>
+                <p class="mb-1 small text-light">Your version control provider shouldn’t limit your infrastructure workflows. Pulumi Cloud now works with GitHub, GitHub Enterprise Server, Azure DevOps, and GitLab.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-03-10
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-10">
-                <a href="https://www.reddit.com/r/devops/comments/1rp5op3/i_built_an_opensource_tool_that_lets_your_ai/" target="_blank" class="fw-bold text-decoration-none">
-                    I built an open-source tool that lets your AI coding agent scan infrastructure for security misconfigs
+                <a href="https://www.reddit.com/r/devops/comments/1rmp4f9/handson_with_ovhcloud_managed_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    Hands-on with OVHcloud Managed Kubernetes
                 </a>
-                <p class="mb-1 small text-light">Hey r/devops, I've been working on something that scratches an itch I kept running into: AI coding agents are great at generating Terraform, Dockerfiles, K8s manifests, and Helm charts; but there's no built-in step to check whether what they generate is actually secure.</p>
+                <p class="mb-1 small text-light">Been testing EU managed k8s providers one by one for eucloudcost. com/mixxor/opentofu-kubernetes-ovhcloud Full writeup in comments.</p>
                 <small class="text-secondary">
                     
-                    Reddit
+                    Reddit | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-10">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1rplv2p/infrastructure_engineer_looking_for_guidance_on/" target="_blank" class="fw-bold text-decoration-none">
+                    Infrastructure Engineer looking for guidance on job transition
+                </a>
+                <p class="mb-1 small text-light">For the past 5 years I've been working as a team lead / Infrastructure Engineer supporting entirely onprem infrastructure across several datacenters and due to a lack of silos I've had good exposure to virtualization (entirely vCenter ESXi), compute (every vendor you can think of including Cisco ...</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-10">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1rpcjod/how_much_infrastructure_do_you_deploy/" target="_blank" class="fw-bold text-decoration-none">
+                    How much infrastructure do you deploy?
+                </a>
+                <p class="mb-1 small text-light">I’m an azure guy and do deployments there everyday with GitHub Actions using terraform. Are you guys doing lots of deployments or are you guys working in software engineering.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-10">
+                <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
+                </a>
+                <p class="mb-1 small text-light">At Netflix, our goal is to entertain the world, which means we must speak the world’s languages. This data helps us understand how subtitle characteristics (e.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-10">
+                <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unlocking-document-understanding-with-mistral-document-ai-in-microsoft-foundry/4495664" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Unlocking document understanding with Mistral Document AI in Microsoft Foundry
+                </a>
+                <p class="mb-1 small text-light">Tasks that took days can be done in minutes, accelerating core business processesAccuracy and consistency: With 99 %+ recognition accuracy and deep layout understanding, Mistral delivers cleaner data and fewer downstream errors – essential in compliance-critical or analytics-driven operationsCost...</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-10">
+                <a href="https://azure.microsoft.com/en-us/blog/instant-access-incremental-snapshots-restore-without-waiting/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Instant access incremental snapshots: Restore without waiting
+                </a>
+                <p class="mb-1 small text-light">Newly restored disks also deliver near-full performance from the start, allowing applications to resume operations immediately. For mission-critical workloads, speed matters—especially when every minute of downtime or degraded performance has real business impact.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-10">
+                <a href="https://www.docker.com/blog/announcing-docker-hardened-system-packages/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Announcing Docker Hardened System Packages
+                </a>
+                <p class="mb-1 small text-light">io has moved its production infrastructure to DHI, they share why and how in this recent webinar Medplum, an open-source electronic health records platform (managing data of 20+ million patients) has now standardized to DHI Adobe uses DHI because of great alignment with its security posture and d...</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-10
                     
                 </small>
             </li>

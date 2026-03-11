@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - March 11, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - March 11, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for March 11, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-03-11">2026-03-11 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-03-11 08:13:48
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,266 +128,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-11">
-                <a href="https://www.reddit.com/r/devops/comments/1rqmrhi/ve202628353_the_trivy_security_incident_nobody_is/" target="_blank" class="fw-bold text-decoration-none">
-                    VE-2026-28353 the Trivy security incident nobody is talking about, idk why but now I'm rethinking whether the scanner is even the right fix for container image security
-                </a>
-                <p class="mb-1 small text-light">com/aquasecurity/trivy/discussions/10265 pull_request_target misconfiguration, PAT stolen Feb 27, 178 releases deleted March 1, malicious VSCode extension pushed, repo renamed. Because it made me completely rethink how much I trust open source container image pipelines.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-11">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1rq2wdd/i_finally_found_our_security_check_failure_0x139/" target="_blank" class="fw-bold text-decoration-none">
-                    I finally found our SECURITY_CHECK_FAILURE 0x139 culprit
-                </a>
-                <p class="mb-1 small text-light">Each time it is after a Windows update, and unrecoverable. 7623) is the issue on our end Whatever "incompatibility" is happening that is causing a security failure is being caused by this update.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-11">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1rq9yhd/sole_it_admin_at_a_smallmedium_business_looking/" target="_blank" class="fw-bold text-decoration-none">
-                    Sole IT Admin at a Small/Medium Business: Looking for Open Source Roadmap & Infrastructure Advice
-                </a>
-                <p class="mb-1 small text-light">Now, I’m responsible for the company's entire IT infrastructure. Furthermore, I refuse to jeopardize the company’s infrastructure by using pirated software.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-11">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1rql9kr/how_do_system_admins_deal_with_multiple_cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    How do system admins deal with multiple cloud storage platforms in one environment?
-                </a>
-                <p class="mb-1 small text-light">I wanted to ask other system admins how you handle environments where more than one cloud storage platform is being used at the same time. When users ask IT to help locate a document, it is not always clear which platform it might be in.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-11">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1rqaovc/is_the_certified_kubernetes_admin_still_valuable/" target="_blank" class="fw-bold text-decoration-none">
-                    Is the Certified Kubernetes Admin still valuable for 5 years of experience in Kubernetesor DevOps?
-                </a>
-                <p class="mb-1 small text-light">I'm not getting time from my office work, to brushup everything. submitted by /u/D-porwal</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-11">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1rnhsua/aws_load_balancer_controller_adds_general/" target="_blank" class="fw-bold text-decoration-none">
-                    AWS Load Balancer Controller adds general availability support for Kubernetes Gateway API
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/swe129</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-11">
-                <a href="https://azure.microsoft.com/en-us/blog/the-economics-of-enterprise-ai-what-the-forrester-tei-study-reveals-about-microsoft-foundry/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] The economics of enterprise AI: What the Forrester TEI study reveals about Microsoft Foundry
-                </a>
-                <p class="mb-1 small text-light">—Managing director and global head of co-innovation, professional services Department-level budgets favor point solutions, but enterprise-level outcomes require platform thinking.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-11">
-                <a href="https://www.docker.com/blog/docker-model-runner-vllm-metal-macos/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Model Runner Brings vLLM to macOS with Apple Silicon
+                <a href="https://www.docker.com/blog/whats-holding-back-ai-agents-its-still-security/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] What’s Holding Back AI Agents? It’s Still Security
                 </a>
-                <p class="mb-1 small text-light">Docker Model Runner now supports vllm-metal, a new backend that brings vLLM inference to macOS using Apple Silicon’s Metal GPU. This allows you to: Develop & Test Locally: Build your vLLM-based applications on the same machine you use for coding.</p>
+                <p class="mb-1 small text-light">Our latest research data reflects that sprawl: over a third of respondents report challenges coordinating multiple tools, and a comparable share say integrations introduce security or compliance risk.</p>
                 <small class="text-secondary">
                     
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-11">
-                <a href="https://www.redhat.com/en/blog/safe-data-discovery-edbs-data-governance-co-pilot-ai-quickstart" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Safe data discovery with EDB's Data Governance Co-Pilot AI quickstart
-                </a>
-                <p class="mb-1 small text-light">We often treat this as a zero-sum game, but what if the architecture itself could negotiate peace. It provides a protected workspace where any data consumer can navigate complex schemas and extract insights with less risk of tripping compliance wires.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-11">
-                <a href="https://www.redhat.com/en/blog/red-hat-summit-2026-session-catalog-now-available" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat Summit 2026 session catalog now available
-                </a>
-                <p class="mb-1 small text-light">Red Hat Summit 2026 arrives in Atlanta in two months. If you haven’t registered yet – don’t worry.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-11">
-                <a href="https://aws.amazon.com/blogs/aws/introducing-openclaw-on-amazon-lightsail-to-run-your-autonomous-private-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Introducing OpenClaw on Amazon Lightsail to run your autonomous private AI agents
-                </a>
-                <p class="mb-1 small text-light">To enable Bedrock API access, copy the script in the Getting started tab and run copied script into the AWS CloudShell terminal. Things to know Here are key considerations to know about this feature: Permission — You can customize AWS IAM permissions granted to your OpenClaw instance.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-11">
-                <a href="https://aws.amazon.com/blogs/aws/aws-security-hub-extended-offers-full-stack-enterprise-security-with-curated-partner-solutions/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Security Hub Extended offers full-stack enterprise security with curated partner solutions
-                </a>
-                <p class="mb-1 small text-light">At re:Invent 2025, we introduced a completely re-imagined AWS Security Hub that unifies AWS security services, including Amazon GuardDuty and Amazon Inspector into a single experience. Security findings from all solutions are automatically consolidated in AWS Security Hub.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-11">
-                <a href="https://www.hashicorp.com/blog/hcp-vault-dedicated-now-available-in-additional-aws-and-azure-regions" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] HCP Vault Dedicated now available in additional AWS and Azure regions
-                </a>
-                <p class="mb-1 small text-light">By bringing Vault closer to applications and infrastructure, organizations can improve performance, reduce operational risk, and better align their security architecture with regulatory and compliance requirements.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-11">
-                <a href="https://kubernetes.io/blog/2026/02/12/sig-architecture-api-spotlight/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Spotlight on SIG Architecture: API Governance
-                </a>
-                <p class="mb-1 small text-light">Kubernetes uses APIs everywhere -- externally and internally -- so API Governance is critical to maintaining that integrity. JL: API Machinery provides the actual code and tools that people build APIs on.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-11">
-                <a href="https://kubernetes.io/blog/2026/01/30/new-cgroup-v1-to-v2-cpu-conversion-formula/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] New Conversion from cgroup v1 CPU Shares to v2 CPU Weight
-                </a>
-                <p class="mb-1 small text-light">This enhancement addresses critical issues with CPU priority allocation for Kubernetes workloads when running on systems with cgroup v2. While this approach is simple, the linear mapping imposes a few significant problems and impacts both performance and configuration granularity.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-11">
-                <a href="https://www.cncf.io/announcements/2026/03/10/cncf-unveils-kubecon-cloudnativecon-india-2026-schedule/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] CNCF Unveils KubeCon + CloudNativeCon India 2026 Schedule
-                </a>
-                <p class="mb-1 small text-light">India’s rapidly growing startup ecosystem makes it an important hub for innovation in AI and cloud native technologies.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-11">
-                <a href="https://www.cncf.io/blog/2026/03/10/sustaining-open-source-in-the-age-of-generative-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Sustaining open source in the age of generative AI
-                </a>
-                <p class="mb-1 small text-light">From distributed version control and CI/CD, from containers to Kubernetes, each wave of tooling has reshaped how we build, collaborate, and contribute. AI introduces new complexities around licensing, copyright, provenance, and tool terms of service.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-11">
-                <a href="https://blog.cloudflare.com/investigating-multi-vector-attacks-in-log-explorer/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Investigating multi-vector attacks in Log Explorer
-                </a>
-                <p class="mb-1 small text-light">Audit LogsProvides a trail of configuration changes within the Cloudflare dashboard to identify unauthorized administrative actions or modifications.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-03-11">
-                <a href="https://dropbox.tech/culture/insights-from-our-executive-roundtable-on-ai-and-engineering-productivity" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Insights from our executive roundtable on AI and engineering productivity
-                </a>
-                <p class="mb-1 small text-light">Improving engineering productivity is crucial to the work we do at Dropbox. The more quickly we can deliver high-quality features to our customers, the more value they can get from our products.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-11">
-                <a href="https://www.pulumi.com/blog/pulumi-cloud-now-supports-google-sign-in/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Pulumi Cloud Now Supports Google Sign-In
-                </a>
-                <p class="mb-1 small text-light">Many developers and platform engineers already use Google accounts daily for email, cloud console access, and collaboration. Until now, signing in to Pulumi Cloud required a GitHub, GitLab, or Atlassian account, or an email/password combination.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-11">
-                <a href="https://netflixtechblog.com/mediafm-the-multimodal-ai-foundation-for-media-understanding-at-netflix-e8c28df82e2d?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] MediaFM: The Multimodal AI Foundation for Media Understanding at Netflix
-                </a>
-                <p class="mb-1 small text-light">Many of the improvements are also in various stages of deployment. Oddly, multiple uncontextualized modalities hurts the clip popularity ranking model, but adding contextualization significantly improves performance.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-11">
-                <a href="https://www.redhat.com/en/blog/ai-quickstart-protecting-inference-f5-distributed-cloud-and-red-hat-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] AI quickstart: Protecting inference with F5 Distributed Cloud and Red Hat AI
-                </a>
-                <p class="mb-1 small text-light">This provides systems integrators and architects with example AI solutions that Red Hat engineering has tested and streamlined for easy deployment.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
+                    Docker | 2026-03-11
                     
                 </small>
             </li>
@@ -382,7 +147,7 @@
                 <p class="mb-1 small text-light">For the modern security team, the biggest challenge is no longer a lack of data; it is the overwhelming surplus of it. Log in to the Cloudflare dashboard today to explore your new Application Security Overview page.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-03-11
                     
                 </small>
             </li>
@@ -394,19 +159,271 @@
                 <p class="mb-1 small text-light">Every new domain, application, website, or API endpoint increases an organization's attack surface. This allows for the immediate deployment of security controls without changing the underlying website or application.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-11">
+                <a href="https://netflixtechblog.com/mediafm-the-multimodal-ai-foundation-for-media-understanding-at-netflix-e8c28df82e2d?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] MediaFM: The Multimodal AI Foundation for Media Understanding at Netflix
+                </a>
+                <p class="mb-1 small text-light">Many of the improvements are also in various stages of deployment. Oddly, multiple uncontextualized modalities hurts the clip popularity ranking model, but adding contextualization significantly improves performance.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-11">
+                <a href="https://www.redhat.com/en/blog/ai-quickstart-protecting-inference-f5-distributed-cloud-and-red-hat-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] AI quickstart: Protecting inference with F5 Distributed Cloud and Red Hat AI
+                </a>
+                <p class="mb-1 small text-light">This provides systems integrators and architects with example AI solutions that Red Hat engineering has tested and streamlined for easy deployment.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-11">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-openclaw-on-amazon-lightsail-to-run-your-autonomous-private-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing OpenClaw on Amazon Lightsail to run your autonomous private AI agents
+                </a>
+                <p class="mb-1 small text-light">To enable Bedrock API access, copy the script in the Getting started tab and run copied script into the AWS CloudShell terminal. Things to know Here are key considerations to know about this feature: Permission — You can customize AWS IAM permissions granted to your OpenClaw instance.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-11">
+                <a href="https://aws.amazon.com/blogs/aws/aws-security-hub-extended-offers-full-stack-enterprise-security-with-curated-partner-solutions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Security Hub Extended offers full-stack enterprise security with curated partner solutions
+                </a>
+                <p class="mb-1 small text-light">At re:Invent 2025, we introduced a completely re-imagined AWS Security Hub that unifies AWS security services, including Amazon GuardDuty and Amazon Inspector into a single experience. Security findings from all solutions are automatically consolidated in AWS Security Hub.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-11">
+                <a href="https://www.hashicorp.com/blog/hcp-vault-dedicated-now-available-in-additional-aws-and-azure-regions" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] HCP Vault Dedicated now available in additional AWS and Azure regions
+                </a>
+                <p class="mb-1 small text-light">By bringing Vault closer to applications and infrastructure, organizations can improve performance, reduce operational risk, and better align their security architecture with regulatory and compliance requirements.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-11">
+                <a href="https://kubernetes.io/blog/2026/02/12/sig-architecture-api-spotlight/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on SIG Architecture: API Governance
+                </a>
+                <p class="mb-1 small text-light">Kubernetes uses APIs everywhere -- externally and internally -- so API Governance is critical to maintaining that integrity. JL: API Machinery provides the actual code and tools that people build APIs on.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-11">
+                <a href="https://kubernetes.io/blog/2026/01/30/new-cgroup-v1-to-v2-cpu-conversion-formula/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] New Conversion from cgroup v1 CPU Shares to v2 CPU Weight
+                </a>
+                <p class="mb-1 small text-light">This enhancement addresses critical issues with CPU priority allocation for Kubernetes workloads when running on systems with cgroup v2. While this approach is simple, the linear mapping imposes a few significant problems and impacts both performance and configuration granularity.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-11">
+                <a href="https://www.cncf.io/announcements/2026/03/10/cncf-unveils-kubecon-cloudnativecon-india-2026-schedule/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] CNCF Unveils KubeCon + CloudNativeCon India 2026 Schedule
+                </a>
+                <p class="mb-1 small text-light">India’s rapidly growing startup ecosystem makes it an important hub for innovation in AI and cloud native technologies.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-11">
+                <a href="https://www.cncf.io/blog/2026/03/10/sustaining-open-source-in-the-age-of-generative-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Sustaining open source in the age of generative AI
+                </a>
+                <p class="mb-1 small text-light">From distributed version control and CI/CD, from containers to Kubernetes, each wave of tooling has reshaped how we build, collaborate, and contribute. AI introduces new complexities around licensing, copyright, provenance, and tool terms of service.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-11">
+                <a href="https://blog.cloudflare.com/investigating-multi-vector-attacks-in-log-explorer/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Investigating multi-vector attacks in Log Explorer
+                </a>
+                <p class="mb-1 small text-light">Audit LogsProvides a trail of configuration changes within the Cloudflare dashboard to identify unauthorized administrative actions or modifications.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-03-11">
+                <a href="https://dropbox.tech/culture/insights-from-our-executive-roundtable-on-ai-and-engineering-productivity" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Insights from our executive roundtable on AI and engineering productivity
+                </a>
+                <p class="mb-1 small text-light">Improving engineering productivity is crucial to the work we do at Dropbox. The more quickly we can deliver high-quality features to our customers, the more value they can get from our products.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-11">
+                <a href="https://www.pulumi.com/blog/pulumi-cloud-now-supports-google-sign-in/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Pulumi Cloud Now Supports Google Sign-In
+                </a>
+                <p class="mb-1 small text-light">Many developers and platform engineers already use Google accounts daily for email, cloud console access, and collaboration. Until now, signing in to Pulumi Cloud required a GitHub, GitLab, or Atlassian account, or an email/password combination.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-11">
+                <a href="https://www.reddit.com/r/devops/comments/1rqmrhi/ve202628353_the_trivy_security_incident_nobody_is/" target="_blank" class="fw-bold text-decoration-none">
+                    VE-2026-28353 the Trivy security incident nobody is talking about, idk why but now I'm rethinking whether the scanner is even the right fix for container image security
+                </a>
+                <p class="mb-1 small text-light">com/aquasecurity/trivy/discussions/10265 pull_request_target misconfiguration, PAT stolen Feb 27, 178 releases deleted March 1, malicious VSCode extension pushed, repo renamed. Because it made me completely rethink how much I trust open source container image pipelines.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-11">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1rq2wdd/i_finally_found_our_security_check_failure_0x139/" target="_blank" class="fw-bold text-decoration-none">
+                    I finally found our SECURITY_CHECK_FAILURE 0x139 culprit
+                </a>
+                <p class="mb-1 small text-light">Each time it is after a Windows update, and unrecoverable. 7623) is the issue on our end Whatever "incompatibility" is happening that is causing a security failure is being caused by this update.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-11">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1rq9yhd/sole_it_admin_at_a_smallmedium_business_looking/" target="_blank" class="fw-bold text-decoration-none">
+                    Sole IT Admin at a Small/Medium Business: Looking for Open Source Roadmap & Infrastructure Advice
+                </a>
+                <p class="mb-1 small text-light">Now, I’m responsible for the company's entire IT infrastructure. Furthermore, I refuse to jeopardize the company’s infrastructure by using pirated software.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-11">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1rql9kr/how_do_system_admins_deal_with_multiple_cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    How do system admins deal with multiple cloud storage platforms in one environment?
+                </a>
+                <p class="mb-1 small text-light">I wanted to ask other system admins how you handle environments where more than one cloud storage platform is being used at the same time. When users ask IT to help locate a document, it is not always clear which platform it might be in.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-11">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1rqaovc/is_the_certified_kubernetes_admin_still_valuable/" target="_blank" class="fw-bold text-decoration-none">
+                    Is the Certified Kubernetes Admin still valuable for 5 years of experience in Kubernetesor DevOps?
+                </a>
+                <p class="mb-1 small text-light">I'm not getting time from my office work, to brushup everything. submitted by /u/D-porwal</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-11">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1rnhsua/aws_load_balancer_controller_adds_general/" target="_blank" class="fw-bold text-decoration-none">
+                    AWS Load Balancer Controller adds general availability support for Kubernetes Gateway API
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/swe129</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-11">
+                <a href="https://azure.microsoft.com/en-us/blog/the-economics-of-enterprise-ai-what-the-forrester-tei-study-reveals-about-microsoft-foundry/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] The economics of enterprise AI: What the Forrester TEI study reveals about Microsoft Foundry
+                </a>
+                <p class="mb-1 small text-light">—Managing director and global head of co-innovation, professional services Department-level budgets favor point solutions, but enterprise-level outcomes require platform thinking.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-11
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-11">
-                <a href="https://www.docker.com/blog/whats-holding-back-ai-agents-its-still-security/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] What’s Holding Back AI Agents? It’s Still Security
+                <a href="https://www.docker.com/blog/docker-model-runner-vllm-metal-macos/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Model Runner Brings vLLM to macOS with Apple Silicon
                 </a>
-                <p class="mb-1 small text-light">Our latest research data reflects that sprawl: over a third of respondents report challenges coordinating multiple tools, and a comparable share say integrations introduce security or compliance risk.</p>
+                <p class="mb-1 small text-light">Docker Model Runner now supports vllm-metal, a new backend that brings vLLM inference to macOS using Apple Silicon’s Metal GPU. This allows you to: Develop & Test Locally: Build your vLLM-based applications on the same machine you use for coding.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-11">
+                <a href="https://www.redhat.com/en/blog/safe-data-discovery-edbs-data-governance-co-pilot-ai-quickstart" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Safe data discovery with EDB's Data Governance Co-Pilot AI quickstart
+                </a>
+                <p class="mb-1 small text-light">We often treat this as a zero-sum game, but what if the architecture itself could negotiate peace. It provides a protected workspace where any data consumer can navigate complex schemas and extract insights with less risk of tripping compliance wires.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-03-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-11">
+                <a href="https://www.redhat.com/en/blog/red-hat-summit-2026-session-catalog-now-available" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat Summit 2026 session catalog now available
+                </a>
+                <p class="mb-1 small text-light">Red Hat Summit 2026 arrives in Atlanta in two months. If you haven’t registered yet – don’t worry.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-03-11
                     
                 </small>
             </li>

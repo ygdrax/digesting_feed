@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - March 17, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - March 17, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for March 17, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-03-17">2026-03-17 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2026-03-17 08:17:42
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,246 +130,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-17">
-                <a href="https://www.reddit.com/r/devops/comments/1rvv08u/ive_been_experimenting_with_deterministic_secret/" target="_blank" class="fw-bold text-decoration-none">
-                    I’ve been experimenting with deterministic secret remediation in CI/CD pipelines using Python AST (refuses unsafe fixes)
-                </a>
-                <p class="mb-1 small text-light">I’ve been experimenting with a slightly different approach to secret handling in CI/CD pipelines. live-abc123xyz987" After SENDGRID_API_KEY = os.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-17">
-                <a href="https://www.reddit.com/r/devops/comments/1rv99cj/cinder_csi_vs_ceph_rbd_csi_in_kubernetes_an/" target="_blank" class="fw-bold text-decoration-none">
-                    Cinder CSI vs Ceph RBD CSI in Kubernetes: An Analysis of Persistent Volume Lifecycle Performance
-                </a>
-                <p class="mb-1 small text-light">This could lead to pods getting stuck in ContainerCreating for a long time. 7x performance improvement If you're interested in Kubernetes volume internals or want to understand how these two different storage class implementations work in Kubernetes, you might find this article useful.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-17">
-                <a href="https://www.reddit.com/r/devops/comments/1rswbwi/oss_cartography_now_inventories_ai_agents_in/" target="_blank" class="fw-bold text-decoration-none">
-                    OSS Cartography now inventories AI agents in cloud environments
-                </a>
-                <p class="mb-1 small text-light">Hey, I'm Alex, I maintain Cartography, an open source tool that builds a graph of your cloud infrastructure: compute, identities, network, storage, and the relationships between them. Wanted to share that Cartography now automatically discovers AI agents in container images.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-17">
-                <a href="https://www.reddit.com/r/devops/comments/1rrvqyt/the_cicd_feedback_loop_from_hell_push_wait_8_min/" target="_blank" class="fw-bold text-decoration-none">
-                    The CI/CD feedback loop from hell (push, wait 8 min, red, fix typo, repeat)
-                </a>
-                <p class="mb-1 small text-light">Genuinely curious how yall deal with the CI/CD waiting game. Rinse and repeat 4-5 times on a bad day.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-17">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1rvjad6/qihoo_360s_ai_product_leaked_the_platforms_ssl/" target="_blank" class="fw-bold text-decoration-none">
-                    Qihoo 360's AI Product Leaked the Platform's SSL Key, Issued by Its Own CA Banned for Fraud
-                </a>
-                <p class="mb-1 small text-light">Qihoo 360 (China's largest cybersecurity company, ~460 million users) shipped the wildcard SSL private key for *. cn inside the public installer for their new AI product, 360 Security Lobster.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-17">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1rv8g9j/kubernetes_march_kubernetes_nyc_meetup_on_331/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] March Kubernetes NYC Meetup on 3/31, with guest speaker Marosha Afridi (Topic is Stop Chasing Packages: Fixing Vulnerabilities the Container Way)
-                </a>
-                <p class="mb-1 small text-light">Hi all, excited to invite you to the March Kubernetes NYC meetup on Tuesday, 3/13. Guest speaker is Marosha Afridi, Senior Security Defensive Engineer at SAP.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-17">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1rvequm/what_makes_a_selfhosted_kubernetes_app_painful_to/" target="_blank" class="fw-bold text-decoration-none">
-                    What makes a self-hosted Kubernetes app painful to run?
-                </a>
-                <p class="mb-1 small text-light">Curious from people running self-hosted software inside Kubernetes clusters. What are the biggest operational red flags? submitted by /u/replicatedhq</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-17">
-                <a href="https://devblogs.microsoft.com/azure-sql/introducing-budget-bytes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Introducing Budget Bytes: Build powerful AI apps for under $25
-                </a>
-                <p class="mb-1 small text-light">When developers hear “cloud” and “AI,” their first thought is often about cost. Practical patterns – Learn new tools, APIs, design patterns, and processes you can apply immediately.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-17">
-                <a href="https://www.docker.com/blog/run-claude-code-with-docker/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] How to Run Claude Code with Docker: Local Models, MCP Servers, and Secure Sandboxes
-                </a>
-                <p class="mb-1 small text-light">But to truly unlock its potential, it needs the right local infrastructure, tool access, and security boundaries. Since Docker Model Runner exposes an Anthropic-compatible API, integrating the two is simple.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-17">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-turns-20-amazon-route-53-global-resolver-general-availability-and-more-march-16-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: Amazon S3 turns 20, Amazon Route 53 Global Resolver general availability, and more (March 16, 2026)
-                </a>
-                <p class="mb-1 small text-light">You can enforce adoption across your organization using AWS IAM policies and AWS Organizations service control policies with the new s3:x-amz-bucket-namespace condition key. Check back each week for a quick roundup of interesting news and announcements from AWS.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-17">
-                <a href="https://aws.amazon.com/blogs/aws/introducing-openclaw-on-amazon-lightsail-to-run-your-autonomous-private-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Introducing OpenClaw on Amazon Lightsail to run your autonomous private AI agents
-                </a>
-                <p class="mb-1 small text-light">To enable Bedrock API access, copy the script in the Getting started tab and run copied script into the AWS CloudShell terminal. Things to know Here are key considerations to know about this feature: Permission — You can customize AWS IAM permissions granted to your OpenClaw instance.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-17">
-                <a href="https://www.hashicorp.com/blog/hcp-vault-dedicated-now-available-in-additional-aws-and-azure-regions" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] HCP Vault Dedicated now available in additional AWS and Azure regions
-                </a>
-                <p class="mb-1 small text-light">By bringing Vault closer to applications and infrastructure, organizations can improve performance, reduce operational risk, and better align their security architecture with regulatory and compliance requirements.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-17">
-                <a href="https://kubernetes.io/blog/2026/03/17/image-promoter-rewrite/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] The Invisible Rewrite: Modernizing the Kubernetes Image Promoter
-                </a>
-                <p class="mb-1 small text-light">If this tool breaks, no Kubernetes release ships. In early 2019, the code moved to kubernetes-sigs/k8s-container-image-promoter and grew quickly.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-17">
-                <a href="https://kubernetes.io/blog/2026/02/12/sig-architecture-api-spotlight/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Spotlight on SIG Architecture: API Governance
-                </a>
-                <p class="mb-1 small text-light">Kubernetes uses APIs everywhere -- externally and internally -- so API Governance is critical to maintaining that integrity. JL: API Machinery provides the actual code and tools that people build APIs on.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-17">
-                <a href="https://www.cncf.io/blog/2026/03/16/kubecon-cloudnativecon-europe-2026-co-located-event-deep-dive-open-sovereign-cloud-day/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] KubeCon + CloudNativeCon Europe 2026 Co-located Event Deep Dive: Open Sovereign Cloud Day
-                </a>
-                <p class="mb-1 small text-light">Open Sovereign Cloud Day is most valuable for platform teams and infrastructure operators who are directly responsible for managing risk, dependencies, and long-lived technology choices.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-17">
-                <a href="https://www.cncf.io/blog/2026/03/16/registry-mirror-authentication-with-kubernetes-secrets-2/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Registry Mirror Authentication with Kubernetes Secrets
-                </a>
-                <p class="mb-1 small text-light">Conclusion Throughout this two-part series, we’ve explored how the CRI-O credential provider addresses a real operational problem: maintaining namespace-scoped security boundaries while using private registry mirrors in Kubernetes.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-17">
-                <a href="https://blog.cloudflare.com/standing-up-for-the-open-internet/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Standing up for the open Internet: why we appealed Italy’s "Piracy Shield" fine
-                </a>
-                <p class="mb-1 small text-light">The high cost of Piracy Shield Almost immediately after Piracy Shield was rolled out, there were significant problems. Cloudflare’s principled challenge Cloudflare has been clear about the risks posed by Piracy Shield from the beginning.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-17">
-                <a href="https://blog.cloudflare.com/legacy-to-agile-sase/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] From legacy architecture to Cloudflare One
-                </a>
-                <p class="mb-1 small text-light">“For large deployments, we focus on application modernization,” says Eric Marchewitz, a security solutions executive at CDW. Performance as a security feature Cloudflare’s single-pass architecture runs every security check simultaneously.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-03-17">
-                <a href="https://dropbox.tech/culture/insights-from-our-executive-roundtable-on-ai-and-engineering-productivity" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Insights from our executive roundtable on AI and engineering productivity
-                </a>
-                <p class="mb-1 small text-light">Improving engineering productivity is crucial to the work we do at Dropbox. The more quickly we can deliver high-quality features to our customers, the more value they can get from our products.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-17">
-                <a href="https://www.pulumi.com/blog/pulumi-cloud-now-supports-google-sign-in/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Pulumi Cloud Now Supports Google Sign-In
-                </a>
-                <p class="mb-1 small text-light">Many developers and platform engineers already use Google accounts daily for email, cloud console access, and collaboration. Until now, signing in to Pulumi Cloud required a GitHub, GitLab, or Atlassian account, or an email/password combination.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-17">
                 <a href="https://netflixtechblog.com/mediafm-the-multimodal-ai-foundation-for-media-understanding-at-netflix-e8c28df82e2d?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
                     [Netflix] MediaFM: The Multimodal AI Foundation for Media Understanding at Netflix
@@ -360,7 +137,7 @@
                 <p class="mb-1 small text-light">Many of the improvements are also in various stages of deployment. Oddly, multiple uncontextualized modalities hurts the clip popularity ranking model, but adding contextualization significantly improves performance.</p>
                 <small class="text-secondary">
                     
-                    Netflix
+                    Netflix | 2026-03-17
                     
                 </small>
             </li>
@@ -372,7 +149,7 @@
                 <p class="mb-1 small text-light">Azure Local runs critical infrastructure locally, even when disconnected For workloads with specialized requirements, Azure Local provides the on-premises foundation with consistent Azure governance and policy controls.</p>
                 <small class="text-secondary">
                     
-                    Microsoft Azure
+                    Microsoft Azure | 2026-03-17
                     
                 </small>
             </li>
@@ -384,7 +161,7 @@
                 <p class="mb-1 small text-light">End-to-end (E2E) tests are particularly important for native applications that run on various platforms (Android/iOS), screen sizes, and OS versions. When our team moved PR checks to Dockerized emulators, we got faster feedback and significantly reduced cloud device costs.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2026-03-17
                     
                 </small>
             </li>
@@ -396,7 +173,7 @@
                 <p class="mb-1 small text-light">Navigating the complexities of AI infrastructure shouldn’t be a barrier to innovation. Red Hat has completed the first phase of AI Cloud Ready status for the NVIDIA Cloud Partner (NCP) program to help address the increasing complexities of AI.</p>
                 <small class="text-secondary">
                     
-                    Red Hat
+                    Red Hat | 2026-03-17
                     
                 </small>
             </li>
@@ -408,7 +185,247 @@
                 <p class="mb-1 small text-light">The result is a system that can propose, validate, and submit security patches across millions of lines of code with minimal friction for the engineers who own them. Tune in to this episode and join us as we explore the compelling crossroads of security, automation, and AI within mobile development.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-17">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-turns-20-amazon-route-53-global-resolver-general-availability-and-more-march-16-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Amazon S3 turns 20, Amazon Route 53 Global Resolver general availability, and more (March 16, 2026)
+                </a>
+                <p class="mb-1 small text-light">You can enforce adoption across your organization using AWS IAM policies and AWS Organizations service control policies with the new s3:x-amz-bucket-namespace condition key. Check back each week for a quick roundup of interesting news and announcements from AWS.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-17">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-openclaw-on-amazon-lightsail-to-run-your-autonomous-private-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing OpenClaw on Amazon Lightsail to run your autonomous private AI agents
+                </a>
+                <p class="mb-1 small text-light">To enable Bedrock API access, copy the script in the Getting started tab and run copied script into the AWS CloudShell terminal. Things to know Here are key considerations to know about this feature: Permission — You can customize AWS IAM permissions granted to your OpenClaw instance.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-17">
+                <a href="https://www.hashicorp.com/blog/hcp-vault-dedicated-now-available-in-additional-aws-and-azure-regions" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] HCP Vault Dedicated now available in additional AWS and Azure regions
+                </a>
+                <p class="mb-1 small text-light">By bringing Vault closer to applications and infrastructure, organizations can improve performance, reduce operational risk, and better align their security architecture with regulatory and compliance requirements.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-17">
+                <a href="https://kubernetes.io/blog/2026/03/17/image-promoter-rewrite/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] The Invisible Rewrite: Modernizing the Kubernetes Image Promoter
+                </a>
+                <p class="mb-1 small text-light">If this tool breaks, no Kubernetes release ships. In early 2019, the code moved to kubernetes-sigs/k8s-container-image-promoter and grew quickly.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-17">
+                <a href="https://kubernetes.io/blog/2026/02/12/sig-architecture-api-spotlight/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on SIG Architecture: API Governance
+                </a>
+                <p class="mb-1 small text-light">Kubernetes uses APIs everywhere -- externally and internally -- so API Governance is critical to maintaining that integrity. JL: API Machinery provides the actual code and tools that people build APIs on.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-17">
+                <a href="https://www.cncf.io/blog/2026/03/16/kubecon-cloudnativecon-europe-2026-co-located-event-deep-dive-open-sovereign-cloud-day/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] KubeCon + CloudNativeCon Europe 2026 Co-located Event Deep Dive: Open Sovereign Cloud Day
+                </a>
+                <p class="mb-1 small text-light">Open Sovereign Cloud Day is most valuable for platform teams and infrastructure operators who are directly responsible for managing risk, dependencies, and long-lived technology choices.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-17">
+                <a href="https://www.cncf.io/blog/2026/03/16/registry-mirror-authentication-with-kubernetes-secrets-2/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Registry Mirror Authentication with Kubernetes Secrets
+                </a>
+                <p class="mb-1 small text-light">Conclusion Throughout this two-part series, we’ve explored how the CRI-O credential provider addresses a real operational problem: maintaining namespace-scoped security boundaries while using private registry mirrors in Kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-17">
+                <a href="https://blog.cloudflare.com/standing-up-for-the-open-internet/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Standing up for the open Internet: why we appealed Italy’s "Piracy Shield" fine
+                </a>
+                <p class="mb-1 small text-light">The high cost of Piracy Shield Almost immediately after Piracy Shield was rolled out, there were significant problems. Cloudflare’s principled challenge Cloudflare has been clear about the risks posed by Piracy Shield from the beginning.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-17">
+                <a href="https://blog.cloudflare.com/legacy-to-agile-sase/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] From legacy architecture to Cloudflare One
+                </a>
+                <p class="mb-1 small text-light">“For large deployments, we focus on application modernization,” says Eric Marchewitz, a security solutions executive at CDW. Performance as a security feature Cloudflare’s single-pass architecture runs every security check simultaneously.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-03-17">
+                <a href="https://dropbox.tech/culture/insights-from-our-executive-roundtable-on-ai-and-engineering-productivity" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Insights from our executive roundtable on AI and engineering productivity
+                </a>
+                <p class="mb-1 small text-light">Improving engineering productivity is crucial to the work we do at Dropbox. The more quickly we can deliver high-quality features to our customers, the more value they can get from our products.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-17">
+                <a href="https://www.pulumi.com/blog/pulumi-cloud-now-supports-google-sign-in/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Pulumi Cloud Now Supports Google Sign-In
+                </a>
+                <p class="mb-1 small text-light">Many developers and platform engineers already use Google accounts daily for email, cloud console access, and collaboration. Until now, signing in to Pulumi Cloud required a GitHub, GitLab, or Atlassian account, or an email/password combination.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-17">
+                <a href="https://www.reddit.com/r/devops/comments/1rvv08u/ive_been_experimenting_with_deterministic_secret/" target="_blank" class="fw-bold text-decoration-none">
+                    I’ve been experimenting with deterministic secret remediation in CI/CD pipelines using Python AST (refuses unsafe fixes)
+                </a>
+                <p class="mb-1 small text-light">I’ve been experimenting with a slightly different approach to secret handling in CI/CD pipelines. live-abc123xyz987" After SENDGRID_API_KEY = os.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-17">
+                <a href="https://www.reddit.com/r/devops/comments/1rv99cj/cinder_csi_vs_ceph_rbd_csi_in_kubernetes_an/" target="_blank" class="fw-bold text-decoration-none">
+                    Cinder CSI vs Ceph RBD CSI in Kubernetes: An Analysis of Persistent Volume Lifecycle Performance
+                </a>
+                <p class="mb-1 small text-light">This could lead to pods getting stuck in ContainerCreating for a long time. 7x performance improvement If you're interested in Kubernetes volume internals or want to understand how these two different storage class implementations work in Kubernetes, you might find this article useful.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-17">
+                <a href="https://www.reddit.com/r/devops/comments/1rswbwi/oss_cartography_now_inventories_ai_agents_in/" target="_blank" class="fw-bold text-decoration-none">
+                    OSS Cartography now inventories AI agents in cloud environments
+                </a>
+                <p class="mb-1 small text-light">Hey, I'm Alex, I maintain Cartography, an open source tool that builds a graph of your cloud infrastructure: compute, identities, network, storage, and the relationships between them. Wanted to share that Cartography now automatically discovers AI agents in container images.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-17">
+                <a href="https://www.reddit.com/r/devops/comments/1rrvqyt/the_cicd_feedback_loop_from_hell_push_wait_8_min/" target="_blank" class="fw-bold text-decoration-none">
+                    The CI/CD feedback loop from hell (push, wait 8 min, red, fix typo, repeat)
+                </a>
+                <p class="mb-1 small text-light">Genuinely curious how yall deal with the CI/CD waiting game. Rinse and repeat 4-5 times on a bad day.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-17">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1rvjad6/qihoo_360s_ai_product_leaked_the_platforms_ssl/" target="_blank" class="fw-bold text-decoration-none">
+                    Qihoo 360's AI Product Leaked the Platform's SSL Key, Issued by Its Own CA Banned for Fraud
+                </a>
+                <p class="mb-1 small text-light">Qihoo 360 (China's largest cybersecurity company, ~460 million users) shipped the wildcard SSL private key for *. cn inside the public installer for their new AI product, 360 Security Lobster.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-17">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1rv8g9j/kubernetes_march_kubernetes_nyc_meetup_on_331/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] March Kubernetes NYC Meetup on 3/31, with guest speaker Marosha Afridi (Topic is Stop Chasing Packages: Fixing Vulnerabilities the Container Way)
+                </a>
+                <p class="mb-1 small text-light">Hi all, excited to invite you to the March Kubernetes NYC meetup on Tuesday, 3/13. Guest speaker is Marosha Afridi, Senior Security Defensive Engineer at SAP.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-17">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1rvequm/what_makes_a_selfhosted_kubernetes_app_painful_to/" target="_blank" class="fw-bold text-decoration-none">
+                    What makes a self-hosted Kubernetes app painful to run?
+                </a>
+                <p class="mb-1 small text-light">Curious from people running self-hosted software inside Kubernetes clusters. What are the biggest operational red flags? submitted by /u/replicatedhq</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-17">
+                <a href="https://devblogs.microsoft.com/azure-sql/introducing-budget-bytes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Introducing Budget Bytes: Build powerful AI apps for under $25
+                </a>
+                <p class="mb-1 small text-light">When developers hear “cloud” and “AI,” their first thought is often about cost. Practical patterns – Learn new tools, APIs, design patterns, and processes you can apply immediately.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-17
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-17">
+                <a href="https://www.docker.com/blog/run-claude-code-with-docker/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] How to Run Claude Code with Docker: Local Models, MCP Servers, and Secure Sandboxes
+                </a>
+                <p class="mb-1 small text-light">But to truly unlock its potential, it needs the right local infrastructure, tool access, and security boundaries. Since Docker Model Runner exposes an Anthropic-compatible API, integrating the two is simple.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-17
                     
                 </small>
             </li>

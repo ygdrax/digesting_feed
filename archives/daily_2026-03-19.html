@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - March 19, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - March 19, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for March 19, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-03-19">2026-03-19 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2026-03-19 08:15:45
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,254 +126,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-19">
-                <a href="https://www.reddit.com/r/devops/comments/1ru0ih0/need_assistance_with_switching_into_devops/" target="_blank" class="fw-bold text-decoration-none">
-                    Need assistance with switching into Devops Role/Cloud Role
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-19">
+                <a href="https://www.redhat.com/en/blog/announcing-ansible-automation-platform-24-end-maintenance-support" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Announcing Ansible Automation Platform 2.4 end of Maintenance Support
                 </a>
-                <p class="mb-1 small text-light">I started studying cloud technologies, but I don’t feel confident enough to appear for the certification exam. I also tried building a DevOps project, yet I’m unsure how to present it properly on my resume.</p>
+                <p class="mb-1 small text-light">Originally launched in June 2023, Ansible Automation Platform 2. For your organization, that means:No new critical fixes: Routine bug fixes and security patches (CVEs) are no longer backported.</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-19">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1rxecjv/agentgateway_v10_a_rustbased_kubernetes_gateway/" target="_blank" class="fw-bold text-decoration-none">
-                    Agentgateway v1.0: A Rust-based Kubernetes Gateway API implementation built for AI workloads
-                </a>
-                <p class="mb-1 small text-light">Fast forward, and I’m now a maintainer of agentgateway, an open-source, Rust-based Kubernetes Gateway API for cloud-native environments and AI workloads.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-19">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1rxcapz/thinking_about_pivoting_to_devops_at_37_is_it/" target="_blank" class="fw-bold text-decoration-none">
-                    Thinking about pivoting to DevOps at 37; is it worth it in the AI era?
-                </a>
-                <p class="mb-1 small text-light">It got me thinking seriously about shifting toward a DevOps/platform engineering path. So I'm curious; for those of you already in DevOps or platform engineering: do you think a backend dev with solid hands-on experience (Kubernetes, cloud, etc.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-19">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1rwy7dw/air_gapped_on_premise_deployments/" target="_blank" class="fw-bold text-decoration-none">
-                    Air gapped on premise deployments
-                </a>
-                <p class="mb-1 small text-light">Hey, I wanted to know how are you handling air-gapped / on-prem Kubernetes deployments for your product. Our product is a SaaS for data centers and many customers have strict security rules about the installation process.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-19">
-                <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
-                </a>
-                <p class="mb-1 small text-light">At Netflix, our goal is to entertain the world, which means we must speak the world’s languages. This data helps us understand how subtitle characteristics (e.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-19">
-                <a href="https://azure.microsoft.com/en-us/blog/the-economics-of-enterprise-ai-what-the-forrester-tei-study-reveals-about-microsoft-foundry/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] The economics of enterprise AI: What the Forrester TEI study reveals about Microsoft Foundry
-                </a>
-                <p class="mb-1 small text-light">—Managing director and global head of co-innovation, professional services Department-level budgets favor point solutions, but enterprise-level outcomes require platform thinking.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-19">
-                <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unlocking-document-understanding-with-mistral-document-ai-in-microsoft-foundry/4495664" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Unlocking document understanding with Mistral Document AI in Microsoft Foundry
-                </a>
-                <p class="mb-1 small text-light">Tasks that took days can be done in minutes, accelerating core business processesAccuracy and consistency: With 99 %+ recognition accuracy and deep layout understanding, Mistral delivers cleaner data and fewer downstream errors – essential in compliance-critical or analytics-driven operationsCost...</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-19">
-                <a href="https://azure.microsoft.com/en-us/blog/instant-access-incremental-snapshots-restore-without-waiting/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Instant access incremental snapshots: Restore without waiting
-                </a>
-                <p class="mb-1 small text-light">Newly restored disks also deliver near-full performance from the start, allowing applications to resume operations immediately. For mission-critical workloads, speed matters—especially when every minute of downtime or degraded performance has real business impact.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-19">
-                <a href="https://www.docker.com/blog/enterprise-shift-in-agent-strategy/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Flexibility Over Lock-In: The Enterprise Shift in Agent Strategy
-                </a>
-                <p class="mb-1 small text-light">As agent initiatives scale, teams are extending the same cloud-native practices that power their application pipelines such as microservices architectures, CI/CD, and container orchestration to support agent workloads.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-19">
-                <a href="https://about.gitlab.com/blog/automating-detection-gap-analysis-with-gitlab-duo-agent-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Automating detection gap analysis with GitLab Duo Agent Platform
-                </a>
-                <p class="mb-1 small text-light">Unlike a simple chat interface, agents in Duo Agent Platform can be given specific roles, domain knowledge, and access to tools, making them effective for domain-specific workflows like security operations.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-19">
-                <a href="https://about.gitlab.com/blog/extend-gitlab-duo-agent-platform-connect-any-tool-with-mcp/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Extend GitLab Duo Agent Platform: Connect any tool with MCP
-                </a>
-                <p class="mb-1 small text-light">Query issues, update tickets, and sync your workflow — all through natural language, without ever leaving your IDE.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-19">
-                <a href="https://www.hashicorp.com/blog/everything-as-code-for-your-security-lifecycle" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Everything as code for your security lifecycle
-                </a>
-                <p class="mb-1 small text-light">You can also use Terraform with a service networking platform like Consul to help applications find and talk to each other reliably and securely across on-premises, hybrid, and multi-cloud environments.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-19">
-                <a href="https://www.hashicorp.com/blog/building-day-2-ops-guardrails-with-terraform-and-packer" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Building Day 2 ops guardrails with Terraform and Packer
-                </a>
-                <p class="mb-1 small text-light">Cloud waste now averages 32% of companies' cloud budgets, and a significant percentage of cloud security incidents stem from misconfigurations that are often introduced due to a lack of guardrails.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-19">
-                <a href="https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Securing Production Debugging in Kubernetes
-                </a>
-                <p class="mb-1 small text-light">In either model, Kubernetes RBAC remains the source of truth for what the Kubernetes API allows and at what scope. RBAC maps the authenticated identity to a minimal Role This is straightforward to operationalize with the Kubernetes CertificateSigningRequest API.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-19">
-                <a href="https://www.cncf.io/blog/2026/03/18/kubecon-cloudnativecon-europe-2026-co-located-event-deep-dive-ciliumcon/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] KubeCon + CloudNativeCon Europe 2026 Co-located Event Deep Dive: CiliumCon
-                </a>
-                <p class="mb-1 small text-light">19’s headline observability features—while Roche will discuss expanded DNS policy wildcard support. Whether you’re a seasoned practitioner or just getting started, a basic understanding of Kubernetes networking and container orchestration will help you get the most out of the sessions.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-19">
-                <a href="https://blog.cloudflare.com/account-abuse-protection/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Announcing Cloudflare Account Abuse Protection: prevent fraudulent attacks from bots and humans
-                </a>
-                <p class="mb-1 small text-light">We've spent years empowering Cloudflare customers to protect their applications from automated attacks, but the threat landscape has evolved. Importantly, the actual username is not logged or stored by Cloudflare as part of this service.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-19">
-                <a href="https://www.pulumi.com/blog/treating-prompts-like-code/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Treating Prompts Like Code: A Content Engineer's AI Workflow
-                </a>
-                <p class="mb-1 small text-light">The real problem AI solves Everyone talks about AI making you faster. This matters most when running automation in CI/CD.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-19">
-                <a href="https://www.pulumi.com/blog/expanded-version-control-support/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Expanded Version Control Support in Pulumi Cloud
-                </a>
-                <p class="mb-1 small text-light">Your version control provider shouldn’t limit your infrastructure workflows. Pulumi Cloud now works with GitHub, GitHub Enterprise Server, Azure DevOps, and GitLab.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-19">
-                <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-series-explore-new-resources-for-building-a-stronger-more-efficient-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Azure IaaS series: Explore new resources for building a stronger, more efficient infrastructure
-                </a>
-                <p class="mb-1 small text-light">It depends on an infrastructure platform that can deliver the right combination of performance, resiliency, security, scalability, and cost efficiency—together.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-19">
-                <a href="https://www.docker.com/blog/from-the-captains-chair-naga-santhosh-reddy-vootukuri/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] From the Captain’s Chair: Naga Santhosh Reddy Vootukuri
-                </a>
-                <p class="mb-1 small text-light">He regularly blogs at DZone as an MVB core member about various topics ranging from Docker, Github Actions, Cloud Native Microservices, Dapr etc. What’s your favorite Docker product or feature right now, and why.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-19">
-                <a href="https://about.gitlab.com/blog/using-gitlab-container-virtual-registry-with-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] How to use GitLab Container Virtual Registry with Docker Hardened Images
-                </a>
-                <p class="mb-1 small text-light">The Platform teams I usually talk to manage container images across three to five registries:Docker Hub for most base imagesdhi. Related resourcesNew GitLab metrics and registry features help reduce CI/CD bottlenecksContainer Virtual Registry documentationContainer Virtual Registry API.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
+                    Red Hat | 2026-03-19
                     
                 </small>
             </li>
@@ -368,7 +145,7 @@
                 <p class="mb-1 small text-light">The challenge Prior state Before Vault, we relied on application-level encryption with manually managed keys stored in environment variables.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-03-19
                     
                 </small>
             </li>
@@ -380,7 +157,7 @@
                 <p class="mb-1 small text-light">This enables: AI Inference Security Guard against malicious prompts and prompt injection attacks. Key features include: External AI Service Integration Secure access to cloud-based AI services (OpenAI, Vertex AI, Bedrock, etc.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-03-19
                     
                 </small>
             </li>
@@ -392,19 +169,259 @@
                 <p class="mb-1 small text-light">Tracking control plane metrics helps detect issues with key services like the API server, scheduler, and controllers, ensuring cluster reliability and responsiveness. Monitoring queue length helps detect resource shortages or scheduler performance issues early.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-03-19
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-19">
-                <a href="https://www.redhat.com/en/blog/announcing-ansible-automation-platform-24-end-maintenance-support" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Announcing Ansible Automation Platform 2.4 end of Maintenance Support
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-19">
+                <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-series-explore-new-resources-for-building-a-stronger-more-efficient-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Azure IaaS series: Explore new resources for building a stronger, more efficient infrastructure
                 </a>
-                <p class="mb-1 small text-light">Originally launched in June 2023, Ansible Automation Platform 2. For your organization, that means:No new critical fixes: Routine bug fixes and security patches (CVEs) are no longer backported.</p>
+                <p class="mb-1 small text-light">It depends on an infrastructure platform that can deliver the right combination of performance, resiliency, security, scalability, and cost efficiency—together.</p>
                 <small class="text-secondary">
                     
-                    Red Hat
+                    Microsoft Azure | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-19">
+                <a href="https://www.docker.com/blog/from-the-captains-chair-naga-santhosh-reddy-vootukuri/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] From the Captain’s Chair: Naga Santhosh Reddy Vootukuri
+                </a>
+                <p class="mb-1 small text-light">He regularly blogs at DZone as an MVB core member about various topics ranging from Docker, Github Actions, Cloud Native Microservices, Dapr etc. What’s your favorite Docker product or feature right now, and why.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-19">
+                <a href="https://about.gitlab.com/blog/using-gitlab-container-virtual-registry-with-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] How to use GitLab Container Virtual Registry with Docker Hardened Images
+                </a>
+                <p class="mb-1 small text-light">The Platform teams I usually talk to manage container images across three to five registries:Docker Hub for most base imagesdhi. Related resourcesNew GitLab metrics and registry features help reduce CI/CD bottlenecksContainer Virtual Registry documentationContainer Virtual Registry API.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-19">
+                <a href="https://www.hashicorp.com/blog/everything-as-code-for-your-security-lifecycle" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Everything as code for your security lifecycle
+                </a>
+                <p class="mb-1 small text-light">You can also use Terraform with a service networking platform like Consul to help applications find and talk to each other reliably and securely across on-premises, hybrid, and multi-cloud environments.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-19">
+                <a href="https://www.hashicorp.com/blog/building-day-2-ops-guardrails-with-terraform-and-packer" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Building Day 2 ops guardrails with Terraform and Packer
+                </a>
+                <p class="mb-1 small text-light">Cloud waste now averages 32% of companies' cloud budgets, and a significant percentage of cloud security incidents stem from misconfigurations that are often introduced due to a lack of guardrails.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-19">
+                <a href="https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Securing Production Debugging in Kubernetes
+                </a>
+                <p class="mb-1 small text-light">In either model, Kubernetes RBAC remains the source of truth for what the Kubernetes API allows and at what scope. RBAC maps the authenticated identity to a minimal Role This is straightforward to operationalize with the Kubernetes CertificateSigningRequest API.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-19">
+                <a href="https://www.cncf.io/blog/2026/03/18/kubecon-cloudnativecon-europe-2026-co-located-event-deep-dive-ciliumcon/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] KubeCon + CloudNativeCon Europe 2026 Co-located Event Deep Dive: CiliumCon
+                </a>
+                <p class="mb-1 small text-light">19’s headline observability features—while Roche will discuss expanded DNS policy wildcard support. Whether you’re a seasoned practitioner or just getting started, a basic understanding of Kubernetes networking and container orchestration will help you get the most out of the sessions.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-19">
+                <a href="https://blog.cloudflare.com/account-abuse-protection/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Announcing Cloudflare Account Abuse Protection: prevent fraudulent attacks from bots and humans
+                </a>
+                <p class="mb-1 small text-light">We've spent years empowering Cloudflare customers to protect their applications from automated attacks, but the threat landscape has evolved. Importantly, the actual username is not logged or stored by Cloudflare as part of this service.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-19">
+                <a href="https://www.pulumi.com/blog/treating-prompts-like-code/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Treating Prompts Like Code: A Content Engineer's AI Workflow
+                </a>
+                <p class="mb-1 small text-light">The real problem AI solves Everyone talks about AI making you faster. This matters most when running automation in CI/CD.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-03-19">
+                <a href="https://www.pulumi.com/blog/expanded-version-control-support/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Expanded Version Control Support in Pulumi Cloud
+                </a>
+                <p class="mb-1 small text-light">Your version control provider shouldn’t limit your infrastructure workflows. Pulumi Cloud now works with GitHub, GitHub Enterprise Server, Azure DevOps, and GitLab.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-19">
+                <a href="https://www.reddit.com/r/devops/comments/1ru0ih0/need_assistance_with_switching_into_devops/" target="_blank" class="fw-bold text-decoration-none">
+                    Need assistance with switching into Devops Role/Cloud Role
+                </a>
+                <p class="mb-1 small text-light">I started studying cloud technologies, but I don’t feel confident enough to appear for the certification exam. I also tried building a DevOps project, yet I’m unsure how to present it properly on my resume.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-19">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1rxecjv/agentgateway_v10_a_rustbased_kubernetes_gateway/" target="_blank" class="fw-bold text-decoration-none">
+                    Agentgateway v1.0: A Rust-based Kubernetes Gateway API implementation built for AI workloads
+                </a>
+                <p class="mb-1 small text-light">Fast forward, and I’m now a maintainer of agentgateway, an open-source, Rust-based Kubernetes Gateway API for cloud-native environments and AI workloads.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-19">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1rxcapz/thinking_about_pivoting_to_devops_at_37_is_it/" target="_blank" class="fw-bold text-decoration-none">
+                    Thinking about pivoting to DevOps at 37; is it worth it in the AI era?
+                </a>
+                <p class="mb-1 small text-light">It got me thinking seriously about shifting toward a DevOps/platform engineering path. So I'm curious; for those of you already in DevOps or platform engineering: do you think a backend dev with solid hands-on experience (Kubernetes, cloud, etc.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-19">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1rwy7dw/air_gapped_on_premise_deployments/" target="_blank" class="fw-bold text-decoration-none">
+                    Air gapped on premise deployments
+                </a>
+                <p class="mb-1 small text-light">Hey, I wanted to know how are you handling air-gapped / on-prem Kubernetes deployments for your product. Our product is a SaaS for data centers and many customers have strict security rules about the installation process.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-19">
+                <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
+                </a>
+                <p class="mb-1 small text-light">At Netflix, our goal is to entertain the world, which means we must speak the world’s languages. This data helps us understand how subtitle characteristics (e.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-19">
+                <a href="https://azure.microsoft.com/en-us/blog/the-economics-of-enterprise-ai-what-the-forrester-tei-study-reveals-about-microsoft-foundry/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] The economics of enterprise AI: What the Forrester TEI study reveals about Microsoft Foundry
+                </a>
+                <p class="mb-1 small text-light">—Managing director and global head of co-innovation, professional services Department-level budgets favor point solutions, but enterprise-level outcomes require platform thinking.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-19">
+                <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unlocking-document-understanding-with-mistral-document-ai-in-microsoft-foundry/4495664" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Unlocking document understanding with Mistral Document AI in Microsoft Foundry
+                </a>
+                <p class="mb-1 small text-light">Tasks that took days can be done in minutes, accelerating core business processesAccuracy and consistency: With 99 %+ recognition accuracy and deep layout understanding, Mistral delivers cleaner data and fewer downstream errors – essential in compliance-critical or analytics-driven operationsCost...</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-19">
+                <a href="https://azure.microsoft.com/en-us/blog/instant-access-incremental-snapshots-restore-without-waiting/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Instant access incremental snapshots: Restore without waiting
+                </a>
+                <p class="mb-1 small text-light">Newly restored disks also deliver near-full performance from the start, allowing applications to resume operations immediately. For mission-critical workloads, speed matters—especially when every minute of downtime or degraded performance has real business impact.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-19">
+                <a href="https://www.docker.com/blog/enterprise-shift-in-agent-strategy/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Flexibility Over Lock-In: The Enterprise Shift in Agent Strategy
+                </a>
+                <p class="mb-1 small text-light">As agent initiatives scale, teams are extending the same cloud-native practices that power their application pipelines such as microservices architectures, CI/CD, and container orchestration to support agent workloads.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-19">
+                <a href="https://about.gitlab.com/blog/automating-detection-gap-analysis-with-gitlab-duo-agent-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Automating detection gap analysis with GitLab Duo Agent Platform
+                </a>
+                <p class="mb-1 small text-light">Unlike a simple chat interface, agents in Duo Agent Platform can be given specific roles, domain knowledge, and access to tools, making them effective for domain-specific workflows like security operations.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-19">
+                <a href="https://about.gitlab.com/blog/extend-gitlab-duo-agent-platform-connect-any-tool-with-mcp/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Extend GitLab Duo Agent Platform: Connect any tool with MCP
+                </a>
+                <p class="mb-1 small text-light">Query issues, update tickets, and sync your workflow — all through natural language, without ever leaving your IDE.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-19
                     
                 </small>
             </li>

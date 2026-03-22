@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - March 22, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - March 22, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for March 22, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-03-22">2026-03-22 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2026-03-22 08:09:47
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,282 +126,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-03-22">
-                <a href="https://sashiko.dev/" target="_blank" class="fw-bold text-decoration-none">
-                    Sashiko: An agentic Linux kernel code review system
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://sashiko.dev/ Comments URL: https://news.ycombinator.com/item?id=47474323 Points: 14 # Comments: 1</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-03-22">
-                <a href="https://radar.cloudflare.com/domains/domain/archive.today" target="_blank" class="fw-bold text-decoration-none">
-                    Cloudflare flags archive.today as "C&C/Botnet"; no longer resolves via 1.1.1.2
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://radar.cloudflare.com/domains/domain/archive.today Comments URL: https://news.ycombinator.com/item?id=47474255 Points: 120 # Comments: 63</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-22">
-                <a href="https://www.reddit.com/r/devops/comments/1s00x6l/from_6_years_mern_full_stack_to_devops_in_2026_ai/" target="_blank" class="fw-bold text-decoration-none">
-                    From 6 years MERN Full Stack to DevOps in 2026 (AI era) , just finished 1.5 month full-time tool grind, planning 10-15 projects. Real talk: what do I actually need to land a job?
-                </a>
-                <p class="mb-1 small text-light">So last month I went full-time on DevOps: Docker, Jenkins, Kubernetes, Terraform, AWS, Linux, Ansible, Argo CD, Grafana, the whole stack.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-22">
-                <a href="https://www.reddit.com/r/devops/comments/1rzpct1/need_advice_on_changing_domain_from_azure_iam_to/" target="_blank" class="fw-bold text-decoration-none">
-                    Need advice on changing domain from Azure IAM to Azure devops
-                </a>
-                <p class="mb-1 small text-light">Hey folks, I currently work at TCS as support engineer helping customers resolve tickets on Azure around IAM With 5 yoe my salary is just 4.5 lpa (INR) Need advice if I want to move to Azure devops Do I need certification or any upskilling advice Would really appreciate the same submitted by /u/Ok-Positive8997</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-22">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1rxecjv/agentgateway_v10_a_rustbased_kubernetes_gateway/" target="_blank" class="fw-bold text-decoration-none">
-                    Agentgateway v1.0: A Rust-based Kubernetes Gateway API implementation built for AI workloads
-                </a>
-                <p class="mb-1 small text-light">Fast forward, and I’m now a maintainer of agentgateway, an open-source, Rust-based Kubernetes Gateway API for cloud-native environments and AI workloads.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-22">
-                <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
-                </a>
-                <p class="mb-1 small text-light">At Netflix, our goal is to entertain the world, which means we must speak the world’s languages. This data helps us understand how subtitle characteristics (e.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-22">
-                <a href="https://www.microsoft.com/en-us/sql-server/blog/2026/03/18/advancing-agentic-ai-with-microsoft-databases-across-a-unified-data-estate/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Advancing agentic AI with Microsoft databases across a unified data estate
-                </a>
-                <p class="mb-1 small text-light">With full insert, update, and delete support, vector indexes stay current in real time, enabling dynamic applications. It provides a Copilot-assisted experience that helps SQL developers assess readiness, migrate schema, identify compatibility issues, and copy data with less manual effort.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-22">
-                <a href="https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] FabCon and SQLCon 2026: Unifying databases and Fabric on a single data platform
-                </a>
-                <p class="mb-1 small text-light">Database Hub in Fabric provides a unified database management experience that brings together databases across edge, cloud, and Fabric into a single, coherent view.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-22">
-                <a href="https://www.docker.com/blog/enterprise-shift-in-agent-strategy/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Flexibility Over Lock-In: The Enterprise Shift in Agent Strategy
-                </a>
-                <p class="mb-1 small text-light">As agent initiatives scale, teams are extending the same cloud-native practices that power their application pipelines such as microservices architectures, CI/CD, and container orchestration to support agent workloads.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-22">
-                <a href="https://about.gitlab.com/blog/automating-detection-gap-analysis-with-gitlab-duo-agent-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Automating detection gap analysis with GitLab Duo Agent Platform
-                </a>
-                <p class="mb-1 small text-light">Unlike a simple chat interface, agents in Duo Agent Platform can be given specific roles, domain knowledge, and access to tools, making them effective for domain-specific workflows like security operations.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-03-22">
-                <a href="https://engineering.atspotify.com/2026/2/how-we-release-the-spotify-app-part-2/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] How We Release the Spotify App: A Look Under the Hood (Part 2)
-                </a>
-                <p class="mb-1 small text-light">In Part 2, we will peek under the hood at the tooling that makes the Spotify release process possible. The post How We Release the Spotify App: A Look Under the Hood (Part 2) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-03-22">
-                <a href="https://engineering.atspotify.com/2026/1/congratulations-to-the-recipients-of-the-2025-spotify-foss-fund/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Congratulations to the recipients of the 2025 Spotify FOSS Fund
-                </a>
-                <p class="mb-1 small text-light">TL;DR Established in 2022 as a way to help support the great open source ecosystem projects that Spotify... The post Congratulations to the recipients of the 2025 Spotify FOSS Fund appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-03-22">
-                <a href="https://engineering.atspotify.com/2026/1/why-we-use-separate-tech-stacks-for-personalization-and-experimentation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Why We Use Separate Tech Stacks for Personalization and Experimentation
-                </a>
-                <p class="mb-1 small text-light">The technical and practical rationale for a clear separation between these domains. The post Why We Use Separate Tech Stacks for Personalization and Experimentation appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-03-22">
-                <a href="https://engineering.fb.com/2026/03/18/ml-applications/friend-bubbles-enhancing-social-discovery-on-facebook-reels/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Friend Bubbles: Enhancing Social Discovery on Facebook Reels
-                </a>
-                <p class="mb-1 small text-light">One model is based on user survey feedback; the other is based on on-platform interactions. This is important because, without it, high-quality friend content may never enter the ranking pipeline in the first place.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-03-22">
-                <a href="https://engineering.fb.com/2026/03/09/security/how-advanced-browsing-protection-works-in-messenger/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] How Advanced Browsing Protection Works in Messenger
-                </a>
-                <p class="mb-1 small text-light">We hope that this post has helped to illuminate some of the engineering challenges and infrastructure components involved for providing this feature for our users. But it also creates a new efficiency problem: Bucket sizes can become unbalanced.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-03-22">
-                <a href="https://engineering.fb.com/2026/03/02/video-engineering/ffmpeg-at-meta-media-processing-at-scale/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] FFmpeg at Meta: Media Processing at Scale
-                </a>
-                <p class="mb-1 small text-light">DASH playback allows the app’s video player to dynamically choose an encoding based on signals such as network conditions. For people on our platforms, this means enabling new experiences and improving the reliability of existing ones.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-22">
-                <a href="https://www.hashicorp.com/blog/everything-as-code-for-your-security-lifecycle" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Everything as code for your security lifecycle
-                </a>
-                <p class="mb-1 small text-light">You can also use Terraform with a service networking platform like Consul to help applications find and talk to each other reliably and securely across on-premises, hybrid, and multi-cloud environments.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-22">
-                <a href="https://www.hashicorp.com/blog/building-day-2-ops-guardrails-with-terraform-and-packer" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Building Day 2 ops guardrails with Terraform and Packer
-                </a>
-                <p class="mb-1 small text-light">Cloud waste now averages 32% of companies' cloud budgets, and a significant percentage of cloud security incidents stem from misconfigurations that are often introduced due to a lack of guardrails.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-22">
-                <a href="https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Securing Production Debugging in Kubernetes
-                </a>
-                <p class="mb-1 small text-light">In either model, Kubernetes RBAC remains the source of truth for what the Kubernetes API allows and at what scope. RBAC maps the authenticated identity to a minimal Role This is straightforward to operationalize with the Kubernetes CertificateSigningRequest API.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-22">
-                <a href="https://blog.cloudflare.com/account-abuse-protection/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Announcing Cloudflare Account Abuse Protection: prevent fraudulent attacks from bots and humans
-                </a>
-                <p class="mb-1 small text-light">We've spent years empowering Cloudflare customers to protect their applications from automated attacks, but the threat landscape has evolved. Importantly, the actual username is not logged or stored by Cloudflare as part of this service.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-22">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1rzog6i/testing_kubernetes_deploymentsoperators_in_java/" target="_blank" class="fw-bold text-decoration-none">
-                    Testing Kubernetes deployments/operators in Java without writing tons of boilerplate
-                </a>
-                <p class="mb-1 small text-light">Things like: - namespace lifecycle - waiting for readiness (pods, CRs, etc. ) - handling async behavior reliably - collecting logs/events when tests fail Fabric8 solves the API part well, but the higher-level testing patterns are usually reimplemented in every project.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-22">
-                <a href="https://www.docker.com/blog/from-the-captains-chair-naga-santhosh-reddy-vootukuri/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] From the Captain’s Chair: Naga Santhosh Reddy Vootukuri
-                </a>
-                <p class="mb-1 small text-light">He regularly blogs at DZone as an MVB core member about various topics ranging from Docker, Github Actions, Cloud Native Microservices, Dapr etc. What’s your favorite Docker product or feature right now, and why.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-22">
-                <a href="https://about.gitlab.com/blog/using-gitlab-container-virtual-registry-with-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] How to use GitLab Container Virtual Registry with Docker Hardened Images
-                </a>
-                <p class="mb-1 small text-light">The Platform teams I usually talk to manage container images across three to five registries:Docker Hub for most base imagesdhi. Related resourcesNew GitLab metrics and registry features help reduce CI/CD bottlenecksContainer Virtual Registry documentationContainer Virtual Registry API.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-22">
                 <a href="https://www.hashicorp.com/blog/adopting-hashicorp-vaults-transit-engine-high-performance-envelope-encryption-ariso-ai" target="_blank" class="fw-bold text-decoration-none">
                     [HashiCorp] High-performance envelope encryption at Ariso.ai with Vault
@@ -392,7 +133,7 @@
                 <p class="mb-1 small text-light">The challenge Prior state Before Vault, we relied on application-level encryption with manually managed keys stored in environment variables.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-03-22
                     
                 </small>
             </li>
@@ -404,7 +145,283 @@
                 <p class="mb-1 small text-light">This enables: AI Inference Security Guard against malicious prompts and prompt injection attacks. Key features include: External AI Service Integration Secure access to cloud-based AI services (OpenAI, Vertex AI, Bedrock, etc.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-22">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1rzog6i/testing_kubernetes_deploymentsoperators_in_java/" target="_blank" class="fw-bold text-decoration-none">
+                    Testing Kubernetes deployments/operators in Java without writing tons of boilerplate
+                </a>
+                <p class="mb-1 small text-light">Things like: - namespace lifecycle - waiting for readiness (pods, CRs, etc. ) - handling async behavior reliably - collecting logs/events when tests fail Fabric8 solves the API part well, but the higher-level testing patterns are usually reimplemented in every project.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-22">
+                <a href="https://www.docker.com/blog/from-the-captains-chair-naga-santhosh-reddy-vootukuri/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] From the Captain’s Chair: Naga Santhosh Reddy Vootukuri
+                </a>
+                <p class="mb-1 small text-light">He regularly blogs at DZone as an MVB core member about various topics ranging from Docker, Github Actions, Cloud Native Microservices, Dapr etc. What’s your favorite Docker product or feature right now, and why.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-22">
+                <a href="https://about.gitlab.com/blog/using-gitlab-container-virtual-registry-with-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] How to use GitLab Container Virtual Registry with Docker Hardened Images
+                </a>
+                <p class="mb-1 small text-light">The Platform teams I usually talk to manage container images across three to five registries:Docker Hub for most base imagesdhi. Related resourcesNew GitLab metrics and registry features help reduce CI/CD bottlenecksContainer Virtual Registry documentationContainer Virtual Registry API.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-22">
+                <a href="https://www.hashicorp.com/blog/everything-as-code-for-your-security-lifecycle" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Everything as code for your security lifecycle
+                </a>
+                <p class="mb-1 small text-light">You can also use Terraform with a service networking platform like Consul to help applications find and talk to each other reliably and securely across on-premises, hybrid, and multi-cloud environments.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-22">
+                <a href="https://www.hashicorp.com/blog/building-day-2-ops-guardrails-with-terraform-and-packer" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Building Day 2 ops guardrails with Terraform and Packer
+                </a>
+                <p class="mb-1 small text-light">Cloud waste now averages 32% of companies' cloud budgets, and a significant percentage of cloud security incidents stem from misconfigurations that are often introduced due to a lack of guardrails.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-22">
+                <a href="https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Securing Production Debugging in Kubernetes
+                </a>
+                <p class="mb-1 small text-light">In either model, Kubernetes RBAC remains the source of truth for what the Kubernetes API allows and at what scope. RBAC maps the authenticated identity to a minimal Role This is straightforward to operationalize with the Kubernetes CertificateSigningRequest API.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-22">
+                <a href="https://blog.cloudflare.com/account-abuse-protection/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Announcing Cloudflare Account Abuse Protection: prevent fraudulent attacks from bots and humans
+                </a>
+                <p class="mb-1 small text-light">We've spent years empowering Cloudflare customers to protect their applications from automated attacks, but the threat landscape has evolved. Importantly, the actual username is not logged or stored by Cloudflare as part of this service.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-22">
+                <a href="https://www.reddit.com/r/devops/comments/1s00x6l/from_6_years_mern_full_stack_to_devops_in_2026_ai/" target="_blank" class="fw-bold text-decoration-none">
+                    From 6 years MERN Full Stack to DevOps in 2026 (AI era) , just finished 1.5 month full-time tool grind, planning 10-15 projects. Real talk: what do I actually need to land a job?
+                </a>
+                <p class="mb-1 small text-light">So last month I went full-time on DevOps: Docker, Jenkins, Kubernetes, Terraform, AWS, Linux, Ansible, Argo CD, Grafana, the whole stack.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-22">
+                <a href="https://www.reddit.com/r/devops/comments/1rzpct1/need_advice_on_changing_domain_from_azure_iam_to/" target="_blank" class="fw-bold text-decoration-none">
+                    Need advice on changing domain from Azure IAM to Azure devops
+                </a>
+                <p class="mb-1 small text-light">Hey folks, I currently work at TCS as support engineer helping customers resolve tickets on Azure around IAM With 5 yoe my salary is just 4.5 lpa (INR) Need advice if I want to move to Azure devops Do I need certification or any upskilling advice Would really appreciate the same submitted by /u/Ok-Positive8997</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-22">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1rxecjv/agentgateway_v10_a_rustbased_kubernetes_gateway/" target="_blank" class="fw-bold text-decoration-none">
+                    Agentgateway v1.0: A Rust-based Kubernetes Gateway API implementation built for AI workloads
+                </a>
+                <p class="mb-1 small text-light">Fast forward, and I’m now a maintainer of agentgateway, an open-source, Rust-based Kubernetes Gateway API for cloud-native environments and AI workloads.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-22">
+                <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
+                </a>
+                <p class="mb-1 small text-light">At Netflix, our goal is to entertain the world, which means we must speak the world’s languages. This data helps us understand how subtitle characteristics (e.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-22">
+                <a href="https://www.microsoft.com/en-us/sql-server/blog/2026/03/18/advancing-agentic-ai-with-microsoft-databases-across-a-unified-data-estate/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Advancing agentic AI with Microsoft databases across a unified data estate
+                </a>
+                <p class="mb-1 small text-light">With full insert, update, and delete support, vector indexes stay current in real time, enabling dynamic applications. It provides a Copilot-assisted experience that helps SQL developers assess readiness, migrate schema, identify compatibility issues, and copy data with less manual effort.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-22">
+                <a href="https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] FabCon and SQLCon 2026: Unifying databases and Fabric on a single data platform
+                </a>
+                <p class="mb-1 small text-light">Database Hub in Fabric provides a unified database management experience that brings together databases across edge, cloud, and Fabric into a single, coherent view.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-22">
+                <a href="https://www.docker.com/blog/enterprise-shift-in-agent-strategy/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Flexibility Over Lock-In: The Enterprise Shift in Agent Strategy
+                </a>
+                <p class="mb-1 small text-light">As agent initiatives scale, teams are extending the same cloud-native practices that power their application pipelines such as microservices architectures, CI/CD, and container orchestration to support agent workloads.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-22">
+                <a href="https://about.gitlab.com/blog/automating-detection-gap-analysis-with-gitlab-duo-agent-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Automating detection gap analysis with GitLab Duo Agent Platform
+                </a>
+                <p class="mb-1 small text-light">Unlike a simple chat interface, agents in Duo Agent Platform can be given specific roles, domain knowledge, and access to tools, making them effective for domain-specific workflows like security operations.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-03-22">
+                <a href="https://engineering.atspotify.com/2026/2/how-we-release-the-spotify-app-part-2/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] How We Release the Spotify App: A Look Under the Hood (Part 2)
+                </a>
+                <p class="mb-1 small text-light">In Part 2, we will peek under the hood at the tooling that makes the Spotify release process possible. The post How We Release the Spotify App: A Look Under the Hood (Part 2) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-03-22">
+                <a href="https://engineering.atspotify.com/2026/1/congratulations-to-the-recipients-of-the-2025-spotify-foss-fund/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Congratulations to the recipients of the 2025 Spotify FOSS Fund
+                </a>
+                <p class="mb-1 small text-light">TL;DR Established in 2022 as a way to help support the great open source ecosystem projects that Spotify... The post Congratulations to the recipients of the 2025 Spotify FOSS Fund appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-03-22">
+                <a href="https://engineering.atspotify.com/2026/1/why-we-use-separate-tech-stacks-for-personalization-and-experimentation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Why We Use Separate Tech Stacks for Personalization and Experimentation
+                </a>
+                <p class="mb-1 small text-light">The technical and practical rationale for a clear separation between these domains. The post Why We Use Separate Tech Stacks for Personalization and Experimentation appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-03-22">
+                <a href="https://engineering.fb.com/2026/03/18/ml-applications/friend-bubbles-enhancing-social-discovery-on-facebook-reels/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Friend Bubbles: Enhancing Social Discovery on Facebook Reels
+                </a>
+                <p class="mb-1 small text-light">One model is based on user survey feedback; the other is based on on-platform interactions. This is important because, without it, high-quality friend content may never enter the ranking pipeline in the first place.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-03-22">
+                <a href="https://engineering.fb.com/2026/03/09/security/how-advanced-browsing-protection-works-in-messenger/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] How Advanced Browsing Protection Works in Messenger
+                </a>
+                <p class="mb-1 small text-light">We hope that this post has helped to illuminate some of the engineering challenges and infrastructure components involved for providing this feature for our users. But it also creates a new efficiency problem: Bucket sizes can become unbalanced.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-03-22">
+                <a href="https://engineering.fb.com/2026/03/02/video-engineering/ffmpeg-at-meta-media-processing-at-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] FFmpeg at Meta: Media Processing at Scale
+                </a>
+                <p class="mb-1 small text-light">DASH playback allows the app’s video player to dynamically choose an encoding based on signals such as network conditions. For people on our platforms, this means enabling new experiences and improving the reliability of existing ones.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-03-22">
+                <a href="https://sashiko.dev/" target="_blank" class="fw-bold text-decoration-none">
+                    Sashiko: An agentic Linux kernel code review system
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://sashiko.dev/ Comments URL: https://news.ycombinator.com/item?id=47474323 Points: 14 # Comments: 1</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-03-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-03-22">
+                <a href="https://radar.cloudflare.com/domains/domain/archive.today" target="_blank" class="fw-bold text-decoration-none">
+                    Cloudflare flags archive.today as "C&C/Botnet"; no longer resolves via 1.1.1.2
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://radar.cloudflare.com/domains/domain/archive.today Comments URL: https://news.ycombinator.com/item?id=47474255 Points: 120 # Comments: 63</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-03-22
                     
                 </small>
             </li>

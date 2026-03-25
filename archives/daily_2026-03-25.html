@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - March 25, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - March 25, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for March 25, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-03-25">2026-03-25 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2026-03-25 08:17:29
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,254 +130,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-25">
-                <a href="https://www.reddit.com/r/devops/comments/1s00x6l/from_6_years_mern_full_stack_to_devops_in_2026_ai/" target="_blank" class="fw-bold text-decoration-none">
-                    From 6 years MERN Full Stack to DevOps in 2026 (AI era) , just finished 1.5 month full-time tool grind, planning 10-15 projects. Real talk: what do I actually need to land a job?
-                </a>
-                <p class="mb-1 small text-light">So last month I went full-time on DevOps: Docker, Jenkins, Kubernetes, Terraform, AWS, Linux, Ansible, Argo CD, Grafana, the whole stack.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-25">
-                <a href="https://www.reddit.com/r/devops/comments/1rzpct1/need_advice_on_changing_domain_from_azure_iam_to/" target="_blank" class="fw-bold text-decoration-none">
-                    Need advice on changing domain from Azure IAM to Azure devops
-                </a>
-                <p class="mb-1 small text-light">Hey folks, I currently work at TCS as support engineer helping customers resolve tickets on Azure around IAM With 5 yoe my salary is just 4.5 lpa (INR) Need advice if I want to move to Azure devops Do I need certification or any upskilling advice Would really appreciate the same submitted by /u/Ok-Positive8997</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-25">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1s29dq9/do_people_actually_use_deep_runtime_security_in/" target="_blank" class="fw-bold text-decoration-none">
-                    Do people actually use deep runtime security in Kubernetes, or is it mostly overkill?
-                </a>
-                <p class="mb-1 small text-light">Hi all, I’ve been trying to understand how practical container runtime security is in day-to-day Kubernetes/OpenShift environments. A lot of tools talk about runtime detection, behavioral monitoring, syscall-level visibility, etc.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-25">
-                <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
-                </a>
-                <p class="mb-1 small text-light">At Netflix, our goal is to entertain the world, which means we must speak the world’s languages. This data helps us understand how subtitle characteristics (e.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-25">
-                <a href="https://about.gitlab.com/blog/gitlab-18-10-agentic-ai-now-open-to-even-more-teams-on-gitlab/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab 18.10: Agentic AI now open to even more teams on GitLab
-                </a>
-                <p class="mb-1 small text-light">com teams can purchase a monthly commitment of GitLab Credits and start using GitLab Duo Agent Platform immediately. GitLab’s Duo Agent Platform takes software development from iteration to deployment, powered by one credit pool.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-03-25">
-                <a href="https://blog.sentry.io/next-js-observability-gaps-how-to-close-them/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Next.js observability gaps and how to close them
-                </a>
-                <p class="mb-1 small text-light">Sentry provides an HTML diff view that shows exactly which DOM nodes diverged between server and client renders. js observability problems look like missing data until you know what to look for.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-03-25">
-                <a href="https://blog.sentry.io/fair-source-software-in-the-ai-age/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Fair Source Software in the AI age
-                </a>
-                <p class="mb-1 small text-light">js apps on other platforms, but it has challenges. Because of this, Steve Faulkner from Cloudflare announced a new project called vinext that reimplements the Next.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-03-25">
-                <a href="https://snyk.io/blog/introducing-agent-security/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Introducing Agent Security
-                </a>
-                <p class="mb-1 small text-light">Introducing Agent Security, a unified approach to governing AI agents and ensuring safe behavior from code to runtime. Start with Evo AI-SPM, now generally available.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-03-25">
-                <a href="https://snyk.io/blog/the-next-era-of-appsec-why-ai-generated-code-needs-offensive-dynamic-testing/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] The Next Era of AppSec: Why AI-Generated Code Needs Offensive Dynamic Testing
-                </a>
-                <p class="mb-1 small text-light">Static analysis tells you what might be vulnerable, but dynamic testing tells you what is actually exploitable. Learn why the next era of AppSec requires combining code-level context with live environment testing to secure AI-generated code.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-03-25">
-                <a href="https://snyk.io/blog/ai-is-building-your-attack-surface-are-you-testing-it/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] AI Is Building Your Attack Surface. Are You Testing It?
-                </a>
-                <p class="mb-1 small text-light">Speed has outpaced validation. With 62% of LLM-generated code testing as insecure and AI agents using undocumented APIs, legacy tools fall short. Learn how Snyk’s AI-powered dynamic testing secures your expanding attack surface.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-03-25">
-                <a href="https://www.xda-developers.com/wine-11-rewrites-linux-runs-windows-games-speed-gains/" target="_blank" class="fw-bold text-decoration-none">
-                    Wine 11 rewrites how Linux runs Windows games at kernel with massive speed gains
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.xda-developers.com/wine-11-rewrites-linux-runs-windows-games-speed-gains/ Comments URL: https://news.ycombinator.com/item?id=47507150 Points: 868 # Comments: 309</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-25">
-                <a href="https://www.hashicorp.com/blog/everything-as-code-for-your-security-lifecycle" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Everything as code for your security lifecycle
-                </a>
-                <p class="mb-1 small text-light">You can also use Terraform with a service networking platform like Consul to help applications find and talk to each other reliably and securely across on-premises, hybrid, and multi-cloud environments.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-25">
-                <a href="https://www.hashicorp.com/blog/building-day-2-ops-guardrails-with-terraform-and-packer" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Building Day 2 ops guardrails with Terraform and Packer
-                </a>
-                <p class="mb-1 small text-light">Cloud waste now averages 32% of companies' cloud budgets, and a significant percentage of cloud security incidents stem from misconfigurations that are often introduced due to a lack of guardrails.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-25">
-                <a href="https://kubernetes.io/blog/2026/03/20/ingress2gateway-1-0-release/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing Ingress2Gateway 1.0: Your Path to Gateway API
-                </a>
-                <p class="mb-1 small text-light">Gateway API provides a modular, extensible API with strong support for Kubernetes-native RBAC. Ingress2Gateway is an assistant that helps teams confidently move from Ingress to Gateway API.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-25">
-                <a href="https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Securing Production Debugging in Kubernetes
-                </a>
-                <p class="mb-1 small text-light">In either model, Kubernetes RBAC remains the source of truth for what the Kubernetes API allows and at what scope. RBAC maps the authenticated identity to a minimal Role This is straightforward to operationalize with the Kubernetes CertificateSigningRequest API.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-25">
-                <a href="https://www.cncf.io/announcements/2026/03/25/istio-brings-future-ready-service-mesh-to-the-ai-era-with-new-ambient-multicluster-gateway-api-inference-extension-and-more/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Istio Brings Future Ready Service Mesh to the AI Era with New Ambient Multicluster, Gateway API Inference Extension and More
+                <a href="https://www.cncf.io/announcements/2026/03/25/cncf-welcomes-21-new-silver-members-as-global-demand-surges-for-observability-ai-and-secure-cloud-native-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] CNCF Welcomes 21 New Silver Members As Global Demand Surges for Observability, AI, and Secure Cloud Native Infrastructure
                 </a>
-                <p class="mb-1 small text-light">New updates simplify multicluster operations and introduce optimized model routing to support AI inference on Kubernetes. The Cloud Native Computing Foundation (CNCF) hosts critical components of the global technology infrastructure, including Kubernetes, Prometheus, and Envoy.</p>
+                <p class="mb-1 small text-light">The platform enables organizations to scale AI agent deployments with built-in governance, observability, and verifiable accountability. It provides standardized self-service for application delivery while enforcing centralized security, compliance, and operational governance.</p>
                 <small class="text-secondary">
                     
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-25">
-                <a href="https://www.cncf.io/blog/2026/03/25/lima-v2-1-macos-guests-and-enhanced-ai-agent-safety/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Lima v2.1: macOS guests and enhanced AI agent safety
-                </a>
-                <p class="mb-1 small text-light">1 also introduced support for FreeBSD guests, another requested feature by our community. → Yes No View the changed contents Performance and efficiency improvements Lima v2.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-25">
-                <a href="https://azure.microsoft.com/en-us/blog/introducing-fireworks-ai-on-microsoft-foundry-bringing-high-performance-low-latency-open-model-inference-to-azure/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Introducing Fireworks AI on Microsoft Foundry: Bringing high performance, low latency open model inference to Azure
-                </a>
-                <p class="mb-1 small text-light">Across industries, organizations are increasingly standardizing on open models to gain greater control over performance, cost, customization, and the security and compliance required for enterprise deployment.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-25">
-                <a href="https://www.docker.com/blog/from-the-captains-chair-naga-santhosh-reddy-vootukuri/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] From the Captain’s Chair: Naga Santhosh Reddy Vootukuri
-                </a>
-                <p class="mb-1 small text-light">He regularly blogs at DZone as an MVB core member about various topics ranging from Docker, Github Actions, Cloud Native Microservices, Dapr etc. What’s your favorite Docker product or feature right now, and why.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-25">
-                <a href="https://www.redhat.com/en/blog/what-does-ai-security-mean-and-why-does-it-matter-your-business" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] What does “AI security” mean and why does it matter to your business?
-                </a>
-                <p class="mb-1 small text-light">Let's imagine a customer-support chatbot—it's running on Red Hat OpenShift AI and searches internal documents to answer questions. This is the new computer security reality in which we live.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-25">
-                <a href="https://about.gitlab.com/blog/using-gitlab-container-virtual-registry-with-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] How to use GitLab Container Virtual Registry with Docker Hardened Images
-                </a>
-                <p class="mb-1 small text-light">The Platform teams I usually talk to manage container images across three to five registries:Docker Hub for most base imagesdhi. Related resourcesNew GitLab metrics and registry features help reduce CI/CD bottlenecksContainer Virtual Registry documentationContainer Virtual Registry API.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
+                    CNCF | 2026-03-25
                     
                 </small>
             </li>
@@ -372,7 +149,7 @@
                 <p class="mb-1 small text-light">The challenge Prior state Before Vault, we relied on application-level encryption with manually managed keys stored in environment variables.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-03-25
                     
                 </small>
             </li>
@@ -384,7 +161,7 @@
                 <p class="mb-1 small text-light">This enables: AI Inference Security Guard against malicious prompts and prompt injection attacks. Key features include: External AI Service Integration Secure access to cloud-based AI services (OpenAI, Vertex AI, Bedrock, etc.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-03-25
                     
                 </small>
             </li>
@@ -396,19 +173,259 @@
                 <p class="mb-1 small text-light">Dynamic Worker Loader: a lean sandbox Tucked into our Code Mode post in September was the announcement of a new, experimental feature: the Dynamic Worker Loader API. This API allows a Cloudflare Worker to instantiate a new Worker, in its own sandbox, with code specified at runtime, all on the fly.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-03-25">
+                <a href="https://azure.microsoft.com/en-us/blog/introducing-fireworks-ai-on-microsoft-foundry-bringing-high-performance-low-latency-open-model-inference-to-azure/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Introducing Fireworks AI on Microsoft Foundry: Bringing high performance, low latency open model inference to Azure
+                </a>
+                <p class="mb-1 small text-light">Across industries, organizations are increasingly standardizing on open models to gain greater control over performance, cost, customization, and the security and compliance required for enterprise deployment.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-25">
+                <a href="https://www.docker.com/blog/from-the-captains-chair-naga-santhosh-reddy-vootukuri/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] From the Captain’s Chair: Naga Santhosh Reddy Vootukuri
+                </a>
+                <p class="mb-1 small text-light">He regularly blogs at DZone as an MVB core member about various topics ranging from Docker, Github Actions, Cloud Native Microservices, Dapr etc. What’s your favorite Docker product or feature right now, and why.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-25">
+                <a href="https://www.redhat.com/en/blog/what-does-ai-security-mean-and-why-does-it-matter-your-business" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] What does “AI security” mean and why does it matter to your business?
+                </a>
+                <p class="mb-1 small text-light">Let's imagine a customer-support chatbot—it's running on Red Hat OpenShift AI and searches internal documents to answer questions. This is the new computer security reality in which we live.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-25">
+                <a href="https://about.gitlab.com/blog/using-gitlab-container-virtual-registry-with-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] How to use GitLab Container Virtual Registry with Docker Hardened Images
+                </a>
+                <p class="mb-1 small text-light">The Platform teams I usually talk to manage container images across three to five registries:Docker Hub for most base imagesdhi. Related resourcesNew GitLab metrics and registry features help reduce CI/CD bottlenecksContainer Virtual Registry documentationContainer Virtual Registry API.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-03-25">
+                <a href="https://www.xda-developers.com/wine-11-rewrites-linux-runs-windows-games-speed-gains/" target="_blank" class="fw-bold text-decoration-none">
+                    Wine 11 rewrites how Linux runs Windows games at kernel with massive speed gains
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.xda-developers.com/wine-11-rewrites-linux-runs-windows-games-speed-gains/ Comments URL: https://news.ycombinator.com/item?id=47507150 Points: 868 # Comments: 309</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-25">
+                <a href="https://www.hashicorp.com/blog/everything-as-code-for-your-security-lifecycle" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Everything as code for your security lifecycle
+                </a>
+                <p class="mb-1 small text-light">You can also use Terraform with a service networking platform like Consul to help applications find and talk to each other reliably and securely across on-premises, hybrid, and multi-cloud environments.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-25">
+                <a href="https://www.hashicorp.com/blog/building-day-2-ops-guardrails-with-terraform-and-packer" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Building Day 2 ops guardrails with Terraform and Packer
+                </a>
+                <p class="mb-1 small text-light">Cloud waste now averages 32% of companies' cloud budgets, and a significant percentage of cloud security incidents stem from misconfigurations that are often introduced due to a lack of guardrails.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-25">
+                <a href="https://kubernetes.io/blog/2026/03/20/ingress2gateway-1-0-release/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing Ingress2Gateway 1.0: Your Path to Gateway API
+                </a>
+                <p class="mb-1 small text-light">Gateway API provides a modular, extensible API with strong support for Kubernetes-native RBAC. Ingress2Gateway is an assistant that helps teams confidently move from Ingress to Gateway API.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-25">
+                <a href="https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Securing Production Debugging in Kubernetes
+                </a>
+                <p class="mb-1 small text-light">In either model, Kubernetes RBAC remains the source of truth for what the Kubernetes API allows and at what scope. RBAC maps the authenticated identity to a minimal Role This is straightforward to operationalize with the Kubernetes CertificateSigningRequest API.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-25
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-25">
-                <a href="https://www.cncf.io/announcements/2026/03/25/cncf-welcomes-21-new-silver-members-as-global-demand-surges-for-observability-ai-and-secure-cloud-native-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] CNCF Welcomes 21 New Silver Members As Global Demand Surges for Observability, AI, and Secure Cloud Native Infrastructure
+                <a href="https://www.cncf.io/announcements/2026/03/25/istio-brings-future-ready-service-mesh-to-the-ai-era-with-new-ambient-multicluster-gateway-api-inference-extension-and-more/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Istio Brings Future Ready Service Mesh to the AI Era with New Ambient Multicluster, Gateway API Inference Extension and More
                 </a>
-                <p class="mb-1 small text-light">The platform enables organizations to scale AI agent deployments with built-in governance, observability, and verifiable accountability. It provides standardized self-service for application delivery while enforcing centralized security, compliance, and operational governance.</p>
+                <p class="mb-1 small text-light">New updates simplify multicluster operations and introduce optimized model routing to support AI inference on Kubernetes. The Cloud Native Computing Foundation (CNCF) hosts critical components of the global technology infrastructure, including Kubernetes, Prometheus, and Envoy.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-25">
+                <a href="https://www.cncf.io/blog/2026/03/25/lima-v2-1-macos-guests-and-enhanced-ai-agent-safety/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Lima v2.1: macOS guests and enhanced AI agent safety
+                </a>
+                <p class="mb-1 small text-light">1 also introduced support for FreeBSD guests, another requested feature by our community. → Yes No View the changed contents Performance and efficiency improvements Lima v2.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-25">
+                <a href="https://www.reddit.com/r/devops/comments/1s00x6l/from_6_years_mern_full_stack_to_devops_in_2026_ai/" target="_blank" class="fw-bold text-decoration-none">
+                    From 6 years MERN Full Stack to DevOps in 2026 (AI era) , just finished 1.5 month full-time tool grind, planning 10-15 projects. Real talk: what do I actually need to land a job?
+                </a>
+                <p class="mb-1 small text-light">So last month I went full-time on DevOps: Docker, Jenkins, Kubernetes, Terraform, AWS, Linux, Ansible, Argo CD, Grafana, the whole stack.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-25">
+                <a href="https://www.reddit.com/r/devops/comments/1rzpct1/need_advice_on_changing_domain_from_azure_iam_to/" target="_blank" class="fw-bold text-decoration-none">
+                    Need advice on changing domain from Azure IAM to Azure devops
+                </a>
+                <p class="mb-1 small text-light">Hey folks, I currently work at TCS as support engineer helping customers resolve tickets on Azure around IAM With 5 yoe my salary is just 4.5 lpa (INR) Need advice if I want to move to Azure devops Do I need certification or any upskilling advice Would really appreciate the same submitted by /u/Ok-Positive8997</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-25">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1s29dq9/do_people_actually_use_deep_runtime_security_in/" target="_blank" class="fw-bold text-decoration-none">
+                    Do people actually use deep runtime security in Kubernetes, or is it mostly overkill?
+                </a>
+                <p class="mb-1 small text-light">Hi all, I’ve been trying to understand how practical container runtime security is in day-to-day Kubernetes/OpenShift environments. A lot of tools talk about runtime detection, behavioral monitoring, syscall-level visibility, etc.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-25">
+                <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
+                </a>
+                <p class="mb-1 small text-light">At Netflix, our goal is to entertain the world, which means we must speak the world’s languages. This data helps us understand how subtitle characteristics (e.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-25">
+                <a href="https://about.gitlab.com/blog/gitlab-18-10-agentic-ai-now-open-to-even-more-teams-on-gitlab/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab 18.10: Agentic AI now open to even more teams on GitLab
+                </a>
+                <p class="mb-1 small text-light">com teams can purchase a monthly commitment of GitLab Credits and start using GitLab Duo Agent Platform immediately. GitLab’s Duo Agent Platform takes software development from iteration to deployment, powered by one credit pool.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-03-25">
+                <a href="https://blog.sentry.io/next-js-observability-gaps-how-to-close-them/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Next.js observability gaps and how to close them
+                </a>
+                <p class="mb-1 small text-light">Sentry provides an HTML diff view that shows exactly which DOM nodes diverged between server and client renders. js observability problems look like missing data until you know what to look for.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-03-25">
+                <a href="https://blog.sentry.io/fair-source-software-in-the-ai-age/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Fair Source Software in the AI age
+                </a>
+                <p class="mb-1 small text-light">js apps on other platforms, but it has challenges. Because of this, Steve Faulkner from Cloudflare announced a new project called vinext that reimplements the Next.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-03-25">
+                <a href="https://snyk.io/blog/introducing-agent-security/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Introducing Agent Security
+                </a>
+                <p class="mb-1 small text-light">Introducing Agent Security, a unified approach to governing AI agents and ensuring safe behavior from code to runtime. Start with Evo AI-SPM, now generally available.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-03-25">
+                <a href="https://snyk.io/blog/the-next-era-of-appsec-why-ai-generated-code-needs-offensive-dynamic-testing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The Next Era of AppSec: Why AI-Generated Code Needs Offensive Dynamic Testing
+                </a>
+                <p class="mb-1 small text-light">Static analysis tells you what might be vulnerable, but dynamic testing tells you what is actually exploitable. Learn why the next era of AppSec requires combining code-level context with live environment testing to secure AI-generated code.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-03-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-03-25">
+                <a href="https://snyk.io/blog/ai-is-building-your-attack-surface-are-you-testing-it/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] AI Is Building Your Attack Surface. Are You Testing It?
+                </a>
+                <p class="mb-1 small text-light">Speed has outpaced validation. With 62% of LLM-generated code testing as insecure and AI agents using undocumented APIs, legacy tools fall short. Learn how Snyk’s AI-powered dynamic testing secures your expanding attack surface.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-03-25
                     
                 </small>
             </li>

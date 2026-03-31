@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - March 31, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - March 31, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for March 31, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-03-31">2026-03-31 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2026-03-31 08:26:21
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,254 +130,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-31">
-                <a href="https://www.reddit.com/r/devops/comments/1s5fpm1/cs_student_25_yrs_left_aiming_for_devops_what/" target="_blank" class="fw-bold text-decoration-none">
-                    CS student (2.5 yrs left) aiming for DevOps — what should I focus on right now?
-                </a>
-                <p class="mb-1 small text-light">Right now, I’m focusing on learning tools like Docker, Kubernetes, Terraform, and cloud platforms. • How important is mastering one cloud provider (AWS/Azure/GCP) vs.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-31">
-                <a href="https://www.reddit.com/r/devops/comments/1s4r4fk/my_devops_and_gitops_woes/" target="_blank" class="fw-bold text-decoration-none">
-                    my devops and gitops woes
-                </a>
-                <p class="mb-1 small text-light">I then wait for the pipeline to finish then I chat a confirmation that the deployment has finished. Promotion to production goes like this: feature to release branch then release to production.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-31">
-                <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
-                </a>
-                <p class="mb-1 small text-light">At Netflix, our goal is to entertain the world, which means we must speak the world’s languages. This data helps us understand how subtitle characteristics (e.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-31">
-                <a href="https://www.docker.com/blog/building-a-news-roundup-with-docker-agent-docker-model-runner-and-skill/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Building a News Roundup with Docker Agent, Docker Model Runner, and Skill
-                </a>
-                <p class="mb-1 small text-light">Hello, I’m Philippe, and I am a Principal Solutions Architect helping customers with their usage of Docker. Prerequisites for building the news roundup: Docker and Docker Compose, obviously.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-31">
-                <a href="https://www.redhat.com/en/blog/red-hat-enterprise-linux-now-supported-microsoft-sql-server-azure-vms-sql-iaas-agent-extension" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat Enterprise Linux now supported for Microsoft SQL Server on Azure VMs with SQL IaaS Agent extension
+                <a href="https://www.redhat.com/en/blog/strengthening-spains-digital-sovereignty-red-hat-enterprise-linux-achieves-top-tier-ens-security-certification" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Strengthening Spain's digital sovereignty: Red Hat Enterprise Linux achieves top-tier ENS security certification
                 </a>
-                <p class="mb-1 small text-light">As of today, the extension supports three licensing options. When registering in lightweight mode, you can choose:PAYG (Pay-As-You-Go): Pay per usage.</p>
+                <p class="mb-1 small text-light">0 Extended Update Support (EUS) has been included in the Catalogue of Information and Communication Technology Security Products and Services (CPSTIC) of the National Cryptologic Centre (CCN).</p>
                 <small class="text-secondary">
                     
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-31">
-                <a href="https://www.redhat.com/en/blog/our-journey-ai-centricity-part-1-building-stable-foundation" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Our journey to AI-centricity, part 1: Building on a stable foundation
-                </a>
-                <p class="mb-1 small text-light">At Red Hat, our IT and Engineering functions encounter the same challenges and make the same decisions our customers face every day, from infrastructure optimization and application delivery to automating and enhancing the security of our global business.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-31">
-                <a href="https://about.gitlab.com/blog/gitlab-18-10-agentic-ai-now-open-to-even-more-teams-on-gitlab/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab 18.10: Agentic AI now open to even more teams on GitLab
-                </a>
-                <p class="mb-1 small text-light">com teams can purchase a monthly commitment of GitLab Credits and start using GitLab Duo Agent Platform immediately. GitLab’s Duo Agent Platform takes software development from iteration to deployment, powered by one credit pool.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-03-31">
-                <a href="https://blog.sentry.io/next-js-observability-gaps-how-to-close-them/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Next.js observability gaps and how to close them
-                </a>
-                <p class="mb-1 small text-light">Sentry provides an HTML diff view that shows exactly which DOM nodes diverged between server and client renders. js observability problems look like missing data until you know what to look for.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-03-31">
-                <a href="https://blog.sentry.io/fair-source-software-in-the-ai-age/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Fair Source Software in the AI age
-                </a>
-                <p class="mb-1 small text-light">js apps on other platforms, but it has challenges. Because of this, Steve Faulkner from Cloudflare announced a new project called vinext that reimplements the Next.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-03-31">
-                <a href="https://snyk.io/blog/defense-ai-red-teaming/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] From Discovery to Defense: Why AI Red Teaming Is the Next Step After AI-SPM
-                </a>
-                <p class="mb-1 small text-light">AI red teaming is the next step after AI-SPM. Learn how Evo Agent Red Teaming simulates real attacks to uncover prompt injection, data exposure, and behavioral vulnerabilities in AI systems.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-31">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-ai-ml-scholars-program-agent-plugin-for-aws-serverless-and-more-march-30-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: AWS AI/ML Scholars program, Agent Plugin for AWS Serverless, and more (March 30, 2026)
-                </a>
-                <p class="mb-1 small text-light">It automatically loads the guidance and expertise you need throughout development to build production-ready serverless applications on AWS. Check back each week for a quick roundup of interesting news and announcements from AWS.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-31">
-                <a href="https://www.hashicorp.com/blog/modernizing-governance-on-hcp-with-multi-owner-and-global-automation" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Modernizing governance on HCP with multi-owner and global automation
-                </a>
-                <p class="mb-1 small text-light">As enterprises scale their infrastructure on the HashiCorp Cloud Platform (HCP), platform teams face the challenge of maintaining security without slowing down developer velocity.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-31">
-                <a href="https://www.hashicorp.com/blog/lab3-accelerates-cloud-modernization-with-hashicorp-powered-unified-workflows" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] LAB3 accelerates cloud modernization with HashiCorp-powered unified workflows
-                </a>
-                <p class="mb-1 small text-light">Without consistent IaC practices, each team builds infrastructure differently, driving drift, inconsistent security, and bottlenecks across hybrid and multi-cloud environments. As agents, pipelines, and services are introduced at pace, non-human identity becomes the dominant security challenge.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-31">
-                <a href="https://kubernetes.io/blog/2026/03/30/kubernetes-v1-36-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36 Sneak Peek
-                </a>
-                <p class="mb-1 small text-light">With this enhancement, the kube-apiserver can delegate token signing to external systems such as cloud key management services or hardware security modules. This improves security and simplifies key management services for clusters that rely on centralized signing infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-31">
-                <a href="https://kubernetes.io/blog/2026/03/20/ingress2gateway-1-0-release/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing Ingress2Gateway 1.0: Your Path to Gateway API
-                </a>
-                <p class="mb-1 small text-light">Gateway API provides a modular, extensible API with strong support for Kubernetes-native RBAC. Ingress2Gateway is an assistant that helps teams confidently move from Ingress to Gateway API.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-31">
-                <a href="https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Securing Production Debugging in Kubernetes
-                </a>
-                <p class="mb-1 small text-light">In either model, Kubernetes RBAC remains the source of truth for what the Kubernetes API allows and at what scope. RBAC maps the authenticated identity to a minimal Role This is straightforward to operationalize with the Kubernetes CertificateSigningRequest API.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-31">
-                <a href="https://www.cncf.io/blog/2026/03/30/llms-on-kubernetes-part-1-understanding-the-threat-model/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] LLMs on Kubernetes Part 1: Understanding the threat model
-                </a>
-                <p class="mb-1 small text-light">This is similar to how API security works.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-31">
-                <a href="https://blog.cloudflare.com/workflow-diagrams/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] How we use Abstract Syntax Trees (ASTs) to turn Workflows code into visual diagrams
-                </a>
-                <p class="mb-1 small text-light">We built this because being able to visualize your applications is more important now than ever before. r2Key) throw new Error("r2Key is required"); if (.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-31">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1s7fkb0/the_weight_of_ai_models_why_infrastructure_always/" target="_blank" class="fw-bold text-decoration-none">
-                    The weight of AI models: Why infrastructure always arrives slowly
-                </a>
-                <p class="mb-1 small text-light">io/blog/2026/03/27/the-weight-of-ai-models-why-infrastructure-always-arrives-slowly/ Posted on March 27, 2026 by Wenbo Qi (Dragonfly/ModelPack Maintainer), Chenyu Zhang (Harbor/ModelPack Maintainer) and Feynman Zhou (ORAS Maintainer and CNCF Ambassador) https://preview. it/j0y2qehup3sg1.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-31">
-                <a href="https://www.docker.com/blog/from-the-captains-chair-naga-santhosh-reddy-vootukuri/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] From the Captain’s Chair: Naga Santhosh Reddy Vootukuri
-                </a>
-                <p class="mb-1 small text-light">He regularly blogs at DZone as an MVB core member about various topics ranging from Docker, Github Actions, Cloud Native Microservices, Dapr etc. What’s your favorite Docker product or feature right now, and why.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-03-31">
-                <a href="https://engineering.fb.com/2026/03/30/data-center-engineering/ai-for-american-produced-cement-and-concrete/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] AI for American-Produced Cement and Concrete
-                </a>
-                <p class="mb-1 small text-light">Cement is a key element of concrete, thus imported cement can have a significant impact on U. As a result, producers need a way to rapidly explore and validate new formulations without spending months in the lab.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
+                    Red Hat | 2026-03-31
                     
                 </small>
             </li>
@@ -372,7 +149,7 @@
                 <p class="mb-1 small text-light">The challenge Prior state Before Vault, we relied on application-level encryption with manually managed keys stored in environment variables.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-03-31
                     
                 </small>
             </li>
@@ -384,7 +161,7 @@
                 <p class="mb-1 small text-light">How Cloudflare Client-Side Security works Cloudflare Client-Side Security assesses 3.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-03-31
                     
                 </small>
             </li>
@@ -396,19 +173,259 @@
                 <p class="mb-1 small text-light">Dynamic Worker Loader: a lean sandbox Tucked into our Code Mode post in September was the announcement of a new, experimental feature: the Dynamic Worker Loader API. This API allows a Cloudflare Worker to instantiate a new Worker, in its own sandbox, with code specified at runtime, all on the fly.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-31">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1s7fkb0/the_weight_of_ai_models_why_infrastructure_always/" target="_blank" class="fw-bold text-decoration-none">
+                    The weight of AI models: Why infrastructure always arrives slowly
+                </a>
+                <p class="mb-1 small text-light">io/blog/2026/03/27/the-weight-of-ai-models-why-infrastructure-always-arrives-slowly/ Posted on March 27, 2026 by Wenbo Qi (Dragonfly/ModelPack Maintainer), Chenyu Zhang (Harbor/ModelPack Maintainer) and Feynman Zhou (ORAS Maintainer and CNCF Ambassador) https://preview. it/j0y2qehup3sg1.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-31">
+                <a href="https://www.docker.com/blog/from-the-captains-chair-naga-santhosh-reddy-vootukuri/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] From the Captain’s Chair: Naga Santhosh Reddy Vootukuri
+                </a>
+                <p class="mb-1 small text-light">He regularly blogs at DZone as an MVB core member about various topics ranging from Docker, Github Actions, Cloud Native Microservices, Dapr etc. What’s your favorite Docker product or feature right now, and why.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-03-31">
+                <a href="https://engineering.fb.com/2026/03/30/data-center-engineering/ai-for-american-produced-cement-and-concrete/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] AI for American-Produced Cement and Concrete
+                </a>
+                <p class="mb-1 small text-light">Cement is a key element of concrete, thus imported cement can have a significant impact on U. As a result, producers need a way to rapidly explore and validate new formulations without spending months in the lab.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-03-31">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-ai-ml-scholars-program-agent-plugin-for-aws-serverless-and-more-march-30-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: AWS AI/ML Scholars program, Agent Plugin for AWS Serverless, and more (March 30, 2026)
+                </a>
+                <p class="mb-1 small text-light">It automatically loads the guidance and expertise you need throughout development to build production-ready serverless applications on AWS. Check back each week for a quick roundup of interesting news and announcements from AWS.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-31">
+                <a href="https://www.hashicorp.com/blog/modernizing-governance-on-hcp-with-multi-owner-and-global-automation" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Modernizing governance on HCP with multi-owner and global automation
+                </a>
+                <p class="mb-1 small text-light">As enterprises scale their infrastructure on the HashiCorp Cloud Platform (HCP), platform teams face the challenge of maintaining security without slowing down developer velocity.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-03-31">
+                <a href="https://www.hashicorp.com/blog/lab3-accelerates-cloud-modernization-with-hashicorp-powered-unified-workflows" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] LAB3 accelerates cloud modernization with HashiCorp-powered unified workflows
+                </a>
+                <p class="mb-1 small text-light">Without consistent IaC practices, each team builds infrastructure differently, driving drift, inconsistent security, and bottlenecks across hybrid and multi-cloud environments. As agents, pipelines, and services are introduced at pace, non-human identity becomes the dominant security challenge.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-31">
+                <a href="https://kubernetes.io/blog/2026/03/30/kubernetes-v1-36-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36 Sneak Peek
+                </a>
+                <p class="mb-1 small text-light">With this enhancement, the kube-apiserver can delegate token signing to external systems such as cloud key management services or hardware security modules. This improves security and simplifies key management services for clusters that rely on centralized signing infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-31">
+                <a href="https://kubernetes.io/blog/2026/03/20/ingress2gateway-1-0-release/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing Ingress2Gateway 1.0: Your Path to Gateway API
+                </a>
+                <p class="mb-1 small text-light">Gateway API provides a modular, extensible API with strong support for Kubernetes-native RBAC. Ingress2Gateway is an assistant that helps teams confidently move from Ingress to Gateway API.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-03-31">
+                <a href="https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Securing Production Debugging in Kubernetes
+                </a>
+                <p class="mb-1 small text-light">In either model, Kubernetes RBAC remains the source of truth for what the Kubernetes API allows and at what scope. RBAC maps the authenticated identity to a minimal Role This is straightforward to operationalize with the Kubernetes CertificateSigningRequest API.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-03-31">
+                <a href="https://www.cncf.io/blog/2026/03/30/llms-on-kubernetes-part-1-understanding-the-threat-model/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] LLMs on Kubernetes Part 1: Understanding the threat model
+                </a>
+                <p class="mb-1 small text-light">This is similar to how API security works.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-03-31">
+                <a href="https://blog.cloudflare.com/workflow-diagrams/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] How we use Abstract Syntax Trees (ASTs) to turn Workflows code into visual diagrams
+                </a>
+                <p class="mb-1 small text-light">We built this because being able to visualize your applications is more important now than ever before. r2Key) throw new Error("r2Key is required"); if (.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-31">
+                <a href="https://www.reddit.com/r/devops/comments/1s5fpm1/cs_student_25_yrs_left_aiming_for_devops_what/" target="_blank" class="fw-bold text-decoration-none">
+                    CS student (2.5 yrs left) aiming for DevOps — what should I focus on right now?
+                </a>
+                <p class="mb-1 small text-light">Right now, I’m focusing on learning tools like Docker, Kubernetes, Terraform, and cloud platforms. • How important is mastering one cloud provider (AWS/Azure/GCP) vs.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-03-31">
+                <a href="https://www.reddit.com/r/devops/comments/1s4r4fk/my_devops_and_gitops_woes/" target="_blank" class="fw-bold text-decoration-none">
+                    my devops and gitops woes
+                </a>
+                <p class="mb-1 small text-light">I then wait for the pipeline to finish then I chat a confirmation that the deployment has finished. Promotion to production goes like this: feature to release branch then release to production.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-03-31">
+                <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
+                </a>
+                <p class="mb-1 small text-light">At Netflix, our goal is to entertain the world, which means we must speak the world’s languages. This data helps us understand how subtitle characteristics (e.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-03-31">
+                <a href="https://www.docker.com/blog/building-a-news-roundup-with-docker-agent-docker-model-runner-and-skill/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Building a News Roundup with Docker Agent, Docker Model Runner, and Skill
+                </a>
+                <p class="mb-1 small text-light">Hello, I’m Philippe, and I am a Principal Solutions Architect helping customers with their usage of Docker. Prerequisites for building the news roundup: Docker and Docker Compose, obviously.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-03-31
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-31">
-                <a href="https://www.redhat.com/en/blog/strengthening-spains-digital-sovereignty-red-hat-enterprise-linux-achieves-top-tier-ens-security-certification" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Strengthening Spain's digital sovereignty: Red Hat Enterprise Linux achieves top-tier ENS security certification
+                <a href="https://www.redhat.com/en/blog/red-hat-enterprise-linux-now-supported-microsoft-sql-server-azure-vms-sql-iaas-agent-extension" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat Enterprise Linux now supported for Microsoft SQL Server on Azure VMs with SQL IaaS Agent extension
                 </a>
-                <p class="mb-1 small text-light">0 Extended Update Support (EUS) has been included in the Catalogue of Information and Communication Technology Security Products and Services (CPSTIC) of the National Cryptologic Centre (CCN).</p>
+                <p class="mb-1 small text-light">As of today, the extension supports three licensing options. When registering in lightweight mode, you can choose:PAYG (Pay-As-You-Go): Pay per usage.</p>
                 <small class="text-secondary">
                     
-                    Red Hat
+                    Red Hat | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-03-31">
+                <a href="https://www.redhat.com/en/blog/our-journey-ai-centricity-part-1-building-stable-foundation" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Our journey to AI-centricity, part 1: Building on a stable foundation
+                </a>
+                <p class="mb-1 small text-light">At Red Hat, our IT and Engineering functions encounter the same challenges and make the same decisions our customers face every day, from infrastructure optimization and application delivery to automating and enhancing the security of our global business.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-03-31">
+                <a href="https://about.gitlab.com/blog/gitlab-18-10-agentic-ai-now-open-to-even-more-teams-on-gitlab/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab 18.10: Agentic AI now open to even more teams on GitLab
+                </a>
+                <p class="mb-1 small text-light">com teams can purchase a monthly commitment of GitLab Credits and start using GitLab Duo Agent Platform immediately. GitLab’s Duo Agent Platform takes software development from iteration to deployment, powered by one credit pool.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-03-31">
+                <a href="https://blog.sentry.io/next-js-observability-gaps-how-to-close-them/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Next.js observability gaps and how to close them
+                </a>
+                <p class="mb-1 small text-light">Sentry provides an HTML diff view that shows exactly which DOM nodes diverged between server and client renders. js observability problems look like missing data until you know what to look for.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-03-31">
+                <a href="https://blog.sentry.io/fair-source-software-in-the-ai-age/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Fair Source Software in the AI age
+                </a>
+                <p class="mb-1 small text-light">js apps on other platforms, but it has challenges. Because of this, Steve Faulkner from Cloudflare announced a new project called vinext that reimplements the Next.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-03-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-03-31">
+                <a href="https://snyk.io/blog/defense-ai-red-teaming/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] From Discovery to Defense: Why AI Red Teaming Is the Next Step After AI-SPM
+                </a>
+                <p class="mb-1 small text-light">AI red teaming is the next step after AI-SPM. Learn how Evo Agent Red Teaming simulates real attacks to uncover prompt injection, data exposure, and behavioral vulnerabilities in AI systems.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-03-31
                     
                 </small>
             </li>

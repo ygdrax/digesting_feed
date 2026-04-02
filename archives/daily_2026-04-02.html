@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - April 02, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - April 02, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for April 02, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-04-02">2026-04-02 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-04-02 08:24:19
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,266 +132,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-02">
-                <a href="https://www.reddit.com/r/devops/comments/1saa69w/your_cicd_pipeline_probably_ran_malware_on_march/" target="_blank" class="fw-bold text-decoration-none">
-                    your CI/CD pipeline probably ran malware on march 31st between 00:21 and 03:15 UTC. here's how to check.
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-02">
+                <a href="https://www.cncf.io/blog/2026/03/26/the-platform-under-the-model-how-cloud-native-powers-ai-engineering-in-production/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] The platform under the model: How cloud native powers AI engineering in production
                 </a>
-                <p class="mb-1 small text-light">1 a backdoored release that was live for ~2h54m on npm. every secret injected as a CI/CD environment variable was in scope.</p>
+                <p class="mb-1 small text-light">The 2025 CNCF Annual Survey found that 82% of container users run Kubernetes in production, and the platform has evolved well beyond stateless web services. The CNCF Platform Engineering Maturity Model provides a useful framework for building self-service golden paths that include AI capabilities.</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-02">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1s9fpas/the_claude_code_source_leak_today_is_a_good/" target="_blank" class="fw-bold text-decoration-none">
-                    the Claude Code source leak today is a good reminder that AI tooling in your release pipeline needs the same code review discipline as everything else
-                </a>
-                <p class="mb-1 small text-light">Anthropic's own statement confirmed it was a packaging issue not a breach, which almost makes it worse because packaging hygiene is a solved problem.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-02">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1s9wafz/feeling_overwhelmed_by_terraform_in_my_new_cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    Feeling overwhelmed by Terraform in my new cloud architect role — is this normal?
-                </a>
-                <p class="mb-1 small text-light">do you really write all of that yourself or is it mostly reusing modules / copying / using ai tools. also how do you troubleshoot when things go wrong.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-02">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1s9gi88/i_need_the_perspective_of_someone_with_experience/" target="_blank" class="fw-bold text-decoration-none">
-                    I need the perspective of someone with experience in Kubernetes security. I have just set up a new Kubernetes cluster. What additional security measures should I implement?
-                </a>
-                <p class="mb-1 small text-light">Are there any security concerns that aren't addressed by vanilla Kubernetes. (more like asking for security tips) Like one example if we already deploy some applications in the cluster, Kubernetes enables communication between all pods.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-02">
-                <a href="https://netflixtechblog.com/optimizing-recommendation-systems-with-jdks-vector-api-30d2830401ec?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Optimizing Recommendation Systems with JDK’s Vector API
-                </a>
-                <p class="mb-1 small text-light">That gives us a clean operational story: services can opt in to the Vector API for maximum performance, but the system remains safe and predictable without it. Have you tried the Vector API in a real service yet.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-02">
-                <a href="https://netflixtechblog.medium.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] DataJunction as Netflix’s answer to the missing piece of the modern data stack
-                </a>
-                <p class="mb-1 small text-light">by Olek Gorajek, Samuel Redai, Yian ShangIntroOur Netflix journey from data to dashboards, particularly within the space of the experimentation platform, always presented a unique set of challenges.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-02">
-                <a href="https://www.microsoft.com/en-us/industry/blog/energy-and-resources/2026/03/24/ai-for-nuclear-energy-powering-an-intelligent-resilient-future/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] AI for nuclear energy: Powering an intelligent, resilient future
-                </a>
-                <p class="mb-1 small text-light">This allows expert regulators to focus their time on safety judgments rather than reconciling thousands of pages of text. This partnership means our customers get the secure, scalable cloud deployments they demand.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-02">
-                <a href="https://www.microsoft.com/en-us/sql-server/blog/2026/03/18/advancing-agentic-ai-with-microsoft-databases-across-a-unified-data-estate/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Advancing agentic AI with Microsoft databases across a unified data estate
-                </a>
-                <p class="mb-1 small text-light">With full insert, update, and delete support, vector indexes stay current in real time, enabling dynamic applications. It provides a Copilot-assisted experience that helps SQL developers assess readiness, migrate schema, identify compatibility issues, and copy data with less manual effort.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-02">
-                <a href="https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] FabCon and SQLCon 2026: Unifying databases and Fabric on a single data platform
-                </a>
-                <p class="mb-1 small text-light">Database Hub in Fabric provides a unified database management experience that brings together databases across edge, cloud, and Fabric into a single, coherent view.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-02">
-                <a href="https://www.redhat.com/en/blog/why-customers-are-choosing-red-hat-ai-real-business-outcomes" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Why customers are choosing Red Hat AI for real business outcomes
-                </a>
-                <p class="mb-1 small text-light">Most leaders I speak with are well past the hype cycle of AI. A strong AI platform is the foundation that helps teams ship AI-enabled capabi.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-02">
-                <a href="https://www.redhat.com/en/blog/red-hat-ai-tops-mlperf-inference-v60-vllm-qwen3-vl-whisper-and-gpt-oss-120b" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat AI tops MLPerf Inference v6.0 with vLLM on Qwen3-VL, Whisper, and GPT-OSS-120B
-                </a>
-                <p class="mb-1 small text-light">Red Hat is proud to announce our strong results from the latest industry-standard MLPerf Inference v6.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-04-02">
-                <a href="https://www.hashicorp.com/blog/aws-permission-delegation-now-generally-available-in-hcp-terraform" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] AWS permission delegation now generally available in HCP Terraform
-                </a>
-                <p class="mb-1 small text-light">As organizations increasingly rely on automation tools like HCP Terraform to manage their AWS infrastructure, the complexity of configuring and securing their environments continues to grow.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-02">
-                <a href="https://kubernetes.io/blog/2026/03/17/image-promoter-rewrite/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] The Invisible Rewrite: Modernizing the Kubernetes Image Promoter
-                </a>
-                <p class="mb-1 small text-light">If this tool breaks, no Kubernetes release ships. In early 2019, the code moved to kubernetes-sigs/k8s-container-image-promoter and grew quickly.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-02">
-                <a href="https://blog.cloudflare.com/1111-privacy-examination-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Our ongoing commitment to privacy for the 1.1.1.1 public DNS resolver
-                </a>
-                <p class="mb-1 small text-light">We knew that trust is everything for a service that handles the "phonebook of the Internet. Since then, Cloudflare’s technology stack has grown significantly in both scale and complexity.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-04-02">
-                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Streamlining Security Investigations with Agents
-                </a>
-                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-04-02">
-                <a href="https://dropbox.tech/machine-learning/how-low-bit-inference-enables-efficient-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How low-bit inference enables efficient AI
-                </a>
-                <p class="mb-1 small text-light">And making this technology accessible to individuals and businesses means tackling new challenges around efficiency and resource use. This scaling behavior plays a key role in improving both performance and efficiency when running large-scale AI workloads.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-02">
-                <a href="https://www.reddit.com/r/devops/comments/1s89l65/does_devopscloud_engineer_prioritize_developing/" target="_blank" class="fw-bold text-decoration-none">
-                    Does Devops/Cloud engineer prioritize Developing vs Cybersecurity skill
-                </a>
-                <p class="mb-1 small text-light">I’m not very confident in my development skills at the moment, and I’ve heard that strong programming skills are important for getting a job and performing well in Devops roles. At the same time, I’ve been studying some DevOps stuff on my own and getting AWS certification.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-02">
-                <a href="https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling LLM Post-Training at Netflix
-                </a>
-                <p class="mb-1 small text-light">At the base is Mako, Netflix’s internal ML compute platform, which provisions GPUs on AWS. Staying close to the frontier required infrastructure that could move from “offline training loop” to “multi-stage, on-policy orchestration.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-02">
-                <a href="https://opensource.microsoft.com/blog/2026/03/24/whats-new-with-microsoft-in-open-source-and-kubernetes-at-kubecon-cloudnativecon-europe-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] What’s new with Microsoft in open-source and Kubernetes at KubeCon + CloudNativeCon Europe 2026
-                </a>
-                <p class="mb-1 small text-light">Since my last update at KubeCon + CloudNativeCon North America 2025, our teams have continued investing across open-source AI infrastructure, multi-cluster operations, networking, observability, storage, and cluster lifecycle.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-02">
-                <a href="https://www.docker.com/blog/trivy-supply-chain-compromise-what-docker-hub-users-should-know/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Trivy supply chain compromise: What Docker Hub users should know
-                </a>
-                <p class="mb-1 small text-light">6, and latest tags may have had their CI/CD secrets, cloud credentials, SSH keys, and Docker configurations compromised. json) Cloud provider credentials (AWS, GCP, Azure) SSH keys, Kubernetes tokens, CI/CD secrets Environment variables and.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-04-02">
-                <a href="https://snyk.io/blog/building-ai-security-with-our-customers/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Building AI Security with Our Customers: 5 Lessons from Evo’s Design Partner Program
-                </a>
-                <p class="mb-1 small text-light">Learn 5 key lessons from Snyk’s Evo design partner program. Discover how AI discovery, risk intelligence, and policy automation help teams secure generative AI and govern AI sprawl at scale.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-04-02">
-                <a href="https://engineering.fb.com/2026/03/17/developer-tools/ranking-engineer-agent-rea-autonomous-ai-system-accelerating-meta-ads-ranking-innovation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Ranking Engineer Agent (REA): The Autonomous AI Agent Accelerating Meta’s Ads Ranking Innovation
-                </a>
-                <p class="mb-1 small text-light">This enables efficient, continuous operation across extended time frames without requiring constant human monitoring. This resilience is critical for maintaining autonomy over long-horizon tasks, where engineers provide periodic oversight rather than continuous monitoring.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
+                    CNCF | 2026-04-02
                     
                 </small>
             </li>
@@ -386,7 +151,7 @@
                 <p class="mb-1 small text-light">96% of security issues for WordPress sites originate in plugins. Why, after over two decades, is WordPress plugin security so problematic.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-04-02
                     
                 </small>
             </li>
@@ -398,19 +163,271 @@
                 <p class="mb-1 small text-light">The Gateway API Inference Extension from the Kubernetes SIG introduces model-aware routing and load balancing at the gateway level. The platform engineering team needs to provide self-service AI infrastructure with guardrails before ungoverned model endpoints become a security and cost problem.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-04-02
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-02">
-                <a href="https://www.cncf.io/blog/2026/03/26/the-platform-under-the-model-how-cloud-native-powers-ai-engineering-in-production/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] The platform under the model: How cloud native powers AI engineering in production
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-02">
+                <a href="https://www.reddit.com/r/devops/comments/1s89l65/does_devopscloud_engineer_prioritize_developing/" target="_blank" class="fw-bold text-decoration-none">
+                    Does Devops/Cloud engineer prioritize Developing vs Cybersecurity skill
                 </a>
-                <p class="mb-1 small text-light">The 2025 CNCF Annual Survey found that 82% of container users run Kubernetes in production, and the platform has evolved well beyond stateless web services. The CNCF Platform Engineering Maturity Model provides a useful framework for building self-service golden paths that include AI capabilities.</p>
+                <p class="mb-1 small text-light">I’m not very confident in my development skills at the moment, and I’ve heard that strong programming skills are important for getting a job and performing well in Devops roles. At the same time, I’ve been studying some DevOps stuff on my own and getting AWS certification.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    Reddit | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-02">
+                <a href="https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling LLM Post-Training at Netflix
+                </a>
+                <p class="mb-1 small text-light">At the base is Mako, Netflix’s internal ML compute platform, which provisions GPUs on AWS. Staying close to the frontier required infrastructure that could move from “offline training loop” to “multi-stage, on-policy orchestration.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-02">
+                <a href="https://opensource.microsoft.com/blog/2026/03/24/whats-new-with-microsoft-in-open-source-and-kubernetes-at-kubecon-cloudnativecon-europe-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] What’s new with Microsoft in open-source and Kubernetes at KubeCon + CloudNativeCon Europe 2026
+                </a>
+                <p class="mb-1 small text-light">Since my last update at KubeCon + CloudNativeCon North America 2025, our teams have continued investing across open-source AI infrastructure, multi-cluster operations, networking, observability, storage, and cluster lifecycle.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-02">
+                <a href="https://www.docker.com/blog/trivy-supply-chain-compromise-what-docker-hub-users-should-know/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Trivy supply chain compromise: What Docker Hub users should know
+                </a>
+                <p class="mb-1 small text-light">6, and latest tags may have had their CI/CD secrets, cloud credentials, SSH keys, and Docker configurations compromised. json) Cloud provider credentials (AWS, GCP, Azure) SSH keys, Kubernetes tokens, CI/CD secrets Environment variables and.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-04-02">
+                <a href="https://snyk.io/blog/building-ai-security-with-our-customers/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Building AI Security with Our Customers: 5 Lessons from Evo’s Design Partner Program
+                </a>
+                <p class="mb-1 small text-light">Learn 5 key lessons from Snyk’s Evo design partner program. Discover how AI discovery, risk intelligence, and policy automation help teams secure generative AI and govern AI sprawl at scale.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-04-02">
+                <a href="https://engineering.fb.com/2026/03/17/developer-tools/ranking-engineer-agent-rea-autonomous-ai-system-accelerating-meta-ads-ranking-innovation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Ranking Engineer Agent (REA): The Autonomous AI Agent Accelerating Meta’s Ads Ranking Innovation
+                </a>
+                <p class="mb-1 small text-light">This enables efficient, continuous operation across extended time frames without requiring constant human monitoring. This resilience is critical for maintaining autonomy over long-horizon tasks, where engineers provide periodic oversight rather than continuous monitoring.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-04-02">
+                <a href="https://www.hashicorp.com/blog/aws-permission-delegation-now-generally-available-in-hcp-terraform" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] AWS permission delegation now generally available in HCP Terraform
+                </a>
+                <p class="mb-1 small text-light">As organizations increasingly rely on automation tools like HCP Terraform to manage their AWS infrastructure, the complexity of configuring and securing their environments continues to grow.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-02">
+                <a href="https://kubernetes.io/blog/2026/03/17/image-promoter-rewrite/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] The Invisible Rewrite: Modernizing the Kubernetes Image Promoter
+                </a>
+                <p class="mb-1 small text-light">If this tool breaks, no Kubernetes release ships. In early 2019, the code moved to kubernetes-sigs/k8s-container-image-promoter and grew quickly.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-02">
+                <a href="https://blog.cloudflare.com/1111-privacy-examination-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Our ongoing commitment to privacy for the 1.1.1.1 public DNS resolver
+                </a>
+                <p class="mb-1 small text-light">We knew that trust is everything for a service that handles the "phonebook of the Internet. Since then, Cloudflare’s technology stack has grown significantly in both scale and complexity.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-04-02">
+                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Streamlining Security Investigations with Agents
+                </a>
+                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-04-02">
+                <a href="https://dropbox.tech/machine-learning/how-low-bit-inference-enables-efficient-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How low-bit inference enables efficient AI
+                </a>
+                <p class="mb-1 small text-light">And making this technology accessible to individuals and businesses means tackling new challenges around efficiency and resource use. This scaling behavior plays a key role in improving both performance and efficiency when running large-scale AI workloads.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-02">
+                <a href="https://www.reddit.com/r/devops/comments/1saa69w/your_cicd_pipeline_probably_ran_malware_on_march/" target="_blank" class="fw-bold text-decoration-none">
+                    your CI/CD pipeline probably ran malware on march 31st between 00:21 and 03:15 UTC. here's how to check.
+                </a>
+                <p class="mb-1 small text-light">1 a backdoored release that was live for ~2h54m on npm. every secret injected as a CI/CD environment variable was in scope.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-02">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1s9fpas/the_claude_code_source_leak_today_is_a_good/" target="_blank" class="fw-bold text-decoration-none">
+                    the Claude Code source leak today is a good reminder that AI tooling in your release pipeline needs the same code review discipline as everything else
+                </a>
+                <p class="mb-1 small text-light">Anthropic's own statement confirmed it was a packaging issue not a breach, which almost makes it worse because packaging hygiene is a solved problem.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-02">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1s9wafz/feeling_overwhelmed_by_terraform_in_my_new_cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    Feeling overwhelmed by Terraform in my new cloud architect role — is this normal?
+                </a>
+                <p class="mb-1 small text-light">do you really write all of that yourself or is it mostly reusing modules / copying / using ai tools. also how do you troubleshoot when things go wrong.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-02">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1s9gi88/i_need_the_perspective_of_someone_with_experience/" target="_blank" class="fw-bold text-decoration-none">
+                    I need the perspective of someone with experience in Kubernetes security. I have just set up a new Kubernetes cluster. What additional security measures should I implement?
+                </a>
+                <p class="mb-1 small text-light">Are there any security concerns that aren't addressed by vanilla Kubernetes. (more like asking for security tips) Like one example if we already deploy some applications in the cluster, Kubernetes enables communication between all pods.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-02">
+                <a href="https://netflixtechblog.com/optimizing-recommendation-systems-with-jdks-vector-api-30d2830401ec?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Optimizing Recommendation Systems with JDK’s Vector API
+                </a>
+                <p class="mb-1 small text-light">That gives us a clean operational story: services can opt in to the Vector API for maximum performance, but the system remains safe and predictable without it. Have you tried the Vector API in a real service yet.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-02">
+                <a href="https://netflixtechblog.medium.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] DataJunction as Netflix’s answer to the missing piece of the modern data stack
+                </a>
+                <p class="mb-1 small text-light">by Olek Gorajek, Samuel Redai, Yian ShangIntroOur Netflix journey from data to dashboards, particularly within the space of the experimentation platform, always presented a unique set of challenges.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-02">
+                <a href="https://www.microsoft.com/en-us/industry/blog/energy-and-resources/2026/03/24/ai-for-nuclear-energy-powering-an-intelligent-resilient-future/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] AI for nuclear energy: Powering an intelligent, resilient future
+                </a>
+                <p class="mb-1 small text-light">This allows expert regulators to focus their time on safety judgments rather than reconciling thousands of pages of text. This partnership means our customers get the secure, scalable cloud deployments they demand.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-02">
+                <a href="https://www.microsoft.com/en-us/sql-server/blog/2026/03/18/advancing-agentic-ai-with-microsoft-databases-across-a-unified-data-estate/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Advancing agentic AI with Microsoft databases across a unified data estate
+                </a>
+                <p class="mb-1 small text-light">With full insert, update, and delete support, vector indexes stay current in real time, enabling dynamic applications. It provides a Copilot-assisted experience that helps SQL developers assess readiness, migrate schema, identify compatibility issues, and copy data with less manual effort.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-02">
+                <a href="https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] FabCon and SQLCon 2026: Unifying databases and Fabric on a single data platform
+                </a>
+                <p class="mb-1 small text-light">Database Hub in Fabric provides a unified database management experience that brings together databases across edge, cloud, and Fabric into a single, coherent view.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-02">
+                <a href="https://www.redhat.com/en/blog/why-customers-are-choosing-red-hat-ai-real-business-outcomes" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Why customers are choosing Red Hat AI for real business outcomes
+                </a>
+                <p class="mb-1 small text-light">Most leaders I speak with are well past the hype cycle of AI. A strong AI platform is the foundation that helps teams ship AI-enabled capabi.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-04-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-02">
+                <a href="https://www.redhat.com/en/blog/red-hat-ai-tops-mlperf-inference-v60-vllm-qwen3-vl-whisper-and-gpt-oss-120b" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat AI tops MLPerf Inference v6.0 with vLLM on Qwen3-VL, Whisper, and GPT-OSS-120B
+                </a>
+                <p class="mb-1 small text-light">Red Hat is proud to announce our strong results from the latest industry-standard MLPerf Inference v6.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-04-02
                     
                 </small>
             </li>

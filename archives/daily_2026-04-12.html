@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - April 12, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - April 12, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for April 12, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-04-12">2026-04-12 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2026-04-12 08:19:29
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,266 +126,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-12">
-                <a href="https://www.reddit.com/r/devops/comments/1sj2mry/system_design_coming_from_a_purely_systems_cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    System Design coming from a purely Systems / Cloud Infra background
-                </a>
-                <p class="mb-1 small text-light">I've been preparing for what I think is my 3rd interview for an infrastructure role that includes a system design component. Anyone else come from a pure sysadmin / cloud infra background and go through this.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-12">
-                <a href="https://www.reddit.com/r/devops/comments/1sarhqy/generic_vague_question_about_obscure_devops/" target="_blank" class="fw-bold text-decoration-none">
-                    <Generic vague question about obscure DevOps related pain point and asking how others are handling it>
-                </a>
-                <p class="mb-1 small text-light"><Details on the issue> <But not too many details> <sentence with no auto caps, because I am not a bot, see Mom? I’m a real boy> How do you deal with it? submitted by /u/Arucious</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-12">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1sj575k/ok_seniors_explain_this_all_cloud_environment/" target="_blank" class="fw-bold text-decoration-none">
-                    Ok seniors explain this all cloud environment issue
-                </a>
-                <p class="mb-1 small text-light">I get that azure / all cloud there are delays for syncing and such, bit what i dont get is why this orgs can take days for changes. my last org it was 100% cloud but no mfa per se and no on prem servers and changes took max 5 minutes (pw resets licensing etc).</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-12">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1sivn22/every_kubernetes_tool_explained_in_one_post_and/" target="_blank" class="fw-bold text-decoration-none">
-                    Every Kubernetes Tool Explained In One Post (And Why They Exist)
-                </a>
-                <p class="mb-1 small text-light">Every tool exists because Kubernetes alone wasn’t enough. You have 20 microservices, one starts responding slowly and retries pile up across 4 other services.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-12">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1siedcf/replicaset_template_has_two_containers_instead_of/" target="_blank" class="fw-bold text-decoration-none">
-                    ReplicaSet Template Has Two Containers Instead of One.
-                </a>
-                <p class="mb-1 small text-light">ports How to replicate: I applied a basic deployment configuration yaml file i attached below. I changed the container name to web and applied the changes.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-12">
-                <a href="https://netflixtechblog.com/smarter-live-streaming-at-scale-rolling-out-vbr-for-all-netflix-live-events-c8f833b238cc?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Smarter Live Streaming at Scale: Rolling Out VBR for All Netflix Live Events
-                </a>
-                <p class="mb-1 small text-light">At Netflix scale, the shift to VBR has several important effects. Because VBR sends fewer bits for similar video quality, we see fewer rebuffers and lower start‑up delay.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-12">
-                <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
-                </a>
-                <p class="mb-1 small text-light">At Netflix, our goal is to entertain the world, which means we must speak the world’s languages. This data helps us understand how subtitle characteristics (e.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-04-12">
-                <a href="https://engineering.atspotify.com/2026/1/congratulations-to-the-recipients-of-the-2025-spotify-foss-fund/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Congratulations to the recipients of the 2025 Spotify FOSS Fund
-                </a>
-                <p class="mb-1 small text-light">TL;DR Established in 2022 as a way to help support the great open source ecosystem projects that Spotify... The post Congratulations to the recipients of the 2025 Spotify FOSS Fund appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-04-12">
-                <a href="https://www.hashicorp.com/blog/modernizing-governance-on-hcp-with-multi-owner-and-global-automation" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Modernizing governance on HCP with multi-owner and global automation
-                </a>
-                <p class="mb-1 small text-light">As enterprises scale their infrastructure on the HashiCorp Cloud Platform (HCP), platform teams face the challenge of maintaining security without slowing down developer velocity.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-04-12">
-                <a href="https://www.hashicorp.com/blog/lab3-accelerates-cloud-modernization-with-hashicorp-powered-unified-workflows" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] LAB3 accelerates cloud modernization with HashiCorp-powered unified workflows
-                </a>
-                <p class="mb-1 small text-light">Without consistent IaC practices, each team builds infrastructure differently, driving drift, inconsistent security, and bottlenecks across hybrid and multi-cloud environments. As agents, pipelines, and services are introduced at pace, non-human identity becomes the dominant security challenge.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-12">
-                <a href="https://kubernetes.io/blog/2026/03/30/kubernetes-v1-36-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36 Sneak Peek
-                </a>
-                <p class="mb-1 small text-light">With this enhancement, the kube-apiserver can delegate token signing to external systems such as cloud key management services or hardware security modules. This improves security and simplifies key management services for clusters that rely on centralized signing infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-12">
-                <a href="https://kubernetes.io/blog/2026/03/20/ingress2gateway-1-0-release/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing Ingress2Gateway 1.0: Your Path to Gateway API
-                </a>
-                <p class="mb-1 small text-light">Gateway API provides a modular, extensible API with strong support for Kubernetes-native RBAC. Ingress2Gateway is an assistant that helps teams confidently move from Ingress to Gateway API.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-12">
-                <a href="https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Securing Production Debugging in Kubernetes
-                </a>
-                <p class="mb-1 small text-light">In either model, Kubernetes RBAC remains the source of truth for what the Kubernetes API allows and at what scope. RBAC maps the authenticated identity to a minimal Role This is straightforward to operationalize with the Kubernetes CertificateSigningRequest API.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-12">
-                <a href="https://www.cncf.io/blog/2026/04/11/what-i-learned-at-my-first-kubecon-cloudnativecon-as-a-high-school-speaker/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] What I Learned at My First KubeCon + CloudNativeCon as a High School Speaker
-                </a>
-                <p class="mb-1 small text-light">When I first arrived, I was honestly overwhelmed. I ended up combining tools like Kubernetes, kgateway, and vLLM to run different services.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-12">
-                <a href="https://blog.cloudflare.com/from-bpf-to-packet/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] From bytecode to bytes: automated magic packet generation
-                </a>
-                <p class="mb-1 small text-light">While many modern developers are familiar with eBPF (Extended BPF), the powerful evolution used for observability and security, this post focuses on "classic" BPF. This queue holds several important data points:The pointer to the next instruction.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-12">
-                <a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value
-                </a>
-                <p class="mb-1 small text-light">How do we balance performance, scalability, and cost as AI solutions grow. AI initiatives frequently span teams and stages It’s critical to maintain oversight from research to deployment.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-12">
-                <a href="https://www.docker.com/blog/reclaim-developer-hours-through-smarter-vulnerability-prioritization-with-docker-and-mend-io/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Reclaim Developer Hours through Smarter Vulnerability Prioritization with Docker and Mend.io
-                </a>
-                <p class="mb-1 small text-light">io and Docker Hardened Images (DHI) provides a seamless framework for managing container security. io incorporates Docker’s VEX (Vulnerability Exploitability eXchange) data as a primary source of “Risk Factor” identification.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-12">
-                <a href="https://www.docker.com/blog/defending-your-software-supply-chain-what-every-engineering-team-should-do-now/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Defending Your Software Supply Chain: What Every Engineering Team Should Do Now
-                </a>
-                <p class="mb-1 small text-light">Agents install packages, modify configs, make API calls, and spin up containers with developer-level access. Docker’s MCP Gateway provides centralized proxy, policy enforcement, secret blocking, and audit logging for all agent-to-tool traffic.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-12">
-                <a href="https://www.docker.com/blog/gemma4-dockerhub/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Gemma 4 is Here: Now Available on Docker Hub
-                </a>
-                <p class="mb-1 small text-light">Docker enables consistent deployment across laptops, edge devices, and local environments. Scale performance with ease: From sparse to dense architectures, you can run any model like a container, making it easy to scale across cloud or on-prem infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-12">
-                <a href="https://www.docker.com/blog/docker-offload-now-generally-available-the-full-power-of-docker-for-every-developer-everywhere/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Offload now Generally Available: The Full Power of Docker, for Every Developer, Everywhere.
-                </a>
-                <p class="mb-1 small text-light">Docker Offload is a fully managed cloud service that moves the container engine into Docker’s secure cloud, allowing developers to run Docker from any environment without changing their existing workflows.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-12">
-                <a href="https://www.redhat.com/en/blog/navigating-mythos-haunted-world-platform-security" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Navigating the Mythos-haunted world of platform security
-                </a>
-                <p class="mb-1 small text-light">The preview release of Claude Mythos presents a massive challenge for IT security experts, as well as an opportunity (at least for the organizations that can afford it). Mythos, however, represents more than a deluge of AI.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-04-12">
-                <a href="https://engineering.fb.com/2026/04/08/security/trust-but-canary-configuration-safety-at-scale-meta-tech-podcast/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Trust But Canary: Configuration Safety at Scale
+                <a href="https://engineering.fb.com/2026/04/02/developer-tools/kernelevolve-how-metas-ranking-engineer-agent-optimizes-ai-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] KernelEvolve: How Meta’s Ranking Engineer Agent Optimizes AI Infrastructure
                 </a>
-                <p class="mb-1 small text-light">As AI increases developer speed and productivity it also increases the need for safeguards. Send us feedback on Instagram, Threads, or X.</p>
+                <p class="mb-1 small text-light">compile and vendor libraries — performance gains that directly translate to serving capacity and infrastructure efficiency. How It All Fits Together An engineer specifies a target operator, hardware platform, and performance goals.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2026-04-12
                     
                 </small>
             </li>
@@ -380,7 +145,7 @@
                 <p class="mb-1 small text-light">It provides a ready-made App-of-Apps pattern for managing cluster infrastructure with Argo CD. apiVersion: v2 name: kyverno-policies description: Helm Chart for Kyverno Policies type: application version: 1.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-04-12
                     
                 </small>
             </li>
@@ -392,19 +157,271 @@
                 <p class="mb-1 small text-light">Cloudflare data shows that 32% of traffic across our network originates from automated traffic. Cloudflare is already solving the problems we’ve laid out here.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-12">
+                <a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value
+                </a>
+                <p class="mb-1 small text-light">How do we balance performance, scalability, and cost as AI solutions grow. AI initiatives frequently span teams and stages It’s critical to maintain oversight from research to deployment.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-12">
+                <a href="https://www.docker.com/blog/reclaim-developer-hours-through-smarter-vulnerability-prioritization-with-docker-and-mend-io/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Reclaim Developer Hours through Smarter Vulnerability Prioritization with Docker and Mend.io
+                </a>
+                <p class="mb-1 small text-light">io and Docker Hardened Images (DHI) provides a seamless framework for managing container security. io incorporates Docker’s VEX (Vulnerability Exploitability eXchange) data as a primary source of “Risk Factor” identification.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-12">
+                <a href="https://www.docker.com/blog/defending-your-software-supply-chain-what-every-engineering-team-should-do-now/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Defending Your Software Supply Chain: What Every Engineering Team Should Do Now
+                </a>
+                <p class="mb-1 small text-light">Agents install packages, modify configs, make API calls, and spin up containers with developer-level access. Docker’s MCP Gateway provides centralized proxy, policy enforcement, secret blocking, and audit logging for all agent-to-tool traffic.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-12">
+                <a href="https://www.docker.com/blog/gemma4-dockerhub/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Gemma 4 is Here: Now Available on Docker Hub
+                </a>
+                <p class="mb-1 small text-light">Docker enables consistent deployment across laptops, edge devices, and local environments. Scale performance with ease: From sparse to dense architectures, you can run any model like a container, making it easy to scale across cloud or on-prem infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-12">
+                <a href="https://www.docker.com/blog/docker-offload-now-generally-available-the-full-power-of-docker-for-every-developer-everywhere/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Offload now Generally Available: The Full Power of Docker, for Every Developer, Everywhere.
+                </a>
+                <p class="mb-1 small text-light">Docker Offload is a fully managed cloud service that moves the container engine into Docker’s secure cloud, allowing developers to run Docker from any environment without changing their existing workflows.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-12">
+                <a href="https://www.redhat.com/en/blog/navigating-mythos-haunted-world-platform-security" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Navigating the Mythos-haunted world of platform security
+                </a>
+                <p class="mb-1 small text-light">The preview release of Claude Mythos presents a massive challenge for IT security experts, as well as an opportunity (at least for the organizations that can afford it). Mythos, however, represents more than a deluge of AI.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-04-12
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-04-12">
-                <a href="https://engineering.fb.com/2026/04/02/developer-tools/kernelevolve-how-metas-ranking-engineer-agent-optimizes-ai-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] KernelEvolve: How Meta’s Ranking Engineer Agent Optimizes AI Infrastructure
+                <a href="https://engineering.fb.com/2026/04/08/security/trust-but-canary-configuration-safety-at-scale-meta-tech-podcast/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Trust But Canary: Configuration Safety at Scale
                 </a>
-                <p class="mb-1 small text-light">compile and vendor libraries — performance gains that directly translate to serving capacity and infrastructure efficiency. How It All Fits Together An engineer specifies a target operator, hardware platform, and performance goals.</p>
+                <p class="mb-1 small text-light">As AI increases developer speed and productivity it also increases the need for safeguards. Send us feedback on Instagram, Threads, or X.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-04-12">
+                <a href="https://www.hashicorp.com/blog/modernizing-governance-on-hcp-with-multi-owner-and-global-automation" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Modernizing governance on HCP with multi-owner and global automation
+                </a>
+                <p class="mb-1 small text-light">As enterprises scale their infrastructure on the HashiCorp Cloud Platform (HCP), platform teams face the challenge of maintaining security without slowing down developer velocity.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-04-12">
+                <a href="https://www.hashicorp.com/blog/lab3-accelerates-cloud-modernization-with-hashicorp-powered-unified-workflows" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] LAB3 accelerates cloud modernization with HashiCorp-powered unified workflows
+                </a>
+                <p class="mb-1 small text-light">Without consistent IaC practices, each team builds infrastructure differently, driving drift, inconsistent security, and bottlenecks across hybrid and multi-cloud environments. As agents, pipelines, and services are introduced at pace, non-human identity becomes the dominant security challenge.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-12">
+                <a href="https://kubernetes.io/blog/2026/03/30/kubernetes-v1-36-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36 Sneak Peek
+                </a>
+                <p class="mb-1 small text-light">With this enhancement, the kube-apiserver can delegate token signing to external systems such as cloud key management services or hardware security modules. This improves security and simplifies key management services for clusters that rely on centralized signing infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-12">
+                <a href="https://kubernetes.io/blog/2026/03/20/ingress2gateway-1-0-release/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing Ingress2Gateway 1.0: Your Path to Gateway API
+                </a>
+                <p class="mb-1 small text-light">Gateway API provides a modular, extensible API with strong support for Kubernetes-native RBAC. Ingress2Gateway is an assistant that helps teams confidently move from Ingress to Gateway API.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-12">
+                <a href="https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Securing Production Debugging in Kubernetes
+                </a>
+                <p class="mb-1 small text-light">In either model, Kubernetes RBAC remains the source of truth for what the Kubernetes API allows and at what scope. RBAC maps the authenticated identity to a minimal Role This is straightforward to operationalize with the Kubernetes CertificateSigningRequest API.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-12">
+                <a href="https://www.cncf.io/blog/2026/04/11/what-i-learned-at-my-first-kubecon-cloudnativecon-as-a-high-school-speaker/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] What I Learned at My First KubeCon + CloudNativeCon as a High School Speaker
+                </a>
+                <p class="mb-1 small text-light">When I first arrived, I was honestly overwhelmed. I ended up combining tools like Kubernetes, kgateway, and vLLM to run different services.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-12">
+                <a href="https://blog.cloudflare.com/from-bpf-to-packet/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] From bytecode to bytes: automated magic packet generation
+                </a>
+                <p class="mb-1 small text-light">While many modern developers are familiar with eBPF (Extended BPF), the powerful evolution used for observability and security, this post focuses on "classic" BPF. This queue holds several important data points:The pointer to the next instruction.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-12">
+                <a href="https://www.reddit.com/r/devops/comments/1sj2mry/system_design_coming_from_a_purely_systems_cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    System Design coming from a purely Systems / Cloud Infra background
+                </a>
+                <p class="mb-1 small text-light">I've been preparing for what I think is my 3rd interview for an infrastructure role that includes a system design component. Anyone else come from a pure sysadmin / cloud infra background and go through this.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-12">
+                <a href="https://www.reddit.com/r/devops/comments/1sarhqy/generic_vague_question_about_obscure_devops/" target="_blank" class="fw-bold text-decoration-none">
+                    <Generic vague question about obscure DevOps related pain point and asking how others are handling it>
+                </a>
+                <p class="mb-1 small text-light"><Details on the issue> <But not too many details> <sentence with no auto caps, because I am not a bot, see Mom? I’m a real boy> How do you deal with it? submitted by /u/Arucious</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-12">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1sj575k/ok_seniors_explain_this_all_cloud_environment/" target="_blank" class="fw-bold text-decoration-none">
+                    Ok seniors explain this all cloud environment issue
+                </a>
+                <p class="mb-1 small text-light">I get that azure / all cloud there are delays for syncing and such, bit what i dont get is why this orgs can take days for changes. my last org it was 100% cloud but no mfa per se and no on prem servers and changes took max 5 minutes (pw resets licensing etc).</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-12">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1sivn22/every_kubernetes_tool_explained_in_one_post_and/" target="_blank" class="fw-bold text-decoration-none">
+                    Every Kubernetes Tool Explained In One Post (And Why They Exist)
+                </a>
+                <p class="mb-1 small text-light">Every tool exists because Kubernetes alone wasn’t enough. You have 20 microservices, one starts responding slowly and retries pile up across 4 other services.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-12">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1siedcf/replicaset_template_has_two_containers_instead_of/" target="_blank" class="fw-bold text-decoration-none">
+                    ReplicaSet Template Has Two Containers Instead of One.
+                </a>
+                <p class="mb-1 small text-light">ports How to replicate: I applied a basic deployment configuration yaml file i attached below. I changed the container name to web and applied the changes.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-12">
+                <a href="https://netflixtechblog.com/smarter-live-streaming-at-scale-rolling-out-vbr-for-all-netflix-live-events-c8f833b238cc?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Smarter Live Streaming at Scale: Rolling Out VBR for All Netflix Live Events
+                </a>
+                <p class="mb-1 small text-light">At Netflix scale, the shift to VBR has several important effects. Because VBR sends fewer bits for similar video quality, we see fewer rebuffers and lower start‑up delay.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-12">
+                <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
+                </a>
+                <p class="mb-1 small text-light">At Netflix, our goal is to entertain the world, which means we must speak the world’s languages. This data helps us understand how subtitle characteristics (e.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-04-12">
+                <a href="https://engineering.atspotify.com/2026/1/congratulations-to-the-recipients-of-the-2025-spotify-foss-fund/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Congratulations to the recipients of the 2025 Spotify FOSS Fund
+                </a>
+                <p class="mb-1 small text-light">TL;DR Established in 2022 as a way to help support the great open source ecosystem projects that Spotify... The post Congratulations to the recipients of the 2025 Spotify FOSS Fund appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-04-12
                     
                 </small>
             </li>

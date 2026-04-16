@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - April 16, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - April 16, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for April 16, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-04-16">2026-04-16 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    13 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="Hacker News">Hacker News</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Sentry">Sentry</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-04-16">
+                <a href="https://engineering.fb.com/2026/04/06/developer-tools/how-meta-used-ai-to-map-tribal-knowledge-in-large-scale-data-pipelines/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] How Meta Used AI to Map Tribal Knowledge in Large-Scale Data Pipelines
+                </a>
+                <p class="mb-1 small text-light">The AI isn’t a consumer of this infrastructure, it’s the engine that runs it. The Problem: AI Tools Without a Map Our pipeline is config-as-code: Python configurations, C++ services, and Hack automation scripts working together across multiple repositories.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-04-16">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-devops-agent-security-agent-ga-product-lifecycle-updates-and-more-april-6-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: AWS DevOps Agent & Security Agent GA, Product Lifecycle updates, and more (April 6, 2026)
+                </a>
+                <p class="mb-1 small text-light">The first two—AWS DevOps Agent and AWS Security Agent—are now generally available after the preview. AWS DevOps Agent helps you run cloud operations—investigating incidents, reducing time to resolution, and preventing issues before they happen.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-16">
+                <a href="https://blog.cloudflare.com/registrar-api-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Register domains wherever you build: Cloudflare Registrar API now in beta
+                </a>
+                <p class="mb-1 small text-light">Today we're launching the next chapter of Cloudflare Registrar: the Registrar API in beta. Built for agents and automation The Registrar API is designed to work well anywhere software is already being built: inside editors, deployment pipelines, backend services, and agent-driven workflows.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-16">
+                <a href="https://blog.cloudflare.com/project-think/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Project Think: building the next generation of AI agents on Cloudflare
+                </a>
+                <p class="mb-1 small text-light">The Cloudflare API MCP server demonstrates this at scale. Useful when the service doesn't support agents yet via MCP or APIs.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-04-16">
+                <a href="https://snyk.io/blog/axios-npm-package-compromised-supply-chain-attack-delivers-cross-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Axios npm Package Compromised: Supply Chain Attack Delivers Cross-Platform RAT
+                </a>
+                <p class="mb-1 small text-light">Meta description: Malicious versions of the Axios npm package (1.14.1 and 0.30.4) were published via a compromised maintainer account, injecting a hidden dependency that deploys a cross-platform remote access trojan. Here's what happened, who's affected, and how to check your exposure.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-04-16">
+                <a href="https://github.com/saffron-health/libretto" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: Libretto – Making AI browser automations deterministic
+                </a>
+                <p class="mb-1 small text-light">We spent a year building and maintaining browser automations for EHR and payer portal integrations at our healthcare startup. (4) They don’t really help you generate new automations or help you debug automation failures.</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-04-16">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-bedrock-guardrails-supports-cross-account-safeguards-with-centralized-control-and-management/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon Bedrock Guardrails supports cross-account safeguards with centralized control and management
+                </a>
+                <p class="mb-1 small text-light">Account-level enforcement enables automatic enforcement of configured safeguards across all Amazon Bedrock model invocations in your AWS account.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-16">
+                <a href="https://kubernetes.io/blog/2026/03/20/running-agents-on-kubernetes-with-agent-sandbox/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Running Agents on Kubernetes with Agent Sandbox
+                </a>
+                <p class="mb-1 small text-light">As platform engineering teams look for the right infrastructure to host these new AI workloads, one platform stands out as the natural choice: Kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-16">
+                <a href="https://www.cncf.io/blog/2026/04/06/peer-to-peer-acceleration-for-ai-model-distribution-with-dragonfly/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Peer-to-Peer acceleration for AI model distribution with Dragonfly
+                </a>
+                <p class="mb-1 small text-light">The problem: AI model distribution is broken at scale Large-scale AI model distribution presents challenges in performance, efficiency, and cost. He is an active contributor to the cloud-native ecosystem, focusing on observability and high-performance container distribution.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-16">
+                <a href="https://blog.cloudflare.com/introducing-agent-lee/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing Agent Lee - a new interface to the Cloudflare stack
+                </a>
+                <p class="mb-1 small text-light">We wanted to create an entirely new way to interact with our entire platform. The bigger vision is Agent Lee as the interface to the entire Cloudflare platform — from anywhere.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-16">
+                <a href="https://blog.cloudflare.com/browser-run-for-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Browser Run: give your agents a browser
+                </a>
+                <p class="mb-1 small text-light">Today, we’re renaming Browser Rendering to Browser Run, and shipping key features that make it the browser for AI agents. com/client/v4/accounts/{account_id}/browser-rendering/crawl' \ -H 'Authorization: Bearer <apiToken>' \ -H 'Content-Type: application/json' \ -d '{ "url": "https://blog.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-16">
+                <a href="https://blog.cloudflare.com/workflows-v2/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Rearchitecting the Workflows control plane for the agentic era
+                </a>
+                <p class="mb-1 small text-light">There are two new, critical components in the V2 control plane which allowed us to improve the scalability of Workflows: SousChef and Gatekeeper. At Cloudflare’s scale, this becomes a problem in and of itself, so the “boring” part becomes the biggest challenge.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-16">
+                <a href="https://www.reddit.com/r/devops/comments/1sjpa4b/whats_the_most_painful_part_of_working_across/" target="_blank" class="fw-bold text-decoration-none">
+                    What’s the most painful part of working across multi-cloud + Terraform?
+                </a>
+                <p class="mb-1 small text-light">Hey everyone, I’m exploring an idea for DevOps / platform / SRE work. The main problem I’m looking at is the usual bouncing between cloud consoles, Terraform, terminal sessions, and cross-account context.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-16">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1sm8908/kubernetes_136_changes_around_security_new/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubernetes 1.36 - Changes around security - New features and deprecations
+                </a>
+                <p class="mb-1 small text-light">36 is approaching, did a roundup of changes related to security: https://www. com/blog/kubernetes-1-36-new-security-features Hope it's of use to anyone.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-16">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1smw27x/kubetail_realtime_kubernetes_logging_dashboard/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubetail: Real-time Kubernetes logging dashboard - April 2026 update
+                </a>
+                <p class="mb-1 small text-light">TL;DR - Kubetail now has spreadsheet-like copy-paste features and a redesigned relative/absolute time picker. You can try out the new features live on our demo site: https://www.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-16">
+                <a href="https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Stop Answering the Same Question Twice: Interval-Aware Caching for Druid at Netflix Scale
+                </a>
+                <p class="mb-1 small text-light">But this massive scale introduced a new challenge: queries. The ProblemOur internal dashboards are heavily used for real-time monitoring, especially during high-profile live shows or global launches.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-16">
+                <a href="https://netflixtechblog.com/powering-multimodal-intelligence-for-video-search-3e0020cf1202?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Powering Multimodal Intelligence for Video Search
+                </a>
+                <p class="mb-1 small text-light">When editorial teams cannot surface these key moments quickly, creative momentum stalls and severe fatigue sets in.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-16">
+                <a href="https://netflixtechblog.com/smarter-live-streaming-at-scale-rolling-out-vbr-for-all-netflix-live-events-c8f833b238cc?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Smarter Live Streaming at Scale: Rolling Out VBR for All Netflix Live Events
+                </a>
+                <p class="mb-1 small text-light">At Netflix scale, the shift to VBR has several important effects. Because VBR sends fewer bits for similar video quality, we see fewer rebuffers and lower start‑up delay.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-16">
+                <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
+                </a>
+                <p class="mb-1 small text-light">At Netflix, our goal is to entertain the world, which means we must speak the world’s languages. This data helps us understand how subtitle characteristics (e.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-16">
+                <a href="https://www.docker.com/blog/why-we-chose-the-harder-path-docker-hardened-images-one-year-later/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Why We Chose the Harder Path: Docker Hardened Images, One Year Later
+                </a>
+                <p class="mb-1 small text-light">The hardened image that never gets adopted provides zero security value, full stop. Docker’s security team evaluates exploitability in the context of each minimal container image and publishes every assessment transparently.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-16">
+                <a href="https://www.redhat.com/en/blog/taming-costs-cloud-environments-rating-openstack-cloudkitty" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Taming costs in cloud environments: Rating in OpenStack with CloudKitty
+                </a>
+                <p class="mb-1 small text-light">Does your private cloud feel like a free-for-all buffet. In today's dynamic cloud environments, it’s increasingly important to be able to properly attribute costs to internal users, especially for enterprises running their own cloud infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-16">
+                <a href="https://www.redhat.com/en/blog/announcing-red-hat-openshift-pipelines-121-faster-builds-smarter-caching-and-improved-troubleshooting" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Announcing Red Hat OpenShift Pipelines 1.21: Faster builds, smarter caching, and improved troubleshooting
+                </a>
+                <p class="mb-1 small text-light">21 is now available, improving pipeline performance, security capabilities, and troubleshooting for Kubernetes-native continuous integration and delivery (CI/CD) on Red Hat OpenShift.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-16">
+                <a href="https://www.redhat.com/en/blog/233-3-year-return-investment-and-13-months-payback-red-hat-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] 233% 3-year return on investment and 13 months to payback with Red Hat AI
+                </a>
+                <p class="mb-1 small text-light">Legacy infrastructure is the primary barrier to AI strategy. It's clear that AI success requires a platform that helps simplify workload management and boost productivity.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-04-16">
+                <a href="https://about.gitlab.com/blog/5-ways-gitlab-pipeline-logic-solves-real-engineering-problems/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] 5 ways GitLab pipeline logic solves real engineering problems
+                </a>
+                <p class="mb-1 small text-light">Microservices: Cross-repo, multi-project pipelinesThe problem: Your frontend lives in one repo, your backend in another. Multi-tenant / matrix deployments: Dynamic child pipelinesThe problem: You deploy the same application to 15 customer environments, or three cloud regions, or dev/staging/prod.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-04-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-04-16">
+                <a href="https://blog.sentry.io/sample-ai-traces-at-100-percent-without-sampling-everything/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Sample AI traces at 100% without sampling everything
+                </a>
+                <p class="mb-1 small text-light">You put in a URL, it kicks off an API request to a Next. The sampling decision happens once, at the root: the POST /api/chat HTTP transaction.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-04-16
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

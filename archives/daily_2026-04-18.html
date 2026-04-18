@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - April 18, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - April 18, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for April 18, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-04-18">2026-04-18 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 10 sources • Updated 2026-04-18 08:16:58
+                    Showing 25 total articles from 
+                    10 sources
+                    
                     
                 </span>
             </small>
@@ -107,278 +124,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-18">
-                <a href="https://www.reddit.com/r/devops/comments/1soq3gr/how_to_handle_modernizing_infrastructure_when_the/" target="_blank" class="fw-bold text-decoration-none">
-                    How to handle modernizing infrastructure when the app runs legacy c#?
-                </a>
-                <p class="mb-1 small text-light">The most significant subset of these apps run on. Something like 60%+ of our infrastructure budget is going to this 40% of the application, or to pieces that have to compensate for it.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-18">
-                <a href="https://www.reddit.com/r/devops/comments/1sj2mry/system_design_coming_from_a_purely_systems_cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    System Design coming from a purely Systems / Cloud Infra background
-                </a>
-                <p class="mb-1 small text-light">I've been preparing for what I think is my 3rd interview for an infrastructure role that includes a system design component. Anyone else come from a pure sysadmin / cloud infra background and go through this.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-18">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1so6uso/agentic_ai_platform_engineering_conference_free/" target="_blank" class="fw-bold text-decoration-none">
-                    Agentic AI & Platform Engineering conference: Free, virtual, community-driven, no vendor pitches
-                </a>
-                <p class="mb-1 small text-light">Hey folks, heads up that KubeCrash is coming up again. It's a free virtual community conference some of us run, and this round is focused on Agentic AI & Platform Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-18">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1snypb7/operators_pain/" target="_blank" class="fw-bold text-decoration-none">
-                    Operators pain
-                </a>
-                <p class="mb-1 small text-light">For those who have written Kubernetes operators, what was the part that almost made you give up? submitted by /u/ialexeze</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-18">
-                <a href="https://netflixtechblog.com/evaluating-netflix-show-synopses-with-llm-as-a-judge-6269251e6f28?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Evaluating Netflix Show Synopses with LLM-as-a-Judge
-                </a>
-                <p class="mb-1 small text-light">Longer rationales improve performance but degrade human-readability, which is problematic given that explanations are key pieces of evidence for creative experts.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-18">
-                <a href="https://azure.microsoft.com/en-us/blog/building-sovereign-ai-at-the-edge-microsoft-and-armada-collaborate-to-deliver-azure-local-on-galleon-modular-datacenters/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Building sovereign AI at the edge: Microsoft and Armada collaborate to deliver Azure Local on Galleon modular datacenters
-                </a>
-                <p class="mb-1 small text-light">This customer-controlled cloud environment delivers Azure’s operating model, security, and AI-ready capabilities where traditional cloud approaches are not feasible.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-18">
-                <a href="https://www.docker.com/blog/why-microvms-the-architecture-behind-docker-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Why MicroVMs: The Architecture Behind Docker Sandboxes
-                </a>
-                <p class="mb-1 small text-light">Containers are how applications are developed, and agents need a Docker environment to do that development. Firecracker, the most well-known microVM runtime, was designed for cloud infrastructure, specifically Linux/KVM environments like AWS Lambda.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-04-18">
-                <a href="https://aws.amazon.com/blogs/aws/aws-interconnect-is-now-generally-available-with-a-new-option-to-simplify-last-mile-connectivity/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Interconnect is now generally available, with a new option to simplify last-mile connectivity
-                </a>
-                <p class="mb-1 small text-light">For monitoring, AWS Interconnect – multicloud integrates with Amazon CloudWatch. Then, I open a Terminal and type: gcloud network-connectivity transports create aws-news-blog \ --region=europe-west3 \ --activation-key=${ACTIVATION_KEY} \ --network=default \ --advertised-routes=10.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-18">
-                <a href="https://kubernetes.io/blog/2026/03/30/kubernetes-v1-36-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36 Sneak Peek
-                </a>
-                <p class="mb-1 small text-light">With this enhancement, the kube-apiserver can delegate token signing to external systems such as cloud key management services or hardware security modules. This improves security and simplifies key management services for clusters that rely on centralized signing infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-18">
-                <a href="https://kubernetes.io/blog/2026/03/20/ingress2gateway-1-0-release/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing Ingress2Gateway 1.0: Your Path to Gateway API
-                </a>
-                <p class="mb-1 small text-light">Gateway API provides a modular, extensible API with strong support for Kubernetes-native RBAC. Ingress2Gateway is an assistant that helps teams confidently move from Ingress to Gateway API.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-18">
-                <a href="https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Securing Production Debugging in Kubernetes
-                </a>
-                <p class="mb-1 small text-light">In either model, Kubernetes RBAC remains the source of truth for what the Kubernetes API allows and at what scope. RBAC maps the authenticated identity to a minimal Role This is straightforward to operationalize with the Kubernetes CertificateSigningRequest API.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-18">
-                <a href="https://www.cncf.io/blog/2026/04/11/what-i-learned-at-my-first-kubecon-cloudnativecon-as-a-high-school-speaker/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] What I Learned at My First KubeCon + CloudNativeCon as a High School Speaker
+                <a href="https://www.cncf.io/blog/2026/04/17/k3s-on-on-prem-infrastructures-the-gitops-way-writing-a-custom-k0rdent-template-from-scratch/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] K3s on On-Prem Infrastructures the GitOps Way: Writing a Custom k0rdent Template from Scratch
                 </a>
-                <p class="mb-1 small text-light">When I first arrived, I was honestly overwhelmed. I ended up combining tools like Kubernetes, kgateway, and vLLM to run different services.</p>
+                <p class="mb-1 small text-light">We created a custom Helm chart that acts as an Infrastructure Provider for Proxmox.</p>
                 <small class="text-secondary">
                     
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-18">
-                <a href="https://blog.cloudflare.com/agent-readiness/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing the Agent Readiness score. Is your site agent-ready?
-                </a>
-                <p class="mb-1 small text-light">For example, Google Lighthouse scores websites on performance and security best practices, and guides site owners to adopt the latest web platform standards.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-18">
-                <a href="https://blog.cloudflare.com/shared-dictionaries/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Shared Dictionaries: compression that keeps up with the agentic web
-                </a>
-                <p class="mb-1 small text-light">But security wasn't the only problem, or even the main reason why adoption didn’t happen. The RFC mitigates the security problems but dictionary transport has always been complex to implement.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-18">
-                <a href="https://blog.cloudflare.com/unweight-tensor-compression/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Unweight: how we compressed an LLM 22% without sacrificing quality
-                </a>
-                <p class="mb-1 small text-light">Now we are tackling the next big bottleneck in our inference platform: model weights. Compression helps because fewer bytes need to cross the bus.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-18">
-                <a href="https://blog.cloudflare.com/introducing-agent-memory/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Agents that remember: introducing Agent Memory
-                </a>
-                <p class="mb-1 small text-light">Agent Memory is a managed service with an opinionated API and retrieval-based architecture. It can also be accessed via a REST API for agents running outside of Workers, following the same pattern as other Cloudflare developer platform APIs.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-18">
-                <a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value
-                </a>
-                <p class="mb-1 small text-light">How do we balance performance, scalability, and cost as AI solutions grow. AI initiatives frequently span teams and stages It’s critical to maintain oversight from research to deployment.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-18">
-                <a href="https://www.docker.com/blog/reclaim-developer-hours-through-smarter-vulnerability-prioritization-with-docker-and-mend-io/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Reclaim Developer Hours through Smarter Vulnerability Prioritization with Docker and Mend.io
-                </a>
-                <p class="mb-1 small text-light">io and Docker Hardened Images (DHI) provides a seamless framework for managing container security. io incorporates Docker’s VEX (Vulnerability Exploitability eXchange) data as a primary source of “Risk Factor” identification.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-18">
-                <a href="https://www.docker.com/blog/defending-your-software-supply-chain-what-every-engineering-team-should-do-now/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Defending Your Software Supply Chain: What Every Engineering Team Should Do Now
-                </a>
-                <p class="mb-1 small text-light">Agents install packages, modify configs, make API calls, and spin up containers with developer-level access. Docker’s MCP Gateway provides centralized proxy, policy enforcement, secret blocking, and audit logging for all agent-to-tool traffic.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-18">
-                <a href="https://www.redhat.com/en/blog/confidential-containers-workshop-microsoft-azure-red-hat-openshift-learn-interactively" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Confidential Containers workshop on Microsoft Azure Red Hat OpenShift: Learn interactively
-                </a>
-                <p class="mb-1 small text-light">Confidential computing is a complex topic, and often requires a deep understanding of hardware, kernel, and orchestration layers. Confidential computing is a major pillar when it comes to data sovereignty and the Red Hat zero trust security principle.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-18">
-                <a href="https://www.redhat.com/en/blog/mcp-security-containerization-and-red-hat-openshift-integration" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] MCP security: Containerization and Red Hat OpenShift integration
-                </a>
-                <p class="mb-1 small text-light">Of course, security-focused development is only half the battle. Deploying an MCP server with weak security protections can negate even the most robust code, as.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-04-18">
-                <a href="https://engineering.fb.com/2026/04/08/security/trust-but-canary-configuration-safety-at-scale-meta-tech-podcast/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Trust But Canary: Configuration Safety at Scale
-                </a>
-                <p class="mb-1 small text-light">As AI increases developer speed and productivity it also increases the need for safeguards. Send us feedback on Instagram, Threads, or X.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-18">
-                <a href="https://blog.cloudflare.com/ai-redirects/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Redirects for AI Training enforces canonical content
-                </a>
-                <p class="mb-1 small text-light">Cloudflare's Wrangler CLI has published several major versions over the past six years, each containing at least some critical changes to commands, configuration, or how developers interact with the platform.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
+                    CNCF | 2026-04-18
                     
                 </small>
             </li>
@@ -390,19 +143,283 @@
                 <p class="mb-1 small text-light">This post pulls back the curtain on the Live Operations teams that enable this rapid scale. Building the Human Infrastructure: Building the human operational model to run a facility like the BOC didn’t happen overnight.</p>
                 <small class="text-secondary">
                     
-                    Netflix
+                    Netflix | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-18">
+                <a href="https://blog.cloudflare.com/ai-redirects/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Redirects for AI Training enforces canonical content
+                </a>
+                <p class="mb-1 small text-light">Cloudflare's Wrangler CLI has published several major versions over the past six years, each containing at least some critical changes to commands, configuration, or how developers interact with the platform.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-18">
+                <a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value
+                </a>
+                <p class="mb-1 small text-light">How do we balance performance, scalability, and cost as AI solutions grow. AI initiatives frequently span teams and stages It’s critical to maintain oversight from research to deployment.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-18">
+                <a href="https://www.docker.com/blog/reclaim-developer-hours-through-smarter-vulnerability-prioritization-with-docker-and-mend-io/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Reclaim Developer Hours through Smarter Vulnerability Prioritization with Docker and Mend.io
+                </a>
+                <p class="mb-1 small text-light">io and Docker Hardened Images (DHI) provides a seamless framework for managing container security. io incorporates Docker’s VEX (Vulnerability Exploitability eXchange) data as a primary source of “Risk Factor” identification.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-18">
+                <a href="https://www.docker.com/blog/defending-your-software-supply-chain-what-every-engineering-team-should-do-now/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Defending Your Software Supply Chain: What Every Engineering Team Should Do Now
+                </a>
+                <p class="mb-1 small text-light">Agents install packages, modify configs, make API calls, and spin up containers with developer-level access. Docker’s MCP Gateway provides centralized proxy, policy enforcement, secret blocking, and audit logging for all agent-to-tool traffic.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-18">
+                <a href="https://www.redhat.com/en/blog/confidential-containers-workshop-microsoft-azure-red-hat-openshift-learn-interactively" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Confidential Containers workshop on Microsoft Azure Red Hat OpenShift: Learn interactively
+                </a>
+                <p class="mb-1 small text-light">Confidential computing is a complex topic, and often requires a deep understanding of hardware, kernel, and orchestration layers. Confidential computing is a major pillar when it comes to data sovereignty and the Red Hat zero trust security principle.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-18">
+                <a href="https://www.redhat.com/en/blog/mcp-security-containerization-and-red-hat-openshift-integration" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] MCP security: Containerization and Red Hat OpenShift integration
+                </a>
+                <p class="mb-1 small text-light">Of course, security-focused development is only half the battle. Deploying an MCP server with weak security protections can negate even the most robust code, as.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-04-18">
+                <a href="https://engineering.fb.com/2026/04/08/security/trust-but-canary-configuration-safety-at-scale-meta-tech-podcast/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Trust But Canary: Configuration Safety at Scale
+                </a>
+                <p class="mb-1 small text-light">As AI increases developer speed and productivity it also increases the need for safeguards. Send us feedback on Instagram, Threads, or X.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-04-18">
+                <a href="https://aws.amazon.com/blogs/aws/aws-interconnect-is-now-generally-available-with-a-new-option-to-simplify-last-mile-connectivity/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Interconnect is now generally available, with a new option to simplify last-mile connectivity
+                </a>
+                <p class="mb-1 small text-light">For monitoring, AWS Interconnect – multicloud integrates with Amazon CloudWatch. Then, I open a Terminal and type: gcloud network-connectivity transports create aws-news-blog \ --region=europe-west3 \ --activation-key=${ACTIVATION_KEY} \ --network=default \ --advertised-routes=10.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-18">
+                <a href="https://kubernetes.io/blog/2026/03/30/kubernetes-v1-36-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36 Sneak Peek
+                </a>
+                <p class="mb-1 small text-light">With this enhancement, the kube-apiserver can delegate token signing to external systems such as cloud key management services or hardware security modules. This improves security and simplifies key management services for clusters that rely on centralized signing infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-18">
+                <a href="https://kubernetes.io/blog/2026/03/20/ingress2gateway-1-0-release/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing Ingress2Gateway 1.0: Your Path to Gateway API
+                </a>
+                <p class="mb-1 small text-light">Gateway API provides a modular, extensible API with strong support for Kubernetes-native RBAC. Ingress2Gateway is an assistant that helps teams confidently move from Ingress to Gateway API.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-18">
+                <a href="https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Securing Production Debugging in Kubernetes
+                </a>
+                <p class="mb-1 small text-light">In either model, Kubernetes RBAC remains the source of truth for what the Kubernetes API allows and at what scope. RBAC maps the authenticated identity to a minimal Role This is straightforward to operationalize with the Kubernetes CertificateSigningRequest API.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-04-18
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-18">
-                <a href="https://www.cncf.io/blog/2026/04/17/k3s-on-on-prem-infrastructures-the-gitops-way-writing-a-custom-k0rdent-template-from-scratch/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] K3s on On-Prem Infrastructures the GitOps Way: Writing a Custom k0rdent Template from Scratch
+                <a href="https://www.cncf.io/blog/2026/04/11/what-i-learned-at-my-first-kubecon-cloudnativecon-as-a-high-school-speaker/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] What I Learned at My First KubeCon + CloudNativeCon as a High School Speaker
                 </a>
-                <p class="mb-1 small text-light">We created a custom Helm chart that acts as an Infrastructure Provider for Proxmox.</p>
+                <p class="mb-1 small text-light">When I first arrived, I was honestly overwhelmed. I ended up combining tools like Kubernetes, kgateway, and vLLM to run different services.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-18">
+                <a href="https://blog.cloudflare.com/agent-readiness/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing the Agent Readiness score. Is your site agent-ready?
+                </a>
+                <p class="mb-1 small text-light">For example, Google Lighthouse scores websites on performance and security best practices, and guides site owners to adopt the latest web platform standards.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-18">
+                <a href="https://blog.cloudflare.com/shared-dictionaries/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Shared Dictionaries: compression that keeps up with the agentic web
+                </a>
+                <p class="mb-1 small text-light">But security wasn't the only problem, or even the main reason why adoption didn’t happen. The RFC mitigates the security problems but dictionary transport has always been complex to implement.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-18">
+                <a href="https://blog.cloudflare.com/unweight-tensor-compression/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Unweight: how we compressed an LLM 22% without sacrificing quality
+                </a>
+                <p class="mb-1 small text-light">Now we are tackling the next big bottleneck in our inference platform: model weights. Compression helps because fewer bytes need to cross the bus.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-18">
+                <a href="https://blog.cloudflare.com/introducing-agent-memory/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Agents that remember: introducing Agent Memory
+                </a>
+                <p class="mb-1 small text-light">Agent Memory is a managed service with an opinionated API and retrieval-based architecture. It can also be accessed via a REST API for agents running outside of Workers, following the same pattern as other Cloudflare developer platform APIs.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-18">
+                <a href="https://www.reddit.com/r/devops/comments/1soq3gr/how_to_handle_modernizing_infrastructure_when_the/" target="_blank" class="fw-bold text-decoration-none">
+                    How to handle modernizing infrastructure when the app runs legacy c#?
+                </a>
+                <p class="mb-1 small text-light">The most significant subset of these apps run on. Something like 60%+ of our infrastructure budget is going to this 40% of the application, or to pieces that have to compensate for it.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-18">
+                <a href="https://www.reddit.com/r/devops/comments/1sj2mry/system_design_coming_from_a_purely_systems_cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    System Design coming from a purely Systems / Cloud Infra background
+                </a>
+                <p class="mb-1 small text-light">I've been preparing for what I think is my 3rd interview for an infrastructure role that includes a system design component. Anyone else come from a pure sysadmin / cloud infra background and go through this.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-18">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1so6uso/agentic_ai_platform_engineering_conference_free/" target="_blank" class="fw-bold text-decoration-none">
+                    Agentic AI & Platform Engineering conference: Free, virtual, community-driven, no vendor pitches
+                </a>
+                <p class="mb-1 small text-light">Hey folks, heads up that KubeCrash is coming up again. It's a free virtual community conference some of us run, and this round is focused on Agentic AI & Platform Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-18">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1snypb7/operators_pain/" target="_blank" class="fw-bold text-decoration-none">
+                    Operators pain
+                </a>
+                <p class="mb-1 small text-light">For those who have written Kubernetes operators, what was the part that almost made you give up? submitted by /u/ialexeze</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-18">
+                <a href="https://netflixtechblog.com/evaluating-netflix-show-synopses-with-llm-as-a-judge-6269251e6f28?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Evaluating Netflix Show Synopses with LLM-as-a-Judge
+                </a>
+                <p class="mb-1 small text-light">Longer rationales improve performance but degrade human-readability, which is problematic given that explanations are key pieces of evidence for creative experts.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-18">
+                <a href="https://azure.microsoft.com/en-us/blog/building-sovereign-ai-at-the-edge-microsoft-and-armada-collaborate-to-deliver-azure-local-on-galleon-modular-datacenters/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Building sovereign AI at the edge: Microsoft and Armada collaborate to deliver Azure Local on Galleon modular datacenters
+                </a>
+                <p class="mb-1 small text-light">This customer-controlled cloud environment delivers Azure’s operating model, security, and AI-ready capabilities where traditional cloud approaches are not feasible.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-04-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-18">
+                <a href="https://www.docker.com/blog/why-microvms-the-architecture-behind-docker-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Why MicroVMs: The Architecture Behind Docker Sandboxes
+                </a>
+                <p class="mb-1 small text-light">Containers are how applications are developed, and agents need a Docker environment to do that development. Firecracker, the most well-known microVM runtime, was designed for cloud infrastructure, specifically Linux/KVM environments like AWS Lambda.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-18
                     
                 </small>
             </li>

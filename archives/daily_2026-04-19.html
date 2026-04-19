@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - April 19, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - April 19, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for April 19, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-04-19">2026-04-19 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2026-04-19 08:23:03
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,278 +126,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-19">
-                <a href="https://www.reddit.com/r/devops/comments/1sjpa4b/whats_the_most_painful_part_of_working_across/" target="_blank" class="fw-bold text-decoration-none">
-                    What’s the most painful part of working across multi-cloud + Terraform?
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-04-19">
+                <a href="https://engineering.fb.com/2026/04/06/developer-tools/how-meta-used-ai-to-map-tribal-knowledge-in-large-scale-data-pipelines/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] How Meta Used AI to Map Tribal Knowledge in Large-Scale Data Pipelines
                 </a>
-                <p class="mb-1 small text-light">Hey everyone, I’m exploring an idea for DevOps / platform / SRE work. The main problem I’m looking at is the usual bouncing between cloud consoles, Terraform, terminal sessions, and cross-account context.</p>
+                <p class="mb-1 small text-light">The AI isn’t a consumer of this infrastructure, it’s the engine that runs it. The Problem: AI Tools Without a Map Our pipeline is config-as-code: Python configurations, C++ services, and Hack automation scripts working together across multiple repositories.</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-19">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1spelie/cool_github_lab_projects_for_clouddevops_roles/" target="_blank" class="fw-bold text-decoration-none">
-                    Cool GitHub lab projects for Cloud/DevOps roles
-                </a>
-                <p class="mb-1 small text-light">I shifted roles about two years ago, so these days I work much more with cloud/DevOps stuff rather than traditional sysadmin.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-19">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1spkmph/mixing_legacy_telecom_systems_with_modern_infra/" target="_blank" class="fw-bold text-decoration-none">
-                    Mixing legacy telecom systems with modern infra is getting painful
-                </a>
-                <p class="mb-1 small text-light">​ Working on a setup where we’re trying to integrate older telecom platforms with newer infrastructure, and it’s honestly a constant struggle. Not sure if others here deal with telecom systems, but how are you handling this transition.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-19">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1sm8908/kubernetes_136_changes_around_security_new/" target="_blank" class="fw-bold text-decoration-none">
-                    Kubernetes 1.36 - Changes around security - New features and deprecations
-                </a>
-                <p class="mb-1 small text-light">36 is approaching, did a roundup of changes related to security: https://www. com/blog/kubernetes-1-36-new-security-features Hope it's of use to anyone.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-19">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1smw27x/kubetail_realtime_kubernetes_logging_dashboard/" target="_blank" class="fw-bold text-decoration-none">
-                    Kubetail: Real-time Kubernetes logging dashboard - April 2026 update
-                </a>
-                <p class="mb-1 small text-light">TL;DR - Kubetail now has spreadsheet-like copy-paste features and a redesigned relative/absolute time picker. You can try out the new features live on our demo site: https://www.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-19">
-                <a href="https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Stop Answering the Same Question Twice: Interval-Aware Caching for Druid at Netflix Scale
-                </a>
-                <p class="mb-1 small text-light">But this massive scale introduced a new challenge: queries. The ProblemOur internal dashboards are heavily used for real-time monitoring, especially during high-profile live shows or global launches.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-19">
-                <a href="https://netflixtechblog.com/powering-multimodal-intelligence-for-video-search-3e0020cf1202?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Powering Multimodal Intelligence for Video Search
-                </a>
-                <p class="mb-1 small text-light">When editorial teams cannot surface these key moments quickly, creative momentum stalls and severe fatigue sets in.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-19">
-                <a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-principles-that-still-matter/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Cloud Cost Optimization: Principles that still matter
-                </a>
-                <p class="mb-1 small text-light">It requires continuous attention as environments evolve, workloads change, and new services are introduced. How AI workloads change traditional cost optimization AI workloads introduce new cost dynamics that can challenge traditional cloud cost optimization approaches.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-19">
-                <a href="https://azure.microsoft.com/en-us/blog/optimize-object-storage-costs-automatically-with-smart-tier-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Optimize object storage costs automatically with smart tier—now generally available
-                </a>
-                <p class="mb-1 small text-light">By intelligently placing data in the most cost‑effective tier based on actual usage patterns, smart tier allows us to optimize storage spend without sacrificing performance. Moving existing objects into smart tier does not incur tier-change fees; a monitoring fee covers the orchestration.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-19">
-                <a href="https://www.docker.com/blog/why-we-chose-the-harder-path-docker-hardened-images-one-year-later/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Why We Chose the Harder Path: Docker Hardened Images, One Year Later
-                </a>
-                <p class="mb-1 small text-light">The hardened image that never gets adopted provides zero security value, full stop. Docker’s security team evaluates exploitability in the context of each minimal container image and publishes every assessment transparently.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-19">
-                <a href="https://www.docker.com/blog/how-to-analyze-hugging-face-for-arm64-readiness/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] How to Analyze Hugging Face for Arm64 Readiness
-                </a>
-                <p class="mb-1 small text-light">Target Hardware Why it matters Cloud AWS Graviton, Azure Cobalt, Google Axion 20-40% cost reduction vs. The application source code itself returns 0 architecture issues — no x86 intrinsics, no platform-specific system calls.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-04-19">
-                <a href="https://about.gitlab.com/blog/gitlab-18-11-budget-guardrails-for-gitlab-credits/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab 18.11: Budget guardrails for GitLab Credits
-                </a>
-                <p class="mb-1 small text-light">Since its general availability, GitLab Duo Agent Platform has provided usage governance and visibility. This is useful for automation and infrastructure-as-code workflows.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-04-19">
-                <a href="https://about.gitlab.com/blog/ci-expert-and-data-analyst-ai-agents-target-development-gaps/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab 18.11: CI Expert and Data Analyst AI agents target development gaps
-                </a>
-                <p class="mb-1 small text-light">These are problem areas that couldn't be solved by a general-purpose assistant. One platform, connected contextBoth agents run inside GitLab, with access to the code, pipelines, issues, and merge requests already there.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-04-19">
-                <a href="https://about.gitlab.com/blog/automate-remediation-with-ready-to-merge-ai-code-fixes/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab 18.11: Automate remediation with ready-to-merge AI code fixes
-                </a>
-                <p class="mb-1 small text-light">What used to be a manageable backlog of static application security testing (SAST) vulnerabilities is now an overwhelming list that has become difficult to parse. Agentic SAST Vulnerability Resolution within GitLab Duo Agent Platform is built for that exact problem.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-04-19">
-                <a href="https://blog.sentry.io/debugging-multi-agent-ai-when-the-failure-is-in-the-space-between-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Debugging multi-agent AI: When the failure is in the space between agents
-                </a>
-                <p class="mb-1 small text-light">send_default_pii=True is what enables prompt and response capture in spans, which is essential for debugging the handoff problems described above. A slow web_search tool might be caused by rate limiting from an upstream API, not an agent issue.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-04-19">
-                <a href="https://blog.sentry.io/sample-ai-traces-at-100-percent-without-sampling-everything/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Sample AI traces at 100% without sampling everything
-                </a>
-                <p class="mb-1 small text-light">You put in a URL, it kicks off an API request to a Next. The sampling decision happens once, at the root: the POST /api/chat HTTP transaction.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-04-19">
-                <a href="https://snyk.io/blog/from-discovery-to-control/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Governing Security in the Age of Infinite Signal – From Discovery to Control
-                </a>
-                <p class="mb-1 small text-light">AI can find vulnerabilities at scale, but enterprise security now depends on control, validation, and governance that can keep up.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-04-19">
-                <a href="https://snyk.io/blog/litellm-ai-blast-radius/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] You Patched LiteLLM, But Do You Know Your AI Blast Radius?
-                </a>
-                <p class="mb-1 small text-light">The LiteLLM compromise showed AI risk extends beyond dependencies. Use Evo AI-SPM to map your full AI blast radius, securing connected models, tools, and agent workflows.1</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-04-19">
-                <a href="https://engineering.atspotify.com/2026/4/anthropic-agentic-development/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Let’s Talk Agentic Development: Spotify x Anthropic Live
-                </a>
-                <p class="mb-1 small text-light">AI agents are transforming the way we build — and even how we think of ourselves as software developers. Both... The post Let’s Talk Agentic Development: Spotify x Anthropic Live appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-04-19">
-                <a href="https://engineering.atspotify.com/2026/3/inside-the-archive-2025-wrapped/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Inside the Archive: The Tech Behind Your 2025 Wrapped Highlights
-                </a>
-                <p class="mb-1 small text-light">What if we could identify interesting listening moments from your year, and tell you a story about them? The post Inside the Archive: The Tech Behind Your 2025 Wrapped Highlights appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-04-19">
-                <a href="https://engineering.atspotify.com/2026/2/our-multi-agent-architecture-for-smarter-advertising/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Our Multi-Agent Architecture for Smarter Advertising
-                </a>
-                <p class="mb-1 small text-light">When we kicked this off, we weren’t trying to ship an “AI feature.” We were trying to fix a structural... The post Our Multi-Agent Architecture for Smarter Advertising appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-19">
-                <a href="https://kubernetes.io/blog/2026/03/20/running-agents-on-kubernetes-with-agent-sandbox/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Running Agents on Kubernetes with Agent Sandbox
-                </a>
-                <p class="mb-1 small text-light">As platform engineering teams look for the right infrastructure to host these new AI workloads, one platform stands out as the natural choice: Kubernetes.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-04-19">
-                <a href="https://snyk.io/blog/axios-npm-package-compromised-supply-chain-attack-delivers-cross-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Axios npm Package Compromised: Supply Chain Attack Delivers Cross-Platform RAT
-                </a>
-                <p class="mb-1 small text-light">Meta description: Malicious versions of the Axios npm package (1.14.1 and 0.30.4) were published via a compromised maintainer account, injecting a hidden dependency that deploys a cross-platform remote access trojan. Here's what happened, who's affected, and how to check your exposure.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
+                    Engineering at Meta | 2026-04-19
                     
                 </small>
             </li>
@@ -392,19 +145,283 @@
                 <p class="mb-1 small text-light">The first two—AWS DevOps Agent and AWS Security Agent—are now generally available after the preview. AWS DevOps Agent helps you run cloud operations—investigating incidents, reducing time to resolution, and preventing issues before they happen.</p>
                 <small class="text-secondary">
                     
-                    Amazon AWS
+                    Amazon AWS | 2026-04-19
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-04-19">
-                <a href="https://engineering.fb.com/2026/04/06/developer-tools/how-meta-used-ai-to-map-tribal-knowledge-in-large-scale-data-pipelines/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] How Meta Used AI to Map Tribal Knowledge in Large-Scale Data Pipelines
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-04-19">
+                <a href="https://snyk.io/blog/axios-npm-package-compromised-supply-chain-attack-delivers-cross-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Axios npm Package Compromised: Supply Chain Attack Delivers Cross-Platform RAT
                 </a>
-                <p class="mb-1 small text-light">The AI isn’t a consumer of this infrastructure, it’s the engine that runs it. The Problem: AI Tools Without a Map Our pipeline is config-as-code: Python configurations, C++ services, and Hack automation scripts working together across multiple repositories.</p>
+                <p class="mb-1 small text-light">Meta description: Malicious versions of the Axios npm package (1.14.1 and 0.30.4) were published via a compromised maintainer account, injecting a hidden dependency that deploys a cross-platform remote access trojan. Here's what happened, who's affected, and how to check your exposure.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Snyk | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-19">
+                <a href="https://kubernetes.io/blog/2026/03/20/running-agents-on-kubernetes-with-agent-sandbox/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Running Agents on Kubernetes with Agent Sandbox
+                </a>
+                <p class="mb-1 small text-light">As platform engineering teams look for the right infrastructure to host these new AI workloads, one platform stands out as the natural choice: Kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-19">
+                <a href="https://www.reddit.com/r/devops/comments/1sjpa4b/whats_the_most_painful_part_of_working_across/" target="_blank" class="fw-bold text-decoration-none">
+                    What’s the most painful part of working across multi-cloud + Terraform?
+                </a>
+                <p class="mb-1 small text-light">Hey everyone, I’m exploring an idea for DevOps / platform / SRE work. The main problem I’m looking at is the usual bouncing between cloud consoles, Terraform, terminal sessions, and cross-account context.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-19">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1spelie/cool_github_lab_projects_for_clouddevops_roles/" target="_blank" class="fw-bold text-decoration-none">
+                    Cool GitHub lab projects for Cloud/DevOps roles
+                </a>
+                <p class="mb-1 small text-light">I shifted roles about two years ago, so these days I work much more with cloud/DevOps stuff rather than traditional sysadmin.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-19">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1spkmph/mixing_legacy_telecom_systems_with_modern_infra/" target="_blank" class="fw-bold text-decoration-none">
+                    Mixing legacy telecom systems with modern infra is getting painful
+                </a>
+                <p class="mb-1 small text-light">​ Working on a setup where we’re trying to integrate older telecom platforms with newer infrastructure, and it’s honestly a constant struggle. Not sure if others here deal with telecom systems, but how are you handling this transition.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-19">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1sm8908/kubernetes_136_changes_around_security_new/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubernetes 1.36 - Changes around security - New features and deprecations
+                </a>
+                <p class="mb-1 small text-light">36 is approaching, did a roundup of changes related to security: https://www. com/blog/kubernetes-1-36-new-security-features Hope it's of use to anyone.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-19">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1smw27x/kubetail_realtime_kubernetes_logging_dashboard/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubetail: Real-time Kubernetes logging dashboard - April 2026 update
+                </a>
+                <p class="mb-1 small text-light">TL;DR - Kubetail now has spreadsheet-like copy-paste features and a redesigned relative/absolute time picker. You can try out the new features live on our demo site: https://www.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-19">
+                <a href="https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Stop Answering the Same Question Twice: Interval-Aware Caching for Druid at Netflix Scale
+                </a>
+                <p class="mb-1 small text-light">But this massive scale introduced a new challenge: queries. The ProblemOur internal dashboards are heavily used for real-time monitoring, especially during high-profile live shows or global launches.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-19">
+                <a href="https://netflixtechblog.com/powering-multimodal-intelligence-for-video-search-3e0020cf1202?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Powering Multimodal Intelligence for Video Search
+                </a>
+                <p class="mb-1 small text-light">When editorial teams cannot surface these key moments quickly, creative momentum stalls and severe fatigue sets in.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-19">
+                <a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-principles-that-still-matter/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Cloud Cost Optimization: Principles that still matter
+                </a>
+                <p class="mb-1 small text-light">It requires continuous attention as environments evolve, workloads change, and new services are introduced. How AI workloads change traditional cost optimization AI workloads introduce new cost dynamics that can challenge traditional cloud cost optimization approaches.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-19">
+                <a href="https://azure.microsoft.com/en-us/blog/optimize-object-storage-costs-automatically-with-smart-tier-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Optimize object storage costs automatically with smart tier—now generally available
+                </a>
+                <p class="mb-1 small text-light">By intelligently placing data in the most cost‑effective tier based on actual usage patterns, smart tier allows us to optimize storage spend without sacrificing performance. Moving existing objects into smart tier does not incur tier-change fees; a monitoring fee covers the orchestration.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-19">
+                <a href="https://www.docker.com/blog/why-we-chose-the-harder-path-docker-hardened-images-one-year-later/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Why We Chose the Harder Path: Docker Hardened Images, One Year Later
+                </a>
+                <p class="mb-1 small text-light">The hardened image that never gets adopted provides zero security value, full stop. Docker’s security team evaluates exploitability in the context of each minimal container image and publishes every assessment transparently.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-19">
+                <a href="https://www.docker.com/blog/how-to-analyze-hugging-face-for-arm64-readiness/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] How to Analyze Hugging Face for Arm64 Readiness
+                </a>
+                <p class="mb-1 small text-light">Target Hardware Why it matters Cloud AWS Graviton, Azure Cobalt, Google Axion 20-40% cost reduction vs. The application source code itself returns 0 architecture issues — no x86 intrinsics, no platform-specific system calls.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-04-19">
+                <a href="https://about.gitlab.com/blog/gitlab-18-11-budget-guardrails-for-gitlab-credits/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab 18.11: Budget guardrails for GitLab Credits
+                </a>
+                <p class="mb-1 small text-light">Since its general availability, GitLab Duo Agent Platform has provided usage governance and visibility. This is useful for automation and infrastructure-as-code workflows.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-04-19">
+                <a href="https://about.gitlab.com/blog/ci-expert-and-data-analyst-ai-agents-target-development-gaps/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab 18.11: CI Expert and Data Analyst AI agents target development gaps
+                </a>
+                <p class="mb-1 small text-light">These are problem areas that couldn't be solved by a general-purpose assistant. One platform, connected contextBoth agents run inside GitLab, with access to the code, pipelines, issues, and merge requests already there.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-04-19">
+                <a href="https://about.gitlab.com/blog/automate-remediation-with-ready-to-merge-ai-code-fixes/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab 18.11: Automate remediation with ready-to-merge AI code fixes
+                </a>
+                <p class="mb-1 small text-light">What used to be a manageable backlog of static application security testing (SAST) vulnerabilities is now an overwhelming list that has become difficult to parse. Agentic SAST Vulnerability Resolution within GitLab Duo Agent Platform is built for that exact problem.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-04-19">
+                <a href="https://blog.sentry.io/debugging-multi-agent-ai-when-the-failure-is-in-the-space-between-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Debugging multi-agent AI: When the failure is in the space between agents
+                </a>
+                <p class="mb-1 small text-light">send_default_pii=True is what enables prompt and response capture in spans, which is essential for debugging the handoff problems described above. A slow web_search tool might be caused by rate limiting from an upstream API, not an agent issue.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-04-19">
+                <a href="https://blog.sentry.io/sample-ai-traces-at-100-percent-without-sampling-everything/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Sample AI traces at 100% without sampling everything
+                </a>
+                <p class="mb-1 small text-light">You put in a URL, it kicks off an API request to a Next. The sampling decision happens once, at the root: the POST /api/chat HTTP transaction.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-04-19">
+                <a href="https://snyk.io/blog/from-discovery-to-control/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Governing Security in the Age of Infinite Signal – From Discovery to Control
+                </a>
+                <p class="mb-1 small text-light">AI can find vulnerabilities at scale, but enterprise security now depends on control, validation, and governance that can keep up.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-04-19">
+                <a href="https://snyk.io/blog/litellm-ai-blast-radius/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] You Patched LiteLLM, But Do You Know Your AI Blast Radius?
+                </a>
+                <p class="mb-1 small text-light">The LiteLLM compromise showed AI risk extends beyond dependencies. Use Evo AI-SPM to map your full AI blast radius, securing connected models, tools, and agent workflows.1</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-04-19">
+                <a href="https://engineering.atspotify.com/2026/4/anthropic-agentic-development/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Let’s Talk Agentic Development: Spotify x Anthropic Live
+                </a>
+                <p class="mb-1 small text-light">AI agents are transforming the way we build — and even how we think of ourselves as software developers. Both... The post Let’s Talk Agentic Development: Spotify x Anthropic Live appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-04-19">
+                <a href="https://engineering.atspotify.com/2026/3/inside-the-archive-2025-wrapped/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Inside the Archive: The Tech Behind Your 2025 Wrapped Highlights
+                </a>
+                <p class="mb-1 small text-light">What if we could identify interesting listening moments from your year, and tell you a story about them? The post Inside the Archive: The Tech Behind Your 2025 Wrapped Highlights appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-04-19
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-04-19">
+                <a href="https://engineering.atspotify.com/2026/2/our-multi-agent-architecture-for-smarter-advertising/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Our Multi-Agent Architecture for Smarter Advertising
+                </a>
+                <p class="mb-1 small text-light">When we kicked this off, we weren’t trying to ship an “AI feature.” We were trying to fix a structural... The post Our Multi-Agent Architecture for Smarter Advertising appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-04-19
                     
                 </small>
             </li>

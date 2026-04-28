@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - April 28, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - April 28, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for April 28, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-04-28">2026-04-28 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-04-28 08:52:32
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,254 +128,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-28">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1sxv214/wmi_cloud_wipe_repair_windows_on_wiping/" target="_blank" class="fw-bold text-decoration-none">
-                    WMI Cloud Wipe - Repair Windows on Wiping
-                </a>
-                <p class="mb-1 small text-light">Hi, I was wondering if anyone got the cloud wipe calling by WMI working. exe" FeaturedResetPC from a system cmd failed, or better said, Windows does not allow to call it, event with serviceui.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-28">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1sx4fn8/need_help_revamping_a_poorly_managed/" target="_blank" class="fw-bold text-decoration-none">
-                    Need help revamping a poorly managed infrastructure as a student
-                </a>
-                <p class="mb-1 small text-light">What they dont know is how often it is getting backed up to the cloud. Any help, solutions, or tips, would be highly appreciated My initial instinct is to set up network firewall,.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-28">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1sxtue9/container_security_looked_clean_in_the/" target="_blank" class="fw-bold text-decoration-none">
-                    Container security looked clean in the scanner.Anyone else finding runtime tells a different story?
-                </a>
-                <p class="mb-1 small text-light">Someone on our platform team set up Falco last month mostly out of curiosity, not a real initiative. Shell process turned out to be a debug container someone left attached to a pod 6 weeks ago.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-28">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1sur05b/for_platform_engineering_teams_with_large_scale/" target="_blank" class="fw-bold text-decoration-none">
-                    For platform engineering teams with large scale environments, how are you managing operators in your environment? I have some questions.
-                </a>
-                <p class="mb-1 small text-light">I'm talking about large scale environments where cluster management is separated from application management. Or do they have to come to the platform engineering team to handle that for them.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-28">
-                <a href="https://netflixtechblog.com/scaling-camera-file-processing-at-netflix-6dab2b1e80be?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling Camera File Processing at Netflix
-                </a>
-                <p class="mb-1 small text-light">Their FilmLight API (FLAPI) allows us to use that same media processing engine as a backend API. Within that ecosystem, the FilmLight API plays the following key roles.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-28">
-                <a href="https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Stop Answering the Same Question Twice: Interval-Aware Caching for Druid at Netflix Scale
-                </a>
-                <p class="mb-1 small text-light">But this massive scale introduced a new challenge: queries. The ProblemOur internal dashboards are heavily used for real-time monitoring, especially during high-profile live shows or global launches.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-28">
-                <a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-principles-that-still-matter/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Cloud Cost Optimization: Principles that still matter
-                </a>
-                <p class="mb-1 small text-light">It requires continuous attention as environments evolve, workloads change, and new services are introduced. How AI workloads change traditional cost optimization AI workloads introduce new cost dynamics that can challenge traditional cloud cost optimization approaches.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-28">
-                <a href="https://azure.microsoft.com/en-us/blog/optimize-object-storage-costs-automatically-with-smart-tier-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Optimize object storage costs automatically with smart tier—now generally available
-                </a>
-                <p class="mb-1 small text-light">By intelligently placing data in the most cost‑effective tier based on actual usage patterns, smart tier allows us to optimize storage spend without sacrificing performance. Moving existing objects into smart tier does not incur tier-change fees; a monitoring fee covers the orchestration.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-28">
-                <a href="https://www.docker.com/blog/why-we-chose-the-harder-path-docker-hardened-images-one-year-later/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Why We Chose the Harder Path: Docker Hardened Images, One Year Later
-                </a>
-                <p class="mb-1 small text-light">The hardened image that never gets adopted provides zero security value, full stop. Docker’s security team evaluates exploitability in the context of each minimal container image and publishes every assessment transparently.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-28">
-                <a href="https://www.docker.com/blog/how-to-analyze-hugging-face-for-arm64-readiness/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] How to Analyze Hugging Face for Arm64 Readiness
-                </a>
-                <p class="mb-1 small text-light">Target Hardware Why it matters Cloud AWS Graviton, Azure Cobalt, Google Axion 20-40% cost reduction vs. The application source code itself returns 0 architecture issues — no x86 intrinsics, no platform-specific system calls.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-28">
-                <a href="https://www.redhat.com/en/blog/redefining-security-data-red-hats-new-vex-experience-heading-red-hat-summit-2026" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Redefining security data: Red Hat’s new VEX experience heading to Red Hat Summit 2026
-                </a>
-                <p class="mb-1 small text-light">Security data is only as good as its usability. We are modernizing and transforming our formats to improve clarity and simplify integration for the entire security ec.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-28">
-                <a href="https://www.redhat.com/en/blog/lab-ledger-scaling-enterprise-ai-red-hat-summit-2026" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] From lab to ledger: Scaling enterprise AI at Red Hat Summit 2026
-                </a>
-                <p class="mb-1 small text-light">Enterprise AI has officially moved past the "can we build it. At Red Hat Summit 2026, you'll be able to dive deep into technical architecture, partner integrations, and other topics through our AI session builder.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-28">
-                <a href="https://www.redhat.com/en/blog/when-less-more-why-less-precision-and-fewer-parameters-carry-enterprise-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] When less is more: Why less precision and fewer parameters carry enterprise AI
-                </a>
-                <p class="mb-1 small text-light">Running Llama 70B as an on-demand cloud inference endpoint costs roughly $16,000 per month. For teams where an 8B model meets the quality bar for their workload, that gap is very hard to ignore.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-04-28">
-                <a href="https://about.gitlab.com/blog/give-your-ai-agent-direct-structured-gitlab-access-with-glab-cli/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Give your AI agent direct, structured GitLab access with glab CLI
+                <a href="https://about.gitlab.com/blog/gitlab-amazon-platform-orchestration-on-a-trusted-ai-foundation/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab + Amazon: Platform orchestration on a trusted AI foundation
                 </a>
-                <p class="mb-1 small text-light">The problem is that without the right tools, AI agents are essentially guessing when it comes to your GitLab projects. new_path' # Then fetch only the specific file your agent needs glab api "/projects/$CI_PROJECT_ID/merge_requests/$CI_MERGE_REQUEST_IID/diffs.</p>
+                <p class="mb-1 small text-light">If your team runs GitLab and has a strong AWS practice, a new combination of Duo Agent Platform and Amazon Bedrock is just for you. Choosing your deployment pathThe integration delivers the same core GitLab Duo Agent Platform capabilities regardless of how it is deployed.</p>
                 <small class="text-secondary">
                     
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-04-28">
-                <a href="https://blog.sentry.io/observability-with-tracing-channels/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] No more monkey-patching: Better observability with tracing channels
-                </a>
-                <p class="mb-1 small text-light">To be able to observe what's going on in production, application developers reach out for Application Performance Monitoring (APM) tools like Sentry. In these cases, Sentry and OpenTelemetry can write plug-ins that emit observability data.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-04-28">
-                <a href="https://blog.sentry.io/debugging-multi-agent-ai-when-the-failure-is-in-the-space-between-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Debugging multi-agent AI: When the failure is in the space between agents
-                </a>
-                <p class="mb-1 small text-light">send_default_pii=True is what enables prompt and response capture in spans, which is essential for debugging the handoff problems described above. A slow web_search tool might be caused by rate limiting from an upstream API, not an agent issue.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-04-28">
-                <a href="https://snyk.io/blog/future-snyk-secrets/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Hardcoding Security into Every Commit: The Future of Snyk Secrets
-                </a>
-                <p class="mb-1 small text-light">Snyk Secrets bridges the gap between code and credentials with real-time, high-precision detection, ensuring your most sensitive data stays hidden while your developers stay fast.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-28">
-                <a href="https://kubernetes.io/blog/2026/04/27/kubernetes-v1-36-mutable-pod-resources-for-suspended-jobs/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36: Mutable Pod Resources for Suspended Jobs (beta)
-                </a>
-                <p class="mb-1 small text-light">How it works The Kubernetes API server relaxes the immutability constraint on pod template resource fields specifically for suspended Jobs. No new API types have been introduced; the existing Job and pod template structures accommodate the change through relaxed validation.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-28">
-                <a href="https://kubernetes.io/blog/2026/04/23/kubernetes-v1-36-userns-ga/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36: User Namespaces in Kubernetes are finally GA
-                </a>
-                <p class="mb-1 small text-light">This feature also enables a critical pattern: running workloads with privileges and still being confined in the user namespace. This effectively enables new use cases that were not possible before without running a fully privileged container.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-28">
-                <a href="https://www.cncf.io/blog/2026/04/21/auto-diagnosing-kubernetes-alerts-with-holmesgpt-and-cncf-tools/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Auto-diagnosing Kubernetes alerts with HolmesGPT and CNCF tools
-                </a>
-                <p class="mb-1 small text-light">We’ve got the full observability stack in place: OpenTelemetry feeding into Mimir, Loki, and Tempo. Then we tried managed APIs through VPC endpoints, which keeps cluster data inside our infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-28">
-                <a href="https://blog.cloudflare.com/past-bots-and-humans/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Moving past bots vs. humans
-                </a>
-                <p class="mb-1 small text-light">OpenAI, Google, Cloudflare, or AWS, for example, sign requests originating from their platforms. Privacy Pass has scaled to billions of tokens per day across Cloudflare’s infrastructure, primarily for privacy relay services.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
+                    GitLab | 2026-04-28
                     
                 </small>
             </li>
@@ -370,7 +147,7 @@
                 <p class="mb-1 small text-light">The KubeletFineGrainedAuthz feature gate was introduced as an opt-in alpha feature in Kubernetes v1.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-04-28
                     
                 </small>
             </li>
@@ -382,7 +159,7 @@
                 <p class="mb-1 small text-light">The combination of: k0s (lightweight Kubernetes) k0rdent (multi-cluster orchestration) OpenStack (private cloud infrastructure) creates a powerful platform engineering stack.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-04-28
                     
                 </small>
             </li>
@@ -394,19 +171,259 @@
                 <p class="mb-1 small text-light">The new platform tension Platform teams have always had two jobs that pull in opposite directions. The Automation API lets you build higher-order orchestration on the same primitives your developers already use.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-28">
+                <a href="https://kubernetes.io/blog/2026/04/27/kubernetes-v1-36-mutable-pod-resources-for-suspended-jobs/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Mutable Pod Resources for Suspended Jobs (beta)
+                </a>
+                <p class="mb-1 small text-light">How it works The Kubernetes API server relaxes the immutability constraint on pod template resource fields specifically for suspended Jobs. No new API types have been introduced; the existing Job and pod template structures accommodate the change through relaxed validation.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-28">
+                <a href="https://kubernetes.io/blog/2026/04/23/kubernetes-v1-36-userns-ga/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: User Namespaces in Kubernetes are finally GA
+                </a>
+                <p class="mb-1 small text-light">This feature also enables a critical pattern: running workloads with privileges and still being confined in the user namespace. This effectively enables new use cases that were not possible before without running a fully privileged container.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-28">
+                <a href="https://www.cncf.io/blog/2026/04/21/auto-diagnosing-kubernetes-alerts-with-holmesgpt-and-cncf-tools/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Auto-diagnosing Kubernetes alerts with HolmesGPT and CNCF tools
+                </a>
+                <p class="mb-1 small text-light">We’ve got the full observability stack in place: OpenTelemetry feeding into Mimir, Loki, and Tempo. Then we tried managed APIs through VPC endpoints, which keeps cluster data inside our infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-28">
+                <a href="https://blog.cloudflare.com/past-bots-and-humans/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Moving past bots vs. humans
+                </a>
+                <p class="mb-1 small text-light">OpenAI, Google, Cloudflare, or AWS, for example, sign requests originating from their platforms. Privacy Pass has scaled to billions of tokens per day across Cloudflare’s infrastructure, primarily for privacy relay services.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-28">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1sxv214/wmi_cloud_wipe_repair_windows_on_wiping/" target="_blank" class="fw-bold text-decoration-none">
+                    WMI Cloud Wipe - Repair Windows on Wiping
+                </a>
+                <p class="mb-1 small text-light">Hi, I was wondering if anyone got the cloud wipe calling by WMI working. exe" FeaturedResetPC from a system cmd failed, or better said, Windows does not allow to call it, event with serviceui.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-28">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1sx4fn8/need_help_revamping_a_poorly_managed/" target="_blank" class="fw-bold text-decoration-none">
+                    Need help revamping a poorly managed infrastructure as a student
+                </a>
+                <p class="mb-1 small text-light">What they dont know is how often it is getting backed up to the cloud. Any help, solutions, or tips, would be highly appreciated My initial instinct is to set up network firewall,.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-28">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1sxtue9/container_security_looked_clean_in_the/" target="_blank" class="fw-bold text-decoration-none">
+                    Container security looked clean in the scanner.Anyone else finding runtime tells a different story?
+                </a>
+                <p class="mb-1 small text-light">Someone on our platform team set up Falco last month mostly out of curiosity, not a real initiative. Shell process turned out to be a debug container someone left attached to a pod 6 weeks ago.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-28">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1sur05b/for_platform_engineering_teams_with_large_scale/" target="_blank" class="fw-bold text-decoration-none">
+                    For platform engineering teams with large scale environments, how are you managing operators in your environment? I have some questions.
+                </a>
+                <p class="mb-1 small text-light">I'm talking about large scale environments where cluster management is separated from application management. Or do they have to come to the platform engineering team to handle that for them.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-28">
+                <a href="https://netflixtechblog.com/scaling-camera-file-processing-at-netflix-6dab2b1e80be?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling Camera File Processing at Netflix
+                </a>
+                <p class="mb-1 small text-light">Their FilmLight API (FLAPI) allows us to use that same media processing engine as a backend API. Within that ecosystem, the FilmLight API plays the following key roles.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-28">
+                <a href="https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Stop Answering the Same Question Twice: Interval-Aware Caching for Druid at Netflix Scale
+                </a>
+                <p class="mb-1 small text-light">But this massive scale introduced a new challenge: queries. The ProblemOur internal dashboards are heavily used for real-time monitoring, especially during high-profile live shows or global launches.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-28">
+                <a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-principles-that-still-matter/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Cloud Cost Optimization: Principles that still matter
+                </a>
+                <p class="mb-1 small text-light">It requires continuous attention as environments evolve, workloads change, and new services are introduced. How AI workloads change traditional cost optimization AI workloads introduce new cost dynamics that can challenge traditional cloud cost optimization approaches.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-28">
+                <a href="https://azure.microsoft.com/en-us/blog/optimize-object-storage-costs-automatically-with-smart-tier-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Optimize object storage costs automatically with smart tier—now generally available
+                </a>
+                <p class="mb-1 small text-light">By intelligently placing data in the most cost‑effective tier based on actual usage patterns, smart tier allows us to optimize storage spend without sacrificing performance. Moving existing objects into smart tier does not incur tier-change fees; a monitoring fee covers the orchestration.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-28">
+                <a href="https://www.docker.com/blog/why-we-chose-the-harder-path-docker-hardened-images-one-year-later/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Why We Chose the Harder Path: Docker Hardened Images, One Year Later
+                </a>
+                <p class="mb-1 small text-light">The hardened image that never gets adopted provides zero security value, full stop. Docker’s security team evaluates exploitability in the context of each minimal container image and publishes every assessment transparently.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-28">
+                <a href="https://www.docker.com/blog/how-to-analyze-hugging-face-for-arm64-readiness/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] How to Analyze Hugging Face for Arm64 Readiness
+                </a>
+                <p class="mb-1 small text-light">Target Hardware Why it matters Cloud AWS Graviton, Azure Cobalt, Google Axion 20-40% cost reduction vs. The application source code itself returns 0 architecture issues — no x86 intrinsics, no platform-specific system calls.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-28">
+                <a href="https://www.redhat.com/en/blog/redefining-security-data-red-hats-new-vex-experience-heading-red-hat-summit-2026" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Redefining security data: Red Hat’s new VEX experience heading to Red Hat Summit 2026
+                </a>
+                <p class="mb-1 small text-light">Security data is only as good as its usability. We are modernizing and transforming our formats to improve clarity and simplify integration for the entire security ec.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-28">
+                <a href="https://www.redhat.com/en/blog/lab-ledger-scaling-enterprise-ai-red-hat-summit-2026" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] From lab to ledger: Scaling enterprise AI at Red Hat Summit 2026
+                </a>
+                <p class="mb-1 small text-light">Enterprise AI has officially moved past the "can we build it. At Red Hat Summit 2026, you'll be able to dive deep into technical architecture, partner integrations, and other topics through our AI session builder.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-28">
+                <a href="https://www.redhat.com/en/blog/when-less-more-why-less-precision-and-fewer-parameters-carry-enterprise-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] When less is more: Why less precision and fewer parameters carry enterprise AI
+                </a>
+                <p class="mb-1 small text-light">Running Llama 70B as an on-demand cloud inference endpoint costs roughly $16,000 per month. For teams where an 8B model meets the quality bar for their workload, that gap is very hard to ignore.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-04-28
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-04-28">
-                <a href="https://about.gitlab.com/blog/gitlab-amazon-platform-orchestration-on-a-trusted-ai-foundation/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab + Amazon: Platform orchestration on a trusted AI foundation
+                <a href="https://about.gitlab.com/blog/give-your-ai-agent-direct-structured-gitlab-access-with-glab-cli/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Give your AI agent direct, structured GitLab access with glab CLI
                 </a>
-                <p class="mb-1 small text-light">If your team runs GitLab and has a strong AWS practice, a new combination of Duo Agent Platform and Amazon Bedrock is just for you. Choosing your deployment pathThe integration delivers the same core GitLab Duo Agent Platform capabilities regardless of how it is deployed.</p>
+                <p class="mb-1 small text-light">The problem is that without the right tools, AI agents are essentially guessing when it comes to your GitLab projects. new_path' # Then fetch only the specific file your agent needs glab api "/projects/$CI_PROJECT_ID/merge_requests/$CI_MERGE_REQUEST_IID/diffs.</p>
                 <small class="text-secondary">
                     
-                    GitLab
+                    GitLab | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-04-28">
+                <a href="https://blog.sentry.io/observability-with-tracing-channels/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] No more monkey-patching: Better observability with tracing channels
+                </a>
+                <p class="mb-1 small text-light">To be able to observe what's going on in production, application developers reach out for Application Performance Monitoring (APM) tools like Sentry. In these cases, Sentry and OpenTelemetry can write plug-ins that emit observability data.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-04-28">
+                <a href="https://blog.sentry.io/debugging-multi-agent-ai-when-the-failure-is-in-the-space-between-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Debugging multi-agent AI: When the failure is in the space between agents
+                </a>
+                <p class="mb-1 small text-light">send_default_pii=True is what enables prompt and response capture in spans, which is essential for debugging the handoff problems described above. A slow web_search tool might be caused by rate limiting from an upstream API, not an agent issue.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-04-28
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-04-28">
+                <a href="https://snyk.io/blog/future-snyk-secrets/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Hardcoding Security into Every Commit: The Future of Snyk Secrets
+                </a>
+                <p class="mb-1 small text-light">Snyk Secrets bridges the gap between code and credentials with real-time, high-precision detection, ensuring your most sensitive data stays hidden while your developers stay fast.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-04-28
                     
                 </small>
             </li>

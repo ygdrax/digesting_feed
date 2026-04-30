@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - April 30, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - April 30, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for April 30, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-04-30">2026-04-30 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-04-30 08:49:24
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -112,289 +129,13 @@
         <ul class="list-group" id="articleList">
             
             <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
-                <a href="https://www.reddit.com/r/devops/comments/1syvzui/backend_dev_trying_to_move_into_clouddevops/" target="_blank" class="fw-bold text-decoration-none">
-                    Backend dev trying to move into cloud/DevOps, anyone done this without direct experience in the role?
-                </a>
-                <p class="mb-1 small text-light">So I've been working as a full-stack dev for about two years, mostly backend stuff. Right now I'm studying for the AWS Developer Associate cert and messing around with Terraform and CI/CD on my own time.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
-                <a href="https://www.reddit.com/r/devops/comments/1syyut2/update_on_the_cloud_waste_scanner_i_posted_about/" target="_blank" class="fw-bold text-decoration-none">
-                    Update on the cloud waste scanner I posted about last month - added AI/ML rules across AWS, Azure, and GCP
-                </a>
-                <p class="mb-1 small text-light">Wanted to post an update since the scope has changed quite a bit.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1szblvq/anyone_else_getting_tired_of_explaining_why_we/" target="_blank" class="fw-bold text-decoration-none">
-                    anyone else getting tired of explaining why we can't just use cloud for everything
-                </a>
-                <p class="mb-1 small text-light">had three meetings this week where management suggested moving our entire on-prem infrastructure to aws because 'it would be simpler and cheaper' submitted by /u/Sroni4967</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1szn6p1/we_tested_copy_fail_in_kubernetes_runtimedefault/" target="_blank" class="fw-bold text-decoration-none">
-                    We tested Copy Fail in Kubernetes: RuntimeDefault seccomp still allowed AF_ALG from pods
-                </a>
-                <p class="mb-1 small text-light">That matters for Kubernetes because pods share the host kernel. sh/blog/we-tested-copy-fail-in-kubernetes-pss-restricted-runtime-default-af-alg Disclosure: I work on Juliet, a Kubernetes security vendor.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-30">
-                <a href="https://netflixtechblog.com/evaluating-netflix-show-synopses-with-llm-as-a-judge-6269251e6f28?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Evaluating Netflix Show Synopses with LLM-as-a-Judge
-                </a>
-                <p class="mb-1 small text-light">Longer rationales improve performance but degrade human-readability, which is problematic given that explanations are key pieces of evidence for creative experts.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-30">
-                <a href="https://azure.microsoft.com/en-us/blog/introducing-azure-accelerate-for-databases-modernize-your-data-for-ai-with-experts-and-investments/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Introducing Azure Accelerate for Databases: Modernize your data for AI with experts and investments
-                </a>
-                <p class="mb-1 small text-light">Running on Azure has helped improve application performance and scalability for 7,000 tax firms and 70,000 users. With a modern, fully-managed platform in place, Thomson Reuters is now better positioned to scale services and support continued innovation.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-04-30">
-                <a href="https://aws.amazon.com/blogs/aws/aws-interconnect-is-now-generally-available-with-a-new-option-to-simplify-last-mile-connectivity/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Interconnect is now generally available, with a new option to simplify last-mile connectivity
-                </a>
-                <p class="mb-1 small text-light">For monitoring, AWS Interconnect – multicloud integrates with Amazon CloudWatch. Then, I open a Terminal and type: gcloud network-connectivity transports create aws-news-blog \ --region=europe-west3 \ --activation-key=${ACTIVATION_KEY} \ --network=default \ --advertised-routes=10.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-04-30">
-                <a href="https://www.hashicorp.com/blog/bridging-the-trust-gap-unified-public-ca-orchestration-with-ibm-vault" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Bridging the trust gap: Unified public CA orchestration with IBM Vault
-                </a>
-                <p class="mb-1 small text-light">However, when a service requires a certificate trusted by external browsers or public networks, the automation stops. This feature allows your development teams to request publicly trusted certificates using the same Vault APIs and workflows they already use for private ones.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-30">
-                <a href="https://kubernetes.io/blog/2026/04/29/kubernetes-v1-36-memory-qos-tiered-protection/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36: Tiered Memory Protection with Memory QoS
-                </a>
-                <p class="mb-1 small text-light">On behalf of SIG Node, we are pleased to announce updates to the Memory QoS feature (alpha) in Kubernetes v1.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-30">
-                <a href="https://www.cncf.io/blog/2026/04/29/the-state-of-ai-in-cncf-projects-a-first-look-at-the-data/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] The state of AI in CNCF projects: A first look at the data
-                </a>
-                <p class="mb-1 small text-light">The vast majority of participants are code-centric contributors focusing on submission, CI/CD, and infrastructure, while approximately 20% combine engineering with critical roles like release management and documentation.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-30">
-                <a href="https://www.cncf.io/blog/2026/04/23/from-ingress-nginx-to-higress-migrating-60-resources-in-30-minutes-with-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] From Ingress NGINX to Higress: migrating 60+ resources in 30 minutes with AI
-                </a>
-                <p class="mb-1 small text-light">Remaining on a retired controller leaves critical infrastructure vulnerable to unpatched security risks. Zero-Downtime Reliability: Leveraging Envoy’s xDS protocol, Higress allows for configuration updates in milliseconds.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-30">
-                <a href="https://www.cncf.io/blog/2026/04/20/from-public-static-void-main-to-golden-kubestronaut-the-art-of-unlearning/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] From public static void main to Golden Kubestronaut: The Art of unlearning
-                </a>
-                <p class="mb-1 small text-light">I’m writing this because the journey from developer to cloud-native architect nearly broke me. Kubernetes doesn’t just run containers; it restarts them when they crash, automatically, without waking you up.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-30">
-                <a href="https://blog.cloudflare.com/agents-week-in-review/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Building the agentic cloud: everything we launched during Agents Week 2026
-                </a>
-                <p class="mb-1 small text-light">This allows developers to inject credentials and enforce dynamic security policies without exposing sensitive tokens to untrusted code. This enables developers to build platforms that run persistent, stateful code generated on-the-fly.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-04-30">
-                <a href="https://www.pulumi.com/blog/bitbucket-vcs-integration/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Bitbucket Cloud Meets Pulumi Cloud
-                </a>
-                <p class="mb-1 small text-light">Pulumi Cloud now supports Bitbucket Cloud as a first-class VCS integration, joining GitHub, GitLab, and Azure DevOps. Configure path filters so only relevant file changes trigger deployments, and manage environment variables and secrets directly in Pulumi Cloud.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1szajkx/copy_fail_cve202631431_is_a_trivially_exploitable/" target="_blank" class="fw-bold text-decoration-none">
-                    Copy Fail (CVE-2026-31431) is a trivially exploitable logic bug in Linux, reachable on all major distros released in the last 9 years. A small, portable python script gets root on all platforms.
-                </a>
-                <p class="mb-1 small text-light">fail/ 10 lines of python to gain root access on shared machines running Linux kernels from 2017 onward: https://github. com/theori-io/copy-fail-CVE-2026-31431 Edit: for those that want an un-minimized version: https://gist.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1sz4e3n/what_we_dont_talk_about_when_we_talk_about_ai_and/" target="_blank" class="fw-bold text-decoration-none">
-                    What We Don't Talk About When We Talk About AI and Security by Kubernetes AI Gateway WG co-leads
-                </a>
-                <p class="mb-1 small text-light">A fireside chat with Kubernetes AI Gateway WG co-leads Morgan Foster and Keith Mattix. Together they'll dig into what the Kubernetes ecosystem is missing and where the gaps are most dangerous.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1sz44qv/built_a_productiongrade_kubernetes_cluster_on/" target="_blank" class="fw-bold text-decoration-none">
-                    Built a production-grade Kubernetes cluster on Hetzner Cloud using Talos Linux — from scratch.
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/nitish_webheel</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-30">
-                <a href="https://azure.microsoft.com/en-us/blog/openais-gpt-5-5-in-microsoft-foundry-frontier-intelligence-on-an-enterprise-ready-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] OpenAI’s GPT-5.5 in Microsoft Foundry: Frontier intelligence on an enterprise ready platform
-                </a>
-                <p class="mb-1 small text-light">Microsoft Foundry provides the platform layer that turns frontier models into usable, governable systems that enable enterprises to apply security policy and management at the platform level.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-30">
-                <a href="https://www.docker.com/blog/trivy-kics-and-the-shape-of-supply-chain-attacks-so-far-in-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Trivy, KICS, and the shape of supply chain attacks so far in 2026
-                </a>
-                <p class="mb-1 small text-light">In both cases, Docker’s infrastructure was not breached. Because KICS scans Terraform, CloudFormation, Kubernetes and similar configuration files, its output routinely contains secrets, credentials, cloud resource names, and internal topology.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-30">
-                <a href="https://www.docker.com/blog/reclaim-developer-hours-through-smarter-vulnerability-prioritization-with-docker-and-mend-io/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Reclaim Developer Hours through Smarter Vulnerability Prioritization with Docker and Mend.io
-                </a>
-                <p class="mb-1 small text-light">io and Docker Hardened Images (DHI) provides a seamless framework for managing container security. io incorporates Docker’s VEX (Vulnerability Exploitability eXchange) data as a primary source of “Risk Factor” identification.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-30">
-                <a href="https://www.redhat.com/en/blog/definitive-automation-guide-red-hat-summit-2026-must-attend-red-hat-ansible-automation-platform-sessions-talks-and-labs" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] The definitive automation guide to Red Hat Summit 2026: Must-attend Red Hat Ansible Automation Platform sessions, talks, and labs
-                </a>
-                <p class="mb-1 small text-light">In this environment, automation is no longer optional—it’s the foundation that makes everything else possible. With nearly 100 sessions, talks, and hands-on labs featuring real-world customer transformations, building the perfect agenda can feel overwhelming.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-04-30">
-                <a href="https://engineering.fb.com/2026/04/08/security/trust-but-canary-configuration-safety-at-scale-meta-tech-podcast/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Trust But Canary: Configuration Safety at Scale
-                </a>
-                <p class="mb-1 small text-light">As AI increases developer speed and productivity it also increases the need for safeguards. Send us feedback on Instagram, Threads, or X.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-30">
-                <a href="https://blog.cloudflare.com/agents-stripe-projects/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Agents can now create Cloudflare accounts, buy domains, and deploy
-                </a>
-                <p class="mb-1 small text-light">They’re given higher-order problems to solve and choose to use Cloudflare and call Cloudflare APIs. Without any extra setup, agents have everything they need to deploy a new production application in one shot.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
                 <a href="https://www.reddit.com/r/devops/comments/1szht3d/why_infrastructure_engineers_dealing_with_aiml/" target="_blank" class="fw-bold text-decoration-none">
                     Why: Infrastructure engineers dealing with AI/ML deployment pain
                 </a>
                 <p class="mb-1 small text-light">Because the infrastructure wasn't designed for agents. Here's what I learned: The Problem: Traditional DevOps assumes deterministic behavior run the same test twice, get the same result.</p>
                 <small class="text-secondary">
                     
-                    Reddit
+                    Reddit | 2026-04-30
                     
                 </small>
             </li>
@@ -406,7 +147,283 @@
                 <p class="mb-1 small text-light">This post pulls back the curtain on the Live Operations teams that enable this rapid scale. Building the Human Infrastructure: Building the human operational model to run a facility like the BOC didn’t happen overnight.</p>
                 <small class="text-secondary">
                     
-                    Netflix
+                    Netflix | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-30">
+                <a href="https://blog.cloudflare.com/agents-stripe-projects/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Agents can now create Cloudflare accounts, buy domains, and deploy
+                </a>
+                <p class="mb-1 small text-light">They’re given higher-order problems to solve and choose to use Cloudflare and call Cloudflare APIs. Without any extra setup, agents have everything they need to deploy a new production application in one shot.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1szajkx/copy_fail_cve202631431_is_a_trivially_exploitable/" target="_blank" class="fw-bold text-decoration-none">
+                    Copy Fail (CVE-2026-31431) is a trivially exploitable logic bug in Linux, reachable on all major distros released in the last 9 years. A small, portable python script gets root on all platforms.
+                </a>
+                <p class="mb-1 small text-light">fail/ 10 lines of python to gain root access on shared machines running Linux kernels from 2017 onward: https://github. com/theori-io/copy-fail-CVE-2026-31431 Edit: for those that want an un-minimized version: https://gist.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1sz4e3n/what_we_dont_talk_about_when_we_talk_about_ai_and/" target="_blank" class="fw-bold text-decoration-none">
+                    What We Don't Talk About When We Talk About AI and Security by Kubernetes AI Gateway WG co-leads
+                </a>
+                <p class="mb-1 small text-light">A fireside chat with Kubernetes AI Gateway WG co-leads Morgan Foster and Keith Mattix. Together they'll dig into what the Kubernetes ecosystem is missing and where the gaps are most dangerous.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1sz44qv/built_a_productiongrade_kubernetes_cluster_on/" target="_blank" class="fw-bold text-decoration-none">
+                    Built a production-grade Kubernetes cluster on Hetzner Cloud using Talos Linux — from scratch.
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/nitish_webheel</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-30">
+                <a href="https://azure.microsoft.com/en-us/blog/openais-gpt-5-5-in-microsoft-foundry-frontier-intelligence-on-an-enterprise-ready-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] OpenAI’s GPT-5.5 in Microsoft Foundry: Frontier intelligence on an enterprise ready platform
+                </a>
+                <p class="mb-1 small text-light">Microsoft Foundry provides the platform layer that turns frontier models into usable, governable systems that enable enterprises to apply security policy and management at the platform level.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-30">
+                <a href="https://www.docker.com/blog/trivy-kics-and-the-shape-of-supply-chain-attacks-so-far-in-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Trivy, KICS, and the shape of supply chain attacks so far in 2026
+                </a>
+                <p class="mb-1 small text-light">In both cases, Docker’s infrastructure was not breached. Because KICS scans Terraform, CloudFormation, Kubernetes and similar configuration files, its output routinely contains secrets, credentials, cloud resource names, and internal topology.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-04-30">
+                <a href="https://www.docker.com/blog/reclaim-developer-hours-through-smarter-vulnerability-prioritization-with-docker-and-mend-io/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Reclaim Developer Hours through Smarter Vulnerability Prioritization with Docker and Mend.io
+                </a>
+                <p class="mb-1 small text-light">io and Docker Hardened Images (DHI) provides a seamless framework for managing container security. io incorporates Docker’s VEX (Vulnerability Exploitability eXchange) data as a primary source of “Risk Factor” identification.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-04-30">
+                <a href="https://www.redhat.com/en/blog/definitive-automation-guide-red-hat-summit-2026-must-attend-red-hat-ansible-automation-platform-sessions-talks-and-labs" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] The definitive automation guide to Red Hat Summit 2026: Must-attend Red Hat Ansible Automation Platform sessions, talks, and labs
+                </a>
+                <p class="mb-1 small text-light">In this environment, automation is no longer optional—it’s the foundation that makes everything else possible. With nearly 100 sessions, talks, and hands-on labs featuring real-world customer transformations, building the perfect agenda can feel overwhelming.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-04-30">
+                <a href="https://engineering.fb.com/2026/04/08/security/trust-but-canary-configuration-safety-at-scale-meta-tech-podcast/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Trust But Canary: Configuration Safety at Scale
+                </a>
+                <p class="mb-1 small text-light">As AI increases developer speed and productivity it also increases the need for safeguards. Send us feedback on Instagram, Threads, or X.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-04-30">
+                <a href="https://aws.amazon.com/blogs/aws/aws-interconnect-is-now-generally-available-with-a-new-option-to-simplify-last-mile-connectivity/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Interconnect is now generally available, with a new option to simplify last-mile connectivity
+                </a>
+                <p class="mb-1 small text-light">For monitoring, AWS Interconnect – multicloud integrates with Amazon CloudWatch. Then, I open a Terminal and type: gcloud network-connectivity transports create aws-news-blog \ --region=europe-west3 \ --activation-key=${ACTIVATION_KEY} \ --network=default \ --advertised-routes=10.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-04-30">
+                <a href="https://www.hashicorp.com/blog/bridging-the-trust-gap-unified-public-ca-orchestration-with-ibm-vault" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Bridging the trust gap: Unified public CA orchestration with IBM Vault
+                </a>
+                <p class="mb-1 small text-light">However, when a service requires a certificate trusted by external browsers or public networks, the automation stops. This feature allows your development teams to request publicly trusted certificates using the same Vault APIs and workflows they already use for private ones.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-04-30">
+                <a href="https://kubernetes.io/blog/2026/04/29/kubernetes-v1-36-memory-qos-tiered-protection/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Tiered Memory Protection with Memory QoS
+                </a>
+                <p class="mb-1 small text-light">On behalf of SIG Node, we are pleased to announce updates to the Memory QoS feature (alpha) in Kubernetes v1.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-30">
+                <a href="https://www.cncf.io/blog/2026/04/29/the-state-of-ai-in-cncf-projects-a-first-look-at-the-data/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] The state of AI in CNCF projects: A first look at the data
+                </a>
+                <p class="mb-1 small text-light">The vast majority of participants are code-centric contributors focusing on submission, CI/CD, and infrastructure, while approximately 20% combine engineering with critical roles like release management and documentation.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-30">
+                <a href="https://www.cncf.io/blog/2026/04/23/from-ingress-nginx-to-higress-migrating-60-resources-in-30-minutes-with-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] From Ingress NGINX to Higress: migrating 60+ resources in 30 minutes with AI
+                </a>
+                <p class="mb-1 small text-light">Remaining on a retired controller leaves critical infrastructure vulnerable to unpatched security risks. Zero-Downtime Reliability: Leveraging Envoy’s xDS protocol, Higress allows for configuration updates in milliseconds.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-04-30">
+                <a href="https://www.cncf.io/blog/2026/04/20/from-public-static-void-main-to-golden-kubestronaut-the-art-of-unlearning/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] From public static void main to Golden Kubestronaut: The Art of unlearning
+                </a>
+                <p class="mb-1 small text-light">I’m writing this because the journey from developer to cloud-native architect nearly broke me. Kubernetes doesn’t just run containers; it restarts them when they crash, automatically, without waking you up.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-04-30">
+                <a href="https://blog.cloudflare.com/agents-week-in-review/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Building the agentic cloud: everything we launched during Agents Week 2026
+                </a>
+                <p class="mb-1 small text-light">This allows developers to inject credentials and enforce dynamic security policies without exposing sensitive tokens to untrusted code. This enables developers to build platforms that run persistent, stateful code generated on-the-fly.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-04-30">
+                <a href="https://www.pulumi.com/blog/bitbucket-vcs-integration/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Bitbucket Cloud Meets Pulumi Cloud
+                </a>
+                <p class="mb-1 small text-light">Pulumi Cloud now supports Bitbucket Cloud as a first-class VCS integration, joining GitHub, GitLab, and Azure DevOps. Configure path filters so only relevant file changes trigger deployments, and manage environment variables and secrets directly in Pulumi Cloud.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
+                <a href="https://www.reddit.com/r/devops/comments/1syvzui/backend_dev_trying_to_move_into_clouddevops/" target="_blank" class="fw-bold text-decoration-none">
+                    Backend dev trying to move into cloud/DevOps, anyone done this without direct experience in the role?
+                </a>
+                <p class="mb-1 small text-light">So I've been working as a full-stack dev for about two years, mostly backend stuff. Right now I'm studying for the AWS Developer Associate cert and messing around with Terraform and CI/CD on my own time.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
+                <a href="https://www.reddit.com/r/devops/comments/1syyut2/update_on_the_cloud_waste_scanner_i_posted_about/" target="_blank" class="fw-bold text-decoration-none">
+                    Update on the cloud waste scanner I posted about last month - added AI/ML rules across AWS, Azure, and GCP
+                </a>
+                <p class="mb-1 small text-light">Wanted to post an update since the scope has changed quite a bit.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1szblvq/anyone_else_getting_tired_of_explaining_why_we/" target="_blank" class="fw-bold text-decoration-none">
+                    anyone else getting tired of explaining why we can't just use cloud for everything
+                </a>
+                <p class="mb-1 small text-light">had three meetings this week where management suggested moving our entire on-prem infrastructure to aws because 'it would be simpler and cheaper' submitted by /u/Sroni4967</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-04-30">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1szn6p1/we_tested_copy_fail_in_kubernetes_runtimedefault/" target="_blank" class="fw-bold text-decoration-none">
+                    We tested Copy Fail in Kubernetes: RuntimeDefault seccomp still allowed AF_ALG from pods
+                </a>
+                <p class="mb-1 small text-light">That matters for Kubernetes because pods share the host kernel. sh/blog/we-tested-copy-fail-in-kubernetes-pss-restricted-runtime-default-af-alg Disclosure: I work on Juliet, a Kubernetes security vendor.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-04-30">
+                <a href="https://netflixtechblog.com/evaluating-netflix-show-synopses-with-llm-as-a-judge-6269251e6f28?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Evaluating Netflix Show Synopses with LLM-as-a-Judge
+                </a>
+                <p class="mb-1 small text-light">Longer rationales improve performance but degrade human-readability, which is problematic given that explanations are key pieces of evidence for creative experts.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-04-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-04-30">
+                <a href="https://azure.microsoft.com/en-us/blog/introducing-azure-accelerate-for-databases-modernize-your-data-for-ai-with-experts-and-investments/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Introducing Azure Accelerate for Databases: Modernize your data for AI with experts and investments
+                </a>
+                <p class="mb-1 small text-light">Running on Azure has helped improve application performance and scalability for 7,000 tax firms and 70,000 users. With a modern, fully-managed platform in place, Thomson Reuters is now better positioned to scale services and support continued innovation.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-04-30
                     
                 </small>
             </li>

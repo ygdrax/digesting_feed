@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - May 01, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - May 01, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for May 01, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-05-01">2026-05-01 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    12 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Sentry">Sentry</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-01">
+                <a href="https://www.redhat.com/en/blog/designing-multitenant-gpu-infrastructure-isolation-across-virtualization-and-kubernetes-platforms" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Designing multitenant GPU infrastructure: Isolation across virtualization and Kubernetes platforms
+                </a>
+                <p class="mb-1 small text-light">As AI workloads move from experimentation to production, enterprises are consolidating GPU infrastructure into shared platforms. This boosts overall efficiency, because underutilizing GPUs by dedicating them to individual workloads increases infrastructure cost.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-01">
+                <a href="https://kubernetes.io/blog/2026/04/24/kubernetes-v1-36-fine-grained-kubelet-authorization-ga/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Fine-Grained Kubelet API Authorization Graduates to GA
+                </a>
+                <p class="mb-1 small text-light">The KubeletFineGrainedAuthz feature gate was introduced as an opt-in alpha feature in Kubernetes v1.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-01">
+                <a href="https://www.cncf.io/blog/2026/04/30/ai-sandboxing-is-having-its-kubernetes-moment/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] AI sandboxing is having its Kubernetes moment
+                </a>
+                <p class="mb-1 small text-light">Kubernetes is the SRE moment for infrastructure – the most successful embodiment of “design for failure” ever built. And yet the security model running on this same platform is a catastrophic single point of failure.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-01">
+                <a href="https://www.cncf.io/blog/2026/04/27/kubernetes-for-platform-teams-leveraging-k0s-and-k0rdent/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Kubernetes for platform teams: Leveraging k0s and k0rdent
+                </a>
+                <p class="mb-1 small text-light">The combination of: k0s (lightweight Kubernetes) k0rdent (multi-cluster orchestration) OpenStack (private cloud infrastructure) creates a powerful platform engineering stack.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-01">
+                <a href="https://blog.cloudflare.com/post-quantum-ipsec/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Post-quantum encryption for Cloudflare IPsec is generally available
+                </a>
+                <p class="mb-1 small text-light">Earlier this month, we announced that Cloudflare has moved its target for full post-quantum security forward to 2029, spurred by several recent advances in quantum computing. To advance that goal, we’ve made post-quantum encryption in Cloudflare IPsec generally available.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-05-01">
+                <a href="https://www.pulumi.com/blog/agent-sprawl-iac-platform-is-the-answer/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Agent Sprawl Is Here. Your IaC Platform Is the Answer.
+                </a>
+                <p class="mb-1 small text-light">The new platform tension Platform teams have always had two jobs that pull in opposite directions. The Automation API lets you build higher-order orchestration on the same primitives your developers already use.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-01">
+                <a href="https://www.docker.com/blog/from-security-blocked-to-prod-ready-clickhouse-on-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] From Security Blocked to Prod Ready: ClickHouse on Docker Hardened Images
+                </a>
+                <p class="mb-1 small text-light">In November 2025, a team self-hosting Langfuse, an open-source LLM observability platform, on Kubernetes uploaded their ClickHouse image to AWS ECR as part of their production preparation.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-05-01">
+                <a href="https://www.hashicorp.com/blog/spiffe-securing-the-identity-of-agentic-ai-and-non-human-actors" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] SPIFFE: Securing the identity of agentic AI and non-human actors
+                </a>
+                <p class="mb-1 small text-light">Originally developed to help microservices authenticate securely in cloud-native environments, SPIFFE provides a way to issue and validate cryptographically verifiable identities without relying on long-lived secrets like passwords or API keys.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-01">
+                <a href="https://kubernetes.io/blog/2026/04/30/kubernetes-v1-36-inplace-pod-level-resources-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: In-Place Vertical Scaling for Pod-Level Resources Graduates to Beta
+                </a>
+                <p class="mb-1 small text-light">It allows users to update the aggregate Pod resource budget (. Disruptive Updates: If set to RestartContainer, the container will be restarted to apply the new aggregate boundary safely.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-01">
+                <a href="https://kubernetes.io/blog/2026/04/27/kubernetes-v1-36-mutable-pod-resources-for-suspended-jobs/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Mutable Pod Resources for Suspended Jobs (beta)
+                </a>
+                <p class="mb-1 small text-light">How it works The Kubernetes API server relaxes the immutability constraint on pod template resource fields specifically for suspended Jobs. No new API types have been introduced; the existing Job and pod template structures accommodate the change through relaxed validation.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-01">
+                <a href="https://www.cncf.io/blog/2026/04/21/auto-diagnosing-kubernetes-alerts-with-holmesgpt-and-cncf-tools/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Auto-diagnosing Kubernetes alerts with HolmesGPT and CNCF tools
+                </a>
+                <p class="mb-1 small text-light">We’ve got the full observability stack in place: OpenTelemetry feeding into Mimir, Loki, and Tempo. Then we tried managed APIs through VPC endpoints, which keeps cluster data inside our infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-01">
+                <a href="https://blog.cloudflare.com/past-bots-and-humans/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Moving past bots vs. humans
+                </a>
+                <p class="mb-1 small text-light">OpenAI, Google, Cloudflare, or AWS, for example, sign requests originating from their platforms. Privacy Pass has scaled to billions of tokens per day across Cloudflare’s infrastructure, primarily for privacy relay services.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-01">
+                <a href="https://www.reddit.com/r/devops/comments/1szxc2q/cloud_build_problems_1st_2nd_gen_oauth_failure/" target="_blank" class="fw-bold text-decoration-none">
+                    Cloud Build Problems (1st & 2nd Gen): OAuth Failure, Can't Read Commits, No Build Triggers
+                </a>
+                <p class="mb-1 small text-light">Hi everyone, I'm running into several issues with Google Cloud Build repositories and 2nd generation connections, and I'm hoping someone here has experienced something similar.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-01">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1szsd49/so_95_gpu_rented_sits_idle_enterprises_are_having/" target="_blank" class="fw-bold text-decoration-none">
+                    So, 95% GPU rented sits idle? Enterprises are having a real FOMO as AI usage keeps growing but just not on their platform
+                </a>
+                <p class="mb-1 small text-light">width=747&format=png&auto=webp&s=215273fe52f7e517cea62f13da78c782f5c6f562 Well, if everyone has the most idle silicon, where are the jobs. or just to keep up with big AI companies and hoping for usage while they didn't get that.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-01">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1szwbbo/copy_fail_cve202631431_kubernetes_container/" target="_blank" class="fw-bold text-decoration-none">
+                    Copy Fail (CVE-2026-31431) — Kubernetes Container Escape PoC
+                </a>
+                <p class="mb-1 small text-light">An AF_ALG splice race allows an unprivileged process to corrupt the page-cache pages of a read-only file. Kubernetes merely provides the execution context (shared image layers + privileged DaemonSets) that elevates the impact from local page-cache corruption to full container escape.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-01">
+                <a href="https://netflixtechblog.com/scaling-camera-file-processing-at-netflix-6dab2b1e80be?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling Camera File Processing at Netflix
+                </a>
+                <p class="mb-1 small text-light">Their FilmLight API (FLAPI) allows us to use that same media processing engine as a backend API. Within that ecosystem, the FilmLight API plays the following key roles.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-01">
+                <a href="https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Stop Answering the Same Question Twice: Interval-Aware Caching for Druid at Netflix Scale
+                </a>
+                <p class="mb-1 small text-light">But this massive scale introduced a new challenge: queries. The ProblemOur internal dashboards are heavily used for real-time monitoring, especially during high-profile live shows or global launches.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-01">
+                <a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-principles-that-still-matter/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Cloud Cost Optimization: Principles that still matter
+                </a>
+                <p class="mb-1 small text-light">It requires continuous attention as environments evolve, workloads change, and new services are introduced. How AI workloads change traditional cost optimization AI workloads introduce new cost dynamics that can challenge traditional cloud cost optimization approaches.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-01">
+                <a href="https://azure.microsoft.com/en-us/blog/optimize-object-storage-costs-automatically-with-smart-tier-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Optimize object storage costs automatically with smart tier—now generally available
+                </a>
+                <p class="mb-1 small text-light">By intelligently placing data in the most cost‑effective tier based on actual usage patterns, smart tier allows us to optimize storage spend without sacrificing performance. Moving existing objects into smart tier does not incur tier-change fees; a monitoring fee covers the orchestration.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-01">
+                <a href="https://www.docker.com/blog/why-microvms-the-architecture-behind-docker-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Why MicroVMs: The Architecture Behind Docker Sandboxes
+                </a>
+                <p class="mb-1 small text-light">Containers are how applications are developed, and agents need a Docker environment to do that development. Firecracker, the most well-known microVM runtime, was designed for cloud infrastructure, specifically Linux/KVM environments like AWS Lambda.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-01">
+                <a href="https://www.docker.com/blog/why-we-chose-the-harder-path-docker-hardened-images-one-year-later/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Why We Chose the Harder Path: Docker Hardened Images, One Year Later
+                </a>
+                <p class="mb-1 small text-light">The hardened image that never gets adopted provides zero security value, full stop. Docker’s security team evaluates exploitability in the context of each minimal container image and publishes every assessment transparently.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-01">
+                <a href="https://www.docker.com/blog/how-to-analyze-hugging-face-for-arm64-readiness/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] How to Analyze Hugging Face for Arm64 Readiness
+                </a>
+                <p class="mb-1 small text-light">Target Hardware Why it matters Cloud AWS Graviton, Azure Cobalt, Google Axion 20-40% cost reduction vs. The application source code itself returns 0 architecture issues — no x86 intrinsics, no platform-specific system calls.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-01">
+                <a href="https://www.redhat.com/en/blog/using-nvidia-aerial-cuda-accelerated-ran-red-hat-openshift-accelerate-development-ai-native-5g-and-6g-ran-solutions" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Using NVIDIA Aerial CUDA-Accelerated RAN on Red Hat OpenShift to accelerate development of AI-native 5G and 6G RAN solutions
+                </a>
+                <p class="mb-1 small text-light">By integrating AI with wireless infrastructure, service providers can improve network efficiency, reduce power consumption, and unlock new revenue streams through innovative edge services.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-01">
+                <a href="https://about.gitlab.com/blog/automated-detection-testing-framework/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Build an automated detection testing framework with GitLab CI/CD and Duo
+                </a>
+                <p class="mb-1 small text-light">Using WATCH with GitLab CI/CDWATCH leverages GitLab CI/CD as its orchestration backbone across three pipeline stages. CI/CD Variables securely store the API keys needed for Tines and GitLab staging access.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-05-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-05-01">
+                <a href="https://blog.sentry.io/perforce-integration-ga/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Sentry's integration with Perforce is now generally available
+                </a>
+                <p class="mb-1 small text-light">Commit tracking — Associate Perforce P4 changelists with Sentry releases so you always know exactly what code shipped. Suspect commits — Sentry automatically identifies which changelists likely introduced an error, cutting your triage time.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-05-01
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

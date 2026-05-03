@@ -70,7 +70,7 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2026-05-02 08:33:51
+                    25 articles from 13 sources • Updated 2026-05-03 08:37:26
                     
                 </span>
             </small>
@@ -82,15 +82,19 @@
             <select id="sourceFilter" class="form-select w-auto d-inline-block">
                 <option value="all">All Sources</option>
                 
+                <option value="Amazon AWS">Amazon AWS</option>
+                
                 <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
                 
                 <option value="Docker">Docker</option>
                 
-                <option value="Dropbox Tech">Dropbox Tech</option>
-                
                 <option value="Engineering at Meta">Engineering at Meta</option>
                 
-                <option value="GitLab">GitLab</option>
+                <option value="Hacker News">Hacker News</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
                 
                 <option value="Microsoft Azure">Microsoft Azure</option>
                 
@@ -102,10 +106,6 @@
                 
                 <option value="Reddit">Reddit</option>
                 
-                <option value="Slack Engineering">Slack Engineering</option>
-                
-                <option value="Snyk">Snyk</option>
-                
                 <option value="Spotify Engineering">Spotify Engineering</option>
                 
             </select>
@@ -113,11 +113,47 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-02">
-                <a href="https://www.reddit.com/r/devops/comments/1t106xt/is_building_a_docker_image_during_the_ci_pipeline/" target="_blank" class="fw-bold text-decoration-none">
-                    Is "building a Docker image" during the CI pipeline considered a best practice?
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-05-03">
+                <a href="https://acai.sh/blog/specsmaxxing" target="_blank" class="fw-bold text-decoration-none">
+                    Specsmaxxing – On overcoming AI psychosis, and why I write specs in YAML
                 </a>
-                <p class="mb-1 small text-light">I am new to DevOps and trying to better understand CI/CD best practices. Or is it considered better practice to first build a Docker image and then compile/run the tests inside that container.</p>
+                <p class="mb-1 small text-light">Article URL: https://acai.sh/blog/specsmaxxing Comments URL: https://news.ycombinator.com/item?id=47994012 Points: 61 # Comments: 36</p>
+                <small class="text-secondary">
+                    
+                    Hacker News
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-05-03">
+                <a href="https://fshot.org/techzone/the-algorithm-knows.php" target="_blank" class="fw-bold text-decoration-none">
+                    AI, Intimacy, and the Data You Never Meant to Share
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://fshot.org/techzone/the-algorithm-knows.php Comments URL: https://news.ycombinator.com/item?id=47992802 Points: 20 # Comments: 1</p>
+                <small class="text-secondary">
+                    
+                    Hacker News
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-03">
+                <a href="https://aws.amazon.com/blogs/aws/top-announcements-of-the-whats-next-with-aws-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Top announcements of the What’s Next with AWS, 2026
+                </a>
+                <p class="mb-1 small text-light">No additional infrastructure to configure, no new security model to learn. Updated on April 29th – Added a new Quick feature to build custom applications using natural language.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-03">
+                <a href="https://www.reddit.com/r/devops/comments/1t26rnm/ai_coding_tools_are_now_a_cvss_100_cicd_supply/" target="_blank" class="fw-bold text-decoration-none">
+                    AI coding tools are now a CVSS 10.0 CI/CD supply chain vector - patch Gemini CLI and update Cursor
+                </a>
+                <p class="mb-1 small text-light">0, no CVE): In headless/CI mode, it automatically trusted workspace folders for config loading - no sandboxing, no explicit consent. 2) is a separate issue: any installed extension can read an SQLite database holding API keys and session tokens.</p>
                 <small class="text-secondary">
                     
                     Reddit
@@ -125,11 +161,11 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-02">
-                <a href="https://www.reddit.com/r/devops/comments/1t0qpo8/does_it_still_worth_to_learn_iac_scripting_in_the/" target="_blank" class="fw-bold text-decoration-none">
-                    Does it still worth to learn IAC, Scripting in the era of AI?
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-03">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1szn6p1/we_tested_copy_fail_in_kubernetes_runtimedefault/" target="_blank" class="fw-bold text-decoration-none">
+                    We tested Copy Fail in Kubernetes: RuntimeDefault seccomp still allowed AF_ALG from pods
                 </a>
-                <p class="mb-1 small text-light">Hi everyone, brief overview of my background I am a junior DevOps engineer and I have the basics of scripting and IAC, but when i want to automate something i always repeatedly refer to the docs which consumes a lot of time, So I have been thinking lately about AI and its ability to generate clea...</p>
+                <p class="mb-1 small text-light">That matters for Kubernetes because pods share the host kernel. sh/blog/we-tested-copy-fail-in-kubernetes-pss-restricted-runtime-default-af-alg Disclosure: I work on Juliet, a Kubernetes security vendor.</p>
                 <small class="text-secondary">
                     
                     Reddit
@@ -137,47 +173,11 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-02">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1t14npl/windows_11_security_fix_kb5083769_breaks_causing/" target="_blank" class="fw-bold text-decoration-none">
-                    Windows 11 Security Fix KB5083769 breaks causing backup failures - VSS fails
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-03">
+                <a href="https://netflixtechblog.com/evaluating-netflix-show-synopses-with-llm-as-a-judge-6269251e6f28?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Evaluating Netflix Show Synopses with LLM-as-a-Judge
                 </a>
-                <p class="mb-1 small text-light">Microsoft Update Warning—Windows 11 Security Fix Breaks Backups (generic) Acronis Cyber Protect Cloud: Backup fails with "The backup has failed because Microsoft VSS has timed out during the snapshot creation.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-02">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1t156ed/hr_wants_a_rewards_platform_how_do_i_evaluate_the/" target="_blank" class="fw-bold text-decoration-none">
-                    HR wants a rewards platform. how do I evaluate the API and security without over-engineering it?
-                </a>
-                <p class="mb-1 small text-light">our HR team got budget for an employee recognition platform. one is a smaller platform that looks flexible but I’ve never heard of it.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-02">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1sz1211/kubernetes_v136_staleness_mitigation_and/" target="_blank" class="fw-bold text-decoration-none">
-                    Kubernetes v1.36: Staleness Mitigation and Observability for Controllers
-                </a>
-                <p class="mb-1 small text-light">My teammate Michael has been working on improving the reliability and performance of controllers at scale, check out his post about staleness mitigation on the official Kubernetes blog.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-02">
-                <a href="https://netflixtechblog.com/state-of-routing-in-model-serving-16e22fe18741?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] State of Routing in Model Serving
-                </a>
-                <p class="mb-1 small text-light">This common set of request contexts across domains enables them to share a standard API abstraction and standardizes how various client microservices can uniformly integrate with the serving app.</p>
+                <p class="mb-1 small text-light">Longer rationales improve performance but degrade human-readability, which is problematic given that explanations are key pieces of evidence for creative experts.</p>
                 <small class="text-secondary">
                     
                     Netflix
@@ -185,23 +185,11 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-02">
-                <a href="https://netflixtechblog.medium.com/predicting-risk-in-content-launches-how-data-driven-insights-can-transform-launch-planning-587b1f2de928?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Predicting Risk in Content Launches: How Data-Driven Insights can Transform Launch Planning
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-03">
+                <a href="https://azure.microsoft.com/en-us/blog/introducing-azure-accelerate-for-databases-modernize-your-data-for-ai-with-experts-and-investments/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Introducing Azure Accelerate for Databases: Modernize your data for AI with experts and investments
                 </a>
-                <p class="mb-1 small text-light">However, these schedules often have gaps in coverage and lack accuracy for both asset types (see Figure 1). This means that we have each feature and what its value was as of each day of a production.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-02">
-                <a href="https://blogs.microsoft.com/blog/2026/04/27/microsoft-sovereign-private-cloud-scales-to-thousands-of-nodes-with-azure-local/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft Sovereign Private Cloud scales to thousands of nodes with Azure Local
-                </a>
-                <p class="mb-1 small text-light">Organizations operating national infrastructure, regulated workloads or mission-critical services are navigating a fundamental shift in how cloud infrastructure must be deployed and managed.</p>
+                <p class="mb-1 small text-light">Running on Azure has helped improve application performance and scalability for 7,000 tax firms and 70,000 users. With a modern, fully-managed platform in place, Thomson Reuters is now better positioned to scale services and support continued innovation.</p>
                 <small class="text-secondary">
                     
                     Microsoft Azure
@@ -209,71 +197,11 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-02">
-                <a href="https://www.docker.com/blog/a-virtual-agent-team-at-docker-how-the-coding-agent-sandboxes-team-uses-a-fleet-of-agents-to-ship-faster/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] A Virtual Agent team at Docker: How the Coding Agent Sandboxes team uses a fleet of agents to ship faster
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-03">
+                <a href="https://engineering.atspotify.com/2026/3/inside-the-archive-2025-wrapped/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Inside the Archive: The Tech Behind Your 2025 Wrapped Highlights
                 </a>
-                <p class="mb-1 small text-light">The project provides secure, microVM-based isolation for running AI coding agents like Claude Code, Gemini, Codex, Docker Agent and Kiro. Every release needs testing across both platforms, across upgrade paths between versions, and under sustained load to catch resource leaks.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-02">
-                <a href="https://www.redhat.com/en/blog/unlocking-sovereign-ai-and-protected-collaboration-confidential-computing" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Unlocking sovereign AI and protected collaboration with confidential computing
-                </a>
-                <p class="mb-1 small text-light">There is a fundamental tension between using AI and the cloud while adhering to strict privacy mandates like digital sovereignty and sovereign AI.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-02">
-                <a href="https://about.gitlab.com/blog/gitlab-and-anthropic-governed-ai-for-enterprise-development/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab and Anthropic: Governed AI for enterprise development
-                </a>
-                <p class="mb-1 small text-light">GitLab deepens its Anthropic Claude integration so organizations get access to newly released Claude models inside GitLab’s intelligent orchestration platform where governance, compliance, and auditability already run. Your existing Google Cloud or AWS relationship is the on-ramp.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-05-02">
-                <a href="https://snyk.io/blog/bun-based-stealer-hits-sap-cap-js-mbt-npm-packages/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] "A Mini Shai-Hulud Has Appeared": Bun-Based Stealer Hits SAP @cap-js and mbt npm Packages
-                </a>
-                <p class="mb-1 small text-light">A new npm supply chain attack self-branded "Mini Shai-Hulud" compromised four SAP-ecosystem packages on April 29, 2026. Snyk has live advisories. Here's the technical breakdown, IOCs, and what to do.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-05-02">
-                <a href="https://snyk.io/blog/malicious-release-of-elementary-data-pypi-package-steals-cloud-credentials-from-data-engineers/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Malicious Release of elementary-data PyPI Package Steals Cloud Credentials from Data Engineers
-                </a>
-                <p class="mb-1 small text-light">Attackers exploited a GitHub Actions script injection vulnerability to publish a malicious version of the elementary-data Python CLI (v0.23.3), embedding a credential-stealing backdoor that targeted dbt profiles, cloud provider keys, and SSH secrets from data engineering environments.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-02">
-                <a href="https://engineering.atspotify.com/2026/5/spotify-ads-api-claude-plugins/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins
-                </a>
-                <p class="mb-1 small text-light">Turning OpenAPI spec and Markdown files into a conversational ads management tool — no compiled code required. The post Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins appeared first on Spotify Engineering.</p>
+                <p class="mb-1 small text-light">What if we could identify interesting listening moments from your year, and tell you a story about them? The post Inside the Archive: The Tech Behind Your 2025 Wrapped Highlights appeared first on Spotify Engineering.</p>
                 <small class="text-secondary">
                     
                     Spotify Engineering
@@ -281,11 +209,11 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-02">
-                <a href="https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4)
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-03">
+                <a href="https://engineering.atspotify.com/2026/2/our-multi-agent-architecture-for-smarter-advertising/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Our Multi-Agent Architecture for Smarter Advertising
                 </a>
-                <p class="mb-1 small text-light">How we used Honk, Backstage, and Fleet Management to ease the pain of migrating thousands of datasets. The post Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4) appeared first on Spotify Engineering.</p>
+                <p class="mb-1 small text-light">When we kicked this off, we weren’t trying to ship an “AI feature.” We were trying to fix a structural... The post Our Multi-Agent Architecture for Smarter Advertising appeared first on Spotify Engineering.</p>
                 <small class="text-secondary">
                     
                     Spotify Engineering
@@ -293,71 +221,119 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-02">
-                <a href="https://engineering.atspotify.com/2026/4/anthropic-agentic-development/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Let’s Talk Agentic Development: Spotify x Anthropic Live
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-05-03">
+                <a href="https://engineering.fb.com/2026/05/01/security/meta-strengthening-end-to-end-encrypted-backups/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] How Meta Is Strengthening End-to-End Encrypted Backups
                 </a>
-                <p class="mb-1 small text-light">AI agents are transforming the way we build — and even how we think of ourselves as software developers. Both... The post Let’s Talk Agentic Development: Spotify x Anthropic Live appeared first on Spotify Engineering.</p>
+                <p class="mb-1 small text-light">The HSM-based Backup Key Vault Meta’s HSM-based Backup Key Vault provides the foundation for end-to-end encrypted backups for WhatsApp and Messenger. In WhatsApp, these keys are hardcoded into the application.</p>
                 <small class="text-secondary">
                     
-                    Spotify Engineering
+                    Engineering at Meta
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-02">
-                <a href="https://blog.cloudflare.com/dynamic-workflows/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing Dynamic Workflows: durable execution that follows the tenant
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-05-03">
+                <a href="https://engineering.fb.com/2026/04/21/ml-applications/modernizing-the-facebook-groups-search-to-unlock-the-power-of-community-knowledge/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Modernizing the Facebook Groups Search to Unlock the Power of Community Knowledge
                 </a>
-                <p class="mb-1 small text-light">When we first launched Workers eight years ago, it was a direct-to-developers platform. We now see on Workers: Applications where users describe what they want, and the AI writes the implementation.</p>
+                <p class="mb-1 small text-light">Under this new framework, we’ve made tangible improvements in search engagement and relevance, with no increase in error rates. This enables the retrieval of content based on high-dimensional conceptual similarity, regardless of keyword overlap.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Engineering at Meta
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-02">
-                <a href="https://blog.cloudflare.com/q1-2026-internet-disruption-summary/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Shutdowns, power outages, and conflict: a review of Q1 2026 Internet disruptions
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-05-03">
+                <a href="https://engineering.fb.com/2026/04/16/security/post-quantum-cryptography-migration-at-meta-framework-lessons-and-takeaways/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Post-Quantum Cryptography Migration at Meta: Framework, Lessons, and Takeaways
                 </a>
-                <p class="mb-1 small text-light">Military action continued to disrupt connectivity in Ukraine and also impacted hyperscaler cloud infrastructure in the Middle East. Paraguay On February 18, widespread power outages struck Paraguay after key transmission lines went out of service.</p>
+                <p class="mb-1 small text-light">Performance: Minimizing overhead and ensuring that the new cryptographic solutions do not compromise system performance or user experience. Implement PQC Guardrails by changing crypto standards, disallowing the creation of new keys and usage of affected APIs.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Engineering at Meta
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-05-02">
-                <a href="https://slack.engineering/streamlining-security-investigations-with-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Streamlining Security Investigations with Agents
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-05-03">
+                <a href="https://engineering.fb.com/2026/04/09/developer-tools/escaping-the-fork-how-meta-modernized-webrtc-across-50-use-cases/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Escaping the Fork: How Meta Modernized WebRTC Across 50+ Use Cases
                 </a>
-                <p class="mb-1 small text-light">Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Hub The hub provides the service API and an interface to persistent storage.</p>
+                <p class="mb-1 small text-light">This approach improved performance, binary size, and security – and we continue to use it today to A/B test each new upstream release before rolling it out. However, doing this statically within the same overarching call orchestration library creates unique challenges.</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Engineering at Meta
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-05-02">
-                <a href="https://dropbox.tech/machine-learning/how-low-bit-inference-enables-efficient-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How low-bit inference enables efficient AI
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-03">
+                <a href="https://aws.amazon.com/blogs/aws/aws-interconnect-is-now-generally-available-with-a-new-option-to-simplify-last-mile-connectivity/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Interconnect is now generally available, with a new option to simplify last-mile connectivity
                 </a>
-                <p class="mb-1 small text-light">And making this technology accessible to individuals and businesses means tackling new challenges around efficiency and resource use. This scaling behavior plays a key role in improving both performance and efficiency when running large-scale AI workloads.</p>
+                <p class="mb-1 small text-light">For monitoring, AWS Interconnect – multicloud integrates with Amazon CloudWatch. Then, I open a Terminal and type: gcloud network-connectivity transports create aws-news-blog \ --region=europe-west3 \ --activation-key=${ACTIVATION_KEY} \ --network=default \ --advertised-routes=10.</p>
                 <small class="text-secondary">
                     
-                    Dropbox Tech
+                    Amazon AWS
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-05-02">
-                <a href="https://www.pulumi.com/blog/rest-api-docs-from-openapi/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Pulumi Cloud REST API Docs, Now Generated from OpenAPI
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-03">
+                <a href="https://kubernetes.io/blog/2026/05/01/kubernetes-v1-36-feature-pod-level-resource-managers-alpha/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Pod-Level Resource Managers (Alpha)
                 </a>
-                <p class="mb-1 small text-light">The Pulumi Cloud REST API reference is now generated directly from the live OpenAPI spec at build time. Same URL, existing links keep working The generated docs live at the same URL as the previous reference: /docs/reference/cloud-rest-api/.</p>
+                <p class="mb-1 small text-light">However, modern Kubernetes pods rarely consist of just one container. They frequently include sidecar containers for logging, monitoring, service meshes, or data ingestion.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-03">
+                <a href="https://kubernetes.io/blog/2026/04/29/kubernetes-v1-36-memory-qos-tiered-protection/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Tiered Memory Protection with Memory QoS
+                </a>
+                <p class="mb-1 small text-light">On behalf of SIG Node, we are pleased to announce updates to the Memory QoS feature (alpha) in Kubernetes v1.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-03">
+                <a href="https://www.cncf.io/blog/2026/04/29/the-state-of-ai-in-cncf-projects-a-first-look-at-the-data/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] The state of AI in CNCF projects: A first look at the data
+                </a>
+                <p class="mb-1 small text-light">The vast majority of participants are code-centric contributors focusing on submission, CI/CD, and infrastructure, while approximately 20% combine engineering with critical roles like release management and documentation.</p>
+                <small class="text-secondary">
+                    
+                    CNCF
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-03">
+                <a href="https://www.cncf.io/blog/2026/04/23/from-ingress-nginx-to-higress-migrating-60-resources-in-30-minutes-with-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] From Ingress NGINX to Higress: migrating 60+ resources in 30 minutes with AI
+                </a>
+                <p class="mb-1 small text-light">Remaining on a retired controller leaves critical infrastructure vulnerable to unpatched security risks. Zero-Downtime Reliability: Leveraging Envoy’s xDS protocol, Higress allows for configuration updates in milliseconds.</p>
+                <small class="text-secondary">
+                    
+                    CNCF
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-05-03">
+                <a href="https://www.pulumi.com/blog/bitbucket-vcs-integration/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Bitbucket Cloud Meets Pulumi Cloud
+                </a>
+                <p class="mb-1 small text-light">Pulumi Cloud now supports Bitbucket Cloud as a first-class VCS integration, joining GitHub, GitLab, and Azure DevOps. Configure path filters so only relevant file changes trigger deployments, and manage environment variables and secrets directly in Pulumi Cloud.</p>
                 <small class="text-secondary">
                     
                     Pulumi
@@ -365,35 +341,11 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-02">
-                <a href="https://about.gitlab.com/blog/how-to-build-ci-cd-observability-at-scale/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] How to build CI/CD observability at scale
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-03">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1sz4e3n/what_we_dont_talk_about_when_we_talk_about_ai_and/" target="_blank" class="fw-bold text-decoration-none">
+                    What We Don't Talk About When We Talk About AI and Security by Kubernetes AI Gateway WG co-leads
                 </a>
-                <p class="mb-1 small text-light">The challenge: Measuring CI/CD performanceBefore implementing any observability solution, define your measurement landscape:What metrics matter.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-02">
-                <a href="https://blog.cloudflare.com/code-orange-fail-small-complete/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Code Orange: Fail Small is complete. The result is a stronger Cloudflare network
-                </a>
-                <p class="mb-1 small text-light">This allows our observability tools to catch problems and revert issues before they affect your traffic. We ultimately developed backup authorization pathways for 18 key services, supported by new emergency scripts and proxies.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-02">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1t0xfhm/building_a_career_in_ai_infrastructure_with/" target="_blank" class="fw-bold text-decoration-none">
-                    Building a Career in AI Infrastructure with Kubernetes
-                </a>
-                <p class="mb-1 small text-light">I want to know what I must learn to work in AI infrastructure, specifically infrastructure built with Kubernetes for AI workloads. I’m actually now a member of the Kubernetes org and contribute to LeaderWorkerSet and Kueue. submitted by /u/Weekly-Demand-3105</p>
+                <p class="mb-1 small text-light">A fireside chat with Kubernetes AI Gateway WG co-leads Morgan Foster and Keith Mattix. Together they'll dig into what the Kubernetes ecosystem is missing and where the gaps are most dangerous.</p>
                 <small class="text-secondary">
                     
                     Reddit
@@ -401,14 +353,62 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-05-02">
-                <a href="https://engineering.fb.com/2026/04/16/developer-tools/capacity-efficiency-at-meta-how-unified-ai-agents-optimize-performance-at-hyperscale/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Capacity Efficiency at Meta: How Unified AI Agents Optimize Performance at Hyperscale
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-03">
+                <a href="https://azure.microsoft.com/en-us/blog/openais-gpt-5-5-in-microsoft-foundry-frontier-intelligence-on-an-enterprise-ready-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] OpenAI’s GPT-5.5 in Microsoft Foundry: Frontier intelligence on an enterprise ready platform
                 </a>
-                <p class="mb-1 small text-light">We’re sharing insights into Meta’s Capacity Efficiency Program, where we’ve built an AI agent platform that helps automate finding and fixing performance issues throughout our infrastructure. However, actually resolving the issues they surface introduces a new bottleneck: human engineering time.</p>
+                <p class="mb-1 small text-light">Microsoft Foundry provides the platform layer that turns frontier models into usable, governable systems that enable enterprises to apply security policy and management at the platform level.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Microsoft Azure
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-03">
+                <a href="https://www.docker.com/blog/trivy-kics-and-the-shape-of-supply-chain-attacks-so-far-in-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Trivy, KICS, and the shape of supply chain attacks so far in 2026
+                </a>
+                <p class="mb-1 small text-light">In both cases, Docker’s infrastructure was not breached. Because KICS scans Terraform, CloudFormation, Kubernetes and similar configuration files, its output routinely contains secrets, credentials, cloud resource names, and internal topology.</p>
+                <small class="text-secondary">
+                    
+                    Docker
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-03">
+                <a href="https://www.redhat.com/en/blog/definitive-automation-guide-red-hat-summit-2026-must-attend-red-hat-ansible-automation-platform-sessions-talks-and-labs" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] The definitive automation guide to Red Hat Summit 2026: Must-attend Red Hat Ansible Automation Platform sessions, talks, and labs
+                </a>
+                <p class="mb-1 small text-light">In this environment, automation is no longer optional—it’s the foundation that makes everything else possible. With nearly 100 sessions, talks, and hands-on labs featuring real-world customer transformations, building the perfect agenda can feel overwhelming.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-03">
+                <a href="https://blog.cloudflare.com/agents-stripe-projects/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Agents can now create Cloudflare accounts, buy domains, and deploy
+                </a>
+                <p class="mb-1 small text-light">They’re given higher-order problems to solve and choose to use Cloudflare and call Cloudflare APIs. Without any extra setup, agents have everything they need to deploy a new production application in one shot.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-03">
+                <a href="https://netflixtechblog.com/the-human-infrastructure-how-netflix-built-the-operations-layer-behind-live-at-scale-33e2a311c597?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] The Human Infrastructure: How Netflix Built the Operations Layer Behind Live at Scale
+                </a>
+                <p class="mb-1 small text-light">This post pulls back the curtain on the Live Operations teams that enable this rapid scale. Building the Human Infrastructure: Building the human operational model to run a facility like the BOC didn’t happen overnight.</p>
+                <small class="text-secondary">
+                    
+                    Netflix
                     
                 </small>
             </li>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - May 10, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - May 10, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for May 10, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-05-10">2026-05-10 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2026-05-10 08:40:08
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,254 +126,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-05-10">
-                <a href="https://twitter.com/jarredsumner/status/2053047748191232310" target="_blank" class="fw-bold text-decoration-none">
-                    Bun's experimental Rust rewrite hits 99.8% test compatibility on Linux x64 glibc
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-10">
+                <a href="https://netflixtechblog.com/the-human-infrastructure-how-netflix-built-the-operations-layer-behind-live-at-scale-33e2a311c597?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] The Human Infrastructure: How Netflix Built the Operations Layer Behind Live at Scale
                 </a>
-                <p class="mb-1 small text-light">https://xunroll.com/thread/2053047748191232310Recent and related: Zig → Rust porting guide - https://news.ycombinator.com/item?id=48016880 - May 2026 (540 comments) Comments URL: https://news.ycombinator.com/item?id=48073680 Points: 533 # Comments: 500</p>
+                <p class="mb-1 small text-light">This post pulls back the curtain on the Live Operations teams that enable this rapid scale. Building the Human Infrastructure: Building the human operational model to run a facility like the BOC didn’t happen overnight.</p>
                 <small class="text-secondary">
                     
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-10">
-                <a href="https://aws.amazon.com/blogs/aws/top-announcements-of-the-whats-next-with-aws-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Top announcements of the What’s Next with AWS, 2026
-                </a>
-                <p class="mb-1 small text-light">No additional infrastructure to configure, no new security model to learn. Updated on April 29th – Added a new Quick feature to build custom applications using natural language.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-10">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-anthropic-meta-partnership-aws-lambda-s3-files-amazon-bedrock-agentcore-cli-and-more-april-27-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: Anthropic & Meta partnership, AWS Lambda S3 Files, Amazon Bedrock AgentCore CLI, and more (April 27, 2026)
-                </a>
-                <p class="mb-1 small text-light">The gateway automatically enables pod-to-pod traffic across cloud and on-premises environments, control plane-to-webhook communication, and connectivity for AWS services like Application Load Balancers, and is available at no additional charge.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-05-10">
-                <a href="https://www.hashicorp.com/blog/mitigate-credential-exposure-in-windows-environments-with-boundary-and-vault" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Mitigate credential exposure in Windows environments with Boundary and Vault
-                </a>
-                <p class="mb-1 small text-light">This blog addresses the remote access and security challenges that still plague many organizations with Windows environments, specifically issues with static credentials and overly broad network access.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-10">
-                <a href="https://www.cncf.io/blog/2026/05/07/microcks-becomes-a-cncf-incubating-project/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Microcks becomes a CNCF incubating project
-                </a>
-                <p class="mb-1 small text-light">It integrates natively with Kubernetes and Helm for deployment and connects to CI/CD via Jenkins, GitHub Actions, and Tekton.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-10">
-                <a href="https://www.cncf.io/blog/2026/05/05/announcing-kyverno-release-1-18/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Announcing Kyverno release 1.18!
-                </a>
-                <p class="mb-1 small text-light">18 delivers: Stronger security controls for HTTP-based policy execution and multiple CVE mitigations Significant CLI enhancements for testing and applying modern policy types Policy engine improvements for performance, observability, and scalability Enhancements to the policies Helm chart for bet...</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-10">
-                <a href="https://www.cncf.io/blog/2026/05/04/securing-github-actions-ci-dependencies-recipe-card/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Securing GitHub Actions CI dependencies: Recipe card
-                </a>
-                <p class="mb-1 small text-light">When choosing actions, particularly from unverified organizations, favor those with regular and recent updates and an active community that addresses issues regularly. You need to regularly update your Actions in order to benefit from the latest security updates.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-05-10">
-                <a href="https://slack.engineering/managing-context-in-long-run-agentic-applications/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Managing context in long-run agentic applications
-                </a>
-                <p class="mb-1 small text-light">In our first article, we introduced our agentic security investigation service. Agent frameworks solve the state management problem for users by accumulating message history between API calls.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-05-10">
-                <a href="https://slack.engineering/from-custom-to-open-scalable-network-probing-and-http-3-readiness-with-prometheus/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] From Custom to Open: Scalable Network Probing and HTTP/3 Readiness with Prometheus
-                </a>
-                <p class="mb-1 small text-light">When we began rolling out HTTP/3 support on the edge, there was a significant challenge that we encountered: A lack of client-side observability. This journey from having an observability gap to an open-sourced solution perfectly illustrates our commitment to simplicity and scalability.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-10">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1t89xj1/anyone_else_in_the_industry_feeling_frustrated/" target="_blank" class="fw-bold text-decoration-none">
-                    Anyone else in the industry feeling frustrated that AI is being used to pitch goofy "product features" that demo well to Boards but are utterly useless to K8s practitioners and are 100% not cloud-native patterns?
-                </a>
-                <p class="mb-1 small text-light">Meanwhile there's already a beyond-competent community project out there solving the problem without AI. Then management takes the demo, calls it "product" and moves on to the next sham "agentic use case.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-10">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1t63soh/selecting_a_helm_chart_for_the_keycloak_deployment/" target="_blank" class="fw-bold text-decoration-none">
-                    Selecting a helm chart for the KeyCloak deployment
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/StrategyBeginning342</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-10">
-                <a href="https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] The AWS MCP Server is now generally available
-                </a>
-                <p class="mb-1 small text-light">The AWS MCP Server addresses this through a compact set of tools that do not consume your model’s context window. For enterprise customers, the AWS MCP Server provides a clear separation between human and agent permissions.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-10">
-                <a href="https://aws.amazon.com/blogs/aws/modernize-your-workflows-amazon-workspaces-now-gives-ai-agents-their-own-desktop-preview/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Modernize your workflows: Amazon WorkSpaces now gives AI agents their own desktop (preview)
-                </a>
-                <p class="mb-1 small text-light">Today, we are announcing that Amazon WorkSpaces now enables AI agents to securely operate desktop applications without requiring application modernization.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-05-10">
-                <a href="https://www.hashicorp.com/blog/spiffe-securing-the-identity-of-agentic-ai-and-non-human-actors" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] SPIFFE: Securing the identity of agentic AI and non-human actors
-                </a>
-                <p class="mb-1 small text-light">Originally developed to help microservices authenticate securely in cloud-native environments, SPIFFE provides a way to issue and validate cryptographically verifiable identities without relying on long-lived secrets like passwords or API keys.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-10">
-                <a href="https://kubernetes.io/blog/2026/05/06/kubernetes-v1-36-server-side-sharded-list-and-watch/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36: Server-Side Sharded List and Watch
-                </a>
-                <p class="mb-1 small text-light">36 introduces server-side sharded list and watch as an alpha feature (KEP-5866). Getting involved This feature is in alpha and requires enabling the ShardedListAndWatch feature gate on the API server.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-10">
-                <a href="https://kubernetes.io/blog/2026/05/05/kubernetes-v1-36-declarative-validation-ga/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36: Declarative Validation Graduates to GA
-                </a>
-                <p class="mb-1 small text-light">As the Kubernetes API surface expanded, this approach led to several systemic issues: Technical Debt: The project accumulated roughly 18,000 lines of boilerplate validation code. If you are interested in contributing to the core of Kubernetes API Machinery, this is a fantastic place to start.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-10">
-                <a href="https://kubernetes.io/blog/2026/05/04/kubernetes-v1-36-manifest-based-admission-control/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36: Admission Policies That Can't Be Deleted
-                </a>
-                <p class="mb-1 small text-light">36 introduces an alpha feature that addresses this: manifest-based admission control. For platform teams managing shared clusters, this is a significant improvement.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-10">
-                <a href="https://blog.cloudflare.com/de-tld-outage-dnssec/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] When DNSSEC goes wrong: how we responded to the .de TLD outage
-                </a>
-                <p class="mb-1 small text-light">Continuing to return SERVFAIL in that situation provides no security value: the failure is already known, public, and being fixed. 1 resolver, we have a particular responsibility to customers using our CDN platform services.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-10">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1t8oo9h/is_ai_infrastructure_a_good_career_path_or_too/" target="_blank" class="fw-bold text-decoration-none">
-                    Is AI Infrastructure a Good Career Path or Too Niche?
-                </a>
-                <p class="mb-1 small text-light">My goal is to work in AI Infrastructure. I want to work on building the tools and platforms that infrastructure teams actually use.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-10">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1t5ztxr/clouddevopshu_platform_genuine_review/" target="_blank" class="fw-bold text-decoration-none">
-                    CloudDevOpsHu platform Genuine review
-                </a>
-                <p class="mb-1 small text-light">I completed the DevOps course from () and my experience was disappointing. However, after paying the full course fee of ₹28,000, the support quality dropped significantly.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-10">
-                <a href="https://www.docker.com/blog/from-security-blocked-to-prod-ready-clickhouse-on-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] From Security Blocked to Prod Ready: ClickHouse on Docker Hardened Images
-                </a>
-                <p class="mb-1 small text-light">In November 2025, a team self-hosting Langfuse, an open-source LLM observability platform, on Kubernetes uploaded their ClickHouse image to AWS ECR as part of their production preparation.</p>
-                <small class="text-secondary">
-                    
-                    Docker
+                    Netflix | 2026-05-10
                     
                 </small>
             </li>
@@ -368,7 +145,7 @@
                 <p class="mb-1 small text-light">I’ve spent enough time in and around cloud native infrastructure to know that we’re reasonably good at standardizing the theory. Tool fragmentation remains the default Despite the availability of mature, interoperable cloud native observability projects, nearly 46.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-05-10
                     
                 </small>
             </li>
@@ -380,7 +157,7 @@
                 <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-05-10
                     
                 </small>
             </li>
@@ -392,19 +169,259 @@
                 <p class="mb-1 small text-light">The new platform tension Platform teams have always had two jobs that pull in opposite directions. The Automation API lets you build higher-order orchestration on the same primitives your developers already use.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-05-10
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-10">
-                <a href="https://netflixtechblog.com/the-human-infrastructure-how-netflix-built-the-operations-layer-behind-live-at-scale-33e2a311c597?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] The Human Infrastructure: How Netflix Built the Operations Layer Behind Live at Scale
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-10">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1t8oo9h/is_ai_infrastructure_a_good_career_path_or_too/" target="_blank" class="fw-bold text-decoration-none">
+                    Is AI Infrastructure a Good Career Path or Too Niche?
                 </a>
-                <p class="mb-1 small text-light">This post pulls back the curtain on the Live Operations teams that enable this rapid scale. Building the Human Infrastructure: Building the human operational model to run a facility like the BOC didn’t happen overnight.</p>
+                <p class="mb-1 small text-light">My goal is to work in AI Infrastructure. I want to work on building the tools and platforms that infrastructure teams actually use.</p>
                 <small class="text-secondary">
                     
-                    Netflix
+                    Reddit | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-10">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1t5ztxr/clouddevopshu_platform_genuine_review/" target="_blank" class="fw-bold text-decoration-none">
+                    CloudDevOpsHu platform Genuine review
+                </a>
+                <p class="mb-1 small text-light">I completed the DevOps course from () and my experience was disappointing. However, after paying the full course fee of ₹28,000, the support quality dropped significantly.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-10">
+                <a href="https://www.docker.com/blog/from-security-blocked-to-prod-ready-clickhouse-on-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] From Security Blocked to Prod Ready: ClickHouse on Docker Hardened Images
+                </a>
+                <p class="mb-1 small text-light">In November 2025, a team self-hosting Langfuse, an open-source LLM observability platform, on Kubernetes uploaded their ClickHouse image to AWS ECR as part of their production preparation.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-10">
+                <a href="https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] The AWS MCP Server is now generally available
+                </a>
+                <p class="mb-1 small text-light">The AWS MCP Server addresses this through a compact set of tools that do not consume your model’s context window. For enterprise customers, the AWS MCP Server provides a clear separation between human and agent permissions.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-10">
+                <a href="https://aws.amazon.com/blogs/aws/modernize-your-workflows-amazon-workspaces-now-gives-ai-agents-their-own-desktop-preview/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Modernize your workflows: Amazon WorkSpaces now gives AI agents their own desktop (preview)
+                </a>
+                <p class="mb-1 small text-light">Today, we are announcing that Amazon WorkSpaces now enables AI agents to securely operate desktop applications without requiring application modernization.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-05-10">
+                <a href="https://www.hashicorp.com/blog/spiffe-securing-the-identity-of-agentic-ai-and-non-human-actors" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] SPIFFE: Securing the identity of agentic AI and non-human actors
+                </a>
+                <p class="mb-1 small text-light">Originally developed to help microservices authenticate securely in cloud-native environments, SPIFFE provides a way to issue and validate cryptographically verifiable identities without relying on long-lived secrets like passwords or API keys.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-10">
+                <a href="https://kubernetes.io/blog/2026/05/06/kubernetes-v1-36-server-side-sharded-list-and-watch/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Server-Side Sharded List and Watch
+                </a>
+                <p class="mb-1 small text-light">36 introduces server-side sharded list and watch as an alpha feature (KEP-5866). Getting involved This feature is in alpha and requires enabling the ShardedListAndWatch feature gate on the API server.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-10">
+                <a href="https://kubernetes.io/blog/2026/05/05/kubernetes-v1-36-declarative-validation-ga/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Declarative Validation Graduates to GA
+                </a>
+                <p class="mb-1 small text-light">As the Kubernetes API surface expanded, this approach led to several systemic issues: Technical Debt: The project accumulated roughly 18,000 lines of boilerplate validation code. If you are interested in contributing to the core of Kubernetes API Machinery, this is a fantastic place to start.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-10">
+                <a href="https://kubernetes.io/blog/2026/05/04/kubernetes-v1-36-manifest-based-admission-control/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Admission Policies That Can't Be Deleted
+                </a>
+                <p class="mb-1 small text-light">36 introduces an alpha feature that addresses this: manifest-based admission control. For platform teams managing shared clusters, this is a significant improvement.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-10">
+                <a href="https://blog.cloudflare.com/de-tld-outage-dnssec/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] When DNSSEC goes wrong: how we responded to the .de TLD outage
+                </a>
+                <p class="mb-1 small text-light">Continuing to return SERVFAIL in that situation provides no security value: the failure is already known, public, and being fixed. 1 resolver, we have a particular responsibility to customers using our CDN platform services.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-10">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1t89xj1/anyone_else_in_the_industry_feeling_frustrated/" target="_blank" class="fw-bold text-decoration-none">
+                    Anyone else in the industry feeling frustrated that AI is being used to pitch goofy "product features" that demo well to Boards but are utterly useless to K8s practitioners and are 100% not cloud-native patterns?
+                </a>
+                <p class="mb-1 small text-light">Meanwhile there's already a beyond-competent community project out there solving the problem without AI. Then management takes the demo, calls it "product" and moves on to the next sham "agentic use case.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-10">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1t63soh/selecting_a_helm_chart_for_the_keycloak_deployment/" target="_blank" class="fw-bold text-decoration-none">
+                    Selecting a helm chart for the KeyCloak deployment
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/StrategyBeginning342</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-05-10">
+                <a href="https://twitter.com/jarredsumner/status/2053047748191232310" target="_blank" class="fw-bold text-decoration-none">
+                    Bun's experimental Rust rewrite hits 99.8% test compatibility on Linux x64 glibc
+                </a>
+                <p class="mb-1 small text-light">https://xunroll.com/thread/2053047748191232310Recent and related: Zig → Rust porting guide - https://news.ycombinator.com/item?id=48016880 - May 2026 (540 comments) Comments URL: https://news.ycombinator.com/item?id=48073680 Points: 533 # Comments: 500</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-10">
+                <a href="https://aws.amazon.com/blogs/aws/top-announcements-of-the-whats-next-with-aws-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Top announcements of the What’s Next with AWS, 2026
+                </a>
+                <p class="mb-1 small text-light">No additional infrastructure to configure, no new security model to learn. Updated on April 29th – Added a new Quick feature to build custom applications using natural language.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-10">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-anthropic-meta-partnership-aws-lambda-s3-files-amazon-bedrock-agentcore-cli-and-more-april-27-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Anthropic & Meta partnership, AWS Lambda S3 Files, Amazon Bedrock AgentCore CLI, and more (April 27, 2026)
+                </a>
+                <p class="mb-1 small text-light">The gateway automatically enables pod-to-pod traffic across cloud and on-premises environments, control plane-to-webhook communication, and connectivity for AWS services like Application Load Balancers, and is available at no additional charge.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-05-10">
+                <a href="https://www.hashicorp.com/blog/mitigate-credential-exposure-in-windows-environments-with-boundary-and-vault" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Mitigate credential exposure in Windows environments with Boundary and Vault
+                </a>
+                <p class="mb-1 small text-light">This blog addresses the remote access and security challenges that still plague many organizations with Windows environments, specifically issues with static credentials and overly broad network access.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-10">
+                <a href="https://www.cncf.io/blog/2026/05/07/microcks-becomes-a-cncf-incubating-project/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Microcks becomes a CNCF incubating project
+                </a>
+                <p class="mb-1 small text-light">It integrates natively with Kubernetes and Helm for deployment and connects to CI/CD via Jenkins, GitHub Actions, and Tekton.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-10">
+                <a href="https://www.cncf.io/blog/2026/05/05/announcing-kyverno-release-1-18/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Announcing Kyverno release 1.18!
+                </a>
+                <p class="mb-1 small text-light">18 delivers: Stronger security controls for HTTP-based policy execution and multiple CVE mitigations Significant CLI enhancements for testing and applying modern policy types Policy engine improvements for performance, observability, and scalability Enhancements to the policies Helm chart for bet...</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-10">
+                <a href="https://www.cncf.io/blog/2026/05/04/securing-github-actions-ci-dependencies-recipe-card/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Securing GitHub Actions CI dependencies: Recipe card
+                </a>
+                <p class="mb-1 small text-light">When choosing actions, particularly from unverified organizations, favor those with regular and recent updates and an active community that addresses issues regularly. You need to regularly update your Actions in order to benefit from the latest security updates.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-05-10">
+                <a href="https://slack.engineering/managing-context-in-long-run-agentic-applications/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Managing context in long-run agentic applications
+                </a>
+                <p class="mb-1 small text-light">In our first article, we introduced our agentic security investigation service. Agent frameworks solve the state management problem for users by accumulating message history between API calls.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-05-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-05-10">
+                <a href="https://slack.engineering/from-custom-to-open-scalable-network-probing-and-http-3-readiness-with-prometheus/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] From Custom to Open: Scalable Network Probing and HTTP/3 Readiness with Prometheus
+                </a>
+                <p class="mb-1 small text-light">When we began rolling out HTTP/3 support on the edge, there was a significant challenge that we encountered: A lack of client-side observability. This journey from having an observability gap to an open-sourced solution perfectly illustrates our commitment to simplicity and scalability.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-05-10
                     
                 </small>
             </li>

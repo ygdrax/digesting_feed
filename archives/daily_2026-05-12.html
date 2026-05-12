@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - May 12, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - May 12, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for May 12, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-05-12">2026-05-12 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 9 sources • Updated 2026-05-12 09:00:48
+                    Showing 25 total articles from 
+                    9 sources
+                    
                     
                 </span>
             </small>
@@ -105,266 +122,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
-                <a href="https://www.reddit.com/r/devops/comments/1ta0297/how_do_you_become_top_01_in_devops_that_gets_paid/" target="_blank" class="fw-bold text-decoration-none">
-                    how do you become top 0.1% in devops that gets paid 200k+? (US market)
-                </a>
-                <p class="mb-1 small text-light">Every time I join a new company, they're running a completely different stack, different cloud, different CI/CD, different infra tooling. Is it depth in one area (Kubernetes internals, networking, security).</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
-                <a href="https://www.reddit.com/r/devops/comments/1ta3svs/how_do_you_deal_with_senior_management_vibe/" target="_blank" class="fw-bold text-decoration-none">
-                    How do you deal with senior management vibe coding business applications and infrastructure?
-                </a>
-                <p class="mb-1 small text-light">Since devs and DevOps personnel aren't being involved, I expect the code quality to be slop. If the answer is to jump ship, what are the odds that the other organisation does it too? submitted by /u/alivezombie23</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
-                <a href="https://www.reddit.com/r/devops/comments/1tapyei/devops_kubernetes_oauth2_proxy_keycloak/" target="_blank" class="fw-bold text-decoration-none">
-                    DevOps / Kubernetes / OAuth2 Proxy + Keycloak
-                </a>
-                <p class="mb-1 small text-light">Hi everyone, I’m building a local zero-trust authentication setup on Kubernetes (Docker Desktop on Windows/WSL2) and I’m stuck on an OAuth2-proxy + Keycloak login loop / CSRF issue.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
-                <a href="https://www.reddit.com/r/devops/comments/1ta6fdy/what_are_the_chances_of_getting_a_role_of/" target="_blank" class="fw-bold text-decoration-none">
-                    What are the chances of getting a role of cloud/devops engineer as your entry level job ?
-                </a>
-                <p class="mb-1 small text-light">I am 18 and iam in first year of compsci engineering but I am side by side also preparing for my masters (ie trynna learn German) and learning linux commands, docker basics , basic networking and stuff.. what else should I learn I know basic python fundamentals I tried to get into competitive programming but miserably failed, tried machine learning but 💀💔🙏🏿 math got me submitted by /u/Prasadhegde</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
-                <a href="https://www.reddit.com/r/devops/comments/1ta9ggi/feels_like_ai_sre_is_becoming_the_next_big_thing/" target="_blank" class="fw-bold text-decoration-none">
-                    Feels like “AI SRE” is becoming the next big thing in infra after AI coding copilots.
-                </a>
-                <p class="mb-1 small text-light">Over the last few months I’ve seen: Resolve AI NudgeBee Neubird All are trying to solve incident management using AI.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1tas2x9/at_what_cluster_size_does_kubernetes_become/" target="_blank" class="fw-bold text-decoration-none">
-                    At what cluster size does Kubernetes become painful?
-                </a>
-                <p class="mb-1 small text-light">Curious where people feel Kubernetes complexity really starts becoming painful operationally. Feels like a lot of teams are fine early on, but once infra scales, troubleshooting and visibility become significantly harder.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1taprd3/ai_infra_details/" target="_blank" class="fw-bold text-decoration-none">
-                    AI infra Details
-                </a>
-                <p class="mb-1 small text-light">I have been working as a devops engineer handling eks clusters, provisioning infra etc for 4+ years now. What exactly are organizations looking for in candidates , how exactly are interviews moving/framed and how is AI infra shaping current devops.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1tabqrl/making_infrastructure_a_firstclass_citizen_in_the/" target="_blank" class="fw-bold text-decoration-none">
-                    Making Infrastructure a First-Class Citizen in the C4 Model
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/k8studio</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1ta3hvf/whats_the_most_painful_part_of_devops_work_that/" target="_blank" class="fw-bold text-decoration-none">
-                    What’s the most painful part of DevOps work that still feels unnecessarily manual?
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/Reasonable_Event1494</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-12">
-                <a href="https://netflixtechblog.medium.com/data-projects-managing-data-assets-at-netflix-scale-7ca25888591e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Data Projects: Managing Data Assets at Netflix Scale
-                </a>
-                <p class="mb-1 small text-light">By Amer Hesson, Marcelo Mayworm, James Mulcahy, and Brittany TruongThe Problem: Managing Assets at Netflix ScaleNetflix’s Data Platform is vast. Data Projects addresses this by promoting the solution from optional tooling to a foundational part of the data platform.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-12">
-                <a href="https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling ArchUnit with Nebula ArchRules
-                </a>
-                <p class="mb-1 small text-light">However, how will they know which downstream projects are using their API incorrectly, based on these. Case Study SolutionGoing back to our original problem, using ArchRules, we were able to deliver a platform for library authors to track the usage of their APIs.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-12">
-                <a href="https://blogs.microsoft.com/blog/2026/04/27/microsoft-sovereign-private-cloud-scales-to-thousands-of-nodes-with-azure-local/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft Sovereign Private Cloud scales to thousands of nodes with Azure Local
-                </a>
-                <p class="mb-1 small text-light">Organizations operating national infrastructure, regulated workloads or mission-critical services are navigating a fundamental shift in how cloud infrastructure must be deployed and managed.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-12">
-                <a href="https://www.docker.com/blog/comparing-sandboxing-approaches-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Comparing Different Approaches to Sandboxing
-                </a>
-                <p class="mb-1 small text-light">However, the model becomes more complex when containers become a dev platform for agents. This introduces a container-in-container pattern (Docker-in-Docker), where an agent running inside a container needs to build and run other containers.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-12">
-                <a href="https://www.docker.com/blog/blog-generate-images-locally-dmr-open-webui/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Generate Images Locally with Docker Model Runner and Open WebUI
-                </a>
-                <p class="mb-1 small text-light">Behind the scenes this runs: docker run --rm \ -p 3000:8080 \ -e OPENAI_API_BASE=http://model-runner. If you use Docker CE, you’ll see the docker/model-runner container address instead of model-runner.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-12">
-                <a href="https://www.docker.com/blog/a-virtual-agent-team-at-docker-how-the-coding-agent-sandboxes-team-uses-a-fleet-of-agents-to-ship-faster/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] A Virtual Agent team at Docker: How the Coding Agent Sandboxes team uses a fleet of agents to ship faster
-                </a>
-                <p class="mb-1 small text-light">The project provides secure, microVM-based isolation for running AI coding agents like Claude Code, Gemini, Codex, Docker Agent and Kiro. Every release needs testing across both platforms, across upgrade paths between versions, and under sustained load to catch resource leaks.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-12">
-                <a href="https://www.redhat.com/en/blog/turning-complexity-confidence-red-hat-technical-supportability-review-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Turning complexity into confidence with Red Hat Technical Supportability Review with AI
-                </a>
-                <p class="mb-1 small text-light">Reactive support models can be a liability when a single misconfiguration can stall a global rollout or an essential production upgrade. For IT organizations, the future of infrastructure is one of rapid, dynamic evolution and increasing demand.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-12">
-                <a href="https://www.redhat.com/en/blog/agentic-paradox-and-case-hybrid-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] The agentic paradox and the case for hybrid AI
-                </a>
-                <p class="mb-1 small text-light">While the power of these tools is undeniable, the current consumption models present a challenge. Most of these solutions are delivered leveraging a model-as-a-service approach that’s poised to trigger an AI version of the cloud paradox: The agentic paradox.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-12">
-                <a href="https://about.gitlab.com/blog/gitaly-on-kubernetes-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Consolidate your GitLab stack with Gitaly on Kubernetes
-                </a>
-                <p class="mb-1 small text-light">11 came good news for teams running GitLab on Kubernetes: Gitaly on Kubernetes is now generally available. Those days are over; Gitaly on Kubernetes is now an officially supported deployment option.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-12">
-                <a href="https://about.gitlab.com/blog/fine-grained-pats/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Limit credential exposure with fine-grained personal access tokens
-                </a>
-                <p class="mb-1 small text-light">Personal access tokens (PATs) authenticate most of the automation that runs in GitLab. When a token is issued with a broad scope like api or read_api, it extends permissions across many projects and groups.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-05-12">
-                <a href="https://blog.sentry.io/nextjs-supabase-observability/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] From vibe code to production-ready: observability for Next.js and Supabase apps
-                </a>
-                <p class="mb-1 small text-light">js frontend through Supabase Edge Functions to Postgres, all in one place Log draining from Supabase into Sentry gives you a single source of truth for errors, traces, and infrastructure logs Sentry auto-detects N+1 queries, slow spans, and performance regressions without manual configuration See...</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-12">
-                <a href="https://kubernetes.io/blog/2026/05/08/kubernetes-v1-36-volume-group-snapshot-ga/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36: Moving Volume Group Snapshots to GA
-                </a>
-                <p class="mb-1 small text-light">Volume group snapshots were introduced as an Alpha feature with the Kubernetes v1. Consistent group support provides crash consistency across all volumes in the group without the need for application quiescence.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-12">
-                <a href="https://www.cncf.io/blog/2026/05/11/how-to-get-engineering-time-back-from-kubernetes-upgrades/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] How to get engineering time back from Kubernetes upgrades
+                <a href="https://www.cncf.io/blog/2026/05/08/benchmarking-ai-agent-retrieval-strategies-on-kubernetes-bug-fixes/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Benchmarking AI agent retrieval strategies on Kubernetes bug fixes
                 </a>
-                <p class="mb-1 small text-light">Kubernetes powers your products, but with that power and flexibility comes organizational challenges around managing complexity and maintenance.</p>
+                <p class="mb-1 small text-light">Tests: Were existing tests updated or meaningful new tests added. When the issue is vague, performance diverges significantly.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-05-12
                     
                 </small>
             </li>
@@ -376,7 +141,7 @@
                 <p class="mb-1 small text-light">running them like ECS web services means losing conversational state on container restart. theyre not microservices too much state passing between services turns the orchestration layer into a distributed transaction nightmare.</p>
                 <small class="text-secondary">
                     
-                    Reddit
+                    Reddit | 2026-05-12
                     
                 </small>
             </li>
@@ -388,19 +153,271 @@
                 <p class="mb-1 small text-light">Hey , I'm a developer researching how DevOps teams handle release communication, specifically in B2B companies without a dedicated release manager. A few things I'm curious about: When releases stack up across sprints, who ends up hunting through all the PRs.</p>
                 <small class="text-secondary">
                     
-                    Reddit
+                    Reddit | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-12">
+                <a href="https://kubernetes.io/blog/2026/05/08/kubernetes-v1-36-volume-group-snapshot-ga/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Moving Volume Group Snapshots to GA
+                </a>
+                <p class="mb-1 small text-light">Volume group snapshots were introduced as an Alpha feature with the Kubernetes v1. Consistent group support provides crash consistency across all volumes in the group without the need for application quiescence.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-05-12
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-12">
-                <a href="https://www.cncf.io/blog/2026/05/08/benchmarking-ai-agent-retrieval-strategies-on-kubernetes-bug-fixes/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Benchmarking AI agent retrieval strategies on Kubernetes bug fixes
+                <a href="https://www.cncf.io/blog/2026/05/11/how-to-get-engineering-time-back-from-kubernetes-upgrades/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] How to get engineering time back from Kubernetes upgrades
                 </a>
-                <p class="mb-1 small text-light">Tests: Were existing tests updated or meaningful new tests added. When the issue is vague, performance diverges significantly.</p>
+                <p class="mb-1 small text-light">Kubernetes powers your products, but with that power and flexibility comes organizational challenges around managing complexity and maintenance.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
+                <a href="https://www.reddit.com/r/devops/comments/1ta0297/how_do_you_become_top_01_in_devops_that_gets_paid/" target="_blank" class="fw-bold text-decoration-none">
+                    how do you become top 0.1% in devops that gets paid 200k+? (US market)
+                </a>
+                <p class="mb-1 small text-light">Every time I join a new company, they're running a completely different stack, different cloud, different CI/CD, different infra tooling. Is it depth in one area (Kubernetes internals, networking, security).</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
+                <a href="https://www.reddit.com/r/devops/comments/1ta3svs/how_do_you_deal_with_senior_management_vibe/" target="_blank" class="fw-bold text-decoration-none">
+                    How do you deal with senior management vibe coding business applications and infrastructure?
+                </a>
+                <p class="mb-1 small text-light">Since devs and DevOps personnel aren't being involved, I expect the code quality to be slop. If the answer is to jump ship, what are the odds that the other organisation does it too? submitted by /u/alivezombie23</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
+                <a href="https://www.reddit.com/r/devops/comments/1tapyei/devops_kubernetes_oauth2_proxy_keycloak/" target="_blank" class="fw-bold text-decoration-none">
+                    DevOps / Kubernetes / OAuth2 Proxy + Keycloak
+                </a>
+                <p class="mb-1 small text-light">Hi everyone, I’m building a local zero-trust authentication setup on Kubernetes (Docker Desktop on Windows/WSL2) and I’m stuck on an OAuth2-proxy + Keycloak login loop / CSRF issue.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
+                <a href="https://www.reddit.com/r/devops/comments/1ta6fdy/what_are_the_chances_of_getting_a_role_of/" target="_blank" class="fw-bold text-decoration-none">
+                    What are the chances of getting a role of cloud/devops engineer as your entry level job ?
+                </a>
+                <p class="mb-1 small text-light">I am 18 and iam in first year of compsci engineering but I am side by side also preparing for my masters (ie trynna learn German) and learning linux commands, docker basics , basic networking and stuff.. what else should I learn I know basic python fundamentals I tried to get into competitive programming but miserably failed, tried machine learning but 💀💔🙏🏿 math got me submitted by /u/Prasadhegde</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
+                <a href="https://www.reddit.com/r/devops/comments/1ta9ggi/feels_like_ai_sre_is_becoming_the_next_big_thing/" target="_blank" class="fw-bold text-decoration-none">
+                    Feels like “AI SRE” is becoming the next big thing in infra after AI coding copilots.
+                </a>
+                <p class="mb-1 small text-light">Over the last few months I’ve seen: Resolve AI NudgeBee Neubird All are trying to solve incident management using AI.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1tas2x9/at_what_cluster_size_does_kubernetes_become/" target="_blank" class="fw-bold text-decoration-none">
+                    At what cluster size does Kubernetes become painful?
+                </a>
+                <p class="mb-1 small text-light">Curious where people feel Kubernetes complexity really starts becoming painful operationally. Feels like a lot of teams are fine early on, but once infra scales, troubleshooting and visibility become significantly harder.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1taprd3/ai_infra_details/" target="_blank" class="fw-bold text-decoration-none">
+                    AI infra Details
+                </a>
+                <p class="mb-1 small text-light">I have been working as a devops engineer handling eks clusters, provisioning infra etc for 4+ years now. What exactly are organizations looking for in candidates , how exactly are interviews moving/framed and how is AI infra shaping current devops.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1tabqrl/making_infrastructure_a_firstclass_citizen_in_the/" target="_blank" class="fw-bold text-decoration-none">
+                    Making Infrastructure a First-Class Citizen in the C4 Model
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/k8studio</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-12">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1ta3hvf/whats_the_most_painful_part_of_devops_work_that/" target="_blank" class="fw-bold text-decoration-none">
+                    What’s the most painful part of DevOps work that still feels unnecessarily manual?
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/Reasonable_Event1494</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-12">
+                <a href="https://netflixtechblog.medium.com/data-projects-managing-data-assets-at-netflix-scale-7ca25888591e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Data Projects: Managing Data Assets at Netflix Scale
+                </a>
+                <p class="mb-1 small text-light">By Amer Hesson, Marcelo Mayworm, James Mulcahy, and Brittany TruongThe Problem: Managing Assets at Netflix ScaleNetflix’s Data Platform is vast. Data Projects addresses this by promoting the solution from optional tooling to a foundational part of the data platform.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-12">
+                <a href="https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling ArchUnit with Nebula ArchRules
+                </a>
+                <p class="mb-1 small text-light">However, how will they know which downstream projects are using their API incorrectly, based on these. Case Study SolutionGoing back to our original problem, using ArchRules, we were able to deliver a platform for library authors to track the usage of their APIs.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-12">
+                <a href="https://blogs.microsoft.com/blog/2026/04/27/microsoft-sovereign-private-cloud-scales-to-thousands-of-nodes-with-azure-local/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft Sovereign Private Cloud scales to thousands of nodes with Azure Local
+                </a>
+                <p class="mb-1 small text-light">Organizations operating national infrastructure, regulated workloads or mission-critical services are navigating a fundamental shift in how cloud infrastructure must be deployed and managed.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-12">
+                <a href="https://www.docker.com/blog/comparing-sandboxing-approaches-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Comparing Different Approaches to Sandboxing
+                </a>
+                <p class="mb-1 small text-light">However, the model becomes more complex when containers become a dev platform for agents. This introduces a container-in-container pattern (Docker-in-Docker), where an agent running inside a container needs to build and run other containers.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-12">
+                <a href="https://www.docker.com/blog/blog-generate-images-locally-dmr-open-webui/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Generate Images Locally with Docker Model Runner and Open WebUI
+                </a>
+                <p class="mb-1 small text-light">Behind the scenes this runs: docker run --rm \ -p 3000:8080 \ -e OPENAI_API_BASE=http://model-runner. If you use Docker CE, you’ll see the docker/model-runner container address instead of model-runner.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-12">
+                <a href="https://www.docker.com/blog/a-virtual-agent-team-at-docker-how-the-coding-agent-sandboxes-team-uses-a-fleet-of-agents-to-ship-faster/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] A Virtual Agent team at Docker: How the Coding Agent Sandboxes team uses a fleet of agents to ship faster
+                </a>
+                <p class="mb-1 small text-light">The project provides secure, microVM-based isolation for running AI coding agents like Claude Code, Gemini, Codex, Docker Agent and Kiro. Every release needs testing across both platforms, across upgrade paths between versions, and under sustained load to catch resource leaks.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-12">
+                <a href="https://www.redhat.com/en/blog/turning-complexity-confidence-red-hat-technical-supportability-review-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Turning complexity into confidence with Red Hat Technical Supportability Review with AI
+                </a>
+                <p class="mb-1 small text-light">Reactive support models can be a liability when a single misconfiguration can stall a global rollout or an essential production upgrade. For IT organizations, the future of infrastructure is one of rapid, dynamic evolution and increasing demand.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-12">
+                <a href="https://www.redhat.com/en/blog/agentic-paradox-and-case-hybrid-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] The agentic paradox and the case for hybrid AI
+                </a>
+                <p class="mb-1 small text-light">While the power of these tools is undeniable, the current consumption models present a challenge. Most of these solutions are delivered leveraging a model-as-a-service approach that’s poised to trigger an AI version of the cloud paradox: The agentic paradox.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-12">
+                <a href="https://about.gitlab.com/blog/gitaly-on-kubernetes-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Consolidate your GitLab stack with Gitaly on Kubernetes
+                </a>
+                <p class="mb-1 small text-light">11 came good news for teams running GitLab on Kubernetes: Gitaly on Kubernetes is now generally available. Those days are over; Gitaly on Kubernetes is now an officially supported deployment option.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-12">
+                <a href="https://about.gitlab.com/blog/fine-grained-pats/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Limit credential exposure with fine-grained personal access tokens
+                </a>
+                <p class="mb-1 small text-light">Personal access tokens (PATs) authenticate most of the automation that runs in GitLab. When a token is issued with a broad scope like api or read_api, it extends permissions across many projects and groups.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-05-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-05-12">
+                <a href="https://blog.sentry.io/nextjs-supabase-observability/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] From vibe code to production-ready: observability for Next.js and Supabase apps
+                </a>
+                <p class="mb-1 small text-light">js frontend through Supabase Edge Functions to Postgres, all in one place Log draining from Supabase into Sentry gives you a single source of truth for errors, traces, and infrastructure logs Sentry auto-detects N+1 queries, slow spans, and performance regressions without manual configuration See...</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-05-12
                     
                 </small>
             </li>

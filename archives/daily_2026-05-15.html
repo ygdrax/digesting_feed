@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - May 15, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - May 15, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for May 15, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-05-15">2026-05-15 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2026-05-15 09:07:24
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,206 +126,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-15">
-                <a href="https://www.reddit.com/r/devops/comments/1tdork6/beginner_in_devops_review_my_bitbucket_pipeline/" target="_blank" class="fw-bold text-decoration-none">
-                    Beginner in DevOps, review my Bitbucket pipeline (AWS ECR -> EC2)
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-15">
+                <a href="https://blog.cloudflare.com/clickhouse-query-plan-contention/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Our billing pipeline was suddenly slow. The culprit was a hidden bottleneck in ClickHouse
                 </a>
-                <p class="mb-1 small text-light">Hi everyone, I’m a beginner DevOps engineer working with Bitbucket Pipelines, AWS ECR, and an EC2 Ubuntu instance. This pipeline builds my Flask backend Docker image, pushes to ECR, then SSH to EC2 to restart the container.</p>
+                <p class="mb-1 small text-light">In ClickHouse, the way data is sorted is crucial to query performance. The problem: one retention policy to rule them all Cloudflare has been using ClickHouse for many years, since before it had native Time-to-Live (TTL) features.</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-15">
-                <a href="https://www.reddit.com/r/devops/comments/1td072o/built_a_selfhosted_operational_alert_system_for/" target="_blank" class="fw-bold text-decoration-none">
-                    Built a self-hosted operational alert system for Linux & Docker (looking for feedback)
-                </a>
-                <p class="mb-1 small text-light">That helped me rethink how I’m framing it.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-15">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1td12p9/minio_audit_logs_in_production_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    MinIO audit logs in production - Kubernetes deployment
-                </a>
-                <p class="mb-1 small text-light">submitted by /u/Old-Broccoli-4704</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-15">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1tcsiin/a_quick_summary_about_aiml_related_works_in/" target="_blank" class="fw-bold text-decoration-none">
-                    A quick summary about AI/ML related works in Kubernetes SIGs and WGs
-                </a>
-                <p class="mb-1 small text-light">com/kubernetes/community/blob/main/sig-list. This picture only lists about ongoing tasks/features around AI/ML in Kubernetes Community.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-15">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1tas2x9/at_what_cluster_size_does_kubernetes_become/" target="_blank" class="fw-bold text-decoration-none">
-                    At what cluster size does Kubernetes become painful?
-                </a>
-                <p class="mb-1 small text-light">Curious where people feel Kubernetes complexity really starts becoming painful operationally. Feels like a lot of teams are fine early on, but once infra scales, troubleshooting and visibility become significantly harder.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-15">
-                <a href="https://netflixtechblog.medium.com/data-projects-managing-data-assets-at-netflix-scale-7ca25888591e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Data Projects: Managing Data Assets at Netflix Scale
-                </a>
-                <p class="mb-1 small text-light">By Amer Hesson, Marcelo Mayworm, James Mulcahy, and Brittany TruongThe Problem: Managing Assets at Netflix ScaleNetflix’s Data Platform is vast. Data Projects addresses this by promoting the solution from optional tooling to a foundational part of the data platform.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-15">
-                <a href="https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling ArchUnit with Nebula ArchRules
-                </a>
-                <p class="mb-1 small text-light">However, how will they know which downstream projects are using their API incorrectly, based on these. Case Study SolutionGoing back to our original problem, using ArchRules, we were able to deliver a platform for library authors to track the usage of their APIs.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-15">
-                <a href="https://netflixtechblog.com/state-of-routing-in-model-serving-16e22fe18741?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] State of Routing in Model Serving
-                </a>
-                <p class="mb-1 small text-light">This common set of request contexts across domains enables them to share a standard API abstraction and standardizes how various client microservices can uniformly integrate with the serving app.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-15">
-                <a href="https://netflixtechblog.com/scaling-camera-file-processing-at-netflix-6dab2b1e80be?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling Camera File Processing at Netflix
-                </a>
-                <p class="mb-1 small text-light">Their FilmLight API (FLAPI) allows us to use that same media processing engine as a backend API. Within that ecosystem, the FilmLight API plays the following key roles.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-15">
-                <a href="https://azure.microsoft.com/en-us/blog/from-commit-to-cloud-powering-whats-next-for-postgresql/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] From commit to cloud: Powering what’s next for PostgreSQL
-                </a>
-                <p class="mb-1 small text-light">Improvements made upstream benefit the entire PostgreSQL ecosystem, while lessons learned from large‑scale deployments continue to inform future development. These changes land upstream first, ensuring that improvements are broadly available not tied to any single cloud or service.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-15">
-                <a href="https://azure.microsoft.com/en-us/blog/advancing-enterprise-ai-new-sap-on-azure-announcements-from-sap-sapphire-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Advancing enterprise AI: New SAP on Azure announcements from SAP Sapphire 2026
-                </a>
-                <p class="mb-1 small text-light">SAP’s enterprise applications and data—spanning across SAP Business AI Platform and Joule—connect smoothly with Microsoft Teams, Microsoft Fabric, Microsoft Copilot, and a new generation of AI agents.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-15">
-                <a href="https://azure.microsoft.com/en-us/blog/build-ai-apps-with-azure-cosmos-db-key-trends-from-cosmos-conf-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Build AI apps with Azure Cosmos DB: Key trends from Cosmos Conf 2026
-                </a>
-                <p class="mb-1 small text-light">It is fundamentally reshaping how applications—and data platforms—are built. alternatives, and enables high performance with simplified architecture.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-15">
-                <a href="https://www.docker.com/blog/comparing-sandboxing-approaches-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Comparing Different Approaches to Sandboxing
-                </a>
-                <p class="mb-1 small text-light">However, the model becomes more complex when containers become a dev platform for agents. This introduces a container-in-container pattern (Docker-in-Docker), where an agent running inside a container needs to build and run other containers.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-15">
-                <a href="https://www.docker.com/blog/blog-generate-images-locally-dmr-open-webui/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Generate Images Locally with Docker Model Runner and Open WebUI
-                </a>
-                <p class="mb-1 small text-light">Behind the scenes this runs: docker run --rm \ -p 3000:8080 \ -e OPENAI_API_BASE=http://model-runner. If you use Docker CE, you’ll see the docker/model-runner container address instead of model-runner.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-15">
-                <a href="https://www.redhat.com/en/blog/scaling-enterprise-ai-delivering-models-service-openshift-ai-34" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Scaling enterprise AI: Delivering Models-as-a-Service with Red Hat OpenShift AI 3.4
-                </a>
-                <p class="mb-1 small text-light">4 and Red Hat Connectivity Link deliver Models-as-a-Service (MaaS) to centrally govern and scale enterprise AI model serving. Many enterprises have moved past the AI pilot phase.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-15">
-                <a href="https://www.redhat.com/en/blog/introducing-auto-ml-and-auto-rag-guided-experience-ai-engineers-red-hat-openshift-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Introducing AutoML and AutoRAG: Guided experience for AI engineers in Red Hat OpenShift AI
-                </a>
-                <p class="mb-1 small text-light">As organizations move from AI experimentation toward scalable production, the complexity of manually building high-performing AI models and retrieval systems often creates a significant bottleneck.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-15">
-                <a href="https://about.gitlab.com/blog/gitaly-on-kubernetes-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Consolidate your GitLab stack with Gitaly on Kubernetes
-                </a>
-                <p class="mb-1 small text-light">11 came good news for teams running GitLab on Kubernetes: Gitaly on Kubernetes is now generally available. Those days are over; Gitaly on Kubernetes is now an officially supported deployment option.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
+                    Cloudflare | 2026-05-15
                     
                 </small>
             </li>
@@ -320,7 +145,7 @@
                 <p class="mb-1 small text-light">Article URL: https://writing.antonleicht.me/p/cut-off Comments URL: https://news.ycombinator.com/item?id=48143284 Points: 146 # Comments: 117</p>
                 <small class="text-secondary">
                     
-                    Hacker News
+                    Hacker News | 2026-05-15
                     
                 </small>
             </li>
@@ -332,7 +157,7 @@
                 <p class="mb-1 small text-light">Article URL: https://www.ycombinator.com/companies/infracost/jobs/NzwUQ7c-senior-developer-advocate Comments URL: https://news.ycombinator.com/item?id=48141191 Points: 0 # Comments: 0</p>
                 <small class="text-secondary">
                     
-                    Hacker News
+                    Hacker News | 2026-05-15
                     
                 </small>
             </li>
@@ -344,7 +169,7 @@
                 <p class="mb-1 small text-light">externalIPs field for Service was an early attempt to provide cloud-load-balancer-like functionality for non-cloud clusters. externalIPs that can be used to add additional IP addresses that a Service will respond on.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-05-15
                     
                 </small>
             </li>
@@ -356,7 +181,7 @@
                 <p class="mb-1 small text-light">Volume group snapshots were introduced as an Alpha feature with the Kubernetes v1. Consistent group support provides crash consistency across all volumes in the group without the need for application quiescence.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-05-15
                     
                 </small>
             </li>
@@ -368,7 +193,7 @@
                 <p class="mb-1 small text-light">It’s a multi-cluster management dashboard for Kubernetes, and it sits inside the KubeStellar project in the Cloud Native Computing Foundation (CNCF) Sandbox. For open source maintainers, this directly addresses the burnout problem that keeps surfacing in CNCF community conversations.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-05-15
                     
                 </small>
             </li>
@@ -380,7 +205,7 @@
                 <p class="mb-1 small text-light">Kubernetes powers your products, but with that power and flexibility comes organizational challenges around managing complexity and maintenance.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-05-15
                     
                 </small>
             </li>
@@ -392,19 +217,211 @@
                 <p class="mb-1 small text-light">The shape is the same as a lot of infrastructure shifts before it. Where this lands for infrastructure work Two things from the new agent shape map cleanly onto infrastructure work.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-05-15
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-15">
-                <a href="https://blog.cloudflare.com/clickhouse-query-plan-contention/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Our billing pipeline was suddenly slow. The culprit was a hidden bottleneck in ClickHouse
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-15">
+                <a href="https://www.reddit.com/r/devops/comments/1tdork6/beginner_in_devops_review_my_bitbucket_pipeline/" target="_blank" class="fw-bold text-decoration-none">
+                    Beginner in DevOps, review my Bitbucket pipeline (AWS ECR -> EC2)
                 </a>
-                <p class="mb-1 small text-light">In ClickHouse, the way data is sorted is crucial to query performance. The problem: one retention policy to rule them all Cloudflare has been using ClickHouse for many years, since before it had native Time-to-Live (TTL) features.</p>
+                <p class="mb-1 small text-light">Hi everyone, I’m a beginner DevOps engineer working with Bitbucket Pipelines, AWS ECR, and an EC2 Ubuntu instance. This pipeline builds my Flask backend Docker image, pushes to ECR, then SSH to EC2 to restart the container.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Reddit | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-15">
+                <a href="https://www.reddit.com/r/devops/comments/1td072o/built_a_selfhosted_operational_alert_system_for/" target="_blank" class="fw-bold text-decoration-none">
+                    Built a self-hosted operational alert system for Linux & Docker (looking for feedback)
+                </a>
+                <p class="mb-1 small text-light">That helped me rethink how I’m framing it.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-15">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1td12p9/minio_audit_logs_in_production_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    MinIO audit logs in production - Kubernetes deployment
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/Old-Broccoli-4704</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-15">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1tcsiin/a_quick_summary_about_aiml_related_works_in/" target="_blank" class="fw-bold text-decoration-none">
+                    A quick summary about AI/ML related works in Kubernetes SIGs and WGs
+                </a>
+                <p class="mb-1 small text-light">com/kubernetes/community/blob/main/sig-list. This picture only lists about ongoing tasks/features around AI/ML in Kubernetes Community.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-15">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1tas2x9/at_what_cluster_size_does_kubernetes_become/" target="_blank" class="fw-bold text-decoration-none">
+                    At what cluster size does Kubernetes become painful?
+                </a>
+                <p class="mb-1 small text-light">Curious where people feel Kubernetes complexity really starts becoming painful operationally. Feels like a lot of teams are fine early on, but once infra scales, troubleshooting and visibility become significantly harder.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-15">
+                <a href="https://netflixtechblog.medium.com/data-projects-managing-data-assets-at-netflix-scale-7ca25888591e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Data Projects: Managing Data Assets at Netflix Scale
+                </a>
+                <p class="mb-1 small text-light">By Amer Hesson, Marcelo Mayworm, James Mulcahy, and Brittany TruongThe Problem: Managing Assets at Netflix ScaleNetflix’s Data Platform is vast. Data Projects addresses this by promoting the solution from optional tooling to a foundational part of the data platform.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-15">
+                <a href="https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling ArchUnit with Nebula ArchRules
+                </a>
+                <p class="mb-1 small text-light">However, how will they know which downstream projects are using their API incorrectly, based on these. Case Study SolutionGoing back to our original problem, using ArchRules, we were able to deliver a platform for library authors to track the usage of their APIs.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-15">
+                <a href="https://netflixtechblog.com/state-of-routing-in-model-serving-16e22fe18741?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] State of Routing in Model Serving
+                </a>
+                <p class="mb-1 small text-light">This common set of request contexts across domains enables them to share a standard API abstraction and standardizes how various client microservices can uniformly integrate with the serving app.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-15">
+                <a href="https://netflixtechblog.com/scaling-camera-file-processing-at-netflix-6dab2b1e80be?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling Camera File Processing at Netflix
+                </a>
+                <p class="mb-1 small text-light">Their FilmLight API (FLAPI) allows us to use that same media processing engine as a backend API. Within that ecosystem, the FilmLight API plays the following key roles.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-15">
+                <a href="https://azure.microsoft.com/en-us/blog/from-commit-to-cloud-powering-whats-next-for-postgresql/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] From commit to cloud: Powering what’s next for PostgreSQL
+                </a>
+                <p class="mb-1 small text-light">Improvements made upstream benefit the entire PostgreSQL ecosystem, while lessons learned from large‑scale deployments continue to inform future development. These changes land upstream first, ensuring that improvements are broadly available not tied to any single cloud or service.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-15">
+                <a href="https://azure.microsoft.com/en-us/blog/advancing-enterprise-ai-new-sap-on-azure-announcements-from-sap-sapphire-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Advancing enterprise AI: New SAP on Azure announcements from SAP Sapphire 2026
+                </a>
+                <p class="mb-1 small text-light">SAP’s enterprise applications and data—spanning across SAP Business AI Platform and Joule—connect smoothly with Microsoft Teams, Microsoft Fabric, Microsoft Copilot, and a new generation of AI agents.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-15">
+                <a href="https://azure.microsoft.com/en-us/blog/build-ai-apps-with-azure-cosmos-db-key-trends-from-cosmos-conf-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Build AI apps with Azure Cosmos DB: Key trends from Cosmos Conf 2026
+                </a>
+                <p class="mb-1 small text-light">It is fundamentally reshaping how applications—and data platforms—are built. alternatives, and enables high performance with simplified architecture.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-15">
+                <a href="https://www.docker.com/blog/comparing-sandboxing-approaches-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Comparing Different Approaches to Sandboxing
+                </a>
+                <p class="mb-1 small text-light">However, the model becomes more complex when containers become a dev platform for agents. This introduces a container-in-container pattern (Docker-in-Docker), where an agent running inside a container needs to build and run other containers.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-15">
+                <a href="https://www.docker.com/blog/blog-generate-images-locally-dmr-open-webui/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Generate Images Locally with Docker Model Runner and Open WebUI
+                </a>
+                <p class="mb-1 small text-light">Behind the scenes this runs: docker run --rm \ -p 3000:8080 \ -e OPENAI_API_BASE=http://model-runner. If you use Docker CE, you’ll see the docker/model-runner container address instead of model-runner.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-15">
+                <a href="https://www.redhat.com/en/blog/scaling-enterprise-ai-delivering-models-service-openshift-ai-34" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Scaling enterprise AI: Delivering Models-as-a-Service with Red Hat OpenShift AI 3.4
+                </a>
+                <p class="mb-1 small text-light">4 and Red Hat Connectivity Link deliver Models-as-a-Service (MaaS) to centrally govern and scale enterprise AI model serving. Many enterprises have moved past the AI pilot phase.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-15">
+                <a href="https://www.redhat.com/en/blog/introducing-auto-ml-and-auto-rag-guided-experience-ai-engineers-red-hat-openshift-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Introducing AutoML and AutoRAG: Guided experience for AI engineers in Red Hat OpenShift AI
+                </a>
+                <p class="mb-1 small text-light">As organizations move from AI experimentation toward scalable production, the complexity of manually building high-performing AI models and retrieval systems often creates a significant bottleneck.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-05-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-15">
+                <a href="https://about.gitlab.com/blog/gitaly-on-kubernetes-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Consolidate your GitLab stack with Gitaly on Kubernetes
+                </a>
+                <p class="mb-1 small text-light">11 came good news for teams running GitLab on Kubernetes: Gitaly on Kubernetes is now generally available. Those days are over; Gitaly on Kubernetes is now an officially supported deployment option.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-05-15
                     
                 </small>
             </li>

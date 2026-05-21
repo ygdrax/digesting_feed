@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - May 21, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - May 21, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for May 21, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-05-21">2026-05-21 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 10 sources • Updated 2026-05-21 09:11:31
+                    Showing 25 total articles from 
+                    10 sources
+                    
                     
                 </span>
             </small>
@@ -107,266 +124,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-21">
-                <a href="https://www.reddit.com/r/devops/comments/1tjca3u/want_to_switch_to_clouddevops_engineer_role/" target="_blank" class="fw-bold text-decoration-none">
-                    Want to switch to Cloud/DevOps engineer role
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-21">
+                <a href="https://blog.cloudflare.com/clickhouse-query-plan-contention/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Our billing pipeline was suddenly slow. The culprit was a hidden bottleneck in ClickHouse
                 </a>
-                <p class="mb-1 small text-light">I’m now looking to transition into Cloud / DevOps engineering roles. I currently have learned Linux and it's useful commands and also have limited hands-on experience with cloud platforms and DevOps tools, but I’m actively learning Docker, CI/CD, and AWS fundamentals.</p>
+                <p class="mb-1 small text-light">In ClickHouse, the way data is sorted is crucial to query performance. The problem: one retention policy to rule them all Cloudflare has been using ClickHouse for many years, since before it had native Time-to-Live (TTL) features.</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-21">
-                <a href="https://www.reddit.com/r/devops/comments/1tjdatq/python_dev_djangofastapidockerk8s_trying_to_break/" target="_blank" class="fw-bold text-decoration-none">
-                    Python dev (Django/FastAPI/Docker/K8s) trying to break into DevOps — what should I prioritize, and what are the real problems no one warns you about?
-                </a>
-                <p class="mb-1 small text-light">Now I want to go deeper into the operations side — CI/CD pipelines, infrastructure-as-code, monitoring, cloud, reliability engineering.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-21">
-                <a href="https://www.reddit.com/r/devops/comments/1tin1cr/automating_container_deployment_onpremises/" target="_blank" class="fw-bold text-decoration-none">
-                    Automating container deployment on-premises
-                </a>
-                <p class="mb-1 small text-light">I want to automate the creation and deployment of updated images. Our containers are currently hosted on a Linux VM and created with Docker Compose.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-21">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1tjbc30/running_a_nodelevel_binary_against_a_specific/" target="_blank" class="fw-bold text-decoration-none">
-                    Running a node-level binary against a specific pod’s container — Linux and Windows
-                </a>
-                <p class="mb-1 small text-light">On Windows, nsenter doesn’t exist since containers use Job Objects / Server Silos instead of Linux namespaces. What’s the equivalent pattern for running a node-installed tool against a specific pod’s container.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-21">
-                <a href="https://netflixtechblog.medium.com/data-projects-managing-data-assets-at-netflix-scale-7ca25888591e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Data Projects: Managing Data Assets at Netflix Scale
-                </a>
-                <p class="mb-1 small text-light">By Amer Hesson, Marcelo Mayworm, James Mulcahy, and Brittany TruongThe Problem: Managing Assets at Netflix ScaleNetflix’s Data Platform is vast. Data Projects addresses this by promoting the solution from optional tooling to a foundational part of the data platform.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-21">
-                <a href="https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling ArchUnit with Nebula ArchRules
-                </a>
-                <p class="mb-1 small text-light">However, how will they know which downstream projects are using their API incorrectly, based on these. Case Study SolutionGoing back to our original problem, using ArchRules, we were able to deliver a platform for library authors to track the usage of their APIs.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-21">
-                <a href="https://netflixtechblog.com/state-of-routing-in-model-serving-16e22fe18741?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] State of Routing in Model Serving
-                </a>
-                <p class="mb-1 small text-light">This common set of request contexts across domains enables them to share a standard API abstraction and standardizes how various client microservices can uniformly integrate with the serving app.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-21">
-                <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-deploy-high-performance-workloads-with-a-system-level-approach/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Azure IaaS: Deploy high-performance workloads with a system-level approach
-                </a>
-                <p class="mb-1 small text-light">In this article Rethinking performance in the cloudAccelerating AI workloads with system-level performanceScaling cloud-native applications without sacrificing performanceSustaining performance for business-critical systemsPerformance as a coordinated systemPractical guidance: Optimizing for your...</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-21">
-                <a href="https://azure.microsoft.com/en-us/blog/from-commit-to-cloud-powering-whats-next-for-postgresql/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] From commit to cloud: Powering what’s next for PostgreSQL
-                </a>
-                <p class="mb-1 small text-light">Improvements made upstream benefit the entire PostgreSQL ecosystem, while lessons learned from large‑scale deployments continue to inform future development. These changes land upstream first, ensuring that improvements are broadly available not tied to any single cloud or service.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-21">
-                <a href="https://azure.microsoft.com/en-us/blog/advancing-enterprise-ai-new-sap-on-azure-announcements-from-sap-sapphire-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Advancing enterprise AI: New SAP on Azure announcements from SAP Sapphire 2026
-                </a>
-                <p class="mb-1 small text-light">SAP’s enterprise applications and data—spanning across SAP Business AI Platform and Joule—connect smoothly with Microsoft Teams, Microsoft Fabric, Microsoft Copilot, and a new generation of AI agents.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-21">
-                <a href="https://www.redhat.com/en/blog/rhel-102-and-98-intelligent-evolution-enterprise-linux" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat Enterprise Linux 10.2 and 9.8 are here: The intelligent evolution of enterprise Linux
-                </a>
-                <p class="mb-1 small text-light">8 are here, evolving the operating system from a foundation to a powerful engine for critical applications, security, and innovation. This integrated strategy enables your organization to innovate, simplify, protect, and trust with the world's leading enterprise Linux platform.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-21">
-                <a href="https://www.redhat.com/en/blog/building-trust-through-ai-red-teaming-red-hats-approach-testing-model-safety" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Building trust through AI red teaming: Red Hat's approach to testing model safety
-                </a>
-                <p class="mb-1 small text-light">In the last few years, large language models (LLMs) have moved from research labs to production systems powering critical business functions.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-05-21">
-                <a href="https://snyk.io/blog/tanstack-npm-packages-compromised/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] TanStack Npm Packages Compromised Inside The Mini Shai Hulud Supply Chain Attack
-                </a>
-                <p class="mb-1 small text-light">On May 11, 2026, the Mini Shai-Hulud worm compromised 84 npm package artifacts across 42 @tanstack/* packages (as well as @squawk/*, @mistralai/* packages, and others) by chaining a GitHub Actions "Pwn Request," cache poisoning, and OIDC token extraction from runner memory — producing the first npm supply chain attack with valid SLSA Build Level 3 attestations. Here's what happened, what was stolen, and what you need to do right now.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-21">
-                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
-                </a>
-                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-21">
-                <a href="https://engineering.atspotify.com/2026/5/spotify-ads-api-claude-plugins/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins
-                </a>
-                <p class="mb-1 small text-light">Turning OpenAPI spec and Markdown files into a conversational ads management tool — no compiled code required. The post Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-21">
-                <a href="https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4)
-                </a>
-                <p class="mb-1 small text-light">How we used Honk, Backstage, and Fleet Management to ease the pain of migrating thousands of datasets. The post Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-21">
-                <a href="https://engineering.atspotify.com/2026/4/anthropic-agentic-development/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Let’s Talk Agentic Development: Spotify x Anthropic Live
-                </a>
-                <p class="mb-1 small text-light">AI agents are transforming the way we build — and even how we think of ourselves as software developers. Both... The post Let’s Talk Agentic Development: Spotify x Anthropic Live appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-21">
-                <a href="https://engineering.atspotify.com/2026/3/inside-the-archive-2025-wrapped/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Inside the Archive: The Tech Behind Your 2025 Wrapped Highlights
-                </a>
-                <p class="mb-1 small text-light">What if we could identify interesting listening moments from your year, and tell you a story about them? The post Inside the Archive: The Tech Behind Your 2025 Wrapped Highlights appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-21">
-                <a href="https://kubernetes.io/blog/2026/05/20/etcd-370-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing etcd 3.7.0-beta.0
-                </a>
-                <p class="mb-1 small text-light">This new version of the popular distributed database and key Kubernetes component includes the long-requested RangeStream feature, as well as a refactoring and cleanup of multiple legacy components and interfaces.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-21">
-                <a href="https://kubernetes.io/blog/2026/05/14/kubernetes-v1-36-deprecation-and-removal-of-service-externalips/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36: Deprecation and removal of Service ExternalIPs
-                </a>
-                <p class="mb-1 small text-light">externalIPs field for Service was an early attempt to provide cloud-load-balancer-like functionality for non-cloud clusters. externalIPs that can be used to add additional IP addresses that a Service will respond on.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-21">
-                <a href="https://www.cncf.io/blog/2026/05/20/introducing-prempti-policy-and-visibility-for-ai-coding-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Introducing Prempti: Policy and visibility for AI coding agents
-                </a>
-                <p class="mb-1 small text-light">On May 12th, the Falco team introduced Prempti, a new experimental project in the Falco ecosystem. Falco, a CNCF graduated project and the de facto standard for cloud native runtime security, has long brought policy-driven detection to containers, Kubernetes, and hosts.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-05-21">
-                <a href="https://www.pulumi.com/blog/neo-integrations/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Neo Integrations: MCP Servers and Cloud CLIs
-                </a>
-                <p class="mb-1 small text-light">Pulumi Neo already understands your infrastructure: your code, your stacks, your state. The second half is CLI integrations: scopable access to aws, gcloud, az, and kubectl.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
+                    Cloudflare | 2026-05-21
                     
                 </small>
             </li>
@@ -378,7 +143,7 @@
                 <p class="mb-1 small text-light">This significantly reduces deployment complexity and allows organizations to adopt secure, scalable VDI and file access solutions faster than ever before. This helps simplify DevOps workflows and enables scalable integration across Azure Kubernetes Service (AKS) and enterprise applications.</p>
                 <small class="text-secondary">
                     
-                    Microsoft Azure
+                    Microsoft Azure | 2026-05-21
                     
                 </small>
             </li>
@@ -390,19 +155,271 @@
                 <p class="mb-1 small text-light">They write code, call APIs, install packages, and interact with production systems. This shift from passive to active changes not only the usefulness of agents, but also the security question around their activities entirely.</p>
                 <small class="text-secondary">
                     
-                    Red Hat
+                    Red Hat | 2026-05-21
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-21">
-                <a href="https://blog.cloudflare.com/clickhouse-query-plan-contention/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Our billing pipeline was suddenly slow. The culprit was a hidden bottleneck in ClickHouse
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-21">
+                <a href="https://kubernetes.io/blog/2026/05/20/etcd-370-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing etcd 3.7.0-beta.0
                 </a>
-                <p class="mb-1 small text-light">In ClickHouse, the way data is sorted is crucial to query performance. The problem: one retention policy to rule them all Cloudflare has been using ClickHouse for many years, since before it had native Time-to-Live (TTL) features.</p>
+                <p class="mb-1 small text-light">This new version of the popular distributed database and key Kubernetes component includes the long-requested RangeStream feature, as well as a refactoring and cleanup of multiple legacy components and interfaces.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Kubernetes | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-21">
+                <a href="https://kubernetes.io/blog/2026/05/14/kubernetes-v1-36-deprecation-and-removal-of-service-externalips/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Deprecation and removal of Service ExternalIPs
+                </a>
+                <p class="mb-1 small text-light">externalIPs field for Service was an early attempt to provide cloud-load-balancer-like functionality for non-cloud clusters. externalIPs that can be used to add additional IP addresses that a Service will respond on.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-21">
+                <a href="https://www.cncf.io/blog/2026/05/20/introducing-prempti-policy-and-visibility-for-ai-coding-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Introducing Prempti: Policy and visibility for AI coding agents
+                </a>
+                <p class="mb-1 small text-light">On May 12th, the Falco team introduced Prempti, a new experimental project in the Falco ecosystem. Falco, a CNCF graduated project and the de facto standard for cloud native runtime security, has long brought policy-driven detection to containers, Kubernetes, and hosts.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-05-21">
+                <a href="https://www.pulumi.com/blog/neo-integrations/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Neo Integrations: MCP Servers and Cloud CLIs
+                </a>
+                <p class="mb-1 small text-light">Pulumi Neo already understands your infrastructure: your code, your stacks, your state. The second half is CLI integrations: scopable access to aws, gcloud, az, and kubectl.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-21">
+                <a href="https://www.reddit.com/r/devops/comments/1tjca3u/want_to_switch_to_clouddevops_engineer_role/" target="_blank" class="fw-bold text-decoration-none">
+                    Want to switch to Cloud/DevOps engineer role
+                </a>
+                <p class="mb-1 small text-light">I’m now looking to transition into Cloud / DevOps engineering roles. I currently have learned Linux and it's useful commands and also have limited hands-on experience with cloud platforms and DevOps tools, but I’m actively learning Docker, CI/CD, and AWS fundamentals.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-21">
+                <a href="https://www.reddit.com/r/devops/comments/1tjdatq/python_dev_djangofastapidockerk8s_trying_to_break/" target="_blank" class="fw-bold text-decoration-none">
+                    Python dev (Django/FastAPI/Docker/K8s) trying to break into DevOps — what should I prioritize, and what are the real problems no one warns you about?
+                </a>
+                <p class="mb-1 small text-light">Now I want to go deeper into the operations side — CI/CD pipelines, infrastructure-as-code, monitoring, cloud, reliability engineering.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-21">
+                <a href="https://www.reddit.com/r/devops/comments/1tin1cr/automating_container_deployment_onpremises/" target="_blank" class="fw-bold text-decoration-none">
+                    Automating container deployment on-premises
+                </a>
+                <p class="mb-1 small text-light">I want to automate the creation and deployment of updated images. Our containers are currently hosted on a Linux VM and created with Docker Compose.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-21">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1tjbc30/running_a_nodelevel_binary_against_a_specific/" target="_blank" class="fw-bold text-decoration-none">
+                    Running a node-level binary against a specific pod’s container — Linux and Windows
+                </a>
+                <p class="mb-1 small text-light">On Windows, nsenter doesn’t exist since containers use Job Objects / Server Silos instead of Linux namespaces. What’s the equivalent pattern for running a node-installed tool against a specific pod’s container.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-21">
+                <a href="https://netflixtechblog.medium.com/data-projects-managing-data-assets-at-netflix-scale-7ca25888591e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Data Projects: Managing Data Assets at Netflix Scale
+                </a>
+                <p class="mb-1 small text-light">By Amer Hesson, Marcelo Mayworm, James Mulcahy, and Brittany TruongThe Problem: Managing Assets at Netflix ScaleNetflix’s Data Platform is vast. Data Projects addresses this by promoting the solution from optional tooling to a foundational part of the data platform.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-21">
+                <a href="https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling ArchUnit with Nebula ArchRules
+                </a>
+                <p class="mb-1 small text-light">However, how will they know which downstream projects are using their API incorrectly, based on these. Case Study SolutionGoing back to our original problem, using ArchRules, we were able to deliver a platform for library authors to track the usage of their APIs.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-21">
+                <a href="https://netflixtechblog.com/state-of-routing-in-model-serving-16e22fe18741?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] State of Routing in Model Serving
+                </a>
+                <p class="mb-1 small text-light">This common set of request contexts across domains enables them to share a standard API abstraction and standardizes how various client microservices can uniformly integrate with the serving app.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-21">
+                <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-deploy-high-performance-workloads-with-a-system-level-approach/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Azure IaaS: Deploy high-performance workloads with a system-level approach
+                </a>
+                <p class="mb-1 small text-light">In this article Rethinking performance in the cloudAccelerating AI workloads with system-level performanceScaling cloud-native applications without sacrificing performanceSustaining performance for business-critical systemsPerformance as a coordinated systemPractical guidance: Optimizing for your...</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-21">
+                <a href="https://azure.microsoft.com/en-us/blog/from-commit-to-cloud-powering-whats-next-for-postgresql/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] From commit to cloud: Powering what’s next for PostgreSQL
+                </a>
+                <p class="mb-1 small text-light">Improvements made upstream benefit the entire PostgreSQL ecosystem, while lessons learned from large‑scale deployments continue to inform future development. These changes land upstream first, ensuring that improvements are broadly available not tied to any single cloud or service.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-21">
+                <a href="https://azure.microsoft.com/en-us/blog/advancing-enterprise-ai-new-sap-on-azure-announcements-from-sap-sapphire-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Advancing enterprise AI: New SAP on Azure announcements from SAP Sapphire 2026
+                </a>
+                <p class="mb-1 small text-light">SAP’s enterprise applications and data—spanning across SAP Business AI Platform and Joule—connect smoothly with Microsoft Teams, Microsoft Fabric, Microsoft Copilot, and a new generation of AI agents.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-21">
+                <a href="https://www.redhat.com/en/blog/rhel-102-and-98-intelligent-evolution-enterprise-linux" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat Enterprise Linux 10.2 and 9.8 are here: The intelligent evolution of enterprise Linux
+                </a>
+                <p class="mb-1 small text-light">8 are here, evolving the operating system from a foundation to a powerful engine for critical applications, security, and innovation. This integrated strategy enables your organization to innovate, simplify, protect, and trust with the world's leading enterprise Linux platform.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-21">
+                <a href="https://www.redhat.com/en/blog/building-trust-through-ai-red-teaming-red-hats-approach-testing-model-safety" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Building trust through AI red teaming: Red Hat's approach to testing model safety
+                </a>
+                <p class="mb-1 small text-light">In the last few years, large language models (LLMs) have moved from research labs to production systems powering critical business functions.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-05-21">
+                <a href="https://snyk.io/blog/tanstack-npm-packages-compromised/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] TanStack Npm Packages Compromised Inside The Mini Shai Hulud Supply Chain Attack
+                </a>
+                <p class="mb-1 small text-light">On May 11, 2026, the Mini Shai-Hulud worm compromised 84 npm package artifacts across 42 @tanstack/* packages (as well as @squawk/*, @mistralai/* packages, and others) by chaining a GitHub Actions "Pwn Request," cache poisoning, and OIDC token extraction from runner memory — producing the first npm supply chain attack with valid SLSA Build Level 3 attestations. Here's what happened, what was stolen, and what you need to do right now.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-21">
+                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
+                </a>
+                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-21">
+                <a href="https://engineering.atspotify.com/2026/5/spotify-ads-api-claude-plugins/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins
+                </a>
+                <p class="mb-1 small text-light">Turning OpenAPI spec and Markdown files into a conversational ads management tool — no compiled code required. The post Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-21">
+                <a href="https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4)
+                </a>
+                <p class="mb-1 small text-light">How we used Honk, Backstage, and Fleet Management to ease the pain of migrating thousands of datasets. The post Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-21">
+                <a href="https://engineering.atspotify.com/2026/4/anthropic-agentic-development/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Let’s Talk Agentic Development: Spotify x Anthropic Live
+                </a>
+                <p class="mb-1 small text-light">AI agents are transforming the way we build — and even how we think of ourselves as software developers. Both... The post Let’s Talk Agentic Development: Spotify x Anthropic Live appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-05-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-21">
+                <a href="https://engineering.atspotify.com/2026/3/inside-the-archive-2025-wrapped/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Inside the Archive: The Tech Behind Your 2025 Wrapped Highlights
+                </a>
+                <p class="mb-1 small text-light">What if we could identify interesting listening moments from your year, and tell you a story about them? The post Inside the Archive: The Tech Behind Your 2025 Wrapped Highlights appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-05-21
                     
                 </small>
             </li>

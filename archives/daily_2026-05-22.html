@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - May 22, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - May 22, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for May 22, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-05-22">2026-05-22 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-05-22 09:09:44
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,242 +128,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-22">
-                <a href="https://www.reddit.com/r/devops/comments/1tk6apt/how_do_i_become_valuable_in_devops_cloud_within/" target="_blank" class="fw-bold text-decoration-none">
-                    How do I become valuable in DevOps & Cloud within the next 2 years as a student?
-                </a>
-                <p class="mb-1 small text-light">I’m currently at the end of my 2nd year in INFT course and want to build a career in DevOps and Cloud. Would appreciate guidance from people already working in DevOps or Cloud engineering.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-22">
-                <a href="https://www.reddit.com/r/devops/comments/1tkbh1x/built_an_internal_ai_assistant_four_months_ago/" target="_blank" class="fw-bold text-decoration-none">
-                    Built an internal AI assistant four months ago. security just asked what access it has. i have no idea
-                </a>
-                <p class="mb-1 small text-light">security came back with questions i couldn't answer. is anyone actually governing LLM agent access formally or is everyone just dealing with it when security asks.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-22">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1tjp4x5/setting_up_on_premises_llm_infrastructure_for/" target="_blank" class="fw-bold text-decoration-none">
-                    Setting up on premises LLM infrastructure for coding at a software company.
-                </a>
-                <p class="mb-1 small text-light">We’re a software company with ~1,500 employees, and I’ve been asked to evaluate what it would take and cost to build a production-grade on-prem LLM platform.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-22">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1tk4i3x/cacloud_canadianwebhosting_down_again/" target="_blank" class="fw-bold text-decoration-none">
-                    cacloud (canadianwebhosting) down again
-                </a>
-                <p class="mb-1 small text-light">Seems to be similar to Monday/Tuesday. Canadianwebhosting site is down as well as Cacloud.com. Similar time to the start of it on Monday as well. Fingers crossed it's not round two. submitted by /u/RomaniIteDomum-0</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-22">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1tkbpps/cis_vs_stig_for_container_security_honest_opinions/" target="_blank" class="fw-bold text-decoration-none">
-                    CIS vs STIG for container security – honest opinions?
-                </a>
-                <p class="mb-1 small text-light">hardened our Kubernetes environment to CIS Benchmark because that's what our SOC 2 and customer audits required. now we're being asked to meet DISA STIG for Kubernetes as well, DoD customer requirement.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-22">
-                <a href="https://netflixtechblog.medium.com/the-evolution-of-cassandra-data-movement-at-netflix-6e13329c80a1?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] The Evolution of Cassandra Data Movement at Netflix
-                </a>
-                <p class="mb-1 small text-light">Apache Cassandra powers mission critical applications at Netflix, including Member, Billing, Recommendations, Subscriptions and many more. This capability provides robust time travel functionality, essential for auditing, debugging, disaster recovery and reproducing past data states.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-22">
-                <a href="https://www.docker.com/blog/create-custom-mcp-catalogs-and-profiles/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Custom MCP Catalogs and Profiles: Advancing Enterprise MCP Adoption
+                <a href="https://www.docker.com/blog/ai-coding-agent-horror-stories-security-risks/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Coding Agent Horror Stories: The Security Crisis Threatening Developer Infrastructure
                 </a>
-                <p class="mb-1 small text-light">We can push our catalog to a container registry, in this example we’re using Docker Hub. ” Figure 2: A custom MCP catalog within the Docker Desktop app, including a newly added “Roll Dice” server.</p>
+                <p class="mb-1 small text-light">Security-First Architecture A Docker Sandbox is a microVM, not a container. Explore the Docker MCP Catalog: Discover MCP servers that connect your agents to external services through Docker’s security-first architecture.</p>
                 <small class="text-secondary">
                     
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-22">
-                <a href="https://www.redhat.com/en/blog/what-even-harness-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] What even is the harness in AI?
-                </a>
-                <p class="mb-1 small text-light">I recently saw OpenClaw referred to as a harness. It’s an agent runtime—it drives the agent loop.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-22">
-                <a href="https://about.gitlab.com/blog/secrets-manager-in-public-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Manage CI/CD credentials with GitLab Secrets Manager
-                </a>
-                <p class="mb-1 small text-light">It lands in an over-scoped CI/CD variable, a config file, or a. Our integrations for HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and Google Cloud Secret Manager work alongside GitLab Secrets Manager, so you can adopt it on your own timeline.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-22">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-transform-at-1-year-claude-platform-on-aws-ec2-m3-ultra-mac-instances-and-more-may-18-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: AWS Transform at 1 year, Claude Platform on AWS, EC2 M3 Ultra Mac instances, and more (May 18, 2026)
-                </a>
-                <p class="mb-1 small text-light">NET, Mainframe and VMware workloads, the first agentic AI service purpose-built for modernizing enterprise applications at scale. Claude Platform on AWS is operated by Anthropic, and customer data is processed outside the AWS security boundary.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-22">
-                <a href="https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] The AWS MCP Server is now generally available
-                </a>
-                <p class="mb-1 small text-light">The AWS MCP Server addresses this through a compact set of tools that do not consume your model’s context window. For enterprise customers, the AWS MCP Server provides a clear separation between human and agent permissions.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-22">
-                <a href="https://kubernetes.io/blog/2026/05/15/kubernetes-1-36-feature-mixed-version-proxy-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36: Mixed Version Proxy Graduates to Beta
-                </a>
-                <p class="mb-1 small text-light">The feature has evolved significantly since its initial release, addressing key gaps and modernizing its architecture. , a new API version introduced in the upgrade), that server returns a 404 Not Found.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-22">
-                <a href="https://www.cncf.io/blog/2026/05/21/how-netease-games-achieved-30-second-llm-cold-starts-on-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] How NetEase Games achieved 30-second LLM cold starts on Kubernetes
-                </a>
-                <p class="mb-1 small text-light">” On paper, serverless GPU infrastructure looked like a good fit for inference workloads. This configuration maps better to how platform teams actually manage model-serving infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-22">
-                <a href="https://blog.cloudflare.com/casb-anthropic-integration/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Announcing Claude Compliance API support with Cloudflare CASB
-                </a>
-                <p class="mb-1 small text-light">Today, we are extending Cloudflare’s cloud access security broker (CASB) to support the Claude Compliance API. What’s next We are continuing to expand CASB coverage for AI tools as providers release new enterprise security APIs.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-22">
-                <a href="https://blog.cloudflare.com/cyber-frontier-models/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Project Glasswing: what Mythos showed us
-                </a>
-                <p class="mb-1 small text-light">For the last few months, we've been testing a range of security-focused LLMs on our own infrastructure. Then they do it again, for a different feature, security boundary, or vulnerability class, several thousand times across the codebase.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-05-22">
-                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
-                </a>
-                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-05-22">
-                <a href="https://www.pulumi.com/blog/neo-automations/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Neo Automations: Scheduled Tasks Shipped as Pull Requests
-                </a>
-                <p class="mb-1 small text-light">Automations in action Your platform team runs stacks across staging and production, and the AWS, GCP, and Kubernetes providers keep shipping new versions.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-05-22">
-                <a href="https://www.pulumi.com/blog/seven-rules-ai-native-software-factory/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Seven Rules for Building an AI-Native Software Factory
-                </a>
-                <p class="mb-1 small text-light">When code is cheap, infrastructure-as-code tools like AWS Control Tower and Pulumi make it the easier path. Review: specialized checking agents look for bugs, API misuse, and security flaws.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-22">
-                <a href="https://www.docker.com/blog/docker-ai-governance-unlock-agent-autonomy-safely/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker AI Governance: Unlock Agent Autonomy, Safely
-                </a>
-                <p class="mb-1 small text-light">CI/CD doesn’t see it because the agent isn’t a pipeline. Strip the problem to first principles and an agent has two paths to do significant harm.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-22">
-                <a href="https://about.gitlab.com/blog/more-ai-models-for-duo-agent-platform-self-hosted/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] More AI models for GitLab Duo Agent Platform Self-Hosted
-                </a>
-                <p class="mb-1 small text-light">7Deployment optionsThe primary pattern is on-premises hardware running vLLM, GitLab's recommended serving platform for open source models. GitLab Duo Agent Platform Self-Hosted supports mixing self-hosted models with GitLab-managed models per feature.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
+                    Docker | 2026-05-22
                     
                 </small>
             </li>
@@ -358,7 +147,7 @@
                 <p class="mb-1 small text-light">36 introduces a new alpha counter metric route_controller_route_sync_total to the Cloud Controller Manager (CCM) route controller implementation at k8s.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-05-22
                     
                 </small>
             </li>
@@ -370,7 +159,7 @@
                 <p class="mb-1 small text-light">Yash joined as co-organizer and now leads Cloud Native Thane while Rohit splits time between cities. KubeCon + CloudNativeCon India is the moment a lot of community work over the last four years comes home.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-05-22
                     
                 </small>
             </li>
@@ -382,7 +171,7 @@
                 <p class="mb-1 small text-light">It enables teams to share code, infrastructure, and tools, so they can deliver the quality, performance and reliability customers need. The Cloud Native Computing Foundation (CNCF) hosts critical components of the global technology infrastructure, including Kubernetes, Prometheus, and Envoy.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-05-22
                     
                 </small>
             </li>
@@ -394,19 +183,247 @@
                 <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-05-22
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-22">
-                <a href="https://www.docker.com/blog/ai-coding-agent-horror-stories-security-risks/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Coding Agent Horror Stories: The Security Crisis Threatening Developer Infrastructure
+                <a href="https://www.docker.com/blog/docker-ai-governance-unlock-agent-autonomy-safely/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker AI Governance: Unlock Agent Autonomy, Safely
                 </a>
-                <p class="mb-1 small text-light">Security-First Architecture A Docker Sandbox is a microVM, not a container. Explore the Docker MCP Catalog: Discover MCP servers that connect your agents to external services through Docker’s security-first architecture.</p>
+                <p class="mb-1 small text-light">CI/CD doesn’t see it because the agent isn’t a pipeline. Strip the problem to first principles and an agent has two paths to do significant harm.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-22">
+                <a href="https://about.gitlab.com/blog/more-ai-models-for-duo-agent-platform-self-hosted/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] More AI models for GitLab Duo Agent Platform Self-Hosted
+                </a>
+                <p class="mb-1 small text-light">7Deployment optionsThe primary pattern is on-premises hardware running vLLM, GitLab's recommended serving platform for open source models. GitLab Duo Agent Platform Self-Hosted supports mixing self-hosted models with GitLab-managed models per feature.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-22">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-transform-at-1-year-claude-platform-on-aws-ec2-m3-ultra-mac-instances-and-more-may-18-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: AWS Transform at 1 year, Claude Platform on AWS, EC2 M3 Ultra Mac instances, and more (May 18, 2026)
+                </a>
+                <p class="mb-1 small text-light">NET, Mainframe and VMware workloads, the first agentic AI service purpose-built for modernizing enterprise applications at scale. Claude Platform on AWS is operated by Anthropic, and customer data is processed outside the AWS security boundary.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-22">
+                <a href="https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] The AWS MCP Server is now generally available
+                </a>
+                <p class="mb-1 small text-light">The AWS MCP Server addresses this through a compact set of tools that do not consume your model’s context window. For enterprise customers, the AWS MCP Server provides a clear separation between human and agent permissions.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-22">
+                <a href="https://kubernetes.io/blog/2026/05/15/kubernetes-1-36-feature-mixed-version-proxy-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Mixed Version Proxy Graduates to Beta
+                </a>
+                <p class="mb-1 small text-light">The feature has evolved significantly since its initial release, addressing key gaps and modernizing its architecture. , a new API version introduced in the upgrade), that server returns a 404 Not Found.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-22">
+                <a href="https://www.cncf.io/blog/2026/05/21/how-netease-games-achieved-30-second-llm-cold-starts-on-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] How NetEase Games achieved 30-second LLM cold starts on Kubernetes
+                </a>
+                <p class="mb-1 small text-light">” On paper, serverless GPU infrastructure looked like a good fit for inference workloads. This configuration maps better to how platform teams actually manage model-serving infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-22">
+                <a href="https://blog.cloudflare.com/casb-anthropic-integration/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Announcing Claude Compliance API support with Cloudflare CASB
+                </a>
+                <p class="mb-1 small text-light">Today, we are extending Cloudflare’s cloud access security broker (CASB) to support the Claude Compliance API. What’s next We are continuing to expand CASB coverage for AI tools as providers release new enterprise security APIs.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-22">
+                <a href="https://blog.cloudflare.com/cyber-frontier-models/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Project Glasswing: what Mythos showed us
+                </a>
+                <p class="mb-1 small text-light">For the last few months, we've been testing a range of security-focused LLMs on our own infrastructure. Then they do it again, for a different feature, security boundary, or vulnerability class, several thousand times across the codebase.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-05-22">
+                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
+                </a>
+                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-05-22">
+                <a href="https://www.pulumi.com/blog/neo-automations/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Neo Automations: Scheduled Tasks Shipped as Pull Requests
+                </a>
+                <p class="mb-1 small text-light">Automations in action Your platform team runs stacks across staging and production, and the AWS, GCP, and Kubernetes providers keep shipping new versions.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-05-22">
+                <a href="https://www.pulumi.com/blog/seven-rules-ai-native-software-factory/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Seven Rules for Building an AI-Native Software Factory
+                </a>
+                <p class="mb-1 small text-light">When code is cheap, infrastructure-as-code tools like AWS Control Tower and Pulumi make it the easier path. Review: specialized checking agents look for bugs, API misuse, and security flaws.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-22">
+                <a href="https://www.reddit.com/r/devops/comments/1tk6apt/how_do_i_become_valuable_in_devops_cloud_within/" target="_blank" class="fw-bold text-decoration-none">
+                    How do I become valuable in DevOps & Cloud within the next 2 years as a student?
+                </a>
+                <p class="mb-1 small text-light">I’m currently at the end of my 2nd year in INFT course and want to build a career in DevOps and Cloud. Would appreciate guidance from people already working in DevOps or Cloud engineering.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-22">
+                <a href="https://www.reddit.com/r/devops/comments/1tkbh1x/built_an_internal_ai_assistant_four_months_ago/" target="_blank" class="fw-bold text-decoration-none">
+                    Built an internal AI assistant four months ago. security just asked what access it has. i have no idea
+                </a>
+                <p class="mb-1 small text-light">security came back with questions i couldn't answer. is anyone actually governing LLM agent access formally or is everyone just dealing with it when security asks.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-22">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1tjp4x5/setting_up_on_premises_llm_infrastructure_for/" target="_blank" class="fw-bold text-decoration-none">
+                    Setting up on premises LLM infrastructure for coding at a software company.
+                </a>
+                <p class="mb-1 small text-light">We’re a software company with ~1,500 employees, and I’ve been asked to evaluate what it would take and cost to build a production-grade on-prem LLM platform.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-22">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1tk4i3x/cacloud_canadianwebhosting_down_again/" target="_blank" class="fw-bold text-decoration-none">
+                    cacloud (canadianwebhosting) down again
+                </a>
+                <p class="mb-1 small text-light">Seems to be similar to Monday/Tuesday. Canadianwebhosting site is down as well as Cacloud.com. Similar time to the start of it on Monday as well. Fingers crossed it's not round two. submitted by /u/RomaniIteDomum-0</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-22">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1tkbpps/cis_vs_stig_for_container_security_honest_opinions/" target="_blank" class="fw-bold text-decoration-none">
+                    CIS vs STIG for container security – honest opinions?
+                </a>
+                <p class="mb-1 small text-light">hardened our Kubernetes environment to CIS Benchmark because that's what our SOC 2 and customer audits required. now we're being asked to meet DISA STIG for Kubernetes as well, DoD customer requirement.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-22">
+                <a href="https://netflixtechblog.medium.com/the-evolution-of-cassandra-data-movement-at-netflix-6e13329c80a1?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] The Evolution of Cassandra Data Movement at Netflix
+                </a>
+                <p class="mb-1 small text-light">Apache Cassandra powers mission critical applications at Netflix, including Member, Billing, Recommendations, Subscriptions and many more. This capability provides robust time travel functionality, essential for auditing, debugging, disaster recovery and reproducing past data states.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-22">
+                <a href="https://www.docker.com/blog/create-custom-mcp-catalogs-and-profiles/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Custom MCP Catalogs and Profiles: Advancing Enterprise MCP Adoption
+                </a>
+                <p class="mb-1 small text-light">We can push our catalog to a container registry, in this example we’re using Docker Hub. ” Figure 2: A custom MCP catalog within the Docker Desktop app, including a newly added “Roll Dice” server.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-22">
+                <a href="https://www.redhat.com/en/blog/what-even-harness-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] What even is the harness in AI?
+                </a>
+                <p class="mb-1 small text-light">I recently saw OpenClaw referred to as a harness. It’s an agent runtime—it drives the agent loop.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-05-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-22">
+                <a href="https://about.gitlab.com/blog/secrets-manager-in-public-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Manage CI/CD credentials with GitLab Secrets Manager
+                </a>
+                <p class="mb-1 small text-light">It lands in an over-scoped CI/CD variable, a config file, or a. Our integrations for HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and Google Cloud Secret Manager work alongside GitLab Secrets Manager, so you can adopt it on your own timeline.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-05-22
                     
                 </small>
             </li>

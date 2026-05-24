@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - May 24, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - May 24, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for May 24, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-05-24">2026-05-24 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 10 sources • Updated 2026-05-24 08:54:22
+                    Showing 25 total articles from 
+                    10 sources
+                    
                     
                 </span>
             </small>
@@ -107,266 +124,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-05-24">
-                <a href="https://adaptivesupport.amd.com/s/question/0D5Pd00001YQLdMKAX/why-is-vivado-20261-dropping-linux-support-for-free-tier-?language=en_US" target="_blank" class="fw-bold text-decoration-none">
-                    Why is Vivado 2026.1 dropping Linux support for free tier?
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-24">
+                <a href="https://blog.cloudflare.com/clickhouse-query-plan-contention/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Our billing pipeline was suddenly slow. The culprit was a hidden bottleneck in ClickHouse
                 </a>
-                <p class="mb-1 small text-light">Article URL: https://adaptivesupport.amd.com/s/question/0D5Pd00001YQLdMKAX/why-is-vivado-20261-dropping-linux-support-for-free-tier-?language=en_US Comments URL: https://news.ycombinator.com/item?id=48254309 Points: 120 # Comments: 35</p>
+                <p class="mb-1 small text-light">In ClickHouse, the way data is sorted is crucial to query performance. The problem: one retention policy to rule them all Cloudflare has been using ClickHouse for many years, since before it had native Time-to-Live (TTL) features.</p>
                 <small class="text-secondary">
                     
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-05-24">
-                <a href="https://www.bbc.com/news/articles/czd2qmdvmq6o" target="_blank" class="fw-bold text-decoration-none">
-                    Air France and Airbus found guilty of manslaughter over 2009 plane crash
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.bbc.com/news/articles/czd2qmdvmq6o Comments URL: https://news.ycombinator.com/item?id=48250980 Points: 80 # Comments: 51</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-24">
-                <a href="https://www.reddit.com/r/devops/comments/1tm44jv/can_you_share_your_cicd_pipeline_approach/" target="_blank" class="fw-bold text-decoration-none">
-                    Can you share your CI/CD pipeline approach?
-                </a>
-                <p class="mb-1 small text-light">Hi gus, can you share what tools are you using for your CI/CD pipeline? What are the modern best practises you guys follow. I have been working in Product based company, our tools are nowhere else used except in our org. Any of you are using Jenkins + Argo + K8S? submitted by /u/Basic_Let7303</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-24">
-                <a href="https://www.reddit.com/r/devops/comments/1tll4a5/hcp_migration_cloud_infra/" target="_blank" class="fw-bold text-decoration-none">
-                    HCP Migration | Cloud infra
-                </a>
-                <p class="mb-1 small text-light">I was recently assigned a project to migrate our CI/CD pipelines and Terraform state management from Azure Storage to HCP Terraform across multiple Azure subscriptions and Git repos. Does anyone here have experience with a similar migration.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-24">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1tlnzbl/how_do_i_realistically_prepare_for_google/" target="_blank" class="fw-bold text-decoration-none">
-                    How do I realistically prepare for Google SRE/Platform/DevOps roles in 2026?
-                </a>
-                <p class="mb-1 small text-light">Need some genuine guidance from people working at Google or similar org(Cloud/SRE/Platform/DevOps side). I’ve been preparing consistently for DevOps/SRE/Platform/Cloud kind of role at google but honestly I feel lost about the right roadmap now.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-24">
-                <a href="https://netflixtechblog.medium.com/data-projects-managing-data-assets-at-netflix-scale-7ca25888591e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Data Projects: Managing Data Assets at Netflix Scale
-                </a>
-                <p class="mb-1 small text-light">By Amer Hesson, Marcelo Mayworm, James Mulcahy, and Brittany TruongThe Problem: Managing Assets at Netflix ScaleNetflix’s Data Platform is vast. Data Projects addresses this by promoting the solution from optional tooling to a foundational part of the data platform.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-24">
-                <a href="https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Scaling ArchUnit with Nebula ArchRules
-                </a>
-                <p class="mb-1 small text-light">However, how will they know which downstream projects are using their API incorrectly, based on these. Case Study SolutionGoing back to our original problem, using ArchRules, we were able to deliver a platform for library authors to track the usage of their APIs.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-24">
-                <a href="https://netflixtechblog.com/state-of-routing-in-model-serving-16e22fe18741?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] State of Routing in Model Serving
-                </a>
-                <p class="mb-1 small text-light">This common set of request contexts across domains enables them to share a standard API abstraction and standardizes how various client microservices can uniformly integrate with the serving app.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-24">
-                <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-deploy-high-performance-workloads-with-a-system-level-approach/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Azure IaaS: Deploy high-performance workloads with a system-level approach
-                </a>
-                <p class="mb-1 small text-light">In this article Rethinking performance in the cloudAccelerating AI workloads with system-level performanceScaling cloud-native applications without sacrificing performanceSustaining performance for business-critical systemsPerformance as a coordinated systemPractical guidance: Optimizing for your...</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-24">
-                <a href="https://azure.microsoft.com/en-us/blog/from-commit-to-cloud-powering-whats-next-for-postgresql/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] From commit to cloud: Powering what’s next for PostgreSQL
-                </a>
-                <p class="mb-1 small text-light">Improvements made upstream benefit the entire PostgreSQL ecosystem, while lessons learned from large‑scale deployments continue to inform future development. These changes land upstream first, ensuring that improvements are broadly available not tied to any single cloud or service.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-05-24">
-                <a href="https://snyk.io/blog/laravel-lang-supply-chain-advisory/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Laravel Lang Supply Chain Advisory
-                </a>
-                <p class="mb-1 small text-light">Hundreds of historical Laravel Lang Packagist releases were republished with malicious code, putting Composer installs at risk of credential theft and secret exfiltration.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-24">
-                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
-                </a>
-                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-24">
-                <a href="https://engineering.atspotify.com/2026/5/spotify-ads-api-claude-plugins/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins
-                </a>
-                <p class="mb-1 small text-light">Turning OpenAPI spec and Markdown files into a conversational ads management tool — no compiled code required. The post Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-24">
-                <a href="https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4)
-                </a>
-                <p class="mb-1 small text-light">How we used Honk, Backstage, and Fleet Management to ease the pain of migrating thousands of datasets. The post Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-24">
-                <a href="https://engineering.atspotify.com/2026/4/anthropic-agentic-development/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Let’s Talk Agentic Development: Spotify x Anthropic Live
-                </a>
-                <p class="mb-1 small text-light">AI agents are transforming the way we build — and even how we think of ourselves as software developers. Both... The post Let’s Talk Agentic Development: Spotify x Anthropic Live appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-24">
-                <a href="https://engineering.atspotify.com/2026/3/inside-the-archive-2025-wrapped/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Inside the Archive: The Tech Behind Your 2025 Wrapped Highlights
-                </a>
-                <p class="mb-1 small text-light">What if we could identify interesting listening moments from your year, and tell you a story about them? The post Inside the Archive: The Tech Behind Your 2025 Wrapped Highlights appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-05-24">
-                <a href="https://engineering.fb.com/2026/05/11/security/labyrinth-1-1-end-to-end-encrypted-e2ee-backups-more-reliable/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Labyrinth 1.1: Making End-to-End Encrypted Backups Even More Reliable
-                </a>
-                <p class="mb-1 small text-light">1 enhances the reliability of end-to-end encrypted backups with a new sub-protocol that helps messages survive the loss of a device, a switched device, and long gaps between sign-ins. Read our updated white paper, “The Labyrinth Encrypted Message Storage Protocol” for more details.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-05-24">
-                <a href="https://engineering.fb.com/2026/05/01/security/meta-strengthening-end-to-end-encrypted-backups/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] How Meta Is Strengthening End-to-End Encrypted Backups
-                </a>
-                <p class="mb-1 small text-light">The HSM-based Backup Key Vault Meta’s HSM-based Backup Key Vault provides the foundation for end-to-end encrypted backups for WhatsApp and Messenger. In WhatsApp, these keys are hardcoded into the application.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-05-24">
-                <a href="https://engineering.fb.com/2026/04/21/ml-applications/modernizing-the-facebook-groups-search-to-unlock-the-power-of-community-knowledge/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Modernizing the Facebook Groups Search to Unlock the Power of Community Knowledge
-                </a>
-                <p class="mb-1 small text-light">Under this new framework, we’ve made tangible improvements in search engagement and relevance, with no increase in error rates. This enables the retrieval of content based on high-dimensional conceptual similarity, regardless of keyword overlap.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-24">
-                <a href="https://kubernetes.io/blog/2026/05/20/etcd-370-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing etcd 3.7.0-beta.0
-                </a>
-                <p class="mb-1 small text-light">This new version of the popular distributed database and key Kubernetes component includes the long-requested RangeStream feature, as well as a refactoring and cleanup of multiple legacy components and interfaces.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-24">
-                <a href="https://kubernetes.io/blog/2026/05/14/kubernetes-v1-36-deprecation-and-removal-of-service-externalips/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36: Deprecation and removal of Service ExternalIPs
-                </a>
-                <p class="mb-1 small text-light">externalIPs field for Service was an early attempt to provide cloud-load-balancer-like functionality for non-cloud clusters. externalIPs that can be used to add additional IP addresses that a Service will respond on.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-24">
-                <a href="https://www.cncf.io/blog/2026/05/20/introducing-prempti-policy-and-visibility-for-ai-coding-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Introducing Prempti: Policy and visibility for AI coding agents
-                </a>
-                <p class="mb-1 small text-light">On May 12th, the Falco team introduced Prempti, a new experimental project in the Falco ecosystem. Falco, a CNCF graduated project and the de facto standard for cloud native runtime security, has long brought policy-driven detection to containers, Kubernetes, and hosts.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
+                    Cloudflare | 2026-05-24
                     
                 </small>
             </li>
@@ -378,7 +143,7 @@
                 <p class="mb-1 small text-light">I am responsible for security, infrastructure, service desk and budget. My question for discussion is this—-what is AI infrastructure in this context.</p>
                 <small class="text-secondary">
                     
-                    Reddit
+                    Reddit | 2026-05-24
                     
                 </small>
             </li>
@@ -390,19 +155,271 @@
                 <p class="mb-1 small text-light">This significantly reduces deployment complexity and allows organizations to adopt secure, scalable VDI and file access solutions faster than ever before. This helps simplify DevOps workflows and enables scalable integration across Azure Kubernetes Service (AKS) and enterprise applications.</p>
                 <small class="text-secondary">
                     
-                    Microsoft Azure
+                    Microsoft Azure | 2026-05-24
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-24">
-                <a href="https://blog.cloudflare.com/clickhouse-query-plan-contention/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Our billing pipeline was suddenly slow. The culprit was a hidden bottleneck in ClickHouse
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-24">
+                <a href="https://kubernetes.io/blog/2026/05/20/etcd-370-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing etcd 3.7.0-beta.0
                 </a>
-                <p class="mb-1 small text-light">In ClickHouse, the way data is sorted is crucial to query performance. The problem: one retention policy to rule them all Cloudflare has been using ClickHouse for many years, since before it had native Time-to-Live (TTL) features.</p>
+                <p class="mb-1 small text-light">This new version of the popular distributed database and key Kubernetes component includes the long-requested RangeStream feature, as well as a refactoring and cleanup of multiple legacy components and interfaces.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Kubernetes | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-24">
+                <a href="https://kubernetes.io/blog/2026/05/14/kubernetes-v1-36-deprecation-and-removal-of-service-externalips/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Deprecation and removal of Service ExternalIPs
+                </a>
+                <p class="mb-1 small text-light">externalIPs field for Service was an early attempt to provide cloud-load-balancer-like functionality for non-cloud clusters. externalIPs that can be used to add additional IP addresses that a Service will respond on.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-24">
+                <a href="https://www.cncf.io/blog/2026/05/20/introducing-prempti-policy-and-visibility-for-ai-coding-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Introducing Prempti: Policy and visibility for AI coding agents
+                </a>
+                <p class="mb-1 small text-light">On May 12th, the Falco team introduced Prempti, a new experimental project in the Falco ecosystem. Falco, a CNCF graduated project and the de facto standard for cloud native runtime security, has long brought policy-driven detection to containers, Kubernetes, and hosts.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-24">
+                <a href="https://www.reddit.com/r/devops/comments/1tm44jv/can_you_share_your_cicd_pipeline_approach/" target="_blank" class="fw-bold text-decoration-none">
+                    Can you share your CI/CD pipeline approach?
+                </a>
+                <p class="mb-1 small text-light">Hi gus, can you share what tools are you using for your CI/CD pipeline? What are the modern best practises you guys follow. I have been working in Product based company, our tools are nowhere else used except in our org. Any of you are using Jenkins + Argo + K8S? submitted by /u/Basic_Let7303</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-24">
+                <a href="https://www.reddit.com/r/devops/comments/1tll4a5/hcp_migration_cloud_infra/" target="_blank" class="fw-bold text-decoration-none">
+                    HCP Migration | Cloud infra
+                </a>
+                <p class="mb-1 small text-light">I was recently assigned a project to migrate our CI/CD pipelines and Terraform state management from Azure Storage to HCP Terraform across multiple Azure subscriptions and Git repos. Does anyone here have experience with a similar migration.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-24">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1tlnzbl/how_do_i_realistically_prepare_for_google/" target="_blank" class="fw-bold text-decoration-none">
+                    How do I realistically prepare for Google SRE/Platform/DevOps roles in 2026?
+                </a>
+                <p class="mb-1 small text-light">Need some genuine guidance from people working at Google or similar org(Cloud/SRE/Platform/DevOps side). I’ve been preparing consistently for DevOps/SRE/Platform/Cloud kind of role at google but honestly I feel lost about the right roadmap now.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-24">
+                <a href="https://netflixtechblog.medium.com/data-projects-managing-data-assets-at-netflix-scale-7ca25888591e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Data Projects: Managing Data Assets at Netflix Scale
+                </a>
+                <p class="mb-1 small text-light">By Amer Hesson, Marcelo Mayworm, James Mulcahy, and Brittany TruongThe Problem: Managing Assets at Netflix ScaleNetflix’s Data Platform is vast. Data Projects addresses this by promoting the solution from optional tooling to a foundational part of the data platform.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-24">
+                <a href="https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling ArchUnit with Nebula ArchRules
+                </a>
+                <p class="mb-1 small text-light">However, how will they know which downstream projects are using their API incorrectly, based on these. Case Study SolutionGoing back to our original problem, using ArchRules, we were able to deliver a platform for library authors to track the usage of their APIs.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-24">
+                <a href="https://netflixtechblog.com/state-of-routing-in-model-serving-16e22fe18741?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] State of Routing in Model Serving
+                </a>
+                <p class="mb-1 small text-light">This common set of request contexts across domains enables them to share a standard API abstraction and standardizes how various client microservices can uniformly integrate with the serving app.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-24">
+                <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-deploy-high-performance-workloads-with-a-system-level-approach/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Azure IaaS: Deploy high-performance workloads with a system-level approach
+                </a>
+                <p class="mb-1 small text-light">In this article Rethinking performance in the cloudAccelerating AI workloads with system-level performanceScaling cloud-native applications without sacrificing performanceSustaining performance for business-critical systemsPerformance as a coordinated systemPractical guidance: Optimizing for your...</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-24">
+                <a href="https://azure.microsoft.com/en-us/blog/from-commit-to-cloud-powering-whats-next-for-postgresql/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] From commit to cloud: Powering what’s next for PostgreSQL
+                </a>
+                <p class="mb-1 small text-light">Improvements made upstream benefit the entire PostgreSQL ecosystem, while lessons learned from large‑scale deployments continue to inform future development. These changes land upstream first, ensuring that improvements are broadly available not tied to any single cloud or service.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-05-24">
+                <a href="https://snyk.io/blog/laravel-lang-supply-chain-advisory/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Laravel Lang Supply Chain Advisory
+                </a>
+                <p class="mb-1 small text-light">Hundreds of historical Laravel Lang Packagist releases were republished with malicious code, putting Composer installs at risk of credential theft and secret exfiltration.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-24">
+                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
+                </a>
+                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-24">
+                <a href="https://engineering.atspotify.com/2026/5/spotify-ads-api-claude-plugins/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins
+                </a>
+                <p class="mb-1 small text-light">Turning OpenAPI spec and Markdown files into a conversational ads management tool — no compiled code required. The post Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-24">
+                <a href="https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4)
+                </a>
+                <p class="mb-1 small text-light">How we used Honk, Backstage, and Fleet Management to ease the pain of migrating thousands of datasets. The post Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-24">
+                <a href="https://engineering.atspotify.com/2026/4/anthropic-agentic-development/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Let’s Talk Agentic Development: Spotify x Anthropic Live
+                </a>
+                <p class="mb-1 small text-light">AI agents are transforming the way we build — and even how we think of ourselves as software developers. Both... The post Let’s Talk Agentic Development: Spotify x Anthropic Live appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-24">
+                <a href="https://engineering.atspotify.com/2026/3/inside-the-archive-2025-wrapped/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Inside the Archive: The Tech Behind Your 2025 Wrapped Highlights
+                </a>
+                <p class="mb-1 small text-light">What if we could identify interesting listening moments from your year, and tell you a story about them? The post Inside the Archive: The Tech Behind Your 2025 Wrapped Highlights appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-05-24">
+                <a href="https://engineering.fb.com/2026/05/11/security/labyrinth-1-1-end-to-end-encrypted-e2ee-backups-more-reliable/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Labyrinth 1.1: Making End-to-End Encrypted Backups Even More Reliable
+                </a>
+                <p class="mb-1 small text-light">1 enhances the reliability of end-to-end encrypted backups with a new sub-protocol that helps messages survive the loss of a device, a switched device, and long gaps between sign-ins. Read our updated white paper, “The Labyrinth Encrypted Message Storage Protocol” for more details.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-05-24">
+                <a href="https://engineering.fb.com/2026/05/01/security/meta-strengthening-end-to-end-encrypted-backups/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] How Meta Is Strengthening End-to-End Encrypted Backups
+                </a>
+                <p class="mb-1 small text-light">The HSM-based Backup Key Vault Meta’s HSM-based Backup Key Vault provides the foundation for end-to-end encrypted backups for WhatsApp and Messenger. In WhatsApp, these keys are hardcoded into the application.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-05-24">
+                <a href="https://engineering.fb.com/2026/04/21/ml-applications/modernizing-the-facebook-groups-search-to-unlock-the-power-of-community-knowledge/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Modernizing the Facebook Groups Search to Unlock the Power of Community Knowledge
+                </a>
+                <p class="mb-1 small text-light">Under this new framework, we’ve made tangible improvements in search engagement and relevance, with no increase in error rates. This enables the retrieval of content based on high-dimensional conceptual similarity, regardless of keyword overlap.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-05-24">
+                <a href="https://adaptivesupport.amd.com/s/question/0D5Pd00001YQLdMKAX/why-is-vivado-20261-dropping-linux-support-for-free-tier-?language=en_US" target="_blank" class="fw-bold text-decoration-none">
+                    Why is Vivado 2026.1 dropping Linux support for free tier?
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://adaptivesupport.amd.com/s/question/0D5Pd00001YQLdMKAX/why-is-vivado-20261-dropping-linux-support-for-free-tier-?language=en_US Comments URL: https://news.ycombinator.com/item?id=48254309 Points: 120 # Comments: 35</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-05-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-05-24">
+                <a href="https://www.bbc.com/news/articles/czd2qmdvmq6o" target="_blank" class="fw-bold text-decoration-none">
+                    Air France and Airbus found guilty of manslaughter over 2009 plane crash
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.bbc.com/news/articles/czd2qmdvmq6o Comments URL: https://news.ycombinator.com/item?id=48250980 Points: 80 # Comments: 51</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-05-24
                     
                 </small>
             </li>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - May 27, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - May 27, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for May 27, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-05-27">2026-05-27 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    11 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-05-27">
+                <a href="https://www.pulumi.com/blog/ai-infrastructure-tools/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Best AI Infrastructure Tools in 2026
+                </a>
+                <p class="mb-1 small text-light">AI infrastructure tools overview Tools for building AI infrastructure CoreWeave: GPU cloud built for AI workloads Lambda Labs: straightforward GPU cloud for research and startups Modal: serverless GPU compute Weights & Biases: ML experiment tracking and model management MLflow: open-source ML lif...</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-27">
+                <a href="https://blog.cloudflare.com/clickhouse-query-plan-contention/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Our billing pipeline was suddenly slow. The culprit was a hidden bottleneck in ClickHouse
+                </a>
+                <p class="mb-1 small text-light">In ClickHouse, the way data is sorted is crucial to query performance. The problem: one retention policy to rule them all Cloudflare has been using ClickHouse for many years, since before it had native Time-to-Live (TTL) features.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-27">
+                <a href="https://www.reddit.com/r/devops/comments/1totxic/do_ai_agents_eventually_become_an_integral_part/" target="_blank" class="fw-bold text-decoration-none">
+                    Do AI agents eventually become an integral part of the CI/CD pipeline?
+                </a>
+                <p class="mb-1 small text-light">Feels like companies will eventually need: - staging environments for agents - rollback/versioning - observability - permissions - deployment policies Basically: “DevOps for autonomous systems. ” Or is that overengineering something that’ll stay lightweight.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-27">
+                <a href="https://azure.microsoft.com/en-us/blog/azure-files-entra-only-identities-advancing-cloud-native-identity-and-security/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Azure Files Entra-Only identities: Advancing cloud-native identity and security
+                </a>
+                <p class="mb-1 small text-light">This significantly reduces deployment complexity and allows organizations to adopt secure, scalable VDI and file access solutions faster than ever before. This helps simplify DevOps workflows and enables scalable integration across Azure Kubernetes Service (AKS) and enterprise applications.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-27">
+                <a href="https://www.docker.com/blog/untrusted-autonomous-workload-ai-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] The Untrusted Autonomous Workload: How AI Coding Agents Reshape What Isolation Has to Do
+                </a>
+                <p class="mb-1 small text-light">Agents need API keys: for the AI provider, for registries, sometimes for cloud accounts. Open allows everything except blocked CIDR ranges (private networks, link-local addresses, cloud metadata endpoints).</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-27">
+                <a href="https://kubernetes.io/blog/2026/05/26/reconciling-unfixed-kubernetes-cves/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Reconciling the Past: Correcting Records for Unfixed Kubernetes CVEs
+                </a>
+                <p class="mb-1 small text-light">The Issue: A Time-of-Check to Time-of-Use (TOCTOU) race condition in the API server proxy allows users to bypass IP restrictions.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-27">
+                <a href="https://kubernetes.io/blog/2026/05/20/etcd-370-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing etcd 3.7.0-beta.0
+                </a>
+                <p class="mb-1 small text-light">This new version of the popular distributed database and key Kubernetes component includes the long-requested RangeStream feature, as well as a refactoring and cleanup of multiple legacy components and interfaces.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-05-27">
+                <a href="https://kubernetes.io/blog/2026/05/14/kubernetes-v1-36-deprecation-and-removal-of-service-externalips/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Deprecation and removal of Service ExternalIPs
+                </a>
+                <p class="mb-1 small text-light">externalIPs field for Service was an early attempt to provide cloud-load-balancer-like functionality for non-cloud clusters. externalIPs that can be used to add additional IP addresses that a Service will respond on.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-27">
+                <a href="https://www.cncf.io/blog/2026/05/26/how-jaeger-is-evolving-to-trace-ai-agents-with-opentelemetry/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] How Jaeger is evolving to trace AI agents with OpenTelemetry
+                </a>
+                <p class="mb-1 small text-light">When the industry moved to microservices, distributed tracing became a necessity. This OpenTelemetry integration provides the necessary data foundation for more advanced tracing features.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-27">
+                <a href="https://www.reddit.com/r/devops/comments/1toxhpa/roadmap_for_agentic_ai_in_devops/" target="_blank" class="fw-bold text-decoration-none">
+                    Roadmap for Agentic AI in DevOps
+                </a>
+                <p class="mb-1 small text-light">Hey, May I know if there's any roadmap or a YT playlist to learn Agentic AI in DevOps? If someone can provide it here, that would be great. submitted by /u/The_Stonekeeper420</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-27">
+                <a href="https://www.reddit.com/r/devops/comments/1touxz4/harness_engineering_the_new_devops_layer_for_ai/" target="_blank" class="fw-bold text-decoration-none">
+                    Harness Engineering: The New DevOps Layer for AI Agents
+                </a>
+                <p class="mb-1 small text-light">As agents move beyond autocomplete and start interacting with CI/CD systems, Kubernetes clusters, Terraform workflows, logs, deployments, and internal APIs, the surrounding operational environment becomes more important than the model itself.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-27">
+                <a href="https://www.reddit.com/r/devops/comments/1to27ub/how_are_you_actually_correlating_a_failed/" target="_blank" class="fw-bold text-decoration-none">
+                    How are you actually correlating a failed synthetic check to the trace and infra behind it?
+                </a>
+                <p class="mb-1 small text-light">Affiliation disclaimer first: I build a synthetic monitoring tool, so I have a horse in this race. now() crowd, and I've now worked on synthetic monitoring/RUM three times (NCC Group/Eggplant/Keysight, then Elastic, now my own thing).</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-27">
+                <a href="https://www.reddit.com/r/devops/comments/1tm44jv/can_you_share_your_cicd_pipeline_approach/" target="_blank" class="fw-bold text-decoration-none">
+                    Can you share your CI/CD pipeline approach?
+                </a>
+                <p class="mb-1 small text-light">Hi gus, can you share what tools are you using for your CI/CD pipeline? What are the modern best practises you guys follow. I have been working in Product based company, our tools are nowhere else used except in our org. Any of you are using Jenkins + Argo + K8S? submitted by /u/Basic_Let7303</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-27">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1toyq2n/did_ai_make_security_products_worse/" target="_blank" class="fw-bold text-decoration-none">
+                    did AI make security products worse?
+                </a>
+                <p class="mb-1 small text-light">feels like the AI boom made a lot of security products worse. it’s that basic product depth seems to get skipped because the pitch sounds better with AI on top.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-27">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1to25dv/kubernetes_cpu_requests_and_limits_explained/" target="_blank" class="fw-bold text-decoration-none">
+                    Kubernetes CPU requests and limits, explained through cgroups (disclosure: my company website)
+                </a>
+                <p class="mb-1 small text-light">Disclosure: I'm affiliated with RoszigIT, where this article is published. Sharing because I think the mechanics are worth discussing, not to pitch services.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-27">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1tlnzbl/how_do_i_realistically_prepare_for_google/" target="_blank" class="fw-bold text-decoration-none">
+                    How do I realistically prepare for Google SRE/Platform/DevOps roles in 2026?
+                </a>
+                <p class="mb-1 small text-light">Need some genuine guidance from people working at Google or similar org(Cloud/SRE/Platform/DevOps side). I’ve been preparing consistently for DevOps/SRE/Platform/Cloud kind of role at google but honestly I feel lost about the right roadmap now.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-27">
+                <a href="https://netflixtechblog.medium.com/data-projects-managing-data-assets-at-netflix-scale-7ca25888591e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Data Projects: Managing Data Assets at Netflix Scale
+                </a>
+                <p class="mb-1 small text-light">By Amer Hesson, Marcelo Mayworm, James Mulcahy, and Brittany TruongThe Problem: Managing Assets at Netflix ScaleNetflix’s Data Platform is vast. Data Projects addresses this by promoting the solution from optional tooling to a foundational part of the data platform.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-27">
+                <a href="https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Scaling ArchUnit with Nebula ArchRules
+                </a>
+                <p class="mb-1 small text-light">However, how will they know which downstream projects are using their API incorrectly, based on these. Case Study SolutionGoing back to our original problem, using ArchRules, we were able to deliver a platform for library authors to track the usage of their APIs.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-27">
+                <a href="https://netflixtechblog.com/state-of-routing-in-model-serving-16e22fe18741?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] State of Routing in Model Serving
+                </a>
+                <p class="mb-1 small text-light">This common set of request contexts across domains enables them to share a standard API abstraction and standardizes how various client microservices can uniformly integrate with the serving app.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-27">
+                <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-deploy-high-performance-workloads-with-a-system-level-approach/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Azure IaaS: Deploy high-performance workloads with a system-level approach
+                </a>
+                <p class="mb-1 small text-light">In this article Rethinking performance in the cloudAccelerating AI workloads with system-level performanceScaling cloud-native applications without sacrificing performanceSustaining performance for business-critical systemsPerformance as a coordinated systemPractical guidance: Optimizing for your...</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-27">
+                <a href="https://azure.microsoft.com/en-us/blog/from-commit-to-cloud-powering-whats-next-for-postgresql/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] From commit to cloud: Powering what’s next for PostgreSQL
+                </a>
+                <p class="mb-1 small text-light">Improvements made upstream benefit the entire PostgreSQL ecosystem, while lessons learned from large‑scale deployments continue to inform future development. These changes land upstream first, ensuring that improvements are broadly available not tied to any single cloud or service.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-27">
+                <a href="https://about.gitlab.com/blog/security-configuration-profiles/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Full security scanner coverage of your codebase in minutes
+                </a>
+                <p class="mb-1 small text-light">Across the industry, every CI/CD platform faces the same challenge: As organizations grow, manually configuring scanners to run across every pipeline definition file isn't scalable.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-05-27">
+                <a href="https://about.gitlab.com/blog/sbom-based-dependency-scanning/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Reduce supply chain risk with SBOM-based dependency scanning
+                </a>
+                <p class="mb-1 small text-light">AI is compounding this problem: Research suggests nearly half of AI-generated code contains vulnerabilities. Today’s application security teams must answer harder questions: How did a vulnerable package end up in the project.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-05-27">
+                <a href="https://snyk.io/blog/laravel-lang-supply-chain-advisory/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Laravel Lang Supply Chain Advisory
+                </a>
+                <p class="mb-1 small text-light">Hundreds of historical Laravel Lang Packagist releases were republished with malicious code, putting Composer installs at risk of credential theft and secret exfiltration.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-05-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-05-27">
+                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
+                </a>
+                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-05-27
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

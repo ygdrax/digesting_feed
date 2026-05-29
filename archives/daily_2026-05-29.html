@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - May 29, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - May 29, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for May 29, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-05-29">2026-05-29 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-05-29 09:13:50
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,266 +132,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-29">
-                <a href="https://www.reddit.com/r/devops/comments/1tq017d/i_dont_think_i_can_take_devops_anymore_with_our/" target="_blank" class="fw-bold text-decoration-none">
-                    I don't think I can take DevOps anymore with our current "AI advancements"
-                </a>
-                <p class="mb-1 small text-light">I am not the most experienced DevOps person on earth so keep that in mind.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-29">
-                <a href="https://www.reddit.com/r/devops/comments/1tq2y2d/focus_more_on_cloud_engineering_or_dive_further/" target="_blank" class="fw-bold text-decoration-none">
-                    Focus more on Cloud Engineering or dive further into DevOps?
-                </a>
-                <p class="mb-1 small text-light">I am currently a DevOps engineer but with the names switching up every couple of years, it is now splitting into platform engineering and SRE and other titles. I asked around and searched and people told me that Cloud Engineering is more architecture and closer to what I want.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-29">
-                <a href="https://www.reddit.com/r/devops/comments/1tqfs0s/would_companies_want_this_collaborative_ai/" target="_blank" class="fw-bold text-decoration-none">
-                    Would companies want this? "Collaborative AI management and automation"
-                </a>
-                <p class="mb-1 small text-light">It also surfaces the session in a basic frontend client. So in a way it enables collaborative AI work and management.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-29">
-                <a href="https://www.reddit.com/r/sysadmin/comments/1tqq2z1/best_linux_course_for_devops_if_i_keep_getting/" target="_blank" class="fw-bold text-decoration-none">
-                    Best linux course for devops if I keep getting stuck on production issues
-                </a>
-                <p class="mb-1 small text-light">Looking for a decent linux course that isnt the same intro to linux stuff on youtube. Ideally something that covers the skills needed for automation cloud ops containers and running systems in production.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-29">
-                <a href="https://netflixtechblog.com/democratizing-machine-learning-at-netflix-building-the-model-lifecycle-graph-5cc6d5828bb1?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Democratizing Machine Learning at Netflix: Building the Model Lifecycle Graph
-                </a>
-                <p class="mb-1 small text-light">This fragmentation prevents practitioners from answering critical questions:Discovery: What features exist. It also enables retry logic and gradual enrichment as new entities become available.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-29">
-                <a href="https://azure.microsoft.com/en-us/blog/powering-multi-cluster-workloads-with-seamless-cross-cluster-networking-for-azure-kubernetes-fleet-manager/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Powering multi-cluster workloads with seamless cross‑cluster networking for Azure Kubernetes Fleet Manager
-                </a>
-                <p class="mb-1 small text-light">At the same time, platform teams want to abstract infrastructure details from developers, enabling seamless cluster-level changes without disrupting applications.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-29">
-                <a href="https://www.redhat.com/en/blog/manage-mcp-servers-red-hat-openshift-mcp-lifecycle-operator" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Manage MCP servers on Red Hat OpenShift with the MCP lifecycle operator
-                </a>
-                <p class="mb-1 small text-light">Deploying and managing MCP servers at scale introduces its own operational challenge: how do you treat MCP servers as first-class infrastructure. MCP lifecycle operator is a Kubernetes-native operator that provides a declarative API to deploy, manage.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-29">
-                <a href="https://www.redhat.com/en/blog/advancing-post-quantum-capabilities-ssh-red-hat-enterprise-linux" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Advancing post-quantum capabilities of SSH in Red Hat Enterprise Linux
-                </a>
-                <p class="mb-1 small text-light">1 followed, setting the new key exchange algorithms as default in TLS, and introducing post-quantum signatures for RPM packages. 9, supporting two hybrid post-quantum key exchange methods: sntrup761x25519-sha512.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-05-29">
-                <a href="https://snyk.io/blog/securing-ai-revolution-snyk-partners/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Securing The AI Revolution: How Snyk And Our Partners Are Scaling For The Future
-                </a>
-                <p class="mb-1 small text-light">AI is accelerating code creation. Learn how Snyk is scaling its AI Security Platform and investing in new partner programs to help enterprises govern AI-generated code at scale.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-05-29">
-                <a href="https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Reel Friends: Building Social Discovery that Scales to Billions
-                </a>
-                <p class="mb-1 small text-light">On its face the new Friend Bubbles feature looks simple enough. But sometimes the features that seem the most straightforward require the deepest engineering work.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-29">
-                <a href="https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-aws-resilience-hub-for-generative-ai-based-sre-resilience-journey/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Introducing the next generation of AWS Resilience Hub for generative AI-based SRE resilience journey
-                </a>
-                <p class="mb-1 small text-light">Systems represent a business application, user journeys describe critical business paths, and services are the deployable units comprising AWS resources, code, and observability.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-29">
-                <a href="https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-amazon-opensearch-serverless-for-building-your-agentic-ai-applications/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Introducing the next generation of Amazon OpenSearch Serverless for building your agentic AI applications
-                </a>
-                <p class="mb-1 small text-light">If you want to use the existing OpenSearch Serverless infrastructure, choose Switch to Classic. Create a search backend in seconds and add features on-demand as your application grows.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-05-29">
-                <a href="https://www.hashicorp.com/blog/consul-20-improves-flexibility-control-and-scalability" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Consul 2.0 improves flexibility, control, and scalability
-                </a>
-                <p class="mb-1 small text-light">This offloads application security responsibilities from developers and allows Consul to centrally enforce security across any cloud.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-05-29">
-                <a href="https://www.hashicorp.com/blog/azure-hub-and-spoke-generally-available-for-hcp-vault-dedicated" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Azure hub-and-spoke generally available for HCP Vault Dedicated
-                </a>
-                <p class="mb-1 small text-light">Organizations that require platform standardization and are working toward cloud security maturity rely on HashiCorp Virtual Networks (HVNs) in the HashiCorpCloud Platform (HCP) for the managed services that come with HCP to solve the layered challenges of security, connectivity, operational, and...</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-05-29">
-                <a href="https://www.hashicorp.com/blog/the-great-ai-divide-why-early-leaders-embrace-an-ai-operating-model" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] The great AI divide: Why early leaders embrace an AI operating model
-                </a>
-                <p class="mb-1 small text-light">Intelligence: A unified view across hybrid environments Most organizations now operate across increasingly complex hybrid environments spanning applications, infrastructure, data, cloud services, edge systems, and mission-critical platforms.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-29">
-                <a href="https://www.cncf.io/blog/2026/05/28/the-kubernetes-integration-tax-prometheus-cilium-and-production-reality/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] The Kubernetes integration tax: Prometheus, Cilium and production reality
-                </a>
-                <p class="mb-1 small text-light">In practice, most production Kubernetes platforms settle on the same core stack of 20–30 cloud native tools. Every Kubernetes version bump, every Helm chart upgrade, and every new CNCF project introduces new integration surfaces.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-29">
-                <a href="https://www.cncf.io/blog/2026/05/25/why-kubernetes-policy-enforcement-happens-too-late-and-what-to-do-about-it/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Why Kubernetes policy enforcement happens too late—and what to do about it
-                </a>
-                <p class="mb-1 small text-light">Kubernetes has become the backbone of modern cloud-native infrastructure. Across organizations of all sizes, a surprisingly large share of reliability and security incidents don’t originate in application code.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-29">
-                <a href="https://blog.cloudflare.com/claude-managed-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Announcing Claude Managed Agents on Cloudflare
+                <a href="https://blog.cloudflare.com/our-unified-data-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] How we built Cloudflare's data platform and an AI agent on top of it
                 </a>
-                <p class="mb-1 small text-light">Our new integration gives you more control over your agent sandboxes, secures connections to private services, and improves observability. Cloudflare’s Developer Platform provides the tools you need by default to let your agents do more.</p>
+                <p class="mb-1 small text-light">We wanted it to be built on Cloudflare’s own platform: R2 for storage, Workers for compute, Cloudflare Access for authentication, Workflows for orchestration. Skipper as MCP: Code Mode One specific implementation detail is worth pulling out, because it is uniquely a Cloudflare-shaped solution.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-05-29">
-                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
-                </a>
-                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-05-29">
-                <a href="https://www.pulumi.com/blog/pulumi-do-direct-resource-operations/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Introducing pulumi do: Direct Resource Operations for Any Cloud
-                </a>
-                <p class="mb-1 small text-light">To create a container service in Google Cloud Run for example: # service. dev/cloudrun/container/hello $ pulumi do gcp:cloudrunv2:Service create \ --input yaml \ --input-file service.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-29">
-                <a href="https://www.docker.com/blog/meet-gordon-dockers-ai-agent-for-your-entire-container-workflow/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Meet Gordon: Docker’s AI Agent For Your Entire Container Workflow
-                </a>
-                <p class="mb-1 small text-light">Key takeaways Gordon is Docker’s AI agent for your entire container workflow, built into Desktop 4. Gordon is optimized for Docker and container workflows, but it helps wherever developers need it.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-29">
-                <a href="https://www.redhat.com/en/blog/kiali-and-mcp-bring-ai-native-observability-red-hat-openshift-service-mesh" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Kiali and MCP: Bringing AI-native observability to Red Hat OpenShift Service Mesh
-                </a>
-                <p class="mb-1 small text-light">The model context protocol (MCP) server for Kubernetes is moving toward technology preview (TP), and it’s bringing a powerhouse integration with it: the Kiali toolset. While standard Kubernetes tools handle pods and services, the Kiali toolset provides.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
+                    Cloudflare | 2026-05-29
                     
                 </small>
             </li>
@@ -386,7 +151,7 @@
                 <p class="mb-1 small text-light">As enterprises continue to converge around identity-centric security as the foundation of their platform strategy, the ability to consistently manage identities and access across systems has become critical.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-05-29
                     
                 </small>
             </li>
@@ -398,19 +163,271 @@
                 <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-05-29">
+                <a href="https://www.docker.com/blog/meet-gordon-dockers-ai-agent-for-your-entire-container-workflow/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Meet Gordon: Docker’s AI Agent For Your Entire Container Workflow
+                </a>
+                <p class="mb-1 small text-light">Key takeaways Gordon is Docker’s AI agent for your entire container workflow, built into Desktop 4. Gordon is optimized for Docker and container workflows, but it helps wherever developers need it.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-29">
+                <a href="https://www.redhat.com/en/blog/kiali-and-mcp-bring-ai-native-observability-red-hat-openshift-service-mesh" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Kiali and MCP: Bringing AI-native observability to Red Hat OpenShift Service Mesh
+                </a>
+                <p class="mb-1 small text-light">The model context protocol (MCP) server for Kubernetes is moving toward technology preview (TP), and it’s bringing a powerhouse integration with it: the Kiali toolset. While standard Kubernetes tools handle pods and services, the Kiali toolset provides.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-29">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-aws-resilience-hub-for-generative-ai-based-sre-resilience-journey/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing the next generation of AWS Resilience Hub for generative AI-based SRE resilience journey
+                </a>
+                <p class="mb-1 small text-light">Systems represent a business application, user journeys describe critical business paths, and services are the deployable units comprising AWS resources, code, and observability.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-05-29">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-amazon-opensearch-serverless-for-building-your-agentic-ai-applications/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing the next generation of Amazon OpenSearch Serverless for building your agentic AI applications
+                </a>
+                <p class="mb-1 small text-light">If you want to use the existing OpenSearch Serverless infrastructure, choose Switch to Classic. Create a search backend in seconds and add features on-demand as your application grows.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-05-29">
+                <a href="https://www.hashicorp.com/blog/consul-20-improves-flexibility-control-and-scalability" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Consul 2.0 improves flexibility, control, and scalability
+                </a>
+                <p class="mb-1 small text-light">This offloads application security responsibilities from developers and allows Consul to centrally enforce security across any cloud.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-05-29">
+                <a href="https://www.hashicorp.com/blog/azure-hub-and-spoke-generally-available-for-hcp-vault-dedicated" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Azure hub-and-spoke generally available for HCP Vault Dedicated
+                </a>
+                <p class="mb-1 small text-light">Organizations that require platform standardization and are working toward cloud security maturity rely on HashiCorp Virtual Networks (HVNs) in the HashiCorpCloud Platform (HCP) for the managed services that come with HCP to solve the layered challenges of security, connectivity, operational, and...</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-05-29">
+                <a href="https://www.hashicorp.com/blog/the-great-ai-divide-why-early-leaders-embrace-an-ai-operating-model" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] The great AI divide: Why early leaders embrace an AI operating model
+                </a>
+                <p class="mb-1 small text-light">Intelligence: A unified view across hybrid environments Most organizations now operate across increasingly complex hybrid environments spanning applications, infrastructure, data, cloud services, edge systems, and mission-critical platforms.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-29">
+                <a href="https://www.cncf.io/blog/2026/05/28/the-kubernetes-integration-tax-prometheus-cilium-and-production-reality/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] The Kubernetes integration tax: Prometheus, Cilium and production reality
+                </a>
+                <p class="mb-1 small text-light">In practice, most production Kubernetes platforms settle on the same core stack of 20–30 cloud native tools. Every Kubernetes version bump, every Helm chart upgrade, and every new CNCF project introduces new integration surfaces.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-05-29">
+                <a href="https://www.cncf.io/blog/2026/05/25/why-kubernetes-policy-enforcement-happens-too-late-and-what-to-do-about-it/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Why Kubernetes policy enforcement happens too late—and what to do about it
+                </a>
+                <p class="mb-1 small text-light">Kubernetes has become the backbone of modern cloud-native infrastructure. Across organizations of all sizes, a surprisingly large share of reliability and security incidents don’t originate in application code.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-05-29
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-05-29">
-                <a href="https://blog.cloudflare.com/our-unified-data-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] How we built Cloudflare's data platform and an AI agent on top of it
+                <a href="https://blog.cloudflare.com/claude-managed-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Announcing Claude Managed Agents on Cloudflare
                 </a>
-                <p class="mb-1 small text-light">We wanted it to be built on Cloudflare’s own platform: R2 for storage, Workers for compute, Cloudflare Access for authentication, Workflows for orchestration. Skipper as MCP: Code Mode One specific implementation detail is worth pulling out, because it is uniquely a Cloudflare-shaped solution.</p>
+                <p class="mb-1 small text-light">Our new integration gives you more control over your agent sandboxes, secures connections to private services, and improves observability. Cloudflare’s Developer Platform provides the tools you need by default to let your agents do more.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-05-29">
+                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
+                </a>
+                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-05-29">
+                <a href="https://www.pulumi.com/blog/pulumi-do-direct-resource-operations/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Introducing pulumi do: Direct Resource Operations for Any Cloud
+                </a>
+                <p class="mb-1 small text-light">To create a container service in Google Cloud Run for example: # service. dev/cloudrun/container/hello $ pulumi do gcp:cloudrunv2:Service create \ --input yaml \ --input-file service.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-29">
+                <a href="https://www.reddit.com/r/devops/comments/1tq017d/i_dont_think_i_can_take_devops_anymore_with_our/" target="_blank" class="fw-bold text-decoration-none">
+                    I don't think I can take DevOps anymore with our current "AI advancements"
+                </a>
+                <p class="mb-1 small text-light">I am not the most experienced DevOps person on earth so keep that in mind.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-29">
+                <a href="https://www.reddit.com/r/devops/comments/1tq2y2d/focus_more_on_cloud_engineering_or_dive_further/" target="_blank" class="fw-bold text-decoration-none">
+                    Focus more on Cloud Engineering or dive further into DevOps?
+                </a>
+                <p class="mb-1 small text-light">I am currently a DevOps engineer but with the names switching up every couple of years, it is now splitting into platform engineering and SRE and other titles. I asked around and searched and people told me that Cloud Engineering is more architecture and closer to what I want.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-29">
+                <a href="https://www.reddit.com/r/devops/comments/1tqfs0s/would_companies_want_this_collaborative_ai/" target="_blank" class="fw-bold text-decoration-none">
+                    Would companies want this? "Collaborative AI management and automation"
+                </a>
+                <p class="mb-1 small text-light">It also surfaces the session in a basic frontend client. So in a way it enables collaborative AI work and management.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-05-29">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1tqq2z1/best_linux_course_for_devops_if_i_keep_getting/" target="_blank" class="fw-bold text-decoration-none">
+                    Best linux course for devops if I keep getting stuck on production issues
+                </a>
+                <p class="mb-1 small text-light">Looking for a decent linux course that isnt the same intro to linux stuff on youtube. Ideally something that covers the skills needed for automation cloud ops containers and running systems in production.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-05-29">
+                <a href="https://netflixtechblog.com/democratizing-machine-learning-at-netflix-building-the-model-lifecycle-graph-5cc6d5828bb1?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Democratizing Machine Learning at Netflix: Building the Model Lifecycle Graph
+                </a>
+                <p class="mb-1 small text-light">This fragmentation prevents practitioners from answering critical questions:Discovery: What features exist. It also enables retry logic and gradual enrichment as new entities become available.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-05-29">
+                <a href="https://azure.microsoft.com/en-us/blog/powering-multi-cluster-workloads-with-seamless-cross-cluster-networking-for-azure-kubernetes-fleet-manager/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Powering multi-cluster workloads with seamless cross‑cluster networking for Azure Kubernetes Fleet Manager
+                </a>
+                <p class="mb-1 small text-light">At the same time, platform teams want to abstract infrastructure details from developers, enabling seamless cluster-level changes without disrupting applications.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-29">
+                <a href="https://www.redhat.com/en/blog/manage-mcp-servers-red-hat-openshift-mcp-lifecycle-operator" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Manage MCP servers on Red Hat OpenShift with the MCP lifecycle operator
+                </a>
+                <p class="mb-1 small text-light">Deploying and managing MCP servers at scale introduces its own operational challenge: how do you treat MCP servers as first-class infrastructure. MCP lifecycle operator is a Kubernetes-native operator that provides a declarative API to deploy, manage.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-05-29">
+                <a href="https://www.redhat.com/en/blog/advancing-post-quantum-capabilities-ssh-red-hat-enterprise-linux" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Advancing post-quantum capabilities of SSH in Red Hat Enterprise Linux
+                </a>
+                <p class="mb-1 small text-light">1 followed, setting the new key exchange algorithms as default in TLS, and introducing post-quantum signatures for RPM packages. 9, supporting two hybrid post-quantum key exchange methods: sntrup761x25519-sha512.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-05-29">
+                <a href="https://snyk.io/blog/securing-ai-revolution-snyk-partners/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Securing The AI Revolution: How Snyk And Our Partners Are Scaling For The Future
+                </a>
+                <p class="mb-1 small text-light">AI is accelerating code creation. Learn how Snyk is scaling its AI Security Platform and investing in new partner programs to help enterprises govern AI-generated code at scale.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-05-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-05-29">
+                <a href="https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Reel Friends: Building Social Discovery that Scales to Billions
+                </a>
+                <p class="mb-1 small text-light">On its face the new Friend Bubbles feature looks simple enough. But sometimes the features that seem the most straightforward require the deepest engineering work.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-05-29
                     
                 </small>
             </li>

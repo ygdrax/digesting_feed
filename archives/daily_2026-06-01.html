@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - June 01, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - June 01, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for June 01, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-06-01">2026-06-01 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    13 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="Hacker News">Hacker News</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Slack Engineering">Slack Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-01">
+                <a href="https://blog.cloudflare.com/our-unified-data-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] How we built Cloudflare's data platform and an AI agent on top of it
+                </a>
+                <p class="mb-1 small text-light">We wanted it to be built on Cloudflare’s own platform: R2 for storage, Workers for compute, Cloudflare Access for authentication, Workflows for orchestration. Skipper as MCP: Code Mode One specific implementation detail is worth pulling out, because it is uniquely a Cloudflare-shaped solution.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-01">
+                <a href="https://www.hashicorp.com/blog/scim-in-vault-standardizes-provisioning-in-platforms" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] SCIM in HashiCorp Vault standardizes provisioning in platforms
+                </a>
+                <p class="mb-1 small text-light">As enterprises continue to converge around identity-centric security as the foundation of their platform strategy, the ability to consistently manage identities and access across systems has become critical.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-06-01">
+                <a href="https://slack.engineering/slack-ai-the-path-to-multi-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Slack AI: The Path to Multi-Cloud
+                </a>
+                <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-01">
+                <a href="https://www.docker.com/blog/meet-gordon-dockers-ai-agent-for-your-entire-container-workflow/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Meet Gordon: Docker’s AI Agent For Your Entire Container Workflow
+                </a>
+                <p class="mb-1 small text-light">Key takeaways Gordon is Docker’s AI agent for your entire container workflow, built into Desktop 4. Gordon is optimized for Docker and container workflows, but it helps wherever developers need it.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-01">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-aws-resilience-hub-for-generative-ai-based-sre-resilience-journey/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing the next generation of AWS Resilience Hub for generative AI-based SRE resilience journey
+                </a>
+                <p class="mb-1 small text-light">Systems represent a business application, user journeys describe critical business paths, and services are the deployable units comprising AWS resources, code, and observability.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-01">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-amazon-opensearch-serverless-for-building-your-agentic-ai-applications/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing the next generation of Amazon OpenSearch Serverless for building your agentic AI applications
+                </a>
+                <p class="mb-1 small text-light">If you want to use the existing OpenSearch Serverless infrastructure, choose Switch to Classic. Create a search backend in seconds and add features on-demand as your application grows.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-01">
+                <a href="https://www.hashicorp.com/blog/consul-20-improves-flexibility-control-and-scalability" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Consul 2.0 improves flexibility, control, and scalability
+                </a>
+                <p class="mb-1 small text-light">This offloads application security responsibilities from developers and allows Consul to centrally enforce security across any cloud.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-01">
+                <a href="https://www.hashicorp.com/blog/azure-hub-and-spoke-generally-available-for-hcp-vault-dedicated" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Azure hub-and-spoke generally available for HCP Vault Dedicated
+                </a>
+                <p class="mb-1 small text-light">Organizations that require platform standardization and are working toward cloud security maturity rely on HashiCorp Virtual Networks (HVNs) in the HashiCorpCloud Platform (HCP) for the managed services that come with HCP to solve the layered challenges of security, connectivity, operational, and...</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-01">
+                <a href="https://www.hashicorp.com/blog/the-great-ai-divide-why-early-leaders-embrace-an-ai-operating-model" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] The great AI divide: Why early leaders embrace an AI operating model
+                </a>
+                <p class="mb-1 small text-light">Intelligence: A unified view across hybrid environments Most organizations now operate across increasingly complex hybrid environments spanning applications, infrastructure, data, cloud services, edge systems, and mission-critical platforms.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-01">
+                <a href="https://www.cncf.io/blog/2026/05/28/the-kubernetes-integration-tax-prometheus-cilium-and-production-reality/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] The Kubernetes integration tax: Prometheus, Cilium and production reality
+                </a>
+                <p class="mb-1 small text-light">In practice, most production Kubernetes platforms settle on the same core stack of 20–30 cloud native tools. Every Kubernetes version bump, every Helm chart upgrade, and every new CNCF project introduces new integration surfaces.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-01">
+                <a href="https://blog.cloudflare.com/claude-managed-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Announcing Claude Managed Agents on Cloudflare
+                </a>
+                <p class="mb-1 small text-light">Our new integration gives you more control over your agent sandboxes, secures connections to private services, and improves observability. Cloudflare’s Developer Platform provides the tools you need by default to let your agents do more.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-01">
+                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
+                </a>
+                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-01">
+                <a href="https://www.pulumi.com/blog/pulumi-do-direct-resource-operations/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Introducing pulumi do: Direct Resource Operations for Any Cloud
+                </a>
+                <p class="mb-1 small text-light">To create a container service in Google Cloud Run for example: # service. dev/cloudrun/container/hello $ pulumi do gcp:cloudrunv2:Service create \ --input yaml \ --input-file service.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-01">
+                <a href="https://www.reddit.com/r/sysadmin/comments/1ttjtdb/how_do_you_actually_activate_windows_server_under/" target="_blank" class="fw-bold text-decoration-none">
+                    How do you actually activate Windows Server under SPLA on a private Nutanix AHV infrastructure?
+                </a>
+                <p class="mb-1 small text-light">Our infrastructure is hosted in our own private datacenter and runs on Nutanix AHV (not Hyper-V). If so, where did you obtain the KMS Host Key.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-01">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1tsu0ue/a_go_package_that_talks_to_docker_podman_and/" target="_blank" class="fw-bold text-decoration-none">
+                    A Go package that talks to Docker, Podman, and containerd through one API
+                </a>
+                <p class="mb-1 small text-light">It gives you one neutral interface for running containers and detects whether Docker, Podman, or containerd is on the host. It drives each engine through its native client API, so it never shells out to a CLI.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-01">
+                <a href="https://netflixtechblog.com/democratizing-machine-learning-at-netflix-building-the-model-lifecycle-graph-5cc6d5828bb1?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Democratizing Machine Learning at Netflix: Building the Model Lifecycle Graph
+                </a>
+                <p class="mb-1 small text-light">This fragmentation prevents practitioners from answering critical questions:Discovery: What features exist. It also enables retry logic and gradual enrichment as new entities become available.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-06-01">
+                <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/claude-opus-4-8-is-now-available-in-microsoft-foundry/4523367" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Claude Opus 4.8 is now available in Microsoft Foundry
+                </a>
+                <p class="mb-1 small text-light">8 is designed for these demands, with stronger performance across software development, agents, document-heavy analysis, and enterprise workflows.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-06-01">
+                <a href="https://azure.microsoft.com/en-us/blog/powering-multi-cluster-workloads-with-seamless-cross-cluster-networking-for-azure-kubernetes-fleet-manager/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Powering multi-cluster workloads with seamless cross‑cluster networking for Azure Kubernetes Fleet Manager
+                </a>
+                <p class="mb-1 small text-light">At the same time, platform teams want to abstract infrastructure details from developers, enabling seamless cluster-level changes without disrupting applications.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-01">
+                <a href="https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Reel Friends: Building Social Discovery that Scales to Billions
+                </a>
+                <p class="mb-1 small text-light">On its face the new Friend Bubbles feature looks simple enough. But sometimes the features that seem the most straightforward require the deepest engineering work.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-01">
+                <a href="https://technology.inquirer.net/147084/dunes-butlerian-jihad-and-the-future-of-ai" target="_blank" class="fw-bold text-decoration-none">
+                    Dune's Butlerian Jihad and the Future of AI
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://technology.inquirer.net/147084/dunes-butlerian-jihad-and-the-future-of-ai Comments URL: https://news.ycombinator.com/item?id=48353670 Points: 22 # Comments: 33</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-01">
+                <a href="https://www.quantamagazine.org/rubin-tracks-skyscraper-size-asteroids-failed-supernovas-and-interstellar-visitors-20260515/" target="_blank" class="fw-bold text-decoration-none">
+                    Rubin Tracks Skyscraper-Size Asteroids and Failed Supernovas
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.quantamagazine.org/rubin-tracks-skyscraper-size-asteroids-failed-supernovas-and-interstellar-visitors-20260515/ Comments URL: https://news.ycombinator.com/item?id=48352500 Points: 27 # Comments: 6</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-01">
+                <a href="https://darylcecile.net/notes/speed-of-prototyping-age-of-ai" target="_blank" class="fw-bold text-decoration-none">
+                    The Speed of Prototyping in the Age of AI
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://darylcecile.net/notes/speed-of-prototyping-age-of-ai Comments URL: https://news.ycombinator.com/item?id=48347153 Points: 163 # Comments: 83</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-01">
+                <a href="https://prismml.com/news/bonsai-image-4b" target="_blank" class="fw-bold text-decoration-none">
+                    1-Bit Bonsai Image 4B Image Generation for Local Devices
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://prismml.com/news/bonsai-image-4b Comments URL: https://news.ycombinator.com/item?id=48346257 Points: 384 # Comments: 151</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-01">
+                <a href="https://hacktivis.me/articles/cloudflare-turnstile-webgl-fingerprinting" target="_blank" class="fw-bold text-decoration-none">
+                    Cloudflare Turnstile requiring fingerprintable WebGL
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://hacktivis.me/articles/cloudflare-turnstile-webgl-fingerprinting Comments URL: https://news.ycombinator.com/item?id=48345840 Points: 671 # Comments: 364</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-01">
+                <a href="https://simpleflying.com/united-airlines-767-returns-newark-bluetooth-name-alert/" target="_blank" class="fw-bold text-decoration-none">
+                    United Airlines 767 returns to Newark after Bluetooth name sparks alert
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://simpleflying.com/united-airlines-767-returns-newark-bluetooth-name-alert/ Comments URL: https://news.ycombinator.com/item?id=48345248 Points: 352 # Comments: 681</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-01
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

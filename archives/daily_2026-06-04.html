@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - June 04, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - June 04, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for June 04, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-06-04">2026-06-04 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    12 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Slack Engineering">Slack Engineering</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-04">
+                <a href="https://blog.cloudflare.com/our-unified-data-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] How we built Cloudflare's data platform and an AI agent on top of it
+                </a>
+                <p class="mb-1 small text-light">We wanted it to be built on Cloudflare’s own platform: R2 for storage, Workers for compute, Cloudflare Access for authentication, Workflows for orchestration. Skipper as MCP: Code Mode One specific implementation detail is worth pulling out, because it is uniquely a Cloudflare-shaped solution.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-04">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1tvmkxr/building_a_500600_homelab_cluster_for/" target="_blank" class="fw-bold text-decoration-none">
+                    Building a 500–600€ homelab cluster for Docker/Kubernetes/DevOps (+ AI later) - what would you buy?
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/bumo41</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-04">
+                <a href="https://www.hashicorp.com/blog/scim-in-vault-standardizes-provisioning-in-platforms" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] SCIM in HashiCorp Vault standardizes provisioning in platforms
+                </a>
+                <p class="mb-1 small text-light">As enterprises continue to converge around identity-centric security as the foundation of their platform strategy, the ability to consistently manage identities and access across systems has become critical.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-06-04">
+                <a href="https://slack.engineering/slack-ai-the-path-to-multi-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Slack AI: The Path to Multi-Cloud
+                </a>
+                <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-06-04">
+                <a href="https://azure.microsoft.com/en-us/blog/new-azure-cobalt-200-vms-deliver-50-performance-improvement-fully-optimized-for-modern-agentic-ai-workloads/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] New Azure Cobalt 200 VMs deliver 50% performance improvement, fully optimized for modern agentic AI workloads
+                </a>
+                <p class="mb-1 small text-light">Within Microsoft’s own cloud services, Azure Cobalt 100 VMs are delivering up to 45% better performance while using 35% fewer compute cores compared to its previous compute platform.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-04">
+                <a href="https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify
+                </a>
+                <p class="mb-1 small text-light">At Code with Claude, Spotify’s chief architect shared how we make both teams and AI agents more effective. The post Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-04">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-aws-resilience-hub-for-generative-ai-based-sre-resilience-journey/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing the next generation of AWS Resilience Hub for generative AI-based SRE resilience journey
+                </a>
+                <p class="mb-1 small text-light">Systems represent a business application, user journeys describe critical business paths, and services are the deployable units comprising AWS resources, code, and observability.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-04">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-amazon-opensearch-serverless-for-building-your-agentic-ai-applications/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing the next generation of Amazon OpenSearch Serverless for building your agentic AI applications
+                </a>
+                <p class="mb-1 small text-light">If you want to use the existing OpenSearch Serverless infrastructure, choose Switch to Classic. Create a search backend in seconds and add features on-demand as your application grows.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-04">
+                <a href="https://www.hashicorp.com/blog/consul-20-improves-flexibility-control-and-scalability" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Consul 2.0 improves flexibility, control, and scalability
+                </a>
+                <p class="mb-1 small text-light">This offloads application security responsibilities from developers and allows Consul to centrally enforce security across any cloud.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-04">
+                <a href="https://www.hashicorp.com/blog/azure-hub-and-spoke-generally-available-for-hcp-vault-dedicated" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Azure hub-and-spoke generally available for HCP Vault Dedicated
+                </a>
+                <p class="mb-1 small text-light">Organizations that require platform standardization and are working toward cloud security maturity rely on HashiCorp Virtual Networks (HVNs) in the HashiCorpCloud Platform (HCP) for the managed services that come with HCP to solve the layered challenges of security, connectivity, operational, and...</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-04">
+                <a href="https://www.hashicorp.com/blog/the-great-ai-divide-why-early-leaders-embrace-an-ai-operating-model" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] The great AI divide: Why early leaders embrace an AI operating model
+                </a>
+                <p class="mb-1 small text-light">Intelligence: A unified view across hybrid environments Most organizations now operate across increasingly complex hybrid environments spanning applications, infrastructure, data, cloud services, edge systems, and mission-critical platforms.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-04">
+                <a href="https://www.cncf.io/blog/2026/06/03/inspektor-gadget-results-from-the-first-security-audit/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Inspektor Gadget: Results from the first security audit
+                </a>
+                <p class="mb-1 small text-light">Inspektor Gadget, the open source eBPF-based toolkit for Kubernetes observability and Linux host inspection, has completed its first independent security audit.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-04">
+                <a href="https://blog.cloudflare.com/enforce-first-as-bgp/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Enforcing the First AS in BGP AS_PATHs
+                </a>
+                <p class="mb-1 small text-light">0/16 from origin AS36429 even included Cloudflare’s main ASN, 13335, in the AS_PATH, “199524 270118 17072 13335 36429”. This allows routers to drop specific prefixes with malformed attributes without disrupting the entire BGP session.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-04">
+                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
+                </a>
+                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-04">
+                <a href="https://www.reddit.com/r/devops/comments/1tvw3dn/ai_with_devops_advice/" target="_blank" class="fw-bold text-decoration-none">
+                    Ai with devops advice
+                </a>
+                <p class="mb-1 small text-light">I want some advice about using Ai for DevOps engineer, anyone has a specific setup for agents? Tools? Mcps? Any Ai topic related to DevOps submitted by /u/FearlessSentence7701</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-04">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1tvxv47/scale_kubernetes_deployments_to_zero_using_keda/" target="_blank" class="fw-bold text-decoration-none">
+                    Scale Kubernetes deployments to zero using KEDA
+                </a>
+                <p class="mb-1 small text-light">submitted by /u/OkIsland87</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-06-04">
+                <a href="https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] AI alone won’t change your business. The system running it will.
+                </a>
+                <p class="mb-1 small text-light">Building a system for the agentic enterpriseTo succeed in this new era, an agent platform must meet a higher bar. Optimized performance for open models: With Fireworks AI on Foundry, enterprises get faster, more efficient inference directly into the platform.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-06-04">
+                <a href="https://azure.microsoft.com/en-us/blog/announcing-microsoft-discovery-general-availability-and-microsoft-discovery-app-preview/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Announcing Microsoft Discovery general availability and Microsoft Discovery app preview
+                </a>
+                <p class="mb-1 small text-light">Those considerations, along with continued customer feedback, helped shape the general availability release and the platform capabilities behind it.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-04">
+                <a href="https://www.redhat.com/en/blog/flexibility-in-middle-east-ai-transformation-journey" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] MENA PR - Why flexibility is non-negotiable in the Middle East’s AI transformation journey
+                </a>
+                <p class="mb-1 small text-light">In the dynamic digital landscape of the Middle East, we are seeing a shift from AI experimentation to production-ready innovation. This transition is becoming a key factor in driving national competitiveness and economic resilience across the region.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-04">
+                <a href="https://www.redhat.com/en/blog/future-ai-demands-hybrid-foundation" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] The future of AI demands a hybrid foundation
+                </a>
+                <p class="mb-1 small text-light">If you glance at the tech headlines today, you’d think the answer is simple. The mainstream narrative treats AI like a standalone magic box.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-04">
+                <a href="https://snyk.io/blog/agentic-development-lifecycle/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The New Security Risks of the Agentic Development Lifecycle
+                </a>
+                <p class="mb-1 small text-light">AI agents are changing how software gets built, and with it, where security risk begins. Learn why securing the process matters as much as securing the code.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-04">
+                <a href="https://engineering.atspotify.com/2026/4/anthropic-agentic-development/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Let’s Talk Agentic Development: Spotify x Anthropic Live
+                </a>
+                <p class="mb-1 small text-light">AI agents are transforming the way we build — and even how we think of ourselves as software developers. Both... The post Let’s Talk Agentic Development: Spotify x Anthropic Live appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-04">
+                <a href="https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems
+                </a>
+                <p class="mb-1 small text-light">The retrieval system within industry recommendation systems have consisted of microservices stitched together, with neural networks inconsistently integrated. SilverTorch makes retrieval significantly more efficient, runs at scale, and enables better recommendations.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-04">
+                <a href="https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Reel Friends: Building Social Discovery that Scales to Billions
+                </a>
+                <p class="mb-1 small text-light">On its face the new Friend Bubbles feature looks simple enough. But sometimes the features that seem the most straightforward require the deepest engineering work.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-06-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-04">
+                <a href="https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Migrating Data Ingestion Systems at Meta Scale
+                </a>
+                <p class="mb-1 small text-light">Several important solutions and strategies helped make a migration of this scope successful. This means if previous landed data has any issues the problematic data will be passed to the new landed data.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-06-04
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

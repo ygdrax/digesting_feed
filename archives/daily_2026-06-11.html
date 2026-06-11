@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - June 11, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - June 11, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for June 11, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-06-11">2026-06-11 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2026-06-11 09:33:12
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,278 +130,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-11">
-                <a href="https://www.reddit.com/r/devops/comments/1u2enyv/useful_tools_for_cleaning_up_messy_infra_cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    useful tools for cleaning up messy infra / cloud costs
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-11">
+                <a href="https://www.hashicorp.com/blog/rethinking-infrastructure-access-in-the-age-of-agentic-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Rethinking infrastructure access in the age of agentic AI
                 </a>
-                <p class="mb-1 small text-light">kubecost good if you’re running kubernetes and need to understand where spend is going. vantage better for general cloud cost visibility across AWS.</p>
+                <p class="mb-1 small text-light">This helps organizations strengthen governance and maintain tighter control over how AI agents access critical infrastructure. Primary error: The service environment file contains PORT=not-a-number after the latest deployment.</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-11">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1u25vnw/building_a_multiregion_deployment_platform_with/" target="_blank" class="fw-bold text-decoration-none">
-                    Building a multi-region deployment platform with centralized control plane.
-                </a>
-                <p class="mb-1 small text-light">Building a multi-region deployment platform with centralized control plane. Example: Application deployed in India/Africa/London continuously shipping logs to centralized ClickHouse in US region.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-11">
-                <a href="https://netflixtechblog.com/from-silos-to-service-topology-why-netflix-built-a-real-time-service-map-0165ba13a7bc?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] From Silos to Service Topology: Why Netflix Built a Real-Time Service Map
-                </a>
-                <p class="mb-1 small text-light">This layer provides topology at both cluster-level (which deployment clusters are communicating) and app-level (which applications are communicating). Service topology provides the knowledge graph foundation that makes this kind of intelligent automation possible.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-11">
-                <a href="https://snyk.io/blog/node-gyp-supply-chain-compromise-self-propagating-npm-worm-binding-gyp/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Node-gyp Supply Chain Compromise: A Self-Propagating npm Worm That Hides in binding.gyp
-                </a>
-                <p class="mb-1 small text-light">A new npm worm is abusing binding.gyp to trigger node-gyp during install, letting malicious packages run code without lifecycle scripts. It steals credentials, persists in GitHub, and self-propagates across maintainers.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-11">
-                <a href="https://snyk.io/blog/agentic-development-lifecycle/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] The New Security Risks of the Agentic Development Lifecycle
-                </a>
-                <p class="mb-1 small text-light">AI agents are changing how software gets built, and with it, where security risk begins. Learn why securing the process matters as much as securing the code.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-11">
-                <a href="https://snyk.io/blog/protestware-open-source-maintainer-qwik-1-10-0-prompt-injection/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Protestware by open source maintainer to hinder agentic coding: The jqwik 1.10.0 Prompt Injection
-                </a>
-                <p class="mb-1 small text-light">jqwik 1.10.0 added a hidden prompt injection aimed at AI coding agents, using terminal escape codes to conceal destructive instructions from humans while leaving them readable to logs and tools.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-11">
-                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
-                </a>
-                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-11">
-                <a href="https://engineering.atspotify.com/2026/5/spotify-ads-api-claude-plugins/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins
-                </a>
-                <p class="mb-1 small text-light">Turning OpenAPI spec and Markdown files into a conversational ads management tool — no compiled code required. The post Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-11">
-                <a href="https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/" target="_blank" class="fw-bold text-decoration-none">
-                    Cybersecurity researchers aren't happy about the guardrails on Anthropic's Fable
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/ Comments URL: https://news.ycombinator.com/item?id=48478969 Points: 427 # Comments: 378</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-11">
-                <a href="https://aws.amazon.com/blogs/aws/now-available-amazon-ec2-m9g-and-m9gd-instances-powered-by-new-aws-graviton5-processors/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Now available: Amazon EC2 M9g and M9gd instances powered by new AWS Graviton5 processors
-                </a>
-                <p class="mb-1 small text-light">You can use Graviton for a broad variety of workloads, including web applications, microservices, analytics, databases, machine learning (ML) inference, electronic design automation (EDA), gaming, and video encoding.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-11">
-                <a href="https://kubernetes.io/blog/2026/05/26/reconciling-unfixed-kubernetes-cves/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Reconciling the Past: Correcting Records for Unfixed Kubernetes CVEs
-                </a>
-                <p class="mb-1 small text-light">The Issue: A Time-of-Check to Time-of-Use (TOCTOU) race condition in the API server proxy allows users to bypass IP restrictions.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-11">
-                <a href="https://kubernetes.io/blog/2026/05/20/etcd-370-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing etcd 3.7.0-beta.0
-                </a>
-                <p class="mb-1 small text-light">This new version of the popular distributed database and key Kubernetes component includes the long-requested RangeStream feature, as well as a refactoring and cleanup of multiple legacy components and interfaces.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-11">
-                <a href="https://www.cncf.io/blog/2026/06/04/securing-ci-cd-for-an-open-source-project-controlling-who-runs-what/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Securing CI/CD for an open source project: Controlling who runs what
-                </a>
-                <p class="mb-1 small text-light">Renovate keeps the pins fresh and waits 5 days before picking up new releases. What consumers can verifySigned releasesEvery release image and Helm chart is signed with Sigstore Cosign using keyless OIDC, with SBOM attestations attached.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-11">
-                <a href="https://blog.cloudflare.com/private-origins-dns-routing/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Route public traffic to private applications with Cloudflare
-                </a>
-                <p class="mb-1 small text-light">This allows Cloudflare's security, performance, and programmability services to protect applications running on private networks, just as they do for public Internet applications.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-11">
-                <a href="https://blog.cloudflare.com/voidzero-joins-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] VoidZero is joining Cloudflare
-                </a>
-                <p class="mb-1 small text-light">Over the last few years we've invested heavily in making Cloudflare the best place to build and run websites, applications, and agents on our developer platform. We recently shipped a technical preview of cf, a new unified CLI for the whole Cloudflare platform.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-11">
-                <a href="https://www.pulumi.com/blog/self-host-gemma4-llama-cpp-k8s-tailscale-pulumi/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Use Your Mac for AI Agents: Self-Host Gemma 4 12 B with Pulumi and Tailscale
-                </a>
-                <p class="mb-1 small text-light">cpp for host-native inference, k3d for a local Kubernetes cluster, Pulumi for infrastructure as code, and Tailscale for secure access.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-11">
-                <a href="https://www.reddit.com/r/kubernetes/comments/1u2adlp/learning_ai_platform_engineering_gpus_ray_vllm/" target="_blank" class="fw-bold text-decoration-none">
-                    Learning AI Platform Engineering: GPUs, Ray, vLLM, and Kubernetes
-                </a>
-                <p class="mb-1 small text-light">I spent the last week learning AI Platform Engineering. tech/tags/7-days-of-ai-platform-engineering Would appreciate any feedback.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-11">
-                <a href="https://www.docker.com/blog/what-are-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Hardened Images Explained: Fewer CVEs, Smaller Attack Surface
-                </a>
-                <p class="mb-1 small text-light">When security teams scan their container environments for the first time, they often discover hundreds of known vulnerabilities, and almost none of them trace back to application code.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-11">
-                <a href="https://www.redhat.com/en/blog/ansible-automation-platform-27-visual-execution-environment-builder-and-content-discovery-guide" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Ansible Automation Platform 2.7: Visual Execution Environment Builder and Content Discovery Guide
-                </a>
-                <p class="mb-1 small text-light">With the release of Red Hat Ansible Automation Platform 2. The execution environment builder and unified content discovery experience within the automation portal work together to dramat.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-11">
-                <a href="https://www.redhat.com/en/blog/whats-new-ansible-automation-platform-2-7" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] What's New in Ansible Automation Platform 2.7
-                </a>
-                <p class="mb-1 small text-light">Today we released Red Hat Ansible Automation Platform 2. Empower platform engineering and boost developer productivity The self-service automation portal, released with Ansible Automation Platform 2.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-11">
-                <a href="https://snyk.io/blog/ai-security-budget/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] So You Have an AI Security Budget. Now what?
-                </a>
-                <p class="mb-1 small text-light">An AI security budget should fund more than visibility. The real priority is unified governance and enforcement across agentic development and production apps.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-11">
-                <a href="https://snyk.io/blog/type-level-security/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Type Level Security: The future of secure AI code generation?
-                </a>
-                <p class="mb-1 small text-light">Secure-by-design types can turn common bugs into compile-time errors. This post explores how type-level security could help prevent entire classes of AI-generated vulnerabilities.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-11">
-                <a href="https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant
-                </a>
-                <p class="mb-1 small text-light">At Spotify, data problems used to follow a specific pattern. You'd look for the relevant dashboard, there... The post Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
+                    HashiCorp | 2026-06-11
                     
                 </small>
             </li>
@@ -396,19 +149,283 @@
                 <p class="mb-1 small text-light">Key takeaways Supply chain security protects every stage from source code and dependencies through build, registry, and production deployment. Application security focuses on vulnerabilities in the code your team writes: injection flaws, authentication bugs, authorization issues.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2026-06-11
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-11">
-                <a href="https://www.hashicorp.com/blog/rethinking-infrastructure-access-in-the-age-of-agentic-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Rethinking infrastructure access in the age of agentic AI
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-11">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1u2adlp/learning_ai_platform_engineering_gpus_ray_vllm/" target="_blank" class="fw-bold text-decoration-none">
+                    Learning AI Platform Engineering: GPUs, Ray, vLLM, and Kubernetes
                 </a>
-                <p class="mb-1 small text-light">This helps organizations strengthen governance and maintain tighter control over how AI agents access critical infrastructure. Primary error: The service environment file contains PORT=not-a-number after the latest deployment.</p>
+                <p class="mb-1 small text-light">I spent the last week learning AI Platform Engineering. tech/tags/7-days-of-ai-platform-engineering Would appreciate any feedback.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    Reddit | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-11">
+                <a href="https://www.docker.com/blog/what-are-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Hardened Images Explained: Fewer CVEs, Smaller Attack Surface
+                </a>
+                <p class="mb-1 small text-light">When security teams scan their container environments for the first time, they often discover hundreds of known vulnerabilities, and almost none of them trace back to application code.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-11">
+                <a href="https://www.redhat.com/en/blog/ansible-automation-platform-27-visual-execution-environment-builder-and-content-discovery-guide" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Ansible Automation Platform 2.7: Visual Execution Environment Builder and Content Discovery Guide
+                </a>
+                <p class="mb-1 small text-light">With the release of Red Hat Ansible Automation Platform 2. The execution environment builder and unified content discovery experience within the automation portal work together to dramat.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-11">
+                <a href="https://www.redhat.com/en/blog/whats-new-ansible-automation-platform-2-7" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] What's New in Ansible Automation Platform 2.7
+                </a>
+                <p class="mb-1 small text-light">Today we released Red Hat Ansible Automation Platform 2. Empower platform engineering and boost developer productivity The self-service automation portal, released with Ansible Automation Platform 2.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-11">
+                <a href="https://snyk.io/blog/ai-security-budget/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] So You Have an AI Security Budget. Now what?
+                </a>
+                <p class="mb-1 small text-light">An AI security budget should fund more than visibility. The real priority is unified governance and enforcement across agentic development and production apps.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-11">
+                <a href="https://snyk.io/blog/type-level-security/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Type Level Security: The future of secure AI code generation?
+                </a>
+                <p class="mb-1 small text-light">Secure-by-design types can turn common bugs into compile-time errors. This post explores how type-level security could help prevent entire classes of AI-generated vulnerabilities.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-11">
+                <a href="https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant
+                </a>
+                <p class="mb-1 small text-light">At Spotify, data problems used to follow a specific pattern. You'd look for the relevant dashboard, there... The post Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-11">
+                <a href="https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/" target="_blank" class="fw-bold text-decoration-none">
+                    Cybersecurity researchers aren't happy about the guardrails on Anthropic's Fable
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/ Comments URL: https://news.ycombinator.com/item?id=48478969 Points: 427 # Comments: 378</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-11">
+                <a href="https://aws.amazon.com/blogs/aws/now-available-amazon-ec2-m9g-and-m9gd-instances-powered-by-new-aws-graviton5-processors/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Now available: Amazon EC2 M9g and M9gd instances powered by new AWS Graviton5 processors
+                </a>
+                <p class="mb-1 small text-light">You can use Graviton for a broad variety of workloads, including web applications, microservices, analytics, databases, machine learning (ML) inference, electronic design automation (EDA), gaming, and video encoding.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-11">
+                <a href="https://kubernetes.io/blog/2026/05/26/reconciling-unfixed-kubernetes-cves/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Reconciling the Past: Correcting Records for Unfixed Kubernetes CVEs
+                </a>
+                <p class="mb-1 small text-light">The Issue: A Time-of-Check to Time-of-Use (TOCTOU) race condition in the API server proxy allows users to bypass IP restrictions.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-11">
+                <a href="https://kubernetes.io/blog/2026/05/20/etcd-370-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing etcd 3.7.0-beta.0
+                </a>
+                <p class="mb-1 small text-light">This new version of the popular distributed database and key Kubernetes component includes the long-requested RangeStream feature, as well as a refactoring and cleanup of multiple legacy components and interfaces.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-11">
+                <a href="https://www.cncf.io/blog/2026/06/04/securing-ci-cd-for-an-open-source-project-controlling-who-runs-what/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Securing CI/CD for an open source project: Controlling who runs what
+                </a>
+                <p class="mb-1 small text-light">Renovate keeps the pins fresh and waits 5 days before picking up new releases. What consumers can verifySigned releasesEvery release image and Helm chart is signed with Sigstore Cosign using keyless OIDC, with SBOM attestations attached.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-11">
+                <a href="https://blog.cloudflare.com/private-origins-dns-routing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Route public traffic to private applications with Cloudflare
+                </a>
+                <p class="mb-1 small text-light">This allows Cloudflare's security, performance, and programmability services to protect applications running on private networks, just as they do for public Internet applications.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-11">
+                <a href="https://blog.cloudflare.com/voidzero-joins-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] VoidZero is joining Cloudflare
+                </a>
+                <p class="mb-1 small text-light">Over the last few years we've invested heavily in making Cloudflare the best place to build and run websites, applications, and agents on our developer platform. We recently shipped a technical preview of cf, a new unified CLI for the whole Cloudflare platform.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-11">
+                <a href="https://www.pulumi.com/blog/self-host-gemma4-llama-cpp-k8s-tailscale-pulumi/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Use Your Mac for AI Agents: Self-Host Gemma 4 12 B with Pulumi and Tailscale
+                </a>
+                <p class="mb-1 small text-light">cpp for host-native inference, k3d for a local Kubernetes cluster, Pulumi for infrastructure as code, and Tailscale for secure access.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-11">
+                <a href="https://www.reddit.com/r/devops/comments/1u2enyv/useful_tools_for_cleaning_up_messy_infra_cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    useful tools for cleaning up messy infra / cloud costs
+                </a>
+                <p class="mb-1 small text-light">kubecost good if you’re running kubernetes and need to understand where spend is going. vantage better for general cloud cost visibility across AWS.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-11">
+                <a href="https://www.reddit.com/r/kubernetes/comments/1u25vnw/building_a_multiregion_deployment_platform_with/" target="_blank" class="fw-bold text-decoration-none">
+                    Building a multi-region deployment platform with centralized control plane.
+                </a>
+                <p class="mb-1 small text-light">Building a multi-region deployment platform with centralized control plane. Example: Application deployed in India/Africa/London continuously shipping logs to centralized ClickHouse in US region.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-11">
+                <a href="https://netflixtechblog.com/from-silos-to-service-topology-why-netflix-built-a-real-time-service-map-0165ba13a7bc?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] From Silos to Service Topology: Why Netflix Built a Real-Time Service Map
+                </a>
+                <p class="mb-1 small text-light">This layer provides topology at both cluster-level (which deployment clusters are communicating) and app-level (which applications are communicating). Service topology provides the knowledge graph foundation that makes this kind of intelligent automation possible.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-11">
+                <a href="https://snyk.io/blog/node-gyp-supply-chain-compromise-self-propagating-npm-worm-binding-gyp/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Node-gyp Supply Chain Compromise: A Self-Propagating npm Worm That Hides in binding.gyp
+                </a>
+                <p class="mb-1 small text-light">A new npm worm is abusing binding.gyp to trigger node-gyp during install, letting malicious packages run code without lifecycle scripts. It steals credentials, persists in GitHub, and self-propagates across maintainers.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-11">
+                <a href="https://snyk.io/blog/agentic-development-lifecycle/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The New Security Risks of the Agentic Development Lifecycle
+                </a>
+                <p class="mb-1 small text-light">AI agents are changing how software gets built, and with it, where security risk begins. Learn why securing the process matters as much as securing the code.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-11">
+                <a href="https://snyk.io/blog/protestware-open-source-maintainer-qwik-1-10-0-prompt-injection/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Protestware by open source maintainer to hinder agentic coding: The jqwik 1.10.0 Prompt Injection
+                </a>
+                <p class="mb-1 small text-light">jqwik 1.10.0 added a hidden prompt injection aimed at AI coding agents, using terminal escape codes to conceal destructive instructions from humans while leaving them readable to logs and tools.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-11">
+                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
+                </a>
+                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-06-11
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-11">
+                <a href="https://engineering.atspotify.com/2026/5/spotify-ads-api-claude-plugins/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins
+                </a>
+                <p class="mb-1 small text-light">Turning OpenAPI spec and Markdown files into a conversational ads management tool — no compiled code required. The post Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-06-11
                     
                 </small>
             </li>

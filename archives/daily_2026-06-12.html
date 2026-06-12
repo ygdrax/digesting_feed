@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - June 12, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - June 12, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for June 12, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-06-12">2026-06-12 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 15 sources • Updated 2026-06-12 09:28:06
+                    Showing 25 total articles from 
+                    15 sources
+                    
                     
                 </span>
             </small>
@@ -117,242 +134,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-12">
-                <a href="https://netflixtechblog.medium.com/a-human-augmenting-agentic-workflow-for-causal-inference-4623f0a9c5af?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] A Human-Augmenting Agentic Workflow for Causal Inference
-                </a>
-                <p class="mb-1 small text-light">A core challenge when analyzing new entertainment types is early adopter bias. Using agents for causal inference poses a challenge: how do we evaluate agents’ performance on tasks without ground truth.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-12">
-                <a href="https://netflixtechblog.medium.com/thinking-fast-slow-for-a-personalized-notification-system-4d89b26525cd?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Thinking Fast & Slow for a Personalized Notification System
-                </a>
-                <p class="mb-1 small text-light">At Netflix, our messaging platform faces a similar challenge every day. This architecture provides two critical advantages:“Stickiness”: It ensures a member receives a consistent experience.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-12">
-                <a href="https://netflixtechblog.com/dynamically-splitting-wide-partitions-in-cassandra-for-time-series-workloads-0eded064f456?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Dynamic Repartitioning for Time Series Workloads
-                </a>
-                <p class="mb-1 small text-light">A key challenge is wide partitions, as TimeSeries dataset partitions can grow quite large with events accumulating over time. Solution 1: Time Slice Re-PartitioningCassandra exposes useful introspection APIs for understanding data usage and access patterns.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-12">
-                <a href="https://netflixtechblog.medium.com/the-evolution-of-cassandra-data-movement-at-netflix-6e13329c80a1?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] The Evolution of Cassandra Data Movement at Netflix
-                </a>
-                <p class="mb-1 small text-light">Apache Cassandra powers mission critical applications at Netflix, including Member, Billing, Recommendations, Subscriptions and many more. This capability provides robust time travel functionality, essential for auditing, debugging, disaster recovery and reproducing past data states.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-06-12">
-                <a href="https://azure.microsoft.com/en-us/blog/claude-fable-5-available-today-in-microsoft-foundry-powering-the-next-era-of-autonomous-agents/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Claude Fable 5 available today in Microsoft Foundry: Powering the next era of autonomous agents
-                </a>
-                <p class="mb-1 small text-light">Claude Fable 5, Anthropic’s latest frontier model, is available today in Microsoft Foundry, powering agents in GitHub Copilot and Foundry Agent Service.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-12">
-                <a href="https://www.redhat.com/en/blog/ai-threats-move-fast-your-defenses-should-too" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] AI threats move fast. Your defenses should too.
-                </a>
-                <p class="mb-1 small text-light">Recently, Red Hat's Vincent Danen highlighted how AI models found 271 real security defects in Firefox in a single pass during Mozilla's collaboration with Anthropic.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-12">
-                <a href="https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4)
-                </a>
-                <p class="mb-1 small text-light">How we used Honk, Backstage, and Fleet Management to ease the pain of migrating thousands of datasets. The post Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-12">
-                <a href="https://engineering.fb.com/2026/06/03/data-center-engineering/lights-out-systems-on-validating-instant-power-loss-readiness/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Lights Out, Systems On: Validating Instant Power Loss Readiness
-                </a>
-                <p class="mb-1 small text-light">Having a robust DC region-wide asynchronous signaling mechanism for Twine services in the form of unavailability events (UE) is another. A purpose-built Twine recovery kit provides this “jumpstart” capability to recover those Twine services that power Twine itself.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-12">
-                <a href="https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/" target="_blank" class="fw-bold text-decoration-none">
-                    AI agent bankrupted their operator while trying to scan DN42
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/ Comments URL: https://news.ycombinator.com/item?id=48500012 Points: 491 # Comments: 176</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-12">
-                <a href="https://aws.amazon.com/blogs/aws/try-the-new-console-experience-in-amazon-bedrock-optimized-for-anthropic-and-openai-compatible-apis/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Try the new console experience in Amazon Bedrock, optimized for Anthropic- and OpenAI-compatible APIs
-                </a>
-                <p class="mb-1 small text-light">You can create a project, assign models, configure API keys, and start making inference requests in minutes. A new model catalog shows the latest GPT, Claude, and open-weight models that are supported on the bedrock-mantle engine.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-12">
-                <a href="https://www.hashicorp.com/blog/terraform-mcp-server-is-now-generally-available" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform MCP server is now generally available
-                </a>
-                <p class="mb-1 small text-light">Terraform MCP server enables AI assistants like GitHub Copilot, IBM Bob, Claude Code etc.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-12">
-                <a href="https://kubernetes.io/blog/2026/05/15/kubernetes-1-36-feature-mixed-version-proxy-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36: Mixed Version Proxy Graduates to Beta
-                </a>
-                <p class="mb-1 small text-light">The feature has evolved significantly since its initial release, addressing key gaps and modernizing its architecture. , a new API version introduced in the upgrade), that server returns a 404 Not Found.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-12">
-                <a href="https://www.cncf.io/blog/2026/06/08/benchmarking-kubevirt-performance-with-virtbench/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Benchmarking KubeVirt performance with virtbench
-                </a>
-                <p class="mb-1 small text-light">Organizations migrating VM estates from traditional hypervisors to KubeVirt often discover that many Kubernetes observability tools were originally designed around container workloads rather than VM-centric operational metrics.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-12">
-                <a href="https://blog.cloudflare.com/realtime-threat-intel-waf-rules/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Turning Cloudflare’s threat indicators into real-time WAF rules
-                </a>
-                <p class="mb-1 small text-light">Cloudflare’s Threat Events provides security analysts with a window into the global threat landscape. The WAF rule builder (API & Terraform) For teams that prefer Infrastructure as Code, the new cf.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-12">
-                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
-                </a>
-                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-12">
-                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
-                </a>
-                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-12">
-                <a href="https://www.pulumi.com/blog/trigger-deployments-on-git-tags/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Trigger Deployments on Git Tags
-                </a>
-                <p class="mb-1 small text-light">No extra pipeline glue, no manual click — your release tag is the deployment. Get started You can configure tag triggers wherever you manage deployment settings today — the Pulumi Cloud console, the REST API, or as code with the pulumiservice.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-12">
-                <a href="https://www.docker.com/blog/docker-hardened-images-enhanced-vulnerability-scanning-with-docker-and-aikido/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Hardened Images enhanced vulnerability scanning with Docker and Aikido
+                <a href="https://www.docker.com/blog/software-supply-chain-security-best-practices/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] 5 Software Supply Chain Security Best Practices for Development Teams
                 </a>
-                <p class="mb-1 small text-light">Docker Hardened Images addresses this problem at the source. Register for Aikido x Docker: Less Noise, More Signal in Container Security Resources Review our Docker Hardened Images documentation.</p>
+                <p class="mb-1 small text-light">Generating an SBOM once at release time and filing it away satisfies a compliance requirement but provides minimal security value. Effective runtime monitoring for supply chain security goes beyond traditional application performance monitoring.</p>
                 <small class="text-secondary">
                     
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-12">
-                <a href="https://www.docker.com/blog/what-is-ai-governance/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] What is AI Governance? Frameworks, Principles, and Best Practices
-                </a>
-                <p class="mb-1 small text-light">Implement ongoing monitoring for model performance, fairness, and compliance rather than relying solely on pre-deployment reviews. This is especially critical for agents that execute code, make API calls, or interact with live infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-12">
-                <a href="https://www.redhat.com/en/blog/why-platform-engineering-fails-scale-product-and-adoption-design-practice" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Why platform engineering fails to scale: Product and adoption design in practice
-                </a>
-                <p class="mb-1 small text-light">Platform engineering can improve developer experience, provide reusable platform services across an organization, and help teams deliver software more quickly without compromising trust and security. In practice, however, many platform teams struggle to achieve the level of adoption they expect.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
+                    Docker | 2026-06-12
                     
                 </small>
             </li>
@@ -364,7 +153,7 @@
                 <p class="mb-1 small text-light">36 introduces a new alpha counter metric route_controller_route_sync_total to the Cloud Controller Manager (CCM) route controller implementation at k8s.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-06-12
                     
                 </small>
             </li>
@@ -376,7 +165,7 @@
                 <p class="mb-1 small text-light">Why geo-distributed AI becomes a Kubernetes problem AI infrastructure has quietly crossed a threshold. Geo-distributed AI is now fundamentally a cloud-native infrastructure problem.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-06-12
                     
                 </small>
             </li>
@@ -388,7 +177,7 @@
                 <p class="mb-1 small text-light">Nobody knows, because the API key doesn't tell you who used it. For CI/CD pipelines and autonomous agents, Access service tokens allow you to give each agent a named identity.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-06-12
                     
                 </small>
             </li>
@@ -400,19 +189,247 @@
                 <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-06-12
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-12">
-                <a href="https://www.docker.com/blog/software-supply-chain-security-best-practices/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] 5 Software Supply Chain Security Best Practices for Development Teams
+                <a href="https://www.docker.com/blog/docker-hardened-images-enhanced-vulnerability-scanning-with-docker-and-aikido/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Hardened Images enhanced vulnerability scanning with Docker and Aikido
                 </a>
-                <p class="mb-1 small text-light">Generating an SBOM once at release time and filing it away satisfies a compliance requirement but provides minimal security value. Effective runtime monitoring for supply chain security goes beyond traditional application performance monitoring.</p>
+                <p class="mb-1 small text-light">Docker Hardened Images addresses this problem at the source. Register for Aikido x Docker: Less Noise, More Signal in Container Security Resources Review our Docker Hardened Images documentation.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-12">
+                <a href="https://www.docker.com/blog/what-is-ai-governance/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] What is AI Governance? Frameworks, Principles, and Best Practices
+                </a>
+                <p class="mb-1 small text-light">Implement ongoing monitoring for model performance, fairness, and compliance rather than relying solely on pre-deployment reviews. This is especially critical for agents that execute code, make API calls, or interact with live infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-12">
+                <a href="https://www.redhat.com/en/blog/why-platform-engineering-fails-scale-product-and-adoption-design-practice" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Why platform engineering fails to scale: Product and adoption design in practice
+                </a>
+                <p class="mb-1 small text-light">Platform engineering can improve developer experience, provide reusable platform services across an organization, and help teams deliver software more quickly without compromising trust and security. In practice, however, many platform teams struggle to achieve the level of adoption they expect.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-12">
+                <a href="https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/" target="_blank" class="fw-bold text-decoration-none">
+                    AI agent bankrupted their operator while trying to scan DN42
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/ Comments URL: https://news.ycombinator.com/item?id=48500012 Points: 491 # Comments: 176</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-12">
+                <a href="https://aws.amazon.com/blogs/aws/try-the-new-console-experience-in-amazon-bedrock-optimized-for-anthropic-and-openai-compatible-apis/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Try the new console experience in Amazon Bedrock, optimized for Anthropic- and OpenAI-compatible APIs
+                </a>
+                <p class="mb-1 small text-light">You can create a project, assign models, configure API keys, and start making inference requests in minutes. A new model catalog shows the latest GPT, Claude, and open-weight models that are supported on the bedrock-mantle engine.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-12">
+                <a href="https://www.hashicorp.com/blog/terraform-mcp-server-is-now-generally-available" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform MCP server is now generally available
+                </a>
+                <p class="mb-1 small text-light">Terraform MCP server enables AI assistants like GitHub Copilot, IBM Bob, Claude Code etc.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-12">
+                <a href="https://kubernetes.io/blog/2026/05/15/kubernetes-1-36-feature-mixed-version-proxy-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: Mixed Version Proxy Graduates to Beta
+                </a>
+                <p class="mb-1 small text-light">The feature has evolved significantly since its initial release, addressing key gaps and modernizing its architecture. , a new API version introduced in the upgrade), that server returns a 404 Not Found.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-12">
+                <a href="https://www.cncf.io/blog/2026/06/08/benchmarking-kubevirt-performance-with-virtbench/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Benchmarking KubeVirt performance with virtbench
+                </a>
+                <p class="mb-1 small text-light">Organizations migrating VM estates from traditional hypervisors to KubeVirt often discover that many Kubernetes observability tools were originally designed around container workloads rather than VM-centric operational metrics.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-12">
+                <a href="https://blog.cloudflare.com/realtime-threat-intel-waf-rules/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Turning Cloudflare’s threat indicators into real-time WAF rules
+                </a>
+                <p class="mb-1 small text-light">Cloudflare’s Threat Events provides security analysts with a window into the global threat landscape. The WAF rule builder (API & Terraform) For teams that prefer Infrastructure as Code, the new cf.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-12">
+                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
+                </a>
+                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-12">
+                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
+                </a>
+                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-12">
+                <a href="https://www.pulumi.com/blog/trigger-deployments-on-git-tags/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Trigger Deployments on Git Tags
+                </a>
+                <p class="mb-1 small text-light">No extra pipeline glue, no manual click — your release tag is the deployment. Get started You can configure tag triggers wherever you manage deployment settings today — the Pulumi Cloud console, the REST API, or as code with the pulumiservice.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-12">
+                <a href="https://netflixtechblog.medium.com/a-human-augmenting-agentic-workflow-for-causal-inference-4623f0a9c5af?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] A Human-Augmenting Agentic Workflow for Causal Inference
+                </a>
+                <p class="mb-1 small text-light">A core challenge when analyzing new entertainment types is early adopter bias. Using agents for causal inference poses a challenge: how do we evaluate agents’ performance on tasks without ground truth.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-12">
+                <a href="https://netflixtechblog.medium.com/thinking-fast-slow-for-a-personalized-notification-system-4d89b26525cd?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Thinking Fast & Slow for a Personalized Notification System
+                </a>
+                <p class="mb-1 small text-light">At Netflix, our messaging platform faces a similar challenge every day. This architecture provides two critical advantages:“Stickiness”: It ensures a member receives a consistent experience.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-12">
+                <a href="https://netflixtechblog.com/dynamically-splitting-wide-partitions-in-cassandra-for-time-series-workloads-0eded064f456?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Dynamic Repartitioning for Time Series Workloads
+                </a>
+                <p class="mb-1 small text-light">A key challenge is wide partitions, as TimeSeries dataset partitions can grow quite large with events accumulating over time. Solution 1: Time Slice Re-PartitioningCassandra exposes useful introspection APIs for understanding data usage and access patterns.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-12">
+                <a href="https://netflixtechblog.medium.com/the-evolution-of-cassandra-data-movement-at-netflix-6e13329c80a1?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] The Evolution of Cassandra Data Movement at Netflix
+                </a>
+                <p class="mb-1 small text-light">Apache Cassandra powers mission critical applications at Netflix, including Member, Billing, Recommendations, Subscriptions and many more. This capability provides robust time travel functionality, essential for auditing, debugging, disaster recovery and reproducing past data states.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-06-12">
+                <a href="https://azure.microsoft.com/en-us/blog/claude-fable-5-available-today-in-microsoft-foundry-powering-the-next-era-of-autonomous-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Claude Fable 5 available today in Microsoft Foundry: Powering the next era of autonomous agents
+                </a>
+                <p class="mb-1 small text-light">Claude Fable 5, Anthropic’s latest frontier model, is available today in Microsoft Foundry, powering agents in GitHub Copilot and Foundry Agent Service.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-12">
+                <a href="https://www.redhat.com/en/blog/ai-threats-move-fast-your-defenses-should-too" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] AI threats move fast. Your defenses should too.
+                </a>
+                <p class="mb-1 small text-light">Recently, Red Hat's Vincent Danen highlighted how AI models found 271 real security defects in Firefox in a single pass during Mozilla's collaboration with Anthropic.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-12">
+                <a href="https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4)
+                </a>
+                <p class="mb-1 small text-light">How we used Honk, Backstage, and Fleet Management to ease the pain of migrating thousands of datasets. The post Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-06-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-12">
+                <a href="https://engineering.fb.com/2026/06/03/data-center-engineering/lights-out-systems-on-validating-instant-power-loss-readiness/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Lights Out, Systems On: Validating Instant Power Loss Readiness
+                </a>
+                <p class="mb-1 small text-light">Having a robust DC region-wide asynchronous signaling mechanism for Twine services in the form of unavailability events (UE) is another. A purpose-built Twine recovery kit provides this “jumpstart” capability to recover those Twine services that power Twine itself.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-06-12
                     
                 </small>
             </li>

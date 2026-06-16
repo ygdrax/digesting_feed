@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - June 16, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - June 16, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for June 16, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-06-16">2026-06-16 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 16 sources • Updated 2026-06-16 09:50:25
+                    Showing 25 total articles from 
+                    16 sources
+                    
                     
                 </span>
             </small>
@@ -119,278 +136,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-16">
-                <a href="https://www.reddit.com/r/devops/comments/1u6zjjc/postgresql_on_kubernetes_in_2026_complete/" target="_blank" class="fw-bold text-decoration-none">
-                    PostgreSQL on Kubernetes in 2026 — Complete CloudNativePG Setup Guide (HA, PITR, PgBouncer)
-                </a>
-                <p class="mb-1 small text-light">Also covers common mistakes I've seen (configuring backups after day one being the big one). Disclosure: this is my own blog post at devtoolhub.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-16">
-                <a href="https://www.reddit.com/r/devops/comments/1u6pamz/is_it_worth_starting_to_learn_devops_from_scratch/" target="_blank" class="fw-bold text-decoration-none">
-                    Is it worth starting to learn DevOps from scratch, considering that AI that might be better than me (and cheaper for companies)?
-                </a>
-                <p class="mb-1 small text-light">I'm Angela and I'm an IT Support Specialist with 4 years of experience. However, I'm really worried about AI and how it could impact junior jobs.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-06-16">
-                <a href="https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] AI alone won’t change your business. The system running it will.
-                </a>
-                <p class="mb-1 small text-light">Building a system for the agentic enterpriseTo succeed in this new era, an agent platform must meet a higher bar. Optimized performance for open models: With Fireworks AI on Foundry, enterprises get faster, more efficient inference directly into the platform.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-06-16">
-                <a href="https://azure.microsoft.com/en-us/blog/announcing-microsoft-discovery-general-availability-and-microsoft-discovery-app-preview/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Announcing Microsoft Discovery general availability and Microsoft Discovery app preview
-                </a>
-                <p class="mb-1 small text-light">Those considerations, along with continued customer feedback, helped shape the general availability release and the platform capabilities behind it.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-16">
-                <a href="https://www.redhat.com/en/blog/protecting-enterprise-ai-how-manage-api-keys-models-service-maas" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Protecting enterprise AI: How to manage API keys in Models-as-a-Service (MaaS)
+                <a href="https://www.redhat.com/en/blog/scaling-automated-infrastructure-compliance-in-telecommunications-using-red-hat-ansible-automation-platform" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Scaling automated infrastructure compliance in telecommunications using Red Hat Ansible Automation Platform
                 </a>
-                <p class="mb-1 small text-light">Every team that moves an AI model from experimentation to production hits the same wall. Or a service account gets created with more access than anyone intended, shared across pipelines, and forgotten.</p>
+                <p class="mb-1 small text-light">As telecommunications (telco) mobile networks evolve from physical hardware to virtualized and containerized infrastructure, the volume of necessary network element upgrades has increased exponentially. Telstra modernized its approach by transitioning to Red Hat Ansible Automation Platform, shift.</p>
                 <small class="text-secondary">
                     
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-06-16">
-                <a href="https://about.gitlab.com/blog/introducing-gitlab-flex/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab Flex: Commit once, reshape your seats and AI spend
-                </a>
-                <p class="mb-1 small text-light">Others are reshaping their org structure and contractor mix around agents, which can push seat needs up or down. If you've used consumption pricing elsewhere — cloud credits, observability credits — the drawdown will feel familiar.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-06-16">
-                <a href="https://blog.sentry.io/ai-bug-reproduction/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Works on my machine: how we use AI to reproduce reported bugs
-                </a>
-                <p class="mb-1 small text-light">See our release registry for a source of truth. And like any other open source project, we get tons of bug reports and issues on these.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-16">
-                <a href="https://snyk.io/blog/government-ban-ai-model-engineer-perspective/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] The Government Just Banned an AI Model. An Engineer's Perspective.
-                </a>
-                <p class="mb-1 small text-light">A government order abruptly took down a powerful AI model, exposing a new kind of supply chain risk for engineering teams. Security leaders need contingency plans before the next model disappears.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-16">
-                <a href="https://aws.amazon.com/blogs/aws/aws-waf-adds-ai-traffic-monetization-capability-to-help-content-owners-charge-ai-bots-for-content-access/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS WAF adds AI traffic monetization capability to help content owners charge AI bots for content access
-                </a>
-                <p class="mb-1 small text-light">The capability helps content owners and publishers set per-request pricing by content path, bot category, or verification tier without modifying their origin infrastructure or writing application code. AWS WAF uses these selections to recommend suitable security protections for your configuration.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-16">
-                <a href="https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Anthropic Claude Fable 5 on AWS: Mythos-class capabilities with built-in safeguards now available
-                </a>
-                <p class="mb-1 small text-light">aws/v1/data_retention \ -H "x-api-key: <your-bedrock-api-key>" \ -H "Content-Type: application/json" \ -d '{ "mode": "provider_data_share" }' If you want to use the bedrock-runtime engine, run this sample script.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-16">
-                <a href="https://www.hashicorp.com/blog/with-great-ai-power-comes-the-need-for-zero-trust-responsibility" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] With great AI power comes the need for zero trust responsibility
-                </a>
-                <p class="mb-1 small text-light">Vault's dynamic secret engines generate scoped, ephemeral credentials across your entire infrastructure — AWS IAM, Azure Service Principals, GCP service accounts, databases (PostgreSQL, MongoDB, Oracle), PKI certificates, and SSH keys.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-16">
-                <a href="https://kubernetes.io/blog/2026/06/01/dashboard-to-headlamp/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] From Kubernetes Dashboard to Headlamp: Understanding the Transition
-                </a>
-                <p class="mb-1 small text-light">Viewing workloads and resourcesIn Kubernetes Dashboard, most users started by browsing workloads like pods, deployments, services, and namespaces. From resource lists to application context with ProjectsProjects give you an application-centered way to view Kubernetes.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-16">
-                <a href="https://www.cncf.io/blog/2026/06/12/securing-ci-cd-for-an-open-source-project-locking-down-dependencies/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Securing CI/CD for an open source project: Locking down dependencies
-                </a>
-                <p class="mb-1 small text-light">Upstream actions regularly fix bugs and ship security features. Combined with Renovate proposing updates as new versions come out, we get the security benefit without the operational tax.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-16">
-                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
-                </a>
-                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-16">
-                <a href="https://www.pulumi.com/blog/getting-started-aks-pulumi-csharp/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Six Live Kubernetes Recommendations: AKS, Cilium, Rate Limiting, and More
-                </a>
-                <p class="mb-1 small text-light">Pulumi lets you bring that language to your infrastructure rather than learn a new DSL. ContainerServiceNetworkProfileArgs { NetworkDataplane = "cilium", NetworkPlugin = "azure", NetworkPluginMode = "overlay", NetworkPolicy = "cilium", PodCidr = "192.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-16">
-                <a href="https://www.reddit.com/r/devops/comments/1u73qcl/security_patching_across_distributed_edge/" target="_blank" class="fw-bold text-decoration-none">
-                    Security patching across distributed edge infrastructure. Why are we still treating it as a ticketing problem.
-                </a>
-                <p class="mb-1 small text-light">A critical vulnerability lands and the cycle starts all over again. Modern application teams moved past this years ago.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-06-16">
-                <a href="https://about.gitlab.com/blog/gitlab-expands-google-model-support/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab on Google Cloud: Fully managed, compliant, and AI-ready
-                </a>
-                <p class="mb-1 small text-light">You can now run GitLab as a fully managed platform on Google Cloud, delivered by GitLab-certified managed service providers (MSPs) — with the latest Google AI models built in.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-16">
-                <a href="https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify
-                </a>
-                <p class="mb-1 small text-light">At Code with Claude, Spotify’s chief architect shared how we make both teams and AI agents more effective. The post Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-16">
-                <a href="https://www.cncf.io/blog/2026/06/09/solving-secret-sprawl-in-multi-account-kubernetes-with-external-secrets-operator/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Solving secret sprawl in multi-account Kubernetes with External Secrets Operator
-                </a>
-                <p class="mb-1 small text-light">The problem we set out to solve is not unique to AWS, or to cloud infrastructure in general. This allows applications to continue consuming standard Kubernetes Secrets while the source of truth remains external to the cluster.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-16">
-                <a href="https://blog.cloudflare.com/ensemble-ai-talent-joins-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Growing the Cloudflare AI team with talent from Ensemble AI
-                </a>
-                <p class="mb-1 small text-light">As developers build more AI-native applications, the ability to serve models efficiently becomes a critical part of the platform. Building for the next generation of AI workloads AI infrastructure is entering a new phase.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-16">
-                <a href="https://blog.cloudflare.com/scaling-security-scans/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Scaling Security Insights: how we achieved a 10x increase in global scanning capacity
-                </a>
-                <p class="mb-1 small text-light">Security Insights provides actionable security recommendations for every Cloudflare account. Scans were only being performed every week or two, and therefore newly introduced security risks could remain undetected for up to two weeks.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-16">
-                <a href="https://blog.cloudflare.com/frontier-model-defense/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Defend against frontier cyber models: Cloudflare's architecture as customer zero
-                </a>
-                <p class="mb-1 small text-light">The Cloudflare stack already exists in front of our code, employees, and customer-facing applications. First is Cloudforce One, our threat intelligence, research, and operations team, which sits within the Cloudflare security organization.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-06-16">
-                <a href="https://slack.engineering/slack-ai-the-path-to-multi-cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Slack AI: The Path to Multi-Cloud
-                </a>
-                <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
+                    Red Hat | 2026-06-16
                     
                 </small>
             </li>
@@ -402,19 +155,283 @@
                 <p class="mb-1 small text-light">Docker’s CISO, Mark Lechner, wrote about this shift and what every engineering team should do now. We look forward to working with the coalition on key ways in which Docker is uniquely placed to provide expertise and scale to this important cross-industry effort.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-16">
+                <a href="https://www.cncf.io/blog/2026/06/09/solving-secret-sprawl-in-multi-account-kubernetes-with-external-secrets-operator/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Solving secret sprawl in multi-account Kubernetes with External Secrets Operator
+                </a>
+                <p class="mb-1 small text-light">The problem we set out to solve is not unique to AWS, or to cloud infrastructure in general. This allows applications to continue consuming standard Kubernetes Secrets while the source of truth remains external to the cluster.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-16">
+                <a href="https://blog.cloudflare.com/ensemble-ai-talent-joins-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Growing the Cloudflare AI team with talent from Ensemble AI
+                </a>
+                <p class="mb-1 small text-light">As developers build more AI-native applications, the ability to serve models efficiently becomes a critical part of the platform. Building for the next generation of AI workloads AI infrastructure is entering a new phase.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-16">
+                <a href="https://blog.cloudflare.com/scaling-security-scans/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Scaling Security Insights: how we achieved a 10x increase in global scanning capacity
+                </a>
+                <p class="mb-1 small text-light">Security Insights provides actionable security recommendations for every Cloudflare account. Scans were only being performed every week or two, and therefore newly introduced security risks could remain undetected for up to two weeks.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-16">
+                <a href="https://blog.cloudflare.com/frontier-model-defense/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Defend against frontier cyber models: Cloudflare's architecture as customer zero
+                </a>
+                <p class="mb-1 small text-light">The Cloudflare stack already exists in front of our code, employees, and customer-facing applications. First is Cloudforce One, our threat intelligence, research, and operations team, which sits within the Cloudflare security organization.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-06-16">
+                <a href="https://slack.engineering/slack-ai-the-path-to-multi-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Slack AI: The Path to Multi-Cloud
+                </a>
+                <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-16">
+                <a href="https://www.reddit.com/r/devops/comments/1u73qcl/security_patching_across_distributed_edge/" target="_blank" class="fw-bold text-decoration-none">
+                    Security patching across distributed edge infrastructure. Why are we still treating it as a ticketing problem.
+                </a>
+                <p class="mb-1 small text-light">A critical vulnerability lands and the cycle starts all over again. Modern application teams moved past this years ago.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-06-16">
+                <a href="https://about.gitlab.com/blog/gitlab-expands-google-model-support/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab on Google Cloud: Fully managed, compliant, and AI-ready
+                </a>
+                <p class="mb-1 small text-light">You can now run GitLab as a fully managed platform on Google Cloud, delivered by GitLab-certified managed service providers (MSPs) — with the latest Google AI models built in.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-16">
+                <a href="https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify
+                </a>
+                <p class="mb-1 small text-light">At Code with Claude, Spotify’s chief architect shared how we make both teams and AI agents more effective. The post Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-16">
+                <a href="https://aws.amazon.com/blogs/aws/aws-waf-adds-ai-traffic-monetization-capability-to-help-content-owners-charge-ai-bots-for-content-access/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS WAF adds AI traffic monetization capability to help content owners charge AI bots for content access
+                </a>
+                <p class="mb-1 small text-light">The capability helps content owners and publishers set per-request pricing by content path, bot category, or verification tier without modifying their origin infrastructure or writing application code. AWS WAF uses these selections to recommend suitable security protections for your configuration.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-16">
+                <a href="https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Anthropic Claude Fable 5 on AWS: Mythos-class capabilities with built-in safeguards now available
+                </a>
+                <p class="mb-1 small text-light">aws/v1/data_retention \ -H "x-api-key: <your-bedrock-api-key>" \ -H "Content-Type: application/json" \ -d '{ "mode": "provider_data_share" }' If you want to use the bedrock-runtime engine, run this sample script.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-16">
+                <a href="https://www.hashicorp.com/blog/with-great-ai-power-comes-the-need-for-zero-trust-responsibility" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] With great AI power comes the need for zero trust responsibility
+                </a>
+                <p class="mb-1 small text-light">Vault's dynamic secret engines generate scoped, ephemeral credentials across your entire infrastructure — AWS IAM, Azure Service Principals, GCP service accounts, databases (PostgreSQL, MongoDB, Oracle), PKI certificates, and SSH keys.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-16">
+                <a href="https://kubernetes.io/blog/2026/06/01/dashboard-to-headlamp/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] From Kubernetes Dashboard to Headlamp: Understanding the Transition
+                </a>
+                <p class="mb-1 small text-light">Viewing workloads and resourcesIn Kubernetes Dashboard, most users started by browsing workloads like pods, deployments, services, and namespaces. From resource lists to application context with ProjectsProjects give you an application-centered way to view Kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-16">
+                <a href="https://www.cncf.io/blog/2026/06/12/securing-ci-cd-for-an-open-source-project-locking-down-dependencies/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Securing CI/CD for an open source project: Locking down dependencies
+                </a>
+                <p class="mb-1 small text-light">Upstream actions regularly fix bugs and ship security features. Combined with Renovate proposing updates as new versions come out, we get the security benefit without the operational tax.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-16">
+                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
+                </a>
+                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-16">
+                <a href="https://www.pulumi.com/blog/getting-started-aks-pulumi-csharp/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Six Live Kubernetes Recommendations: AKS, Cilium, Rate Limiting, and More
+                </a>
+                <p class="mb-1 small text-light">Pulumi lets you bring that language to your infrastructure rather than learn a new DSL. ContainerServiceNetworkProfileArgs { NetworkDataplane = "cilium", NetworkPlugin = "azure", NetworkPluginMode = "overlay", NetworkPolicy = "cilium", PodCidr = "192.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-16">
+                <a href="https://www.reddit.com/r/devops/comments/1u6zjjc/postgresql_on_kubernetes_in_2026_complete/" target="_blank" class="fw-bold text-decoration-none">
+                    PostgreSQL on Kubernetes in 2026 — Complete CloudNativePG Setup Guide (HA, PITR, PgBouncer)
+                </a>
+                <p class="mb-1 small text-light">Also covers common mistakes I've seen (configuring backups after day one being the big one). Disclosure: this is my own blog post at devtoolhub.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-16">
+                <a href="https://www.reddit.com/r/devops/comments/1u6pamz/is_it_worth_starting_to_learn_devops_from_scratch/" target="_blank" class="fw-bold text-decoration-none">
+                    Is it worth starting to learn DevOps from scratch, considering that AI that might be better than me (and cheaper for companies)?
+                </a>
+                <p class="mb-1 small text-light">I'm Angela and I'm an IT Support Specialist with 4 years of experience. However, I'm really worried about AI and how it could impact junior jobs.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-06-16">
+                <a href="https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] AI alone won’t change your business. The system running it will.
+                </a>
+                <p class="mb-1 small text-light">Building a system for the agentic enterpriseTo succeed in this new era, an agent platform must meet a higher bar. Optimized performance for open models: With Fireworks AI on Foundry, enterprises get faster, more efficient inference directly into the platform.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-06-16">
+                <a href="https://azure.microsoft.com/en-us/blog/announcing-microsoft-discovery-general-availability-and-microsoft-discovery-app-preview/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Announcing Microsoft Discovery general availability and Microsoft Discovery app preview
+                </a>
+                <p class="mb-1 small text-light">Those considerations, along with continued customer feedback, helped shape the general availability release and the platform capabilities behind it.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-06-16
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-16">
-                <a href="https://www.redhat.com/en/blog/scaling-automated-infrastructure-compliance-in-telecommunications-using-red-hat-ansible-automation-platform" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Scaling automated infrastructure compliance in telecommunications using Red Hat Ansible Automation Platform
+                <a href="https://www.redhat.com/en/blog/protecting-enterprise-ai-how-manage-api-keys-models-service-maas" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Protecting enterprise AI: How to manage API keys in Models-as-a-Service (MaaS)
                 </a>
-                <p class="mb-1 small text-light">As telecommunications (telco) mobile networks evolve from physical hardware to virtualized and containerized infrastructure, the volume of necessary network element upgrades has increased exponentially. Telstra modernized its approach by transitioning to Red Hat Ansible Automation Platform, shift.</p>
+                <p class="mb-1 small text-light">Every team that moves an AI model from experimentation to production hits the same wall. Or a service account gets created with more access than anyone intended, shared across pipelines, and forgotten.</p>
                 <small class="text-secondary">
                     
-                    Red Hat
+                    Red Hat | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-06-16">
+                <a href="https://about.gitlab.com/blog/introducing-gitlab-flex/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab Flex: Commit once, reshape your seats and AI spend
+                </a>
+                <p class="mb-1 small text-light">Others are reshaping their org structure and contractor mix around agents, which can push seat needs up or down. If you've used consumption pricing elsewhere — cloud credits, observability credits — the drawdown will feel familiar.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-06-16">
+                <a href="https://blog.sentry.io/ai-bug-reproduction/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Works on my machine: how we use AI to reproduce reported bugs
+                </a>
+                <p class="mb-1 small text-light">See our release registry for a source of truth. And like any other open source project, we get tons of bug reports and issues on these.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-06-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-16">
+                <a href="https://snyk.io/blog/government-ban-ai-model-engineer-perspective/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The Government Just Banned an AI Model. An Engineer's Perspective.
+                </a>
+                <p class="mb-1 small text-light">A government order abruptly took down a powerful AI model, exposing a new kind of supply chain risk for engineering teams. Security leaders need contingency plans before the next model disappears.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-06-16
                     
                 </small>
             </li>

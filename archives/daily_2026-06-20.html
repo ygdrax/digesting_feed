@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - June 20, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - June 20, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for June 20, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-06-20">2026-06-20 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2026-06-20 09:06:46
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,266 +126,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-20">
-                <a href="https://startupfortune.com/hyundai-takes-full-control-of-boston-dynamics-as-softbank-exits-for-325-million/" target="_blank" class="fw-bold text-decoration-none">
-                    Hyundai buys Boston Dynamics
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-20">
+                <a href="https://blog.cloudflare.com/temporary-accounts/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Temporary Cloudflare Accounts for AI agents
                 </a>
-                <p class="mb-1 small text-light">Article URL: https://startupfortune.com/hyundai-takes-full-control-of-boston-dynamics-as-softbank-exits-for-325-million/ Comments URL: https://news.ycombinator.com/item?id=48600312 Points: 809 # Comments: 359</p>
+                <p class="mb-1 small text-light">Today we're rolling out Temporary Cloudflare Accounts for Agents. Agents can now deploy websites, APIs, and agents right away, without first needing to sign up for an account.</p>
                 <small class="text-secondary">
                     
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-20">
-                <a href="https://www.reuters.com/technology/norway-imposes-near-ban-ai-elementary-school-2026-06-19/" target="_blank" class="fw-bold text-decoration-none">
-                    Norway imposes near ban on AI in elementary school
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.reuters.com/technology/norway-imposes-near-ban-ai-elementary-school-2026-06-19/ Comments URL: https://news.ycombinator.com/item?id=48600093 Points: 647 # Comments: 444</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-20">
-                <a href="https://www.jvm-weekly.com/p/project-valhalla-explained-how-a" target="_blank" class="fw-bold text-decoration-none">
-                    Project Valhalla, Explained: How a Decade of Work Arrives in JDK 28
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.jvm-weekly.com/p/project-valhalla-explained-how-a Comments URL: https://news.ycombinator.com/item?id=48595511 Points: 590 # Comments: 365</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-20">
-                <a href="https://www.flexport.com/company/careers/" target="_blank" class="fw-bold text-decoration-none">
-                    Flexport (YC W14) Is Hiring in Indonesia, India, and Thailand
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.flexport.com/company/careers/ Comments URL: https://news.ycombinator.com/item?id=48593694 Points: 0 # Comments: 0</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-20">
-                <a href="https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7-instances-accelerated-by-nvidia-rtx-pro-4500-blackwell-server-edition-gpus/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Announcing Amazon EC2 G7 instances accelerated by NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs
-                </a>
-                <p class="mb-1 small text-light">AWS is the first major cloud provider to support NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs. G7 instances also deliver faster performance for GPU-accelerated analytics on Amazon EMR on Amazon Elastic Kubernetes Service (Amazon EKS).</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-20">
-                <a href="https://aws.amazon.com/blogs/aws/amazon-ecs-introduces-new-high-resolution-metrics-for-faster-service-auto-scaling/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon ECS introduces new high-resolution metrics for faster service auto scaling
-                </a>
-                <p class="mb-1 small text-light">You can enable these metrics when you create or update your ECS service in the Amazon ECS console, or using AWS SDKs and tools, and AWS CloudFormation. The feature itself has no additional cost, but high-resolution CloudWatch metrics introduce a new pricing dimension.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-20">
-                <a href="https://aws.amazon.com/blogs/aws/top-announcements-of-the-aws-summit-in-new-york-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Top announcements of the AWS Summit in New York, 2026
-                </a>
-                <p class="mb-1 small text-light">Today at the AWS Summit in New York City, Swami Sivasubramanian, AWS VP of Agentic AI, provided the day’s keynote.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-20">
-                <a href="https://www.hashicorp.com/blog/introducing-tfctl-the-cli-for-hcp-terraform-and-tfe" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Introducing tfctl: The CLI for HCP Terraform and TFE
-                </a>
-                <p class="mb-1 small text-light">For years, automating HCP Terraform platform operations meant building and maintaining custom tooling on top of the API. As infrastructure automation becomes more sophisticated, a reliable, first-class interface to the platform isn't a nice-to-have.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-20">
-                <a href="https://medium.com/netflix-techblog/vmaf-v1-good-is-not-good-enough-60d7e4244ea8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] VMAF v1: Good Is Not Good Enough
-                </a>
-                <p class="mb-1 small text-light">We found that this approach improves accuracy and helps generalize VMAF better. Additionally, our newest libvmaf release has a much improved threading performance, which is of benefit to both v0 and v1.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-20">
-                <a href="https://medium.com/netflix-techblog/from-silos-to-service-topology-why-netflix-built-a-real-time-service-map-0165ba13a7bc?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] From Silos to Service Topology: Why Netflix Built a Real-Time Service Map
-                </a>
-                <p class="mb-1 small text-light">This layer provides topology at both cluster-level (which deployment clusters are communicating) and app-level (which applications are communicating). Service topology provides the knowledge graph foundation that makes this kind of intelligent automation possible.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-20">
-                <a href="https://www.docker.com/blog/docker-content-trust-retirement-and-migration-guidance/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Content Trust: Retirement and Migration Guidance
-                </a>
-                <p class="mb-1 small text-light">TLDR: Docker Content Trust (DCT) and the Notary v1 service at notary. Use digests in dockerfiles for reproducible builds, and in Kubernetes manifests or Compose files to ensure predictable deployments.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-20">
-                <a href="https://www.redhat.com/en/blog/whats-new-image-builder-red-hat-enterprise-linux-102-and-98" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] What's new with image builder for Red Hat Enterprise Linux 10.2 and 9.8
-                </a>
-                <p class="mb-1 small text-light">It helps organizations standardize deployments, bring consistency, and reduce manual effort, generating ready-to-deploy images for virtual machines (VM), cloud, and bare metal. What's new for the image builder command-line interface in RHEL 10.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-20">
-                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
-                </a>
-                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-20">
-                <a href="https://engineering.atspotify.com/2026/5/spotify-ads-api-claude-plugins/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins
-                </a>
-                <p class="mb-1 small text-light">Turning OpenAPI spec and Markdown files into a conversational ads management tool — no compiled code required. The post Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-20">
-                <a href="https://engineering.fb.com/2026/06/03/data-center-engineering/lights-out-systems-on-validating-instant-power-loss-readiness/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Lights Out, Systems On: Validating Instant Power Loss Readiness
-                </a>
-                <p class="mb-1 small text-light">Having a robust DC region-wide asynchronous signaling mechanism for Twine services in the form of unavailability events (UE) is another. A purpose-built Twine recovery kit provides this “jumpstart” capability to recover those Twine services that power Twine itself.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-20">
-                <a href="https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems
-                </a>
-                <p class="mb-1 small text-light">The retrieval system within industry recommendation systems have consisted of microservices stitched together, with neural networks inconsistently integrated. SilverTorch makes retrieval significantly more efficient, runs at scale, and enables better recommendations.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-20">
-                <a href="https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Reel Friends: Building Social Discovery that Scales to Billions
-                </a>
-                <p class="mb-1 small text-light">On its face the new Friend Bubbles feature looks simple enough. But sometimes the features that seem the most straightforward require the deepest engineering work.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-20">
-                <a href="https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Migrating Data Ingestion Systems at Meta Scale
-                </a>
-                <p class="mb-1 small text-light">Several important solutions and strategies helped make a migration of this scope successful. This means if previous landed data has any issues the problematic data will be passed to the new landed data.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-20">
-                <a href="https://engineering.fb.com/2026/05/11/security/labyrinth-1-1-end-to-end-encrypted-e2ee-backups-more-reliable/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Labyrinth 1.1: Making End-to-End Encrypted Backups Even More Reliable
-                </a>
-                <p class="mb-1 small text-light">1 enhances the reliability of end-to-end encrypted backups with a new sub-protocol that helps messages survive the loss of a device, a switched device, and long gaps between sign-ins. Read our updated white paper, “The Labyrinth Encrypted Message Storage Protocol” for more details.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-20">
-                <a href="https://kubernetes.io/blog/2026/05/26/reconciling-unfixed-kubernetes-cves/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Reconciling the Past: Correcting Records for Unfixed Kubernetes CVEs
-                </a>
-                <p class="mb-1 small text-light">The Issue: A Time-of-Check to Time-of-Use (TOCTOU) race condition in the API server proxy allows users to bypass IP restrictions.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-20">
-                <a href="https://kubernetes.io/blog/2026/05/20/etcd-370-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing etcd 3.7.0-beta.0
-                </a>
-                <p class="mb-1 small text-light">This new version of the popular distributed database and key Kubernetes component includes the long-requested RangeStream feature, as well as a refactoring and cleanup of multiple legacy components and interfaces.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-20">
-                <a href="https://www.pulumi.com/blog/self-host-gemma4-llama-cpp-k8s-tailscale-pulumi/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Use Your Mac for AI Agents: Self-Host Gemma 4 12 B with Pulumi and Tailscale
-                </a>
-                <p class="mb-1 small text-light">cpp for host-native inference, k3d for a local Kubernetes cluster, Pulumi for infrastructure as code, and Tailscale for secure access.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
+                    Cloudflare | 2026-06-20
                     
                 </small>
             </li>
@@ -380,7 +145,7 @@
                 <p class="mb-1 small text-light">Many organizations now operate under strict data governance requirements—whether driven by the EU’s General Data Protection Regulation (GDPR), Digital Operational Resilience Act (DORA), or NIS2 directive, by other national security classifications, or by sector-specific regulations in financial s...</p>
                 <small class="text-secondary">
                     
-                    Red Hat
+                    Red Hat | 2026-06-20
                     
                 </small>
             </li>
@@ -392,19 +157,271 @@
                 <p class="mb-1 small text-light">At Spotify, data problems used to follow a specific pattern. You'd look for the relevant dashboard, there... The post Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant appeared first on Spotify Engineering.</p>
                 <small class="text-secondary">
                     
-                    Spotify Engineering
+                    Spotify Engineering | 2026-06-20
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-20">
-                <a href="https://blog.cloudflare.com/temporary-accounts/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Temporary Cloudflare Accounts for AI agents
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-20">
+                <a href="https://kubernetes.io/blog/2026/05/26/reconciling-unfixed-kubernetes-cves/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Reconciling the Past: Correcting Records for Unfixed Kubernetes CVEs
                 </a>
-                <p class="mb-1 small text-light">Today we're rolling out Temporary Cloudflare Accounts for Agents. Agents can now deploy websites, APIs, and agents right away, without first needing to sign up for an account.</p>
+                <p class="mb-1 small text-light">The Issue: A Time-of-Check to Time-of-Use (TOCTOU) race condition in the API server proxy allows users to bypass IP restrictions.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Kubernetes | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-20">
+                <a href="https://kubernetes.io/blog/2026/05/20/etcd-370-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing etcd 3.7.0-beta.0
+                </a>
+                <p class="mb-1 small text-light">This new version of the popular distributed database and key Kubernetes component includes the long-requested RangeStream feature, as well as a refactoring and cleanup of multiple legacy components and interfaces.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-20">
+                <a href="https://www.pulumi.com/blog/self-host-gemma4-llama-cpp-k8s-tailscale-pulumi/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Use Your Mac for AI Agents: Self-Host Gemma 4 12 B with Pulumi and Tailscale
+                </a>
+                <p class="mb-1 small text-light">cpp for host-native inference, k3d for a local Kubernetes cluster, Pulumi for infrastructure as code, and Tailscale for secure access.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-20">
+                <a href="https://medium.com/netflix-techblog/vmaf-v1-good-is-not-good-enough-60d7e4244ea8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] VMAF v1: Good Is Not Good Enough
+                </a>
+                <p class="mb-1 small text-light">We found that this approach improves accuracy and helps generalize VMAF better. Additionally, our newest libvmaf release has a much improved threading performance, which is of benefit to both v0 and v1.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-20">
+                <a href="https://medium.com/netflix-techblog/from-silos-to-service-topology-why-netflix-built-a-real-time-service-map-0165ba13a7bc?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] From Silos to Service Topology: Why Netflix Built a Real-Time Service Map
+                </a>
+                <p class="mb-1 small text-light">This layer provides topology at both cluster-level (which deployment clusters are communicating) and app-level (which applications are communicating). Service topology provides the knowledge graph foundation that makes this kind of intelligent automation possible.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-20">
+                <a href="https://www.docker.com/blog/docker-content-trust-retirement-and-migration-guidance/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Content Trust: Retirement and Migration Guidance
+                </a>
+                <p class="mb-1 small text-light">TLDR: Docker Content Trust (DCT) and the Notary v1 service at notary. Use digests in dockerfiles for reproducible builds, and in Kubernetes manifests or Compose files to ensure predictable deployments.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-20">
+                <a href="https://www.redhat.com/en/blog/whats-new-image-builder-red-hat-enterprise-linux-102-and-98" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] What's new with image builder for Red Hat Enterprise Linux 10.2 and 9.8
+                </a>
+                <p class="mb-1 small text-light">It helps organizations standardize deployments, bring consistency, and reduce manual effort, generating ready-to-deploy images for virtual machines (VM), cloud, and bare metal. What's new for the image builder command-line interface in RHEL 10.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-20">
+                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
+                </a>
+                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-20">
+                <a href="https://engineering.atspotify.com/2026/5/spotify-ads-api-claude-plugins/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins
+                </a>
+                <p class="mb-1 small text-light">Turning OpenAPI spec and Markdown files into a conversational ads management tool — no compiled code required. The post Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-20">
+                <a href="https://engineering.fb.com/2026/06/03/data-center-engineering/lights-out-systems-on-validating-instant-power-loss-readiness/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Lights Out, Systems On: Validating Instant Power Loss Readiness
+                </a>
+                <p class="mb-1 small text-light">Having a robust DC region-wide asynchronous signaling mechanism for Twine services in the form of unavailability events (UE) is another. A purpose-built Twine recovery kit provides this “jumpstart” capability to recover those Twine services that power Twine itself.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-20">
+                <a href="https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems
+                </a>
+                <p class="mb-1 small text-light">The retrieval system within industry recommendation systems have consisted of microservices stitched together, with neural networks inconsistently integrated. SilverTorch makes retrieval significantly more efficient, runs at scale, and enables better recommendations.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-20">
+                <a href="https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Reel Friends: Building Social Discovery that Scales to Billions
+                </a>
+                <p class="mb-1 small text-light">On its face the new Friend Bubbles feature looks simple enough. But sometimes the features that seem the most straightforward require the deepest engineering work.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-20">
+                <a href="https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Migrating Data Ingestion Systems at Meta Scale
+                </a>
+                <p class="mb-1 small text-light">Several important solutions and strategies helped make a migration of this scope successful. This means if previous landed data has any issues the problematic data will be passed to the new landed data.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-20">
+                <a href="https://engineering.fb.com/2026/05/11/security/labyrinth-1-1-end-to-end-encrypted-e2ee-backups-more-reliable/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Labyrinth 1.1: Making End-to-End Encrypted Backups Even More Reliable
+                </a>
+                <p class="mb-1 small text-light">1 enhances the reliability of end-to-end encrypted backups with a new sub-protocol that helps messages survive the loss of a device, a switched device, and long gaps between sign-ins. Read our updated white paper, “The Labyrinth Encrypted Message Storage Protocol” for more details.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-20">
+                <a href="https://startupfortune.com/hyundai-takes-full-control-of-boston-dynamics-as-softbank-exits-for-325-million/" target="_blank" class="fw-bold text-decoration-none">
+                    Hyundai buys Boston Dynamics
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://startupfortune.com/hyundai-takes-full-control-of-boston-dynamics-as-softbank-exits-for-325-million/ Comments URL: https://news.ycombinator.com/item?id=48600312 Points: 809 # Comments: 359</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-20">
+                <a href="https://www.reuters.com/technology/norway-imposes-near-ban-ai-elementary-school-2026-06-19/" target="_blank" class="fw-bold text-decoration-none">
+                    Norway imposes near ban on AI in elementary school
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.reuters.com/technology/norway-imposes-near-ban-ai-elementary-school-2026-06-19/ Comments URL: https://news.ycombinator.com/item?id=48600093 Points: 647 # Comments: 444</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-20">
+                <a href="https://www.jvm-weekly.com/p/project-valhalla-explained-how-a" target="_blank" class="fw-bold text-decoration-none">
+                    Project Valhalla, Explained: How a Decade of Work Arrives in JDK 28
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.jvm-weekly.com/p/project-valhalla-explained-how-a Comments URL: https://news.ycombinator.com/item?id=48595511 Points: 590 # Comments: 365</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-20">
+                <a href="https://www.flexport.com/company/careers/" target="_blank" class="fw-bold text-decoration-none">
+                    Flexport (YC W14) Is Hiring in Indonesia, India, and Thailand
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.flexport.com/company/careers/ Comments URL: https://news.ycombinator.com/item?id=48593694 Points: 0 # Comments: 0</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-20">
+                <a href="https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7-instances-accelerated-by-nvidia-rtx-pro-4500-blackwell-server-edition-gpus/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Announcing Amazon EC2 G7 instances accelerated by NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs
+                </a>
+                <p class="mb-1 small text-light">AWS is the first major cloud provider to support NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs. G7 instances also deliver faster performance for GPU-accelerated analytics on Amazon EMR on Amazon Elastic Kubernetes Service (Amazon EKS).</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-20">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-ecs-introduces-new-high-resolution-metrics-for-faster-service-auto-scaling/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon ECS introduces new high-resolution metrics for faster service auto scaling
+                </a>
+                <p class="mb-1 small text-light">You can enable these metrics when you create or update your ECS service in the Amazon ECS console, or using AWS SDKs and tools, and AWS CloudFormation. The feature itself has no additional cost, but high-resolution CloudWatch metrics introduce a new pricing dimension.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-20">
+                <a href="https://aws.amazon.com/blogs/aws/top-announcements-of-the-aws-summit-in-new-york-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Top announcements of the AWS Summit in New York, 2026
+                </a>
+                <p class="mb-1 small text-light">Today at the AWS Summit in New York City, Swami Sivasubramanian, AWS VP of Agentic AI, provided the day’s keynote.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-20">
+                <a href="https://www.hashicorp.com/blog/introducing-tfctl-the-cli-for-hcp-terraform-and-tfe" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Introducing tfctl: The CLI for HCP Terraform and TFE
+                </a>
+                <p class="mb-1 small text-light">For years, automating HCP Terraform platform operations meant building and maintaining custom tooling on top of the API. As infrastructure automation becomes more sophisticated, a reliable, first-class interface to the platform isn't a nice-to-have.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-06-20
                     
                 </small>
             </li>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - June 21, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - June 21, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for June 21, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-06-21">2026-06-21 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-06-21 09:18:32
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,242 +128,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-21">
-                <a href="https://lcamtuf.substack.com/p/the-100000-whys-of-ai" target="_blank" class="fw-bold text-decoration-none">
-                    The 100k Whys of AI
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://lcamtuf.substack.com/p/the-100000-whys-of-ai Comments URL: https://news.ycombinator.com/item?id=48616017 Points: 100 # Comments: 51</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-21">
-                <a href="https://martinfowler.com/articles/reliable-llm-bayer.html" target="_blank" class="fw-bold text-decoration-none">
-                    Building reliable agentic AI systems
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://martinfowler.com/articles/reliable-llm-bayer.html Comments URL: https://news.ycombinator.com/item?id=48615680 Points: 95 # Comments: 19</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-21">
-                <a href="https://www.sciencedaily.com/releases/2026/06/260614012006.htm" target="_blank" class="fw-bold text-decoration-none">
-                    Your brain was never designed for this much bad news
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.sciencedaily.com/releases/2026/06/260614012006.htm Comments URL: https://news.ycombinator.com/item?id=48615569 Points: 172 # Comments: 114</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-21">
-                <a href="https://vinibrasil.com/when-i-reject-ai-code-even-if-it-works/" target="_blank" class="fw-bold text-decoration-none">
-                    When I reject AI code even if it works
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://vinibrasil.com/when-i-reject-ai-code-even-if-it-works/ Comments URL: https://news.ycombinator.com/item?id=48614631 Points: 171 # Comments: 98</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-21">
-                <a href="https://sibexi.co/posts/epoll-vs-io_uring/" target="_blank" class="fw-bold text-decoration-none">
-                    Epoll vs. io_uring in Linux
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://sibexi.co/posts/epoll-vs-io_uring/ Comments URL: https://news.ycombinator.com/item?id=48613872 Points: 152 # Comments: 37</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-21">
-                <a href="https://medium.com/netflix-techblog/a-human-augmenting-agentic-workflow-for-causal-inference-4623f0a9c5af?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] A Human-Augmenting Agentic Workflow for Causal Inference
-                </a>
-                <p class="mb-1 small text-light">A core challenge when analyzing new entertainment types is early adopter bias. Using agents for causal inference poses a challenge: how do we evaluate agents’ performance on tasks without ground truth.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-21">
-                <a href="https://medium.com/netflix-techblog/thinking-fast-slow-for-a-personalized-notification-system-4d89b26525cd?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Thinking Fast & Slow for a Personalized Notification System
-                </a>
-                <p class="mb-1 small text-light">At Netflix, our messaging platform faces a similar challenge every day. This architecture provides two critical advantages:“Stickiness”: It ensures a member receives a consistent experience.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-21">
-                <a href="https://medium.com/netflix-techblog/dynamically-splitting-wide-partitions-in-cassandra-for-time-series-workloads-0eded064f456?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Dynamic Repartitioning for Time Series Workloads
-                </a>
-                <p class="mb-1 small text-light">A key challenge is wide partitions, as TimeSeries dataset partitions can grow quite large with events accumulating over time. Solution 1: Time Slice Re-PartitioningCassandra exposes useful introspection APIs for understanding data usage and access patterns.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-21">
-                <a href="https://aws.amazon.com/blogs/aws/introducing-amazon-bedrock-managed-knowledge-base-for-faster-more-accurate-enterprise-ai-applications/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Introducing Amazon Bedrock Managed Knowledge Base for faster, more accurate enterprise AI applications
-                </a>
-                <p class="mb-1 small text-light">Consider a user asking two related questions: “What is the cloud infrastructure budget for the ML platform team. Which team owns the ML platform, and what is their cloud infrastructure budget.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-21">
-                <a href="https://aws.amazon.com/blogs/aws/announcing-web-search-on-amazon-bedrock-agentcore-ground-your-ai-agents-in-current-accurate-web-knowledge/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Announcing Web Search on Amazon Bedrock AgentCore: Ground your AI agents in current, accurate web knowledge
-                </a>
-                <p class="mb-1 small text-light">Customer voices Some of our customers had early access to this new feature. New AWS customers also receive up to $200 in Free Tier credits.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-21">
-                <a href="https://www.hashicorp.com/blog/terraform-mcp-server-is-now-generally-available" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform MCP server is now generally available
-                </a>
-                <p class="mb-1 small text-light">Terraform MCP server enables AI assistants like GitHub Copilot, IBM Bob, Claude Code etc.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-21">
-                <a href="https://kubernetes.io/blog/2026/06/15/sig-storage-spotlight-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Spotlight on SIG Storage
-                </a>
-                <p class="mb-1 small text-light">COSI provides a standard interface for provisioning and consuming object storage buckets in Kubernetes — standardizing object storage for containerized applications much like CSI did for block and file storage.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-21">
-                <a href="https://www.cncf.io/announcements/2026/06/17/cncf-and-slashdata-report-confirms-india-as-one-of-the-largest-cloud-native-communities-with-2-25-million-developers/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] CNCF and SlashData Report Confirms India as One of the Largest Cloud Native Communities with 2.25 Million Developers
-                </a>
-                <p class="mb-1 small text-light">The finding reflects the widespread use of managed Kubernetes services, where developers work at the orchestration layer while the underlying container infrastructure is handled by the platform, making Kubernetes the primary interface to cloud native technologies.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-21">
-                <a href="https://blog.cloudflare.com/agents-platform-flue-sdk/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Bringing more agent harnesses and frameworks to Cloudflare, starting with Flue
-                </a>
-                <p class="mb-1 small text-light">And for agents that need a full OS, to run npm install, git, or compilers, Cloudflare Containers provides that. @cloudflare/dynamic-workflows provides this for any harness running on the Agents SDK.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-21">
-                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
-                </a>
-                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-21">
-                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
-                </a>
-                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-21">
-                <a href="https://www.pulumi.com/blog/trigger-deployments-on-git-tags/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Trigger Deployments on Git Tags
-                </a>
-                <p class="mb-1 small text-light">No extra pipeline glue, no manual click — your release tag is the deployment. Get started You can configure tag triggers wherever you manage deployment settings today — the Pulumi Cloud console, the REST API, or as code with the pulumiservice.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-21">
-                <a href="https://www.docker.com/blog/docker-hardened-images-enhanced-vulnerability-scanning-with-docker-and-aikido/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Hardened Images enhanced vulnerability scanning with Docker and Aikido
+                <a href="https://www.docker.com/blog/software-supply-chain-security-best-practices/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] 5 Software Supply Chain Security Best Practices for Development Teams
                 </a>
-                <p class="mb-1 small text-light">Docker Hardened Images addresses this problem at the source. Register for Aikido x Docker: Less Noise, More Signal in Container Security Resources Review our Docker Hardened Images documentation.</p>
+                <p class="mb-1 small text-light">Generating an SBOM once at release time and filing it away satisfies a compliance requirement but provides minimal security value. Effective runtime monitoring for supply chain security goes beyond traditional application performance monitoring.</p>
                 <small class="text-secondary">
                     
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-21">
-                <a href="https://www.docker.com/blog/what-is-ai-governance/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] What is AI Governance? Frameworks, Principles, and Best Practices
-                </a>
-                <p class="mb-1 small text-light">Implement ongoing monitoring for model performance, fairness, and compliance rather than relying solely on pre-deployment reviews. This is especially critical for agents that execute code, make API calls, or interact with live infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-21">
-                <a href="https://snyk.io/blog/fable-mythos-suspension-security-takeaways/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] When a Government Pulls an AI Model: What the Fable 5 and Mythos 5 Suspension Means for Security Teams
-                </a>
-                <p class="mb-1 small text-light">The reported trigger was a code-analysis capability that defenders use routinely. Here is what happened, how the security community read it, and what security teams can take from it.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
+                    Docker | 2026-06-21
                     
                 </small>
             </li>
@@ -358,7 +147,7 @@
                 <p class="mb-1 small text-light">36 introduces a new alpha counter metric route_controller_route_sync_total to the Cloud Controller Manager (CCM) route controller implementation at k8s.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-06-21
                     
                 </small>
             </li>
@@ -370,7 +159,7 @@
                 <p class="mb-1 small text-light">Faced with the complexity of operating hundreds of tightly coupled microservices across Kubernetes and VM workloads, Flipkart leveraged the extensibility of Kubernetes-native orchestration.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-06-21
                     
                 </small>
             </li>
@@ -382,7 +171,7 @@
                 <p class="mb-1 small text-light">Organizations are increasingly asking for Cloudflare-provided tooling to help agents execute on security workflows. It contains tools for planning, managing, and implementing your user and agent security infrastructure on Cloudflare.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-06-21
                     
                 </small>
             </li>
@@ -394,19 +183,247 @@
                 <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-06-21
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-21">
-                <a href="https://www.docker.com/blog/software-supply-chain-security-best-practices/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] 5 Software Supply Chain Security Best Practices for Development Teams
+                <a href="https://www.docker.com/blog/docker-hardened-images-enhanced-vulnerability-scanning-with-docker-and-aikido/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Hardened Images enhanced vulnerability scanning with Docker and Aikido
                 </a>
-                <p class="mb-1 small text-light">Generating an SBOM once at release time and filing it away satisfies a compliance requirement but provides minimal security value. Effective runtime monitoring for supply chain security goes beyond traditional application performance monitoring.</p>
+                <p class="mb-1 small text-light">Docker Hardened Images addresses this problem at the source. Register for Aikido x Docker: Less Noise, More Signal in Container Security Resources Review our Docker Hardened Images documentation.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-21">
+                <a href="https://www.docker.com/blog/what-is-ai-governance/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] What is AI Governance? Frameworks, Principles, and Best Practices
+                </a>
+                <p class="mb-1 small text-light">Implement ongoing monitoring for model performance, fairness, and compliance rather than relying solely on pre-deployment reviews. This is especially critical for agents that execute code, make API calls, or interact with live infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-21">
+                <a href="https://snyk.io/blog/fable-mythos-suspension-security-takeaways/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] When a Government Pulls an AI Model: What the Fable 5 and Mythos 5 Suspension Means for Security Teams
+                </a>
+                <p class="mb-1 small text-light">The reported trigger was a code-analysis capability that defenders use routinely. Here is what happened, how the security community read it, and what security teams can take from it.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-21">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-amazon-bedrock-managed-knowledge-base-for-faster-more-accurate-enterprise-ai-applications/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing Amazon Bedrock Managed Knowledge Base for faster, more accurate enterprise AI applications
+                </a>
+                <p class="mb-1 small text-light">Consider a user asking two related questions: “What is the cloud infrastructure budget for the ML platform team. Which team owns the ML platform, and what is their cloud infrastructure budget.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-21">
+                <a href="https://aws.amazon.com/blogs/aws/announcing-web-search-on-amazon-bedrock-agentcore-ground-your-ai-agents-in-current-accurate-web-knowledge/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Announcing Web Search on Amazon Bedrock AgentCore: Ground your AI agents in current, accurate web knowledge
+                </a>
+                <p class="mb-1 small text-light">Customer voices Some of our customers had early access to this new feature. New AWS customers also receive up to $200 in Free Tier credits.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-21">
+                <a href="https://www.hashicorp.com/blog/terraform-mcp-server-is-now-generally-available" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform MCP server is now generally available
+                </a>
+                <p class="mb-1 small text-light">Terraform MCP server enables AI assistants like GitHub Copilot, IBM Bob, Claude Code etc.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-21">
+                <a href="https://kubernetes.io/blog/2026/06/15/sig-storage-spotlight-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on SIG Storage
+                </a>
+                <p class="mb-1 small text-light">COSI provides a standard interface for provisioning and consuming object storage buckets in Kubernetes — standardizing object storage for containerized applications much like CSI did for block and file storage.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-21">
+                <a href="https://www.cncf.io/announcements/2026/06/17/cncf-and-slashdata-report-confirms-india-as-one-of-the-largest-cloud-native-communities-with-2-25-million-developers/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] CNCF and SlashData Report Confirms India as One of the Largest Cloud Native Communities with 2.25 Million Developers
+                </a>
+                <p class="mb-1 small text-light">The finding reflects the widespread use of managed Kubernetes services, where developers work at the orchestration layer while the underlying container infrastructure is handled by the platform, making Kubernetes the primary interface to cloud native technologies.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-21">
+                <a href="https://blog.cloudflare.com/agents-platform-flue-sdk/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Bringing more agent harnesses and frameworks to Cloudflare, starting with Flue
+                </a>
+                <p class="mb-1 small text-light">And for agents that need a full OS, to run npm install, git, or compilers, Cloudflare Containers provides that. @cloudflare/dynamic-workflows provides this for any harness running on the Agents SDK.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-21">
+                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
+                </a>
+                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-21">
+                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
+                </a>
+                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-21">
+                <a href="https://www.pulumi.com/blog/trigger-deployments-on-git-tags/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Trigger Deployments on Git Tags
+                </a>
+                <p class="mb-1 small text-light">No extra pipeline glue, no manual click — your release tag is the deployment. Get started You can configure tag triggers wherever you manage deployment settings today — the Pulumi Cloud console, the REST API, or as code with the pulumiservice.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-21">
+                <a href="https://medium.com/netflix-techblog/a-human-augmenting-agentic-workflow-for-causal-inference-4623f0a9c5af?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] A Human-Augmenting Agentic Workflow for Causal Inference
+                </a>
+                <p class="mb-1 small text-light">A core challenge when analyzing new entertainment types is early adopter bias. Using agents for causal inference poses a challenge: how do we evaluate agents’ performance on tasks without ground truth.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-21">
+                <a href="https://medium.com/netflix-techblog/thinking-fast-slow-for-a-personalized-notification-system-4d89b26525cd?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Thinking Fast & Slow for a Personalized Notification System
+                </a>
+                <p class="mb-1 small text-light">At Netflix, our messaging platform faces a similar challenge every day. This architecture provides two critical advantages:“Stickiness”: It ensures a member receives a consistent experience.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-21">
+                <a href="https://medium.com/netflix-techblog/dynamically-splitting-wide-partitions-in-cassandra-for-time-series-workloads-0eded064f456?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Dynamic Repartitioning for Time Series Workloads
+                </a>
+                <p class="mb-1 small text-light">A key challenge is wide partitions, as TimeSeries dataset partitions can grow quite large with events accumulating over time. Solution 1: Time Slice Re-PartitioningCassandra exposes useful introspection APIs for understanding data usage and access patterns.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-21">
+                <a href="https://lcamtuf.substack.com/p/the-100000-whys-of-ai" target="_blank" class="fw-bold text-decoration-none">
+                    The 100k Whys of AI
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://lcamtuf.substack.com/p/the-100000-whys-of-ai Comments URL: https://news.ycombinator.com/item?id=48616017 Points: 100 # Comments: 51</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-21">
+                <a href="https://martinfowler.com/articles/reliable-llm-bayer.html" target="_blank" class="fw-bold text-decoration-none">
+                    Building reliable agentic AI systems
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://martinfowler.com/articles/reliable-llm-bayer.html Comments URL: https://news.ycombinator.com/item?id=48615680 Points: 95 # Comments: 19</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-21">
+                <a href="https://www.sciencedaily.com/releases/2026/06/260614012006.htm" target="_blank" class="fw-bold text-decoration-none">
+                    Your brain was never designed for this much bad news
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.sciencedaily.com/releases/2026/06/260614012006.htm Comments URL: https://news.ycombinator.com/item?id=48615569 Points: 172 # Comments: 114</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-21">
+                <a href="https://vinibrasil.com/when-i-reject-ai-code-even-if-it-works/" target="_blank" class="fw-bold text-decoration-none">
+                    When I reject AI code even if it works
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://vinibrasil.com/when-i-reject-ai-code-even-if-it-works/ Comments URL: https://news.ycombinator.com/item?id=48614631 Points: 171 # Comments: 98</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-21">
+                <a href="https://sibexi.co/posts/epoll-vs-io_uring/" target="_blank" class="fw-bold text-decoration-none">
+                    Epoll vs. io_uring in Linux
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://sibexi.co/posts/epoll-vs-io_uring/ Comments URL: https://news.ycombinator.com/item?id=48613872 Points: 152 # Comments: 37</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-21
                     
                 </small>
             </li>

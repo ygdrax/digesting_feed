@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - June 24, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - June 24, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for June 24, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-06-24">2026-06-24 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 15 sources • Updated 2026-06-24 09:09:55
+                    Showing 25 total articles from 
+                    15 sources
+                    
                     
                 </span>
             </small>
@@ -117,282 +134,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-24">
-                <a href="https://nega.tv/posts/low-tech-ai-of-elden-ring.html" target="_blank" class="fw-bold text-decoration-none">
-                    The Low-Tech AI of Elden Ring
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://nega.tv/posts/low-tech-ai-of-elden-ring.html Comments URL: https://news.ycombinator.com/item?id=48643489 Points: 145 # Comments: 79</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-24">
-                <a href="https://thomasliao.com/eval-startups" target="_blank" class="fw-bold text-decoration-none">
-                    Why eval startups fail (2025)
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://thomasliao.com/eval-startups Comments URL: https://news.ycombinator.com/item?id=48637868 Points: 10 # Comments: 3</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-24">
-                <a href="https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs
-                </a>
-                <p class="mb-1 small text-light">Containers launch in seconds, yet their shared-kernel architecture requires significant custom hardening to safely contain untrusted code. Lambda MicroVMs is a new resource within AWS Lambda, with a distinct API surface.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-24">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: NY Summit recap, Local Zone in Hanoi, Grok 4.3 in Bedrock, price reductions, and more (June 22, 2026)
-                </a>
-                <p class="mb-1 small text-light">Last week AWS Summit New York City brought together thousands of customers, partners, and builders for a free, one-day event showcasing the latest in cloud and AI innovation.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-24">
-                <a href="https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7-instances-accelerated-by-nvidia-rtx-pro-4500-blackwell-server-edition-gpus/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Announcing Amazon EC2 G7 instances accelerated by NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs
-                </a>
-                <p class="mb-1 small text-light">AWS is the first major cloud provider to support NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs. G7 instances also deliver faster performance for GPU-accelerated analytics on Amazon EMR on Amazon Elastic Kubernetes Service (Amazon EKS).</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-24">
-                <a href="https://www.reddit.com/r/devops/comments/1uddxpe/did_anyone_worked_on_k8s_docker_or_cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    Did anyone worked on K8S, docker or cloud resources with payment processing ?
-                </a>
-                <p class="mb-1 small text-light">Can anyone explain and give detailed examples how fintech uses cloud or Kubernetes and docker in payment processing. note - I left my job, i cant ask other team members and i am studying kubernetes and docker, in my first job i used to worked on cloud daily.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-24">
-                <a href="https://netflixtechblog.com/a-human-augmenting-agentic-workflow-for-causal-inference-4623f0a9c5af?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] A Human-Augmenting Agentic Workflow for Causal Inference
-                </a>
-                <p class="mb-1 small text-light">A core challenge when analyzing new entertainment types is early adopter bias. Using agents for causal inference poses a challenge: how do we evaluate agents’ performance on tasks without ground truth.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-24">
-                <a href="https://netflixtechblog.com/thinking-fast-slow-for-a-personalized-notification-system-4d89b26525cd?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Thinking Fast & Slow for a Personalized Notification System
-                </a>
-                <p class="mb-1 small text-light">At Netflix, our messaging platform faces a similar challenge every day. This architecture provides two critical advantages:“Stickiness”: It ensures a member receives a consistent experience.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-24">
-                <a href="https://www.docker.com/blog/what-is-an-sbom/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] What is an SBOM (and Why Can’t You Ship Without One)?
-                </a>
-                <p class="mb-1 small text-light">But it has largely lost traction in cloud-native and container workflows. Meanwhile, Docker Scout provides continuous vulnerability monitoring powered by the SBOM data attached to your images, surfacing actionable insights across your entire image portfolio.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-24">
-                <a href="https://www.redhat.com/en/blog/innovation-s-curve-how-technology-matures-disrupts-and-why-your-next-platform-decision-matters-more-you-think" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] The innovation S-curve: How technology matures, disrupts, and why your next platform decision matters more than you think
-                </a>
-                <p class="mb-1 small text-light">This arc is the innovation S-curve, and it's a lens for understanding why Broadcom bought VMware, why Kubernetes has defied all expectations, and why the jump from hypervisors to cloud-native platforms is the most consequential architectural decision a modern enterprise can make.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-24">
-                <a href="https://snyk.io/blog/agentic-development-security-ads/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Announcing Agentic Development Security (ADS)
-                </a>
-                <p class="mb-1 small text-light">Announcing Snyk Agentic Development Security, a new Evo solution that helps organizations securely adopt AI-driven development with visibility, governance, and control.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-24">
-                <a href="https://www.hashicorp.com/blog/terraform-mcp-server-is-now-generally-available" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform MCP server is now generally available
-                </a>
-                <p class="mb-1 small text-light">Terraform MCP server enables AI assistants like GitHub Copilot, IBM Bob, Claude Code etc.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-24">
-                <a href="https://kubernetes.io/blog/2026/06/15/sig-storage-spotlight-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Spotlight on SIG Storage
-                </a>
-                <p class="mb-1 small text-light">COSI provides a standard interface for provisioning and consuming object storage buckets in Kubernetes — standardizing object storage for containerized applications much like CSI did for block and file storage.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-24">
-                <a href="https://blog.cloudflare.com/post-quantum-eo-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] The post-quantum EO is an important milestone. Now it’s time to get to work
-                </a>
-                <p class="mb-1 small text-light">Our SASE platform, Cloudflare One, provides post-quantum encryption across all major on-ramps and off-ramps, including TLS, MASQUE, and IPsec. Deployment High Adoption Secures two-thirds of browser-generated traffic to Cloudflare today and many many core product services.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-24">
-                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
-                </a>
-                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-24">
-                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
-                </a>
-                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-24">
-                <a href="https://www.pulumi.com/blog/trigger-deployments-on-git-tags/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Trigger Deployments on Git Tags
-                </a>
-                <p class="mb-1 small text-light">No extra pipeline glue, no manual click — your release tag is the deployment. Get started You can configure tag triggers wherever you manage deployment settings today — the Pulumi Cloud console, the REST API, or as code with the pulumiservice.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-24">
-                <a href="https://www.docker.com/blog/docker-hardened-images-enhanced-vulnerability-scanning-with-docker-and-aikido/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Hardened Images enhanced vulnerability scanning with Docker and Aikido
-                </a>
-                <p class="mb-1 small text-light">Docker Hardened Images addresses this problem at the source. Register for Aikido x Docker: Less Noise, More Signal in Container Security Resources Review our Docker Hardened Images documentation.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-24">
-                <a href="https://snyk.io/blog/governing-ai-agents-inside-execution-loop/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] The New Security Control Point: Governing AI Agents Inside the Execution Loop
-                </a>
-                <p class="mb-1 small text-light">AI agents introduce security risk through the actions they take, not just the code they produce. Learn how agent behavior governance helps teams observe, steer, and block risky actions in real time.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-24">
-                <a href="https://engineering.fb.com/2026/06/23/production-engineering/how-meta-built-ultra-narrow-batteries-for-ai-glasses-meta-tech-podcast/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] How Meta Engineered Ultra-Narrow Batteries for AI Glasses
-                </a>
-                <p class="mb-1 small text-light">Enter Steel-Can Cells (at Never-Before-Seen Widths) Steel-can batteries aren’t new. Then the Meta Ray-Ban Display glasses introduced the most demanding power profile yet.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-24">
-                <a href="https://kubernetes.io/blog/2026/05/15/ccm-new-metric-route-sync-total/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.36: New Metric for Route Sync in the Cloud Controller Manager
-                </a>
-                <p class="mb-1 small text-light">36 introduces a new alpha counter metric route_controller_route_sync_total to the Cloud Controller Manager (CCM) route controller implementation at k8s.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-24">
-                <a href="https://www.cncf.io/announcements/2026/06/17/flipkart-wins-cncf-end-user-case-study-contest-for-kubernetes-and-chaos-engineering-scale/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Flipkart Wins CNCF End User Case Study Contest for Kubernetes and Chaos Engineering Scale
-                </a>
-                <p class="mb-1 small text-light">Faced with the complexity of operating hundreds of tightly coupled microservices across Kubernetes and VM workloads, Flipkart leveraged the extensibility of Kubernetes-native orchestration.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-06-24">
-                <a href="https://slack.engineering/from-ssh-to-rest-a-security-driven-modernization-of-slacks-emr-data-pipelines/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] From SSH to REST: A Security-Driven Modernization of Slack’s EMR Data Pipelines
-                </a>
-                <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-24">
                 <a href="https://www.docker.com/blog/software-supply-chain-security-best-practices/" target="_blank" class="fw-bold text-decoration-none">
                     [Docker] 5 Software Supply Chain Security Best Practices for Development Teams
@@ -400,7 +141,7 @@
                 <p class="mb-1 small text-light">Generating an SBOM once at release time and filing it away satisfies a compliance requirement but provides minimal security value. Effective runtime monitoring for supply chain security goes beyond traditional application performance monitoring.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2026-06-24
                     
                 </small>
             </li>
@@ -412,7 +153,283 @@
                 <p class="mb-1 small text-light">The managed services market is navigating an unprecedented inflection point. For many service providers, recent changes in licensing and vendor partner tiers have elevated costs from a standard operational challenge into an existential threat to business continuity.</p>
                 <small class="text-secondary">
                     
-                    Red Hat
+                    Red Hat | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-24">
+                <a href="https://kubernetes.io/blog/2026/05/15/ccm-new-metric-route-sync-total/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.36: New Metric for Route Sync in the Cloud Controller Manager
+                </a>
+                <p class="mb-1 small text-light">36 introduces a new alpha counter metric route_controller_route_sync_total to the Cloud Controller Manager (CCM) route controller implementation at k8s.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-24">
+                <a href="https://www.cncf.io/announcements/2026/06/17/flipkart-wins-cncf-end-user-case-study-contest-for-kubernetes-and-chaos-engineering-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Flipkart Wins CNCF End User Case Study Contest for Kubernetes and Chaos Engineering Scale
+                </a>
+                <p class="mb-1 small text-light">Faced with the complexity of operating hundreds of tightly coupled microservices across Kubernetes and VM workloads, Flipkart leveraged the extensibility of Kubernetes-native orchestration.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-06-24">
+                <a href="https://slack.engineering/from-ssh-to-rest-a-security-driven-modernization-of-slacks-emr-data-pipelines/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] From SSH to REST: A Security-Driven Modernization of Slack’s EMR Data Pipelines
+                </a>
+                <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-24">
+                <a href="https://www.docker.com/blog/docker-hardened-images-enhanced-vulnerability-scanning-with-docker-and-aikido/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Hardened Images enhanced vulnerability scanning with Docker and Aikido
+                </a>
+                <p class="mb-1 small text-light">Docker Hardened Images addresses this problem at the source. Register for Aikido x Docker: Less Noise, More Signal in Container Security Resources Review our Docker Hardened Images documentation.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-24">
+                <a href="https://snyk.io/blog/governing-ai-agents-inside-execution-loop/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The New Security Control Point: Governing AI Agents Inside the Execution Loop
+                </a>
+                <p class="mb-1 small text-light">AI agents introduce security risk through the actions they take, not just the code they produce. Learn how agent behavior governance helps teams observe, steer, and block risky actions in real time.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-06-24">
+                <a href="https://engineering.fb.com/2026/06/23/production-engineering/how-meta-built-ultra-narrow-batteries-for-ai-glasses-meta-tech-podcast/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] How Meta Engineered Ultra-Narrow Batteries for AI Glasses
+                </a>
+                <p class="mb-1 small text-light">Enter Steel-Can Cells (at Never-Before-Seen Widths) Steel-can batteries aren’t new. Then the Meta Ray-Ban Display glasses introduced the most demanding power profile yet.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-24">
+                <a href="https://www.hashicorp.com/blog/terraform-mcp-server-is-now-generally-available" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform MCP server is now generally available
+                </a>
+                <p class="mb-1 small text-light">Terraform MCP server enables AI assistants like GitHub Copilot, IBM Bob, Claude Code etc.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-24">
+                <a href="https://kubernetes.io/blog/2026/06/15/sig-storage-spotlight-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on SIG Storage
+                </a>
+                <p class="mb-1 small text-light">COSI provides a standard interface for provisioning and consuming object storage buckets in Kubernetes — standardizing object storage for containerized applications much like CSI did for block and file storage.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-24">
+                <a href="https://blog.cloudflare.com/post-quantum-eo-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] The post-quantum EO is an important milestone. Now it’s time to get to work
+                </a>
+                <p class="mb-1 small text-light">Our SASE platform, Cloudflare One, provides post-quantum encryption across all major on-ramps and off-ramps, including TLS, MASQUE, and IPsec. Deployment High Adoption Secures two-thirds of browser-generated traffic to Cloudflare today and many many core product services.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-24">
+                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
+                </a>
+                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-24">
+                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
+                </a>
+                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-24">
+                <a href="https://www.pulumi.com/blog/trigger-deployments-on-git-tags/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Trigger Deployments on Git Tags
+                </a>
+                <p class="mb-1 small text-light">No extra pipeline glue, no manual click — your release tag is the deployment. Get started You can configure tag triggers wherever you manage deployment settings today — the Pulumi Cloud console, the REST API, or as code with the pulumiservice.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-24">
+                <a href="https://www.reddit.com/r/devops/comments/1uddxpe/did_anyone_worked_on_k8s_docker_or_cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    Did anyone worked on K8S, docker or cloud resources with payment processing ?
+                </a>
+                <p class="mb-1 small text-light">Can anyone explain and give detailed examples how fintech uses cloud or Kubernetes and docker in payment processing. note - I left my job, i cant ask other team members and i am studying kubernetes and docker, in my first job i used to worked on cloud daily.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-24">
+                <a href="https://netflixtechblog.com/a-human-augmenting-agentic-workflow-for-causal-inference-4623f0a9c5af?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] A Human-Augmenting Agentic Workflow for Causal Inference
+                </a>
+                <p class="mb-1 small text-light">A core challenge when analyzing new entertainment types is early adopter bias. Using agents for causal inference poses a challenge: how do we evaluate agents’ performance on tasks without ground truth.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-24">
+                <a href="https://netflixtechblog.com/thinking-fast-slow-for-a-personalized-notification-system-4d89b26525cd?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Thinking Fast & Slow for a Personalized Notification System
+                </a>
+                <p class="mb-1 small text-light">At Netflix, our messaging platform faces a similar challenge every day. This architecture provides two critical advantages:“Stickiness”: It ensures a member receives a consistent experience.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-24">
+                <a href="https://www.docker.com/blog/what-is-an-sbom/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] What is an SBOM (and Why Can’t You Ship Without One)?
+                </a>
+                <p class="mb-1 small text-light">But it has largely lost traction in cloud-native and container workflows. Meanwhile, Docker Scout provides continuous vulnerability monitoring powered by the SBOM data attached to your images, surfacing actionable insights across your entire image portfolio.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-24">
+                <a href="https://www.redhat.com/en/blog/innovation-s-curve-how-technology-matures-disrupts-and-why-your-next-platform-decision-matters-more-you-think" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] The innovation S-curve: How technology matures, disrupts, and why your next platform decision matters more than you think
+                </a>
+                <p class="mb-1 small text-light">This arc is the innovation S-curve, and it's a lens for understanding why Broadcom bought VMware, why Kubernetes has defied all expectations, and why the jump from hypervisors to cloud-native platforms is the most consequential architectural decision a modern enterprise can make.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-06-24">
+                <a href="https://snyk.io/blog/agentic-development-security-ads/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Announcing Agentic Development Security (ADS)
+                </a>
+                <p class="mb-1 small text-light">Announcing Snyk Agentic Development Security, a new Evo solution that helps organizations securely adopt AI-driven development with visibility, governance, and control.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-24">
+                <a href="https://nega.tv/posts/low-tech-ai-of-elden-ring.html" target="_blank" class="fw-bold text-decoration-none">
+                    The Low-Tech AI of Elden Ring
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://nega.tv/posts/low-tech-ai-of-elden-ring.html Comments URL: https://news.ycombinator.com/item?id=48643489 Points: 145 # Comments: 79</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-24">
+                <a href="https://thomasliao.com/eval-startups" target="_blank" class="fw-bold text-decoration-none">
+                    Why eval startups fail (2025)
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://thomasliao.com/eval-startups Comments URL: https://news.ycombinator.com/item?id=48637868 Points: 10 # Comments: 3</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-24">
+                <a href="https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs
+                </a>
+                <p class="mb-1 small text-light">Containers launch in seconds, yet their shared-kernel architecture requires significant custom hardening to safely contain untrusted code. Lambda MicroVMs is a new resource within AWS Lambda, with a distinct API surface.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-24">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: NY Summit recap, Local Zone in Hanoi, Grok 4.3 in Bedrock, price reductions, and more (June 22, 2026)
+                </a>
+                <p class="mb-1 small text-light">Last week AWS Summit New York City brought together thousands of customers, partners, and builders for a free, one-day event showcasing the latest in cloud and AI innovation.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-06-24">
+                <a href="https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7-instances-accelerated-by-nvidia-rtx-pro-4500-blackwell-server-edition-gpus/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Announcing Amazon EC2 G7 instances accelerated by NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs
+                </a>
+                <p class="mb-1 small text-light">AWS is the first major cloud provider to support NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs. G7 instances also deliver faster performance for GPU-accelerated analytics on Amazon EMR on Amazon Elastic Kubernetes Service (Amazon EKS).</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-06-24
                     
                 </small>
             </li>

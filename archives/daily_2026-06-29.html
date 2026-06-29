@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - June 29, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - June 29, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for June 29, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-06-29">2026-06-29 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-06-29 09:39:13
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,282 +132,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-29">
-                <a href="https://newsletter.semianalysis.com/p/us-grid-constraints-towards-40gw" target="_blank" class="fw-bold text-decoration-none">
-                    US Grid Constraints: Towards 40GW+ of Behind-the-Meter Datacenter by 2028?
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://newsletter.semianalysis.com/p/us-grid-constraints-towards-40gw Comments URL: https://news.ycombinator.com/item?id=48716009 Points: 22 # Comments: 10</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-29">
-                <a href="https://www.reddit.com/r/devops/comments/1ufh0uz/update_on_project_yellow_olive_i_added_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    Update on Project Yellow Olive: I added Kubernetes Deployment challenges to my Pokemon Yellow inspired TUI game
-                </a>
-                <p class="mb-1 small text-light">Hello r/devops , Disclosure: I’m the creator of Project Yellow Olive, a Pokémon-inspired terminal game for learning Kubernetes. Each challenge expects you to apply real kubectl/Kubernetes concepts rather than just read theory.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-29">
-                <a href="https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] How Netflix Simplified Batch Compute with Kueue
-                </a>
-                <p class="mb-1 small text-light">Brief Overview of CMB and TitusCMB is a managed batch solution that allows users and applications to execute and manage workloads that run to completion. CMB Tenant HierarchyTenants provide a grouping mechanism for jobs submitted on behalf of certain organizations, platforms, or applications.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-29">
-                <a href="https://netflixtechblog.com/vmaf-v1-good-is-not-good-enough-60d7e4244ea8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] VMAF v1: Good Is Not Good Enough
-                </a>
-                <p class="mb-1 small text-light">We found that this approach improves accuracy and helps generalize VMAF better. Additionally, our newest libvmaf release has a much improved threading performance, which is of benefit to both v0 and v1.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-06-29">
-                <a href="https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] AI alone won’t change your business. The system running it will.
-                </a>
-                <p class="mb-1 small text-light">Building a system for the agentic enterpriseTo succeed in this new era, an agent platform must meet a higher bar. Optimized performance for open models: With Fireworks AI on Foundry, enterprises get faster, more efficient inference directly into the platform.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-29">
-                <a href="https://www.docker.com/blog/eu-cyber-resilience-act-overview/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] EU Cyber Resilience Act: Overview, Requirements, and Timelines
-                </a>
-                <p class="mb-1 small text-light">A smart thermostat, an enterprise database, and a container runtime were all subject to different (or no) cybersecurity obligations. However, the line is blurry for products depending on cloud infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-29">
-                <a href="https://www.docker.com/blog/docker-content-trust-retirement-and-migration-guidance/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Content Trust: Retirement and Migration Guidance
-                </a>
-                <p class="mb-1 small text-light">TLDR: Docker Content Trust (DCT) and the Notary v1 service at notary. Use digests in dockerfiles for reproducible builds, and in Kubernetes manifests or Compose files to ensure predictable deployments.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-29">
-                <a href="https://kubernetes.io/blog/2026/06/25/headlamp-cluster-api-plugin/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Introducing the Cluster API plugin for Headlamp
-                </a>
-                <p class="mb-1 small text-light">Cluster API (CAPI) is a Kubernetes sub-project that brings declarative, Kubernetes-style APIs to cluster lifecycle management. Cluster API dashboardThe dashboard provides a centralized view of Cluster API resources and their health across a management cluster.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-29">
-                <a href="https://kubernetes.io/blog/2026/06/25/visual-context-volcano-headlamp-plugin/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Inspect Volcano workloads faster with Headlamp
-                </a>
-                <p class="mb-1 small text-light">Volcano is a cloud native batch scheduler for Kubernetes, built for high-performance computing, AI/ML, and other batch workloads. Kubernetes was originally designed around long-running services, where applications are expected to start and remain available over time.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-29">
-                <a href="https://kubernetes.io/blog/2026/06/25/headlamp-knative-plugin/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] See your serverless: introducing the Headlamp plugin for Knative
-                </a>
-                <p class="mb-1 small text-light">Headlamp is an open-source, extensible Kubernetes SIG UI project designed to let you explore, manage, and debug cluster resources.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-29">
-                <a href="https://blog.cloudflare.com/rollbacks-for-workflows/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] How we built saga rollbacks for Cloudflare Workflows
-                </a>
-                <p class="mb-1 small text-light">Cloudflare Workflows allows you to build durable, multi-step applications with built-in retries and state persistence across long-running processes. In practice, there are a few details that make the API and execution model important.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-29">
-                <a href="https://blog.cloudflare.com/oauth-for-all/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Unlocking the Cloudflare app ecosystem with OAuth for all
-                </a>
-                <p class="mb-1 small text-light">Cloudflare provides services that help run 20% of the web, but we don’t do it alone. Cloudflare provides a rich API for our platform that enables developers to create automations, CI/CD, and integrations that glue together the various parts of their infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-29">
-                <a href="https://blog.cloudflare.com/hyper-bug/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] How we found a bug in the hyper HTTP library
-                </a>
-                <p class="mb-1 small text-light">Hops, handoffs, and hyper When developers build on Cloudflare, they compose full-stack applications from a set of platform services that are accessible to Workers through bindings.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-29">
-                <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How we used DSPy to turn AI evaluations into better responses in Dash chat
-                </a>
-                <p class="mb-1 small text-light">In practice, this meant tracking issues like incomplete answers and missed key aspects of a user's request. For each new prompt, we compared its performance against the existing production prompt using the same set of examples.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-29">
-                <a href="https://www.pulumi.com/blog/cloudflare-first-networking-with-pulumi/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Cloudflare-First Networking as Code with Pulumi
-                </a>
-                <p class="mb-1 small text-light">Platform teams managing multi-cloud applications face a dangerous visibility gap. As applications span multiple clouds, the edge often becomes the most consistent layer for enforcing security and traffic policies.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-29">
-                <a href="https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Toward More Controllable AI Video Editing: An Early Research Exploration at Netflix
-                </a>
-                <p class="mb-1 small text-light">To tackle this challenge, we introduce Vera, a novel layered video diffusion framework for content-preserving video editing. Model ArchitectureBeyond data, model design is another key challenge.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-29">
-                <a href="https://www.docker.com/blog/sbom-generation-for-container-workflows/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] How to Generate an SBOM for Container Workflows
-                </a>
-                <p class="mb-1 small text-light">According to Omdia’s 2026 software supply chain security report, 86% of organizations find SBOM generation challenging. This is one dimension of a broader software supply chain security challenge: every tool in your pipeline is a dependency that needs the same scrutiny as your application code.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-29">
-                <a href="https://www.redhat.com/en/blog/govern-privileged-workload-boundaries-red-hat-openshift-ansible-automation-platform-and-identity-management" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Govern privileged workload boundaries with Red Hat OpenShift, Ansible Automation Platform, and Identity Management
-                </a>
-                <p class="mb-1 small text-light">Platform engineering, security architecture, and operations teams are being asked to support 2 realities at once: modern application platforms such as Red Hat OpenShift, and long-lived Red Hat Enterprise Linux (RHEL) fleets that still run critical automation.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-29">
-                <a href="https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant
-                </a>
-                <p class="mb-1 small text-light">At Spotify, data problems used to follow a specific pattern. You'd look for the relevant dashboard, there... The post Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-29">
-                <a href="https://www.hashicorp.com/blog/deploy-boundary-on-kubernetes-with-official-helm-charts" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Deploy Boundary on Kubernetes with official Helm charts
-                </a>
-                <p class="mb-1 small text-light">That means hand-crafting deployments, services, config maps, and lifecycle automation for every environment, then keeping it all consistent over time. Conclusion These Helm charts bring Boundary deployments in line with how teams already operate infrastructure on Kubernetes.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-29">
-                <a href="https://blog.cloudflare.com/temporary-accounts/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Temporary Cloudflare Accounts for AI agents
-                </a>
-                <p class="mb-1 small text-light">Today we're rolling out Temporary Cloudflare Accounts for Agents. Agents can now deploy websites, APIs, and agents right away, without first needing to sign up for an account.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-29">
-                <a href="https://www.cncf.io/blog/2026/06/25/building-a-cluster-aware-ai-agent-with-kubernetes-argo-cd-and-gitops/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Building a Cluster-Aware AI Agent with Kubernetes, Argo CD, and GitOps
-                </a>
-                <p class="mb-1 small text-light">The interesting properties of this pattern for platform engineers: PropertyWhat it providesCluster-awareThe agent reads live pods, events, and logs and reasons about real state rather than generic Kubernetes facts.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-29">
-                <a href="https://www.pulumi.com/blog/neo-code-reviews/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Neo code reviews: AI code review built for infrastructure
-                </a>
-                <p class="mb-1 small text-light">Neo code reviews analyze pull request changes in conjunction with what Pulumi Cloud knows about your running infrastructure, providing both high-level and code-level feedback. Normal code review agents can’t reliably anticipate the impact an infrastructure-as-code change will have.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-29">
                 <a href="https://www.reddit.com/r/devops/comments/1ufbbux/transitioning_from_65_years_in_it_infra_to_devops/" target="_blank" class="fw-bold text-decoration-none">
                     Transitioning from 6.5 years in IT Infra to DevOps. I built an end-to-end GitOps pipeline on Azure & some Python automation. Looking for architectural roasts.
@@ -398,7 +139,7 @@
                 <p class="mb-1 small text-light">Over the last several months, I’ve been pivoting into Cloud/DevOps to learn how to build and automate from scratch. ​CI/CD Pipeline: Built the CI side with Jenkins/Azure DevOps and used ArgoCD for continuous deployment.</p>
                 <small class="text-secondary">
                     
-                    Reddit
+                    Reddit | 2026-06-29
                     
                 </small>
             </li>
@@ -410,7 +151,283 @@
                 <p class="mb-1 small text-light">They introduce new data modalities, faster iteration cycles, derived features, embeddings, multimodal inputs, and changing policy interpretations. ) Start With the Contract A classifier should behave like a platform service.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-06-29">
+                <a href="https://www.cncf.io/blog/2026/06/25/building-a-cluster-aware-ai-agent-with-kubernetes-argo-cd-and-gitops/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Building a Cluster-Aware AI Agent with Kubernetes, Argo CD, and GitOps
+                </a>
+                <p class="mb-1 small text-light">The interesting properties of this pattern for platform engineers: PropertyWhat it providesCluster-awareThe agent reads live pods, events, and logs and reasons about real state rather than generic Kubernetes facts.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-29">
+                <a href="https://www.pulumi.com/blog/neo-code-reviews/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Neo code reviews: AI code review built for infrastructure
+                </a>
+                <p class="mb-1 small text-light">Neo code reviews analyze pull request changes in conjunction with what Pulumi Cloud knows about your running infrastructure, providing both high-level and code-level feedback. Normal code review agents can’t reliably anticipate the impact an infrastructure-as-code change will have.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-06-29">
+                <a href="https://www.hashicorp.com/blog/deploy-boundary-on-kubernetes-with-official-helm-charts" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Deploy Boundary on Kubernetes with official Helm charts
+                </a>
+                <p class="mb-1 small text-light">That means hand-crafting deployments, services, config maps, and lifecycle automation for every environment, then keeping it all consistent over time. Conclusion These Helm charts bring Boundary deployments in line with how teams already operate infrastructure on Kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-29">
+                <a href="https://blog.cloudflare.com/temporary-accounts/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Temporary Cloudflare Accounts for AI agents
+                </a>
+                <p class="mb-1 small text-light">Today we're rolling out Temporary Cloudflare Accounts for Agents. Agents can now deploy websites, APIs, and agents right away, without first needing to sign up for an account.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-29">
+                <a href="https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Toward More Controllable AI Video Editing: An Early Research Exploration at Netflix
+                </a>
+                <p class="mb-1 small text-light">To tackle this challenge, we introduce Vera, a novel layered video diffusion framework for content-preserving video editing. Model ArchitectureBeyond data, model design is another key challenge.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-29">
+                <a href="https://www.docker.com/blog/sbom-generation-for-container-workflows/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] How to Generate an SBOM for Container Workflows
+                </a>
+                <p class="mb-1 small text-light">According to Omdia’s 2026 software supply chain security report, 86% of organizations find SBOM generation challenging. This is one dimension of a broader software supply chain security challenge: every tool in your pipeline is a dependency that needs the same scrutiny as your application code.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-06-29">
+                <a href="https://www.redhat.com/en/blog/govern-privileged-workload-boundaries-red-hat-openshift-ansible-automation-platform-and-identity-management" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Govern privileged workload boundaries with Red Hat OpenShift, Ansible Automation Platform, and Identity Management
+                </a>
+                <p class="mb-1 small text-light">Platform engineering, security architecture, and operations teams are being asked to support 2 realities at once: modern application platforms such as Red Hat OpenShift, and long-lived Red Hat Enterprise Linux (RHEL) fleets that still run critical automation.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-06-29">
+                <a href="https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant
+                </a>
+                <p class="mb-1 small text-light">At Spotify, data problems used to follow a specific pattern. You'd look for the relevant dashboard, there... The post Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-29">
+                <a href="https://kubernetes.io/blog/2026/06/25/headlamp-cluster-api-plugin/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Introducing the Cluster API plugin for Headlamp
+                </a>
+                <p class="mb-1 small text-light">Cluster API (CAPI) is a Kubernetes sub-project that brings declarative, Kubernetes-style APIs to cluster lifecycle management. Cluster API dashboardThe dashboard provides a centralized view of Cluster API resources and their health across a management cluster.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-29">
+                <a href="https://kubernetes.io/blog/2026/06/25/visual-context-volcano-headlamp-plugin/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Inspect Volcano workloads faster with Headlamp
+                </a>
+                <p class="mb-1 small text-light">Volcano is a cloud native batch scheduler for Kubernetes, built for high-performance computing, AI/ML, and other batch workloads. Kubernetes was originally designed around long-running services, where applications are expected to start and remain available over time.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-06-29">
+                <a href="https://kubernetes.io/blog/2026/06/25/headlamp-knative-plugin/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] See your serverless: introducing the Headlamp plugin for Knative
+                </a>
+                <p class="mb-1 small text-light">Headlamp is an open-source, extensible Kubernetes SIG UI project designed to let you explore, manage, and debug cluster resources.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-29">
+                <a href="https://blog.cloudflare.com/rollbacks-for-workflows/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] How we built saga rollbacks for Cloudflare Workflows
+                </a>
+                <p class="mb-1 small text-light">Cloudflare Workflows allows you to build durable, multi-step applications with built-in retries and state persistence across long-running processes. In practice, there are a few details that make the API and execution model important.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-29">
+                <a href="https://blog.cloudflare.com/oauth-for-all/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Unlocking the Cloudflare app ecosystem with OAuth for all
+                </a>
+                <p class="mb-1 small text-light">Cloudflare provides services that help run 20% of the web, but we don’t do it alone. Cloudflare provides a rich API for our platform that enables developers to create automations, CI/CD, and integrations that glue together the various parts of their infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-06-29">
+                <a href="https://blog.cloudflare.com/hyper-bug/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] How we found a bug in the hyper HTTP library
+                </a>
+                <p class="mb-1 small text-light">Hops, handoffs, and hyper When developers build on Cloudflare, they compose full-stack applications from a set of platform services that are accessible to Workers through bindings.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-06-29">
+                <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How we used DSPy to turn AI evaluations into better responses in Dash chat
+                </a>
+                <p class="mb-1 small text-light">In practice, this meant tracking issues like incomplete answers and missed key aspects of a user's request. For each new prompt, we compared its performance against the existing production prompt using the same set of examples.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-06-29">
+                <a href="https://www.pulumi.com/blog/cloudflare-first-networking-with-pulumi/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Cloudflare-First Networking as Code with Pulumi
+                </a>
+                <p class="mb-1 small text-light">Platform teams managing multi-cloud applications face a dangerous visibility gap. As applications span multiple clouds, the edge often becomes the most consistent layer for enforcing security and traffic policies.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-06-29">
+                <a href="https://www.reddit.com/r/devops/comments/1ufh0uz/update_on_project_yellow_olive_i_added_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    Update on Project Yellow Olive: I added Kubernetes Deployment challenges to my Pokemon Yellow inspired TUI game
+                </a>
+                <p class="mb-1 small text-light">Hello r/devops , Disclosure: I’m the creator of Project Yellow Olive, a Pokémon-inspired terminal game for learning Kubernetes. Each challenge expects you to apply real kubectl/Kubernetes concepts rather than just read theory.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-29">
+                <a href="https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How Netflix Simplified Batch Compute with Kueue
+                </a>
+                <p class="mb-1 small text-light">Brief Overview of CMB and TitusCMB is a managed batch solution that allows users and applications to execute and manage workloads that run to completion. CMB Tenant HierarchyTenants provide a grouping mechanism for jobs submitted on behalf of certain organizations, platforms, or applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-06-29">
+                <a href="https://netflixtechblog.com/vmaf-v1-good-is-not-good-enough-60d7e4244ea8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] VMAF v1: Good Is Not Good Enough
+                </a>
+                <p class="mb-1 small text-light">We found that this approach improves accuracy and helps generalize VMAF better. Additionally, our newest libvmaf release has a much improved threading performance, which is of benefit to both v0 and v1.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-06-29">
+                <a href="https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] AI alone won’t change your business. The system running it will.
+                </a>
+                <p class="mb-1 small text-light">Building a system for the agentic enterpriseTo succeed in this new era, an agent platform must meet a higher bar. Optimized performance for open models: With Fireworks AI on Foundry, enterprises get faster, more efficient inference directly into the platform.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-29">
+                <a href="https://www.docker.com/blog/eu-cyber-resilience-act-overview/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] EU Cyber Resilience Act: Overview, Requirements, and Timelines
+                </a>
+                <p class="mb-1 small text-light">A smart thermostat, an enterprise database, and a container runtime were all subject to different (or no) cybersecurity obligations. However, the line is blurry for products depending on cloud infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-06-29">
+                <a href="https://www.docker.com/blog/docker-content-trust-retirement-and-migration-guidance/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Content Trust: Retirement and Migration Guidance
+                </a>
+                <p class="mb-1 small text-light">TLDR: Docker Content Trust (DCT) and the Notary v1 service at notary. Use digests in dockerfiles for reproducible builds, and in Kubernetes manifests or Compose files to ensure predictable deployments.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-06-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-06-29">
+                <a href="https://newsletter.semianalysis.com/p/us-grid-constraints-towards-40gw" target="_blank" class="fw-bold text-decoration-none">
+                    US Grid Constraints: Towards 40GW+ of Behind-the-Meter Datacenter by 2028?
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://newsletter.semianalysis.com/p/us-grid-constraints-towards-40gw Comments URL: https://news.ycombinator.com/item?id=48716009 Points: 22 # Comments: 10</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-06-29
                     
                 </small>
             </li>

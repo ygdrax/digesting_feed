@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - July 09, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - July 09, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for July 09, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-07-09">2026-07-09 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-07-09 10:52:44
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,230 +132,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-07-09">
-                <a href="https://www.reddit.com/r/devops/comments/1uqwjuf/docs_as_code_implementation_for_infrastructure/" target="_blank" class="fw-bold text-decoration-none">
-                    Docs as Code implementation for Infrastructure
-                </a>
-                <p class="mb-1 small text-light">There should be a way to navigate to different documents All. But I still have no idea how to start on this.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-07-09">
-                <a href="https://www.reddit.com/r/devops/comments/1urdygd/what_is_your_optimal_infrastructure/" target="_blank" class="fw-bold text-decoration-none">
-                    What is your optimal infrastructure
-                </a>
-                <p class="mb-1 small text-light">I'll go first Product: micro services each service has its own git repo following a standardized directory structure each service has its own pipeline that scans the code and runs a full regression suite before a PR is merged to master/main each service has a health check that is actually accurat...</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-07-09">
-                <a href="https://www.reddit.com/r/devops/comments/1uqqjho/could_you_please_share_a_typical_daily_routine/" target="_blank" class="fw-bold text-decoration-none">
-                    Could you please share a typical daily routine for a DevOps professional and outline the types of tools used for application hosting?
-                </a>
-                <p class="mb-1 small text-light">The objective here is to investigate the DevOps tools currently employed by various companies within the market, thereby enabling adequate preparation for a potential career transition. Also share the year of experience do you have? submitted by /u/Afraid_Prompt_2379</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-09">
-                <a href="https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] GenPage: Towards End-to-End Generative Homepage Construction at Netflix
-                </a>
-                <p class="mb-1 small text-light">Custom tokenization significantly reduces sequence length, lowering inference cost and latency. We update the entity and row vocabulary daily to incorporate newly added entities and rows.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-09">
-                <a href="https://netflixtechblog.com/a-human-augmenting-agentic-workflow-for-causal-inference-4623f0a9c5af?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] A Human-Augmenting Agentic Workflow for Causal Inference
-                </a>
-                <p class="mb-1 small text-light">A core challenge when analyzing new entertainment types is early adopter bias. Using agents for causal inference poses a challenge: how do we evaluate agents’ performance on tasks without ground truth.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-07-09">
-                <a href="https://azure.microsoft.com/en-us/blog/claude-in-microsoft-foundry-is-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Claude in Microsoft Foundry is now generally available
-                </a>
-                <p class="mb-1 small text-light">Instead of solving for infrastructure, teams can focus on building agentic applications that run their work with Claude, in the environment where they already operate. This is a real step forward for customers building agentic applications and want to move from AI experimentation to production.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-07-09">
-                <a href="https://azure.microsoft.com/en-us/blog/accelerate-modern-linux-workloads-with-azure-files/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Accelerate modern Linux workloads with Azure Files
-                </a>
-                <p class="mb-1 small text-light">Scale cloud-native applications with shared storage Cloud-native applications often need shared storage that works directly with Kubernetes-based deployment models.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-09">
-                <a href="https://www.docker.com/blog/your-laptop-is-the-new-production-environment/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Your Laptop Is the New Production Environment
-                </a>
-                <p class="mb-1 small text-light">While reading Srini Sekaran’s recent announcement introducing Docker AI Governance, one statement stood out: “Your laptop is the new prod. These might include GitHub, Jira, cloud platforms, internal services, communication tools, or customer systems.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-09">
-                <a href="https://www.redhat.com/en/blog/strengthening-open-source-supply-chain-red-hat-partners" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Strengthening the open source supply chain with Red Hat partners
-                </a>
-                <p class="mb-1 small text-light">However, true security requires a movement—a connected network of industry leaders and experts working in lockstep. With this release, we are establishing a new standard for industry collaboration.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-09">
-                <a href="https://www.redhat.com/en/blog/accelerate-and-upskill-red-hat-ai-training-and-certification" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Accelerate and upskill with Red Hat AI training and certification
-                </a>
-                <p class="mb-1 small text-light">Rooted in flexibility, innovation, security, and consistency, Red Hat AI and Red Hat OpenShift AI help organizations accelerate the development and delivery of AI solutions across hybrid cloud environments.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-07-09">
-                <a href="https://www.hashicorp.com/blog/streamline-identity-lifecycle-management-on-hcp-with-scim-provisioning" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Streamline identity lifecycle management on HCP with SCIM provisioning
+                <a href="https://www.hashicorp.com/blog/terraform-mcp-server-four-real-world-ai-infrastructure-patterns" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform MCP server: Four real-world AI infrastructure patterns
                 </a>
-                <p class="mb-1 small text-light">Today, HashiCorp Cloud Platform (HCP) introduces SCIM provisioning to automate user and group lifecycle management directly from your IdP. Align access with identity provider groups Many organizations already use IdP groups to control access across internal applications and infrastructure.</p>
+                <p class="mb-1 small text-light">User scenario A newly hired DevOps engineer joins a platform engineering organization that manages standardized infrastructure across multiple cloud environments.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-09">
-                <a href="https://kubernetes.io/blog/2026/07/08/announcing-etcd-3.7/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing etcd v3.7.0
-                </a>
-                <p class="mb-1 small text-light">0, the latest minor release of the popular distributed key-value store and core Kubernetes component. 7 delivers multiple specific performance improvements, both for the Kubernetes control plane and for other use cases.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-07-09">
-                <a href="https://www.cncf.io/blog/2026/07/08/network-boundary-for-ai-agents-using-nginx-and-opentelemetry/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Network boundary for AI agents using NGINX and OpenTelemetry
-                </a>
-                <p class="mb-1 small text-light">That got me thinking; agentic autonomy has huge potential to automate tasks previously needing humans, but at the same time, that capability introduces new operational and security challenges.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-09">
-                <a href="https://blog.cloudflare.com/meerkat-introduction/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing Meerkat: an experiment in global consensus
-                </a>
-                <p class="mb-1 small text-light">In this section we precisely describe our consistency and fault tolerance requirements for a Cloudflare consensus service. (If you’re wondering, Meerkat’s key-value store also provides serializability, which we’ll write about in a future post.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-09">
-                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
-                </a>
-                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-09">
-                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
-                </a>
-                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-09">
-                <a href="https://www.docker.com/blog/eu-ai-act-compliance/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] What Does EU AI Act Compliance Require?
-                </a>
-                <p class="mb-1 small text-light">Annex III systems: AI used in eight sensitive areas: biometrics, critical infrastructure, education, employment, essential public and private services, law enforcement, migration and border control, and administration of justice.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-07-09">
-                <a href="https://snyk.io/blog/governing-ai-agents-inside-execution-loop/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] The New Security Control Point: Governing AI Agents Inside the Execution Loop
-                </a>
-                <p class="mb-1 small text-light">AI agents introduce security risk through the actions they take, not just the code they produce. Learn how agent behavior governance helps teams observe, steer, and block risky actions in real time.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-09">
-                <a href="https://engineering.fb.com/2026/06/23/production-engineering/how-meta-built-ultra-narrow-batteries-for-ai-glasses-meta-tech-podcast/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] How Meta Engineered Ultra-Narrow Batteries for AI Glasses
-                </a>
-                <p class="mb-1 small text-light">Enter Steel-Can Cells (at Never-Before-Seen Widths) Steel-can batteries aren’t new. Then the Meta Ray-Ban Display glasses introduced the most demanding power profile yet.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
+                    HashiCorp | 2026-07-09
                     
                 </small>
             </li>
@@ -350,7 +151,7 @@
                 <p class="mb-1 small text-light">CLA enforcement for co-authorsThe CNCF provides a tool for verifying the contributor license agreements on each pull request. This provides a flag to reviewers that the PR is not ready to merge.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-07-09
                     
                 </small>
             </li>
@@ -362,7 +163,7 @@
                 <p class="mb-1 small text-light">However, moving these data-heavy, stateful workloads into cloud native infrastructure introduces massive data bottlenecks.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-07-09
                     
                 </small>
             </li>
@@ -374,7 +175,7 @@
                 <p class="mb-1 small text-light">The rapid adoption of AI technologies is creating new requirements for platform teams. Many organizations continue to identify significant opportunities to improve cloud cost efficiency, particularly as AI infrastructure introduces new consumption patterns.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-07-09
                     
                 </small>
             </li>
@@ -386,7 +187,7 @@
                 <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-07-09
                     
                 </small>
             </li>
@@ -398,19 +199,235 @@
                 <p class="mb-1 small text-light">Add integration tests for critical paths (the deployment pipeline, data infrastructure, security-sensitive resources). SecurityGroup("web-secgrp", { ingress: , }], }); export const server = new aws.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-09">
+                <a href="https://www.docker.com/blog/eu-ai-act-compliance/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] What Does EU AI Act Compliance Require?
+                </a>
+                <p class="mb-1 small text-light">Annex III systems: AI used in eight sensitive areas: biometrics, critical infrastructure, education, employment, essential public and private services, law enforcement, migration and border control, and administration of justice.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-07-09">
+                <a href="https://snyk.io/blog/governing-ai-agents-inside-execution-loop/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The New Security Control Point: Governing AI Agents Inside the Execution Loop
+                </a>
+                <p class="mb-1 small text-light">AI agents introduce security risk through the actions they take, not just the code they produce. Learn how agent behavior governance helps teams observe, steer, and block risky actions in real time.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-09">
+                <a href="https://engineering.fb.com/2026/06/23/production-engineering/how-meta-built-ultra-narrow-batteries-for-ai-glasses-meta-tech-podcast/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] How Meta Engineered Ultra-Narrow Batteries for AI Glasses
+                </a>
+                <p class="mb-1 small text-light">Enter Steel-Can Cells (at Never-Before-Seen Widths) Steel-can batteries aren’t new. Then the Meta Ray-Ban Display glasses introduced the most demanding power profile yet.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-07-09
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-07-09">
-                <a href="https://www.hashicorp.com/blog/terraform-mcp-server-four-real-world-ai-infrastructure-patterns" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform MCP server: Four real-world AI infrastructure patterns
+                <a href="https://www.hashicorp.com/blog/streamline-identity-lifecycle-management-on-hcp-with-scim-provisioning" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Streamline identity lifecycle management on HCP with SCIM provisioning
                 </a>
-                <p class="mb-1 small text-light">User scenario A newly hired DevOps engineer joins a platform engineering organization that manages standardized infrastructure across multiple cloud environments.</p>
+                <p class="mb-1 small text-light">Today, HashiCorp Cloud Platform (HCP) introduces SCIM provisioning to automate user and group lifecycle management directly from your IdP. Align access with identity provider groups Many organizations already use IdP groups to control access across internal applications and infrastructure.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-09">
+                <a href="https://kubernetes.io/blog/2026/07/08/announcing-etcd-3.7/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing etcd v3.7.0
+                </a>
+                <p class="mb-1 small text-light">0, the latest minor release of the popular distributed key-value store and core Kubernetes component. 7 delivers multiple specific performance improvements, both for the Kubernetes control plane and for other use cases.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-07-09">
+                <a href="https://www.cncf.io/blog/2026/07/08/network-boundary-for-ai-agents-using-nginx-and-opentelemetry/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Network boundary for AI agents using NGINX and OpenTelemetry
+                </a>
+                <p class="mb-1 small text-light">That got me thinking; agentic autonomy has huge potential to automate tasks previously needing humans, but at the same time, that capability introduces new operational and security challenges.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-09">
+                <a href="https://blog.cloudflare.com/meerkat-introduction/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing Meerkat: an experiment in global consensus
+                </a>
+                <p class="mb-1 small text-light">In this section we precisely describe our consistency and fault tolerance requirements for a Cloudflare consensus service. (If you’re wondering, Meerkat’s key-value store also provides serializability, which we’ll write about in a future post.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-09">
+                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
+                </a>
+                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-09">
+                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
+                </a>
+                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-07-09">
+                <a href="https://www.reddit.com/r/devops/comments/1uqwjuf/docs_as_code_implementation_for_infrastructure/" target="_blank" class="fw-bold text-decoration-none">
+                    Docs as Code implementation for Infrastructure
+                </a>
+                <p class="mb-1 small text-light">There should be a way to navigate to different documents All. But I still have no idea how to start on this.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-07-09">
+                <a href="https://www.reddit.com/r/devops/comments/1urdygd/what_is_your_optimal_infrastructure/" target="_blank" class="fw-bold text-decoration-none">
+                    What is your optimal infrastructure
+                </a>
+                <p class="mb-1 small text-light">I'll go first Product: micro services each service has its own git repo following a standardized directory structure each service has its own pipeline that scans the code and runs a full regression suite before a PR is merged to master/main each service has a health check that is actually accurat...</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-07-09">
+                <a href="https://www.reddit.com/r/devops/comments/1uqqjho/could_you_please_share_a_typical_daily_routine/" target="_blank" class="fw-bold text-decoration-none">
+                    Could you please share a typical daily routine for a DevOps professional and outline the types of tools used for application hosting?
+                </a>
+                <p class="mb-1 small text-light">The objective here is to investigate the DevOps tools currently employed by various companies within the market, thereby enabling adequate preparation for a potential career transition. Also share the year of experience do you have? submitted by /u/Afraid_Prompt_2379</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-09">
+                <a href="https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] GenPage: Towards End-to-End Generative Homepage Construction at Netflix
+                </a>
+                <p class="mb-1 small text-light">Custom tokenization significantly reduces sequence length, lowering inference cost and latency. We update the entity and row vocabulary daily to incorporate newly added entities and rows.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-09">
+                <a href="https://netflixtechblog.com/a-human-augmenting-agentic-workflow-for-causal-inference-4623f0a9c5af?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] A Human-Augmenting Agentic Workflow for Causal Inference
+                </a>
+                <p class="mb-1 small text-light">A core challenge when analyzing new entertainment types is early adopter bias. Using agents for causal inference poses a challenge: how do we evaluate agents’ performance on tasks without ground truth.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-07-09">
+                <a href="https://azure.microsoft.com/en-us/blog/claude-in-microsoft-foundry-is-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Claude in Microsoft Foundry is now generally available
+                </a>
+                <p class="mb-1 small text-light">Instead of solving for infrastructure, teams can focus on building agentic applications that run their work with Claude, in the environment where they already operate. This is a real step forward for customers building agentic applications and want to move from AI experimentation to production.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-07-09">
+                <a href="https://azure.microsoft.com/en-us/blog/accelerate-modern-linux-workloads-with-azure-files/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Accelerate modern Linux workloads with Azure Files
+                </a>
+                <p class="mb-1 small text-light">Scale cloud-native applications with shared storage Cloud-native applications often need shared storage that works directly with Kubernetes-based deployment models.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-09">
+                <a href="https://www.docker.com/blog/your-laptop-is-the-new-production-environment/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Your Laptop Is the New Production Environment
+                </a>
+                <p class="mb-1 small text-light">While reading Srini Sekaran’s recent announcement introducing Docker AI Governance, one statement stood out: “Your laptop is the new prod. These might include GitHub, Jira, cloud platforms, internal services, communication tools, or customer systems.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-09">
+                <a href="https://www.redhat.com/en/blog/strengthening-open-source-supply-chain-red-hat-partners" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Strengthening the open source supply chain with Red Hat partners
+                </a>
+                <p class="mb-1 small text-light">However, true security requires a movement—a connected network of industry leaders and experts working in lockstep. With this release, we are establishing a new standard for industry collaboration.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-07-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-09">
+                <a href="https://www.redhat.com/en/blog/accelerate-and-upskill-red-hat-ai-training-and-certification" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Accelerate and upskill with Red Hat AI training and certification
+                </a>
+                <p class="mb-1 small text-light">Rooted in flexibility, innovation, security, and consistency, Red Hat AI and Red Hat OpenShift AI help organizations accelerate the development and delivery of AI solutions across hybrid cloud environments.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-07-09
                     
                 </small>
             </li>

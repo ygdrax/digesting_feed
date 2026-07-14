@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - July 14, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - July 14, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for July 14, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-07-14">2026-07-14 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-07-14 09:56:36
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,278 +132,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-07-14">
-                <a href="https://www.reddit.com/r/devops/comments/1uvdtif/roadmap_for_infrastructurebackend_development_in/" target="_blank" class="fw-bold text-decoration-none">
-                    Roadmap for infrastructure/backend development in the .NET ecosystem?
-                </a>
-                <p class="mb-1 small text-light">Which tools and technologies are worth learning (Docker, Kubernetes, Nginx, systemd, cloud platforms, etc. I'd appreciate hearing how professionals in infrastructure, platform engineering, backend, or DevOps would approach learning this field today.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-07-14">
-                <a href="https://www.reddit.com/r/devops/comments/1uw1v3y/are_you_looking_to_switch_to_ai_platform/" target="_blank" class="fw-bold text-decoration-none">
-                    Are you looking to switch to AI platform engineering roles?
-                </a>
-                <p class="mb-1 small text-light">If you are someone looking for transition to AI infra roles from Devops, this podcast is for you- https://www.youtube.com/live/82UoYSWaGpk?si=h6qmIfIN4gVZGlnm Here I discussed tips, projects, interview questions. submitted by /u/shikha-singh-the-gr8</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-14">
-                <a href="https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Building Service Topology at Scale: Architecture, Challenges, and Lessons Learned
-                </a>
-                <p class="mb-1 small text-light">The Core Problem: Network IntermediariesIn cloud environments, traffic between applications rarely flows directly, it traverses intermediate network components like load balancers, NAT gateways, API gateways, and proxies.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-14">
-                <a href="https://netflixtechblog.medium.com/measuring-the-impact-of-personalized-recommendations-4c26be3a4d96?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Measuring the Impact of Personalized Recommendations
-                </a>
-                <p class="mb-1 small text-light">But personalization is not only an algorithmic problem, it is also a measurement problem. Our Model Architecture Allows Us to Scale to Millions of Members EfficientlyThe key component for our purposes is that the model explicitly parameterizes the effect of recommendations.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-07-14">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-at-one-year-network-scanning-in-security-hub-loom-for-aws-and-more-july-13-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: AWS Builder Center at 1 year, Network Scanning in Security Hub, Loom for AWS, and more (July 13, 2026)
-                </a>
-                <p class="mb-1 small text-light">ECS Managed Instances provides GPU metrics through Amazon CloudWatch Container Insights and automatic health monitoring for GPU hardware failures. For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-07-14">
-                <a href="https://aws.amazon.com/blogs/aws/upgrade-amazon-eks-clusters-with-confidence-using-kubernetes-version-rollbacks/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Upgrade Amazon EKS clusters with confidence using Kubernetes version rollbacks
-                </a>
-                <p class="mb-1 small text-light">Upgrading a Kubernetes control plane has long been a one way door. Today, we’re announcing Kubernetes version rollbacks for Amazon Elastic Kubernetes Service (Amazon EKS), a new feature that gives cluster administrators a safety net when performing cluster upgrades.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-07-14">
-                <a href="https://www.hashicorp.com/blog/announcing-the-public-beta-of-vault-kubernetes-key-management" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Announcing the public beta of Vault Kubernetes key management
-                </a>
-                <p class="mb-1 small text-light">Applications, services, containers, CI/CD systems, infrastructure automation, and AI-driven workflows all need access to sensitive data.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-14">
-                <a href="https://kubernetes.io/blog/2026/07/13/kubernetes-dashboard-to-headlamp/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes Dashboard to Headlamp: A Step-by-Step Guide
-                </a>
-                <p class="mb-1 small text-light">When Headlamp runs inside a cluster, it uses a Kubernetes ServiceAccount to access the API and follow RBAC rules. 3 RBAC: keep it least privilegeKubernetes security starts with API authentication and authorization (RBAC).</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-14">
-                <a href="https://kubernetes.io/blog/2026/06/25/headlamp-cluster-api-plugin/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Introducing the Cluster API plugin for Headlamp
-                </a>
-                <p class="mb-1 small text-light">Cluster API (CAPI) is a Kubernetes sub-project that brings declarative, Kubernetes-style APIs to cluster lifecycle management. Cluster API dashboardThe dashboard provides a centralized view of Cluster API resources and their health across a management cluster.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-07-14">
-                <a href="https://www.cncf.io/blog/2026/07/10/where-should-ai-workloads-run-a-sovereign-and-sensible-approach/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Where should AI workloads run? A sovereign and sensible approach
-                </a>
-                <p class="mb-1 small text-light">On one level, this debate is close to settled: Kubernetes has emerged as a common foundation for AI infrastructure because of its resource management, automation, portability and operational consistency.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-14">
-                <a href="https://blog.cloudflare.com/introducing-precursor/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing Precursor: detecting agentic behavior with continuous client-side signals
-                </a>
-                <p class="mb-1 small text-light">This extends the client-side detections offered by a Challenge to your entire web application. This improves detection precision, making it easier to distinguish real users from automation without relying on aggressive Challenges.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-14">
-                <a href="https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Improving Smart Tiered Cache for Public Cloud Regions
-                </a>
-                <p class="mb-1 small text-light">Today, we’re closing that gap for origins hosted on AWS, GCP, Azure, and Oracle Cloud. Many cloud providers use anycast or regional unicast networking for their load balancers, front-end services, and regional ingress points.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-14">
-                <a href="https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Cloudflare proudly joins the UK government's Cyber Resilience Pledge
-                </a>
-                <p class="mb-1 small text-light">That same visibility also helps improve how we detect, score, and respond to attacks across Cloudflare’s network and security services. Supply chain security and Cyber Essentials (CE) Cloudflare adheres to rigorous international security compliance certifications.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-14">
-                <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How we used DSPy to turn AI evaluations into better responses in Dash chat
-                </a>
-                <p class="mb-1 small text-light">In practice, this meant tracking issues like incomplete answers and missed key aspects of a user's request. For each new prompt, we compared its performance against the existing production prompt using the same set of examples.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-07-14">
-                <a href="https://www.pulumi.com/blog/passkey-support-in-pulumi-cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Sign in to Pulumi Cloud with Passkeys
-                </a>
-                <p class="mb-1 small text-light">Pulumi Cloud now supports passkeys for users who sign in with email and password. When you sign in, your device authenticates you locally and signs a challenge from Pulumi Cloud with the private key.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-14">
-                <a href="https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Toward More Controllable AI Video Editing: An Early Research Exploration at Netflix
-                </a>
-                <p class="mb-1 small text-light">To tackle this challenge, we introduce Vera, a novel layered video diffusion framework for content-preserving video editing. Model ArchitectureBeyond data, model design is another key challenge.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-07-14">
-                <a href="https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Meet Brain: The AI system behind Azure reliability
-                </a>
-                <p class="mb-1 small text-light">This transparency into Azure service health and downstream impact helps Azure customers understand and diagnose application issues more quickly and improves the reliability of applications built on Azure.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-14">
-                <a href="https://www.docker.com/blog/why-ai-agents-need-isolation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Why AI Agents Need Isolation
-                </a>
-                <p class="mb-1 small text-light">This matters because AI agents increasingly interact with APIs, model gateways, cloud services, development platforms, and external tooling. These are important challenges, but infrastructure-level safety is equally important as AI systems become more capable and autonomous.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-14">
-                <a href="https://www.docker.com/blog/sbom-generation-for-container-workflows/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] How to Generate an SBOM for Container Workflows
-                </a>
-                <p class="mb-1 small text-light">According to Omdia’s 2026 software supply chain security report, 86% of organizations find SBOM generation challenging. This is one dimension of a broader software supply chain security challenge: every tool in your pipeline is a dependency that needs the same scrutiny as your application code.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-14">
-                <a href="https://www.redhat.com/en/blog/navigating-ai-vulnerability-discovery-and-achieving-operational-resilience-automation" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Navigating AI vulnerability discovery and achieving operational resilience with automation
-                </a>
-                <p class="mb-1 small text-light">It’s no secret that AI-fueled research projects are placing a spotlight on vulnerabilities across the industry. While large catalogs of vulnerabilities have been created, automation plays a key role in your organization’s ability to address them before they impact the business.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-07-14">
-                <a href="https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant
-                </a>
-                <p class="mb-1 small text-light">At Spotify, data problems used to follow a specific pattern. You'd look for the relevant dashboard, there... The post Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-14">
-                <a href="https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Meta’s AI Storage Blueprint at Scale
+                <a href="https://engineering.fb.com/2026/06/25/security/privacy-aware-infrastructure-in-the-ai-native-era-an-asset-classification-case-study/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Privacy-Aware Infrastructure in the AI-Native Era: An Asset Classification Case Study
                 </a>
-                <p class="mb-1 small text-light">This paves the way for O(1) lookup to resolve paths to storage addresses, which is a step-function improvement. Regional deployment: The BLOB-storage stack is now lean with flexibility to be deployed as a regional or global service.</p>
+                <p class="mb-1 small text-light">They introduce new data modalities, faster iteration cycles, derived features, embeddings, multimodal inputs, and changing policy interpretations. ) Start With the Contract A classifier should behave like a platform service.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-14">
-                <a href="https://kubernetes.io/blog/2026/07/13/introducing-headlamp-plugin-for-kubeflow/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Operating AI/ML Workloads on Kubernetes: A Headlamp Plugin for Kubeflow
-                </a>
-                <p class="mb-1 small text-light">Kubernetes has quietly become the default platform for AI and machine learning. The Headlamp Kubeflow plugin helps answer these questions by reading directly from the Kubernetes API server.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
+                    Engineering at Meta | 2026-07-14
                     
                 </small>
             </li>
@@ -398,19 +151,283 @@
                 <p class="mb-1 small text-light">It was 6 AM when the first alert fired. The on-call engineer opened her laptop to find 3 unrelated failures from a single AI agent.</p>
                 <small class="text-secondary">
                     
-                    Red Hat
+                    Red Hat | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-14">
+                <a href="https://kubernetes.io/blog/2026/07/13/introducing-headlamp-plugin-for-kubeflow/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Operating AI/ML Workloads on Kubernetes: A Headlamp Plugin for Kubeflow
+                </a>
+                <p class="mb-1 small text-light">Kubernetes has quietly become the default platform for AI and machine learning. The Headlamp Kubeflow plugin helps answer these questions by reading directly from the Kubernetes API server.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-14">
+                <a href="https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Toward More Controllable AI Video Editing: An Early Research Exploration at Netflix
+                </a>
+                <p class="mb-1 small text-light">To tackle this challenge, we introduce Vera, a novel layered video diffusion framework for content-preserving video editing. Model ArchitectureBeyond data, model design is another key challenge.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-07-14">
+                <a href="https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Meet Brain: The AI system behind Azure reliability
+                </a>
+                <p class="mb-1 small text-light">This transparency into Azure service health and downstream impact helps Azure customers understand and diagnose application issues more quickly and improves the reliability of applications built on Azure.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-14">
+                <a href="https://www.docker.com/blog/why-ai-agents-need-isolation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Why AI Agents Need Isolation
+                </a>
+                <p class="mb-1 small text-light">This matters because AI agents increasingly interact with APIs, model gateways, cloud services, development platforms, and external tooling. These are important challenges, but infrastructure-level safety is equally important as AI systems become more capable and autonomous.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-14">
+                <a href="https://www.docker.com/blog/sbom-generation-for-container-workflows/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] How to Generate an SBOM for Container Workflows
+                </a>
+                <p class="mb-1 small text-light">According to Omdia’s 2026 software supply chain security report, 86% of organizations find SBOM generation challenging. This is one dimension of a broader software supply chain security challenge: every tool in your pipeline is a dependency that needs the same scrutiny as your application code.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-14">
+                <a href="https://www.redhat.com/en/blog/navigating-ai-vulnerability-discovery-and-achieving-operational-resilience-automation" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Navigating AI vulnerability discovery and achieving operational resilience with automation
+                </a>
+                <p class="mb-1 small text-light">It’s no secret that AI-fueled research projects are placing a spotlight on vulnerabilities across the industry. While large catalogs of vulnerabilities have been created, automation plays a key role in your organization’s ability to address them before they impact the business.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-07-14">
+                <a href="https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant
+                </a>
+                <p class="mb-1 small text-light">At Spotify, data problems used to follow a specific pattern. You'd look for the relevant dashboard, there... The post Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-07-14
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-14">
-                <a href="https://engineering.fb.com/2026/06/25/security/privacy-aware-infrastructure-in-the-ai-native-era-an-asset-classification-case-study/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Privacy-Aware Infrastructure in the AI-Native Era: An Asset Classification Case Study
+                <a href="https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Meta’s AI Storage Blueprint at Scale
                 </a>
-                <p class="mb-1 small text-light">They introduce new data modalities, faster iteration cycles, derived features, embeddings, multimodal inputs, and changing policy interpretations. ) Start With the Contract A classifier should behave like a platform service.</p>
+                <p class="mb-1 small text-light">This paves the way for O(1) lookup to resolve paths to storage addresses, which is a step-function improvement. Regional deployment: The BLOB-storage stack is now lean with flexibility to be deployed as a regional or global service.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Engineering at Meta | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-07-14">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-at-one-year-network-scanning-in-security-hub-loom-for-aws-and-more-july-13-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: AWS Builder Center at 1 year, Network Scanning in Security Hub, Loom for AWS, and more (July 13, 2026)
+                </a>
+                <p class="mb-1 small text-light">ECS Managed Instances provides GPU metrics through Amazon CloudWatch Container Insights and automatic health monitoring for GPU hardware failures. For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-07-14">
+                <a href="https://aws.amazon.com/blogs/aws/upgrade-amazon-eks-clusters-with-confidence-using-kubernetes-version-rollbacks/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Upgrade Amazon EKS clusters with confidence using Kubernetes version rollbacks
+                </a>
+                <p class="mb-1 small text-light">Upgrading a Kubernetes control plane has long been a one way door. Today, we’re announcing Kubernetes version rollbacks for Amazon Elastic Kubernetes Service (Amazon EKS), a new feature that gives cluster administrators a safety net when performing cluster upgrades.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-07-14">
+                <a href="https://www.hashicorp.com/blog/announcing-the-public-beta-of-vault-kubernetes-key-management" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Announcing the public beta of Vault Kubernetes key management
+                </a>
+                <p class="mb-1 small text-light">Applications, services, containers, CI/CD systems, infrastructure automation, and AI-driven workflows all need access to sensitive data.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-14">
+                <a href="https://kubernetes.io/blog/2026/07/13/kubernetes-dashboard-to-headlamp/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes Dashboard to Headlamp: A Step-by-Step Guide
+                </a>
+                <p class="mb-1 small text-light">When Headlamp runs inside a cluster, it uses a Kubernetes ServiceAccount to access the API and follow RBAC rules. 3 RBAC: keep it least privilegeKubernetes security starts with API authentication and authorization (RBAC).</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-14">
+                <a href="https://kubernetes.io/blog/2026/06/25/headlamp-cluster-api-plugin/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Introducing the Cluster API plugin for Headlamp
+                </a>
+                <p class="mb-1 small text-light">Cluster API (CAPI) is a Kubernetes sub-project that brings declarative, Kubernetes-style APIs to cluster lifecycle management. Cluster API dashboardThe dashboard provides a centralized view of Cluster API resources and their health across a management cluster.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-07-14">
+                <a href="https://www.cncf.io/blog/2026/07/10/where-should-ai-workloads-run-a-sovereign-and-sensible-approach/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Where should AI workloads run? A sovereign and sensible approach
+                </a>
+                <p class="mb-1 small text-light">On one level, this debate is close to settled: Kubernetes has emerged as a common foundation for AI infrastructure because of its resource management, automation, portability and operational consistency.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-14">
+                <a href="https://blog.cloudflare.com/introducing-precursor/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing Precursor: detecting agentic behavior with continuous client-side signals
+                </a>
+                <p class="mb-1 small text-light">This extends the client-side detections offered by a Challenge to your entire web application. This improves detection precision, making it easier to distinguish real users from automation without relying on aggressive Challenges.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-14">
+                <a href="https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Improving Smart Tiered Cache for Public Cloud Regions
+                </a>
+                <p class="mb-1 small text-light">Today, we’re closing that gap for origins hosted on AWS, GCP, Azure, and Oracle Cloud. Many cloud providers use anycast or regional unicast networking for their load balancers, front-end services, and regional ingress points.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-14">
+                <a href="https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cloudflare proudly joins the UK government's Cyber Resilience Pledge
+                </a>
+                <p class="mb-1 small text-light">That same visibility also helps improve how we detect, score, and respond to attacks across Cloudflare’s network and security services. Supply chain security and Cyber Essentials (CE) Cloudflare adheres to rigorous international security compliance certifications.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-14">
+                <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How we used DSPy to turn AI evaluations into better responses in Dash chat
+                </a>
+                <p class="mb-1 small text-light">In practice, this meant tracking issues like incomplete answers and missed key aspects of a user's request. For each new prompt, we compared its performance against the existing production prompt using the same set of examples.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-07-14">
+                <a href="https://www.pulumi.com/blog/passkey-support-in-pulumi-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Sign in to Pulumi Cloud with Passkeys
+                </a>
+                <p class="mb-1 small text-light">Pulumi Cloud now supports passkeys for users who sign in with email and password. When you sign in, your device authenticates you locally and signs a challenge from Pulumi Cloud with the private key.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-07-14">
+                <a href="https://www.reddit.com/r/devops/comments/1uvdtif/roadmap_for_infrastructurebackend_development_in/" target="_blank" class="fw-bold text-decoration-none">
+                    Roadmap for infrastructure/backend development in the .NET ecosystem?
+                </a>
+                <p class="mb-1 small text-light">Which tools and technologies are worth learning (Docker, Kubernetes, Nginx, systemd, cloud platforms, etc. I'd appreciate hearing how professionals in infrastructure, platform engineering, backend, or DevOps would approach learning this field today.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-07-14">
+                <a href="https://www.reddit.com/r/devops/comments/1uw1v3y/are_you_looking_to_switch_to_ai_platform/" target="_blank" class="fw-bold text-decoration-none">
+                    Are you looking to switch to AI platform engineering roles?
+                </a>
+                <p class="mb-1 small text-light">If you are someone looking for transition to AI infra roles from Devops, this podcast is for you- https://www.youtube.com/live/82UoYSWaGpk?si=h6qmIfIN4gVZGlnm Here I discussed tips, projects, interview questions. submitted by /u/shikha-singh-the-gr8</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-14">
+                <a href="https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Building Service Topology at Scale: Architecture, Challenges, and Lessons Learned
+                </a>
+                <p class="mb-1 small text-light">The Core Problem: Network IntermediariesIn cloud environments, traffic between applications rarely flows directly, it traverses intermediate network components like load balancers, NAT gateways, API gateways, and proxies.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-07-14
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-14">
+                <a href="https://netflixtechblog.medium.com/measuring-the-impact-of-personalized-recommendations-4c26be3a4d96?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Measuring the Impact of Personalized Recommendations
+                </a>
+                <p class="mb-1 small text-light">But personalization is not only an algorithmic problem, it is also a measurement problem. Our Model Architecture Allows Us to Scale to Millions of Members EfficientlyThe key component for our purposes is that the model explicitly parameterizes the effect of recommendations.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-07-14
                     
                 </small>
             </li>

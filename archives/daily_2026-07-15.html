@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - July 15, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - July 15, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for July 15, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-07-15">2026-07-15 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-07-15 10:00:38
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,258 +128,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-15">
-                <a href="https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] GenPage: Towards End-to-End Generative Homepage Construction at Netflix
-                </a>
-                <p class="mb-1 small text-light">Custom tokenization significantly reduces sequence length, lowering inference cost and latency. We update the entity and row vocabulary daily to incorporate newly added entities and rows.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-15">
-                <a href="https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] How Netflix Simplified Batch Compute with Kueue
-                </a>
-                <p class="mb-1 small text-light">Brief Overview of CMB and TitusCMB is a managed batch solution that allows users and applications to execute and manage workloads that run to completion. CMB Tenant HierarchyTenants provide a grouping mechanism for jobs submitted on behalf of certain organizations, platforms, or applications.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-15">
-                <a href="https://www.docker.com/blog/your-laptop-is-the-new-production-environment/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Your Laptop Is the New Production Environment
-                </a>
-                <p class="mb-1 small text-light">While reading Srini Sekaran’s recent announcement introducing Docker AI Governance, one statement stood out: “Your laptop is the new prod. These might include GitHub, Jira, cloud platforms, internal services, communication tools, or customer systems.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-15">
-                <a href="https://www.redhat.com/en/blog/zero-trust-workload-identity-manager-11-generally-available-red-hat-openshift" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Zero trust workload identity manager version 1.1 generally available on Red Hat OpenShift
-                </a>
-                <p class="mb-1 small text-light">As modern applications expand across multiple clusters, clouds, and hybrid regions, traditional security mechanisms, such as long lived secrets, static certificates, or cloud provider specific identity and access management, struggle to keep up with the scale, velocity, and ephemeral nature of mi...</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-15">
-                <a href="https://www.redhat.com/en/blog/navigate-ai-and-scale-red-hat-openshift-422" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Navigate AI and scale with Red Hat OpenShift 4.22
-                </a>
-                <p class="mb-1 small text-light">22 delivers a platform designed to meet the necessary balance of agility, security, and efficiency for your IT team. By shifting the focus from manual management to intelligent, platform-native automation, OpenShift 4.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-15">
-                <a href="https://www.redhat.com/en/blog/how-openshift-422-impacts-enterprise-ais-bottom-line" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] How Red Hat OpenShift 4.22 impacts enterprise AI’s bottom line
-                </a>
-                <p class="mb-1 small text-light">As organizations accelerate AI investments and scale across the hybrid cloud, technology choice only becomes more important. This means IT infrastructure must do more than just run workloads.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-07-15">
-                <a href="https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4)
-                </a>
-                <p class="mb-1 small text-light">How we used Honk, Backstage, and Fleet Management to ease the pain of migrating thousands of datasets. The post Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4) appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-15">
-                <a href="https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler
-                </a>
-                <p class="mb-1 small text-light">TL; DR At Meta’s scale, a few milliseconds of latency degradation can have a significant negative impact on ads performance. 9) we observed that the new Earliest Eligible Virtual Deadline First (EEVDF) scheduler introduced in Linux kernel v6.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-15">
-                <a href="https://engineering.fb.com/2026/06/30/open-source/10-years-of-metas-commitment-to-python/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] 10 Years of Meta’s Commitment to Python
-                </a>
-                <p class="mb-1 small text-light">It powers infrastructure across our most important products and initiatives and supports a wide range of teams across the company.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-15">
-                <a href="https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Building a Custom Metrics Exporter for Kubernetes
-                </a>
-                <p class="mb-1 small text-light">The release label must match the label selector configured on your Prometheus resource — kube-prometheus-stack is the default for a standard Helm install: apiVersion: monitoring.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-15">
-                <a href="https://kubernetes.io/blog/2026/07/08/announcing-etcd-3.7/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing etcd v3.7.0
-                </a>
-                <p class="mb-1 small text-light">0, the latest minor release of the popular distributed key-value store and core Kubernetes component. 7 delivers multiple specific performance improvements, both for the Kubernetes control plane and for other use cases.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-15">
-                <a href="https://blog.cloudflare.com/dnssec-nta-ede-33/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] A broken DNSSEC rollover took down .AL. Now 1.1.1.1 tells you when validation is bypassed
-                </a>
-                <p class="mb-1 small text-light">We received no response, in part because the operator's contact addresses were themselves under. An application, a monitoring tool, or a user querying 1.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-15">
-                <a href="https://blog.cloudflare.com/meerkat-introduction/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing Meerkat: an experiment in global consensus
-                </a>
-                <p class="mb-1 small text-light">In this section we precisely describe our consistency and fault tolerance requirements for a Cloudflare consensus service. (If you’re wondering, Meerkat’s key-value store also provides serializability, which we’ll write about in a future post.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-07-15">
-                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
-                </a>
-                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-15">
-                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
-                </a>
-                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-15">
-                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
-                </a>
-                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-07-15">
-                <a href="https://www.pulumi.com/blog/connect-your-cloud-accounts-to-pulumi-in-minutes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Connect Your Cloud Accounts to Pulumi in Minutes
-                </a>
-                <p class="mb-1 small text-light">The wizard offers two access levels, and you can set them per account: Build & Manage (read and write): Enables the full platform: Pulumi Neo, infrastructure as code, deployments, and policies that remediate issues automatically (Business Critical).</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-07-15">
-                <a href="https://www.reddit.com/r/devops/comments/1uw7b5l/has_an_ai_agent_copilot_cursor_etc_ever_broken/" target="_blank" class="fw-bold text-decoration-none">
-                    Has an AI agent (Copilot, Cursor, etc) ever broken something in your infra/pipeline?
-                </a>
-                <p class="mb-1 small text-light">I caught it fast because I know the system well, but it got me thinking about how dangerous this could be for a team without dedicated DevOps. Would you pay for something simple that prevents this (e.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-15">
-                <a href="https://www.docker.com/blog/ai-engineer-worlds-fair-2026-the-runtime-is-where-agent-trust-is-won/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] AI Engineer World’s Fair 2026: The Runtime Is Where Agent Trust Is Won
-                </a>
-                <p class="mb-1 small text-light">This is the job Docker showed up to talk about, across three sessions. ” The actors have changed – agents read and write whole codebases, spawn subagents, install dependencies, and call APIs across laptops, CI, cloud, and org boundaries, often unsupervised.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-15">
-                <a href="https://www.docker.com/blog/eu-ai-act-compliance/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] What Does EU AI Act Compliance Require?
-                </a>
-                <p class="mb-1 small text-light">Annex III systems: AI used in eight sensitive areas: biometrics, critical infrastructure, education, employment, essential public and private services, law enforcement, migration and border control, and administration of justice.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-15">
-                <a href="https://engineering.fb.com/2026/06/23/production-engineering/how-meta-built-ultra-narrow-batteries-for-ai-glasses-meta-tech-podcast/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] How Meta Engineered Ultra-Narrow Batteries for AI Glasses
-                </a>
-                <p class="mb-1 small text-light">Enter Steel-Can Cells (at Never-Before-Seen Widths) Steel-can batteries aren’t new. Then the Meta Ray-Ban Display glasses introduced the most demanding power profile yet.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-15">
                 <a href="https://kubernetes.io/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/" target="_blank" class="fw-bold text-decoration-none">
                     [Kubernetes] Open source maintainership in the age of AI
@@ -370,7 +135,7 @@
                 <p class="mb-1 small text-light">CLA enforcement for co-authorsThe CNCF provides a tool for verifying the contributor license agreements on each pull request. This provides a flag to reviewers that the PR is not ready to merge.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-07-15
                     
                 </small>
             </li>
@@ -382,7 +147,7 @@
                 <p class="mb-1 small text-light">Zero-Trust, Keyless AI Agents on Kubernetes: Mustafa Dayıoğlu (TUBITAK) takes a deep dive into some of the latest Keycloak features. Modern cloud-native platform engineering requires verifying identities inside automated pipelines and between ephemeral microservices seamlessly.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-07-15
                     
                 </small>
             </li>
@@ -394,7 +159,7 @@
                 <p class="mb-1 small text-light">Security and Policy Today, Kubernetes policies are attached to Pods, Services, or ServiceAccounts. Looking Ahead Kubernetes remains an exceptional platform for running microservices and inference workloads at scale.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-07-15
                     
                 </small>
             </li>
@@ -406,7 +171,259 @@
                 <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-07-15">
+                <a href="https://www.reddit.com/r/devops/comments/1uw7b5l/has_an_ai_agent_copilot_cursor_etc_ever_broken/" target="_blank" class="fw-bold text-decoration-none">
+                    Has an AI agent (Copilot, Cursor, etc) ever broken something in your infra/pipeline?
+                </a>
+                <p class="mb-1 small text-light">I caught it fast because I know the system well, but it got me thinking about how dangerous this could be for a team without dedicated DevOps. Would you pay for something simple that prevents this (e.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-15">
+                <a href="https://www.docker.com/blog/ai-engineer-worlds-fair-2026-the-runtime-is-where-agent-trust-is-won/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] AI Engineer World’s Fair 2026: The Runtime Is Where Agent Trust Is Won
+                </a>
+                <p class="mb-1 small text-light">This is the job Docker showed up to talk about, across three sessions. ” The actors have changed – agents read and write whole codebases, spawn subagents, install dependencies, and call APIs across laptops, CI, cloud, and org boundaries, often unsupervised.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-15">
+                <a href="https://www.docker.com/blog/eu-ai-act-compliance/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] What Does EU AI Act Compliance Require?
+                </a>
+                <p class="mb-1 small text-light">Annex III systems: AI used in eight sensitive areas: biometrics, critical infrastructure, education, employment, essential public and private services, law enforcement, migration and border control, and administration of justice.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-15">
+                <a href="https://engineering.fb.com/2026/06/23/production-engineering/how-meta-built-ultra-narrow-batteries-for-ai-glasses-meta-tech-podcast/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] How Meta Engineered Ultra-Narrow Batteries for AI Glasses
+                </a>
+                <p class="mb-1 small text-light">Enter Steel-Can Cells (at Never-Before-Seen Widths) Steel-can batteries aren’t new. Then the Meta Ray-Ban Display glasses introduced the most demanding power profile yet.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-15">
+                <a href="https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Building a Custom Metrics Exporter for Kubernetes
+                </a>
+                <p class="mb-1 small text-light">The release label must match the label selector configured on your Prometheus resource — kube-prometheus-stack is the default for a standard Helm install: apiVersion: monitoring.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-15">
+                <a href="https://kubernetes.io/blog/2026/07/08/announcing-etcd-3.7/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing etcd v3.7.0
+                </a>
+                <p class="mb-1 small text-light">0, the latest minor release of the popular distributed key-value store and core Kubernetes component. 7 delivers multiple specific performance improvements, both for the Kubernetes control plane and for other use cases.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-15">
+                <a href="https://blog.cloudflare.com/dnssec-nta-ede-33/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] A broken DNSSEC rollover took down .AL. Now 1.1.1.1 tells you when validation is bypassed
+                </a>
+                <p class="mb-1 small text-light">We received no response, in part because the operator's contact addresses were themselves under. An application, a monitoring tool, or a user querying 1.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-15">
+                <a href="https://blog.cloudflare.com/meerkat-introduction/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing Meerkat: an experiment in global consensus
+                </a>
+                <p class="mb-1 small text-light">In this section we precisely describe our consistency and fault tolerance requirements for a Cloudflare consensus service. (If you’re wondering, Meerkat’s key-value store also provides serializability, which we’ll write about in a future post.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-07-15">
+                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-15">
+                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
+                </a>
+                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-15">
+                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
+                </a>
+                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-07-15">
+                <a href="https://www.pulumi.com/blog/connect-your-cloud-accounts-to-pulumi-in-minutes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Connect Your Cloud Accounts to Pulumi in Minutes
+                </a>
+                <p class="mb-1 small text-light">The wizard offers two access levels, and you can set them per account: Build & Manage (read and write): Enables the full platform: Pulumi Neo, infrastructure as code, deployments, and policies that remediate issues automatically (Business Critical).</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-15">
+                <a href="https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] GenPage: Towards End-to-End Generative Homepage Construction at Netflix
+                </a>
+                <p class="mb-1 small text-light">Custom tokenization significantly reduces sequence length, lowering inference cost and latency. We update the entity and row vocabulary daily to incorporate newly added entities and rows.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-15">
+                <a href="https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How Netflix Simplified Batch Compute with Kueue
+                </a>
+                <p class="mb-1 small text-light">Brief Overview of CMB and TitusCMB is a managed batch solution that allows users and applications to execute and manage workloads that run to completion. CMB Tenant HierarchyTenants provide a grouping mechanism for jobs submitted on behalf of certain organizations, platforms, or applications.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-15">
+                <a href="https://www.docker.com/blog/your-laptop-is-the-new-production-environment/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Your Laptop Is the New Production Environment
+                </a>
+                <p class="mb-1 small text-light">While reading Srini Sekaran’s recent announcement introducing Docker AI Governance, one statement stood out: “Your laptop is the new prod. These might include GitHub, Jira, cloud platforms, internal services, communication tools, or customer systems.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-15">
+                <a href="https://www.redhat.com/en/blog/zero-trust-workload-identity-manager-11-generally-available-red-hat-openshift" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Zero trust workload identity manager version 1.1 generally available on Red Hat OpenShift
+                </a>
+                <p class="mb-1 small text-light">As modern applications expand across multiple clusters, clouds, and hybrid regions, traditional security mechanisms, such as long lived secrets, static certificates, or cloud provider specific identity and access management, struggle to keep up with the scale, velocity, and ephemeral nature of mi...</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-15">
+                <a href="https://www.redhat.com/en/blog/navigate-ai-and-scale-red-hat-openshift-422" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Navigate AI and scale with Red Hat OpenShift 4.22
+                </a>
+                <p class="mb-1 small text-light">22 delivers a platform designed to meet the necessary balance of agility, security, and efficiency for your IT team. By shifting the focus from manual management to intelligent, platform-native automation, OpenShift 4.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-15">
+                <a href="https://www.redhat.com/en/blog/how-openshift-422-impacts-enterprise-ais-bottom-line" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] How Red Hat OpenShift 4.22 impacts enterprise AI’s bottom line
+                </a>
+                <p class="mb-1 small text-light">As organizations accelerate AI investments and scale across the hybrid cloud, technology choice only becomes more important. This means IT infrastructure must do more than just run workloads.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-07-15">
+                <a href="https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4)
+                </a>
+                <p class="mb-1 small text-light">How we used Honk, Backstage, and Fleet Management to ease the pain of migrating thousands of datasets. The post Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4) appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-15">
+                <a href="https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler
+                </a>
+                <p class="mb-1 small text-light">TL; DR At Meta’s scale, a few milliseconds of latency degradation can have a significant negative impact on ads performance. 9) we observed that the new Earliest Eligible Virtual Deadline First (EEVDF) scheduler introduced in Linux kernel v6.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-07-15
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-15">
+                <a href="https://engineering.fb.com/2026/06/30/open-source/10-years-of-metas-commitment-to-python/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] 10 Years of Meta’s Commitment to Python
+                </a>
+                <p class="mb-1 small text-light">It powers infrastructure across our most important products and initiatives and supports a wide range of teams across the company.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-07-15
                     
                 </small>
             </li>

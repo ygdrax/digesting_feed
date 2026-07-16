@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - July 16, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - July 16, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for July 16, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-07-16">2026-07-16 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-07-16 10:06:59
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,278 +128,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-07-16">
-                <a href="https://pmbanugo.me/blog/why-async-await-complect-concurrency" target="_blank" class="fw-bold text-decoration-none">
-                    The Tokio/Rayon Trap and Why Async/Await Fails Concurrency
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://pmbanugo.me/blog/why-async-await-complect-concurrency Comments URL: https://news.ycombinator.com/item?id=48929587 Points: 68 # Comments: 41</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-07-16">
-                <a href="https://www.siegelendowment.org/wp-content/uploads/2026/07/fortune-david-siegel-open-source-ai.pdf" target="_blank" class="fw-bold text-decoration-none">
-                    Governments, companies, nonprofits should invest in free, open source AI [pdf]
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.siegelendowment.org/wp-content/uploads/2026/07/fortune-david-siegel-open-source-ai.pdf Comments URL: https://news.ycombinator.com/item?id=48927095 Points: 200 # Comments: 71</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-07-16">
-                <a href="https://aws.amazon.com/blogs/aws/amazon-sqs-turns-20-two-decades-of-reliable-messaging-at-scale/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon SQS turns 20: Two decades of reliable messaging at scale
+                <a href="https://aws.amazon.com/blogs/aws/accelerate-your-infrastructure-deployments-by-up-to-4x-with-aws-cloudformation-express-mode/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Accelerate your infrastructure deployments by up to 4x with AWS CloudFormation Express mode
                 </a>
-                <p class="mb-1 small text-light">In June 2023, we extended this capability to the AWS SDK and CLI through new APIs, including StartMessageMoveTask, CancelMessageMoveTask, and ListMessageMoveTasks. AWS Lambda event source mapping for SQS was updated in parallel to support the new payload size.</p>
+                <p class="mb-1 small text-light">Today, we’re announcing AWS CloudFormation Express mode, a new deployment mode that accelerates deployments for developers and AI tools iterating on infrastructure.</p>
                 <small class="text-secondary">
                     
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-07-16">
-                <a href="https://www.hashicorp.com/blog/preparing-for-the-post-quantum-era-discover-and-prioritize-now" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Preparing for the post-quantum era: Discover and prioritize now
-                </a>
-                <p class="mb-1 small text-light">The reason is simple: Attackers don't need a quantum computer today to create a quantum security problem tomorrow. Cryptographic controls are embedded throughout applications, certificates, machine identities, APIs, infrastructure, and third-party services.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-07-16">
-                <a href="https://www.hashicorp.com/blog/building-resiliency-into-boundary-session-recording" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Building resiliency into Boundary session recording
-                </a>
-                <p class="mb-1 small text-light">Building a resilient system for session recording infrastructure While this framework provides visibility, enterprise environments are rarely perfect. The infrastructure challenge is why resiliency needs to be a core pillar for a session recording architecture.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-16">
-                <a href="https://www.redhat.com/en/blog/moving-poc-production-delivering-real-business-value-red-hat-ai-34" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Moving from PoC to production: Delivering real business value with Red Hat AI 3.4
-                </a>
-                <p class="mb-1 small text-light">While it is packed with incredible engineering milestones, business leaders care less about the underlying code and more about one critical question: How does this platform help scale the business.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-16">
-                <a href="https://www.redhat.com/en/blog/two-node-openshift-fencing-improves-reliability-edge" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Two-node OpenShift with fencing improves reliability at the edge
-                </a>
-                <p class="mb-1 small text-light">Customers across industries, especially in retail, industrial, and telecommunications sectors, are increasingly demanding high availability for their edge deployments. However, achieving high availability traditionally requires a three-node cluster to establish a reliable quorum.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-16">
-                <a href="https://www.redhat.com/en/blog/physical-ai-physical-operations-are-broken-new-kind-intelligence-needed" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Physical AI: Physical operations are broken, a new kind of intelligence is needed
-                </a>
-                <p class="mb-1 small text-light">The infrastructure that was built years ago demands changes faster than operations teams can adapt. These are structural problems, and incremental improvements within the current mode.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-16">
-                <a href="https://www.redhat.com/en/blog/demystifying-agentic-ai-how-build-production-ready-aiops-open-source-models" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Demystifying agentic AI: How to build production-ready AIOps with open source models
-                </a>
-                <p class="mb-1 small text-light">In many cases, using agentic AI for incident response automation means sending infrastructure logs to frontier AI models. As an alternative, these organizations could use open source models hosted on their own infrastructure, addressing data residency and compliance problems.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-07-16">
-                <a href="https://about.gitlab.com/blog/ai-agents-for-migrating-rate-limiting-system/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] How we used AI agents to migrate GitLab rate limiting
-                </a>
-                <p class="mb-1 small text-light">The pod, the loop, and the observability mattered more than the agents. Max Woolf, a Staff Backend Engineer on the API Platform team, owned the monolith side and ran most of the rollouts.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-07-16">
-                <a href="https://snyk.io/blog/nvd-multi-source-vulnerability-intelligence/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] NVD in the AI Era: The Case for Multi-Source Vulnerability Intelligence
-                </a>
-                <p class="mb-1 small text-light">NIST’s shift to risk-based enrichment makes one thing clear: modern security teams need more than a single public source. In the AI era, trusted vulnerability intelligence depends on multiple signals, human validation, and clear context.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-07-16">
-                <a href="https://snyk.io/blog/agentic-development-security-ads/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Announcing Agentic Development Security (ADS)
-                </a>
-                <p class="mb-1 small text-light">Announcing Snyk Agentic Development Security, a new Evo solution that helps organizations securely adopt AI-driven development with visibility, governance, and control.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-07-16">
-                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
-                </a>
-                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-07-16">
-                <a href="https://engineering.atspotify.com/2026/5/spotify-ads-api-claude-plugins/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins
-                </a>
-                <p class="mb-1 small text-light">Turning OpenAPI spec and Markdown files into a conversational ads management tool — no compiled code required. The post Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-16">
-                <a href="https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization
-                </a>
-                <p class="mb-1 small text-light">The Technical Challenges User engagement with ads entities is naturally graph-structured: users and ads entities (advertisers, products, services, campaigns etc. The system is designed to power various applications across the ads platform from retrieval to final stage ranking.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-07-16">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: Claude Sonnet 5 on AWS, Amazon WorkSpaces for AI agents, AWS service availability updates, and more (July 6, 2026)
-                </a>
-                <p class="mb-1 small text-light">This week, I’ll take a closer look at some key launches, and then cover the quarterly AWS Service Availability updates. This new feature provides a safety net for upgrade failures, no cluster rebuilds required, turning Kubernetes version upgrades into a reversible, low-risk operation.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-07-16">
-                <a href="https://www.cncf.io/blog/2026/07/15/on-prem-dbaas-in-2026-platforms-standards-and-gaps/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] On-prem DBaaS in 2026: Platforms, standards, and gaps
-                </a>
-                <p class="mb-1 small text-light">In many cases, platform teams use tools such as Crossplane to provide a self-service interface while provisioning cloud-managed resources underneath, for example, AWS RDS databases.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-16">
-                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
-                </a>
-                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-07-16">
-                <a href="https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify
-                </a>
-                <p class="mb-1 small text-light">At Code with Claude, Spotify’s chief architect shared how we make both teams and AI agents more effective. The post Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-07-16">
-                <a href="https://www.hashicorp.com/blog/hcp-terraform-powered-by-infragraph-limited-availability-launch" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] HCP Terraform powered by Infragraph is now in limited availability
-                </a>
-                <p class="mb-1 small text-light">New pain points emerged that undermine the cloud’s speed, security, and scale. This gives teams a powerful new way to explore, understand, and act on their cloud infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-16">
-                <a href="https://blog.cloudflare.com/ml-dsa-will-have-to-do/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Why we cannot wait for better post-quantum signature algorithms
-                </a>
-                <p class="mb-1 small text-light">This comes with a trade-off: HAWK is based on and introduces a new security assumption, the lattice isomorphism problem (LIP). Their public keys are instances of some hard problem and their secret keys are the solutions.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-07-16">
-                <a href="https://slack.engineering/slack-ai-the-path-to-multi-cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Slack AI: The Path to Multi-Cloud
-                </a>
-                <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-07-16">
-                <a href="https://about.gitlab.com/blog/green-devops-carbon-measurement-cicd-pipeline/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Green DevOps: Why carbon measurement belongs in your CI/CD pipeline
-                </a>
-                <p class="mb-1 small text-light">A typical software team runs hundreds of CI/CD jobs a day. Infrastructure and application levelsCarmen (Carbon Measurement Engine) goes deeper.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
+                    Amazon AWS | 2026-07-16
                     
                 </small>
             </li>
@@ -394,19 +147,283 @@
                 <p class="mb-1 small text-light">Why AI makes drift worse AI workloads introduce a new layer of infrastructure complexity at a rapid pace.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-07-16">
+                <a href="https://about.gitlab.com/blog/green-devops-carbon-measurement-cicd-pipeline/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Green DevOps: Why carbon measurement belongs in your CI/CD pipeline
+                </a>
+                <p class="mb-1 small text-light">A typical software team runs hundreds of CI/CD jobs a day. Infrastructure and application levelsCarmen (Carbon Measurement Engine) goes deeper.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-07-16">
+                <a href="https://www.hashicorp.com/blog/hcp-terraform-powered-by-infragraph-limited-availability-launch" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] HCP Terraform powered by Infragraph is now in limited availability
+                </a>
+                <p class="mb-1 small text-light">New pain points emerged that undermine the cloud’s speed, security, and scale. This gives teams a powerful new way to explore, understand, and act on their cloud infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-16">
+                <a href="https://blog.cloudflare.com/ml-dsa-will-have-to-do/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Why we cannot wait for better post-quantum signature algorithms
+                </a>
+                <p class="mb-1 small text-light">This comes with a trade-off: HAWK is based on and introduces a new security assumption, the lattice isomorphism problem (LIP). Their public keys are instances of some hard problem and their secret keys are the solutions.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-07-16">
+                <a href="https://slack.engineering/slack-ai-the-path-to-multi-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Slack AI: The Path to Multi-Cloud
+                </a>
+                <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-07-16">
+                <a href="https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify
+                </a>
+                <p class="mb-1 small text-light">At Code with Claude, Spotify’s chief architect shared how we make both teams and AI agents more effective. The post Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-07-16
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-07-16">
-                <a href="https://aws.amazon.com/blogs/aws/accelerate-your-infrastructure-deployments-by-up-to-4x-with-aws-cloudformation-express-mode/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Accelerate your infrastructure deployments by up to 4x with AWS CloudFormation Express mode
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Claude Sonnet 5 on AWS, Amazon WorkSpaces for AI agents, AWS service availability updates, and more (July 6, 2026)
                 </a>
-                <p class="mb-1 small text-light">Today, we’re announcing AWS CloudFormation Express mode, a new deployment mode that accelerates deployments for developers and AI tools iterating on infrastructure.</p>
+                <p class="mb-1 small text-light">This week, I’ll take a closer look at some key launches, and then cover the quarterly AWS Service Availability updates. This new feature provides a safety net for upgrade failures, no cluster rebuilds required, turning Kubernetes version upgrades into a reversible, low-risk operation.</p>
                 <small class="text-secondary">
                     
-                    Amazon AWS
+                    Amazon AWS | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-07-16">
+                <a href="https://www.cncf.io/blog/2026/07/15/on-prem-dbaas-in-2026-platforms-standards-and-gaps/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] On-prem DBaaS in 2026: Platforms, standards, and gaps
+                </a>
+                <p class="mb-1 small text-light">In many cases, platform teams use tools such as Crossplane to provide a self-service interface while provisioning cloud-managed resources underneath, for example, AWS RDS databases.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-16">
+                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
+                </a>
+                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-16">
+                <a href="https://www.redhat.com/en/blog/moving-poc-production-delivering-real-business-value-red-hat-ai-34" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Moving from PoC to production: Delivering real business value with Red Hat AI 3.4
+                </a>
+                <p class="mb-1 small text-light">While it is packed with incredible engineering milestones, business leaders care less about the underlying code and more about one critical question: How does this platform help scale the business.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-16">
+                <a href="https://www.redhat.com/en/blog/two-node-openshift-fencing-improves-reliability-edge" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Two-node OpenShift with fencing improves reliability at the edge
+                </a>
+                <p class="mb-1 small text-light">Customers across industries, especially in retail, industrial, and telecommunications sectors, are increasingly demanding high availability for their edge deployments. However, achieving high availability traditionally requires a three-node cluster to establish a reliable quorum.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-16">
+                <a href="https://www.redhat.com/en/blog/physical-ai-physical-operations-are-broken-new-kind-intelligence-needed" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Physical AI: Physical operations are broken, a new kind of intelligence is needed
+                </a>
+                <p class="mb-1 small text-light">The infrastructure that was built years ago demands changes faster than operations teams can adapt. These are structural problems, and incremental improvements within the current mode.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-16">
+                <a href="https://www.redhat.com/en/blog/demystifying-agentic-ai-how-build-production-ready-aiops-open-source-models" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Demystifying agentic AI: How to build production-ready AIOps with open source models
+                </a>
+                <p class="mb-1 small text-light">In many cases, using agentic AI for incident response automation means sending infrastructure logs to frontier AI models. As an alternative, these organizations could use open source models hosted on their own infrastructure, addressing data residency and compliance problems.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-07-16">
+                <a href="https://about.gitlab.com/blog/ai-agents-for-migrating-rate-limiting-system/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] How we used AI agents to migrate GitLab rate limiting
+                </a>
+                <p class="mb-1 small text-light">The pod, the loop, and the observability mattered more than the agents. Max Woolf, a Staff Backend Engineer on the API Platform team, owned the monolith side and ran most of the rollouts.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-07-16">
+                <a href="https://snyk.io/blog/nvd-multi-source-vulnerability-intelligence/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] NVD in the AI Era: The Case for Multi-Source Vulnerability Intelligence
+                </a>
+                <p class="mb-1 small text-light">NIST’s shift to risk-based enrichment makes one thing clear: modern security teams need more than a single public source. In the AI era, trusted vulnerability intelligence depends on multiple signals, human validation, and clear context.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-07-16">
+                <a href="https://snyk.io/blog/agentic-development-security-ads/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Announcing Agentic Development Security (ADS)
+                </a>
+                <p class="mb-1 small text-light">Announcing Snyk Agentic Development Security, a new Evo solution that helps organizations securely adopt AI-driven development with visibility, governance, and control.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-07-16">
+                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
+                </a>
+                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-07-16">
+                <a href="https://engineering.atspotify.com/2026/5/spotify-ads-api-claude-plugins/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins
+                </a>
+                <p class="mb-1 small text-light">Turning OpenAPI spec and Markdown files into a conversational ads management tool — no compiled code required. The post Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-16">
+                <a href="https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization
+                </a>
+                <p class="mb-1 small text-light">The Technical Challenges User engagement with ads entities is naturally graph-structured: users and ads entities (advertisers, products, services, campaigns etc. The system is designed to power various applications across the ads platform from retrieval to final stage ranking.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-07-16">
+                <a href="https://pmbanugo.me/blog/why-async-await-complect-concurrency" target="_blank" class="fw-bold text-decoration-none">
+                    The Tokio/Rayon Trap and Why Async/Await Fails Concurrency
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://pmbanugo.me/blog/why-async-await-complect-concurrency Comments URL: https://news.ycombinator.com/item?id=48929587 Points: 68 # Comments: 41</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-07-16">
+                <a href="https://www.siegelendowment.org/wp-content/uploads/2026/07/fortune-david-siegel-open-source-ai.pdf" target="_blank" class="fw-bold text-decoration-none">
+                    Governments, companies, nonprofits should invest in free, open source AI [pdf]
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.siegelendowment.org/wp-content/uploads/2026/07/fortune-david-siegel-open-source-ai.pdf Comments URL: https://news.ycombinator.com/item?id=48927095 Points: 200 # Comments: 71</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-07-16">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-sqs-turns-20-two-decades-of-reliable-messaging-at-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon SQS turns 20: Two decades of reliable messaging at scale
+                </a>
+                <p class="mb-1 small text-light">In June 2023, we extended this capability to the AWS SDK and CLI through new APIs, including StartMessageMoveTask, CancelMessageMoveTask, and ListMessageMoveTasks. AWS Lambda event source mapping for SQS was updated in parallel to support the new payload size.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-07-16">
+                <a href="https://www.hashicorp.com/blog/preparing-for-the-post-quantum-era-discover-and-prioritize-now" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Preparing for the post-quantum era: Discover and prioritize now
+                </a>
+                <p class="mb-1 small text-light">The reason is simple: Attackers don't need a quantum computer today to create a quantum security problem tomorrow. Cryptographic controls are embedded throughout applications, certificates, machine identities, APIs, infrastructure, and third-party services.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-07-16
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-07-16">
+                <a href="https://www.hashicorp.com/blog/building-resiliency-into-boundary-session-recording" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Building resiliency into Boundary session recording
+                </a>
+                <p class="mb-1 small text-light">Building a resilient system for session recording infrastructure While this framework provides visibility, enterprise environments are rarely perfect. The infrastructure challenge is why resiliency needs to be a core pillar for a session recording architecture.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-07-16
                     
                 </small>
             </li>

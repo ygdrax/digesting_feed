@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - July 24, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - July 24, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for July 24, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-07-24">2026-07-24 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2026-07-24 10:14:24
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,246 +130,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-07-24">
-                <a href="https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md" target="_blank" class="fw-bold text-decoration-none">
-                    Why Software Factories Fail (or: harness engineering is not enough)
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md Comments URL: https://news.ycombinator.com/item?id=49023019 Points: 321 # Comments: 231</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-24">
-                <a href="https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] In-House LLM Serving at Netflix
-                </a>
-                <p class="mb-1 small text-light">By AI Platform’s Model Runtime team and Inference teamIntroductionMost organizations consume LLMs through hosted APIs. The platform cleans up older deployments after inactivity but always preserves the latest.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-24">
-                <a href="https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] GenPage: Towards End-to-End Generative Homepage Construction at Netflix
-                </a>
-                <p class="mb-1 small text-light">Custom tokenization significantly reduces sequence length, lowering inference cost and latency. We update the entity and row vocabulary daily to incorporate newly added entities and rows.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-24">
-                <a href="https://www.docker.com/blog/coding-agent-horror-stories-the-agent-that-deleted-production/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Coding Agent Horror Stories: The Agent That Deleted Production
-                </a>
-                <p class="mb-1 small text-light">Part 3 moves the same problem up the stack, into a production AWS environment where the blast radius is no longer one laptop but a regional cloud service. Explore the Docker MCP Catalog: Discover MCP servers that connect your agents to external services through Docker’s security-first architecture.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-24">
-                <a href="https://www.docker.com/blog/docker-wearedevelopers-world-congress-north-america-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] The Developer Has Changed. So Should Developer Conferences
-                </a>
-                <p class="mb-1 small text-light">We’ve introduced Docker Sandboxes so developers can run AI agents safely without changing how they work. We’ve continued investing in Docker Hardened Images because supply chain security only becomes more important as AI generates more code.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-24">
-                <a href="https://www.redhat.com/en/blog/why-single-ai-agents-fail-scale-building-governed-multi-agent-networks" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Why single AI agents fail at scale: Building governed multi-agent networks
-                </a>
-                <p class="mb-1 small text-light">In "Why prompt-level guardrails aren't enough," I walked through how Red Hat AI allows you to give each agent a cryptographic identity and lock down what it can touch. In our previous articles, we talked about how 3 failures hit a single AI agent deployment overnight—43 duplicate tickets, $.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-07-24">
-                <a href="https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Content Ingestion & Podcast Video Incident Report
-                </a>
-                <p class="mb-1 small text-light">Over the past two months, podcast creators have experienced a series of reliability issues on Spotify. This... The post Content Ingestion & Podcast Video Incident Report appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-24">
-                <a href="https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler
-                </a>
-                <p class="mb-1 small text-light">TL; DR At Meta’s scale, a few milliseconds of latency degradation can have a significant negative impact on ads performance. 9) we observed that the new Earliest Eligible Virtual Deadline First (EEVDF) scheduler introduced in Linux kernel v6.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-07-24">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-one-click-lambda-setup-prompt-openai-gpt-5-6-models-on-bedrock-and-more-july-20-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: One-click Lambda setup prompt, OpenAI GPT-5.6 models on Bedrock, and more (July 20, 2026)
-                </a>
-                <p class="mb-1 small text-light">For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page. The issue has been resolved, and all AWS services are operating normally.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-07-24">
-                <a href="https://www.hashicorp.com/blog/terraform-stacks-explained" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform Stacks, explained
-                </a>
-                <p class="mb-1 small text-light">This blog covers the challenges Terraform Stacks solve, their benefits, use cases, how they work, their features, and future roadmap. Deployment group orchestration rulesAs your usage of Stacks grows, manually managing and approving every deployment can become a significant bottleneck.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-24">
-                <a href="https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Building a Custom Metrics Exporter for Kubernetes
-                </a>
-                <p class="mb-1 small text-light">The release label must match the label selector configured on your Prometheus resource — kube-prometheus-stack is the default for a standard Helm install: apiVersion: monitoring.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-24">
-                <a href="https://kubernetes.io/blog/2026/07/08/announcing-etcd-3.7/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing etcd v3.7.0
-                </a>
-                <p class="mb-1 small text-light">0, the latest minor release of the popular distributed key-value store and core Kubernetes component. 7 delivers multiple specific performance improvements, both for the Kubernetes control plane and for other use cases.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-07-24">
-                <a href="https://www.cncf.io/blog/2026/07/23/sustaining-opentelemetry-what-a-10-week-contributor-cohort-actually-looks-like/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Sustaining OpenTelemetry: What a 10-week contributor cohort actually looks like
-                </a>
-                <p class="mb-1 small text-light">The Bloomberg engineers spent time identifying and working on crucial project maintenance – the kind that matters.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-07-24">
-                <a href="https://www.cncf.io/blog/2026/07/23/when-kubeflow-meets-cilium-debugging-60-idle-gpus-in-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] When Kubeflow meets Cilium: Debugging 60% idle GPUs in Kubernetes
-                </a>
-                <p class="mb-1 small text-light">The root cause: two correct systems, collectively wrong Kubernetes scheduling is topology-agnostic by design. We didn’t touch Cilium — the locked doors stay locked, because the security policy was never the problem.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-24">
-                <a href="https://blog.cloudflare.com/introducing-cache-response-rules/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing Cache Response Rules
-                </a>
-                <p class="mb-1 small text-light">These are a new rule type that runs after an origin server replies but before Cloudflare caches the content. They answer: given this request, should Cloudflare cache the response, and under what cache key.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-24">
-                <a href="https://blog.cloudflare.com/wordpress-vulnerabilities/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Cloudflare WAF protects WordPress applications from two high-severity vulnerabilities
-                </a>
-                <p class="mb-1 small text-light">Cloudflare has deployed new Web Application Firewall (WAF) protections for two critical vulnerabilities affecting WordPress. The WordPress security team disclosed the vulnerabilities to Cloudflare before public release so that we could prepare protections for customers.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-24">
-                <a href="https://blog.cloudflare.com/dnssec-nta-ede-33/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] A broken DNSSEC rollover took down .al. Now 1.1.1.1 tells you when validation is bypassed
-                </a>
-                <p class="mb-1 small text-light">We received no response, in part because the operator's contact addresses were themselves under. An application, a monitoring tool, or a user querying 1.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-07-24">
-                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
-                </a>
-                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-24">
-                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
-                </a>
-                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-24">
-                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
-                </a>
-                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-24">
                 <a href="https://kubernetes.io/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/" target="_blank" class="fw-bold text-decoration-none">
                     [Kubernetes] Open source maintainership in the age of AI
@@ -360,7 +137,7 @@
                 <p class="mb-1 small text-light">CLA enforcement for co-authorsThe CNCF provides a tool for verifying the contributor license agreements on each pull request. This provides a flag to reviewers that the PR is not ready to merge.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-07-24
                     
                 </small>
             </li>
@@ -372,7 +149,7 @@
                 <p class="mb-1 small text-light">The Cloud Native ecosystem has historically evolved around web applications and microservices.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-07-24
                     
                 </small>
             </li>
@@ -384,7 +161,7 @@
                 <p class="mb-1 small text-light">Many organizations operate one platform for public DNS, another for internal DNS, and use cloud-native DNS services inside each cloud environment with separate security policies layered on top.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-07-24
                     
                 </small>
             </li>
@@ -396,7 +173,7 @@
                 <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-07-24
                     
                 </small>
             </li>
@@ -408,7 +185,247 @@
                 <p class="mb-1 small text-light">This meant we needed a managed platform, a place where we could construct these services to be shared across many different features. The platform that began as an internal preview service is now infrastructure that developers can build on, too.</p>
                 <small class="text-secondary">
                     
-                    Dropbox Tech
+                    Dropbox Tech | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-07-24">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-one-click-lambda-setup-prompt-openai-gpt-5-6-models-on-bedrock-and-more-july-20-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: One-click Lambda setup prompt, OpenAI GPT-5.6 models on Bedrock, and more (July 20, 2026)
+                </a>
+                <p class="mb-1 small text-light">For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page. The issue has been resolved, and all AWS services are operating normally.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-07-24">
+                <a href="https://www.hashicorp.com/blog/terraform-stacks-explained" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform Stacks, explained
+                </a>
+                <p class="mb-1 small text-light">This blog covers the challenges Terraform Stacks solve, their benefits, use cases, how they work, their features, and future roadmap. Deployment group orchestration rulesAs your usage of Stacks grows, manually managing and approving every deployment can become a significant bottleneck.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-24">
+                <a href="https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Building a Custom Metrics Exporter for Kubernetes
+                </a>
+                <p class="mb-1 small text-light">The release label must match the label selector configured on your Prometheus resource — kube-prometheus-stack is the default for a standard Helm install: apiVersion: monitoring.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-24">
+                <a href="https://kubernetes.io/blog/2026/07/08/announcing-etcd-3.7/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing etcd v3.7.0
+                </a>
+                <p class="mb-1 small text-light">0, the latest minor release of the popular distributed key-value store and core Kubernetes component. 7 delivers multiple specific performance improvements, both for the Kubernetes control plane and for other use cases.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-07-24">
+                <a href="https://www.cncf.io/blog/2026/07/23/sustaining-opentelemetry-what-a-10-week-contributor-cohort-actually-looks-like/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Sustaining OpenTelemetry: What a 10-week contributor cohort actually looks like
+                </a>
+                <p class="mb-1 small text-light">The Bloomberg engineers spent time identifying and working on crucial project maintenance – the kind that matters.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-07-24">
+                <a href="https://www.cncf.io/blog/2026/07/23/when-kubeflow-meets-cilium-debugging-60-idle-gpus-in-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] When Kubeflow meets Cilium: Debugging 60% idle GPUs in Kubernetes
+                </a>
+                <p class="mb-1 small text-light">The root cause: two correct systems, collectively wrong Kubernetes scheduling is topology-agnostic by design. We didn’t touch Cilium — the locked doors stay locked, because the security policy was never the problem.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-24">
+                <a href="https://blog.cloudflare.com/introducing-cache-response-rules/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing Cache Response Rules
+                </a>
+                <p class="mb-1 small text-light">These are a new rule type that runs after an origin server replies but before Cloudflare caches the content. They answer: given this request, should Cloudflare cache the response, and under what cache key.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-24">
+                <a href="https://blog.cloudflare.com/wordpress-vulnerabilities/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cloudflare WAF protects WordPress applications from two high-severity vulnerabilities
+                </a>
+                <p class="mb-1 small text-light">Cloudflare has deployed new Web Application Firewall (WAF) protections for two critical vulnerabilities affecting WordPress. The WordPress security team disclosed the vulnerabilities to Cloudflare before public release so that we could prepare protections for customers.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-24">
+                <a href="https://blog.cloudflare.com/dnssec-nta-ede-33/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] A broken DNSSEC rollover took down .al. Now 1.1.1.1 tells you when validation is bypassed
+                </a>
+                <p class="mb-1 small text-light">We received no response, in part because the operator's contact addresses were themselves under. An application, a monitoring tool, or a user querying 1.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-07-24">
+                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-24">
+                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
+                </a>
+                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-24">
+                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
+                </a>
+                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-24">
+                <a href="https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] In-House LLM Serving at Netflix
+                </a>
+                <p class="mb-1 small text-light">By AI Platform’s Model Runtime team and Inference teamIntroductionMost organizations consume LLMs through hosted APIs. The platform cleans up older deployments after inactivity but always preserves the latest.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-24">
+                <a href="https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] GenPage: Towards End-to-End Generative Homepage Construction at Netflix
+                </a>
+                <p class="mb-1 small text-light">Custom tokenization significantly reduces sequence length, lowering inference cost and latency. We update the entity and row vocabulary daily to incorporate newly added entities and rows.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-24">
+                <a href="https://www.docker.com/blog/coding-agent-horror-stories-the-agent-that-deleted-production/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Coding Agent Horror Stories: The Agent That Deleted Production
+                </a>
+                <p class="mb-1 small text-light">Part 3 moves the same problem up the stack, into a production AWS environment where the blast radius is no longer one laptop but a regional cloud service. Explore the Docker MCP Catalog: Discover MCP servers that connect your agents to external services through Docker’s security-first architecture.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-24">
+                <a href="https://www.docker.com/blog/docker-wearedevelopers-world-congress-north-america-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] The Developer Has Changed. So Should Developer Conferences
+                </a>
+                <p class="mb-1 small text-light">We’ve introduced Docker Sandboxes so developers can run AI agents safely without changing how they work. We’ve continued investing in Docker Hardened Images because supply chain security only becomes more important as AI generates more code.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-24">
+                <a href="https://www.redhat.com/en/blog/why-single-ai-agents-fail-scale-building-governed-multi-agent-networks" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Why single AI agents fail at scale: Building governed multi-agent networks
+                </a>
+                <p class="mb-1 small text-light">In "Why prompt-level guardrails aren't enough," I walked through how Red Hat AI allows you to give each agent a cryptographic identity and lock down what it can touch. In our previous articles, we talked about how 3 failures hit a single AI agent deployment overnight—43 duplicate tickets, $.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-07-24">
+                <a href="https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Content Ingestion & Podcast Video Incident Report
+                </a>
+                <p class="mb-1 small text-light">Over the past two months, podcast creators have experienced a series of reliability issues on Spotify. This... The post Content Ingestion & Podcast Video Incident Report appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-24">
+                <a href="https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler
+                </a>
+                <p class="mb-1 small text-light">TL; DR At Meta’s scale, a few milliseconds of latency degradation can have a significant negative impact on ads performance. 9) we observed that the new Earliest Eligible Virtual Deadline First (EEVDF) scheduler introduced in Linux kernel v6.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-07-24
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-07-24">
+                <a href="https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md" target="_blank" class="fw-bold text-decoration-none">
+                    Why Software Factories Fail (or: harness engineering is not enough)
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md Comments URL: https://news.ycombinator.com/item?id=49023019 Points: 321 # Comments: 231</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-07-24
                     
                 </small>
             </li>

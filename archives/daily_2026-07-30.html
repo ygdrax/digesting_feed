@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - July 30, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - July 30, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for July 30, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-07-30">2026-07-30 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 16 sources • Updated 2026-07-30 10:23:12
+                    Showing 25 total articles from 
+                    16 sources
+                    
                     
                 </span>
             </small>
@@ -119,270 +136,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-07-30">
-                <a href="https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research" target="_blank" class="fw-bold text-decoration-none">
-                    AI's top startups are barely publishing their research
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research Comments URL: https://news.ycombinator.com/item?id=49103285 Points: 481 # Comments: 245</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-30">
-                <a href="https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] In-House LLM Serving at Netflix
-                </a>
-                <p class="mb-1 small text-light">By AI Platform’s Model Runtime team and Inference teamIntroductionMost organizations consume LLMs through hosted APIs. The platform cleans up older deployments after inactivity but always preserves the latest.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-30">
-                <a href="https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] GenPage: Towards End-to-End Generative Homepage Construction at Netflix
-                </a>
-                <p class="mb-1 small text-light">Custom tokenization significantly reduces sequence length, lowering inference cost and latency. We update the entity and row vocabulary daily to incorporate newly added entities and rows.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-30">
-                <a href="https://www.docker.com/blog/coding-agent-horror-stories-the-agent-that-deleted-production/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Coding Agent Horror Stories: The Agent That Deleted Production
-                </a>
-                <p class="mb-1 small text-light">Part 3 moves the same problem up the stack, into a production AWS environment where the blast radius is no longer one laptop but a regional cloud service. Explore the Docker MCP Catalog: Discover MCP servers that connect your agents to external services through Docker’s security-first architecture.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-30">
-                <a href="https://www.redhat.com/en/blog/no-time-lose-why-post-quantum-security-financial-services-must-start-now" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] No time to lose: Why post-quantum security for financial services must start now
-                </a>
-                <p class="mb-1 small text-light">However, their inevitable development threatens to compromise public-key cryptography—e. For financial services institutions (FSIs) this is of p.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-30">
-                <a href="https://www.redhat.com/en/blog/lights-real-time-threat-response-red-hat-advanced-cluster-security" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Lights on!  Real-time threat response with Red Hat Advanced Cluster Security
-                </a>
-                <p class="mb-1 small text-light">By locking down network communication, we effectively eliminate lateral attack paths and contain the blast radius of a compromised workload. But a true zero-trust architecture as defined by NIST SP 800-207 isn't about buildi.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-07-30">
-                <a href="https://about.gitlab.com/blog/open-weight-model-letter/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Why GitLab signed the Open Weights and American AI Leadership letter
-                </a>
-                <p class="mb-1 small text-light">The letter argues that open weights spur innovation, give customers greater control, and provide an important path to AI safety and security. GitLab is the only platform that's cloud neutral and AI model neutral.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-07-30">
-                <a href="https://blog.sentry.io/godot-dotnet-ga/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] .NET support for Godot is now generally available
-                </a>
-                <p class="mb-1 small text-light">NET support and application metrics to general availability. x releases, we instrumented the SDK to capture issues from GDScript, the engine itself, and the native C/C++ code, and expanded support to all officially supported platforms.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-07-30">
-                <a href="https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Content Ingestion & Podcast Video Incident Report
-                </a>
-                <p class="mb-1 small text-light">Over the past two months, podcast creators have experienced a series of reliability issues on Spotify. This... The post Content Ingestion & Podcast Video Incident Report appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-30">
-                <a href="https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler
-                </a>
-                <p class="mb-1 small text-light">TL; DR At Meta’s scale, a few milliseconds of latency degradation can have a significant negative impact on ads performance. 9) we observed that the new Earliest Eligible Virtual Deadline First (EEVDF) scheduler introduced in Linux kernel v6.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-07-30">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-one-click-lambda-setup-prompt-openai-gpt-5-6-models-on-bedrock-and-more-july-20-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: One-click Lambda setup prompt, OpenAI GPT-5.6 models on Bedrock, and more (July 20, 2026)
-                </a>
-                <p class="mb-1 small text-light">For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page. The issue has been resolved, and all AWS services are operating normally.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-07-30">
-                <a href="https://www.hashicorp.com/blog/terraform-stacks-explained" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform Stacks, explained
-                </a>
-                <p class="mb-1 small text-light">This blog covers the challenges Terraform Stacks solve, their benefits, use cases, how they work, their features, and future roadmap. Deployment group orchestration rulesAs your usage of Stacks grows, manually managing and approving every deployment can become a significant bottleneck.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-30">
-                <a href="https://kubernetes.io/blog/2026/07/29/controller-runtime-cache-explained/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] How the controller-runtime Cache Actually Works, and Why Your Controller Does Not Crash the API Server
-                </a>
-                <p class="mb-1 small text-light">The starting point is how controllers actually read objects from the Kubernetes API. GVK (GroupVersionKind) — the triple that uniquely identifies an API type in Kubernetes: group, version, and kind, for example apps/v1/Deployment.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-30">
-                <a href="https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Building a Custom Metrics Exporter for Kubernetes
-                </a>
-                <p class="mb-1 small text-light">The release label must match the label selector configured on your Prometheus resource — kube-prometheus-stack is the default for a standard Helm install: apiVersion: monitoring.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-30">
-                <a href="https://kubernetes.io/blog/2026/07/08/announcing-etcd-3.7/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Announcing etcd v3.7.0
-                </a>
-                <p class="mb-1 small text-light">0, the latest minor release of the popular distributed key-value store and core Kubernetes component. 7 delivers multiple specific performance improvements, both for the Kubernetes control plane and for other use cases.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-07-30">
-                <a href="https://www.cncf.io/blog/2026/07/29/your-kubernetes-health-checks-are-accidentally-waking-your-services-heres-the-fix/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Your Kubernetes health checks are accidentally waking your services. Here’s the fix.
-                </a>
-                <p class="mb-1 small text-light">This problem appears in three distinct forms: Cloud Load BalancersAWS ALB, GCP Load Balancer, Azure Application Gateway — they all require periodic health checks to route traffic safely.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-30">
-                <a href="https://blog.cloudflare.com/post-quantum-authentication-to-origins/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Post-quantum authentication to origins is now supported
-                </a>
-                <p class="mb-1 small text-light">Quick startThe walkthrough below shows how to generate an ML-DSA certificate chain and configure both products via the Cloudflare API. See PQC in Cloudflare Products for an up-to-date tracker of post-quantum encryption and authentication support in Cloudflare products and services.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-30">
-                <a href="https://blog.cloudflare.com/introducing-cache-response-rules/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing Cache Response Rules
-                </a>
-                <p class="mb-1 small text-light">These are a new rule type that runs after an origin server replies but before Cloudflare caches the content. They answer: given this request, should Cloudflare cache the response, and under what cache key.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-07-30">
-                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
-                </a>
-                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-30">
-                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
-                </a>
-                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-30">
-                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
-                </a>
-                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-30">
-                <a href="https://www.redhat.com/en/blog/architecting-maintainability-lessons-global-multicluster-platform-blueprint" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Architecting for maintainability: Lessons from a global multicluster platform blueprint
-                </a>
-                <p class="mb-1 small text-light">How can a large organization achieve 100% uptime and zero security breaches at a massive scale. It requires moving past standard management techniques and focusing on a critical metric: maintainability.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-07-30">
                 <a href="https://slack.engineering/from-ssh-to-rest-a-security-driven-modernization-of-slacks-emr-data-pipelines/" target="_blank" class="fw-bold text-decoration-none">
                     [Slack Engineering] From SSH to REST: A Security-Driven Modernization of Slack’s EMR Data Pipelines
@@ -390,7 +143,7 @@
                 <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-07-30
                     
                 </small>
             </li>
@@ -402,7 +155,7 @@
                 <p class="mb-1 small text-light">This meant we needed a managed platform, a place where we could construct these services to be shared across many different features. The platform that began as an internal preview service is now infrastructure that developers can build on, too.</p>
                 <small class="text-secondary">
                     
-                    Dropbox Tech
+                    Dropbox Tech | 2026-07-30
                     
                 </small>
             </li>
@@ -414,7 +167,271 @@
                 <p class="mb-1 small text-light">io/kagent-dev/kagent/helm/kagent-crds", namespace: "kagent", }, { provider: k8sProvider }); const kagent = new kubernetes. Pulumi’s own product blog has also described Neo handling things like Terraform-to-Pulumi migrations and containerizing and migrating a service onto Kubernetes.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-30">
+                <a href="https://www.redhat.com/en/blog/architecting-maintainability-lessons-global-multicluster-platform-blueprint" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Architecting for maintainability: Lessons from a global multicluster platform blueprint
+                </a>
+                <p class="mb-1 small text-light">How can a large organization achieve 100% uptime and zero security breaches at a massive scale. It requires moving past standard management techniques and focusing on a critical metric: maintainability.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-07-30">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-one-click-lambda-setup-prompt-openai-gpt-5-6-models-on-bedrock-and-more-july-20-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: One-click Lambda setup prompt, OpenAI GPT-5.6 models on Bedrock, and more (July 20, 2026)
+                </a>
+                <p class="mb-1 small text-light">For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page. The issue has been resolved, and all AWS services are operating normally.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-07-30">
+                <a href="https://www.hashicorp.com/blog/terraform-stacks-explained" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform Stacks, explained
+                </a>
+                <p class="mb-1 small text-light">This blog covers the challenges Terraform Stacks solve, their benefits, use cases, how they work, their features, and future roadmap. Deployment group orchestration rulesAs your usage of Stacks grows, manually managing and approving every deployment can become a significant bottleneck.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-30">
+                <a href="https://kubernetes.io/blog/2026/07/29/controller-runtime-cache-explained/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] How the controller-runtime Cache Actually Works, and Why Your Controller Does Not Crash the API Server
+                </a>
+                <p class="mb-1 small text-light">The starting point is how controllers actually read objects from the Kubernetes API. GVK (GroupVersionKind) — the triple that uniquely identifies an API type in Kubernetes: group, version, and kind, for example apps/v1/Deployment.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-30">
+                <a href="https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Building a Custom Metrics Exporter for Kubernetes
+                </a>
+                <p class="mb-1 small text-light">The release label must match the label selector configured on your Prometheus resource — kube-prometheus-stack is the default for a standard Helm install: apiVersion: monitoring.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-07-30">
+                <a href="https://kubernetes.io/blog/2026/07/08/announcing-etcd-3.7/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Announcing etcd v3.7.0
+                </a>
+                <p class="mb-1 small text-light">0, the latest minor release of the popular distributed key-value store and core Kubernetes component. 7 delivers multiple specific performance improvements, both for the Kubernetes control plane and for other use cases.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-07-30">
+                <a href="https://www.cncf.io/blog/2026/07/29/your-kubernetes-health-checks-are-accidentally-waking-your-services-heres-the-fix/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Your Kubernetes health checks are accidentally waking your services. Here’s the fix.
+                </a>
+                <p class="mb-1 small text-light">This problem appears in three distinct forms: Cloud Load BalancersAWS ALB, GCP Load Balancer, Azure Application Gateway — they all require periodic health checks to route traffic safely.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-30">
+                <a href="https://blog.cloudflare.com/post-quantum-authentication-to-origins/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Post-quantum authentication to origins is now supported
+                </a>
+                <p class="mb-1 small text-light">Quick startThe walkthrough below shows how to generate an ML-DSA certificate chain and configure both products via the Cloudflare API. See PQC in Cloudflare Products for an up-to-date tracker of post-quantum encryption and authentication support in Cloudflare products and services.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-07-30">
+                <a href="https://blog.cloudflare.com/introducing-cache-response-rules/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing Cache Response Rules
+                </a>
+                <p class="mb-1 small text-light">These are a new rule type that runs after an origin server replies but before Cloudflare caches the content. They answer: given this request, should Cloudflare cache the response, and under what cache key.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-07-30">
+                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-30">
+                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
+                </a>
+                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-07-30">
+                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
+                </a>
+                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-30">
+                <a href="https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] In-House LLM Serving at Netflix
+                </a>
+                <p class="mb-1 small text-light">By AI Platform’s Model Runtime team and Inference teamIntroductionMost organizations consume LLMs through hosted APIs. The platform cleans up older deployments after inactivity but always preserves the latest.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-07-30">
+                <a href="https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] GenPage: Towards End-to-End Generative Homepage Construction at Netflix
+                </a>
+                <p class="mb-1 small text-light">Custom tokenization significantly reduces sequence length, lowering inference cost and latency. We update the entity and row vocabulary daily to incorporate newly added entities and rows.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-07-30">
+                <a href="https://www.docker.com/blog/coding-agent-horror-stories-the-agent-that-deleted-production/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Coding Agent Horror Stories: The Agent That Deleted Production
+                </a>
+                <p class="mb-1 small text-light">Part 3 moves the same problem up the stack, into a production AWS environment where the blast radius is no longer one laptop but a regional cloud service. Explore the Docker MCP Catalog: Discover MCP servers that connect your agents to external services through Docker’s security-first architecture.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-30">
+                <a href="https://www.redhat.com/en/blog/no-time-lose-why-post-quantum-security-financial-services-must-start-now" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] No time to lose: Why post-quantum security for financial services must start now
+                </a>
+                <p class="mb-1 small text-light">However, their inevitable development threatens to compromise public-key cryptography—e. For financial services institutions (FSIs) this is of p.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-07-30">
+                <a href="https://www.redhat.com/en/blog/lights-real-time-threat-response-red-hat-advanced-cluster-security" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Lights on!  Real-time threat response with Red Hat Advanced Cluster Security
+                </a>
+                <p class="mb-1 small text-light">By locking down network communication, we effectively eliminate lateral attack paths and contain the blast radius of a compromised workload. But a true zero-trust architecture as defined by NIST SP 800-207 isn't about buildi.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-07-30">
+                <a href="https://about.gitlab.com/blog/open-weight-model-letter/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Why GitLab signed the Open Weights and American AI Leadership letter
+                </a>
+                <p class="mb-1 small text-light">The letter argues that open weights spur innovation, give customers greater control, and provide an important path to AI safety and security. GitLab is the only platform that's cloud neutral and AI model neutral.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-07-30">
+                <a href="https://blog.sentry.io/godot-dotnet-ga/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] .NET support for Godot is now generally available
+                </a>
+                <p class="mb-1 small text-light">NET support and application metrics to general availability. x releases, we instrumented the SDK to capture issues from GDScript, the engine itself, and the native C/C++ code, and expanded support to all officially supported platforms.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-07-30">
+                <a href="https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Content Ingestion & Podcast Video Incident Report
+                </a>
+                <p class="mb-1 small text-light">Over the past two months, podcast creators have experienced a series of reliability issues on Spotify. This... The post Content Ingestion & Podcast Video Incident Report appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-07-30">
+                <a href="https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler
+                </a>
+                <p class="mb-1 small text-light">TL; DR At Meta’s scale, a few milliseconds of latency degradation can have a significant negative impact on ads performance. 9) we observed that the new Earliest Eligible Virtual Deadline First (EEVDF) scheduler introduced in Linux kernel v6.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-07-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-07-30">
+                <a href="https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research" target="_blank" class="fw-bold text-decoration-none">
+                    AI's top startups are barely publishing their research
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research Comments URL: https://news.ycombinator.com/item?id=49103285 Points: 481 # Comments: 245</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-07-30
                     
                 </small>
             </li>

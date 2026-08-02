@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - August 02, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - August 02, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for August 02, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-08-02">2026-08-02 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    17 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="Hacker News">Hacker News</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Sentry">Sentry</option>
+                
+                <option value="Slack Engineering">Slack Engineering</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-08-02">
+                <a href="https://slack.engineering/from-ssh-to-rest-a-security-driven-modernization-of-slacks-emr-data-pipelines/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] From SSH to REST: A Security-Driven Modernization of Slack’s EMR Data Pipelines
+                </a>
+                <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-02">
+                <a href="https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How our universal content processing platform Riviera evolved for AI and beyond
+                </a>
+                <p class="mb-1 small text-light">This meant we needed a managed platform, a place where we could construct these services to be shared across many different features. The platform that began as an internal preview service is now infrastructure that developers can build on, too.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-02">
+                <a href="https://www.pulumi.com/blog/ai-agents-on-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] How to Run AI Agents on Kubernetes with Pulumi
+                </a>
+                <p class="mb-1 small text-light">io/kagent-dev/kagent/helm/kagent-crds", namespace: "kagent", }, { provider: k8sProvider }); const kagent = new kubernetes. Pulumi’s own product blog has also described Neo handling things like Terraform-to-Pulumi migrations and containerizing and migrating a service onto Kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-02">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-one-click-lambda-setup-prompt-openai-gpt-5-6-models-on-bedrock-and-more-july-20-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: One-click Lambda setup prompt, OpenAI GPT-5.6 models on Bedrock, and more (July 20, 2026)
+                </a>
+                <p class="mb-1 small text-light">For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page. The issue has been resolved, and all AWS services are operating normally.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-02">
+                <a href="https://www.hashicorp.com/blog/terraform-stacks-explained" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform Stacks, explained
+                </a>
+                <p class="mb-1 small text-light">This blog covers the challenges Terraform Stacks solve, their benefits, use cases, how they work, their features, and future roadmap. Deployment group orchestration rulesAs your usage of Stacks grows, manually managing and approving every deployment can become a significant bottleneck.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-02">
+                <a href="https://kubernetes.io/blog/2026/07/29/controller-runtime-cache-explained/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] How the controller-runtime Cache Actually Works, and Why Your Controller Does Not Crash the API Server
+                </a>
+                <p class="mb-1 small text-light">The starting point is how controllers actually read objects from the Kubernetes API. GVK (GroupVersionKind) — the triple that uniquely identifies an API type in Kubernetes: group, version, and kind, for example apps/v1/Deployment.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-02">
+                <a href="https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Building a Custom Metrics Exporter for Kubernetes
+                </a>
+                <p class="mb-1 small text-light">The release label must match the label selector configured on your Prometheus resource — kube-prometheus-stack is the default for a standard Helm install: apiVersion: monitoring.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-02">
+                <a href="https://www.cncf.io/blog/2026/07/29/your-kubernetes-health-checks-are-accidentally-waking-your-services-heres-the-fix/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Your Kubernetes health checks are accidentally waking your services. Here’s the fix.
+                </a>
+                <p class="mb-1 small text-light">This problem appears in three distinct forms: Cloud Load BalancersAWS ALB, GCP Load Balancer, Azure Application Gateway — they all require periodic health checks to route traffic safely.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-02">
+                <a href="https://blog.cloudflare.com/post-quantum-authentication-to-origins/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Post-quantum authentication to origins is now supported
+                </a>
+                <p class="mb-1 small text-light">Quick startThe walkthrough below shows how to generate an ML-DSA certificate chain and configure both products via the Cloudflare API. See PQC in Cloudflare Products for an up-to-date tracker of post-quantum encryption and authentication support in Cloudflare products and services.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-08-02">
+                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-02">
+                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
+                </a>
+                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-02">
+                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
+                </a>
+                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-02">
+                <a href="https://www.reddit.com/r/devops/comments/1vcxs6l/i_tested_an_iac_tool_with_real_deploys_on_aws/" target="_blank" class="fw-bold text-decoration-none">
+                    I tested an IaC tool with real deploys on AWS, Azure and GCP. 20 scenarios each. Here is what only real clouds teach you
+                </a>
+                <p class="mb-1 small text-light">CRUD APIs, queue workers, private databases, Redis, WAF, websockets, fan-out, secrets, containers behind load balancers. Your first deploy dies inside Cloud Build with an error that tells you nothing.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-02">
+                <a href="https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] In-House LLM Serving at Netflix
+                </a>
+                <p class="mb-1 small text-light">By AI Platform’s Model Runtime team and Inference teamIntroductionMost organizations consume LLMs through hosted APIs. The platform cleans up older deployments after inactivity but always preserves the latest.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-02">
+                <a href="https://www.docker.com/blog/runtime-enforcement-not-runtime-advice/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Runtime Enforcement, Not Runtime Advice
+                </a>
+                <p class="mb-1 small text-light">They interact with: Source control platforms Issue trackers Communication tools Cloud services Internal APIs Databases A coding agent might create a pull request, update a Jira ticket, or retrieve documentation through an MCP-connected tool. A platform agent might interact with cloud infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-02">
+                <a href="https://www.redhat.com/en/blog/red-hat-openshift-platform-plus-rosa-aws-marketplace" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Announcing Red Hat OpenShift Platform Plus for Red Hat OpenShift Service on AWS on AWS Marketplace
+                </a>
+                <p class="mb-1 small text-light">Organizations using Red Hat OpenShift Service on AWS (ROSA) are increasingly seeking ways to extend their platform’s capabilities with enterprise-grade security and data services. Red Hat OpenShift Platform Plus, is now available for ROSA on the AWS Marketplace.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-08-02">
+                <a href="https://about.gitlab.com/blog/govern-agentic-ai-mcps-code-assistants/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] How to govern agentic AI, MCPs, and AI code assistants
+                </a>
+                <p class="mb-1 small text-light">" That is why self-hosting matters as a governance lever, not just a deployment preference. Automated or headless work, such as agents running inside CI/CD pipelines without a developer watching in real time.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-08-02">
+                <a href="https://about.gitlab.com/blog/open-weight-model-letter/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Why GitLab signed the Open Weights and American AI Leadership letter
+                </a>
+                <p class="mb-1 small text-light">The letter argues that open weights spur innovation, give customers greater control, and provide an important path to AI safety and security. GitLab is the only platform that's cloud neutral and AI model neutral.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-08-02">
+                <a href="https://blog.sentry.io/godot-dotnet-ga/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] .NET support for Godot is now generally available
+                </a>
+                <p class="mb-1 small text-light">NET support and application metrics to general availability. x releases, we instrumented the SDK to capture issues from GDScript, the engine itself, and the native C/C++ code, and expanded support to all officially supported platforms.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-02">
+                <a href="https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Content Ingestion & Podcast Video Incident Report
+                </a>
+                <p class="mb-1 small text-light">Over the past two months, podcast creators have experienced a series of reliability issues on Spotify. This... The post Content Ingestion & Podcast Video Incident Report appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-02">
+                <a href="https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler
+                </a>
+                <p class="mb-1 small text-light">TL; DR At Meta’s scale, a few milliseconds of latency degradation can have a significant negative impact on ads performance. 9) we observed that the new Earliest Eligible Virtual Deadline First (EEVDF) scheduler introduced in Linux kernel v6.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-02">
+                <a href="https://en.andros.dev/blog/af3ee191/why-i-dont-recommend-tailwind-css/" target="_blank" class="fw-bold text-decoration-none">
+                    I don't recommend Tailwind CSS
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://en.andros.dev/blog/af3ee191/why-i-dont-recommend-tailwind-css/ Comments URL: https://news.ycombinator.com/item?id=49141891 Points: 71 # Comments: 61</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-02">
+                <a href="https://www.wafer.ai/blog/kimi-k3-mi355x" target="_blank" class="fw-bold text-decoration-none">
+                    Running Kimi K3 on MI355X at Better Performance per Dollar Than B300
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.wafer.ai/blog/kimi-k3-mi355x Comments URL: https://news.ycombinator.com/item?id=49141073 Points: 128 # Comments: 35</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-02">
+                <a href="http://oldvcr.blogspot.com/2026/08/mklinux-and-pimped-out-apple-workgroup.html" target="_blank" class="fw-bold text-decoration-none">
+                    MkLinux and the pimped-out Apple Workgroup Server 9150
+                </a>
+                <p class="mb-1 small text-light">Article URL: http://oldvcr.blogspot.com/2026/08/mklinux-and-pimped-out-apple-workgroup.html Comments URL: https://news.ycombinator.com/item?id=49140702 Points: 55 # Comments: 2</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-02
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-02">
+                <a href="https://rodneybrooks.com/four-time-scales-for-technology-development-and-deployment/" target="_blank" class="fw-bold text-decoration-none">
+                    Four Time Scales for Technology Development and Deployment
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://rodneybrooks.com/four-time-scales-for-technology-development-and-deployment/ Comments URL: https://news.ycombinator.com/item?id=49140487 Points: 26 # Comments: 7</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-02
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

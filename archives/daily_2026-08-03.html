@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - August 03, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - August 03, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for August 03, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-08-03">2026-08-03 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    14 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="Hacker News">Hacker News</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Slack Engineering">Slack Engineering</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-03">
+                <a href="https://www.hashicorp.com/blog/autonomous-infrastructure-managing-complexity-in-agentic-workflows" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Autonomous infrastructure: Managing complexity in agentic workflows
+                </a>
+                <p class="mb-1 small text-light">The challenge is no longer getting to the cloud itself — it's managing infrastructure distributed across increasingly fragmented environments.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-03">
+                <a href="https://blog.cloudflare.com/cdnjs-dev-platform-migration/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Dogfooding at scale: migrating cdnjs to Cloudflare’s Developer Platform
+                </a>
+                <p class="mb-1 small text-light">Cloud Functions, a git-sync VM, container images, GCS buckets, service-account keys — every one of those was a thing to secure, patch, and audit. How we re-built itThe new cdnjs architecture runs entirely on Cloudflare’s Developer Platform.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-08-03">
+                <a href="https://slack.engineering/slack-ai-the-path-to-multi-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Slack AI: The Path to Multi-Cloud
+                </a>
+                <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-03">
+                <a href="https://www.pulumi.com/blog/discovered-stacks/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Discovered Stacks: One Place for All Your Infrastructure
+                </a>
+                <p class="mb-1 small text-light">Today we’re launching Discovered Stacks: Pulumi Cloud now models your AWS CloudFormation stacks and Azure Resource Manager deployments as stacks, right alongside your Pulumi IaC stacks. Why: your infrastructure doesn’t live in one tool Almost nobody’s cloud estate is a single technology.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-03">
+                <a href="https://www.docker.com/blog/docker-joins-nvidia-open-secure-ai-alliance/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] The Future of Agentic AI Depends on Openness and Trust. That’s Why Docker Is Joining Nvidia’s Open Secure AI Alliance.
+                </a>
+                <p class="mb-1 small text-light">Trust comes from the runtime, identity, governance, and security surrounding them. Security, safety, and governance have to be built through an open ecosystem that shares responsibility for moving the industry forward.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-03">
+                <a href="https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify
+                </a>
+                <p class="mb-1 small text-light">At Code with Claude, Spotify’s chief architect shared how we make both teams and AI agents more effective. The post Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-03">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Claude Sonnet 5 on AWS, Amazon WorkSpaces for AI agents, AWS service availability updates, and more (July 6, 2026)
+                </a>
+                <p class="mb-1 small text-light">This week, I’ll take a closer look at some key launches, and then cover the quarterly AWS Service Availability updates. This new feature provides a safety net for upgrade failures, no cluster rebuilds required, turning Kubernetes version upgrades into a reversible, low-risk operation.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-03">
+                <a href="https://www.cncf.io/blog/2026/07/30/runtime-supply-chain-verification-using-the-node-resource-interface-nri/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Runtime Supply Chain Verification using the Node Resource Interface (NRI)
+                </a>
+                <p class="mb-1 small text-light">As a systemd service for non-Kubernetes hosts or traditional Linux infrastructure. Setting it to deny trades availability for security: registry outages prevent new containers from starting.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-03">
+                <a href="https://blog.cloudflare.com/agents-week-welcome/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Welcome to Agents Week
+                </a>
+                <p class="mb-1 small text-light">Which brought us to a simpler framing: what is an Agent Cloud. The cloud we have today, and the web it sits on, were built for people.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-03">
+                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
+                </a>
+                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-03">
+                <a href="https://www.pulumi.com/blog/discovered-stacks-migrate-cloudformation-to-pulumi/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Migrate CloudFormation to Pulumi with Discovered Stacks
+                </a>
+                <p class="mb-1 small text-light">The plan has five steps: Find the stack in Pulumi Cloud. To go deeper: Discovered Stacks documentation Migrate from a Discovered Stack Migrating from AWS CloudFormation.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-03">
+                <a href="https://www.pulumi.com/blog/access-token-expiry-policy/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Enforce Access Token Expiry Policies in Pulumi Cloud
+                </a>
+                <p class="mb-1 small text-light">Pulumi Cloud organizations can now enforce a maximum expiry on the access tokens used against them. By adding support for access token expiry policies, Pulumi Cloud now closes the gap at the platform level.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-03">
+                <a href="https://www.reddit.com/r/devops/comments/1vdh4yt/where_do_infraplatform_engineers_actually_hang/" target="_blank" class="fw-bold text-decoration-none">
+                    Where do infra/platform engineers actually hang out online these days?
+                </a>
+                <p class="mb-1 small text-light">But my feed is still mostly AI hype and general tech content, while I’m more interested in more informal discussions around k8s, ai & cloud infra, observability, networking, platform engineering, etc.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-03">
+                <a href="https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] GenRec: Towards LLM-Native Recommendation at Netflix
+                </a>
+                <p class="mb-1 small text-light">Phase 1 is updated relatively infrequently and serves as a shared, Netflix‑aware backbone for many applications. The context window becomes our new “feature budget”, so we apply context engineering:Retain in full: high‑signal engagements (e.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-03">
+                <a href="https://snyk.io/blog/what-is-ai-pentesting/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] What Is AI Pentesting and How Does It Work?
+                </a>
+                <p class="mb-1 small text-light">AI pentesting uses reasoning-capable models to continuously find and validate the flaws scanners miss, especially broken authorization and business-logic abuse.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-03">
+                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
+                </a>
+                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-03">
+                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
+                </a>
+                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-03">
+                <a href="https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization
+                </a>
+                <p class="mb-1 small text-light">The Technical Challenges User engagement with ads entities is naturally graph-structured: users and ads entities (advertisers, products, services, campaigns etc. The system is designed to power various applications across the ads platform from retrieval to final stage ranking.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-03">
+                <a href="https://engineering.fb.com/2026/06/30/open-source/10-years-of-metas-commitment-to-python/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] 10 Years of Meta’s Commitment to Python
+                </a>
+                <p class="mb-1 small text-light">It powers infrastructure across our most important products and initiatives and supports a wide range of teams across the company.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-03">
+                <a href="https://github.com/mohamed--abdel-maksoud/pisiguard" target="_blank" class="fw-bold text-decoration-none">
+                    PISIGuard: Protect your personal and sensitive info when you chat with AI
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://github.com/mohamed--abdel-maksoud/pisiguard Comments URL: https://news.ycombinator.com/item?id=49153029 Points: 7 # Comments: 7</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-03">
+                <a href="https://arcbox.dev/blog/unifi-pppoe-half-bridge-acceleration" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: We Fixed UniFi's Slow PPPoE Performance with PPPoE Half-Bridge
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://arcbox.dev/blog/unifi-pppoe-half-bridge-acceleration Comments URL: https://news.ycombinator.com/item?id=49152871 Points: 14 # Comments: 7</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-03">
+                <a href="https://github.com/janestreet/bonsai" target="_blank" class="fw-bold text-decoration-none">
+                    Bonsai: Janestreet's UI Library
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://github.com/janestreet/bonsai Comments URL: https://news.ycombinator.com/item?id=49152842 Points: 61 # Comments: 17</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-03">
+                <a href="https://bjorg.bjornroche.com/management/ai-productivity-gap/" target="_blank" class="fw-bold text-decoration-none">
+                    The AI Productivity Gap
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://bjorg.bjornroche.com/management/ai-productivity-gap/ Comments URL: https://news.ycombinator.com/item?id=49152222 Points: 57 # Comments: 58</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-03">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-july-27-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Local Zone in Athens, Claude Opus 5 on AWS, Lambda durable execution for .NET, and more (July 27, 2026)
+                </a>
+                <p class="mb-1 small text-light">AWS Local Zones place AWS infrastructure much closer to large population and industry hubs to support workloads such as financial services, healthcare, media production, and real-time gaming. For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-03">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-sqs-turns-20-two-decades-of-reliable-messaging-at-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon SQS turns 20: Two decades of reliable messaging at scale
+                </a>
+                <p class="mb-1 small text-light">In June 2023, we extended this capability to the AWS SDK and CLI through new APIs, including StartMessageMoveTask, CancelMessageMoveTask, and ListMessageMoveTasks. AWS Lambda event source mapping for SQS was updated in parallel to support the new payload size.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-03
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

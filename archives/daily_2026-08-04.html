@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - August 04, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - August 04, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for August 04, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-08-04">2026-08-04 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    13 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-04">
+                <a href="https://blog.cloudflare.com/grpc-workers/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cloudflare Workers and Containers now support inbound TCP connections and gRPC
+                </a>
+                <p class="mb-1 small text-light">Spectrum is Cloudflare’s ingress proxy for non-HTTP traffic, and allows Cloudflare to sit in front of any TCP or UDP application. WebSockets and Durable Objects are excellent fits for this, and the Cloudflare Agents SDK provides @cloudflare/voice to make this easy.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-04">
+                <a href="https://www.docker.com/blog/docker-ai-governance-audit-logs-now-where-your-security-team-already-works/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker AI Governance: Audit Logs, Now Where Your Security Team Already Works
+                </a>
+                <p class="mb-1 small text-light">Increasingly it also comes first rather than after: security teams want a demonstrable audit record before they approve agent deployment at all. Audit Logs: Streamable to your SIEM tools Audit logs are now available in Docker Cloud, and audit events can stream directly to your SIEM.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-04">
+                <a href="https://www.redhat.com/en/blog/red-hat-ansible-all-stars-driving-future-network-and-infrastructure-automation" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat Ansible All-Stars: Driving the future of network and infrastructure automation
+                </a>
+                <p class="mb-1 small text-light">As enterprise infrastructures scale across hybrid cloud environments and distributed networks, operations teams face an unsustainable calculation.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-04">
+                <a href="https://kubernetes.io/blog/2026/07/13/introducing-headlamp-plugin-for-kubeflow/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Operating AI/ML Workloads on Kubernetes: A Headlamp Plugin for Kubeflow
+                </a>
+                <p class="mb-1 small text-light">Kubernetes has quietly become the default platform for AI and machine learning. The Headlamp Kubeflow plugin helps answer these questions by reading directly from the Kubernetes API server.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-04">
+                <a href="https://blog.cloudflare.com/cloudflare-computer/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Your agent needs a computer, not a container — introducing @cloudflare/computer
+                </a>
+                <p class="mb-1 small text-light">We’ve been working on this problem for a long time at Cloudflare, creating a more efficient compute primitive: isolates. This allows you to utilize heavier compute primitives only when required, optimizing performance and cost.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-08-04">
+                <a href="https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] What customers value most in Microsoft Databases—from reliability to AI readiness
+                </a>
+                <p class="mb-1 small text-light">Azure SQL Database helps organizations modernize applications, reduce infrastructure management, and scale with confidence.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-04">
+                <a href="https://www.docker.com/blog/docker-oidc-connections-for-github-actions-available-for-docker-orgs/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker OIDC connections for GitHub Actions available for Docker Orgs
+                </a>
+                <p class="mb-1 small text-light">Eliminate Stored Credentials in Your CI/CD Pipelines TL;DR: Docker now supports OpenID Connect (OIDC) for GitHub Actions. Docker is applying it to container registry access.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-04">
+                <a href="https://snyk.io/blog/openai-hugging-face-incident/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The Generator Can't Be the Validator: What OpenAI's Hugging Face Incident Proves About AI Security
+                </a>
+                <p class="mb-1 small text-light">OpenAI’s Hugging Face incident is a wake-up call: AI systems can escape their own test harnesses, and vendors can’t be the only ones validating safety.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-04">
+                <a href="https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant
+                </a>
+                <p class="mb-1 small text-light">At Spotify, data problems used to follow a specific pattern. You'd look for the relevant dashboard, there... The post Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-04">
+                <a href="https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model
+                </a>
+                <p class="mb-1 small text-light">AI infrastructure optimized for LLM training (kernels, parallelism, low precision recipes etc. Scaling Ratio (scaling efficiency) measures how much single-GPU performance is retained when distributing across thousands of GPUs.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-04">
+                <a href="https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Meta’s AI Storage Blueprint at Scale
+                </a>
+                <p class="mb-1 small text-light">This paves the way for O(1) lookup to resolve paths to storage addresses, which is a step-function improvement. Regional deployment: The BLOB-storage stack is now lean with flexibility to be deployed as a regional or global service.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-04">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-price-reduction-of-gpt-models-in-bedrock-cloudwatch-managed-collectors-for-prometheus-metrics-and-more-august-3-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Price reduction of GPT models in Bedrock, CloudWatch managed collectors for Prometheus metrics, and more (August 3, 2026)
+                </a>
+                <p class="mb-1 small text-light">We’ve got updates across AI pricing, observability, multicloud networking, and data management. If you’ve been maintaining your own Prometheus scraping infrastructure, this removes a significant operational burden.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-04">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-at-one-year-network-scanning-in-security-hub-loom-for-aws-and-more-july-13-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: AWS Builder Center at 1 year, Network Scanning in Security Hub, Loom for AWS, and more (July 13, 2026)
+                </a>
+                <p class="mb-1 small text-light">ECS Managed Instances provides GPU metrics through Amazon CloudWatch Container Insights and automatic health monitoring for GPU hardware failures. For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-04">
+                <a href="https://www.hashicorp.com/blog/terraform-azurerm-provider-50-now-generally-available" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform AzureRM provider 5.0 now generally available
+                </a>
+                <p class="mb-1 small text-light">This gives platform teams more control over Azure subscription configuration and the permissions assigned to Terraform. Still, it is generally preferable to detect Azure configuration issues before an apply operation begins, rather than during deployment.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-04">
+                <a href="https://kubernetes.io/blog/2026/08/03/gateway-api-v1-6-release/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Gateway API v1.6: TCPRoute and UDPRoute Graduate to Standard
+                </a>
+                <p class="mb-1 small text-light">Gateway API has become the standard for modern, role-oriented, and expressive service networking in Kubernetes. 6 introduces the new XBackend resource, which is a general-purpose decorator for Service (and other backend types) within Gateway API.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-04">
+                <a href="https://kubernetes.io/blog/2026/07/31/kubernetes-v1-37-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37 Sneak Peek
+                </a>
+                <p class="mb-1 small text-light">However, since the kernel ipvs API alone cannot fully implement Kubernetes Services, ipvs mode continues to use iptables underneath (KEP-3866, "The ipvs mode of kube-proxy will not save us"). New features and deprecations are also announced in the Kubernetes release notes.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-04">
+                <a href="https://www.cncf.io/blog/2026/08/03/cortex-completes-ostif-security-audit/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Cortex completes OSTIF security audit
+                </a>
+                <p class="mb-1 small text-light">The Open Source Technology Improvement Fund is proud to share the results of our security audit of Cortex. Thanks to Quarkslab and the Cloud Native Computing Foundation (CNCF), Cortex received custom review and documentation for current and future security development.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-04">
+                <a href="https://www.cncf.io/blog/2026/07/31/scaling-kubernetes-pods-with-keda-based-on-amazon-sqs-queue-depth/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Scaling Kubernetes pods with KEDA based on Amazon SQS queue depth
+                </a>
+                <p class="mb-1 small text-light">sh/v1alpha1 kind: TriggerAuthentication metadata: name: sqs-processor-auth namespace: workers spec: podIdentity: provider: aws --- apiVersion: keda.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-04">
+                <a href="https://blog.cloudflare.com/billable-usage-api/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing the Billable Usage API: programmatic cost visibility for Cloudflare
+                </a>
+                <p class="mb-1 small text-light">So we're launching a new Billable Usage API for self-serve accounts: a single endpoint that returns your account's usage and cost, broken down by product and by service period. Vantage connects to Cloudflare using a read-only API token with Billing Read access.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-04">
+                <a href="https://blog.cloudflare.com/python-workers-rpc/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Workers RPC now works across Python and JavaScript
+                </a>
+                <p class="mb-1 small text-light">All you need to configure is a Service binding:So, what can you do with it. This RPC system allows you to build a complex multi-language system as if you are using a library.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-04">
+                <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How we used DSPy to turn AI evaluations into better responses in Dash chat
+                </a>
+                <p class="mb-1 small text-light">In practice, this meant tracking issues like incomplete answers and missed key aspects of a user's request. For each new prompt, we compared its performance against the existing production prompt using the same set of examples.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-04">
+                <a href="https://netflixtechblog.medium.com/timeseries-tiered-storage-journey-kafka-flink-streams-to-native-cassandra-cold-reads-e59d597c9d60?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] TimeSeries Tiered Storage Journey: Kafka/Flink Streams to Native Cassandra Cold Reads
+                </a>
+                <p class="mb-1 small text-light">TimeSeries Data and Control PlaneWith that background, let’s look at the different solutions we built for data tiering. We introduced a new compaction strategy in Cassandra, which we call ReadOnlyCompactionStrategy (ROCS).</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-04">
+                <a href="https://netflixtechblog.com/modeling-device-capabilities-for-analytics-e7607acebde8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Modeling Device Capabilities for Analytics
+                </a>
+                <p class="mb-1 small text-light">Hardware limitations such as available RAM, CPU cores, display capabilities, or platform support mean that some features cannot be supported on certain device models. This approach helps us identify bottlenecks in feature penetration and accelerates the pace of innovation.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-04">
+                <a href="https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Building Service Topology at Scale: Architecture, Challenges, and Lessons Learned
+                </a>
+                <p class="mb-1 small text-light">The Core Problem: Network IntermediariesIn cloud environments, traffic between applications rarely flows directly, it traverses intermediate network components like load balancers, NAT gateways, API gateways, and proxies.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-08-04">
+                <a href="https://azure.microsoft.com/en-us/blog/gpt-5-6-now-available-in-microsoft-foundry/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] GPT-5.6 now available in Microsoft Foundry
+                </a>
+                <p class="mb-1 small text-light">These pillars come together in the latest Foundry updates, helping organizations build, run, and scale production agents on a single platform. This enables customers to adopt the latest frontier AI innovations where they have already built, deployed, and scaled their applications.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-08-04
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

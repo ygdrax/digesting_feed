@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - August 05, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - August 05, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for August 05, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-08-05">2026-08-05 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2026-08-05 10:32:28
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,242 +130,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-05">
-                <a href="https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] In-House LLM Serving at Netflix
-                </a>
-                <p class="mb-1 small text-light">By AI Platform’s Model Runtime team and Inference teamIntroductionMost organizations consume LLMs through hosted APIs. The platform cleans up older deployments after inactivity but always preserves the latest.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-05">
-                <a href="https://www.docker.com/blog/empty-sandboxes-break-developer-experience/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Empty sandboxes break developer experience
-                </a>
-                <p class="mb-1 small text-light">But the Docker Sandboxes feature I keep reaching for in daily use is kits. - MY_SERVICE_API_KEY Inside the sandbox the agent sees MY_SERVICE_API_KEY=proxy-managed.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-05">
-                <a href="https://www.redhat.com/en/blog/beyond-hype-what-financial-leaders-need-know-about-enterprise-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Beyond the hype: What financial leaders need to know about enterprise AI
-                </a>
-                <p class="mb-1 small text-light">Artificial intelligence has moved past the initial honeymoon phase of flashy chatbots and viral demos. In the financial services sector, AI is now a core catalyst for revenue growth, operational efficiency, and risk mitigation.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-05">
-                <a href="https://www.redhat.com/en/blog/dynamic-troubleshooting-guarded-command-execution-mcp-server-red-hat-enterprise-linux" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Dynamic troubleshooting with guarded command execution in the MCP server for Red Hat Enterprise Linux
-                </a>
-                <p class="mb-1 small text-light">Managing Red Hat Enterprise Linux (RHEL) environments can involve troubleshooting when issues occur. Using MCP-compatible clients like goose or Claude Desktop with the MCP server for RHEL enables AI clients to directly q.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-08-05">
-                <a href="https://about.gitlab.com/blog/govern-agentic-ai-mcps-code-assistants/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] How to govern agentic AI, MCPs, and AI code assistants
-                </a>
-                <p class="mb-1 small text-light">" That is why self-hosting matters as a governance lever, not just a deployment preference. Automated or headless work, such as agents running inside CI/CD pipelines without a developer watching in real time.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-08-05">
-                <a href="https://about.gitlab.com/blog/open-weight-model-letter/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Why GitLab signed the Open Weights and American AI Leadership letter
-                </a>
-                <p class="mb-1 small text-light">The letter argues that open weights spur innovation, give customers greater control, and provide an important path to AI safety and security. GitLab is the only platform that's cloud neutral and AI model neutral.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-08-05">
-                <a href="https://blog.sentry.io/godot-dotnet-ga/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] .NET support for Godot is now generally available
-                </a>
-                <p class="mb-1 small text-light">NET support and application metrics to general availability. x releases, we instrumented the SDK to capture issues from GDScript, the engine itself, and the native C/C++ code, and expanded support to all officially supported platforms.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-05">
-                <a href="https://snyk.io/blog/evo-continuous-offensive-security/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Evo Continuous Offensive Security Is Here Pentesting Grade Coverage For The 350 Days A Year You Aren't Testing
-                </a>
-                <p class="mb-1 small text-light">Snyk Evo Continuous Offensive Security brings autonomous, AI-powered pentesting to the 350 days between traditional tests, uncovering exploitable flaws attackers can find first.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-05">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-one-click-lambda-setup-prompt-openai-gpt-5-6-models-on-bedrock-and-more-july-20-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: One-click Lambda setup prompt, OpenAI GPT-5.6 models on Bedrock, and more (July 20, 2026)
-                </a>
-                <p class="mb-1 small text-light">For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page. The issue has been resolved, and all AWS services are operating normally.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-05">
-                <a href="https://www.hashicorp.com/blog/terraform-stacks-explained" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform Stacks, explained
-                </a>
-                <p class="mb-1 small text-light">This blog covers the challenges Terraform Stacks solve, their benefits, use cases, how they work, their features, and future roadmap. Deployment group orchestration rulesAs your usage of Stacks grows, manually managing and approving every deployment can become a significant bottleneck.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-05">
-                <a href="https://kubernetes.io/blog/2026/07/29/controller-runtime-cache-explained/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] How the controller-runtime Cache Actually Works, and Why Your Controller Does Not Crash the API Server
-                </a>
-                <p class="mb-1 small text-light">The starting point is how controllers actually read objects from the Kubernetes API. GVK (GroupVersionKind) — the triple that uniquely identifies an API type in Kubernetes: group, version, and kind, for example apps/v1/Deployment.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-05">
-                <a href="https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Building a Custom Metrics Exporter for Kubernetes
-                </a>
-                <p class="mb-1 small text-light">The release label must match the label selector configured on your Prometheus resource — kube-prometheus-stack is the default for a standard Helm install: apiVersion: monitoring.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-05">
-                <a href="https://blog.cloudflare.com/agent-development-lifecycle/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] The Agent Development Lifecycle has arrived on Cloudflare
+                <a href="https://blog.cloudflare.com/ci-workflows/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Run CI/CD for millions of repos — on your platform, on Cloudflare
                 </a>
-                <p class="mb-1 small text-light">That, in turn, has had an impact downstream: overwhelming the people responsible for all the other steps in the SDLC. They can buy domains, create temporary accounts and use the entire Cloudflare API.</p>
+                <p class="mb-1 small text-light">Many of the end customers building on these platforms don’t want the extra headache of managing their continuous integration and continuous deployment (CI/CD) pipeline.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-05">
-                <a href="https://blog.cloudflare.com/wallets/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Announcing Cloudflare Wallets: the programmable wallet for the agentic Internet
-                </a>
-                <p class="mb-1 small text-light">Soon, you will be able to set up and use your Cloudflare Wallet to pay for APIs and content. Earlier this month, we announced the Monetization Gateway to help Cloudflare customers get paid for their websites and applications.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-05">
-                <a href="https://blog.cloudflare.com/agents-on-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing: Cloudflare Agents
-                </a>
-                <p class="mb-1 small text-light">We're bringing together everything you need to deploy and manage hosted agents on Cloudflare, starting with observability. Traditional application telemetry might show the API request or database query, but not the agent behavior that caused it.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-08-05">
-                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
-                </a>
-                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-05">
-                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
-                </a>
-                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-05">
-                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
-                </a>
-                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-05">
-                <a href="https://www.docker.com/blog/software-supply-chain-security-omdia-2026-report/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] The Software Supply Chain Is Under Siege. Devs Are Still the First Line of Defense
-                </a>
-                <p class="mb-1 small text-light">Nearly half (45%) of orgs do not feel they have robust software supply chain security, compared to 55% who do. More than half of orgs (51%) rate secure containers as very effective in securing third-party and open-source code components.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-05">
-                <a href="https://www.redhat.com/en/blog/introducing-asago-open-source-ai-safety-and-governance-orchestration" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Introducing asago: Open source AI safety and governance orchestration
-                </a>
-                <p class="mb-1 small text-light">The open source AI safety ecosystem is a rich one. There are plenty of excellent and mature projects.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
+                    Cloudflare | 2026-08-05
                     
                 </small>
             </li>
@@ -360,7 +149,7 @@
                 <p class="mb-1 small text-light">Why Standard Monitoring Falls Short Standard application monitoring answers questions like: Is the service up. Agent monitoring needs to answer different questions: Why did this task cost dramatically more than usual.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-08-05
                     
                 </small>
             </li>
@@ -372,7 +161,7 @@
                 <p class="mb-1 small text-light">Both systems draw from the Cloudflare Codex, a shared source of engineering guidance built for people and agents. As Cloudflare grew, that model became increasingly difficult to sustain.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-08-05
                     
                 </small>
             </li>
@@ -384,7 +173,7 @@
                 <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-08-05
                     
                 </small>
             </li>
@@ -396,19 +185,247 @@
                 <p class="mb-1 small text-light">This meant we needed a managed platform, a place where we could construct these services to be shared across many different features. The platform that began as an internal preview service is now infrastructure that developers can build on, too.</p>
                 <small class="text-secondary">
                     
-                    Dropbox Tech
+                    Dropbox Tech | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-05">
+                <a href="https://www.docker.com/blog/software-supply-chain-security-omdia-2026-report/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] The Software Supply Chain Is Under Siege. Devs Are Still the First Line of Defense
+                </a>
+                <p class="mb-1 small text-light">Nearly half (45%) of orgs do not feel they have robust software supply chain security, compared to 55% who do. More than half of orgs (51%) rate secure containers as very effective in securing third-party and open-source code components.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-05">
+                <a href="https://www.redhat.com/en/blog/introducing-asago-open-source-ai-safety-and-governance-orchestration" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Introducing asago: Open source AI safety and governance orchestration
+                </a>
+                <p class="mb-1 small text-light">The open source AI safety ecosystem is a rich one. There are plenty of excellent and mature projects.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-05">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-one-click-lambda-setup-prompt-openai-gpt-5-6-models-on-bedrock-and-more-july-20-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: One-click Lambda setup prompt, OpenAI GPT-5.6 models on Bedrock, and more (July 20, 2026)
+                </a>
+                <p class="mb-1 small text-light">For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page. The issue has been resolved, and all AWS services are operating normally.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-05">
+                <a href="https://www.hashicorp.com/blog/terraform-stacks-explained" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform Stacks, explained
+                </a>
+                <p class="mb-1 small text-light">This blog covers the challenges Terraform Stacks solve, their benefits, use cases, how they work, their features, and future roadmap. Deployment group orchestration rulesAs your usage of Stacks grows, manually managing and approving every deployment can become a significant bottleneck.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-05">
+                <a href="https://kubernetes.io/blog/2026/07/29/controller-runtime-cache-explained/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] How the controller-runtime Cache Actually Works, and Why Your Controller Does Not Crash the API Server
+                </a>
+                <p class="mb-1 small text-light">The starting point is how controllers actually read objects from the Kubernetes API. GVK (GroupVersionKind) — the triple that uniquely identifies an API type in Kubernetes: group, version, and kind, for example apps/v1/Deployment.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-05">
+                <a href="https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Building a Custom Metrics Exporter for Kubernetes
+                </a>
+                <p class="mb-1 small text-light">The release label must match the label selector configured on your Prometheus resource — kube-prometheus-stack is the default for a standard Helm install: apiVersion: monitoring.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-05
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-05">
-                <a href="https://blog.cloudflare.com/ci-workflows/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Run CI/CD for millions of repos — on your platform, on Cloudflare
+                <a href="https://blog.cloudflare.com/agent-development-lifecycle/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] The Agent Development Lifecycle has arrived on Cloudflare
                 </a>
-                <p class="mb-1 small text-light">Many of the end customers building on these platforms don’t want the extra headache of managing their continuous integration and continuous deployment (CI/CD) pipeline.</p>
+                <p class="mb-1 small text-light">That, in turn, has had an impact downstream: overwhelming the people responsible for all the other steps in the SDLC. They can buy domains, create temporary accounts and use the entire Cloudflare API.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-05">
+                <a href="https://blog.cloudflare.com/wallets/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Announcing Cloudflare Wallets: the programmable wallet for the agentic Internet
+                </a>
+                <p class="mb-1 small text-light">Soon, you will be able to set up and use your Cloudflare Wallet to pay for APIs and content. Earlier this month, we announced the Monetization Gateway to help Cloudflare customers get paid for their websites and applications.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-05">
+                <a href="https://blog.cloudflare.com/agents-on-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing: Cloudflare Agents
+                </a>
+                <p class="mb-1 small text-light">We're bringing together everything you need to deploy and manage hosted agents on Cloudflare, starting with observability. Traditional application telemetry might show the API request or database query, but not the agent behavior that caused it.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-08-05">
+                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-05">
+                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
+                </a>
+                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-05">
+                <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Introducing Nova, our internal platform for coding agents
+                </a>
+                <p class="mb-1 small text-light">Those requirements pushed us toward building a platform instead of separate solutions for each workflow. That starting point was essential to shaping the platform.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-05">
+                <a href="https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] In-House LLM Serving at Netflix
+                </a>
+                <p class="mb-1 small text-light">By AI Platform’s Model Runtime team and Inference teamIntroductionMost organizations consume LLMs through hosted APIs. The platform cleans up older deployments after inactivity but always preserves the latest.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-05">
+                <a href="https://www.docker.com/blog/empty-sandboxes-break-developer-experience/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Empty sandboxes break developer experience
+                </a>
+                <p class="mb-1 small text-light">But the Docker Sandboxes feature I keep reaching for in daily use is kits. - MY_SERVICE_API_KEY Inside the sandbox the agent sees MY_SERVICE_API_KEY=proxy-managed.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-05">
+                <a href="https://www.redhat.com/en/blog/beyond-hype-what-financial-leaders-need-know-about-enterprise-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Beyond the hype: What financial leaders need to know about enterprise AI
+                </a>
+                <p class="mb-1 small text-light">Artificial intelligence has moved past the initial honeymoon phase of flashy chatbots and viral demos. In the financial services sector, AI is now a core catalyst for revenue growth, operational efficiency, and risk mitigation.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-05">
+                <a href="https://www.redhat.com/en/blog/dynamic-troubleshooting-guarded-command-execution-mcp-server-red-hat-enterprise-linux" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Dynamic troubleshooting with guarded command execution in the MCP server for Red Hat Enterprise Linux
+                </a>
+                <p class="mb-1 small text-light">Managing Red Hat Enterprise Linux (RHEL) environments can involve troubleshooting when issues occur. Using MCP-compatible clients like goose or Claude Desktop with the MCP server for RHEL enables AI clients to directly q.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-08-05">
+                <a href="https://about.gitlab.com/blog/govern-agentic-ai-mcps-code-assistants/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] How to govern agentic AI, MCPs, and AI code assistants
+                </a>
+                <p class="mb-1 small text-light">" That is why self-hosting matters as a governance lever, not just a deployment preference. Automated or headless work, such as agents running inside CI/CD pipelines without a developer watching in real time.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-08-05">
+                <a href="https://about.gitlab.com/blog/open-weight-model-letter/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Why GitLab signed the Open Weights and American AI Leadership letter
+                </a>
+                <p class="mb-1 small text-light">The letter argues that open weights spur innovation, give customers greater control, and provide an important path to AI safety and security. GitLab is the only platform that's cloud neutral and AI model neutral.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-08-05">
+                <a href="https://blog.sentry.io/godot-dotnet-ga/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] .NET support for Godot is now generally available
+                </a>
+                <p class="mb-1 small text-light">NET support and application metrics to general availability. x releases, we instrumented the SDK to capture issues from GDScript, the engine itself, and the native C/C++ code, and expanded support to all officially supported platforms.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-08-05
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-05">
+                <a href="https://snyk.io/blog/evo-continuous-offensive-security/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Evo Continuous Offensive Security Is Here Pentesting Grade Coverage For The 350 Days A Year You Aren't Testing
+                </a>
+                <p class="mb-1 small text-light">Snyk Evo Continuous Offensive Security brings autonomous, AI-powered pentesting to the 350 days between traditional tests, uncovering exploitable flaws attackers can find first.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-08-05
                     
                 </small>
             </li>

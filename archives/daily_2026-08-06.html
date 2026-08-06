@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - August 06, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - August 06, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for August 06, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-08-06">2026-08-06 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-08-06 10:36:19
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,266 +132,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-06">
-                <a href="https://www.reddit.com/r/devops/comments/1vg6nuu/how_do_you_manage_multiple_environments_when_dev/" target="_blank" class="fw-bold text-decoration-none">
-                    How do you manage multiple environments when Dev and Prod use different infrastructure?
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-06">
+                <a href="https://www.hashicorp.com/blog/hcp-terraform-is-the-control-plane-for-ai-driven-infrastructure" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] HCP Terraform is the control plane for AI-driven infrastructure
                 </a>
-                <p class="mb-1 small text-light">I currently manage 2 different environments: a dev server running in ec2 and an EKS environment for production server. Problem is that their setup is different, which adds extra management and makes it harder to test prod changes before deployment.</p>
+                <p class="mb-1 small text-light">The agent commits to feature branches and reaches Terraform through a dedicated, project-scoped team token, never with cloud secrets.</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-06">
-                <a href="https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] GenRec: Towards LLM-Native Recommendation at Netflix
-                </a>
-                <p class="mb-1 small text-light">Phase 1 is updated relatively infrequently and serves as a shared, Netflix‑aware backbone for many applications. The context window becomes our new “feature budget”, so we apply context engineering:Retain in full: high‑signal engagements (e.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-06">
-                <a href="https://www.docker.com/blog/governance-is-a-developer-experience-problem/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Governance Is a Developer Experience Problem
-                </a>
-                <p class="mb-1 small text-light">CI/CD accelerated when organizations trusted automated deployment pipelines. Just as developers rely on platforms to handle identity, networking, deployment, and observability concerns, governance increasingly becomes part of the environment where agents operate.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-06">
-                <a href="https://www.redhat.com/en/blog/use-evpn-red-hat-openshift-422-integrate-production-networks-across-kubernetes-cluster-boundaries" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Use EVPN in Red Hat OpenShift 4.22 to integrate production networks across Kubernetes cluster boundaries
-                </a>
-                <p class="mb-1 small text-light">With Red Hat OpenShift 4. 22, OpenShift Networking introduces support for ethernet VPN (EVPN), representing the next major milestone in enterprise network integration.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-06">
-                <a href="https://www.redhat.com/en/blog/red-hat-enterprise-linux-runner-images-now-public-preview-github-actions" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat Enterprise Linux runner images now in public preview for GitHub Actions
-                </a>
-                <p class="mb-1 small text-light">They are available today as GitHub-hosted larger runners in public preview. Public preview means this feature is real, fully documented, and ready for technical testing.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-06">
-                <a href="https://snyk.io/blog/why-we-rebuilt-evo-ai-model-risk-scoring/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] AI Model Risk Intelligence Know Which Models You Can Trust Before You Deploy
-                </a>
-                <p class="mb-1 small text-light">AI model risk depends on how a model is deployed. Learn how Evo combines adversarial testing, attack impact, and deployment context to help teams compare models and enforce policy.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-06">
-                <a href="https://snyk.io/blog/snyk-secrets/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Stop The Sprawl Snyk Secrets Now Generally Available
-                </a>
-                <p class="mb-1 small text-light">Snyk Secrets is now generally available, bringing contextual ML detection, secure-at-commit prevention, and unified secrets governance to the Snyk AI Security Platform.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-06">
-                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
-                </a>
-                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-06">
-                <a href="https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Content Ingestion & Podcast Video Incident Report
-                </a>
-                <p class="mb-1 small text-light">Over the past two months, podcast creators have experienced a series of reliability issues on Spotify. This... The post Content Ingestion & Podcast Video Incident Report appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-06">
-                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
-                </a>
-                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-06">
-                <a href="https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking
-                </a>
-                <p class="mb-1 small text-light">Separating the sequence model into two complementary stages (upstream/offline user modeling and downstream/online ranking), enables model capacity to scale so that performance keeps improving without proportional increases in serving resources.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-06">
-                <a href="https://blog.cloudflare.com/cloudflare-os/" target="_blank" class="fw-bold text-decoration-none">
-                    Cloudflare OS: an open platform for agents, apps, and work
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://blog.cloudflare.com/cloudflare-os/ Comments URL: https://news.ycombinator.com/item?id=49182996 Points: 564 # Comments: 271</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-06">
-                <a href="https://www.cncf.io/blog/2026/08/05/opencost-1-121-0-first-of-a-kind-kubernetes-inference-cost-tracking/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] OpenCost 1.121.0: First-of-a-kind Kubernetes inference cost tracking
-                </a>
-                <p class="mb-1 small text-light">Kubernetes resource allocation has always had an efficiency problem. In disaggregated serving deployments—where prefill and decode run on separate hardware—this distinction is essential for accurate cost attribution.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-06">
-                <a href="https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Cloudflare is the only vendor named a Visionary in 2026 SASE and SSE reports
-                </a>
-                <p class="mb-1 small text-light">The SASE (Secure Access Service Edge) and SSE (Security Service Edge) markets are at an inflection point. That’s exactly where Cloudflare One, our agile SASE platform, comes in.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-06">
-                <a href="https://blog.cloudflare.com/the-agent-access-model/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] The Agent Access Model
-                </a>
-                <p class="mb-1 small text-light">For the last twelve years, enterprise security has moved away from trusting the network. AAuth draft 09 addresses agent-to-resource identity and authorization, including per-instance identity, optional missions, tool permissions, audit, and asynchronous authorization.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-06">
-                <a href="https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] How we’re rethinking work at Cloudflare with Cloudflare OS
-                </a>
-                <p class="mb-1 small text-light">As we learned more about the challenge, we also created custom services tailored to this new way of working.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-06">
-                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
-                </a>
-                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-06">
-                <a href="https://www.pulumi.com/blog/discovered-stacks-migrate-cloudformation-to-pulumi/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Migrate CloudFormation to Pulumi with Discovered Stacks
-                </a>
-                <p class="mb-1 small text-light">The plan has five steps: Find the stack in Pulumi Cloud. To go deeper: Discovered Stacks documentation Migrate from a Discovered Stack Migrating from AWS CloudFormation.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-06">
-                <a href="https://www.redhat.com/en/blog/red-hat-named-leader-2026-cloud-native" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat named a Leader in the 2026 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms for the Third Consecutive Year
-                </a>
-                <p class="mb-1 small text-light">For the third consecutive year, Red Hat has been recognized as a Leader in the Gartner® Magic Quadrant™ for Cloud-Native Application Platforms.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-06">
-                <a href="https://www.redhat.com/en/blog/ai-agent-observability-building-production-grade-operational-layer" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] AI agent observability: Building a production-grade operational layer
-                </a>
-                <p class="mb-1 small text-light">If you've been following along with our series so far, your AI inference layer is reliable. Your agents have cryptographic identity, scoped tool access, and guardrails at every boundary.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-06">
-                <a href="https://snyk.io/blog/continuous-offensive-security-ai-pentesting-20-faqs/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Continuous Offensive Security & AI Pentesting: 20 FAQs
-                </a>
-                <p class="mb-1 small text-light">Get answers to 20 common questions about continuous offensive security, AI penetration testing, DAST, and AI red teaming.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-06">
-                <a href="https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify
-                </a>
-                <p class="mb-1 small text-light">At Code with Claude, Spotify’s chief architect shared how we make both teams and AI agents more effective. The post Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
+                    HashiCorp | 2026-08-06
                     
                 </small>
             </li>
@@ -386,7 +151,7 @@
                 <p class="mb-1 small text-light">MCPs at CloudflareMCP is a critical piece of the infrastructure powering Cloudflare's internal agents. Because merges at Cloudflare typically trigger deployment pipelines, we require a human in the loop.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-08-06
                     
                 </small>
             </li>
@@ -398,19 +163,271 @@
                 <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-08-06
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-06">
-                <a href="https://www.hashicorp.com/blog/hcp-terraform-is-the-control-plane-for-ai-driven-infrastructure" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] HCP Terraform is the control plane for AI-driven infrastructure
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-06">
+                <a href="https://www.redhat.com/en/blog/red-hat-named-leader-2026-cloud-native" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat named a Leader in the 2026 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms for the Third Consecutive Year
                 </a>
-                <p class="mb-1 small text-light">The agent commits to feature branches and reaches Terraform through a dedicated, project-scoped team token, never with cloud secrets.</p>
+                <p class="mb-1 small text-light">For the third consecutive year, Red Hat has been recognized as a Leader in the Gartner® Magic Quadrant™ for Cloud-Native Application Platforms.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    Red Hat | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-06">
+                <a href="https://www.redhat.com/en/blog/ai-agent-observability-building-production-grade-operational-layer" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] AI agent observability: Building a production-grade operational layer
+                </a>
+                <p class="mb-1 small text-light">If you've been following along with our series so far, your AI inference layer is reliable. Your agents have cryptographic identity, scoped tool access, and guardrails at every boundary.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-06">
+                <a href="https://snyk.io/blog/continuous-offensive-security-ai-pentesting-20-faqs/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Continuous Offensive Security & AI Pentesting: 20 FAQs
+                </a>
+                <p class="mb-1 small text-light">Get answers to 20 common questions about continuous offensive security, AI penetration testing, DAST, and AI red teaming.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-06">
+                <a href="https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify
+                </a>
+                <p class="mb-1 small text-light">At Code with Claude, Spotify’s chief architect shared how we make both teams and AI agents more effective. The post Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-06">
+                <a href="https://blog.cloudflare.com/cloudflare-os/" target="_blank" class="fw-bold text-decoration-none">
+                    Cloudflare OS: an open platform for agents, apps, and work
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://blog.cloudflare.com/cloudflare-os/ Comments URL: https://news.ycombinator.com/item?id=49182996 Points: 564 # Comments: 271</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-06">
+                <a href="https://www.cncf.io/blog/2026/08/05/opencost-1-121-0-first-of-a-kind-kubernetes-inference-cost-tracking/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] OpenCost 1.121.0: First-of-a-kind Kubernetes inference cost tracking
+                </a>
+                <p class="mb-1 small text-light">Kubernetes resource allocation has always had an efficiency problem. In disaggregated serving deployments—where prefill and decode run on separate hardware—this distinction is essential for accurate cost attribution.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-06">
+                <a href="https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cloudflare is the only vendor named a Visionary in 2026 SASE and SSE reports
+                </a>
+                <p class="mb-1 small text-light">The SASE (Secure Access Service Edge) and SSE (Security Service Edge) markets are at an inflection point. That’s exactly where Cloudflare One, our agile SASE platform, comes in.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-06">
+                <a href="https://blog.cloudflare.com/the-agent-access-model/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] The Agent Access Model
+                </a>
+                <p class="mb-1 small text-light">For the last twelve years, enterprise security has moved away from trusting the network. AAuth draft 09 addresses agent-to-resource identity and authorization, including per-instance identity, optional missions, tool permissions, audit, and asynchronous authorization.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-06">
+                <a href="https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] How we’re rethinking work at Cloudflare with Cloudflare OS
+                </a>
+                <p class="mb-1 small text-light">As we learned more about the challenge, we also created custom services tailored to this new way of working.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-06">
+                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
+                </a>
+                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-06">
+                <a href="https://www.pulumi.com/blog/discovered-stacks-migrate-cloudformation-to-pulumi/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Migrate CloudFormation to Pulumi with Discovered Stacks
+                </a>
+                <p class="mb-1 small text-light">The plan has five steps: Find the stack in Pulumi Cloud. To go deeper: Discovered Stacks documentation Migrate from a Discovered Stack Migrating from AWS CloudFormation.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-06">
+                <a href="https://www.reddit.com/r/devops/comments/1vg6nuu/how_do_you_manage_multiple_environments_when_dev/" target="_blank" class="fw-bold text-decoration-none">
+                    How do you manage multiple environments when Dev and Prod use different infrastructure?
+                </a>
+                <p class="mb-1 small text-light">I currently manage 2 different environments: a dev server running in ec2 and an EKS environment for production server. Problem is that their setup is different, which adds extra management and makes it harder to test prod changes before deployment.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-06">
+                <a href="https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] GenRec: Towards LLM-Native Recommendation at Netflix
+                </a>
+                <p class="mb-1 small text-light">Phase 1 is updated relatively infrequently and serves as a shared, Netflix‑aware backbone for many applications. The context window becomes our new “feature budget”, so we apply context engineering:Retain in full: high‑signal engagements (e.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-06">
+                <a href="https://www.docker.com/blog/governance-is-a-developer-experience-problem/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Governance Is a Developer Experience Problem
+                </a>
+                <p class="mb-1 small text-light">CI/CD accelerated when organizations trusted automated deployment pipelines. Just as developers rely on platforms to handle identity, networking, deployment, and observability concerns, governance increasingly becomes part of the environment where agents operate.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-06">
+                <a href="https://www.redhat.com/en/blog/use-evpn-red-hat-openshift-422-integrate-production-networks-across-kubernetes-cluster-boundaries" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Use EVPN in Red Hat OpenShift 4.22 to integrate production networks across Kubernetes cluster boundaries
+                </a>
+                <p class="mb-1 small text-light">With Red Hat OpenShift 4. 22, OpenShift Networking introduces support for ethernet VPN (EVPN), representing the next major milestone in enterprise network integration.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-06">
+                <a href="https://www.redhat.com/en/blog/red-hat-enterprise-linux-runner-images-now-public-preview-github-actions" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat Enterprise Linux runner images now in public preview for GitHub Actions
+                </a>
+                <p class="mb-1 small text-light">They are available today as GitHub-hosted larger runners in public preview. Public preview means this feature is real, fully documented, and ready for technical testing.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-06">
+                <a href="https://snyk.io/blog/why-we-rebuilt-evo-ai-model-risk-scoring/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] AI Model Risk Intelligence Know Which Models You Can Trust Before You Deploy
+                </a>
+                <p class="mb-1 small text-light">AI model risk depends on how a model is deployed. Learn how Evo combines adversarial testing, attack impact, and deployment context to help teams compare models and enforce policy.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-06">
+                <a href="https://snyk.io/blog/snyk-secrets/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Stop The Sprawl Snyk Secrets Now Generally Available
+                </a>
+                <p class="mb-1 small text-light">Snyk Secrets is now generally available, bringing contextual ML detection, secure-at-commit prevention, and unified secrets governance to the Snyk AI Security Platform.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-06">
+                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
+                </a>
+                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-06">
+                <a href="https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Content Ingestion & Podcast Video Incident Report
+                </a>
+                <p class="mb-1 small text-light">Over the past two months, podcast creators have experienced a series of reliability issues on Spotify. This... The post Content Ingestion & Podcast Video Incident Report appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-06">
+                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
+                </a>
+                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-06">
+                <a href="https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking
+                </a>
+                <p class="mb-1 small text-light">Separating the sequence model into two complementary stages (upstream/offline user modeling and downstream/online ranking), enables model capacity to scale so that performance keeps improving without proportional increases in serving resources.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-08-06
                     
                 </small>
             </li>

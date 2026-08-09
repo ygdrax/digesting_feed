@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - August 09, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - August 09, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for August 09, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-08-09">2026-08-09 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 15 sources • Updated 2026-08-09 08:39:54
+                    Showing 25 total articles from 
+                    15 sources
+                    
                     
                 </span>
             </small>
@@ -117,278 +134,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-09">
-                <a href="http://longbets.org/601/" target="_blank" class="fw-bold text-decoration-none">
-                    The original URL for this prediction will no longer be available in 11 years (2011)
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-09">
+                <a href="https://www.hashicorp.com/blog/hcp-terraform-is-the-control-plane-for-ai-driven-infrastructure" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] HCP Terraform is the control plane for AI-driven infrastructure
                 </a>
-                <p class="mb-1 small text-light">Article URL: http://longbets.org/601/ Comments URL: https://news.ycombinator.com/item?id=49228458 Points: 127 # Comments: 43</p>
+                <p class="mb-1 small text-light">The agent commits to feature branches and reaches Terraform through a dedicated, project-scoped team token, never with cloud secrets.</p>
                 <small class="text-secondary">
                     
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-09">
-                <a href="https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621" target="_blank" class="fw-bold text-decoration-none">
-                    Melatonin impairs morning cognition in healthy young adults (2023)
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621 Comments URL: https://news.ycombinator.com/item?id=49227365 Points: 105 # Comments: 58</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-09">
-                <a href="https://www.fastmail.com/blog/fastmail-offers-eu-data-region/" target="_blank" class="fw-bold text-decoration-none">
-                    Fastmail offers EU data region
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.fastmail.com/blog/fastmail-offers-eu-data-region/ Comments URL: https://news.ycombinator.com/item?id=49223082 Points: 400 # Comments: 198</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-09">
-                <a href="https://aws.amazon.com/blogs/aws/amazon-dynamodb-now-supports-real-time-vector-search-at-any-scale/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon DynamoDB now supports real-time vector search at any scale
-                </a>
-                <p class="mb-1 small text-light">The service has no versions, no maintenance windows, and zero downtime maintenance. Vector search in DynamoDB introduces a new index type that you create on an attribute storing vector embeddings.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-09">
-                <a href="https://www.reddit.com/r/devops/comments/1vituwp/platformdevopssre_practitioners_looking_for/" target="_blank" class="fw-bold text-decoration-none">
-                    Platform/DevOps/SRE practitioners: looking for independent technical review of a research implementation
-                </a>
-                <p class="mb-1 small text-light">The work examines whether infrastructure intent, environment policy, dependency ordering, preflight, execution, verification and run records can be expressed through a stable runtime contract across heterogeneous environments.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-09">
-                <a href="https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] GenRec: Towards LLM-Native Recommendation at Netflix
-                </a>
-                <p class="mb-1 small text-light">Phase 1 is updated relatively infrequently and serves as a shared, Netflix‑aware backbone for many applications. The context window becomes our new “feature budget”, so we apply context engineering:Retain in full: high‑signal engagements (e.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-09">
-                <a href="https://www.docker.com/blog/governance-is-a-developer-experience-problem/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Governance Is a Developer Experience Problem
-                </a>
-                <p class="mb-1 small text-light">CI/CD accelerated when organizations trusted automated deployment pipelines. Just as developers rely on platforms to handle identity, networking, deployment, and observability concerns, governance increasingly becomes part of the environment where agents operate.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-08-09">
-                <a href="https://about.gitlab.com/blog/open-weight-model-letter/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Why GitLab signed the Open Weights and American AI Leadership letter
-                </a>
-                <p class="mb-1 small text-light">The letter argues that open weights spur innovation, give customers greater control, and provide an important path to AI safety and security. GitLab is the only platform that's cloud neutral and AI model neutral.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-08-09">
-                <a href="https://blog.sentry.io/godot-dotnet-ga/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] .NET support for Godot is now generally available
-                </a>
-                <p class="mb-1 small text-light">NET support and application metrics to general availability. x releases, we instrumented the SDK to capture issues from GDScript, the engine itself, and the native C/C++ code, and expanded support to all officially supported platforms.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-09">
-                <a href="https://snyk.io/blog/evo-continuous-offensive-security/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Evo Continuous Offensive Security Is Here Pentesting Grade Coverage For The 350 Days A Year You Aren't Testing
-                </a>
-                <p class="mb-1 small text-light">Snyk Evo Continuous Offensive Security brings autonomous, AI-powered pentesting to the 350 days between traditional tests, uncovering exploitable flaws attackers can find first.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-09">
-                <a href="https://snyk.io/blog/why-we-rebuilt-evo-ai-model-risk-scoring/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] AI Model Risk Intelligence Know Which Models You Can Trust Before You Deploy
-                </a>
-                <p class="mb-1 small text-light">AI model risk depends on how a model is deployed. Learn how Evo combines adversarial testing, attack impact, and deployment context to help teams compare models and enforce policy.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-09">
-                <a href="https://snyk.io/blog/snyk-secrets/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Stop The Sprawl Snyk Secrets Now Generally Available
-                </a>
-                <p class="mb-1 small text-light">Snyk Secrets is now generally available, bringing contextual ML detection, secure-at-commit prevention, and unified secrets governance to the Snyk AI Security Platform.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-09">
-                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
-                </a>
-                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-09">
-                <a href="https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Content Ingestion & Podcast Video Incident Report
-                </a>
-                <p class="mb-1 small text-light">Over the past two months, podcast creators have experienced a series of reliability issues on Spotify. This... The post Content Ingestion & Podcast Video Incident Report appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-09">
-                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
-                </a>
-                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-09">
-                <a href="https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking
-                </a>
-                <p class="mb-1 small text-light">Separating the sequence model into two complementary stages (upstream/offline user modeling and downstream/online ranking), enables model capacity to scale so that performance keeps improving without proportional increases in serving resources.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-09">
-                <a href="https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization
-                </a>
-                <p class="mb-1 small text-light">The Technical Challenges User engagement with ads entities is naturally graph-structured: users and ads entities (advertisers, products, services, campaigns etc. The system is designed to power various applications across the ads platform from retrieval to final stage ranking.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-09">
-                <a href="https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler
-                </a>
-                <p class="mb-1 small text-light">TL; DR At Meta’s scale, a few milliseconds of latency degradation can have a significant negative impact on ads performance. 9) we observed that the new Earliest Eligible Virtual Deadline First (EEVDF) scheduler introduced in Linux kernel v6.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-09">
-                <a href="https://www.cncf.io/blog/2026/08/05/opencost-1-121-0-first-of-a-kind-kubernetes-inference-cost-tracking/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] OpenCost 1.121.0: First-of-a-kind Kubernetes inference cost tracking
-                </a>
-                <p class="mb-1 small text-light">Kubernetes resource allocation has always had an efficiency problem. In disaggregated serving deployments—where prefill and decode run on separate hardware—this distinction is essential for accurate cost attribution.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-09">
-                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
-                </a>
-                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-09">
-                <a href="https://www.pulumi.com/blog/discovered-stacks-migrate-cloudformation-to-pulumi/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Migrate CloudFormation to Pulumi with Discovered Stacks
-                </a>
-                <p class="mb-1 small text-light">The plan has five steps: Find the stack in Pulumi Cloud. To go deeper: Discovered Stacks documentation Migrate from a Discovered Stack Migrating from AWS CloudFormation.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-09">
-                <a href="https://snyk.io/blog/continuous-offensive-security-ai-pentesting-20-faqs/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Continuous Offensive Security & AI Pentesting: 20 FAQs
-                </a>
-                <p class="mb-1 small text-light">Get answers to 20 common questions about continuous offensive security, AI penetration testing, DAST, and AI red teaming.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-09">
-                <a href="https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify
-                </a>
-                <p class="mb-1 small text-light">At Code with Claude, Spotify’s chief architect shared how we make both teams and AI agents more effective. The post Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
+                    HashiCorp | 2026-08-09
                     
                 </small>
             </li>
@@ -400,19 +153,283 @@
                 <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-08-09
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-09">
-                <a href="https://www.hashicorp.com/blog/hcp-terraform-is-the-control-plane-for-ai-driven-infrastructure" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] HCP Terraform is the control plane for AI-driven infrastructure
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-09">
+                <a href="https://snyk.io/blog/continuous-offensive-security-ai-pentesting-20-faqs/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Continuous Offensive Security & AI Pentesting: 20 FAQs
                 </a>
-                <p class="mb-1 small text-light">The agent commits to feature branches and reaches Terraform through a dedicated, project-scoped team token, never with cloud secrets.</p>
+                <p class="mb-1 small text-light">Get answers to 20 common questions about continuous offensive security, AI penetration testing, DAST, and AI red teaming.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    Snyk | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-09">
+                <a href="https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify
+                </a>
+                <p class="mb-1 small text-light">At Code with Claude, Spotify’s chief architect shared how we make both teams and AI agents more effective. The post Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-09">
+                <a href="https://www.cncf.io/blog/2026/08/05/opencost-1-121-0-first-of-a-kind-kubernetes-inference-cost-tracking/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] OpenCost 1.121.0: First-of-a-kind Kubernetes inference cost tracking
+                </a>
+                <p class="mb-1 small text-light">Kubernetes resource allocation has always had an efficiency problem. In disaggregated serving deployments—where prefill and decode run on separate hardware—this distinction is essential for accurate cost attribution.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-09">
+                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
+                </a>
+                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-09">
+                <a href="https://www.pulumi.com/blog/discovered-stacks-migrate-cloudformation-to-pulumi/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Migrate CloudFormation to Pulumi with Discovered Stacks
+                </a>
+                <p class="mb-1 small text-light">The plan has five steps: Find the stack in Pulumi Cloud. To go deeper: Discovered Stacks documentation Migrate from a Discovered Stack Migrating from AWS CloudFormation.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-09">
+                <a href="https://www.reddit.com/r/devops/comments/1vituwp/platformdevopssre_practitioners_looking_for/" target="_blank" class="fw-bold text-decoration-none">
+                    Platform/DevOps/SRE practitioners: looking for independent technical review of a research implementation
+                </a>
+                <p class="mb-1 small text-light">The work examines whether infrastructure intent, environment policy, dependency ordering, preflight, execution, verification and run records can be expressed through a stable runtime contract across heterogeneous environments.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-09">
+                <a href="https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] GenRec: Towards LLM-Native Recommendation at Netflix
+                </a>
+                <p class="mb-1 small text-light">Phase 1 is updated relatively infrequently and serves as a shared, Netflix‑aware backbone for many applications. The context window becomes our new “feature budget”, so we apply context engineering:Retain in full: high‑signal engagements (e.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-09">
+                <a href="https://www.docker.com/blog/governance-is-a-developer-experience-problem/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Governance Is a Developer Experience Problem
+                </a>
+                <p class="mb-1 small text-light">CI/CD accelerated when organizations trusted automated deployment pipelines. Just as developers rely on platforms to handle identity, networking, deployment, and observability concerns, governance increasingly becomes part of the environment where agents operate.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-08-09">
+                <a href="https://about.gitlab.com/blog/open-weight-model-letter/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Why GitLab signed the Open Weights and American AI Leadership letter
+                </a>
+                <p class="mb-1 small text-light">The letter argues that open weights spur innovation, give customers greater control, and provide an important path to AI safety and security. GitLab is the only platform that's cloud neutral and AI model neutral.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-08-09">
+                <a href="https://blog.sentry.io/godot-dotnet-ga/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] .NET support for Godot is now generally available
+                </a>
+                <p class="mb-1 small text-light">NET support and application metrics to general availability. x releases, we instrumented the SDK to capture issues from GDScript, the engine itself, and the native C/C++ code, and expanded support to all officially supported platforms.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-09">
+                <a href="https://snyk.io/blog/evo-continuous-offensive-security/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Evo Continuous Offensive Security Is Here Pentesting Grade Coverage For The 350 Days A Year You Aren't Testing
+                </a>
+                <p class="mb-1 small text-light">Snyk Evo Continuous Offensive Security brings autonomous, AI-powered pentesting to the 350 days between traditional tests, uncovering exploitable flaws attackers can find first.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-09">
+                <a href="https://snyk.io/blog/why-we-rebuilt-evo-ai-model-risk-scoring/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] AI Model Risk Intelligence Know Which Models You Can Trust Before You Deploy
+                </a>
+                <p class="mb-1 small text-light">AI model risk depends on how a model is deployed. Learn how Evo combines adversarial testing, attack impact, and deployment context to help teams compare models and enforce policy.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-09">
+                <a href="https://snyk.io/blog/snyk-secrets/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Stop The Sprawl Snyk Secrets Now Generally Available
+                </a>
+                <p class="mb-1 small text-light">Snyk Secrets is now generally available, bringing contextual ML detection, secure-at-commit prevention, and unified secrets governance to the Snyk AI Security Platform.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-09">
+                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
+                </a>
+                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-09">
+                <a href="https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Content Ingestion & Podcast Video Incident Report
+                </a>
+                <p class="mb-1 small text-light">Over the past two months, podcast creators have experienced a series of reliability issues on Spotify. This... The post Content Ingestion & Podcast Video Incident Report appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-09">
+                <a href="https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Better Experiments with LLM Evals — A funnel, not a fork
+                </a>
+                <p class="mb-1 small text-light">TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-09">
+                <a href="https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking
+                </a>
+                <p class="mb-1 small text-light">Separating the sequence model into two complementary stages (upstream/offline user modeling and downstream/online ranking), enables model capacity to scale so that performance keeps improving without proportional increases in serving resources.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-09">
+                <a href="https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization
+                </a>
+                <p class="mb-1 small text-light">The Technical Challenges User engagement with ads entities is naturally graph-structured: users and ads entities (advertisers, products, services, campaigns etc. The system is designed to power various applications across the ads platform from retrieval to final stage ranking.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-09">
+                <a href="https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler
+                </a>
+                <p class="mb-1 small text-light">TL; DR At Meta’s scale, a few milliseconds of latency degradation can have a significant negative impact on ads performance. 9) we observed that the new Earliest Eligible Virtual Deadline First (EEVDF) scheduler introduced in Linux kernel v6.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-09">
+                <a href="http://longbets.org/601/" target="_blank" class="fw-bold text-decoration-none">
+                    The original URL for this prediction will no longer be available in 11 years (2011)
+                </a>
+                <p class="mb-1 small text-light">Article URL: http://longbets.org/601/ Comments URL: https://news.ycombinator.com/item?id=49228458 Points: 127 # Comments: 43</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-09">
+                <a href="https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621" target="_blank" class="fw-bold text-decoration-none">
+                    Melatonin impairs morning cognition in healthy young adults (2023)
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621 Comments URL: https://news.ycombinator.com/item?id=49227365 Points: 105 # Comments: 58</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-09">
+                <a href="https://www.fastmail.com/blog/fastmail-offers-eu-data-region/" target="_blank" class="fw-bold text-decoration-none">
+                    Fastmail offers EU data region
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.fastmail.com/blog/fastmail-offers-eu-data-region/ Comments URL: https://news.ycombinator.com/item?id=49223082 Points: 400 # Comments: 198</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-09">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-dynamodb-now-supports-real-time-vector-search-at-any-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon DynamoDB now supports real-time vector search at any scale
+                </a>
+                <p class="mb-1 small text-light">The service has no versions, no maintenance windows, and zero downtime maintenance. Vector search in DynamoDB introduces a new index type that you create on an attribute storing vector embeddings.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-09
                     
                 </small>
             </li>

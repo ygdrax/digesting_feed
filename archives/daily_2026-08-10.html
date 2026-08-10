@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - August 10, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - August 10, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for August 10, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-08-10">2026-08-10 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-08-10 09:18:00
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,266 +132,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-10">
-                <a href="https://www.economist.com/asia/2026/08/06/the-philippines-big-offshoring-industry-is-growing-despite-ai" target="_blank" class="fw-bold text-decoration-none">
-                    The Philippines' big offshoring industry is growing despite AI
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.economist.com/asia/2026/08/06/the-philippines-big-offshoring-industry-is-growing-despite-ai Comments URL: https://news.ycombinator.com/item?id=49239226 Points: 46 # Comments: 45</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-10">
-                <a href="https://www.whodunnitai.com/" target="_blank" class="fw-bold text-decoration-none">
-                    Show HN: Voice driven murder mystery, Interview AI suspects with your voice
-                </a>
-                <p class="mb-1 small text-light">I'm excited to show off this really fun project I put together. I loved my proof of concept at the time, but wasn't quite happy with it.</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-10">
-                <a href="https://tuxedono2.com" target="_blank" class="fw-bold text-decoration-none">
-                    Tuxedo No. 2 – Cocktail recipes
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://tuxedono2.com Comments URL: https://news.ycombinator.com/item?id=49235697 Points: 89 # Comments: 23</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-10">
-                <a href="https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition" target="_blank" class="fw-bold text-decoration-none">
-                    The tragedy of the commons, AI edition
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition Comments URL: https://news.ycombinator.com/item?id=49235011 Points: 122 # Comments: 76</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-10">
-                <a href="https://www.reddit.com/r/devops/comments/1vk7lk2/how_do_you_handle_conflicting_infrastructure_state/" target="_blank" class="fw-bold text-decoration-none">
-                    How do you handle conflicting infrastructure state?
-                </a>
-                <p class="mb-1 small text-light">Say Terraform says an EC2 instance should have encryption enabled, but the AWS console/API shows it disabled. And how do you tell whether it's actual drift, stale information, or something that failed during deployment.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-10">
-                <a href="https://netflixtechblog.medium.com/timeseries-tiered-storage-journey-kafka-flink-streams-to-native-cassandra-cold-reads-e59d597c9d60?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] TimeSeries Tiered Storage Journey: Kafka/Flink Streams to Native Cassandra Cold Reads
-                </a>
-                <p class="mb-1 small text-light">TimeSeries Data and Control PlaneWith that background, let’s look at the different solutions we built for data tiering. We introduced a new compaction strategy in Cassandra, which we call ReadOnlyCompactionStrategy (ROCS).</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-10">
-                <a href="https://netflixtechblog.com/modeling-device-capabilities-for-analytics-e7607acebde8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Modeling Device Capabilities for Analytics
-                </a>
-                <p class="mb-1 small text-light">Hardware limitations such as available RAM, CPU cores, display capabilities, or platform support mean that some features cannot be supported on certain device models. This approach helps us identify bottlenecks in feature penetration and accelerates the pace of innovation.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-08-10">
-                <a href="https://azure.microsoft.com/en-us/blog/gpt-5-6-now-available-in-microsoft-foundry/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] GPT-5.6 now available in Microsoft Foundry
-                </a>
-                <p class="mb-1 small text-light">These pillars come together in the latest Foundry updates, helping organizations build, run, and scale production agents on a single platform. This enables customers to adopt the latest frontier AI innovations where they have already built, deployed, and scaled their applications.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-10">
-                <a href="https://www.redhat.com/en/blog/inside-operation-jailbreak-red-hats-participation-us-armys-open-integration-sprint" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Inside Operation Jailbreak: Red Hat’s participation in the US Army’s open integration sprint
-                </a>
-                <p class="mb-1 small text-light">In May 2026 an important, unprecedented event took place in Fort Carson, Colorado: US Army Operation Jailbreak. This ambitious effort was created to address the urgent and growing need for US and allied forces to communicate with greater ease, share information at speed, a.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-08-10">
-                <a href="https://about.gitlab.com/blog/confidential-ai-for-gitlab-self-hosted/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Confidential AI for GitLab Self-Hosted
-                </a>
-                <p class="mb-1 small text-light">The segments feeling this most are financial services, healthcare and pharma, defense, the public sector, and critical infrastructure. You run the AI Gateway and the proxy yourself, and the setup is deployment-agnostic (Linux package, Docker, or Kubernetes).</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-10">
-                <a href="https://www.docker.com/products/docker-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
-                    Docker Sandboxes – Disposable, isolated sandboxes for AI agents
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.docker.com/products/docker-sandboxes/ Comments URL: https://news.ycombinator.com/item?id=49239751 Points: 165 # Comments: 109</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-10">
-                <a href="https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore
-                </a>
-                <p class="mb-1 small text-light">What you get Runtime instances provides AWS-managed EC2 infrastructure where you deploy multiple agents in a single runtime, each with their own dependencies and artifact types.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-10">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-price-reduction-of-gpt-models-in-bedrock-cloudwatch-managed-collectors-for-prometheus-metrics-and-more-august-3-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: Price reduction of GPT models in Bedrock, CloudWatch managed collectors for Prometheus metrics, and more (August 3, 2026)
-                </a>
-                <p class="mb-1 small text-light">We’ve got updates across AI pricing, observability, multicloud networking, and data management. If you’ve been maintaining your own Prometheus scraping infrastructure, this removes a significant operational burden.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-10">
-                <a href="https://www.hashicorp.com/blog/terraform-azurerm-provider-50-now-generally-available" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform AzureRM provider 5.0 now generally available
-                </a>
-                <p class="mb-1 small text-light">This gives platform teams more control over Azure subscription configuration and the permissions assigned to Terraform. Still, it is generally preferable to detect Azure configuration issues before an apply operation begins, rather than during deployment.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-10">
-                <a href="https://kubernetes.io/blog/2026/08/03/gateway-api-v1-6-release/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Gateway API v1.6: TCPRoute and UDPRoute Graduate to Standard
-                </a>
-                <p class="mb-1 small text-light">Gateway API has become the standard for modern, role-oriented, and expressive service networking in Kubernetes. 6 introduces the new XBackend resource, which is a general-purpose decorator for Service (and other backend types) within Gateway API.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-10">
-                <a href="https://kubernetes.io/blog/2026/07/31/kubernetes-v1-37-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37 Sneak Peek
-                </a>
-                <p class="mb-1 small text-light">However, since the kernel ipvs API alone cannot fully implement Kubernetes Services, ipvs mode continues to use iptables underneath (KEP-3866, "The ipvs mode of kube-proxy will not save us"). New features and deprecations are also announced in the Kubernetes release notes.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-10">
-                <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How we used DSPy to turn AI evaluations into better responses in Dash chat
-                </a>
-                <p class="mb-1 small text-light">In practice, this meant tracking issues like incomplete answers and missed key aspects of a user's request. For each new prompt, we compared its performance against the existing production prompt using the same set of examples.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-08-10">
-                <a href="https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] What customers value most in Microsoft Databases—from reliability to AI readiness
-                </a>
-                <p class="mb-1 small text-light">Azure SQL Database helps organizations modernize applications, reduce infrastructure management, and scale with confidence.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-10">
-                <a href="https://www.docker.com/blog/docker-oidc-connections-for-github-actions-available-for-docker-orgs/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker OIDC connections for GitHub Actions available for Docker Orgs
+                <a href="https://www.docker.com/blog/docker-ai-governance-audit-logs-now-where-your-security-team-already-works/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker AI Governance: Audit Logs, Now Where Your Security Team Already Works
                 </a>
-                <p class="mb-1 small text-light">Eliminate Stored Credentials in Your CI/CD Pipelines TL;DR: Docker now supports OpenID Connect (OIDC) for GitHub Actions. Docker is applying it to container registry access.</p>
+                <p class="mb-1 small text-light">Increasingly it also comes first rather than after: security teams want a demonstrable audit record before they approve agent deployment at all. Audit Logs: Streamable to your SIEM tools Audit logs are now available in Docker Cloud, and audit events can stream directly to your SIEM.</p>
                 <small class="text-secondary">
                     
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-10">
-                <a href="https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant
-                </a>
-                <p class="mb-1 small text-light">At Spotify, data problems used to follow a specific pattern. You'd look for the relevant dashboard, there... The post Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-10">
-                <a href="https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model
-                </a>
-                <p class="mb-1 small text-light">AI infrastructure optimized for LLM training (kernels, parallelism, low precision recipes etc. Scaling Ratio (scaling efficiency) measures how much single-GPU performance is retained when distributing across thousands of GPUs.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-10">
-                <a href="https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Meta’s AI Storage Blueprint at Scale
-                </a>
-                <p class="mb-1 small text-light">This paves the way for O(1) lookup to resolve paths to storage addresses, which is a step-function improvement. Regional deployment: The BLOB-storage stack is now lean with flexibility to be deployed as a regional or global service.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
+                    Docker | 2026-08-10
                     
                 </small>
             </li>
@@ -386,7 +151,7 @@
                 <p class="mb-1 small text-light">Kubernetes has quietly become the default platform for AI and machine learning. The Headlamp Kubeflow plugin helps answer these questions by reading directly from the Kubernetes API server.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-08-10
                     
                 </small>
             </li>
@@ -398,19 +163,271 @@
                 <p class="mb-1 small text-light">Today, we’re excited to announce a few developer experience improvements to Cloudflare AI Search to make it easy to manage a search solution out of the box. Finally, we will also share examples of how AI Search is used across our own platform including Cloudflare.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-08-10">
+                <a href="https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] What customers value most in Microsoft Databases—from reliability to AI readiness
+                </a>
+                <p class="mb-1 small text-light">Azure SQL Database helps organizations modernize applications, reduce infrastructure management, and scale with confidence.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-08-10
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-10">
-                <a href="https://www.docker.com/blog/docker-ai-governance-audit-logs-now-where-your-security-team-already-works/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker AI Governance: Audit Logs, Now Where Your Security Team Already Works
+                <a href="https://www.docker.com/blog/docker-oidc-connections-for-github-actions-available-for-docker-orgs/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker OIDC connections for GitHub Actions available for Docker Orgs
                 </a>
-                <p class="mb-1 small text-light">Increasingly it also comes first rather than after: security teams want a demonstrable audit record before they approve agent deployment at all. Audit Logs: Streamable to your SIEM tools Audit logs are now available in Docker Cloud, and audit events can stream directly to your SIEM.</p>
+                <p class="mb-1 small text-light">Eliminate Stored Credentials in Your CI/CD Pipelines TL;DR: Docker now supports OpenID Connect (OIDC) for GitHub Actions. Docker is applying it to container registry access.</p>
                 <small class="text-secondary">
                     
-                    Docker
+                    Docker | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-10">
+                <a href="https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant
+                </a>
+                <p class="mb-1 small text-light">At Spotify, data problems used to follow a specific pattern. You'd look for the relevant dashboard, there... The post Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-10">
+                <a href="https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model
+                </a>
+                <p class="mb-1 small text-light">AI infrastructure optimized for LLM training (kernels, parallelism, low precision recipes etc. Scaling Ratio (scaling efficiency) measures how much single-GPU performance is retained when distributing across thousands of GPUs.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-10">
+                <a href="https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Meta’s AI Storage Blueprint at Scale
+                </a>
+                <p class="mb-1 small text-light">This paves the way for O(1) lookup to resolve paths to storage addresses, which is a step-function improvement. Regional deployment: The BLOB-storage stack is now lean with flexibility to be deployed as a regional or global service.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-10">
+                <a href="https://www.docker.com/products/docker-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
+                    Docker Sandboxes – Disposable, isolated sandboxes for AI agents
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.docker.com/products/docker-sandboxes/ Comments URL: https://news.ycombinator.com/item?id=49239751 Points: 165 # Comments: 109</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-10">
+                <a href="https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore
+                </a>
+                <p class="mb-1 small text-light">What you get Runtime instances provides AWS-managed EC2 infrastructure where you deploy multiple agents in a single runtime, each with their own dependencies and artifact types.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-10">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-price-reduction-of-gpt-models-in-bedrock-cloudwatch-managed-collectors-for-prometheus-metrics-and-more-august-3-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Price reduction of GPT models in Bedrock, CloudWatch managed collectors for Prometheus metrics, and more (August 3, 2026)
+                </a>
+                <p class="mb-1 small text-light">We’ve got updates across AI pricing, observability, multicloud networking, and data management. If you’ve been maintaining your own Prometheus scraping infrastructure, this removes a significant operational burden.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-10">
+                <a href="https://www.hashicorp.com/blog/terraform-azurerm-provider-50-now-generally-available" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform AzureRM provider 5.0 now generally available
+                </a>
+                <p class="mb-1 small text-light">This gives platform teams more control over Azure subscription configuration and the permissions assigned to Terraform. Still, it is generally preferable to detect Azure configuration issues before an apply operation begins, rather than during deployment.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-10">
+                <a href="https://kubernetes.io/blog/2026/08/03/gateway-api-v1-6-release/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Gateway API v1.6: TCPRoute and UDPRoute Graduate to Standard
+                </a>
+                <p class="mb-1 small text-light">Gateway API has become the standard for modern, role-oriented, and expressive service networking in Kubernetes. 6 introduces the new XBackend resource, which is a general-purpose decorator for Service (and other backend types) within Gateway API.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-10">
+                <a href="https://kubernetes.io/blog/2026/07/31/kubernetes-v1-37-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37 Sneak Peek
+                </a>
+                <p class="mb-1 small text-light">However, since the kernel ipvs API alone cannot fully implement Kubernetes Services, ipvs mode continues to use iptables underneath (KEP-3866, "The ipvs mode of kube-proxy will not save us"). New features and deprecations are also announced in the Kubernetes release notes.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-10">
+                <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How we used DSPy to turn AI evaluations into better responses in Dash chat
+                </a>
+                <p class="mb-1 small text-light">In practice, this meant tracking issues like incomplete answers and missed key aspects of a user's request. For each new prompt, we compared its performance against the existing production prompt using the same set of examples.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-10">
+                <a href="https://www.reddit.com/r/devops/comments/1vk7lk2/how_do_you_handle_conflicting_infrastructure_state/" target="_blank" class="fw-bold text-decoration-none">
+                    How do you handle conflicting infrastructure state?
+                </a>
+                <p class="mb-1 small text-light">Say Terraform says an EC2 instance should have encryption enabled, but the AWS console/API shows it disabled. And how do you tell whether it's actual drift, stale information, or something that failed during deployment.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-10">
+                <a href="https://netflixtechblog.medium.com/timeseries-tiered-storage-journey-kafka-flink-streams-to-native-cassandra-cold-reads-e59d597c9d60?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] TimeSeries Tiered Storage Journey: Kafka/Flink Streams to Native Cassandra Cold Reads
+                </a>
+                <p class="mb-1 small text-light">TimeSeries Data and Control PlaneWith that background, let’s look at the different solutions we built for data tiering. We introduced a new compaction strategy in Cassandra, which we call ReadOnlyCompactionStrategy (ROCS).</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-10">
+                <a href="https://netflixtechblog.com/modeling-device-capabilities-for-analytics-e7607acebde8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Modeling Device Capabilities for Analytics
+                </a>
+                <p class="mb-1 small text-light">Hardware limitations such as available RAM, CPU cores, display capabilities, or platform support mean that some features cannot be supported on certain device models. This approach helps us identify bottlenecks in feature penetration and accelerates the pace of innovation.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-08-10">
+                <a href="https://azure.microsoft.com/en-us/blog/gpt-5-6-now-available-in-microsoft-foundry/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] GPT-5.6 now available in Microsoft Foundry
+                </a>
+                <p class="mb-1 small text-light">These pillars come together in the latest Foundry updates, helping organizations build, run, and scale production agents on a single platform. This enables customers to adopt the latest frontier AI innovations where they have already built, deployed, and scaled their applications.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-10">
+                <a href="https://www.redhat.com/en/blog/inside-operation-jailbreak-red-hats-participation-us-armys-open-integration-sprint" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Inside Operation Jailbreak: Red Hat’s participation in the US Army’s open integration sprint
+                </a>
+                <p class="mb-1 small text-light">In May 2026 an important, unprecedented event took place in Fort Carson, Colorado: US Army Operation Jailbreak. This ambitious effort was created to address the urgent and growing need for US and allied forces to communicate with greater ease, share information at speed, a.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-08-10">
+                <a href="https://about.gitlab.com/blog/confidential-ai-for-gitlab-self-hosted/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Confidential AI for GitLab Self-Hosted
+                </a>
+                <p class="mb-1 small text-light">The segments feeling this most are financial services, healthcare and pharma, defense, the public sector, and critical infrastructure. You run the AI Gateway and the proxy yourself, and the setup is deployment-agnostic (Linux package, Docker, or Kubernetes).</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-10">
+                <a href="https://www.economist.com/asia/2026/08/06/the-philippines-big-offshoring-industry-is-growing-despite-ai" target="_blank" class="fw-bold text-decoration-none">
+                    The Philippines' big offshoring industry is growing despite AI
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.economist.com/asia/2026/08/06/the-philippines-big-offshoring-industry-is-growing-despite-ai Comments URL: https://news.ycombinator.com/item?id=49239226 Points: 46 # Comments: 45</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-10">
+                <a href="https://www.whodunnitai.com/" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: Voice driven murder mystery, Interview AI suspects with your voice
+                </a>
+                <p class="mb-1 small text-light">I'm excited to show off this really fun project I put together. I loved my proof of concept at the time, but wasn't quite happy with it.</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-10">
+                <a href="https://tuxedono2.com" target="_blank" class="fw-bold text-decoration-none">
+                    Tuxedo No. 2 – Cocktail recipes
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://tuxedono2.com Comments URL: https://news.ycombinator.com/item?id=49235697 Points: 89 # Comments: 23</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-10
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-10">
+                <a href="https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition" target="_blank" class="fw-bold text-decoration-none">
+                    The tragedy of the commons, AI edition
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition Comments URL: https://news.ycombinator.com/item?id=49235011 Points: 122 # Comments: 76</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-10
                     
                 </small>
             </li>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - August 21, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - August 21, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for August 21, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-08-21">2026-08-21 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 15 sources • Updated 2026-08-21 08:37:46
+                    Showing 25 total articles from 
+                    15 sources
+                    
                     
                 </span>
             </small>
@@ -117,278 +134,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-21">
-                <a href="https://encore.dev/blog/firecracker-apple-silicon" target="_blank" class="fw-bold text-decoration-none">
-                    We Rebuilt the Linux MicroVM Stack on Apple Silicon
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-21">
+                <a href="https://www.hashicorp.com/blog/hcp-terraform-is-the-control-plane-for-ai-driven-infrastructure" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] HCP Terraform is the control plane for AI-driven infrastructure
                 </a>
-                <p class="mb-1 small text-light">Article URL: https://encore.dev/blog/firecracker-apple-silicon Comments URL: https://news.ycombinator.com/item?id=49384716 Points: 30 # Comments: 3</p>
+                <p class="mb-1 small text-light">The agent commits to feature branches and reaches Terraform through a dedicated, project-scoped team token, never with cloud secrets.</p>
                 <small class="text-secondary">
                     
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-21">
-                <a href="https://Argentic.network" target="_blank" class="fw-bold text-decoration-none">
-                    Show HN: Argentic – An L402 Lightning toll booth for AI scraping agents
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://Argentic.network Comments URL: https://news.ycombinator.com/item?id=49384477 Points: 5 # Comments: 3</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-21">
-                <a href="https://annas-archive.gl/blog/physical-destruction.html" target="_blank" class="fw-bold text-decoration-none">
-                    AI companies destroy physical books – let's scan rare books before it's too late
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://annas-archive.gl/blog/physical-destruction.html Comments URL: https://news.ycombinator.com/item?id=49383026 Points: 301 # Comments: 217</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-21">
-                <a href="https://www.danielvaughn.dev/posts/huzzah/" target="_blank" class="fw-bold text-decoration-none">
-                    Show HN: Huzzah – a novel approach to coding with AI
-                </a>
-                <p class="mb-1 small text-light">I've been working on this experimental editor called Huzzah. They're great, but I'm finding it more and more tedious to write full sentences for every change I want.</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-21">
-                <a href="https://www.reddit.com/r/devops/comments/1vtgslx/aigenerated_code_detection_in_cicd_looking_for/" target="_blank" class="fw-bold text-decoration-none">
-                    AI-generated code detection in CI/CD — looking for approaches and real-world experience
-                </a>
-                <p class="mb-1 small text-light">The problem I'm running into is confidence and calibration. For example, a commit containing 500+ new lines isn't necessarily AI-generated.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-21">
-                <a href="https://www.reddit.com/r/devops/comments/1vribl5/what_kubernetes_misconfigurations_have_caused_you/" target="_blank" class="fw-bold text-decoration-none">
-                    What Kubernetes misconfigurations have caused you real production problems?
-                </a>
-                <p class="mb-1 small text-light">After working with Kubernetes in production, I've noticed that some of the most annoying incidents aren't caused by obvious failures. What's one Kubernetes configuration mistake that caused you a real incident.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-21">
-                <a href="https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] GenRec: Towards LLM-Native Recommendation at Netflix
-                </a>
-                <p class="mb-1 small text-light">Phase 1 is updated relatively infrequently and serves as a shared, Netflix‑aware backbone for many applications. The context window becomes our new “feature budget”, so we apply context engineering:Retain in full: high‑signal engagements (e.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-21">
-                <a href="https://www.docker.com/blog/docker-verified-publisher-applications-are-now-self-serve/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker Verified Publisher Applications Are Now Self-Serve
-                </a>
-                <p class="mb-1 small text-light">What’s new in Docker Verified Publisher Applications Applying to become a Docker Verified Publisher (DVP) is now self-serve. While the Docker team still evaluates every single application manually, this change makes it significantly easier to apply to the program.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-21">
-                <a href="https://www.docker.com/blog/make-zero-cves-your-new-default/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Make zero CVEs your new default
-                </a>
-                <p class="mb-1 small text-light">If you run a platform team or a security program, this is the math you are already living with. The catalog now carries fully supported Helm charts, so your Kubernetes deployments start hardened too.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-21">
-                <a href="https://www.docker.com/blog/reproducible-esp32-firmware-development-with-docker-and-docker-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Reproducible ESP32 Firmware Development with Docker and Docker Sandboxes
-                </a>
-                <p class="mb-1 small text-light">4, experimental board docker run --rm -it --device=/dev/esp32-experimental \ -v $PWD/new-feature:/project -w /project \ -u $UID -e HOME=/tmp \ espressif/idf:release-v5. yaml documents it better than shell history: services: new-feature: image: espressif/idf:release-v5.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-21">
-                <a href="https://www.redhat.com/en/blog/why-proprietary-software-isnt-retrospective-trend-trap-failure" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Why proprietary software isn’t a retrospective trend but a trap for failure
-                </a>
-                <p class="mb-1 small text-light">The telecommunications industry is considering one of its most consequential security debates in decades. Amid growing network complexity, 1 narrative argues that proprietary software is inherently more secure than its open source counterparts.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-21">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ec2-application-status-checks-iam-role-manager-openai-daybreak-on-bedrock-and-more-august-17-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: EC2 application status checks, IAM role manager, OpenAI Daybreak on Bedrock, and more (August 17, 2026)
-                </a>
-                <p class="mb-1 small text-light">7 on Amazon OpenSearch Service for improvements in vector search performance, search relevance, and Query Insights. Role manager supports six AWS service consoles at launch.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-21">
-                <a href="https://kubernetes.io/blog/2026/08/11/how-to-pretty-print-kubernetes-yaml-as-kyaml/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] How to Pretty-Print Your Kubernetes YAML as KYAML and Why You'd Want To
-                </a>
-                <p class="mb-1 small text-light">The interesting part is that Kubernetes doesn't actually need most of those features. Standard YAMLapiVersion: v1 kind: Pod metadata: name: my-pod labels: app: demo spec: containers: - name: nginx image: nginx:1.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-21">
-                <a href="https://www.cncf.io/blog/2026/08/20/german-ciphers-telegrams-and-cloud-native-data-sovereignty/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] German ciphers, telegrams, and cloud native data sovereignty
-                </a>
-                <p class="mb-1 small text-light">Making informed infrastructure choices We’re not telling you to rip out your cloud and move to a shed. Container orchestration platforms such as Kubernetes provide a consistent deployment substrate across public clouds, private infrastructure, and regional or sovereign cloud providers.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-21">
-                <a href="https://blog.cloudflare.com/task-based-oauth-consent/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] From all-or-nothing to task-based OAuth consent
-                </a>
-                <p class="mb-1 small text-light">Cloudflare OAuth already allows clients to request a subset of their configured scopes. The OAuth spec already allows authorization servers to grant a narrower set of scopes than what was requested.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-21">
-                <a href="https://blog.cloudflare.com/mcp-security-updates/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] How Cloudflare detects MCP traffic and helps secure it
-                </a>
-                <p class="mb-1 small text-light">Model Context Protocol (MCP) servers give agents a common way to discover and invoke tools backed by third-party SaaS products, internal applications, and APIs. Cloudflare One provides the networking pieces of that chain.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-21">
-                <a href="https://blog.cloudflare.com/workers-protected-by-access/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Secure all your internal vibe-coded applications — in one click
-                </a>
-                <p class="mb-1 small text-light">Deploy an internal platform where every deployment is private by default. Built on solid foundationsThis feature was made possible by FL2, the new Rust-based modular proxy that powers Cloudflare's edge.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-21">
-                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
-                </a>
-                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-21">
-                <a href="https://netflixtechblog.medium.com/behind-the-scenes-evolving-netflixs-ads-event-pipeline-for-live-part-ii-826ebf9ad9fb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Behind the Scenes: Evolving Netflix’s Ads Event Pipeline for Live — Part II
-                </a>
-                <p class="mb-1 small text-light">Just as important, we already knew how to run it. The solution here is a simple and idempotent key.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-21">
-                <a href="https://snyk.io/blog/continuous-offensive-security-ai-pentesting-20-faqs/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Continuous Offensive Security & AI Pentesting: 20 FAQs
-                </a>
-                <p class="mb-1 small text-light">Get answers to 20 common questions about continuous offensive security, AI penetration testing, DAST, and AI red teaming.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-21">
-                <a href="https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify
-                </a>
-                <p class="mb-1 small text-light">At Code with Claude, Spotify’s chief architect shared how we make both teams and AI agents more effective. The post Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-08-21">
-                <a href="https://slack.engineering/slack-ai-the-path-to-multi-cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Slack AI: The Path to Multi-Cloud
-                </a>
-                <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-21">
-                <a href="https://www.pulumi.com/blog/notification-center/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Never Miss What Your Infrastructure Is Telling You
-                </a>
-                <p class="mb-1 small text-light">Plenty happens in a Pulumi organization while you’re looking somewhere else. Neo finishes a task you kicked off just before taking lunch.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
+                    HashiCorp | 2026-08-21
                     
                 </small>
             </li>
@@ -400,19 +153,283 @@
                 <p class="mb-1 small text-light">But who should build the infrastructure that powers AI. New foundation models are released constantly, accelerator vendors continue introduc.</p>
                 <small class="text-secondary">
                     
-                    Red Hat
+                    Red Hat | 2026-08-21
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-21">
-                <a href="https://www.hashicorp.com/blog/hcp-terraform-is-the-control-plane-for-ai-driven-infrastructure" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] HCP Terraform is the control plane for AI-driven infrastructure
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-08-21">
+                <a href="https://slack.engineering/slack-ai-the-path-to-multi-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Slack AI: The Path to Multi-Cloud
                 </a>
-                <p class="mb-1 small text-light">The agent commits to feature branches and reaches Terraform through a dedicated, project-scoped team token, never with cloud secrets.</p>
+                <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    Slack Engineering | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-21">
+                <a href="https://www.pulumi.com/blog/notification-center/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Never Miss What Your Infrastructure Is Telling You
+                </a>
+                <p class="mb-1 small text-light">Plenty happens in a Pulumi organization while you’re looking somewhere else. Neo finishes a task you kicked off just before taking lunch.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-21">
+                <a href="https://netflixtechblog.medium.com/behind-the-scenes-evolving-netflixs-ads-event-pipeline-for-live-part-ii-826ebf9ad9fb?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Behind the Scenes: Evolving Netflix’s Ads Event Pipeline for Live — Part II
+                </a>
+                <p class="mb-1 small text-light">Just as important, we already knew how to run it. The solution here is a simple and idempotent key.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-21">
+                <a href="https://snyk.io/blog/continuous-offensive-security-ai-pentesting-20-faqs/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Continuous Offensive Security & AI Pentesting: 20 FAQs
+                </a>
+                <p class="mb-1 small text-light">Get answers to 20 common questions about continuous offensive security, AI penetration testing, DAST, and AI red teaming.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-21">
+                <a href="https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify
+                </a>
+                <p class="mb-1 small text-light">At Code with Claude, Spotify’s chief architect shared how we make both teams and AI agents more effective. The post Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-21">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ec2-application-status-checks-iam-role-manager-openai-daybreak-on-bedrock-and-more-august-17-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: EC2 application status checks, IAM role manager, OpenAI Daybreak on Bedrock, and more (August 17, 2026)
+                </a>
+                <p class="mb-1 small text-light">7 on Amazon OpenSearch Service for improvements in vector search performance, search relevance, and Query Insights. Role manager supports six AWS service consoles at launch.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-21">
+                <a href="https://kubernetes.io/blog/2026/08/11/how-to-pretty-print-kubernetes-yaml-as-kyaml/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] How to Pretty-Print Your Kubernetes YAML as KYAML and Why You'd Want To
+                </a>
+                <p class="mb-1 small text-light">The interesting part is that Kubernetes doesn't actually need most of those features. Standard YAMLapiVersion: v1 kind: Pod metadata: name: my-pod labels: app: demo spec: containers: - name: nginx image: nginx:1.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-21">
+                <a href="https://www.cncf.io/blog/2026/08/20/german-ciphers-telegrams-and-cloud-native-data-sovereignty/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] German ciphers, telegrams, and cloud native data sovereignty
+                </a>
+                <p class="mb-1 small text-light">Making informed infrastructure choices We’re not telling you to rip out your cloud and move to a shed. Container orchestration platforms such as Kubernetes provide a consistent deployment substrate across public clouds, private infrastructure, and regional or sovereign cloud providers.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-21">
+                <a href="https://blog.cloudflare.com/task-based-oauth-consent/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] From all-or-nothing to task-based OAuth consent
+                </a>
+                <p class="mb-1 small text-light">Cloudflare OAuth already allows clients to request a subset of their configured scopes. The OAuth spec already allows authorization servers to grant a narrower set of scopes than what was requested.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-21">
+                <a href="https://blog.cloudflare.com/mcp-security-updates/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] How Cloudflare detects MCP traffic and helps secure it
+                </a>
+                <p class="mb-1 small text-light">Model Context Protocol (MCP) servers give agents a common way to discover and invoke tools backed by third-party SaaS products, internal applications, and APIs. Cloudflare One provides the networking pieces of that chain.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-21">
+                <a href="https://blog.cloudflare.com/workers-protected-by-access/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Secure all your internal vibe-coded applications — in one click
+                </a>
+                <p class="mb-1 small text-light">Deploy an internal platform where every deployment is private by default. Built on solid foundationsThis feature was made possible by FL2, the new Rust-based modular proxy that powers Cloudflare's edge.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-21">
+                <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Beyond code generation: rethinking engineering productivity in the age of AI agents
+                </a>
+                <p class="mb-1 small text-light">Nova as our agent platform One of the best examples of this shift is Nova, our internal coding agent platform. Validation, orchestration, workflow integration, governance, and measurement become increasingly important as agentic systems scale.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-21">
+                <a href="https://www.reddit.com/r/devops/comments/1vtgslx/aigenerated_code_detection_in_cicd_looking_for/" target="_blank" class="fw-bold text-decoration-none">
+                    AI-generated code detection in CI/CD — looking for approaches and real-world experience
+                </a>
+                <p class="mb-1 small text-light">The problem I'm running into is confidence and calibration. For example, a commit containing 500+ new lines isn't necessarily AI-generated.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-21">
+                <a href="https://www.reddit.com/r/devops/comments/1vribl5/what_kubernetes_misconfigurations_have_caused_you/" target="_blank" class="fw-bold text-decoration-none">
+                    What Kubernetes misconfigurations have caused you real production problems?
+                </a>
+                <p class="mb-1 small text-light">After working with Kubernetes in production, I've noticed that some of the most annoying incidents aren't caused by obvious failures. What's one Kubernetes configuration mistake that caused you a real incident.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-21">
+                <a href="https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] GenRec: Towards LLM-Native Recommendation at Netflix
+                </a>
+                <p class="mb-1 small text-light">Phase 1 is updated relatively infrequently and serves as a shared, Netflix‑aware backbone for many applications. The context window becomes our new “feature budget”, so we apply context engineering:Retain in full: high‑signal engagements (e.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-21">
+                <a href="https://www.docker.com/blog/docker-verified-publisher-applications-are-now-self-serve/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker Verified Publisher Applications Are Now Self-Serve
+                </a>
+                <p class="mb-1 small text-light">What’s new in Docker Verified Publisher Applications Applying to become a Docker Verified Publisher (DVP) is now self-serve. While the Docker team still evaluates every single application manually, this change makes it significantly easier to apply to the program.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-21">
+                <a href="https://www.docker.com/blog/make-zero-cves-your-new-default/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Make zero CVEs your new default
+                </a>
+                <p class="mb-1 small text-light">If you run a platform team or a security program, this is the math you are already living with. The catalog now carries fully supported Helm charts, so your Kubernetes deployments start hardened too.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-21">
+                <a href="https://www.docker.com/blog/reproducible-esp32-firmware-development-with-docker-and-docker-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Reproducible ESP32 Firmware Development with Docker and Docker Sandboxes
+                </a>
+                <p class="mb-1 small text-light">4, experimental board docker run --rm -it --device=/dev/esp32-experimental \ -v $PWD/new-feature:/project -w /project \ -u $UID -e HOME=/tmp \ espressif/idf:release-v5. yaml documents it better than shell history: services: new-feature: image: espressif/idf:release-v5.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-21">
+                <a href="https://www.redhat.com/en/blog/why-proprietary-software-isnt-retrospective-trend-trap-failure" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Why proprietary software isn’t a retrospective trend but a trap for failure
+                </a>
+                <p class="mb-1 small text-light">The telecommunications industry is considering one of its most consequential security debates in decades. Amid growing network complexity, 1 narrative argues that proprietary software is inherently more secure than its open source counterparts.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-21">
+                <a href="https://encore.dev/blog/firecracker-apple-silicon" target="_blank" class="fw-bold text-decoration-none">
+                    We Rebuilt the Linux MicroVM Stack on Apple Silicon
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://encore.dev/blog/firecracker-apple-silicon Comments URL: https://news.ycombinator.com/item?id=49384716 Points: 30 # Comments: 3</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-21">
+                <a href="https://Argentic.network" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: Argentic – An L402 Lightning toll booth for AI scraping agents
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://Argentic.network Comments URL: https://news.ycombinator.com/item?id=49384477 Points: 5 # Comments: 3</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-21">
+                <a href="https://annas-archive.gl/blog/physical-destruction.html" target="_blank" class="fw-bold text-decoration-none">
+                    AI companies destroy physical books – let's scan rare books before it's too late
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://annas-archive.gl/blog/physical-destruction.html Comments URL: https://news.ycombinator.com/item?id=49383026 Points: 301 # Comments: 217</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-21
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-21">
+                <a href="https://www.danielvaughn.dev/posts/huzzah/" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: Huzzah – a novel approach to coding with AI
+                </a>
+                <p class="mb-1 small text-light">I've been working on this experimental editor called Huzzah. They're great, but I'm finding it more and more tedious to write full sentences for every change I want.</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-21
                     
                 </small>
             </li>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - August 22, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - August 22, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for August 22, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-08-22">2026-08-22 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-08-22 08:26:51
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,278 +132,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-22">
-                <a href="https://www.reddit.com/r/devops/comments/1vukq60/is_anyone_here_considering_mlops_or_you_think/" target="_blank" class="fw-bold text-decoration-none">
-                    Is anyone here considering MLOps or you think DevOps/ Platform engineering still has long way to go?
-                </a>
-                <p class="mb-1 small text-light">Because it looks promising and AI/ML is where all the money is, to be honest. Please share your experiences here, it really helps.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-22">
-                <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] A Tale of Two Flink Autoscalers
-                </a>
-                <p class="mb-1 small text-light">Because the autoscaler operates independently of the Flink platform, it remains unaffected by issues within Flink itself. That service is a Spring Boot application whose orchestration runs on Temporal, the durable workflow engine.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-22">
-                <a href="https://netflixtechblog.medium.com/netflix-conductor-the-next-chapter-41ad21067649?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Netflix Conductor: The Next Chapter
-                </a>
-                <p class="mb-1 small text-light">Netflix Conductor : The Next Chapterby Aravindan Ramkumar on behalf of the Conductor teamConductor is the workflow orchestration engine Netflix uses to stitch micro-services into reliable, observable business processes. It’s a set of applications that move production data into the cloud.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-22">
-                <a href="https://netflixtechblog.medium.com/timeseries-tiered-storage-journey-kafka-flink-streams-to-native-cassandra-cold-reads-e59d597c9d60?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] TimeSeries Tiered Storage Journey: Kafka/Flink Streams to Native Cassandra Cold Reads
-                </a>
-                <p class="mb-1 small text-light">TimeSeries Data and Control PlaneWith that background, let’s look at the different solutions we built for data tiering. We introduced a new compaction strategy in Cassandra, which we call ReadOnlyCompactionStrategy (ROCS).</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-22">
-                <a href="https://www.docker.com/blog/coding-agent-horror-stories-the-command-you-already-approved/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Coding Agent Horror Stories: The Command You Already Approved
-                </a>
-                <p class="mb-1 small text-light">Part 3 moved the same problem into a production cloud environment. Two caveats, both stated plainly in Docker’s security documentation.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-22">
-                <a href="https://aws.amazon.com/blogs/aws/aws-glue-6-0-now-available-with-30-lower-price-and-full-apache-iceberg-v3-support/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Glue 6.0 now available with 30% lower price and full Apache Iceberg v3 support
-                </a>
-                <p class="mb-1 small text-light">0, delivering 30% lower pricing than previous AWS Glue versions and introducing full support for Apache Iceberg v3 features.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-22">
-                <a href="https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore
-                </a>
-                <p class="mb-1 small text-light">What you get Runtime instances provides AWS-managed EC2 infrastructure where you deploy multiple agents in a single runtime, each with their own dependencies and artifact types.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-22">
-                <a href="https://www.hashicorp.com/blog/terraform-azurerm-provider-50-now-generally-available" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform AzureRM provider 5.0 now generally available
-                </a>
-                <p class="mb-1 small text-light">This gives platform teams more control over Azure subscription configuration and the permissions assigned to Terraform. Still, it is generally preferable to detect Azure configuration issues before an apply operation begins, rather than during deployment.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-22">
-                <a href="https://kubernetes.io/blog/2026/08/03/gateway-api-v1-6-release/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Gateway API v1.6: TCPRoute and UDPRoute Graduate to Standard
-                </a>
-                <p class="mb-1 small text-light">Gateway API has become the standard for modern, role-oriented, and expressive service networking in Kubernetes. 6 introduces the new XBackend resource, which is a general-purpose decorator for Service (and other backend types) within Gateway API.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-22">
-                <a href="https://kubernetes.io/blog/2026/07/31/kubernetes-v1-37-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37 Sneak Peek
-                </a>
-                <p class="mb-1 small text-light">However, since the kernel ipvs API alone cannot fully implement Kubernetes Services, ipvs mode continues to use iptables underneath (KEP-3866, "The ipvs mode of kube-proxy will not save us"). New features and deprecations are also announced in the Kubernetes release notes.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-22">
-                <a href="https://www.cncf.io/blog/2026/08/21/how-to-turn-slow-queries-into-actionable-reliability-metrics-with-opentelemetry/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] How to turn slow queries into actionable reliability metrics with OpenTelemetry
-                </a>
-                <p class="mb-1 small text-light">The Observability Stack For our lab, we use the OpenTelemetry Collector paired with docker-otel-lgtm—a pre-packaged stack from Grafana that bundles Loki, Grafana, Tempo, and Mimir in a single container.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-22">
-                <a href="https://blog.cloudflare.com/bot-preference-sync/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Say it once: introducing Bot Preference Sync
-                </a>
-                <p class="mb-1 small text-light">Introducing Bot Preference SyncBot Preference Sync is a new feature that keeps your robots. Instead of a site owner maintaining a separate static file, Cloudflare generates or updates your robots.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-22">
-                <a href="https://blog.cloudflare.com/rfc9234-bgp-role-model/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] BGP Role model: tracking the adoption of RFC 9234
-                </a>
-                <p class="mb-1 small text-light">In early partial deployment stages, central or top-tier ASes bear the responsibility of adopting such routing security solutions, or at least not compromising their effectiveness by stripping essential attributes.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-22">
-                <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How we used DSPy to turn AI evaluations into better responses in Dash chat
+                <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Improving infrastructure efficiency for growing demand in the age of AI
                 </a>
-                <p class="mb-1 small text-light">In practice, this meant tracking issues like incomplete answers and missed key aspects of a user's request. For each new prompt, we compared its performance against the existing production prompt using the same set of examples.</p>
+                <p class="mb-1 small text-light">But building new infrastructure is only part of the challenge. When performance declines or newer hardware provides meaningful improvements in capacity, reliability, or efficiency, we can plan a transition.</p>
                 <small class="text-secondary">
                     
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-22">
-                <a href="https://www.pulumi.com/blog/terraform-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Terraform and Kubernetes: A Practical Guide for 2026
-                </a>
-                <p class="mb-1 small text-light">Yes, Terraform can manage Kubernetes: the official hashicorp/kubernetes provider lets you declare Deployments, Services, and other objects as HCL resources, and community providers like kubectl fill in the gaps.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-08-22">
-                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-cloud-native-application-platforms/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms
-                </a>
-                <p class="mb-1 small text-light">Container Apps runs cloud-native applications, APIs, AI inferencing, and agents without requiring teams to manage infrastructure. Once modernized, those applications can connect to the same data, AI services, APIs, identity controls, and operational practices as new cloud-native applications.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-08-22">
-                <a href="https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] What customers value most in Microsoft Databases—from reliability to AI readiness
-                </a>
-                <p class="mb-1 small text-light">Azure SQL Database helps organizations modernize applications, reduce infrastructure management, and scale with confidence.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-22">
-                <a href="https://www.docker.com/blog/running-ai-agents-in-github-actions-with-docker-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Running AI agents in GitHub Actions with Docker Sandboxes
-                </a>
-                <p class="mb-1 small text-light">The isolation boundary is a micro VM While it’s common to assume that “Docker” implies a single application container, this setup actually uses a microVM as the primary isolation boundary. Add a PostgreSQL Testcontainers test that checks registration of two addresses that differ only in letter case.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-22">
-                <a href="https://www.docker.com/blog/ai-agent-security-systems-problem/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] 17,600 Actions: Agent Security Is a Systems Problem
-                </a>
-                <p class="mb-1 small text-light">They do not repair a vulnerable service the agent is authorized to contact, narrow a credential issued by another system, or replace the customer’s own security architecture.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-22">
-                <a href="https://www.redhat.com/en/blog/unify-it-workflows-scale-new-automation-orchestrator-ansible-automation-platform" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Unify IT workflows at scale with the new automation orchestrator for Ansible Automation Platform
-                </a>
-                <p class="mb-1 small text-light">As automation practices mature, the workflows they need to support naturally grow more complex—there are more teams, trigger types, decision points, and AI recommendations to account for. Red Hat is now making the new automation orchestrator generally available as an add-on for Red Hat Ansible Aut.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-22">
-                <a href="https://www.redhat.com/en/blog/how-global-financial-messaging-network-secured-millions-containers-and-defeated-alert-fatigue" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] How a global financial messaging network secured millions of containers and defeated alert fatigue
-                </a>
-                <p class="mb-1 small text-light">At Red Hat Summit 2026, Praveen Siddu, Senior Platform Architect at Swift, and Otmane Benali, Container Platform Product Owner at Swift, alongside Ryan Riley, Senior Solutions Architect at Red Hat, shared how they modernized container platform security.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-22">
-                <a href="https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant
-                </a>
-                <p class="mb-1 small text-light">At Spotify, data problems used to follow a specific pattern. You'd look for the relevant dashboard, there... The post Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-22">
-                <a href="https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model
-                </a>
-                <p class="mb-1 small text-light">AI infrastructure optimized for LLM training (kernels, parallelism, low precision recipes etc. Scaling Ratio (scaling efficiency) measures how much single-GPU performance is retained when distributing across thousands of GPUs.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
+                    Dropbox Tech | 2026-08-22
                     
                 </small>
             </li>
@@ -398,19 +151,283 @@
                 <p class="mb-1 small text-light">An experience plane provides the developer portal, CLI, and API/MCP surfaces. It translates higher-level resources into Kubernetes resources and hands reconciliation to each data plane’s own API server.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-08-22">
+                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-cloud-native-application-platforms/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms
+                </a>
+                <p class="mb-1 small text-light">Container Apps runs cloud-native applications, APIs, AI inferencing, and agents without requiring teams to manage infrastructure. Once modernized, those applications can connect to the same data, AI services, APIs, identity controls, and operational practices as new cloud-native applications.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-08-22">
+                <a href="https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] What customers value most in Microsoft Databases—from reliability to AI readiness
+                </a>
+                <p class="mb-1 small text-light">Azure SQL Database helps organizations modernize applications, reduce infrastructure management, and scale with confidence.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-22">
+                <a href="https://www.docker.com/blog/running-ai-agents-in-github-actions-with-docker-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Running AI agents in GitHub Actions with Docker Sandboxes
+                </a>
+                <p class="mb-1 small text-light">The isolation boundary is a micro VM While it’s common to assume that “Docker” implies a single application container, this setup actually uses a microVM as the primary isolation boundary. Add a PostgreSQL Testcontainers test that checks registration of two addresses that differ only in letter case.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-22">
+                <a href="https://www.docker.com/blog/ai-agent-security-systems-problem/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] 17,600 Actions: Agent Security Is a Systems Problem
+                </a>
+                <p class="mb-1 small text-light">They do not repair a vulnerable service the agent is authorized to contact, narrow a credential issued by another system, or replace the customer’s own security architecture.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-22">
+                <a href="https://www.redhat.com/en/blog/unify-it-workflows-scale-new-automation-orchestrator-ansible-automation-platform" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Unify IT workflows at scale with the new automation orchestrator for Ansible Automation Platform
+                </a>
+                <p class="mb-1 small text-light">As automation practices mature, the workflows they need to support naturally grow more complex—there are more teams, trigger types, decision points, and AI recommendations to account for. Red Hat is now making the new automation orchestrator generally available as an add-on for Red Hat Ansible Aut.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-22">
+                <a href="https://www.redhat.com/en/blog/how-global-financial-messaging-network-secured-millions-containers-and-defeated-alert-fatigue" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] How a global financial messaging network secured millions of containers and defeated alert fatigue
+                </a>
+                <p class="mb-1 small text-light">At Red Hat Summit 2026, Praveen Siddu, Senior Platform Architect at Swift, and Otmane Benali, Container Platform Product Owner at Swift, alongside Ryan Riley, Senior Solutions Architect at Red Hat, shared how they modernized container platform security.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-22">
+                <a href="https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant
+                </a>
+                <p class="mb-1 small text-light">At Spotify, data problems used to follow a specific pattern. You'd look for the relevant dashboard, there... The post Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-08-22">
+                <a href="https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model
+                </a>
+                <p class="mb-1 small text-light">AI infrastructure optimized for LLM training (kernels, parallelism, low precision recipes etc. Scaling Ratio (scaling efficiency) measures how much single-GPU performance is retained when distributing across thousands of GPUs.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-22">
+                <a href="https://aws.amazon.com/blogs/aws/aws-glue-6-0-now-available-with-30-lower-price-and-full-apache-iceberg-v3-support/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Glue 6.0 now available with 30% lower price and full Apache Iceberg v3 support
+                </a>
+                <p class="mb-1 small text-light">0, delivering 30% lower pricing than previous AWS Glue versions and introducing full support for Apache Iceberg v3 features.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-22">
+                <a href="https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore
+                </a>
+                <p class="mb-1 small text-light">What you get Runtime instances provides AWS-managed EC2 infrastructure where you deploy multiple agents in a single runtime, each with their own dependencies and artifact types.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-22">
+                <a href="https://www.hashicorp.com/blog/terraform-azurerm-provider-50-now-generally-available" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform AzureRM provider 5.0 now generally available
+                </a>
+                <p class="mb-1 small text-light">This gives platform teams more control over Azure subscription configuration and the permissions assigned to Terraform. Still, it is generally preferable to detect Azure configuration issues before an apply operation begins, rather than during deployment.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-22">
+                <a href="https://kubernetes.io/blog/2026/08/03/gateway-api-v1-6-release/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Gateway API v1.6: TCPRoute and UDPRoute Graduate to Standard
+                </a>
+                <p class="mb-1 small text-light">Gateway API has become the standard for modern, role-oriented, and expressive service networking in Kubernetes. 6 introduces the new XBackend resource, which is a general-purpose decorator for Service (and other backend types) within Gateway API.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-22">
+                <a href="https://kubernetes.io/blog/2026/07/31/kubernetes-v1-37-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37 Sneak Peek
+                </a>
+                <p class="mb-1 small text-light">However, since the kernel ipvs API alone cannot fully implement Kubernetes Services, ipvs mode continues to use iptables underneath (KEP-3866, "The ipvs mode of kube-proxy will not save us"). New features and deprecations are also announced in the Kubernetes release notes.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-22">
+                <a href="https://www.cncf.io/blog/2026/08/21/how-to-turn-slow-queries-into-actionable-reliability-metrics-with-opentelemetry/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] How to turn slow queries into actionable reliability metrics with OpenTelemetry
+                </a>
+                <p class="mb-1 small text-light">The Observability Stack For our lab, we use the OpenTelemetry Collector paired with docker-otel-lgtm—a pre-packaged stack from Grafana that bundles Loki, Grafana, Tempo, and Mimir in a single container.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-22">
+                <a href="https://blog.cloudflare.com/bot-preference-sync/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Say it once: introducing Bot Preference Sync
+                </a>
+                <p class="mb-1 small text-light">Introducing Bot Preference SyncBot Preference Sync is a new feature that keeps your robots. Instead of a site owner maintaining a separate static file, Cloudflare generates or updates your robots.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-22">
+                <a href="https://blog.cloudflare.com/rfc9234-bgp-role-model/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] BGP Role model: tracking the adoption of RFC 9234
+                </a>
+                <p class="mb-1 small text-light">In early partial deployment stages, central or top-tier ASes bear the responsibility of adopting such routing security solutions, or at least not compromising their effectiveness by stripping essential attributes.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-22
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-22">
-                <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Improving infrastructure efficiency for growing demand in the age of AI
+                <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How we used DSPy to turn AI evaluations into better responses in Dash chat
                 </a>
-                <p class="mb-1 small text-light">But building new infrastructure is only part of the challenge. When performance declines or newer hardware provides meaningful improvements in capacity, reliability, or efficiency, we can plan a transition.</p>
+                <p class="mb-1 small text-light">In practice, this meant tracking issues like incomplete answers and missed key aspects of a user's request. For each new prompt, we compared its performance against the existing production prompt using the same set of examples.</p>
                 <small class="text-secondary">
                     
-                    Dropbox Tech
+                    Dropbox Tech | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-22">
+                <a href="https://www.pulumi.com/blog/terraform-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Terraform and Kubernetes: A Practical Guide for 2026
+                </a>
+                <p class="mb-1 small text-light">Yes, Terraform can manage Kubernetes: the official hashicorp/kubernetes provider lets you declare Deployments, Services, and other objects as HCL resources, and community providers like kubectl fill in the gaps.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-22">
+                <a href="https://www.reddit.com/r/devops/comments/1vukq60/is_anyone_here_considering_mlops_or_you_think/" target="_blank" class="fw-bold text-decoration-none">
+                    Is anyone here considering MLOps or you think DevOps/ Platform engineering still has long way to go?
+                </a>
+                <p class="mb-1 small text-light">Because it looks promising and AI/ML is where all the money is, to be honest. Please share your experiences here, it really helps.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-22">
+                <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] A Tale of Two Flink Autoscalers
+                </a>
+                <p class="mb-1 small text-light">Because the autoscaler operates independently of the Flink platform, it remains unaffected by issues within Flink itself. That service is a Spring Boot application whose orchestration runs on Temporal, the durable workflow engine.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-22">
+                <a href="https://netflixtechblog.medium.com/netflix-conductor-the-next-chapter-41ad21067649?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Netflix Conductor: The Next Chapter
+                </a>
+                <p class="mb-1 small text-light">Netflix Conductor : The Next Chapterby Aravindan Ramkumar on behalf of the Conductor teamConductor is the workflow orchestration engine Netflix uses to stitch micro-services into reliable, observable business processes. It’s a set of applications that move production data into the cloud.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-22">
+                <a href="https://netflixtechblog.medium.com/timeseries-tiered-storage-journey-kafka-flink-streams-to-native-cassandra-cold-reads-e59d597c9d60?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] TimeSeries Tiered Storage Journey: Kafka/Flink Streams to Native Cassandra Cold Reads
+                </a>
+                <p class="mb-1 small text-light">TimeSeries Data and Control PlaneWith that background, let’s look at the different solutions we built for data tiering. We introduced a new compaction strategy in Cassandra, which we call ReadOnlyCompactionStrategy (ROCS).</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-22
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-22">
+                <a href="https://www.docker.com/blog/coding-agent-horror-stories-the-command-you-already-approved/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Coding Agent Horror Stories: The Command You Already Approved
+                </a>
+                <p class="mb-1 small text-light">Part 3 moved the same problem into a production cloud environment. Two caveats, both stated plainly in Docker’s security documentation.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-22
                     
                 </small>
             </li>

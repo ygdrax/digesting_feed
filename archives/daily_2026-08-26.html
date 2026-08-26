@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - August 26, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - August 26, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for August 26, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-08-26">2026-08-26 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    15 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Slack Engineering">Slack Engineering</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-26">
+                <a href="https://www.pulumi.com/blog/best-kubernetes-iac-tools-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Best Kubernetes Infrastructure as Code Tools in 2026
+                </a>
+                <p class="mb-1 small text-light">Reconciliation model Maturity / governance Best fit Pulumi Python, TypeScript, Go, C#, Java, YAML Yes One-shot apply (pulumi up), continuous via Kubernetes Operator Open-source core, commercial platform Teams wanting one codebase for cluster + workloads Terraform / OpenTofu HCL Yes One-shot apply...</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-08-26">
+                <a href="https://slack.engineering/from-ssh-to-rest-a-security-driven-modernization-of-slacks-emr-data-pipelines/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] From SSH to REST: A Security-Driven Modernization of Slack’s EMR Data Pipelines
+                </a>
+                <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-26">
+                <a href="https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How our universal content processing platform Riviera evolved for AI and beyond
+                </a>
+                <p class="mb-1 small text-light">This meant we needed a managed platform, a place where we could construct these services to be shared across many different features. The platform that began as an internal preview service is now infrastructure that developers can build on, too.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-26">
+                <a href="https://www.redhat.com/en/blog/streamlining-container-security-red-hat-hardened-images-now-supported-aws-inspectorscan-api-and-ecr-basic-scanning" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Streamlining container security: Red Hat Hardened Images now supported in AWS InspectorScan API and ECR Basic scanning
+                </a>
+                <p class="mb-1 small text-light">Software security teams can face an overwhelming influx of vulnerability alerts, often stemming from non-essential packages bundled inside traditional container base images.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-26">
+                <a href="https://www.hashicorp.com/blog/terraform-stacks-explained" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform Stacks, explained
+                </a>
+                <p class="mb-1 small text-light">This blog covers the challenges Terraform Stacks solve, their benefits, use cases, how they work, their features, and future roadmap. Deployment group orchestration rulesAs your usage of Stacks grows, manually managing and approving every deployment can become a significant bottleneck.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-26">
+                <a href="https://kubernetes.io/blog/2026/07/29/controller-runtime-cache-explained/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] How the controller-runtime Cache Actually Works, and Why Your Controller Does Not Crash the API Server
+                </a>
+                <p class="mb-1 small text-light">The starting point is how controllers actually read objects from the Kubernetes API. GVK (GroupVersionKind) — the triple that uniquely identifies an API type in Kubernetes: group, version, and kind, for example apps/v1/Deployment.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-26">
+                <a href="https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Building a Custom Metrics Exporter for Kubernetes
+                </a>
+                <p class="mb-1 small text-light">The release label must match the label selector configured on your Prometheus resource — kube-prometheus-stack is the default for a standard Helm install: apiVersion: monitoring.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-26">
+                <a href="https://www.cncf.io/blog/2026/08/25/stop-trying-to-learn-all-of-kubernetes-at-once/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Stop trying to learn all of Kubernetes at once
+                </a>
+                <p class="mb-1 small text-light">Container to pod, pod to service, service to ingress, ingress to the outside world. Most networking confusion in Kubernetes isn’t a networking problem, it’s a “which layer is this actually happening at” problem.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-08-26">
+                <a href="https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] A revisit of remote Spectre attacks on Cloudflare Workers
+                </a>
+                <p class="mb-1 small text-light">Cloudflare Workers security modelCloudflare Workers runs untrusted JavaScript on the edge. Attack primitivesThe Cloudflare Workers platform deliberately restricts timers.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-08-26">
+                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-26">
+                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
+                </a>
+                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-26">
+                <a href="https://www.reddit.com/r/devops/comments/1vy5d9x/video_infra_stack_for_a_platform_with_eu_data/" target="_blank" class="fw-bold text-decoration-none">
+                    Video infra stack for a platform with EU data residency requirements - what are ppl using
+                </a>
+                <p class="mb-1 small text-light">Building video for B2B SaaS (in-app tutorials + customer demos). One enterprise prospect has EU data residency reqs for user-facing infra, incl.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-26">
+                <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] A Tale of Two Flink Autoscalers
+                </a>
+                <p class="mb-1 small text-light">Because the autoscaler operates independently of the Flink platform, it remains unaffected by issues within Flink itself. That service is a Spring Boot application whose orchestration runs on Temporal, the durable workflow engine.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-26">
+                <a href="https://netflixtechblog.medium.com/netflix-conductor-the-next-chapter-41ad21067649?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Netflix Conductor: The Next Chapter
+                </a>
+                <p class="mb-1 small text-light">Netflix Conductor : The Next Chapterby Aravindan Ramkumar on behalf of the Conductor teamConductor is the workflow orchestration engine Netflix uses to stitch micro-services into reliable, observable business processes. It’s a set of applications that move production data into the cloud.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-26">
+                <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 3 — Querying the graph with gRPC…
+                </a>
+                <p class="mb-1 small text-light">We needed to handle a wide range of access patterns: from high-volume security lookups to deep, exploratory personalization traces. While this is only a “single hop,” it presents a significant scaling challenge.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-26">
+                <a href="https://netflixtechblog.medium.com/timeseries-tiered-storage-journey-kafka-flink-streams-to-native-cassandra-cold-reads-e59d597c9d60?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] TimeSeries Tiered Storage Journey: Kafka/Flink Streams to Native Cassandra Cold Reads
+                </a>
+                <p class="mb-1 small text-light">TimeSeries Data and Control PlaneWith that background, let’s look at the different solutions we built for data tiering. We introduced a new compaction strategy in Cassandra, which we call ReadOnlyCompactionStrategy (ROCS).</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-08-26">
+                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-ai-augmented-code-modernization-tools/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools
+                </a>
+                <p class="mb-1 small text-light">NET Framework applications, Java runtimes, aging dependencies, and accumulated security debt power critical business processes while also limiting an organization’s ability to move forward.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-26">
+                <a href="https://www.docker.com/blog/moving-from-minimus-to-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Moving from Minimus to Docker Hardened Images
+                </a>
+                <p class="mb-1 small text-light">If you need a hand, Docker is offering free migration assistance to Minimus customers. 0, allows production use, and has no user caps.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-26">
+                <a href="https://www.docker.com/blog/minio-end-of-life-how-to-stay-patched-and-audit-ready-with-docker-els/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] MinIO End of Life: How to Stay Patched and Audit-Ready with Docker ELS
+                </a>
+                <p class="mb-1 small text-light">A project with more than a billion Docker pulls stopped shipping releases, bug fixes, and security patches overnight. And MinIO is only the newest instance of a wider problem.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-08-26">
+                <a href="https://www.redhat.com/en/blog/beyond-benchmarks-5-pillars-ai-evaluation-systems" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Beyond benchmarks: The 5 pillars of AI evaluation systems
+                </a>
+                <p class="mb-1 small text-light">As AI agents move from demos into production, teams are discovering that benchmark scores alone rarely translate into business value.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-08-26">
+                <a href="https://about.gitlab.com/blog/hosted-runners-for-gitlab-dedicated/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Scale software delivery pipelines in isolation without owning the runner fleet
+                </a>
+                <p class="mb-1 small text-light">As agentic workflows drive more pipeline volume, full data isolation and runner infrastructure operational burden become a challenge. To support job-level security, each job runs in a newly provisioned, isolated VM that is deleted after the job completes.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-26">
+                <a href="https://snyk.io/blog/what-evo-cos-found-real-enterprise-saas/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Show, Don't Tell: What Evo Continuous Offensive Security Found in a Real Enterprise SaaS
+                </a>
+                <p class="mb-1 small text-light">A real Evo Continuous Offensive Security assessment uncovered 33 confirmed vulnerabilities in a multi-tenant enterprise SaaS, including tenant-wide compromise and critical authorization flaws.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-26">
+                <a href="https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] When Can LLMs Replace Humans in A/B Tests?
+                </a>
+                <p class="mb-1 small text-light">TL;DR: LLM predictions can stand in for human outcomes in A/B tests, but only by assumption, not by design.... The post When Can LLMs Replace Humans in A/B Tests? appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-26">
+                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
+                </a>
+                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-26">
+                <a href="https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Content Ingestion & Podcast Video Incident Report
+                </a>
+                <p class="mb-1 small text-light">Over the past two months, podcast creators have experienced a series of reliability issues on Spotify. This... The post Content Ingestion & Podcast Video Incident Report appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-26
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

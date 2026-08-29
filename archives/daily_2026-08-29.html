@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - August 29, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - August 29, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for August 29, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-08-29">2026-08-29 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2026-08-29 13:37:40
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,266 +130,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-29">
-                <a href="https://github.com/stemdeckapp/stemdeck" target="_blank" class="fw-bold text-decoration-none">
-                    StemDeck, a free, open-source and local AI stem separator
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://github.com/stemdeckapp/stemdeck Comments URL: https://news.ycombinator.com/item?id=49486081 Points: 142 # Comments: 32</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-29">
-                <a href="https://www.inventati.org/" target="_blank" class="fw-bold text-decoration-none">
-                    U.S. sanctions against the A/I Collective
-                </a>
-                <p class="mb-1 small text-light">org a "global terrorist" - https://news. id=49464391 - (131 comments)US sanctions Italian hosting provider Autistici Inventati - https://news.</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-29">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-student-rewards-on-aws-builder-center-local-zone-in-las-vegas-and-more-august-24-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: Student Rewards on AWS Builder Center, Local Zone in Las Vegas, and more (August 24, 2026)
-                </a>
-                <p class="mb-1 small text-light">Rick Suttles published Introducing Student Rewards on AWS Builder Center, a new benefit for verified higher education students. For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-29">
-                <a href="https://aws.amazon.com/blogs/aws/in-the-works-aws-builder-lofts-in-berlin-hyderabad-and-sao-paulo/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] In the works: AWS Builder Lofts in Berlin, Hyderabad, and São Paulo
-                </a>
-                <p class="mb-1 small text-light">In the early days of cloud computing, AWS supported intensive learning for builders in a physical space called the AWS Pop-up Lofts in cities worldwide. AWS provides the space, the infrastructure, and the support, but the energy comes from the builders who participate.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-29">
-                <a href="https://www.hashicorp.com/blog/relaunching-hashicorp-validated-designs-with-improved-usability" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Relaunching HashiCorp Validated Designs with improved usability
-                </a>
-                <p class="mb-1 small text-light">This guidance focuses on infrastructure and system architecture, prerequisites, deployment, post-installation configuration, initial identity integration, observability setup, and other one-time setup tasks required to get a production-ready environment in place.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-29">
-                <a href="https://www.hashicorp.com/blog/hcp-vault-dedicated-audit-logs-microsoft-sentinel" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Stream HCP Vault Dedicated audit logs to Microsoft Sentinel
-                </a>
-                <p class="mb-1 small text-light">This deployment assumes your Vault Dedicated cluster can reach the Terraform-created Azure ingestion endpoint over HTTPS. Terraform and the Azure CLI, in Azure Cloud Shell or installed locally.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-29">
-                <a href="https://www.hashicorp.com/blog/packer-v1160-brings-verifiable-provenance-to-machine-images" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Packer v1.16.0 brings verifiable provenance to machine images
-                </a>
-                <p class="mb-1 small text-light">With this release, Packer provides a cryptographic, tamper-evident record of every build without requiring any separate provenance tooling. Until now, SLSA tooling has largely focused on application packages and containers.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-29">
-                <a href="https://www.cncf.io/blog/2026/08/26/governance-guidance-for-cncf-projects-choosing-the-right-structure-for-your-projects-size-and-stage/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Governance guidance for CNCF projects: Choosing the right structure for your project’s size and stage
-                </a>
-                <p class="mb-1 small text-light">Three governance models The CNCF project template repository provides three governance templates. The steering body handles cross-cutting concerns: shared infrastructure, brand, security response, and conflict resolution between subprojects.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-29">
-                <a href="https://www.reddit.com/r/devops/comments/1w1ceae/how_do_you_handle_automation_work_when/" target="_blank" class="fw-bold text-decoration-none">
-                    How do you handle automation work when stakeholders expect fast results but access/security slows everything down?
-                </a>
-                <p class="mb-1 small text-light">My current challenge is that the company is becoming more restrictive about external/unapproved automation tools, so I’m trying to move everything into approved internal tools and infrastructure.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-29">
-                <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] A Tale of Two Flink Autoscalers
-                </a>
-                <p class="mb-1 small text-light">Because the autoscaler operates independently of the Flink platform, it remains unaffected by issues within Flink itself. That service is a Spring Boot application whose orchestration runs on Temporal, the durable workflow engine.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-29">
-                <a href="https://netflixtechblog.medium.com/netflix-conductor-the-next-chapter-41ad21067649?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Netflix Conductor: The Next Chapter
-                </a>
-                <p class="mb-1 small text-light">Netflix Conductor : The Next Chapterby Aravindan Ramkumar on behalf of the Conductor teamConductor is the workflow orchestration engine Netflix uses to stitch micro-services into reliable, observable business processes. It’s a set of applications that move production data into the cloud.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-29">
-                <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 3 — Querying the graph with gRPC…
-                </a>
-                <p class="mb-1 small text-light">We needed to handle a wide range of access patterns: from high-volume security lookups to deep, exploratory personalization traces. While this is only a “single hop,” it presents a significant scaling challenge.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-29">
-                <a href="https://www.docker.com/blog/moving-from-minimus-to-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Moving from Minimus to Docker Hardened Images
-                </a>
-                <p class="mb-1 small text-light">If you need a hand, Docker is offering free migration assistance to Minimus customers. 0, allows production use, and has no user caps.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-29">
-                <a href="https://www.docker.com/blog/minio-end-of-life-how-to-stay-patched-and-audit-ready-with-docker-els/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] MinIO End of Life: How to Stay Patched and Audit-Ready with Docker ELS
-                </a>
-                <p class="mb-1 small text-light">A project with more than a billion Docker pulls stopped shipping releases, bug fixes, and security patches overnight. And MinIO is only the newest instance of a wider problem.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-29">
-                <a href="https://snyk.io/blog/what-evo-cos-found-real-enterprise-saas/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Show, Don't Tell: What Evo Continuous Offensive Security Found in a Real Enterprise SaaS
-                </a>
-                <p class="mb-1 small text-light">A real Evo Continuous Offensive Security assessment uncovered 33 confirmed vulnerabilities in a multi-tenant enterprise SaaS, including tenant-wide compromise and critical authorization flaws.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-29">
-                <a href="https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] When Can LLMs Replace Humans in A/B Tests?
-                </a>
-                <p class="mb-1 small text-light">TL;DR: LLM predictions can stand in for human outcomes in A/B tests, but only by assumption, not by design.... The post When Can LLMs Replace Humans in A/B Tests? appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-29">
-                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
-                </a>
-                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-29">
-                <a href="https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Content Ingestion & Podcast Video Incident Report
-                </a>
-                <p class="mb-1 small text-light">Over the past two months, podcast creators have experienced a series of reliability issues on Spotify. This... The post Content Ingestion & Podcast Video Incident Report appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-29">
-                <a href="https://kubernetes.io/blog/2026/08/28/kubernetes-v1-37-pod-certificates-and-cluster-trust-bundles/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37: Pod Certificates and Cluster Trust Bundles
-                </a>
-                <p class="mb-1 small text-light">509 certificates from your Kubernetes workload just as easy as using service account JWTs, while maintaining Kubernetes’ high security bar. Wherever possible, security checks are built into kube-apiserver, rather than burdening signer or application developers.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-08-29">
-                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
-                </a>
-                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-29">
-                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
-                </a>
-                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-29">
-                <a href="https://www.pulumi.com/blog/kubernetes-crds-as-provider-extensions/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Pulumi Kubernetes v4.34.0: CRDs as provider extensions
+                <a href="https://www.pulumi.com/blog/best-kubernetes-iac-tools-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Best Kubernetes Infrastructure as Code Tools in 2026
                 </a>
-                <p class="mb-1 small text-light">0, the newest version of the Pulumi Kubernetes provider, which includes improved support for Kubernetes Custom Resource Definitions (CRDs). This provider release includes the newest resources for Kubernetes v1.</p>
+                <p class="mb-1 small text-light">Reconciliation model Maturity / governance Best fit Pulumi Python, TypeScript, Go, C#, Java, YAML Yes One-shot apply (pulumi up), continuous via Kubernetes Operator Open-source core, commercial platform Teams wanting one codebase for cluster + workloads Terraform / OpenTofu HCL Yes One-shot apply...</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-08-29
                     
                 </small>
             </li>
@@ -384,7 +149,7 @@
                 <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-08-29
                     
                 </small>
             </li>
@@ -396,19 +161,271 @@
                 <p class="mb-1 small text-light">This meant we needed a managed platform, a place where we could construct these services to be shared across many different features. The platform that began as an internal preview service is now infrastructure that developers can build on, too.</p>
                 <small class="text-secondary">
                     
-                    Dropbox Tech
+                    Dropbox Tech | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-08-29">
+                <a href="https://kubernetes.io/blog/2026/08/28/kubernetes-v1-37-pod-certificates-and-cluster-trust-bundles/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: Pod Certificates and Cluster Trust Bundles
+                </a>
+                <p class="mb-1 small text-light">509 certificates from your Kubernetes workload just as easy as using service account JWTs, while maintaining Kubernetes’ high security bar. Wherever possible, security checks are built into kube-apiserver, rather than burdening signer or application developers.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-08-29">
+                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-08-29">
+                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
+                </a>
+                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-08-29
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-08-29">
-                <a href="https://www.pulumi.com/blog/best-kubernetes-iac-tools-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Best Kubernetes Infrastructure as Code Tools in 2026
+                <a href="https://www.pulumi.com/blog/kubernetes-crds-as-provider-extensions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Pulumi Kubernetes v4.34.0: CRDs as provider extensions
                 </a>
-                <p class="mb-1 small text-light">Reconciliation model Maturity / governance Best fit Pulumi Python, TypeScript, Go, C#, Java, YAML Yes One-shot apply (pulumi up), continuous via Kubernetes Operator Open-source core, commercial platform Teams wanting one codebase for cluster + workloads Terraform / OpenTofu HCL Yes One-shot apply...</p>
+                <p class="mb-1 small text-light">0, the newest version of the Pulumi Kubernetes provider, which includes improved support for Kubernetes Custom Resource Definitions (CRDs). This provider release includes the newest resources for Kubernetes v1.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-08-29">
+                <a href="https://www.reddit.com/r/devops/comments/1w1ceae/how_do_you_handle_automation_work_when/" target="_blank" class="fw-bold text-decoration-none">
+                    How do you handle automation work when stakeholders expect fast results but access/security slows everything down?
+                </a>
+                <p class="mb-1 small text-light">My current challenge is that the company is becoming more restrictive about external/unapproved automation tools, so I’m trying to move everything into approved internal tools and infrastructure.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-29">
+                <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] A Tale of Two Flink Autoscalers
+                </a>
+                <p class="mb-1 small text-light">Because the autoscaler operates independently of the Flink platform, it remains unaffected by issues within Flink itself. That service is a Spring Boot application whose orchestration runs on Temporal, the durable workflow engine.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-29">
+                <a href="https://netflixtechblog.medium.com/netflix-conductor-the-next-chapter-41ad21067649?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Netflix Conductor: The Next Chapter
+                </a>
+                <p class="mb-1 small text-light">Netflix Conductor : The Next Chapterby Aravindan Ramkumar on behalf of the Conductor teamConductor is the workflow orchestration engine Netflix uses to stitch micro-services into reliable, observable business processes. It’s a set of applications that move production data into the cloud.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-08-29">
+                <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] How and Why Netflix Built a Real-Time Distributed Graph: Part 3 — Querying the graph with gRPC…
+                </a>
+                <p class="mb-1 small text-light">We needed to handle a wide range of access patterns: from high-volume security lookups to deep, exploratory personalization traces. While this is only a “single hop,” it presents a significant scaling challenge.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-29">
+                <a href="https://www.docker.com/blog/moving-from-minimus-to-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Moving from Minimus to Docker Hardened Images
+                </a>
+                <p class="mb-1 small text-light">If you need a hand, Docker is offering free migration assistance to Minimus customers. 0, allows production use, and has no user caps.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-08-29">
+                <a href="https://www.docker.com/blog/minio-end-of-life-how-to-stay-patched-and-audit-ready-with-docker-els/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] MinIO End of Life: How to Stay Patched and Audit-Ready with Docker ELS
+                </a>
+                <p class="mb-1 small text-light">A project with more than a billion Docker pulls stopped shipping releases, bug fixes, and security patches overnight. And MinIO is only the newest instance of a wider problem.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-08-29">
+                <a href="https://snyk.io/blog/what-evo-cos-found-real-enterprise-saas/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Show, Don't Tell: What Evo Continuous Offensive Security Found in a Real Enterprise SaaS
+                </a>
+                <p class="mb-1 small text-light">A real Evo Continuous Offensive Security assessment uncovered 33 confirmed vulnerabilities in a multi-tenant enterprise SaaS, including tenant-wide compromise and critical authorization flaws.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-29">
+                <a href="https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] When Can LLMs Replace Humans in A/B Tests?
+                </a>
+                <p class="mb-1 small text-light">TL;DR: LLM predictions can stand in for human outcomes in A/B tests, but only by assumption, not by design.... The post When Can LLMs Replace Humans in A/B Tests? appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-29">
+                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
+                </a>
+                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-08-29">
+                <a href="https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Content Ingestion & Podcast Video Incident Report
+                </a>
+                <p class="mb-1 small text-light">Over the past two months, podcast creators have experienced a series of reliability issues on Spotify. This... The post Content Ingestion & Podcast Video Incident Report appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-29">
+                <a href="https://github.com/stemdeckapp/stemdeck" target="_blank" class="fw-bold text-decoration-none">
+                    StemDeck, a free, open-source and local AI stem separator
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://github.com/stemdeckapp/stemdeck Comments URL: https://news.ycombinator.com/item?id=49486081 Points: 142 # Comments: 32</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-08-29">
+                <a href="https://www.inventati.org/" target="_blank" class="fw-bold text-decoration-none">
+                    U.S. sanctions against the A/I Collective
+                </a>
+                <p class="mb-1 small text-light">org a "global terrorist" - https://news. id=49464391 - (131 comments)US sanctions Italian hosting provider Autistici Inventati - https://news.</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-29">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-student-rewards-on-aws-builder-center-local-zone-in-las-vegas-and-more-august-24-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Student Rewards on AWS Builder Center, Local Zone in Las Vegas, and more (August 24, 2026)
+                </a>
+                <p class="mb-1 small text-light">Rick Suttles published Introducing Student Rewards on AWS Builder Center, a new benefit for verified higher education students. For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-08-29">
+                <a href="https://aws.amazon.com/blogs/aws/in-the-works-aws-builder-lofts-in-berlin-hyderabad-and-sao-paulo/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] In the works: AWS Builder Lofts in Berlin, Hyderabad, and São Paulo
+                </a>
+                <p class="mb-1 small text-light">In the early days of cloud computing, AWS supported intensive learning for builders in a physical space called the AWS Pop-up Lofts in cities worldwide. AWS provides the space, the infrastructure, and the support, but the energy comes from the builders who participate.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-29">
+                <a href="https://www.hashicorp.com/blog/relaunching-hashicorp-validated-designs-with-improved-usability" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Relaunching HashiCorp Validated Designs with improved usability
+                </a>
+                <p class="mb-1 small text-light">This guidance focuses on infrastructure and system architecture, prerequisites, deployment, post-installation configuration, initial identity integration, observability setup, and other one-time setup tasks required to get a production-ready environment in place.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-29">
+                <a href="https://www.hashicorp.com/blog/hcp-vault-dedicated-audit-logs-microsoft-sentinel" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Stream HCP Vault Dedicated audit logs to Microsoft Sentinel
+                </a>
+                <p class="mb-1 small text-light">This deployment assumes your Vault Dedicated cluster can reach the Terraform-created Azure ingestion endpoint over HTTPS. Terraform and the Azure CLI, in Azure Cloud Shell or installed locally.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-08-29">
+                <a href="https://www.hashicorp.com/blog/packer-v1160-brings-verifiable-provenance-to-machine-images" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Packer v1.16.0 brings verifiable provenance to machine images
+                </a>
+                <p class="mb-1 small text-light">With this release, Packer provides a cryptographic, tamper-evident record of every build without requiring any separate provenance tooling. Until now, SLSA tooling has largely focused on application packages and containers.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-08-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-08-29">
+                <a href="https://www.cncf.io/blog/2026/08/26/governance-guidance-for-cncf-projects-choosing-the-right-structure-for-your-projects-size-and-stage/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Governance guidance for CNCF projects: Choosing the right structure for your project’s size and stage
+                </a>
+                <p class="mb-1 small text-light">Three governance models The CNCF project template repository provides three governance templates. The steering body handles cross-cutting concerns: shared infrastructure, brand, security response, and conflict resolution between subprojects.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-08-29
                     
                 </small>
             </li>

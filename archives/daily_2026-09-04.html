@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - September 04, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - September 04, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for September 04, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-09-04">2026-09-04 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-09-04 12:32:56
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,278 +132,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-04">
-                <a href="https://www.reddit.com/r/devops/comments/1w6odjd/cv_review_devsecops_cloud_security_internship/" target="_blank" class="fw-bold text-decoration-none">
-                    CV Review — DevSecOps / Cloud Security internship
-                </a>
-                <p class="mb-1 small text-light">I'm a student targeting DevSecOps / Cloud Security internship opportunities. I've tried to position the CV around DevSecOps rather than generic DevOps or cybersecurity.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-04">
-                <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] A Tale of Two Flink Autoscalers
-                </a>
-                <p class="mb-1 small text-light">Because the autoscaler operates independently of the Flink platform, it remains unaffected by issues within Flink itself. That service is a Spring Boot application whose orchestration runs on Temporal, the durable workflow engine.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-04">
-                <a href="https://netflixtechblog.medium.com/netflix-conductor-the-next-chapter-41ad21067649?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Netflix Conductor: The Next Chapter
-                </a>
-                <p class="mb-1 small text-light">Netflix Conductor : The Next Chapterby Aravindan Ramkumar on behalf of the Conductor teamConductor is the workflow orchestration engine Netflix uses to stitch micro-services into reliable, observable business processes. It’s a set of applications that move production data into the cloud.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-04">
-                <a href="https://www.docker.com/blog/moving-from-minimus-to-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Moving from Minimus to Docker Hardened Images
-                </a>
-                <p class="mb-1 small text-light">If you need a hand, Docker is offering free migration assistance to Minimus customers. 0, allows production use, and has no user caps.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-09-04">
-                <a href="https://snyk.io/blog/what-evo-cos-found-real-enterprise-saas/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Show, Don't Tell: What Evo Continuous Offensive Security Found in a Real Enterprise SaaS
-                </a>
-                <p class="mb-1 small text-light">A real Evo Continuous Offensive Security assessment uncovered 33 confirmed vulnerabilities in a multi-tenant enterprise SaaS, including tenant-wide compromise and critical authorization flaws.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-04">
-                <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-r9g-and-r9gd-instances-powered-by-aws-graviton5-processors-are-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon EC2 R9g and R9gd instances powered by AWS Graviton5 processors are now generally available
-                </a>
-                <p class="mb-1 small text-light">Kubernetes, Docker, EKS, ECS), as well as applications written in popular programming languages such as C/C++, Rust, Go, Java, Python,. This gives your applications near-bare-metal performance while maintaining strong security isolation between instances.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-04">
-                <a href="https://www.hashicorp.com/blog/the-common-security-controls-behind-indias-regulatory-wave" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] The common security controls behind India's regulatory wave
-                </a>
-                <p class="mb-1 small text-light">A closer look: API key security and the secrets lifecycle Controls rarely arrive alone. It’s digital payment security direction adds web application firewall and DDoS protection in front of internet-exposed services.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-04">
-                <a href="https://kubernetes.io/blog/2026/09/03/kubernetes-v1-37-dra-updates/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37: DRA Updates
-                </a>
-                <p class="mb-1 small text-light">I'll dive into what's new for DRA in Kubernetes 1. Several features currently in Alpha and Beta are on track to progress in the coming releases, and the community keeps working on DRA's performance, scalability, and reliability.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-04">
-                <a href="https://kubernetes.io/blog/2026/08/31/kubernetes-v1-37-storage-version-migration-ga/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37: Storage Version Migration Enabled by Default
-                </a>
-                <p class="mb-1 small text-light">After a number of releases of work and testing, the built-in StorageVersionMigration API (storagemigration. The problem with stale storage versionsIn Kubernetes, stored API resources are written using a specific storage version (schema representation).</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-04">
-                <a href="https://kubernetes.io/blog/2026/08/28/kubernetes-v1-37-pod-certificates-and-cluster-trust-bundles/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37: Pod Certificates and Cluster Trust Bundles
-                </a>
-                <p class="mb-1 small text-light">509 certificates from your Kubernetes workload just as easy as using service account JWTs, while maintaining Kubernetes’ high security bar. Wherever possible, security checks are built into kube-apiserver, rather than burdening signer or application developers.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-04">
-                <a href="https://blog.cloudflare.com/cache-transcoding/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] How we could save petabytes of cache storage with Zstandard and Pingora
-                </a>
-                <p class="mb-1 small text-light">Cloudflare traditionally stores an asset using the content encoding supplied by its origin. The smaller representation also helps as an asset moves through Tiered Cache because it reduces the data transferred between Cloudflare data centers, making backbone usage more efficient.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-09-04">
-                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
-                </a>
-                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-04">
-                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
-                </a>
-                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2026-09-04">
-                <a href="https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
-                    [Lyft Engineering] Rerouting the Stream: How Lyft Moved to the Apache Flink Operator
-                </a>
-                <p class="mb-1 small text-light">Security patches lagged, modern Kubernetes features stayed out of reach, and every quarter we waited made the eventual escape messier. The translation from FlinkApplication to FlinkDeployment happens within our deploy API.</p>
-                <small class="text-secondary">
-                    
-                    Lyft Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-04">
-                <a href="https://www.pulumi.com/blog/kubernetes-crds-as-provider-extensions/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Pulumi Kubernetes v4.34.0: CRDs as provider extensions
-                </a>
-                <p class="mb-1 small text-light">0, the newest version of the Pulumi Kubernetes provider, which includes improved support for Kubernetes Custom Resource Definitions (CRDs). This provider release includes the newest resources for Kubernetes v1.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-04">
-                <a href="https://www.reddit.com/r/devops/comments/1w6vrgs/how_to_create_planning_design_development_testing/" target="_blank" class="fw-bold text-decoration-none">
-                    How to create Planning, Design, Development, Testing, Deployment, Maintenance Pipeline? Please suggest sources
-                </a>
-                <p class="mb-1 small text-light">He mentioned that he built a pipeline covering the entire software development lifecycle—from planning and design to development, testing, deployment, and maintenance—with each stage flowing into the next. I really liked that idea, and now I'm wondering how to build a pipeline like that myself.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-04">
-                <a href="https://www.reddit.com/r/devops/comments/1w42bxs/anyone_else_seeing_ai_make_devopsinfra_the/" target="_blank" class="fw-bold text-decoration-none">
-                    Anyone else seeing AI make DevOps/infra the bottleneck?
-                </a>
-                <p class="mb-1 small text-light">Our DevOps team is mostly made up of former software developers who moved toward infrastructure, automation, and pipelines. We have a large organization, multiple companies we deploy for, Kubernetes, networking, security requirements, IAM, CI/CD, observability, etc.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-04">
-                <a href="https://www.docker.com/blog/what-is-yolo-mode/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] YOLO Mode: Agent Autonomy Without the Guardrails
-                </a>
-                <p class="mb-1 small text-light">Inside a proper boundary, however, developers can use agents in YOLO mode to unlock a new level of productivity, without jeopardizing security. Key takeaways YOLO mode is when an AI agent auto-approves every action, with no confirmation prompts.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-04">
-                <a href="https://www.redhat.com/en/blog/last-mile-problem-agentic-ai-why-tool-calling-reliability-harder-it-looks" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] The last mile problem in agentic AI: Why tool calling reliability is harder than it looks
-                </a>
-                <p class="mb-1 small text-light">Most of the attention in agentic AI goes to the agent's reasoning capabilities. The model can figure out the right plan, break a goal into steps, and decide what to do next.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-04">
-                <a href="https://www.cncf.io/blog/2026/09/04/kubernetes-isnt-new-but-ai-makes-it-scary-again/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Kubernetes isn’t new, but AI makes It scary again
+                <a href="https://www.cncf.io/blog/2026/09/04/cpu-gpu-why-ai-platform-engineering-is-a-heterogeneous-infrastructure-problem/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] CPU + GPU: Why AI platform engineering is a heterogeneous infrastructure problem
                 </a>
-                <p class="mb-1 small text-light">Most AI teams don’t start on Kubernetes, even though that’s usually where their infrastructure ends up. Embracing the New Shift Stepping into Kubernetes to meet today’s AI demands can feel overwhelming.</p>
+                <p class="mb-1 small text-light">For Kubernetes platform teams, the challenge is not just providing accelerators. Kubernetes provides a common orchestration layer for doing this.</p>
                 <small class="text-secondary">
                     
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-04">
-                <a href="https://blog.cloudflare.com/vulnerability-discovery-remediation/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing context-aware vulnerability discovery and remediation with Cloudflare Managed Defense and OpenAI Daybreak models
-                </a>
-                <p class="mb-1 small text-light">Vulnerability Discovery and Remediation is a new, invitation-only Cloudflare service that helps customers detect and mitigate vulnerabilities in their codebases. Adding context to a vulnerability harnessOur solution works across Cloudflare Workers and proxied applications.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-09-04">
-                <a href="https://slack.engineering/from-ssh-to-rest-a-security-driven-modernization-of-slacks-emr-data-pipelines/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] From SSH to REST: A Security-Driven Modernization of Slack’s EMR Data Pipelines
-                </a>
-                <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-04">
-                <a href="https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How our universal content processing platform Riviera evolved for AI and beyond
-                </a>
-                <p class="mb-1 small text-light">This meant we needed a managed platform, a place where we could construct these services to be shared across many different features. The platform that began as an internal preview service is now infrastructure that developers can build on, too.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
+                    CNCF | 2026-09-04
                     
                 </small>
             </li>
@@ -398,19 +151,283 @@
                 <p class="mb-1 small text-light">Reconciliation model Maturity / governance Best fit Pulumi Python, TypeScript, Go, C#, Java, YAML Yes One-shot apply (pulumi up), continuous via Kubernetes Operator Open-source core, commercial platform Teams wanting one codebase for cluster + workloads Terraform / OpenTofu HCL Yes One-shot apply...</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-09-04
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-04">
-                <a href="https://www.cncf.io/blog/2026/09/04/cpu-gpu-why-ai-platform-engineering-is-a-heterogeneous-infrastructure-problem/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] CPU + GPU: Why AI platform engineering is a heterogeneous infrastructure problem
+                <a href="https://www.cncf.io/blog/2026/09/04/kubernetes-isnt-new-but-ai-makes-it-scary-again/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Kubernetes isn’t new, but AI makes It scary again
                 </a>
-                <p class="mb-1 small text-light">For Kubernetes platform teams, the challenge is not just providing accelerators. Kubernetes provides a common orchestration layer for doing this.</p>
+                <p class="mb-1 small text-light">Most AI teams don’t start on Kubernetes, even though that’s usually where their infrastructure ends up. Embracing the New Shift Stepping into Kubernetes to meet today’s AI demands can feel overwhelming.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-04">
+                <a href="https://blog.cloudflare.com/vulnerability-discovery-remediation/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing context-aware vulnerability discovery and remediation with Cloudflare Managed Defense and OpenAI Daybreak models
+                </a>
+                <p class="mb-1 small text-light">Vulnerability Discovery and Remediation is a new, invitation-only Cloudflare service that helps customers detect and mitigate vulnerabilities in their codebases. Adding context to a vulnerability harnessOur solution works across Cloudflare Workers and proxied applications.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-09-04">
+                <a href="https://slack.engineering/from-ssh-to-rest-a-security-driven-modernization-of-slacks-emr-data-pipelines/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] From SSH to REST: A Security-Driven Modernization of Slack’s EMR Data Pipelines
+                </a>
+                <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-04">
+                <a href="https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How our universal content processing platform Riviera evolved for AI and beyond
+                </a>
+                <p class="mb-1 small text-light">This meant we needed a managed platform, a place where we could construct these services to be shared across many different features. The platform that began as an internal preview service is now infrastructure that developers can build on, too.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-04">
+                <a href="https://www.reddit.com/r/devops/comments/1w6vrgs/how_to_create_planning_design_development_testing/" target="_blank" class="fw-bold text-decoration-none">
+                    How to create Planning, Design, Development, Testing, Deployment, Maintenance Pipeline? Please suggest sources
+                </a>
+                <p class="mb-1 small text-light">He mentioned that he built a pipeline covering the entire software development lifecycle—from planning and design to development, testing, deployment, and maintenance—with each stage flowing into the next. I really liked that idea, and now I'm wondering how to build a pipeline like that myself.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-04">
+                <a href="https://www.reddit.com/r/devops/comments/1w42bxs/anyone_else_seeing_ai_make_devopsinfra_the/" target="_blank" class="fw-bold text-decoration-none">
+                    Anyone else seeing AI make DevOps/infra the bottleneck?
+                </a>
+                <p class="mb-1 small text-light">Our DevOps team is mostly made up of former software developers who moved toward infrastructure, automation, and pipelines. We have a large organization, multiple companies we deploy for, Kubernetes, networking, security requirements, IAM, CI/CD, observability, etc.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-04">
+                <a href="https://www.docker.com/blog/what-is-yolo-mode/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] YOLO Mode: Agent Autonomy Without the Guardrails
+                </a>
+                <p class="mb-1 small text-light">Inside a proper boundary, however, developers can use agents in YOLO mode to unlock a new level of productivity, without jeopardizing security. Key takeaways YOLO mode is when an AI agent auto-approves every action, with no confirmation prompts.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-04">
+                <a href="https://www.redhat.com/en/blog/last-mile-problem-agentic-ai-why-tool-calling-reliability-harder-it-looks" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] The last mile problem in agentic AI: Why tool calling reliability is harder than it looks
+                </a>
+                <p class="mb-1 small text-light">Most of the attention in agentic AI goes to the agent's reasoning capabilities. The model can figure out the right plan, break a goal into steps, and decide what to do next.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-04">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-r9g-and-r9gd-instances-powered-by-aws-graviton5-processors-are-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon EC2 R9g and R9gd instances powered by AWS Graviton5 processors are now generally available
+                </a>
+                <p class="mb-1 small text-light">Kubernetes, Docker, EKS, ECS), as well as applications written in popular programming languages such as C/C++, Rust, Go, Java, Python,. This gives your applications near-bare-metal performance while maintaining strong security isolation between instances.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-04">
+                <a href="https://www.hashicorp.com/blog/the-common-security-controls-behind-indias-regulatory-wave" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] The common security controls behind India's regulatory wave
+                </a>
+                <p class="mb-1 small text-light">A closer look: API key security and the secrets lifecycle Controls rarely arrive alone. It’s digital payment security direction adds web application firewall and DDoS protection in front of internet-exposed services.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-04">
+                <a href="https://kubernetes.io/blog/2026/09/03/kubernetes-v1-37-dra-updates/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: DRA Updates
+                </a>
+                <p class="mb-1 small text-light">I'll dive into what's new for DRA in Kubernetes 1. Several features currently in Alpha and Beta are on track to progress in the coming releases, and the community keeps working on DRA's performance, scalability, and reliability.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-04">
+                <a href="https://kubernetes.io/blog/2026/08/31/kubernetes-v1-37-storage-version-migration-ga/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: Storage Version Migration Enabled by Default
+                </a>
+                <p class="mb-1 small text-light">After a number of releases of work and testing, the built-in StorageVersionMigration API (storagemigration. The problem with stale storage versionsIn Kubernetes, stored API resources are written using a specific storage version (schema representation).</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-04">
+                <a href="https://kubernetes.io/blog/2026/08/28/kubernetes-v1-37-pod-certificates-and-cluster-trust-bundles/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: Pod Certificates and Cluster Trust Bundles
+                </a>
+                <p class="mb-1 small text-light">509 certificates from your Kubernetes workload just as easy as using service account JWTs, while maintaining Kubernetes’ high security bar. Wherever possible, security checks are built into kube-apiserver, rather than burdening signer or application developers.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-04">
+                <a href="https://blog.cloudflare.com/cache-transcoding/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] How we could save petabytes of cache storage with Zstandard and Pingora
+                </a>
+                <p class="mb-1 small text-light">Cloudflare traditionally stores an asset using the content encoding supplied by its origin. The smaller representation also helps as an asset moves through Tiered Cache because it reduces the data transferred between Cloudflare data centers, making backbone usage more efficient.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-09-04">
+                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-04">
+                <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How Dropbox uses MCP and Dash to close the design-to-code security gap
+                </a>
+                <p class="mb-1 small text-light">Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. We realized the problem wasn’t a lack of security knowledge.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2026-09-04">
+                <a href="https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
+                    [Lyft Engineering] Rerouting the Stream: How Lyft Moved to the Apache Flink Operator
+                </a>
+                <p class="mb-1 small text-light">Security patches lagged, modern Kubernetes features stayed out of reach, and every quarter we waited made the eventual escape messier. The translation from FlinkApplication to FlinkDeployment happens within our deploy API.</p>
+                <small class="text-secondary">
+                    
+                    Lyft Engineering | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-04">
+                <a href="https://www.pulumi.com/blog/kubernetes-crds-as-provider-extensions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Pulumi Kubernetes v4.34.0: CRDs as provider extensions
+                </a>
+                <p class="mb-1 small text-light">0, the newest version of the Pulumi Kubernetes provider, which includes improved support for Kubernetes Custom Resource Definitions (CRDs). This provider release includes the newest resources for Kubernetes v1.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-04">
+                <a href="https://www.reddit.com/r/devops/comments/1w6odjd/cv_review_devsecops_cloud_security_internship/" target="_blank" class="fw-bold text-decoration-none">
+                    CV Review — DevSecOps / Cloud Security internship
+                </a>
+                <p class="mb-1 small text-light">I'm a student targeting DevSecOps / Cloud Security internship opportunities. I've tried to position the CV around DevSecOps rather than generic DevOps or cybersecurity.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-04">
+                <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] A Tale of Two Flink Autoscalers
+                </a>
+                <p class="mb-1 small text-light">Because the autoscaler operates independently of the Flink platform, it remains unaffected by issues within Flink itself. That service is a Spring Boot application whose orchestration runs on Temporal, the durable workflow engine.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-04">
+                <a href="https://netflixtechblog.medium.com/netflix-conductor-the-next-chapter-41ad21067649?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Netflix Conductor: The Next Chapter
+                </a>
+                <p class="mb-1 small text-light">Netflix Conductor : The Next Chapterby Aravindan Ramkumar on behalf of the Conductor teamConductor is the workflow orchestration engine Netflix uses to stitch micro-services into reliable, observable business processes. It’s a set of applications that move production data into the cloud.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-04">
+                <a href="https://www.docker.com/blog/moving-from-minimus-to-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Moving from Minimus to Docker Hardened Images
+                </a>
+                <p class="mb-1 small text-light">If you need a hand, Docker is offering free migration assistance to Minimus customers. 0, allows production use, and has no user caps.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-09-04">
+                <a href="https://snyk.io/blog/what-evo-cos-found-real-enterprise-saas/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Show, Don't Tell: What Evo Continuous Offensive Security Found in a Real Enterprise SaaS
+                </a>
+                <p class="mb-1 small text-light">A real Evo Continuous Offensive Security assessment uncovered 33 confirmed vulnerabilities in a multi-tenant enterprise SaaS, including tenant-wide compromise and critical authorization flaws.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-09-04
                     
                 </small>
             </li>

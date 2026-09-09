@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - September 09, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - September 09, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for September 09, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-09-09">2026-09-09 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    11 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-09">
+                <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Improving infrastructure efficiency for growing demand in the age of AI
+                </a>
+                <p class="mb-1 small text-light">But building new infrastructure is only part of the challenge. When performance declines or newer hardware provides meaningful improvements in capacity, reliability, or efficiency, we can plan a transition.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-09">
+                <a href="https://www.pulumi.com/blog/pulumi-neo-security/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Neo Security: Securing Infrastructure in the Agentic Era
+                </a>
+                <p class="mb-1 small text-light">Neo Security is an agent that can find exploitable flaws in your cloud infrastructure. Neo Security works on your existing infrastructure regardless of how it was provisioned, across any of our thousands of cloud providers including AWS, Azure, Google Cloud, and Kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-09">
+                <a href="https://www.cncf.io/blog/2026/09/09/how-cloud-native-goes-ai-native/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] How cloud native goes AI native
+                </a>
+                <p class="mb-1 small text-light">I believe closing this velocity gap is the defining infrastructure problem of the next few years, and the engineers working in cloud native infrastructure can either help or hinder.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-09">
+                <a href="https://blog.cloudflare.com/automatic-key-exchange-for-origins/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Automatic Key Exchange: faster, post-quantum secure origin handshakes for 45 billion daily connections (and counting)
+                </a>
+                <p class="mb-1 small text-light">Every time Cloudflare opens a new TLS 1. We have also introduced a new Compliance requirements setting under Automatic Key Exchange.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-09">
+                <a href="https://blog.cloudflare.com/botbase-for-operators/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] BotBase for Operators: A clearer path to joining Cloudflare's directory of bots and agents
+                </a>
+                <p class="mb-1 small text-light">Starting today, the bot submission experience has a home next to the rest of your bot and trust tools: Protect & Connect → Application Security → BotBase (new. All customers can access this today directly from the Cloudflare dashboard.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-09">
+                <a href="https://www.reddit.com/r/devops/comments/1wbjdto/best_practices_for_exposing_multiple_websites_in/" target="_blank" class="fw-bold text-decoration-none">
+                    Best practices for exposing multiple websites in Docker containers on the same Ubuntu server to the web
+                </a>
+                <p class="mb-1 small text-light">Each website should have its own isolated environment in a Docker container (open to suggestions if Docker is not ideal).</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-09">
+                <a href="https://www.reddit.com/r/devops/comments/1w82naw/detailed_guide_building_a_3node_kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    Detailed guide: Building a 3-node Kubernetes homelab with Talos Linux
+                </a>
+                <p class="mb-1 small text-light">A few days ago, I posted my 3-node Talos Kubernetes homelab setup here, and quite a few people reached out through DMs and comments asking for a detailed installation guide. I’ve put everything together in a detailed blog with commands, screenshots, and the reasoning behind the setup.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-09">
+                <a href="https://www.docker.com/blog/building-reproducible-ai-evaluation-workflows-with-docker-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Building Reproducible AI Evaluation Workflows with Docker Sandboxes
+                </a>
+                <p class="mb-1 small text-light">Developers now have access to more benchmarks, evaluation libraries, model APIs, and agent frameworks than ever before. A workflow written during local development shouldn’t need to change simply because it later executes inside Docker Sandboxes.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-09">
+                <a href="https://www.redhat.com/en/blog/nvidia-bluefield-security-and-acceleration-arrive-red-hat-ai-factory-nvidia-and-red-hat-openshift" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] NVIDIA BlueField security and acceleration arrive on the Red Hat AI Factory with NVIDIA and Red Hat OpenShift
+                </a>
+                <p class="mb-1 small text-light">When infrastructure services run directly on host CPUs, they create an "infrastructure tax" – consuming valuable CPU cycles that should be dedicated to core business applications, 5G core, radio access network (RAN) network functions, or resource-intensive AI models.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-09">
+                <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] An Organizational Second Brain: Building an AI That Learns From Experts
+                </a>
+                <p class="mb-1 small text-light">A self-improvement loop then compiles expert feedback into verified, regression-tested updates without model retraining. Its job is to find problems such as contradictions introduced, edge cases broken, or positions undermined.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-09">
+                <a href="https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] MetaRoCE: A New RDMA Transport Built for AI-Scale Ethernet
+                </a>
+                <p class="mb-1 small text-light">The application layer remains mostly untouched – existing RDMA Verbs APIs and software stacks work without modification. Enhanced features like multiplane support are supported through extension APIs.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-09">
+                <a href="https://engineering.fb.com/2026/08/24/networking-traffic/mtia-300-meta-training-chip-built-in-nics/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] MTIA 300: Meta’s First Training Chip with Built-in NICs and Communication-Offloading Engines
+                </a>
+                <p class="mb-1 small text-light">Training recommendation models is a unique infrastructure challenge. To minimize per-transaction latency, we introduced express doorbells.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-09">
+                <a href="https://kubernetes.io/blog/2026/09/08/kubernetes-v1-37-advancing-workload-aware-scheduling/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: Advancing Workload-Aware Scheduling
+                </a>
+                <p class="mb-1 small text-light">Following the foundational workload-centric enhancements introduced in previous releases, Kubernetes v1. This new API allows expressing multi-level topology constraints, gang scheduling, and preemption policies for complex, heterogeneous groups of Pods.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-09">
+                <a href="https://kubernetes.io/blog/2026/09/02/kubernetes-v1-37-hpa-scale-to-zero-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: Scale Workloads to Zero with HorizontalPodAutoscaler
+                </a>
+                <p class="mb-1 small text-light">Before creating the HPA, you can verify that Kubernetes can read the metric: kubectl get --raw \ '/apis/external.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-09">
+                <a href="https://www.cncf.io/blog/2026/09/09/whose-gpus-are-these-anyway-secure-self-service-metrics-for-multi-tenant-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Whose GPUs are these, anyway? Secure, self-service metrics for multi-tenant Kubernetes
+                </a>
+                <p class="mb-1 small text-light">v=gI40zpbES5w About the authors Bingi Narasimha Karthik (Golden Kubestronaut, Adobe) is a Senior Cloud Engineer working on Kubernetes observability and GPU workload orchestration.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-09">
+                <a href="https://blog.cloudflare.com/introducing-adaptive-intelligence/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing Adaptive Intelligence: Undermining the economics of every bot attack
+                </a>
+                <p class="mb-1 small text-light">Attackers can adapt as often and continuously as they need, while most defenses are deployed in discrete, managed releases. It aggregates network signals from across Cloudflare's network and measures the probability of automated abuse for every request.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-09">
+                <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How we used DSPy to turn AI evaluations into better responses in Dash chat
+                </a>
+                <p class="mb-1 small text-light">In practice, this meant tracking issues like incomplete answers and missed key aspects of a user's request. For each new prompt, we compared its performance against the existing production prompt using the same set of examples.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-09">
+                <a href="https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Running Apache Spark experiments in my sleep (and on a plane)
+                </a>
+                <p class="mb-1 small text-light">That works for standard software bugs, but it fails completely for big data performance bottlenecks. Why tmux MatteredAll of this ran on Workbench, Netflix’s cloud dev environment, using my laptop as a thin terminal.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-09">
+                <a href="https://netflixtechblog.com/maps-netflixs-multimodal-asset-personalization-at-scale-32f96320785e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] MAPS: Netflix’s Multimodal Asset Personalization at Scale
+                </a>
+                <p class="mb-1 small text-light">Cold-Start Challenge from a New UI LaunchThe real test came from the product change that motivated the work. Its key property is that it decouples foundation-model updates from personalization-model deployments.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-09">
+                <a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-context-engineering-for-enterprise-ai-agents/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] The Economics of Agent Optimization: Context engineering for enterprise AI agents
+                </a>
+                <p class="mb-1 small text-light">Once a new toolbox version is tested and promoted, connected agents can use it without code changes or redeployment. Memory in Foundry Agent Service helps agents retain important context without replaying entire conversations.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-09">
+                <a href="https://www.docker.com/blog/benefits-of-sandbox-environments/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] 6 Benefits of Sandbox Environments (and How Docker Sandboxes Delivers Them)
+                </a>
+                <p class="mb-1 small text-light">Restricting the filesystem keeps sensitive host paths, like SSH keys and cloud credentials, out of reach. Secure credential handling Agents need credentials to do useful work: a token to push to a repo, an API key to call a service.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-09">
+                <a href="https://www.docker.com/blog/below-the-harness-governing-a-multi-model-multi-harness-world/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Below the Harness: Governing a Multi-Model, Multi-Harness World
+                </a>
+                <p class="mb-1 small text-light">Updates to sandboxing models should be treated as a security event. Now, a model or agent vendor making an update won’t randomly change your security posture.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-09">
+                <a href="https://www.docker.com/blog/secure-by-default-is-your-only-way-forward/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Secure by default is your only way forward
+                </a>
+                <p class="mb-1 small text-light">And where the box sits stops mattering, whether it’s a laptop or the cloud, because the boundary travels with the work, as Docker containers always have. Docker has been making the case that security is a developer experience problem from the start.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-09">
+                <a href="https://www.redhat.com/en/blog/red-hat-sponsors-openclaw-foundation-advance-open-future-production-ai-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat sponsors the OpenClaw Foundation to advance an open future for production AI agents
+                </a>
+                <p class="mb-1 small text-light">In July, the OpenClaw Foundation was announced with Red Hat joining as a sponsor to bring open, more secure infrastructure to autonomous AI agents. The value of OpenClaw lies in its persistence.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-09-09
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-09">
+                <a href="https://www.redhat.com/en/blog/context-wall-what-happens-when-your-ai-agent-hits-gpu-memory-ceiling" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] The context wall: What happens when your AI agent hits the GPU memory ceiling
+                </a>
+                <p class="mb-1 small text-light">Every model has a physical limit to how much it can hold in active memory at once. When production workloads hit that limit, they hit the context wall, and the failure is silent.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-09-09
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

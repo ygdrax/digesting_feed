@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - September 12, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - September 12, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for September 12, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-09-12">2026-09-12 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 11 sources • Updated 2026-09-12 11:58:17
+                    Showing 25 total articles from 
+                    11 sources
+                    
                     
                 </span>
             </small>
@@ -109,266 +126,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-12">
-                <a href="https://www.reddit.com/r/devops/comments/1we0cu1/thoughts_on_the_role_of_devops_in_the_aicentric/" target="_blank" class="fw-bold text-decoration-none">
-                    Thoughts on the role of DevOps in the AI-centric near future?
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-12">
+                <a href="https://www.redhat.com/en/blog/closing-aiops-loop-splunk-observability-cloud-and-red-hat-ansible-automation-platform" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Closing the AIOps loop with Splunk Observability Cloud and Red Hat Ansible Automation Platform
                 </a>
-                <p class="mb-1 small text-light">Amusingly, a friend of mine assumed that DevOps role would decline with the rise of AI. However, it would seem that in reality, the reverse is true. Or at least it seems that way, based on the limited insight of some. What are your thoughts? submitted by /u/SeriouslySally36</p>
+                <p class="mb-1 small text-light">Pairing Splunk Observability Cloud with Red Hat Ansible Automation Platform helps bridge the gap between discovery and response, transforming manual triage into safer, automated self-healing that reduces mean time to resolution (MTTR).</p>
                 <small class="text-secondary">
                     
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-12">
-                <a href="https://www.reddit.com/r/devops/comments/1wdhbub/is_devops_taken_over_by_ai/" target="_blank" class="fw-bold text-decoration-none">
-                    Is Devops taken over by AI
-                </a>
-                <p class="mb-1 small text-light">I'm a junior DevOps engineer and I work in a project where we manage their kubernetes cluster and Linux servers configuration with ansible and provisioning with terraform but the thing is they have way too many ticket and they want it all done asap, for which they demand using AI to get things done quickly but the things is I learn nothing it's endless number of tickets that keep on arriving and I have to depend on AI to get it done quickly and I get no time to learn what I love to learn and need to learm which is kubernetes going deeper in linux golang ansible and much more I know what these tools are and how they work but I want to go deeper build my own infra build and break things but I couldn't do it because the seniors and devs want things done asap and I have to use AI This add nothing on my resum even If I have 5 years of experience what do I tell the interviewer that all I did was use AI can someone plz help me submitted by /u/Alternative_Image308</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-12">
-                <a href="https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Running Apache Spark experiments in my sleep (and on a plane)
-                </a>
-                <p class="mb-1 small text-light">That works for standard software bugs, but it fails completely for big data performance bottlenecks. Why tmux MatteredAll of this ran on Workbench, Netflix’s cloud dev environment, using my laptop as a thin terminal.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-12">
-                <a href="https://netflixtechblog.com/maps-netflixs-multimodal-asset-personalization-at-scale-32f96320785e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] MAPS: Netflix’s Multimodal Asset Personalization at Scale
-                </a>
-                <p class="mb-1 small text-light">Cold-Start Challenge from a New UI LaunchThe real test came from the product change that motivated the work. Its key property is that it decouples foundation-model updates from personalization-model deployments.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-12">
-                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-container-management/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management
-                </a>
-                <p class="mb-1 small text-light">Organizations now need more than container orchestration; they need a platform that provides a consistent operating model across cloud, edge, and hybrid deployments while adapting to new requirements without needing applications to be rebuilt.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-12">
-                <a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-how-ai-agent-governance-controls-cost-and-proves-roi/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] The Economics of Agent Optimization: How AI agent governance controls cost and proves ROI
-                </a>
-                <p class="mb-1 small text-light">It is often discussed in terms of security, compliance, and lifecycle management. The key can represent a subscription, application, team, customer, workload identity, or another business boundary.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-12">
-                <a href="https://www.docker.com/blog/benefits-of-sandbox-environments/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] 6 Benefits of Sandbox Environments (and How Docker Sandboxes Delivers Them)
-                </a>
-                <p class="mb-1 small text-light">Restricting the filesystem keeps sensitive host paths, like SSH keys and cloud credentials, out of reach. Secure credential handling Agents need credentials to do useful work: a token to push to a repo, an API key to call a service.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-12">
-                <a href="https://www.docker.com/blog/below-the-harness-governing-a-multi-model-multi-harness-world/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Below the Harness: Governing a Multi-Model, Multi-Harness World
-                </a>
-                <p class="mb-1 small text-light">Updates to sandboxing models should be treated as a security event. Now, a model or agent vendor making an update won’t randomly change your security posture.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-12">
-                <a href="https://kubernetes.io/blog/2026/09/11/kubernetes-v1-37-native-histograms-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37: Native Histograms Graduates to Beta
-                </a>
-                <p class="mb-1 small text-light">36 under KEP-5808) bring high-resolution, low-cardinality observability to Kubernetes metrics. Since the early days of Kubernetes observability, duration and latency metrics (such as API server request latencies or scheduling durations) have relied on classic Prometheus histograms.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-12">
-                <a href="https://kubernetes.io/blog/2026/09/08/kubernetes-v1-37-advancing-workload-aware-scheduling/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37: Advancing Workload-Aware Scheduling
-                </a>
-                <p class="mb-1 small text-light">Following the foundational workload-centric enhancements introduced in previous releases, Kubernetes v1. This new API allows expressing multi-level topology constraints, gang scheduling, and preemption policies for complex, heterogeneous groups of Pods.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-12">
-                <a href="https://www.cncf.io/blog/2026/09/09/whose-gpus-are-these-anyway-secure-self-service-metrics-for-multi-tenant-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Whose GPUs are these, anyway? Secure, self-service metrics for multi-tenant Kubernetes
-                </a>
-                <p class="mb-1 small text-light">v=gI40zpbES5w About the authors Bingi Narasimha Karthik (Golden Kubestronaut, Adobe) is a Senior Cloud Engineer working on Kubernetes observability and GPU workload orchestration.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-12">
-                <a href="https://blog.cloudflare.com/casb-policies/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing automatic remediation policies with Cloudflare CASB
-                </a>
-                <p class="mb-1 small text-light">When we launched Cloudflare CASB, a cloud access security broker, we wanted to provide security teams complete visibility into the posture of their SaaS applications before misconfigurations became incidents.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-12">
-                <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How we used DSPy to turn AI evaluations into better responses in Dash chat
-                </a>
-                <p class="mb-1 small text-light">In practice, this meant tracking issues like incomplete answers and missed key aspects of a user's request. For each new prompt, we compared its performance against the existing production prompt using the same set of examples.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-12">
-                <a href="https://www.pulumi.com/blog/esc-oidc-setup-cli/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Set Up Cloud OIDC From the Pulumi CLI
-                </a>
-                <p class="mb-1 small text-light">This eliminates hard-coded credentials and improves your security posture. pulumi env setup - how it works Run the command with your desired cloud provider (aws, azure, gcp).</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-12">
-                <a href="https://www.reddit.com/r/devops/comments/1wdmq7h/need_to_know_possible_outcomes_of_cicd_pipeline/" target="_blank" class="fw-bold text-decoration-none">
-                    Need to know possible outcomes of CI/CD pipeline failures !
-                </a>
-                <p class="mb-1 small text-light">I have very basic understanding of CI/CD pipe line. - Upstream Dependency Drift : An external package, container base image, or third-party artifact that introduced a breaking change, version conflict, or became unavailable in a package registry.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-12">
-                <a href="https://azure.microsoft.com/en-us/blog/the-future-of-infrastructure-resiliency-starts-with-modernization/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] The future of infrastructure resiliency starts with modernization
-                </a>
-                <p class="mb-1 small text-light">As organizations modernize business-critical applications, cloud-native services, and AI workloads, resiliency can no longer be bolted on after deployment. Applications evolve, new services are introduced, new dependencies emerge, and infrastructure environments continuously change.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-12">
-                <a href="https://www.docker.com/blog/building-reproducible-ai-evaluation-workflows-with-docker-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Building Reproducible AI Evaluation Workflows with Docker Sandboxes
-                </a>
-                <p class="mb-1 small text-light">Developers now have access to more benchmarks, evaluation libraries, model APIs, and agent frameworks than ever before. A workflow written during local development shouldn’t need to change simply because it later executes inside Docker Sandboxes.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-12">
-                <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] An Organizational Second Brain: Building an AI That Learns From Experts
-                </a>
-                <p class="mb-1 small text-light">A self-improvement loop then compiles expert feedback into verified, regression-tested updates without model retraining. Its job is to find problems such as contradictions introduced, edge cases broken, or positions undermined.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-12">
-                <a href="https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] MetaRoCE: A New RDMA Transport Built for AI-Scale Ethernet
-                </a>
-                <p class="mb-1 small text-light">The application layer remains mostly untouched – existing RDMA Verbs APIs and software stacks work without modification. Enhanced features like multiplane support are supported through extension APIs.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-12">
-                <a href="https://engineering.fb.com/2026/08/24/networking-traffic/mtia-300-meta-training-chip-built-in-nics/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] MTIA 300: Meta’s First Training Chip with Built-in NICs and Communication-Offloading Engines
-                </a>
-                <p class="mb-1 small text-light">Training recommendation models is a unique infrastructure challenge. To minimize per-transaction latency, we introduced express doorbells.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-12">
-                <a href="https://www.cncf.io/blog/2026/09/09/how-cloud-native-goes-ai-native/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] How cloud native goes AI native
-                </a>
-                <p class="mb-1 small text-light">I believe closing this velocity gap is the defining infrastructure problem of the next few years, and the engineers working in cloud native infrastructure can either help or hinder.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-12">
-                <a href="https://blog.cloudflare.com/automatic-key-exchange-for-origins/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Automatic Key Exchange: faster, post-quantum secure origin handshakes for 45 billion daily connections (and counting)
-                </a>
-                <p class="mb-1 small text-light">Every time Cloudflare opens a new TLS 1. We have also introduced a new Compliance requirements setting under Automatic Key Exchange.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
+                    Red Hat | 2026-09-12
                     
                 </small>
             </li>
@@ -380,7 +145,7 @@
                 <p class="mb-1 small text-light">But building new infrastructure is only part of the challenge. When performance declines or newer hardware provides meaningful improvements in capacity, reliability, or efficiency, we can plan a transition.</p>
                 <small class="text-secondary">
                     
-                    Dropbox Tech
+                    Dropbox Tech | 2026-09-12
                     
                 </small>
             </li>
@@ -392,19 +157,271 @@
                 <p class="mb-1 small text-light">Neo Security is an agent that can find exploitable flaws in your cloud infrastructure. Neo Security works on your existing infrastructure regardless of how it was provisioned, across any of our thousands of cloud providers including AWS, Azure, Google Cloud, and Kubernetes.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-09-12
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-12">
-                <a href="https://www.redhat.com/en/blog/closing-aiops-loop-splunk-observability-cloud-and-red-hat-ansible-automation-platform" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Closing the AIOps loop with Splunk Observability Cloud and Red Hat Ansible Automation Platform
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-12">
+                <a href="https://www.cncf.io/blog/2026/09/09/how-cloud-native-goes-ai-native/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] How cloud native goes AI native
                 </a>
-                <p class="mb-1 small text-light">Pairing Splunk Observability Cloud with Red Hat Ansible Automation Platform helps bridge the gap between discovery and response, transforming manual triage into safer, automated self-healing that reduces mean time to resolution (MTTR).</p>
+                <p class="mb-1 small text-light">I believe closing this velocity gap is the defining infrastructure problem of the next few years, and the engineers working in cloud native infrastructure can either help or hinder.</p>
                 <small class="text-secondary">
                     
-                    Red Hat
+                    CNCF | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-12">
+                <a href="https://blog.cloudflare.com/automatic-key-exchange-for-origins/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Automatic Key Exchange: faster, post-quantum secure origin handshakes for 45 billion daily connections (and counting)
+                </a>
+                <p class="mb-1 small text-light">Every time Cloudflare opens a new TLS 1. We have also introduced a new Compliance requirements setting under Automatic Key Exchange.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-12">
+                <a href="https://www.reddit.com/r/devops/comments/1wdmq7h/need_to_know_possible_outcomes_of_cicd_pipeline/" target="_blank" class="fw-bold text-decoration-none">
+                    Need to know possible outcomes of CI/CD pipeline failures !
+                </a>
+                <p class="mb-1 small text-light">I have very basic understanding of CI/CD pipe line. - Upstream Dependency Drift : An external package, container base image, or third-party artifact that introduced a breaking change, version conflict, or became unavailable in a package registry.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-12">
+                <a href="https://azure.microsoft.com/en-us/blog/the-future-of-infrastructure-resiliency-starts-with-modernization/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] The future of infrastructure resiliency starts with modernization
+                </a>
+                <p class="mb-1 small text-light">As organizations modernize business-critical applications, cloud-native services, and AI workloads, resiliency can no longer be bolted on after deployment. Applications evolve, new services are introduced, new dependencies emerge, and infrastructure environments continuously change.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-12">
+                <a href="https://www.docker.com/blog/building-reproducible-ai-evaluation-workflows-with-docker-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Building Reproducible AI Evaluation Workflows with Docker Sandboxes
+                </a>
+                <p class="mb-1 small text-light">Developers now have access to more benchmarks, evaluation libraries, model APIs, and agent frameworks than ever before. A workflow written during local development shouldn’t need to change simply because it later executes inside Docker Sandboxes.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-12">
+                <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] An Organizational Second Brain: Building an AI That Learns From Experts
+                </a>
+                <p class="mb-1 small text-light">A self-improvement loop then compiles expert feedback into verified, regression-tested updates without model retraining. Its job is to find problems such as contradictions introduced, edge cases broken, or positions undermined.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-12">
+                <a href="https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] MetaRoCE: A New RDMA Transport Built for AI-Scale Ethernet
+                </a>
+                <p class="mb-1 small text-light">The application layer remains mostly untouched – existing RDMA Verbs APIs and software stacks work without modification. Enhanced features like multiplane support are supported through extension APIs.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-12">
+                <a href="https://engineering.fb.com/2026/08/24/networking-traffic/mtia-300-meta-training-chip-built-in-nics/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] MTIA 300: Meta’s First Training Chip with Built-in NICs and Communication-Offloading Engines
+                </a>
+                <p class="mb-1 small text-light">Training recommendation models is a unique infrastructure challenge. To minimize per-transaction latency, we introduced express doorbells.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-12">
+                <a href="https://kubernetes.io/blog/2026/09/11/kubernetes-v1-37-native-histograms-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: Native Histograms Graduates to Beta
+                </a>
+                <p class="mb-1 small text-light">36 under KEP-5808) bring high-resolution, low-cardinality observability to Kubernetes metrics. Since the early days of Kubernetes observability, duration and latency metrics (such as API server request latencies or scheduling durations) have relied on classic Prometheus histograms.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-12">
+                <a href="https://kubernetes.io/blog/2026/09/08/kubernetes-v1-37-advancing-workload-aware-scheduling/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: Advancing Workload-Aware Scheduling
+                </a>
+                <p class="mb-1 small text-light">Following the foundational workload-centric enhancements introduced in previous releases, Kubernetes v1. This new API allows expressing multi-level topology constraints, gang scheduling, and preemption policies for complex, heterogeneous groups of Pods.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-12">
+                <a href="https://www.cncf.io/blog/2026/09/09/whose-gpus-are-these-anyway-secure-self-service-metrics-for-multi-tenant-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Whose GPUs are these, anyway? Secure, self-service metrics for multi-tenant Kubernetes
+                </a>
+                <p class="mb-1 small text-light">v=gI40zpbES5w About the authors Bingi Narasimha Karthik (Golden Kubestronaut, Adobe) is a Senior Cloud Engineer working on Kubernetes observability and GPU workload orchestration.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-12">
+                <a href="https://blog.cloudflare.com/casb-policies/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing automatic remediation policies with Cloudflare CASB
+                </a>
+                <p class="mb-1 small text-light">When we launched Cloudflare CASB, a cloud access security broker, we wanted to provide security teams complete visibility into the posture of their SaaS applications before misconfigurations became incidents.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-12">
+                <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How we used DSPy to turn AI evaluations into better responses in Dash chat
+                </a>
+                <p class="mb-1 small text-light">In practice, this meant tracking issues like incomplete answers and missed key aspects of a user's request. For each new prompt, we compared its performance against the existing production prompt using the same set of examples.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-12">
+                <a href="https://www.pulumi.com/blog/esc-oidc-setup-cli/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Set Up Cloud OIDC From the Pulumi CLI
+                </a>
+                <p class="mb-1 small text-light">This eliminates hard-coded credentials and improves your security posture. pulumi env setup - how it works Run the command with your desired cloud provider (aws, azure, gcp).</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-12">
+                <a href="https://www.reddit.com/r/devops/comments/1we0cu1/thoughts_on_the_role_of_devops_in_the_aicentric/" target="_blank" class="fw-bold text-decoration-none">
+                    Thoughts on the role of DevOps in the AI-centric near future?
+                </a>
+                <p class="mb-1 small text-light">Amusingly, a friend of mine assumed that DevOps role would decline with the rise of AI. However, it would seem that in reality, the reverse is true. Or at least it seems that way, based on the limited insight of some. What are your thoughts? submitted by /u/SeriouslySally36</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-12">
+                <a href="https://www.reddit.com/r/devops/comments/1wdhbub/is_devops_taken_over_by_ai/" target="_blank" class="fw-bold text-decoration-none">
+                    Is Devops taken over by AI
+                </a>
+                <p class="mb-1 small text-light">I'm a junior DevOps engineer and I work in a project where we manage their kubernetes cluster and Linux servers configuration with ansible and provisioning with terraform but the thing is they have way too many ticket and they want it all done asap, for which they demand using AI to get things done quickly but the things is I learn nothing it's endless number of tickets that keep on arriving and I have to depend on AI to get it done quickly and I get no time to learn what I love to learn and need to learm which is kubernetes going deeper in linux golang ansible and much more I know what these tools are and how they work but I want to go deeper build my own infra build and break things but I couldn't do it because the seniors and devs want things done asap and I have to use AI This add nothing on my resum even If I have 5 years of experience what do I tell the interviewer that all I did was use AI can someone plz help me submitted by /u/Alternative_Image308</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-12">
+                <a href="https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Running Apache Spark experiments in my sleep (and on a plane)
+                </a>
+                <p class="mb-1 small text-light">That works for standard software bugs, but it fails completely for big data performance bottlenecks. Why tmux MatteredAll of this ran on Workbench, Netflix’s cloud dev environment, using my laptop as a thin terminal.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-12">
+                <a href="https://netflixtechblog.com/maps-netflixs-multimodal-asset-personalization-at-scale-32f96320785e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] MAPS: Netflix’s Multimodal Asset Personalization at Scale
+                </a>
+                <p class="mb-1 small text-light">Cold-Start Challenge from a New UI LaunchThe real test came from the product change that motivated the work. Its key property is that it decouples foundation-model updates from personalization-model deployments.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-12">
+                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-container-management/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management
+                </a>
+                <p class="mb-1 small text-light">Organizations now need more than container orchestration; they need a platform that provides a consistent operating model across cloud, edge, and hybrid deployments while adapting to new requirements without needing applications to be rebuilt.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-12">
+                <a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-how-ai-agent-governance-controls-cost-and-proves-roi/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] The Economics of Agent Optimization: How AI agent governance controls cost and proves ROI
+                </a>
+                <p class="mb-1 small text-light">It is often discussed in terms of security, compliance, and lifecycle management. The key can represent a subscription, application, team, customer, workload identity, or another business boundary.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-12">
+                <a href="https://www.docker.com/blog/benefits-of-sandbox-environments/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] 6 Benefits of Sandbox Environments (and How Docker Sandboxes Delivers Them)
+                </a>
+                <p class="mb-1 small text-light">Restricting the filesystem keeps sensitive host paths, like SSH keys and cloud credentials, out of reach. Secure credential handling Agents need credentials to do useful work: a token to push to a repo, an API key to call a service.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-12
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-12">
+                <a href="https://www.docker.com/blog/below-the-harness-governing-a-multi-model-multi-harness-world/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Below the Harness: Governing a Multi-Model, Multi-Harness World
+                </a>
+                <p class="mb-1 small text-light">Updates to sandboxing models should be treated as a security event. Now, a model or agent vendor making an update won’t randomly change your security posture.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-12
                     
                 </small>
             </li>

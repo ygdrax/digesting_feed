@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - September 18, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - September 18, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for September 18, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-09-18">2026-09-18 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-09-18 12:43:13
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,282 +128,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-18">
-                <a href="https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Running Apache Spark experiments in my sleep (and on a plane)
-                </a>
-                <p class="mb-1 small text-light">That works for standard software bugs, but it fails completely for big data performance bottlenecks. Why tmux MatteredAll of this ran on Workbench, Netflix’s cloud dev environment, using my laptop as a thin terminal.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-18">
-                <a href="https://netflixtechblog.com/maps-netflixs-multimodal-asset-personalization-at-scale-32f96320785e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] MAPS: Netflix’s Multimodal Asset Personalization at Scale
-                </a>
-                <p class="mb-1 small text-light">Cold-Start Challenge from a New UI LaunchThe real test came from the product change that motivated the work. Its key property is that it decouples foundation-model updates from personalization-model deployments.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-18">
-                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-container-management/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management
-                </a>
-                <p class="mb-1 small text-light">Organizations now need more than container orchestration; they need a platform that provides a consistent operating model across cloud, edge, and hybrid deployments while adapting to new requirements without needing applications to be rebuilt.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-18">
-                <a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-how-ai-agent-governance-controls-cost-and-proves-roi/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] The Economics of Agent Optimization: How AI agent governance controls cost and proves ROI
-                </a>
-                <p class="mb-1 small text-light">It is often discussed in terms of security, compliance, and lifecycle management. The key can represent a subscription, application, team, customer, workload identity, or another business boundary.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-18">
-                <a href="https://www.redhat.com/en/blog/data-residency-digital-control-why-middle-east-cloud-future-depends-on-ecosystem" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] From data residency to digital control: Why the Middle East’s cloud future depends on the ecosystem
-                </a>
-                <p class="mb-1 small text-light">Governments and enterprises are investing heavily in cloud platforms, artificial intelligence (AI), and national digital infrastructure. However, the harder questions now sit with those accountable for keeping critical services running: Who controls the environment.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-09-18">
-                <a href="https://about.gitlab.com/blog/optimize-with-open-weight-models/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] Optimize your team's price-performance with hosted open weight models
-                </a>
-                <p class="mb-1 small text-light">You can align model selection with your security, compliance, and infrastructure requirements through GitLab-managed, self-hosted, or hybrid AI deployment options. Before a new model joins the GitLab Duo Agent Platform roster, we evaluate it against internal performance and quality requirements.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-09-18">
-                <a href="https://about.gitlab.com/blog/new-usage-caps-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] See who spent your AI credits and set fair caps per team
-                </a>
-                <p class="mb-1 small text-light">GitLab Transcend returns in OctoberCoding agents are increasing your speed of development, but your reviews, security policies, and release cycles still have to keep pace.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-18">
-                <a href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] ZGateway: Learnings from Putting a Proxy in Front of ZippyDB
-                </a>
-                <p class="mb-1 small text-light">As a bonus, it also enables admission control, load balancing, cross-region resilience, and richer operations. A proxy decouples them, collapsing the mesh into two bounded hops — a win on efficiency, performance, scalability, and above all reliability.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-18">
-                <a href="https://www.hacktron.ai/blog/hacking-openai" target="_blank" class="fw-bold text-decoration-none">
-                    A heap overflow and SSO misconfiguration to compromise OpenAI internal repos
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.hacktron.ai/blog/hacking-openai Comments URL: https://news.ycombinator.com/item?id=49749656 Points: 376 # Comments: 163</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-18">
-                <a href="https://aws.amazon.com/blogs/aws/new-low-cost-burstable-amazon-ec2-t8i-instances-are-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] New low-cost burstable Amazon EC2 T8i instances are generally available
-                </a>
-                <p class="mb-1 small text-light">Today, we’re announcing the general availability of new low-cost burstable Amazon EC2 T8i instances powered by custom sixth generation Intel Xeon Scalable Processors (Granite Rapids), available only on AWS.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-18">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-gpt-6-astra-on-amazon-bedrock-amazon-quick-desktop-ga-kiro-for-students-and-more-september-14-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: OpenAI GPT-6 Astra on Amazon Bedrock, Amazon Quick desktop GA, Kiro for students, and more (September 14, 2026)
-                </a>
-                <p class="mb-1 small text-light">You get the same APIs, console, automation, governance, and security controls as multi-rack Outposts and AWS Regions. Check back each week for a quick roundup of interesting news and announcements from AWS.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-18">
-                <a href="https://kubernetes.io/blog/2026/09/14/csi-changed-block-tracking-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes Changed Block Tracking API - Beta Differences
-                </a>
-                <p class="mb-1 small text-light">What's new in BetaThe main change in that release was the promotion of the SnapshotMetadataService CRD from v1alpha1 to v1beta1. Update SnapshotMetadataService manifests to use apiVersion: cbt.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-18">
-                <a href="https://kubernetes.io/blog/2026/09/14/kubernetes-v1-37-memory-qos-graduates-to-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37: Memory QoS Graduates to Beta
-                </a>
-                <p class="mb-1 small text-light">Memory QoS has graduated to Beta in Kubernetes v1. If you run into issues, please file bugs at kubernetes/kubernetes.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-18">
-                <a href="https://kubernetes.io/blog/2026/09/11/kubernetes-v1-37-native-histograms-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37: Native Histograms Graduates to Beta
-                </a>
-                <p class="mb-1 small text-light">36 under KEP-5808) bring high-resolution, low-cardinality observability to Kubernetes metrics. Since the early days of Kubernetes observability, duration and latency metrics (such as API server request latencies or scheduling durations) have relied on classic Prometheus histograms.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-18">
-                <a href="https://blog.cloudflare.com/casb-policies/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing automatic remediation policies with Cloudflare CASB
-                </a>
-                <p class="mb-1 small text-light">When we launched Cloudflare CASB, a cloud access security broker, we wanted to provide security teams complete visibility into the posture of their SaaS applications before misconfigurations became incidents.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-18">
-                <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How we used DSPy to turn AI evaluations into better responses in Dash chat
-                </a>
-                <p class="mb-1 small text-light">In practice, this meant tracking issues like incomplete answers and missed key aspects of a user's request. For each new prompt, we compared its performance against the existing production prompt using the same set of examples.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-18">
-                <a href="https://www.pulumi.com/blog/esc-oidc-setup-cli/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Set Up Cloud OIDC From the Pulumi CLI
-                </a>
-                <p class="mb-1 small text-light">This eliminates hard-coded credentials and improves your security posture. pulumi env setup - how it works Run the command with your desired cloud provider (aws, azure, gcp).</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-18">
-                <a href="https://azure.microsoft.com/en-us/blog/the-future-of-infrastructure-resiliency-starts-with-modernization/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] The future of infrastructure resiliency starts with modernization
-                </a>
-                <p class="mb-1 small text-light">As organizations modernize business-critical applications, cloud-native services, and AI workloads, resiliency can no longer be bolted on after deployment. Applications evolve, new services are introduced, new dependencies emerge, and infrastructure environments continuously change.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-18">
-                <a href="https://www.docker.com/blog/building-reproducible-ai-evaluation-workflows-with-docker-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Building Reproducible AI Evaluation Workflows with Docker Sandboxes
-                </a>
-                <p class="mb-1 small text-light">Developers now have access to more benchmarks, evaluation libraries, model APIs, and agent frameworks than ever before. A workflow written during local development shouldn’t need to change simply because it later executes inside Docker Sandboxes.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-09-18">
-                <a href="https://about.gitlab.com/blog/new-mcp-tools-for-automation/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] New MCP tools help platform teams scale automation safely
-                </a>
-                <p class="mb-1 small text-light">Built for how platform teams scale automationWith GitLab 19. list_branches and list_tags enumerate refs and list_releases allows inspecting published releases.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-18">
-                <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] An Organizational Second Brain: Building an AI That Learns From Experts
-                </a>
-                <p class="mb-1 small text-light">A self-improvement loop then compiles expert feedback into verified, regression-tested updates without model retraining. Its job is to find problems such as contradictions introduced, edge cases broken, or positions undermined.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-18">
-                <a href="https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] MetaRoCE: A New RDMA Transport Built for AI-Scale Ethernet
-                </a>
-                <p class="mb-1 small text-light">The application layer remains mostly untouched – existing RDMA Verbs APIs and software stacks work without modification. Enhanced features like multiplane support are supported through extension APIs.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-18">
-                <a href="https://engineering.fb.com/2026/08/24/networking-traffic/mtia-300-meta-training-chip-built-in-nics/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] MTIA 300: Meta’s First Training Chip with Built-in NICs and Communication-Offloading Engines
-                </a>
-                <p class="mb-1 small text-light">Training recommendation models is a unique infrastructure challenge. To minimize per-transaction latency, we introduced express doorbells.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-18">
                 <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" target="_blank" class="fw-bold text-decoration-none">
                     [Dropbox Tech] Improving infrastructure efficiency for growing demand in the age of AI
@@ -394,7 +135,7 @@
                 <p class="mb-1 small text-light">But building new infrastructure is only part of the challenge. When performance declines or newer hardware provides meaningful improvements in capacity, reliability, or efficiency, we can plan a transition.</p>
                 <small class="text-secondary">
                     
-                    Dropbox Tech
+                    Dropbox Tech | 2026-09-18
                     
                 </small>
             </li>
@@ -406,7 +147,283 @@
                 <p class="mb-1 small text-light">Neo Security is an agent that can find exploitable flaws in your cloud infrastructure. Neo Security works on your existing infrastructure regardless of how it was provisioned, across any of our thousands of cloud providers including AWS, Azure, Google Cloud, and Kubernetes.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-18">
+                <a href="https://azure.microsoft.com/en-us/blog/the-future-of-infrastructure-resiliency-starts-with-modernization/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] The future of infrastructure resiliency starts with modernization
+                </a>
+                <p class="mb-1 small text-light">As organizations modernize business-critical applications, cloud-native services, and AI workloads, resiliency can no longer be bolted on after deployment. Applications evolve, new services are introduced, new dependencies emerge, and infrastructure environments continuously change.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-18">
+                <a href="https://www.docker.com/blog/building-reproducible-ai-evaluation-workflows-with-docker-sandboxes/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Building Reproducible AI Evaluation Workflows with Docker Sandboxes
+                </a>
+                <p class="mb-1 small text-light">Developers now have access to more benchmarks, evaluation libraries, model APIs, and agent frameworks than ever before. A workflow written during local development shouldn’t need to change simply because it later executes inside Docker Sandboxes.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-09-18">
+                <a href="https://about.gitlab.com/blog/new-mcp-tools-for-automation/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] New MCP tools help platform teams scale automation safely
+                </a>
+                <p class="mb-1 small text-light">Built for how platform teams scale automationWith GitLab 19. list_branches and list_tags enumerate refs and list_releases allows inspecting published releases.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-18">
+                <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] An Organizational Second Brain: Building an AI That Learns From Experts
+                </a>
+                <p class="mb-1 small text-light">A self-improvement loop then compiles expert feedback into verified, regression-tested updates without model retraining. Its job is to find problems such as contradictions introduced, edge cases broken, or positions undermined.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-18">
+                <a href="https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] MetaRoCE: A New RDMA Transport Built for AI-Scale Ethernet
+                </a>
+                <p class="mb-1 small text-light">The application layer remains mostly untouched – existing RDMA Verbs APIs and software stacks work without modification. Enhanced features like multiplane support are supported through extension APIs.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-18">
+                <a href="https://engineering.fb.com/2026/08/24/networking-traffic/mtia-300-meta-training-chip-built-in-nics/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] MTIA 300: Meta’s First Training Chip with Built-in NICs and Communication-Offloading Engines
+                </a>
+                <p class="mb-1 small text-light">Training recommendation models is a unique infrastructure challenge. To minimize per-transaction latency, we introduced express doorbells.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-18">
+                <a href="https://www.hacktron.ai/blog/hacking-openai" target="_blank" class="fw-bold text-decoration-none">
+                    A heap overflow and SSO misconfiguration to compromise OpenAI internal repos
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.hacktron.ai/blog/hacking-openai Comments URL: https://news.ycombinator.com/item?id=49749656 Points: 376 # Comments: 163</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-18">
+                <a href="https://aws.amazon.com/blogs/aws/new-low-cost-burstable-amazon-ec2-t8i-instances-are-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] New low-cost burstable Amazon EC2 T8i instances are generally available
+                </a>
+                <p class="mb-1 small text-light">Today, we’re announcing the general availability of new low-cost burstable Amazon EC2 T8i instances powered by custom sixth generation Intel Xeon Scalable Processors (Granite Rapids), available only on AWS.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-18">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-gpt-6-astra-on-amazon-bedrock-amazon-quick-desktop-ga-kiro-for-students-and-more-september-14-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: OpenAI GPT-6 Astra on Amazon Bedrock, Amazon Quick desktop GA, Kiro for students, and more (September 14, 2026)
+                </a>
+                <p class="mb-1 small text-light">You get the same APIs, console, automation, governance, and security controls as multi-rack Outposts and AWS Regions. Check back each week for a quick roundup of interesting news and announcements from AWS.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-18">
+                <a href="https://kubernetes.io/blog/2026/09/14/csi-changed-block-tracking-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes Changed Block Tracking API - Beta Differences
+                </a>
+                <p class="mb-1 small text-light">What's new in BetaThe main change in that release was the promotion of the SnapshotMetadataService CRD from v1alpha1 to v1beta1. Update SnapshotMetadataService manifests to use apiVersion: cbt.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-18">
+                <a href="https://kubernetes.io/blog/2026/09/14/kubernetes-v1-37-memory-qos-graduates-to-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: Memory QoS Graduates to Beta
+                </a>
+                <p class="mb-1 small text-light">Memory QoS has graduated to Beta in Kubernetes v1. If you run into issues, please file bugs at kubernetes/kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-18">
+                <a href="https://kubernetes.io/blog/2026/09/11/kubernetes-v1-37-native-histograms-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: Native Histograms Graduates to Beta
+                </a>
+                <p class="mb-1 small text-light">36 under KEP-5808) bring high-resolution, low-cardinality observability to Kubernetes metrics. Since the early days of Kubernetes observability, duration and latency metrics (such as API server request latencies or scheduling durations) have relied on classic Prometheus histograms.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-18">
+                <a href="https://blog.cloudflare.com/casb-policies/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing automatic remediation policies with Cloudflare CASB
+                </a>
+                <p class="mb-1 small text-light">When we launched Cloudflare CASB, a cloud access security broker, we wanted to provide security teams complete visibility into the posture of their SaaS applications before misconfigurations became incidents.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-18">
+                <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How we used DSPy to turn AI evaluations into better responses in Dash chat
+                </a>
+                <p class="mb-1 small text-light">In practice, this meant tracking issues like incomplete answers and missed key aspects of a user's request. For each new prompt, we compared its performance against the existing production prompt using the same set of examples.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-18">
+                <a href="https://www.pulumi.com/blog/esc-oidc-setup-cli/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Set Up Cloud OIDC From the Pulumi CLI
+                </a>
+                <p class="mb-1 small text-light">This eliminates hard-coded credentials and improves your security posture. pulumi env setup - how it works Run the command with your desired cloud provider (aws, azure, gcp).</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-18">
+                <a href="https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Running Apache Spark experiments in my sleep (and on a plane)
+                </a>
+                <p class="mb-1 small text-light">That works for standard software bugs, but it fails completely for big data performance bottlenecks. Why tmux MatteredAll of this ran on Workbench, Netflix’s cloud dev environment, using my laptop as a thin terminal.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-18">
+                <a href="https://netflixtechblog.com/maps-netflixs-multimodal-asset-personalization-at-scale-32f96320785e?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] MAPS: Netflix’s Multimodal Asset Personalization at Scale
+                </a>
+                <p class="mb-1 small text-light">Cold-Start Challenge from a New UI LaunchThe real test came from the product change that motivated the work. Its key property is that it decouples foundation-model updates from personalization-model deployments.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-18">
+                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-container-management/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management
+                </a>
+                <p class="mb-1 small text-light">Organizations now need more than container orchestration; they need a platform that provides a consistent operating model across cloud, edge, and hybrid deployments while adapting to new requirements without needing applications to be rebuilt.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-18">
+                <a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-how-ai-agent-governance-controls-cost-and-proves-roi/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] The Economics of Agent Optimization: How AI agent governance controls cost and proves ROI
+                </a>
+                <p class="mb-1 small text-light">It is often discussed in terms of security, compliance, and lifecycle management. The key can represent a subscription, application, team, customer, workload identity, or another business boundary.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-18">
+                <a href="https://www.redhat.com/en/blog/data-residency-digital-control-why-middle-east-cloud-future-depends-on-ecosystem" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] From data residency to digital control: Why the Middle East’s cloud future depends on the ecosystem
+                </a>
+                <p class="mb-1 small text-light">Governments and enterprises are investing heavily in cloud platforms, artificial intelligence (AI), and national digital infrastructure. However, the harder questions now sit with those accountable for keeping critical services running: Who controls the environment.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-09-18">
+                <a href="https://about.gitlab.com/blog/optimize-with-open-weight-models/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] Optimize your team's price-performance with hosted open weight models
+                </a>
+                <p class="mb-1 small text-light">You can align model selection with your security, compliance, and infrastructure requirements through GitLab-managed, self-hosted, or hybrid AI deployment options. Before a new model joins the GitLab Duo Agent Platform roster, we evaluate it against internal performance and quality requirements.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-09-18">
+                <a href="https://about.gitlab.com/blog/new-usage-caps-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] See who spent your AI credits and set fair caps per team
+                </a>
+                <p class="mb-1 small text-light">GitLab Transcend returns in OctoberCoding agents are increasing your speed of development, but your reviews, security policies, and release cycles still have to keep pace.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-09-18
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-18">
+                <a href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] ZGateway: Learnings from Putting a Proxy in Front of ZippyDB
+                </a>
+                <p class="mb-1 small text-light">As a bonus, it also enables admission control, load balancing, cross-region resilience, and richer operations. A proxy decouples them, collapsing the mesh into two bounded hops — a win on efficiency, performance, scalability, and above all reliability.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-18
                     
                 </small>
             </li>

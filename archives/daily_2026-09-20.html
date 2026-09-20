@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - September 20, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - September 20, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for September 20, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-09-20">2026-09-20 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-09-20 12:51:55
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,258 +132,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-20">
-                <a href="https://www.i-kh.net/p/if-ai-coding-is-lowering-your-code" target="_blank" class="fw-bold text-decoration-none">
-                    If AI coding is lowering your code quality, you're not managing quality right
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.i-kh.net/p/if-ai-coding-is-lowering-your-code Comments URL: https://news.ycombinator.com/item?id=49774795 Points: 33 # Comments: 35</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-20">
-                <a href="https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons/" target="_blank" class="fw-bold text-decoration-none">
-                    AI and the Destruction of the Creative Commons
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons/ Comments URL: https://news.ycombinator.com/item?id=49774329 Points: 94 # Comments: 43</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-20">
-                <a href="https://aws.amazon.com/blogs/aws/aws-elastic-beanstalk-introduces-cluster-mode/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Elastic Beanstalk introduces Cluster Mode
-                </a>
-                <p class="mb-1 small text-light">Bring applications however they exist today: source code, Dockerfiles, or container images. For example, consider deploying an application made up of several microservices to Kubernetes.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-20">
-                <a href="https://aws.amazon.com/blogs/aws/aws-reimagines-the-getting-started-experience/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS reimagines the getting started experience
-                </a>
-                <p class="mb-1 small text-light">As the world’s largest companies and governments adopted AWS, they asked for features to optimize their configuration for a range of global business contexts, security requirements, and operational needs.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-20">
-                <a href="https://aws.amazon.com/blogs/aws/introducing-amazon-ebs-volume-clones-across-aws-accounts/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Introducing Amazon EBS Volume Clones across AWS accounts
-                </a>
-                <p class="mb-1 small text-light">With this new feature, you can use your latest application data to develop, test, and experiment in a secondary environment, while protecting and isolating the information in the production environment.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-20">
-                <a href="https://www.hashicorp.com/blog/simplify-compliance-with-a-native-pre-written-policy-experience-in-terraform" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Simplify compliance with the native pre-written policy experience in HCP Terraform
-                </a>
-                <p class="mb-1 small text-light">As organizations face growing security and regulatory requirements, maintaining compliant infrastructure becomes increasingly complex. This work grows as organizations adopt more cloud providers, services, and compliance frameworks.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-20">
-                <a href="https://www.hashicorp.com/blog/hcp-vagrant-deprecation-important-dates-and-migration-guidance" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] HCP Vagrant deprecation: important dates and migration guidance
-                </a>
-                <p class="mb-1 small text-light">HashiCorp will end support and maintenance for existing Vagrant deployments End of operations: December 31, 2026. HashiCorp will decommission all remaining Vagrant deployments Deprecation details This deprecation applies only to HCP Vagrant.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-20">
-                <a href="https://www.hashicorp.com/blog/simplifying-terraform-for-ibm-z-with-intent-driven-workflows" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Simplifying Terraform for IBM Z with intent-driven workflows
-                </a>
-                <p class="mb-1 small text-light">Today, we're introducing intent-driven workflows for IBM Terraform Self-Managed for Z and LinuxONE (Terraform for Z), bringing a new way to interact with infrastructure through trusted, agentic workflows.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-20">
-                <a href="https://www.redhat.com/en/blog/scaling-enterprise-ai-fleets-alquimia-and-red-hat-openshift-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Scaling enterprise AI fleets with Alquimia and Red Hat OpenShift AI
-                </a>
-                <p class="mb-1 small text-light">Building an AI agent in a Jupyter Notebook is a solved problem. Without an enterprise platform layer underneath, autonomy quickly devolves into ch.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-09-20">
-                <a href="https://blog.sentry.io/debugging-our-ai-search-assistant-with-agent-tracing/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Debugging our AI search assistant with agent tracing
-                </a>
-                <p class="mb-1 small text-light">The search bar enables users to find their data by specifying search terms. This gave us enough information to make a new eval scenario to reproduce and fix the issue.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-09-20">
-                <a href="https://snyk.io/blog/ai-hurricane-is-here/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] The AI Hurricane Is Here
-                </a>
-                <p class="mb-1 small text-light">AI is accelerating software creation and cyberattacks alike. Leaders must secure agents and code at inception, enforce controls at runtime, and validate defenses independently.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-09-20">
-                <a href="https://snyk.io/blog/why-your-ai-application-is-exposed/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Why Your AI Application Is Exposed (Even When Your Scans Come Back Clean)
-                </a>
-                <p class="mb-1 small text-light">AI applications can pass security scans yet remain exploitable through chained attacks across models, tools, data, and business workflows. Learn how DAST, AI pentesting, and red teaming work together to expose end-to-end risk.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-20">
-                <a href="https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Why Spotify Is Not Using Bayesian A/B Testing
-                </a>
-                <p class="mb-1 small text-light">Clearing the confusion about what Bayesian A/B testing is. The post Why Spotify Is Not Using Bayesian A/B Testing appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-20">
-                <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Portal by Spotify cut my Claude Code token usage by 90%
-                </a>
-                <p class="mb-1 small text-light">Most of what an AI coding agent does for me isn't thinking. It's I/O. The post Portal by Spotify cut my Claude Code token usage by 90% appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-20">
-                <a href="https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] When Can LLMs Replace Humans in A/B Tests?
-                </a>
-                <p class="mb-1 small text-light">TL;DR: LLM predictions can stand in for human outcomes in A/B tests, but only by assumption, not by design.... The post When Can LLMs Replace Humans in A/B Tests? appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-20">
-                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
-                </a>
-                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-20">
-                <a href="https://www.cncf.io/blog/2026/09/17/opentelemetry-everywhere-migrating-a-metrics-platform-at-scale/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] OpenTelemetry everywhere: Migrating a metrics platform at scale
-                </a>
-                <p class="mb-1 small text-light">Nobody thought about it much, which is usually the sign of good infrastructure. How do we replace the whole engine without huge impact across Atlassian services.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-20">
-                <a href="https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Saving another 100TB of RAM with math (and Rust)
-                </a>
-                <p class="mb-1 small text-light">One of the ways Cloudflare ensures the balance is kept is through the tireless efforts of the wonderful Performance team. That means the solution to any consistent hashing problem can only be more hashes.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-20">
-                <a href="https://netflixtechblog.medium.com/the-lifecycle-of-llm-as-a-judge-building-aligning-and-monitoring-at-scale-c95bd8283508?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] The Lifecycle of LLM-as-a-Judge: Building, Aligning, and Monitoring at scale
-                </a>
-                <p class="mb-1 small text-light">However, it introduces a new and critical question: Who evaluates the evaluator. This closes the loop by feeding new human-labeled data and updated signals back into the benchmark and development phases.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-20">
-                <a href="https://azure.microsoft.com/en-us/blog/microsoft-recognized-as-a-leader-in-the-2026-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft recognized as a Leader in the 2026 Gartner® Magic Quadrant™ for Distributed Hybrid Infrastructure
-                </a>
-                <p class="mb-1 small text-light">With Azure Local and Azure Arc, organizations can manage infrastructure across datacenters, edge locations, multi-cloud environments, and sovereign deployments through a consistent Azure foundation.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-20">
-                <a href="https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity
-                </a>
-                <p class="mb-1 small text-light">Quality and reliability have always been a point of pride for Spotify. We run an extraordinarily complex... The post AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-20">
                 <a href="https://kubernetes.io/blog/2026/09/16/kubernetes-v1-37-hardening-container-storage/" target="_blank" class="fw-bold text-decoration-none">
                     [Kubernetes] Kubernetes v1.37: Hardening Container Storage with Bind Mount Options and EmptyDir Permissions
@@ -374,7 +139,7 @@
                 <p class="mb-1 small text-light">37 brings important storage security features: emptyDir permission modes and bind mount options. Linux storage and permission fundamentalsBefore diving into the new Kubernetes features, let us briefly review the low-level Linux security mechanisms that make them possible.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-09-20
                     
                 </small>
             </li>
@@ -386,7 +151,7 @@
                 <p class="mb-1 small text-light">Neither Amazon Web Services nor the impersonated marketing platform was involved in the attack or suffered any compromise.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-09-20
                     
                 </small>
             </li>
@@ -398,7 +163,7 @@
                 <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-09-20
                     
                 </small>
             </li>
@@ -410,7 +175,259 @@
                 <p class="mb-1 small text-light">Every platform team fields the same questions: What is running. Available in public preview The Context API is available now for every organization on the Enterprise and Business Critical editions.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-20">
+                <a href="https://netflixtechblog.medium.com/the-lifecycle-of-llm-as-a-judge-building-aligning-and-monitoring-at-scale-c95bd8283508?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] The Lifecycle of LLM-as-a-Judge: Building, Aligning, and Monitoring at scale
+                </a>
+                <p class="mb-1 small text-light">However, it introduces a new and critical question: Who evaluates the evaluator. This closes the loop by feeding new human-labeled data and updated signals back into the benchmark and development phases.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-20">
+                <a href="https://azure.microsoft.com/en-us/blog/microsoft-recognized-as-a-leader-in-the-2026-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft recognized as a Leader in the 2026 Gartner® Magic Quadrant™ for Distributed Hybrid Infrastructure
+                </a>
+                <p class="mb-1 small text-light">With Azure Local and Azure Arc, organizations can manage infrastructure across datacenters, edge locations, multi-cloud environments, and sovereign deployments through a consistent Azure foundation.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-20">
+                <a href="https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity
+                </a>
+                <p class="mb-1 small text-light">Quality and reliability have always been a point of pride for Spotify. We run an extraordinarily complex... The post AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-20">
+                <a href="https://www.cncf.io/blog/2026/09/17/opentelemetry-everywhere-migrating-a-metrics-platform-at-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] OpenTelemetry everywhere: Migrating a metrics platform at scale
+                </a>
+                <p class="mb-1 small text-light">Nobody thought about it much, which is usually the sign of good infrastructure. How do we replace the whole engine without huge impact across Atlassian services.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-20">
+                <a href="https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Saving another 100TB of RAM with math (and Rust)
+                </a>
+                <p class="mb-1 small text-light">One of the ways Cloudflare ensures the balance is kept is through the tireless efforts of the wonderful Performance team. That means the solution to any consistent hashing problem can only be more hashes.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-20">
+                <a href="https://www.redhat.com/en/blog/scaling-enterprise-ai-fleets-alquimia-and-red-hat-openshift-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Scaling enterprise AI fleets with Alquimia and Red Hat OpenShift AI
+                </a>
+                <p class="mb-1 small text-light">Building an AI agent in a Jupyter Notebook is a solved problem. Without an enterprise platform layer underneath, autonomy quickly devolves into ch.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-09-20">
+                <a href="https://blog.sentry.io/debugging-our-ai-search-assistant-with-agent-tracing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Debugging our AI search assistant with agent tracing
+                </a>
+                <p class="mb-1 small text-light">The search bar enables users to find their data by specifying search terms. This gave us enough information to make a new eval scenario to reproduce and fix the issue.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-09-20">
+                <a href="https://snyk.io/blog/ai-hurricane-is-here/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The AI Hurricane Is Here
+                </a>
+                <p class="mb-1 small text-light">AI is accelerating software creation and cyberattacks alike. Leaders must secure agents and code at inception, enforce controls at runtime, and validate defenses independently.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-09-20">
+                <a href="https://snyk.io/blog/why-your-ai-application-is-exposed/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Why Your AI Application Is Exposed (Even When Your Scans Come Back Clean)
+                </a>
+                <p class="mb-1 small text-light">AI applications can pass security scans yet remain exploitable through chained attacks across models, tools, data, and business workflows. Learn how DAST, AI pentesting, and red teaming work together to expose end-to-end risk.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-20">
+                <a href="https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Why Spotify Is Not Using Bayesian A/B Testing
+                </a>
+                <p class="mb-1 small text-light">Clearing the confusion about what Bayesian A/B testing is. The post Why Spotify Is Not Using Bayesian A/B Testing appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-20">
+                <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Portal by Spotify cut my Claude Code token usage by 90%
+                </a>
+                <p class="mb-1 small text-light">Most of what an AI coding agent does for me isn't thinking. It's I/O. The post Portal by Spotify cut my Claude Code token usage by 90% appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-20">
+                <a href="https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] When Can LLMs Replace Humans in A/B Tests?
+                </a>
+                <p class="mb-1 small text-light">TL;DR: LLM predictions can stand in for human outcomes in A/B tests, but only by assumption, not by design.... The post When Can LLMs Replace Humans in A/B Tests? appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-20">
+                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
+                </a>
+                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-20">
+                <a href="https://www.i-kh.net/p/if-ai-coding-is-lowering-your-code" target="_blank" class="fw-bold text-decoration-none">
+                    If AI coding is lowering your code quality, you're not managing quality right
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.i-kh.net/p/if-ai-coding-is-lowering-your-code Comments URL: https://news.ycombinator.com/item?id=49774795 Points: 33 # Comments: 35</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-20">
+                <a href="https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons/" target="_blank" class="fw-bold text-decoration-none">
+                    AI and the Destruction of the Creative Commons
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons/ Comments URL: https://news.ycombinator.com/item?id=49774329 Points: 94 # Comments: 43</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-20">
+                <a href="https://aws.amazon.com/blogs/aws/aws-elastic-beanstalk-introduces-cluster-mode/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Elastic Beanstalk introduces Cluster Mode
+                </a>
+                <p class="mb-1 small text-light">Bring applications however they exist today: source code, Dockerfiles, or container images. For example, consider deploying an application made up of several microservices to Kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-20">
+                <a href="https://aws.amazon.com/blogs/aws/aws-reimagines-the-getting-started-experience/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS reimagines the getting started experience
+                </a>
+                <p class="mb-1 small text-light">As the world’s largest companies and governments adopted AWS, they asked for features to optimize their configuration for a range of global business contexts, security requirements, and operational needs.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-20">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-amazon-ebs-volume-clones-across-aws-accounts/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing Amazon EBS Volume Clones across AWS accounts
+                </a>
+                <p class="mb-1 small text-light">With this new feature, you can use your latest application data to develop, test, and experiment in a secondary environment, while protecting and isolating the information in the production environment.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-20">
+                <a href="https://www.hashicorp.com/blog/simplify-compliance-with-a-native-pre-written-policy-experience-in-terraform" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Simplify compliance with the native pre-written policy experience in HCP Terraform
+                </a>
+                <p class="mb-1 small text-light">As organizations face growing security and regulatory requirements, maintaining compliant infrastructure becomes increasingly complex. This work grows as organizations adopt more cloud providers, services, and compliance frameworks.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-20">
+                <a href="https://www.hashicorp.com/blog/hcp-vagrant-deprecation-important-dates-and-migration-guidance" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] HCP Vagrant deprecation: important dates and migration guidance
+                </a>
+                <p class="mb-1 small text-light">HashiCorp will end support and maintenance for existing Vagrant deployments End of operations: December 31, 2026. HashiCorp will decommission all remaining Vagrant deployments Deprecation details This deprecation applies only to HCP Vagrant.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-09-20
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-20">
+                <a href="https://www.hashicorp.com/blog/simplifying-terraform-for-ibm-z-with-intent-driven-workflows" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Simplifying Terraform for IBM Z with intent-driven workflows
+                </a>
+                <p class="mb-1 small text-light">Today, we're introducing intent-driven workflows for IBM Terraform Self-Managed for Z and LinuxONE (Terraform for Z), bringing a new way to interact with infrastructure through trusted, agentic workflows.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-09-20
                     
                 </small>
             </li>

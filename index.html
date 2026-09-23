@@ -70,7 +70,7 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-09-22 13:06:47
+                    25 articles from 15 sources • Updated 2026-09-23 13:21:48
                     
                 </span>
             </small>
@@ -82,6 +82,8 @@
             <select id="sourceFilter" class="form-select w-auto d-inline-block">
                 <option value="all">All Sources</option>
                 
+                <option value="Amazon AWS">Amazon AWS</option>
+                
                 <option value="Cloudflare">Cloudflare</option>
                 
                 <option value="CNCF">CNCF</option>
@@ -90,72 +92,48 @@
                 
                 <option value="Dropbox Tech">Dropbox Tech</option>
                 
-                <option value="Engineering at Meta">Engineering at Meta</option>
-                
-                <option value="Hacker News">Hacker News</option>
-                
                 <option value="HashiCorp">HashiCorp</option>
                 
                 <option value="Kubernetes">Kubernetes</option>
                 
-                <option value="Lyft Engineering">Lyft Engineering</option>
+                <option value="Microsoft Azure">Microsoft Azure</option>
                 
                 <option value="Netflix">Netflix</option>
                 
-                <option value="Pulumi">Pulumi</option>
-                
                 <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
                 
                 <option value="Sentry">Sentry</option>
                 
                 <option value="Slack Engineering">Slack Engineering</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
                 
             </select>
         </div>
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-22">
-                <a href="https://alexn.org/blog/2026/09/22/ai-has-no-wisdom-and-neither-will-you/" target="_blank" class="fw-bold text-decoration-none">
-                    AI Has No Wisdom and Neither Will You
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-23">
+                <a href="https://www.reddit.com/r/devops/comments/1wnvw3f/small_team_running_350k_monthly_visitors_on/" target="_blank" class="fw-bold text-decoration-none">
+                    Small team running 350k+ monthly visitors on managed infra. At what point is owning the infrastructure worth it?
                 </a>
-                <p class="mb-1 small text-light">Article URL: https://alexn.org/blog/2026/09/22/ai-has-no-wisdom-and-neither-will-you/ Comments URL: https://news.ycombinator.com/item?id=49799965 Points: 74 # Comments: 60</p>
+                <p class="mb-1 small text-light">We’re now building a second related product, so we’ve started thinking more seriously about infrastructure. The whole reason we went with managed services was so we didn’t have to worry about servers.</p>
                 <small class="text-secondary">
                     
-                    Hacker News
+                    Reddit
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-22">
-                <a href="https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Leave the Class Path in the Rearview Mirror
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-23">
+                <a href="https://www.docker.com/blog/wearedevelopers-partner-customer-sessions-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Meet the Ecosystem: Partners and Customers at WeAreDevelopers with Docker
                 </a>
-                <p class="mb-1 small text-light">An IDE formats source, navigates between declarations and usages, presents API documentation, and maintains a compiled view of the project. ja only provides command line ergonomics and tool orchestration, each feature is underpinned by a standalone tool.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-22">
-                <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] A Tale of Two Flink Autoscalers
-                </a>
-                <p class="mb-1 small text-light">Because the autoscaler operates independently of the Flink platform, it remains unaffected by issues within Flink itself. That service is a Spring Boot application whose orchestration runs on Temporal, the durable workflow engine.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-22">
-                <a href="https://www.docker.com/blog/benefits-of-sandbox-environments/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] 6 Benefits of Sandbox Environments (and How Docker Sandboxes Delivers Them)
-                </a>
-                <p class="mb-1 small text-light">Restricting the filesystem keeps sensitive host paths, like SSH keys and cloud credentials, out of reach. Secure credential handling Agents need credentials to do useful work: a token to push to a repo, an API key to call a service.</p>
+                <p class="mb-1 small text-light">That ecosystem spans model providers, MCP tools and gateways, enterprise applications, data and memory platforms, identity, security, observability, and code quality. Morgan Payments,” Alan Torrance will show how developers can run Unicorn Finance with one command and no API keys.</p>
                 <small class="text-secondary">
                     
                     Docker
@@ -163,35 +141,11 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-22">
-                <a href="https://www.docker.com/blog/below-the-harness-governing-a-multi-model-multi-harness-world/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Below the Harness: Governing a Multi-Model, Multi-Harness World
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-09-23">
+                <a href="https://blog.sentry.io/debugging-our-ai-search-assistant-with-agent-tracing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Debugging our AI search assistant with agent tracing
                 </a>
-                <p class="mb-1 small text-light">Updates to sandboxing models should be treated as a security event. Now, a model or agent vendor making an update won’t randomly change your security posture.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-22">
-                <a href="https://www.docker.com/blog/secure-by-default-is-your-only-way-forward/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Secure by default is your only way forward
-                </a>
-                <p class="mb-1 small text-light">And where the box sits stops mattering, whether it’s a laptop or the cloud, because the boundary travels with the work, as Docker containers always have. Docker has been making the case that security is a developer experience problem from the start.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-09-22">
-                <a href="https://blog.sentry.io/sentry-laravel-ai-integration/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Building Sentry's Laravel AI Integration
-                </a>
-                <p class="mb-1 small text-light">We were also supposed to use AI for that, so the language barrier wasn't a real issue. $source->{$key} will resolve $key to its string value and will access the field.</p>
+                <p class="mb-1 small text-light">The search bar enables users to find their data by specifying search terms. This gave us enough information to make a new eval scenario to reproduce and fix the issue.</p>
                 <small class="text-secondary">
                     
                     Sentry
@@ -199,35 +153,35 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-22">
-                <a href="https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-09-23">
+                <a href="https://snyk.io/blog/ai-hurricane-is-here/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The AI Hurricane Is Here
                 </a>
-                <p class="mb-1 small text-light">However, transitioning to a 2-core fiber ecosystem comes with challenges that affect the fiber and subsea repeaters. 1-core fiber allows the industry to counter-propagate traffic using a pair of fibers.</p>
+                <p class="mb-1 small text-light">AI is accelerating software creation and cyberattacks alike. Leaders must secure agents and code at inception, enforce controls at runtime, and validate defenses independently.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Snyk
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-22">
-                <a href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] ZGateway: Learnings from Putting a Proxy in Front of ZippyDB
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-09-23">
+                <a href="https://snyk.io/blog/why-your-ai-application-is-exposed/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Why Your AI Application Is Exposed (Even When Your Scans Come Back Clean)
                 </a>
-                <p class="mb-1 small text-light">As a bonus, it also enables admission control, load balancing, cross-region resilience, and richer operations. A proxy decouples them, collapsing the mesh into two bounded hops — a win on efficiency, performance, scalability, and above all reliability.</p>
+                <p class="mb-1 small text-light">AI applications can pass security scans yet remain exploitable through chained attacks across models, tools, data, and business workflows. Learn how DAST, AI pentesting, and red teaming work together to expose end-to-end risk.</p>
                 <small class="text-secondary">
                     
-                    Engineering at Meta
+                    Snyk
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-22">
-                <a href="https://www.hashicorp.com/blog/the-common-security-controls-behind-indias-regulatory-wave" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] The common security controls behind India's regulatory wave
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-23">
+                <a href="https://www.hashicorp.com/blog/secure-ai-agents-with-hashicorp-boundary" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Secure AI agents with HashiCorp Boundary
                 </a>
-                <p class="mb-1 small text-light">The encryption keys themselves never leave Vault and are never exposed to the application. A closer look: API key security and the secrets lifecycle Controls rarely arrive alone.</p>
+                <p class="mb-1 small text-light">To explore this challenge in practice, we used IBM technologies and services to create an AI agent capable of investigating infrastructure incidents through natural-language requests.</p>
                 <small class="text-secondary">
                     
                     HashiCorp
@@ -235,11 +189,11 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-22">
-                <a href="https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37: Pod-Level Resource Managers graduated to Beta
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-23">
+                <a href="https://kubernetes.io/blog/2026/09/22/sig-apps-spotlight/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on SIG Apps
                 </a>
-                <p class="mb-1 small text-light">First introduced as an Alpha feature in Kubernetes v1. PodResources API Reporting: The v1 PodResources gRPC service (PodResourcesLister) introduces top-level cpu_ids and memory fields on PodResources responses.</p>
+                <p class="mb-1 small text-light">As Kubernetes adoption has grown, the conversation has shifted beyond running containers to managing increasingly complex application lifecycles. The problem and the solutionSIG Apps is responsible for the core workload APIs that power how applications run on Kubernetes.</p>
                 <small class="text-secondary">
                     
                     Kubernetes
@@ -247,11 +201,11 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-22">
-                <a href="https://www.cncf.io/blog/2026/09/11/kubecon-cloudnativecon-north-america-2026-your-week-in-salt-lake-city/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] KubeCon + CloudNativeCon North America 2026: Your Week in Salt Lake City
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-23">
+                <a href="https://www.cncf.io/blog/2026/09/22/from-attendee-badge-to-speaker-badge-my-first-kubecon-at-kubecon-cloudnativecon-india-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] From attendee badge to speaker badge: My first KubeCon at KubeCon + CloudNativeCon India 2026
                 </a>
-                <p class="mb-1 small text-light">That includes familiar areas such as Kubernetes operations, networking, security, observability, storage, scheduling, developer experience, multi-cluster management, and platform engineering, alongside a growing focus on AI workloads and infrastructure.</p>
+                <p class="mb-1 small text-light">Thousands of attendees and a massive venue may sound overwhelming, but the community is unusually approachable. India’s cloud native community is enormous and hungry.</p>
                 <small class="text-secondary">
                     
                     CNCF
@@ -259,119 +213,11 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-22">
-                <a href="https://blog.cloudflare.com/worker-previews/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing Worker Previews: isolated preview environments for every change your agent makes
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-23">
+                <a href="https://www.cncf.io/blog/2026/09/17/opentelemetry-everywhere-migrating-a-metrics-platform-at-scale/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] OpenTelemetry everywhere: Migrating a metrics platform at scale
                 </a>
-                <p class="mb-1 small text-light">com, custom domain support helps us avoid Content Security Policy and cookie issues. Today, a service binding from a Preview still calls the bound Worker's production deployment.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-09-22">
-                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
-                </a>
-                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2026-09-22">
-                <a href="https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
-                    [Lyft Engineering] Rerouting the Stream: How Lyft Moved to the Apache Flink Operator
-                </a>
-                <p class="mb-1 small text-light">Security patches lagged, modern Kubernetes features stayed out of reach, and every quarter we waited made the eventual escape messier. The translation from FlinkApplication to FlinkDeployment happens within our deploy API.</p>
-                <small class="text-secondary">
-                    
-                    Lyft Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-22">
-                <a href="https://www.pulumi.com/blog/kubernetes-crds-as-provider-extensions/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Pulumi Kubernetes v4.34.0: CRDs as provider extensions
-                </a>
-                <p class="mb-1 small text-light">0, the newest version of the Pulumi Kubernetes provider, which includes improved support for Kubernetes Custom Resource Definitions (CRDs). This provider release includes the newest resources for Kubernetes v1.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-22">
-                <a href="https://www.docker.com/blog/what-is-yolo-mode/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] YOLO Mode: Agent Autonomy Without the Guardrails
-                </a>
-                <p class="mb-1 small text-light">Inside a proper boundary, however, developers can use agents in YOLO mode to unlock a new level of productivity, without jeopardizing security. Key takeaways YOLO mode is when an AI agent auto-approves every action, with no confirmation prompts.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-22">
-                <a href="https://www.redhat.com/en/blog/evolving-your-automation-pt-2-architectural-decisions-upgrading-red-hat-ansible-automation-platform-27" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Evolving your automation (Pt. 2): Architectural decisions for upgrading to Red Hat Ansible Automation Platform 2.7
-                </a>
-                <p class="mb-1 small text-light">Red Hat Ansible Automation Platform 2. 7 introduces many new enhancements designed to scale enterprise automation, improve platform engineering productivity, and bridge the gap with AI-driven operations.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-22">
-                <a href="https://www.redhat.com/en/blog/autorag-pipeline-optimization-red-hat-openshift-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] AutoRAG pipeline optimization in Red Hat OpenShift AI
-                </a>
-                <p class="mb-1 small text-light">The model returns a pristine answer, everyone nods, and the project gets greenlit. Then it meets enterprise reality.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-22">
-                <a href="https://engineering.fb.com/2026/09/21/open-source/rebalancer-generic-high-performance-library-assignment-problems/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Open-Sourcing Rebalancer: A Generic, High-Performance Library for Solving Assignment Problems
-                </a>
-                <p class="mb-1 small text-light">The main challenges to designing a reusable framework for solving problems like these are its usability and scalability. Rebalancer addresses both of these challenges by separating a problem’s specification from its solution.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-22">
-                <a href="https://kubernetes.io/blog/2026/09/21/kubernetes-v1-37-pvc-last-used-time/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37: Tracking When a PersistentVolumeClaim Was Last Used (Beta)
-                </a>
-                <p class="mb-1 small text-light">How to use itSince the feature is Beta and enabled by default in Kubernetes v1. If you have feedback on this feature, please open an issue in the kubernetes/kubernetes repository.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-22">
-                <a href="https://www.cncf.io/blog/2026/09/16/running-openbao-on-kubernetes-with-a-cloudnativepg-postgresql-backend/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Running OpenBao on Kubernetes with a CloudNativePG PostgreSQL backend
-                </a>
-                <p class="mb-1 small text-light">io/openbao-helm helm repo update helm install openbao openbao/openbao \ --namespace openbao \ -f openbao-values. Disaster recovery: to meet real RTO/RPO targets, span the deployment across more than one Kubernetes cluster.</p>
+                <p class="mb-1 small text-light">Nobody thought about it much, which is usually the sign of good infrastructure. How do we replace the whole engine without huge impact across Atlassian services.</p>
                 <small class="text-secondary">
                     
                     CNCF
@@ -379,11 +225,11 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-22">
-                <a href="https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Have it both ways: stay discoverable in search while disallowing AI training
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-23">
+                <a href="https://blog.cloudflare.com/vary-support/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] We just shipped support for the ugliest part of HTTP: Vary
                 </a>
-                <p class="mb-1 small text-light">Almost every site owner considers Search beneficial: less than 1% of Cloudflare sites choose to block Search bots. New security setting optionsCloudflare classifies bots by behavior, and a single bot can exhibit more than one behavior.</p>
+                <p class="mb-1 small text-light">Cloudflare therefore cannot reuse the response for a later request without contacting the origin. Vary in Cache Rules is available today on Free, Pro, Business, and Enterprise plans through the Cloudflare dashboard, Rulesets API, and Terraform.</p>
                 <small class="text-secondary">
                     
                     Cloudflare
@@ -391,26 +237,182 @@
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-09-22">
-                <a href="https://slack.engineering/from-ssh-to-rest-a-security-driven-modernization-of-slacks-emr-data-pipelines/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] From SSH to REST: A Security-Driven Modernization of Slack’s EMR Data Pipelines
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-23">
+                <a href="https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Saving another 100TB of RAM with math (and Rust)
                 </a>
-                <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
+                <p class="mb-1 small text-light">One of the ways Cloudflare ensures the balance is kept is through the tireless efforts of the wonderful Performance team. That means the solution to any consistent hashing problem can only be more hashes.</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Cloudflare
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-22">
-                <a href="https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] How our universal content processing platform Riviera evolved for AI and beyond
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-23">
+                <a href="https://dropbox.tech/culture/learnings-from-deploying-ai-at-company-scale" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] What Dropbox has learned from deploying AI at company scale
                 </a>
-                <p class="mb-1 small text-light">This meant we needed a managed platform, a place where we could construct these services to be shared across many different features. The platform that began as an internal preview service is now infrastructure that developers can build on, too.</p>
+                <p class="mb-1 small text-light">Problem solving, communication, and leadership become critical to turning AI-enabled output into real value. Or you’re generating significantly more code, which puts additional stress on the tools and infrastructure that support development.</p>
                 <small class="text-secondary">
                     
                     Dropbox Tech
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-23">
+                <a href="https://netflixtechblog.medium.com/the-lifecycle-of-llm-as-a-judge-building-aligning-and-monitoring-at-scale-c95bd8283508?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] The Lifecycle of LLM-as-a-Judge: Building, Aligning, and Monitoring at scale
+                </a>
+                <p class="mb-1 small text-light">However, it introduces a new and critical question: Who evaluates the evaluator. This closes the loop by feeding new human-labeled data and updated signals back into the benchmark and development phases.</p>
+                <small class="text-secondary">
+                    
+                    Netflix
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-23">
+                <a href="https://azure.microsoft.com/en-us/blog/microsoft-recognized-as-a-leader-in-the-2026-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft recognized as a Leader in the 2026 Gartner® Magic Quadrant™ for Distributed Hybrid Infrastructure
+                </a>
+                <p class="mb-1 small text-light">With Azure Local and Azure Arc, organizations can manage infrastructure across datacenters, edge locations, multi-cloud environments, and sovereign deployments through a consistent Azure foundation.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-23">
+                <a href="https://www.redhat.com/en/blog/bringing-enterprise-linux-robotics-frontier-ros2-adds-red-hat-enterprise-linux-tier-1-supported-platform" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Bringing enterprise Linux to the robotics frontier: ROS2 adds Red Hat Enterprise Linux as a tier-1 supported platform
+                </a>
+                <p class="mb-1 small text-light">The convergence of enterprise IT and physical computing is accelerating. As a tier-1 platform for ROS2, the world’s leading enterprise Linux platform brings enterprise-grade.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-23">
+                <a href="https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity
+                </a>
+                <p class="mb-1 small text-light">Quality and reliability have always been a point of pride for Spotify. We run an extraordinarily complex... The post AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-23">
+                <a href="https://www.hashicorp.com/blog/terraform-provider-for-google-cloud-80-now-generally-available" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform provider for Google Cloud 8.0 now generally available
+                </a>
+                <p class="mb-1 small text-light">0 The Google Cloud provider is continuously updated alongside Google Cloud services and Terraform itself. x release cycle, the Google Cloud provider introduced support for Terraform list resources, starting with service accounts and expanding across a growing set of Google Cloud resources.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-23">
+                <a href="https://kubernetes.io/blog/2026/09/16/kubernetes-v1-37-hardening-container-storage/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: Hardening Container Storage with Bind Mount Options and EmptyDir Permissions
+                </a>
+                <p class="mb-1 small text-light">37 brings important storage security features: emptyDir permission modes and bind mount options. Linux storage and permission fundamentalsBefore diving into the new Kubernetes features, let us briefly review the low-level Linux security mechanisms that make them possible.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-23">
+                <a href="https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] When scanners miss the attack: how Cloudflare Client-Side Security protects storefronts
+                </a>
+                <p class="mb-1 small text-light">Neither Amazon Web Services nor the impersonated marketing platform was involved in the attack or suffered any compromise.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-09-23">
+                <a href="https://slack.engineering/slack-ai-the-path-to-multi-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Slack AI: The Path to Multi-Cloud
+                </a>
+                <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-23">
+                <a href="https://www.redhat.com/en/blog/unify-vms-and-containers-everpure-cloud-azure-red-hat-openshift" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Unify VMs and containers with Everpure Cloud on Azure Red Hat OpenShift
+                </a>
+                <p class="mb-1 small text-light">Everpure Cloud is now available on Microsoft Azure Red Hat OpenShift to help solve this problem. By combining Microsoft and Red Hat’s fully managed application platform with Everpure’s inte.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-23">
+                <a href="https://www.redhat.com/en/blog/incident-insight-governed-action-logicmonitor-edwin-ai-and-red-hat-ansible-automation-platform" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] From incident insight to governed action with LogicMonitor Edwin AI and Red Hat Ansible Automation Platform
+                </a>
+                <p class="mb-1 small text-light">Integrating LogicMonitor Edwin AI with Red Hat Ansible Automation Platform can help bridge the gap between incident diagnosis and remediation.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-23">
+                <a href="https://www.redhat.com/en/blog/breaking-ai-productivity-paradox-intelligent-migration-factory-modernize-infrastructure-and-applications" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Breaking the AI productivity paradox: an intelligent migration factory to modernize infrastructure and applications
+                </a>
+                <p class="mb-1 small text-light">The rise of generative AI promised a silver bullet, but for most enterprises, especially banks, digital transformation remains a slow, complex, and costly endeavor. But when AI is applied to complex enterprise systems, organizations often collide with what we call the AI productivity paradox.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-23">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-collaborative-ai-powered-observability-for-your-applications/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing Amazon CloudWatch Omni: collaborative AI-powered observability for your applications
+                </a>
+                <p class="mb-1 small text-light">When you deploy new services, Omni updates the application topology automatically. CloudWatch Omni Home — your team’s workspace with application monitoring, analytics, and agent observability Once created, Omni discovers your services automatically and maps the dependencies between them.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-23">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing Amazon CloudWatch Omni: AI-powered observability for generative AI and agentic workloads
+                </a>
+                <p class="mb-1 small text-light">Today, Amazon CloudWatch introduces CloudWatch Omni, a unified observability experience for application and AI workloads that is app-centric, AI-powered, built on open standards, and delivered off-console.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS
                     
                 </small>
             </li>

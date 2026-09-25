@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - September 25, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - September 25, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for September 25, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-09-25">2026-09-25 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 14 sources • Updated 2026-09-25 13:15:26
+                    Showing 25 total articles from 
+                    14 sources
+                    
                     
                 </span>
             </small>
@@ -115,242 +132,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-25">
-                <a href="https://www.reddit.com/r/devops/comments/1wp7tu2/why_are_backups_usually_not_treated_as/" target="_blank" class="fw-bold text-decoration-none">
-                    Why are backups usually not treated as infrastructure as code?
-                </a>
-                <p class="mb-1 small text-light">If you're dealing with a Kubernetes cluster, oftentimes that's all reconciled by tools like ArgoCD and others. There's a Kubernetes operator as well as Terraform / Ansible providers.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-25">
-                <a href="https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Leave the Class Path in the Rearview Mirror
-                </a>
-                <p class="mb-1 small text-light">An IDE formats source, navigates between declarations and usages, presents API documentation, and maintains a compiled view of the project. ja only provides command line ergonomics and tool orchestration, each feature is underpinned by a standalone tool.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-25">
-                <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] A Tale of Two Flink Autoscalers
-                </a>
-                <p class="mb-1 small text-light">Because the autoscaler operates independently of the Flink platform, it remains unaffected by issues within Flink itself. That service is a Spring Boot application whose orchestration runs on Temporal, the durable workflow engine.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-25">
-                <a href="https://azure.microsoft.com/en-us/blog/designing-agent-first-platforms-what-changes-when-agents-do-the-work/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Designing agent-first platforms: What changes when agents do the work
-                </a>
-                <p class="mb-1 small text-light">That change puts pressure on assumptions our platforms were built on, because an application that responds and an agent that acts need very different things underneath them. Azure Container Apps Sandboxes Learn more about designing agent-first platforms with Azure.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-25">
-                <a href="https://www.docker.com/blog/docker-sandbox-kit-spec/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] From Dockerfile to Kit: the Docker Sandboxes Kit Specification
-                </a>
-                <p class="mb-1 small text-light">They write code, run tests, install dependencies, call APIs, and work on infrastructure while I do something else. sandbox/credential@1 optional: true config: service: github phase: runtime apiKey: name: GH_TOKEN proxyManaged: true inject: - {domain: api.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-25">
-                <a href="https://www.docker.com/blog/docker-sandbox-kit-spec-cncf/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker and CNCF partner on an open spec for agent permissions
-                </a>
-                <p class="mb-1 small text-light">The same problem, for agents Containers were built for immutable software. Cloud platforms, observability, security, artifact management, content, and agent frameworks are all represented.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-25">
-                <a href="https://www.redhat.com/en/blog/how-manage-aircraft-leases-ai-agents" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] How to manage aircraft leases with AI agents
-                </a>
-                <p class="mb-1 small text-light">Each aims to provide a simple and practical way to solve real-world problems using AI on enterprise open source infrastructure. This quickstart takes on a document problem most people outside of aviation never see: the aircraft lease.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-09-25">
-                <a href="https://blog.sentry.io/sentry-laravel-ai-integration/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Building Sentry's Laravel AI Integration
-                </a>
-                <p class="mb-1 small text-light">We were also supposed to use AI for that, so the language barrier wasn't a real issue. $source->{$key} will resolve $key to its string value and will access the field.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-25">
-                <a href="https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable
-                </a>
-                <p class="mb-1 small text-light">However, transitioning to a 2-core fiber ecosystem comes with challenges that affect the fiber and subsea repeaters. 1-core fiber allows the industry to counter-propagate traffic using a pair of fibers.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-25">
-                <a href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] ZGateway: Learnings from Putting a Proxy in Front of ZippyDB
-                </a>
-                <p class="mb-1 small text-light">As a bonus, it also enables admission control, load balancing, cross-region resilience, and richer operations. A proxy decouples them, collapsing the mesh into two bounded hops — a win on efficiency, performance, scalability, and above all reliability.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-25">
-                <a href="https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37: Pod-Level Resource Managers graduated to Beta
-                </a>
-                <p class="mb-1 small text-light">First introduced as an Alpha feature in Kubernetes v1. PodResources API Reporting: The v1 PodResources gRPC service (PodResourcesLister) introduces top-level cpu_ids and memory fields on PodResources responses.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-25">
-                <a href="https://www.cncf.io/blog/2026/09/25/security-slam-2026-fall-edition/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Security Slam 2026 – Fall edition
-                </a>
-                <p class="mb-1 small text-light">Security Slam 2026 – Fall Edition is a 30-day virtual event from October 5 through November 6, 2026. In the case of the Kubernetes Lightning Round, the slam was a day of onboarding new contributors to Kubernetes with a focus on security hygiene improvements to seven different subprojects.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-25">
-                <a href="https://blog.cloudflare.com/worker-previews/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing Worker Previews: Isolated preview environments for every change your agent makes
+                <a href="https://blog.cloudflare.com/containers-cross-tenant-vulnerability/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] How Cloudflare addressed a cross-tenant data exposure vulnerability in Containers
                 </a>
-                <p class="mb-1 small text-light">This enables an Agent Development Lifecycle (ADLC) where each change is atomic, independently deployable, observable, and revisable. Today, a service binding from a Preview still calls the bound Worker's production deployment.</p>
+                <p class="mb-1 small text-light">Cloudflare Containers run workloads on multi-tenant infrastructure and automatically assign them to eligible servers; customers cannot select the underlying host. A subsequent raw-device read could therefore observe bytes that the new container had never written.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-09-25">
-                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
-                </a>
-                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2026-09-25">
-                <a href="https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
-                    [Lyft Engineering] Rerouting the Stream: How Lyft Moved to the Apache Flink Operator
-                </a>
-                <p class="mb-1 small text-light">Security patches lagged, modern Kubernetes features stayed out of reach, and every quarter we waited made the eventual escape messier. The translation from FlinkApplication to FlinkDeployment happens within our deploy API.</p>
-                <small class="text-secondary">
-                    
-                    Lyft Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-25">
-                <a href="https://www.pulumi.com/blog/kubernetes-crds-as-provider-extensions/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Pulumi Kubernetes v4.34.0: CRDs as provider extensions
-                </a>
-                <p class="mb-1 small text-light">0, the newest version of the Pulumi Kubernetes provider, which includes improved support for Kubernetes Custom Resource Definitions (CRDs). This provider release includes the newest resources for Kubernetes v1.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-25">
-                <a href="https://www.docker.com/blog/manufacturing-trust-for-ai-agents-keynote/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Manufacturing Trust for AI Agents | Docker’s WeAreDevelopers Keynote
-                </a>
-                <p class="mb-1 small text-light">In the keynote, Mark announced Docker Cloud Sandboxes, bringing the same microVM-based isolation from the laptop to Docker-managed cloud compute. Docker provides the trusted foundation underneath, whether agents run locally or in the cloud.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-25">
-                <a href="https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Introducing Cloud Sandboxes: Start on Your Laptop, Finish in the Cloud
-                </a>
-                <p class="mb-1 small text-light">Today, we’re introducing Cloud Sandboxes: the same microVM-based sandbox, running on Docker-managed compute, with one command to move between them. Cloud Sandboxes is the same microVM, running on Docker-managed compute.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-25">
-                <a href="https://www.redhat.com/en/blog/red-hat-enterprise-linux-10-stig-automation-now-matches-disa-stig-v1r2" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat Enterprise Linux 10 STIG automation now matches DISA STIG V1R2
-                </a>
-                <p class="mb-1 small text-light">Department of Defense (DoD) and its contractors, security has to hold up against a published baseline—not a general claim that systems are “secure.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-25">
-                <a href="https://engineering.fb.com/2026/09/21/open-source/rebalancer-generic-high-performance-library-assignment-problems/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Open-Sourcing Rebalancer: A Generic, High-Performance Library for Solving Assignment Problems
-                </a>
-                <p class="mb-1 small text-light">The main challenges to designing a reusable framework for solving problems like these are its usability and scalability. Rebalancer addresses both of these challenges by separating a problem’s specification from its solution.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
+                    Cloudflare | 2026-09-25
                     
                 </small>
             </li>
@@ -362,7 +151,7 @@
                 <p class="mb-1 small text-light">How to use itSince the feature is Beta and enabled by default in Kubernetes v1. If you have feedback on this feature, please open an issue in the kubernetes/kubernetes repository.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-09-25
                     
                 </small>
             </li>
@@ -374,7 +163,7 @@
                 <p class="mb-1 small text-light">In 2023, Cloudflare declared itself free from CAPTCHAs with the launch of Turnstile, our privacy-first client-side challenge. First, you modify your frontend code to render the Turnstile widget; this allows Cloudflare to run the client-side challenges and issue a token.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-09-25
                     
                 </small>
             </li>
@@ -386,7 +175,7 @@
                 <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-09-25
                     
                 </small>
             </li>
@@ -398,19 +187,247 @@
                 <p class="mb-1 small text-light">This meant we needed a managed platform, a place where we could construct these services to be shared across many different features. The platform that began as an internal preview service is now infrastructure that developers can build on, too.</p>
                 <small class="text-secondary">
                     
-                    Dropbox Tech
+                    Dropbox Tech | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-25">
+                <a href="https://www.docker.com/blog/manufacturing-trust-for-ai-agents-keynote/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Manufacturing Trust for AI Agents | Docker’s WeAreDevelopers Keynote
+                </a>
+                <p class="mb-1 small text-light">In the keynote, Mark announced Docker Cloud Sandboxes, bringing the same microVM-based isolation from the laptop to Docker-managed cloud compute. Docker provides the trusted foundation underneath, whether agents run locally or in the cloud.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-25">
+                <a href="https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Introducing Cloud Sandboxes: Start on Your Laptop, Finish in the Cloud
+                </a>
+                <p class="mb-1 small text-light">Today, we’re introducing Cloud Sandboxes: the same microVM-based sandbox, running on Docker-managed compute, with one command to move between them. Cloud Sandboxes is the same microVM, running on Docker-managed compute.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-25">
+                <a href="https://www.redhat.com/en/blog/red-hat-enterprise-linux-10-stig-automation-now-matches-disa-stig-v1r2" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat Enterprise Linux 10 STIG automation now matches DISA STIG V1R2
+                </a>
+                <p class="mb-1 small text-light">Department of Defense (DoD) and its contractors, security has to hold up against a published baseline—not a general claim that systems are “secure.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-25">
+                <a href="https://engineering.fb.com/2026/09/21/open-source/rebalancer-generic-high-performance-library-assignment-problems/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Open-Sourcing Rebalancer: A Generic, High-Performance Library for Solving Assignment Problems
+                </a>
+                <p class="mb-1 small text-light">The main challenges to designing a reusable framework for solving problems like these are its usability and scalability. Rebalancer addresses both of these challenges by separating a problem’s specification from its solution.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-25">
+                <a href="https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: Pod-Level Resource Managers graduated to Beta
+                </a>
+                <p class="mb-1 small text-light">First introduced as an Alpha feature in Kubernetes v1. PodResources API Reporting: The v1 PodResources gRPC service (PodResourcesLister) introduces top-level cpu_ids and memory fields on PodResources responses.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-25">
+                <a href="https://www.cncf.io/blog/2026/09/25/security-slam-2026-fall-edition/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Security Slam 2026 – Fall edition
+                </a>
+                <p class="mb-1 small text-light">Security Slam 2026 – Fall Edition is a 30-day virtual event from October 5 through November 6, 2026. In the case of the Kubernetes Lightning Round, the slam was a day of onboarding new contributors to Kubernetes with a focus on security hygiene improvements to seven different subprojects.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-09-25
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-25">
-                <a href="https://blog.cloudflare.com/containers-cross-tenant-vulnerability/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] How Cloudflare addressed a cross-tenant data exposure vulnerability in Containers
+                <a href="https://blog.cloudflare.com/worker-previews/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing Worker Previews: Isolated preview environments for every change your agent makes
                 </a>
-                <p class="mb-1 small text-light">Cloudflare Containers run workloads on multi-tenant infrastructure and automatically assign them to eligible servers; customers cannot select the underlying host. A subsequent raw-device read could therefore observe bytes that the new container had never written.</p>
+                <p class="mb-1 small text-light">This enables an Agent Development Lifecycle (ADLC) where each change is atomic, independently deployable, observable, and revisable. Today, a service binding from a Preview still calls the bound Worker's production deployment.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-09-25">
+                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2026-09-25">
+                <a href="https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
+                    [Lyft Engineering] Rerouting the Stream: How Lyft Moved to the Apache Flink Operator
+                </a>
+                <p class="mb-1 small text-light">Security patches lagged, modern Kubernetes features stayed out of reach, and every quarter we waited made the eventual escape messier. The translation from FlinkApplication to FlinkDeployment happens within our deploy API.</p>
+                <small class="text-secondary">
+                    
+                    Lyft Engineering | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-25">
+                <a href="https://www.pulumi.com/blog/kubernetes-crds-as-provider-extensions/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Pulumi Kubernetes v4.34.0: CRDs as provider extensions
+                </a>
+                <p class="mb-1 small text-light">0, the newest version of the Pulumi Kubernetes provider, which includes improved support for Kubernetes Custom Resource Definitions (CRDs). This provider release includes the newest resources for Kubernetes v1.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-25">
+                <a href="https://www.reddit.com/r/devops/comments/1wp7tu2/why_are_backups_usually_not_treated_as/" target="_blank" class="fw-bold text-decoration-none">
+                    Why are backups usually not treated as infrastructure as code?
+                </a>
+                <p class="mb-1 small text-light">If you're dealing with a Kubernetes cluster, oftentimes that's all reconciled by tools like ArgoCD and others. There's a Kubernetes operator as well as Terraform / Ansible providers.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-25">
+                <a href="https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Leave the Class Path in the Rearview Mirror
+                </a>
+                <p class="mb-1 small text-light">An IDE formats source, navigates between declarations and usages, presents API documentation, and maintains a compiled view of the project. ja only provides command line ergonomics and tool orchestration, each feature is underpinned by a standalone tool.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-25">
+                <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] A Tale of Two Flink Autoscalers
+                </a>
+                <p class="mb-1 small text-light">Because the autoscaler operates independently of the Flink platform, it remains unaffected by issues within Flink itself. That service is a Spring Boot application whose orchestration runs on Temporal, the durable workflow engine.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-09-25">
+                <a href="https://azure.microsoft.com/en-us/blog/designing-agent-first-platforms-what-changes-when-agents-do-the-work/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Designing agent-first platforms: What changes when agents do the work
+                </a>
+                <p class="mb-1 small text-light">That change puts pressure on assumptions our platforms were built on, because an application that responds and an agent that acts need very different things underneath them. Azure Container Apps Sandboxes Learn more about designing agent-first platforms with Azure.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-25">
+                <a href="https://www.docker.com/blog/docker-sandbox-kit-spec/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] From Dockerfile to Kit: the Docker Sandboxes Kit Specification
+                </a>
+                <p class="mb-1 small text-light">They write code, run tests, install dependencies, call APIs, and work on infrastructure while I do something else. sandbox/credential@1 optional: true config: service: github phase: runtime apiKey: name: GH_TOKEN proxyManaged: true inject: - {domain: api.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-25">
+                <a href="https://www.docker.com/blog/docker-sandbox-kit-spec-cncf/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker and CNCF partner on an open spec for agent permissions
+                </a>
+                <p class="mb-1 small text-light">The same problem, for agents Containers were built for immutable software. Cloud platforms, observability, security, artifact management, content, and agent frameworks are all represented.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-25">
+                <a href="https://www.redhat.com/en/blog/how-manage-aircraft-leases-ai-agents" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] How to manage aircraft leases with AI agents
+                </a>
+                <p class="mb-1 small text-light">Each aims to provide a simple and practical way to solve real-world problems using AI on enterprise open source infrastructure. This quickstart takes on a document problem most people outside of aviation never see: the aircraft lease.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-09-25">
+                <a href="https://blog.sentry.io/sentry-laravel-ai-integration/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Building Sentry's Laravel AI Integration
+                </a>
+                <p class="mb-1 small text-light">We were also supposed to use AI for that, so the language barrier wasn't a real issue. $source->{$key} will resolve $key to its string value and will access the field.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-25">
+                <a href="https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable
+                </a>
+                <p class="mb-1 small text-light">However, transitioning to a 2-core fiber ecosystem comes with challenges that affect the fiber and subsea repeaters. 1-core fiber allows the industry to counter-propagate traffic using a pair of fibers.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-25
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-25">
+                <a href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] ZGateway: Learnings from Putting a Proxy in Front of ZippyDB
+                </a>
+                <p class="mb-1 small text-light">As a bonus, it also enables admission control, load balancing, cross-region resilience, and richer operations. A proxy decouples them, collapsing the mesh into two bounded hops — a win on efficiency, performance, scalability, and above all reliability.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-25
                     
                 </small>
             </li>

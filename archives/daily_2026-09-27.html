@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - September 27, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - September 27, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for September 27, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-09-27">2026-09-27 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2026-09-27 13:32:36
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,266 +130,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-27">
-                <a href="https://www.reddit.com/r/worldnews/comments/1wr3id3/meta_blocks_president_lulas_facebook_page_and/" target="_blank" class="fw-bold text-decoration-none">
-                    Meta Blocks President Lula's Facebook Page, Campaign Ads 2 Weeks from Election
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-27">
+                <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Improving infrastructure efficiency for growing demand in the age of AI
                 </a>
-                <p class="mb-1 small text-light">Article URL: https://www.reddit.com/r/worldnews/comments/1wr3id3/meta_blocks_president_lulas_facebook_page_and/ Comments URL: https://news.ycombinator.com/item?id=49864642 Points: 277 # Comments: 196</p>
+                <p class="mb-1 small text-light">But building new infrastructure is only part of the challenge. When performance declines or newer hardware provides meaningful improvements in capacity, reliability, or efficiency, we can plan a transition.</p>
                 <small class="text-secondary">
                     
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-27">
-                <a href="https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/" target="_blank" class="fw-bold text-decoration-none">
-                    OpenAI Feared "Optics" of what might appear on Hacker News
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/ Comments URL: https://news.ycombinator.com/item?id=49863864 Points: 373 # Comments: 310</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-27">
-                <a href="https://fakecloud.dev/" target="_blank" class="fw-bold text-decoration-none">
-                    Fakecloud: Local AWS cloud emulator for integration tests
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://fakecloud.dev/ Comments URL: https://news.ycombinator.com/item?id=49856885 Points: 5 # Comments: 0</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-27">
-                <a href="https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/" target="_blank" class="fw-bold text-decoration-none">
-                    Improving site performance by shipping more CSS
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/ Comments URL: https://news.ycombinator.com/item?id=49856193 Points: 59 # Comments: 39</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-27">
-                <a href="https://aws.amazon.com/blogs/aws/introducing-enhanced-custom-event-buses-in-amazon-eventbridge-for-enterprise-scale-event-driven-applications/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Introducing enhanced custom event buses in Amazon EventBridge for enterprise-scale event-driven applications
-                </a>
-                <p class="mb-1 small text-light">Application teams across your organization can publish and subscribe to events on the same bus without waiting for infrastructure provisioning. In a logistics application, driver location updates must arrive in sequence.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-27">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-mobile-apps-amazon-connect-talent-ga-amazon-corretto-27-and-more-september-14-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: AWS Builder Center mobile apps, Amazon Connect Talent GA, Amazon Corretto 27, and more (September 21, 2026)
-                </a>
-                <p class="mb-1 small text-light">The app also supports the Wishlist feature for submitting product feedback directly to AWS teams. For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-27">
-                <a href="https://www.hashicorp.com/blog/simplify-compliance-with-a-native-pre-written-policy-experience-in-terraform" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Simplify compliance with the native pre-written policy experience in HCP Terraform
-                </a>
-                <p class="mb-1 small text-light">As organizations face growing security and regulatory requirements, maintaining compliant infrastructure becomes increasingly complex. This work grows as organizations adopt more cloud providers, services, and compliance frameworks.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-27">
-                <a href="https://www.hashicorp.com/blog/hcp-vagrant-deprecation-important-dates-and-migration-guidance" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] HCP Vagrant deprecation: important dates and migration guidance
-                </a>
-                <p class="mb-1 small text-light">HashiCorp will end support and maintenance for existing Vagrant deployments End of operations: December 31, 2026. HashiCorp will decommission all remaining Vagrant deployments Deprecation details This deprecation applies only to HCP Vagrant.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-27">
-                <a href="https://www.hashicorp.com/blog/simplifying-terraform-for-ibm-z-with-intent-driven-workflows" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Simplifying Terraform for IBM Z with intent-driven workflows
-                </a>
-                <p class="mb-1 small text-light">Terraform, the industry standard for declaratively managing infrastructure through infrastructure as code (IaC), provides that common operating model.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-27">
-                <a href="https://www.cncf.io/blog/2026/09/23/which-hat-am-i-wearing-right-now/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Which hat am I wearing right now?
-                </a>
-                <p class="mb-1 small text-light">Neutrality is quietly the hardest part of open source. More than half do both, blending personal passion with a paycheck.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-27">
-                <a href="https://www.reddit.com/r/devops/comments/1wr7mw9/how_to_maintain_helm_charts_of_multiple/" target="_blank" class="fw-bold text-decoration-none">
-                    How to maintain helm charts of multiple micro-services on k8s at scale ?
-                </a>
-                <p class="mb-1 small text-light">hey everyone, how do you guys manage helm charts for multiple micro services. - how are you maintaining multiple microservices on k8s at scale.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-27">
-                <a href="https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Running Apache Spark experiments in my sleep (and on a plane)
-                </a>
-                <p class="mb-1 small text-light">That works for standard software bugs, but it fails completely for big data performance bottlenecks. Why tmux MatteredAll of this ran on Workbench, Netflix’s cloud dev environment, using my laptop as a thin terminal.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-27">
-                <a href="https://www.redhat.com/en/blog/automate-security-risk-management-across-enterprise-it-operations" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Automate security risk management across enterprise IT operations
-                </a>
-                <p class="mb-1 small text-light">As a key part of this transformation, IT teams are using automation to rapidly address vulnerabilities and thus limit rapid exploitation. This blog post explores how automation is redefining the ways in which enterprises manage security risk acr.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-27">
-                <a href="https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Why Spotify Is Not Using Bayesian A/B Testing
-                </a>
-                <p class="mb-1 small text-light">Clearing the confusion about what Bayesian A/B testing is. The post Why Spotify Is Not Using Bayesian A/B Testing appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-27">
-                <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Portal by Spotify cut my Claude Code token usage by 90%
-                </a>
-                <p class="mb-1 small text-light">Most of what an AI coding agent does for me isn't thinking. It's I/O. The post Portal by Spotify cut my Claude Code token usage by 90% appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-27">
-                <a href="https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] When Can LLMs Replace Humans in A/B Tests?
-                </a>
-                <p class="mb-1 small text-light">TL;DR: LLM predictions can stand in for human outcomes in A/B tests, but only by assumption, not by design.... The post When Can LLMs Replace Humans in A/B Tests? appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-27">
-                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
-                </a>
-                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-27">
-                <a href="https://aws.amazon.com/blogs/aws/new-low-cost-burstable-amazon-ec2-t8i-instances-are-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] New low-cost burstable Amazon EC2 T8i instances are generally available
-                </a>
-                <p class="mb-1 small text-light">Today, we’re announcing the general availability of new low-cost burstable Amazon EC2 T8i instances powered by custom sixth generation Intel Xeon Scalable Processors (Granite Rapids), available only on AWS.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-27">
-                <a href="https://kubernetes.io/blog/2026/09/14/csi-changed-block-tracking-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes Changed Block Tracking API - Beta Differences
-                </a>
-                <p class="mb-1 small text-light">What's new in BetaThe main change in that release was the promotion of the SnapshotMetadataService CRD from v1alpha1 to v1beta1. Update SnapshotMetadataService manifests to use apiVersion: cbt.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-27">
-                <a href="https://www.pulumi.com/blog/esc-oidc-setup-cli/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Set Up Cloud OIDC From the Pulumi CLI
-                </a>
-                <p class="mb-1 small text-light">This eliminates hard-coded credentials and improves your security posture. pulumi env setup - how it works Run the command with your desired cloud provider (aws, azure, gcp).</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-27">
-                <a href="https://engineering.fb.com/2026/09/23/security/private-processing-meta-ai-glasses/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Bringing Private Processing to Meta AI Glasses
-                </a>
-                <p class="mb-1 small text-light">That key is never released to the host operating system, the hypervisor, or anyone operating the machine.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-27">
-                <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] An Organizational Second Brain: Building an AI That Learns From Experts
-                </a>
-                <p class="mb-1 small text-light">A self-improvement loop then compiles expert feedback into verified, regression-tested updates without model retraining. Its job is to find problems such as contradictions introduced, edge cases broken, or positions undermined.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
+                    Dropbox Tech | 2026-09-27
                     
                 </small>
             </li>
@@ -384,7 +149,7 @@
                 <p class="mb-1 small text-light">For the wider KubeCon + CloudNativeCon community, Observability Day provides an opportunity to explore these topics through real architectures, operational experience, technical trade-offs, and open source technologies.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-09-27
                     
                 </small>
             </li>
@@ -396,19 +161,271 @@
                 <p class="mb-1 small text-light">We introduced Python Workers two years ago, providing a way to run Python applications in the Cloudflare Workers runtime. Asynchronous AI orchestrationBuilding a full-stack AI application often means connecting multiple services such as storage, queuing, and inference.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-09-27
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-27">
-                <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Improving infrastructure efficiency for growing demand in the age of AI
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-27">
+                <a href="https://engineering.fb.com/2026/09/23/security/private-processing-meta-ai-glasses/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Bringing Private Processing to Meta AI Glasses
                 </a>
-                <p class="mb-1 small text-light">But building new infrastructure is only part of the challenge. When performance declines or newer hardware provides meaningful improvements in capacity, reliability, or efficiency, we can plan a transition.</p>
+                <p class="mb-1 small text-light">That key is never released to the host operating system, the hypervisor, or anyone operating the machine.</p>
                 <small class="text-secondary">
                     
-                    Dropbox Tech
+                    Engineering at Meta | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-27">
+                <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] An Organizational Second Brain: Building an AI That Learns From Experts
+                </a>
+                <p class="mb-1 small text-light">A self-improvement loop then compiles expert feedback into verified, regression-tested updates without model retraining. Its job is to find problems such as contradictions introduced, edge cases broken, or positions undermined.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-27">
+                <a href="https://aws.amazon.com/blogs/aws/new-low-cost-burstable-amazon-ec2-t8i-instances-are-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] New low-cost burstable Amazon EC2 T8i instances are generally available
+                </a>
+                <p class="mb-1 small text-light">Today, we’re announcing the general availability of new low-cost burstable Amazon EC2 T8i instances powered by custom sixth generation Intel Xeon Scalable Processors (Granite Rapids), available only on AWS.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-27">
+                <a href="https://kubernetes.io/blog/2026/09/14/csi-changed-block-tracking-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes Changed Block Tracking API - Beta Differences
+                </a>
+                <p class="mb-1 small text-light">What's new in BetaThe main change in that release was the promotion of the SnapshotMetadataService CRD from v1alpha1 to v1beta1. Update SnapshotMetadataService manifests to use apiVersion: cbt.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-27">
+                <a href="https://www.pulumi.com/blog/esc-oidc-setup-cli/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Set Up Cloud OIDC From the Pulumi CLI
+                </a>
+                <p class="mb-1 small text-light">This eliminates hard-coded credentials and improves your security posture. pulumi env setup - how it works Run the command with your desired cloud provider (aws, azure, gcp).</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-27">
+                <a href="https://www.reddit.com/r/devops/comments/1wr7mw9/how_to_maintain_helm_charts_of_multiple/" target="_blank" class="fw-bold text-decoration-none">
+                    How to maintain helm charts of multiple micro-services on k8s at scale ?
+                </a>
+                <p class="mb-1 small text-light">hey everyone, how do you guys manage helm charts for multiple micro services. - how are you maintaining multiple microservices on k8s at scale.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-27">
+                <a href="https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Running Apache Spark experiments in my sleep (and on a plane)
+                </a>
+                <p class="mb-1 small text-light">That works for standard software bugs, but it fails completely for big data performance bottlenecks. Why tmux MatteredAll of this ran on Workbench, Netflix’s cloud dev environment, using my laptop as a thin terminal.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-27">
+                <a href="https://www.redhat.com/en/blog/automate-security-risk-management-across-enterprise-it-operations" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Automate security risk management across enterprise IT operations
+                </a>
+                <p class="mb-1 small text-light">As a key part of this transformation, IT teams are using automation to rapidly address vulnerabilities and thus limit rapid exploitation. This blog post explores how automation is redefining the ways in which enterprises manage security risk acr.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-27">
+                <a href="https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Why Spotify Is Not Using Bayesian A/B Testing
+                </a>
+                <p class="mb-1 small text-light">Clearing the confusion about what Bayesian A/B testing is. The post Why Spotify Is Not Using Bayesian A/B Testing appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-27">
+                <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Portal by Spotify cut my Claude Code token usage by 90%
+                </a>
+                <p class="mb-1 small text-light">Most of what an AI coding agent does for me isn't thinking. It's I/O. The post Portal by Spotify cut my Claude Code token usage by 90% appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-27">
+                <a href="https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] When Can LLMs Replace Humans in A/B Tests?
+                </a>
+                <p class="mb-1 small text-light">TL;DR: LLM predictions can stand in for human outcomes in A/B tests, but only by assumption, not by design.... The post When Can LLMs Replace Humans in A/B Tests? appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-27">
+                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
+                </a>
+                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-27">
+                <a href="https://www.reddit.com/r/worldnews/comments/1wr3id3/meta_blocks_president_lulas_facebook_page_and/" target="_blank" class="fw-bold text-decoration-none">
+                    Meta Blocks President Lula's Facebook Page, Campaign Ads 2 Weeks from Election
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.reddit.com/r/worldnews/comments/1wr3id3/meta_blocks_president_lulas_facebook_page_and/ Comments URL: https://news.ycombinator.com/item?id=49864642 Points: 277 # Comments: 196</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-27">
+                <a href="https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/" target="_blank" class="fw-bold text-decoration-none">
+                    OpenAI Feared "Optics" of what might appear on Hacker News
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/ Comments URL: https://news.ycombinator.com/item?id=49863864 Points: 373 # Comments: 310</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-27">
+                <a href="https://fakecloud.dev/" target="_blank" class="fw-bold text-decoration-none">
+                    Fakecloud: Local AWS cloud emulator for integration tests
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://fakecloud.dev/ Comments URL: https://news.ycombinator.com/item?id=49856885 Points: 5 # Comments: 0</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-09-27">
+                <a href="https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/" target="_blank" class="fw-bold text-decoration-none">
+                    Improving site performance by shipping more CSS
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/ Comments URL: https://news.ycombinator.com/item?id=49856193 Points: 59 # Comments: 39</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-27">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-enhanced-custom-event-buses-in-amazon-eventbridge-for-enterprise-scale-event-driven-applications/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing enhanced custom event buses in Amazon EventBridge for enterprise-scale event-driven applications
+                </a>
+                <p class="mb-1 small text-light">Application teams across your organization can publish and subscribe to events on the same bus without waiting for infrastructure provisioning. In a logistics application, driver location updates must arrive in sequence.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-27">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-mobile-apps-amazon-connect-talent-ga-amazon-corretto-27-and-more-september-14-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: AWS Builder Center mobile apps, Amazon Connect Talent GA, Amazon Corretto 27, and more (September 21, 2026)
+                </a>
+                <p class="mb-1 small text-light">The app also supports the Wishlist feature for submitting product feedback directly to AWS teams. For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-27">
+                <a href="https://www.hashicorp.com/blog/simplify-compliance-with-a-native-pre-written-policy-experience-in-terraform" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Simplify compliance with the native pre-written policy experience in HCP Terraform
+                </a>
+                <p class="mb-1 small text-light">As organizations face growing security and regulatory requirements, maintaining compliant infrastructure becomes increasingly complex. This work grows as organizations adopt more cloud providers, services, and compliance frameworks.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-27">
+                <a href="https://www.hashicorp.com/blog/hcp-vagrant-deprecation-important-dates-and-migration-guidance" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] HCP Vagrant deprecation: important dates and migration guidance
+                </a>
+                <p class="mb-1 small text-light">HashiCorp will end support and maintenance for existing Vagrant deployments End of operations: December 31, 2026. HashiCorp will decommission all remaining Vagrant deployments Deprecation details This deprecation applies only to HCP Vagrant.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-27">
+                <a href="https://www.hashicorp.com/blog/simplifying-terraform-for-ibm-z-with-intent-driven-workflows" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Simplifying Terraform for IBM Z with intent-driven workflows
+                </a>
+                <p class="mb-1 small text-light">Terraform, the industry standard for declaratively managing infrastructure through infrastructure as code (IaC), provides that common operating model.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-09-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-27">
+                <a href="https://www.cncf.io/blog/2026/09/23/which-hat-am-i-wearing-right-now/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Which hat am I wearing right now?
+                </a>
+                <p class="mb-1 small text-light">Neutrality is quietly the hardest part of open source. More than half do both, blending personal passion with a paycheck.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-09-27
                     
                 </small>
             </li>

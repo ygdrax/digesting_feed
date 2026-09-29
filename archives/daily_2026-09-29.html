@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - September 29, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - September 29, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for September 29, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-09-29">2026-09-29 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-09-29 14:37:24
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,270 +128,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-29">
-                <a href="https://www.docker.com/blog/wearedevelopers-partner-customer-sessions-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Meet the Ecosystem: Partners and Customers at WeAreDevelopers with Docker
-                </a>
-                <p class="mb-1 small text-light">That ecosystem spans model providers, MCP tools and gateways, enterprise applications, data and memory platforms, identity, security, observability, and code quality. Morgan Payments,” Alan Torrance will show how developers can run Unicorn Finance with one command and no API keys.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-29">
-                <a href="https://www.redhat.com/en/blog/balancing-open-science-and-data-privacy-enterprise-red-hat-openshift-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Balancing open science and data privacy with enterprise Red Hat OpenShift AI
-                </a>
-                <p class="mb-1 small text-light">Francesco Giannoccaro, Head of High Performance Computing at the UK Health Security Agency (UKHSA), shared a compelling journey of how an executive agency of the UK Department of Health and Social Care is using open source and AI to protect the public.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-29">
-                <a href="https://www.hashicorp.com/blog/secure-ai-agents-with-hashicorp-boundary" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Secure AI agents with HashiCorp Boundary
-                </a>
-                <p class="mb-1 small text-light">To explore this challenge in practice, we used IBM technologies and services to create an AI agent capable of investigating infrastructure incidents through natural-language requests.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-29">
-                <a href="https://kubernetes.io/blog/2026/09/22/sig-apps-spotlight/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Spotlight on SIG Apps
-                </a>
-                <p class="mb-1 small text-light">As Kubernetes adoption has grown, the conversation has shifted beyond running containers to managing increasingly complex application lifecycles. The problem and the solutionSIG Apps is responsible for the core workload APIs that power how applications run on Kubernetes.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-29">
-                <a href="https://www.cncf.io/blog/2026/09/22/from-attendee-badge-to-speaker-badge-my-first-kubecon-at-kubecon-cloudnativecon-india-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] From attendee badge to speaker badge: My first KubeCon at KubeCon + CloudNativeCon India 2026
-                </a>
-                <p class="mb-1 small text-light">Thousands of attendees and a massive venue may sound overwhelming, but the community is unusually approachable. India’s cloud native community is enormous and hungry.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-29">
-                <a href="https://blog.cloudflare.com/cloudflare-certificate-authority/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Building a certificate authority for the whole Internet
-                </a>
-                <p class="mb-1 small text-light">As an example, we will make renewal automation a condition of issuance. What happens nextWe are working through the application and approval process with each of the core web root key programs.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-29">
-                <a href="https://blog.cloudflare.com/pq-ca-with-mtcs/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Building a post-quantum certificate authority with Merkle Tree Certificates
-                </a>
-                <p class="mb-1 small text-light">This year, after a successful experimental deployment with Chrome, Cloudflare is full steam ahead on MTCs. Cloudflare launched Certificate Transparency Monitoring in 2019 and recently made it generally available.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-29">
-                <a href="https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Evolving our calendar assistant Reclaim to be AI-native without starting over
-                </a>
-                <p class="mb-1 small text-light">As AI assistants and natural-language interfaces became more capable, they opened up a new way for people to use Reclaim. The result was an agent platform designed to work within Reclaim’s existing architecture.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-29">
-                <a href="https://dropbox.tech/culture/learnings-from-deploying-ai-at-company-scale" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Dropbox CTO Ali Dasdan on moving from AI adoption to transformation
-                </a>
-                <p class="mb-1 small text-light">Problem solving, communication, and leadership become critical to turning AI-enabled output into real value. Or you’re generating significantly more code, which puts additional stress on the tools and infrastructure that support development.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-29">
-                <a href="https://www.pulumi.com/blog/neo-kopia-workspace-snapshots/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] AI agents need continuity, not just context
-                </a>
-                <p class="mb-1 small text-light">EFS plus AWS Backup is lovely if your answer to every deployment question is “be on AWS. If the service were the only storage principal, every snapshot and restore would have to flow through the application service.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-29">
-                <a href="https://netflixtechblog.com/trading-a-cloud-identity-for-your-own-workload-attestation-on-managed-compute-516d5a29b252?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Trading a Cloud Identity for Your Own: Workload Attestation on Managed Compute
-                </a>
-                <p class="mb-1 small text-light">On infrastructure you build yourself, you can bootstrap your own identity however you like. The Identity service receives attestation requests, verifies them, and issues certificates.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-29">
-                <a href="https://netflixtechblog.medium.com/netflix-stratum-media-processing-automated-container-right-sizing-ddf9aa68a801?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Netflix Stratum Media Processing: Automated Container Right-Sizing
-                </a>
-                <p class="mb-1 small text-light">Stratum then schedules these containers as batch jobs on Netflix’s Titus compute platform, with upstream services triggering function executions. Continuous Infrastructure & Codec Evolution: Cloud providers regularly upgrade their hardware.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-29">
-                <a href="https://netflixtechblog.medium.com/the-lifecycle-of-llm-as-a-judge-building-aligning-and-monitoring-at-scale-c95bd8283508?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] The Lifecycle of LLM-as-a-Judge: Building, Aligning, and Monitoring at scale
-                </a>
-                <p class="mb-1 small text-light">However, it introduces a new and critical question: Who evaluates the evaluator. This closes the loop by feeding new human-labeled data and updated signals back into the benchmark and development phases.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-29">
-                <a href="https://www.redhat.com/en/blog/red-hat-delivers-peak-performance-kubernetes-cpus-mlperf-inference-v61" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Red Hat delivers peak performance on Kubernetes and CPUs in MLPerf Inference v6.1
-                </a>
-                <p class="mb-1 small text-light">Red Hat is proud to announce our results from the industry-standard MLPerf Inference v6. 1 results highlight 3 things: peak performance on Kubernetes, 1 inference engine (vLLM) spanning graphics processing units (GPUs) and central p.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-29">
-                <a href="https://www.redhat.com/en/blog/agentic-ai-network-operations-smarter-decisions-proven-automation" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Agentic AI for network operations: Smarter decisions on proven automation
-                </a>
-                <p class="mb-1 small text-light">Most telecommunications service providers already know how to manage changes to their network. They have established change windows, built approved playbooks, and used network automation over many years to make the process more reliable.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-29">
-                <a href="https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity
-                </a>
-                <p class="mb-1 small text-light">Quality and reliability have always been a point of pride for Spotify. We run an extraordinarily complex... The post AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-29">
-                <a href="https://www.hashicorp.com/blog/terraform-provider-for-google-cloud-80-now-generally-available" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Terraform provider for Google Cloud 8.0 now generally available
-                </a>
-                <p class="mb-1 small text-light">0 The Google Cloud provider is continuously updated alongside Google Cloud services and Terraform itself. x release cycle, the Google Cloud provider introduced support for Terraform list resources, starting with service accounts and expanding across a growing set of Google Cloud resources.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-29">
-                <a href="https://kubernetes.io/blog/2026/09/16/kubernetes-v1-37-hardening-container-storage/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37: Hardening Container Storage with Bind Mount Options and EmptyDir Permissions
-                </a>
-                <p class="mb-1 small text-light">37 brings important storage security features: emptyDir permission modes and bind mount options. Linux storage and permission fundamentalsBefore diving into the new Kubernetes features, let us briefly review the low-level Linux security mechanisms that make them possible.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-29">
-                <a href="https://blog.cloudflare.com/ai-driven-cryptography-discovery/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Using AI to chart a course for our post-quantum migration
-                </a>
-                <p class="mb-1 small text-light">The scale of the problemThe software that powers most Cloudflare products lives inside our single centralized source control management platform. Our SASE platform, Cloudflare One, provides post-quantum encryption for private network traffic.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-29">
-                <a href="https://blog.cloudflare.com/adaptive-ai-waf-testing/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] We tested our own WAF with frontier AI models. Here’s what we found
-                </a>
-                <p class="mb-1 small text-light">Even before LLMs were around, security engineers used two common approaches to test applications: static and dynamic application security testing. The requests that got through helped us create new detections to harden our security to benefit all Cloudflare customers.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-09-29">
-                <a href="https://slack.engineering/slack-ai-the-path-to-multi-cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Slack AI: The Path to Multi-Cloud
-                </a>
-                <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-29">
-                <a href="https://www.pulumi.com/blog/self-driving-infrastructure-pulumi-jev/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Self-driving infrastructure with Pulumi and Jev
-                </a>
-                <p class="mb-1 small text-light">An image: a container image and the platforms it’s built for (amd64, arm64, or both). The Pulumi Automation API runs a preview and then an update, with one stack per region.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-09-29">
                 <a href="https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-collaborative-ai-powered-observability-for-your-applications/" target="_blank" class="fw-bold text-decoration-none">
                     [Amazon AWS] Now on Amazon CloudWatch Omni: collaborative AI-powered observability for your applications
@@ -382,7 +135,7 @@
                 <p class="mb-1 small text-light">When you deploy new services, Omni updates the application topology automatically. CloudWatch Omni Home — your team’s workspace with application monitoring, analytics, and agent observability Once created, Omni discovers your services automatically and maps the dependencies between them.</p>
                 <small class="text-secondary">
                     
-                    Amazon AWS
+                    Amazon AWS | 2026-09-29
                     
                 </small>
             </li>
@@ -394,7 +147,7 @@
                 <p class="mb-1 small text-light">Today, Amazon CloudWatch introduces CloudWatch Omni, a unified observability experience for application and AI workloads that is app-centric, AI-powered, built on open standards, and delivered off-console.</p>
                 <small class="text-secondary">
                     
-                    Amazon AWS
+                    Amazon AWS | 2026-09-29
                     
                 </small>
             </li>
@@ -406,7 +159,271 @@
                 <p class="mb-1 small text-light">In July, AI agents testing new cybersecurity models compromised parts of OpenAI’s infrastructure and Hugging Face’s production environment. Cloudflare is the adaptive security control plane for applications, APIs, and agents.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-29">
+                <a href="https://www.hashicorp.com/blog/terraform-provider-for-google-cloud-80-now-generally-available" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform provider for Google Cloud 8.0 now generally available
+                </a>
+                <p class="mb-1 small text-light">0 The Google Cloud provider is continuously updated alongside Google Cloud services and Terraform itself. x release cycle, the Google Cloud provider introduced support for Terraform list resources, starting with service accounts and expanding across a growing set of Google Cloud resources.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-29">
+                <a href="https://kubernetes.io/blog/2026/09/16/kubernetes-v1-37-hardening-container-storage/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: Hardening Container Storage with Bind Mount Options and EmptyDir Permissions
+                </a>
+                <p class="mb-1 small text-light">37 brings important storage security features: emptyDir permission modes and bind mount options. Linux storage and permission fundamentalsBefore diving into the new Kubernetes features, let us briefly review the low-level Linux security mechanisms that make them possible.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-29">
+                <a href="https://blog.cloudflare.com/ai-driven-cryptography-discovery/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Using AI to chart a course for our post-quantum migration
+                </a>
+                <p class="mb-1 small text-light">The scale of the problemThe software that powers most Cloudflare products lives inside our single centralized source control management platform. Our SASE platform, Cloudflare One, provides post-quantum encryption for private network traffic.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-29">
+                <a href="https://blog.cloudflare.com/adaptive-ai-waf-testing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] We tested our own WAF with frontier AI models. Here’s what we found
+                </a>
+                <p class="mb-1 small text-light">Even before LLMs were around, security engineers used two common approaches to test applications: static and dynamic application security testing. The requests that got through helped us create new detections to harden our security to benefit all Cloudflare customers.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-09-29">
+                <a href="https://slack.engineering/slack-ai-the-path-to-multi-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Slack AI: The Path to Multi-Cloud
+                </a>
+                <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-29">
+                <a href="https://www.pulumi.com/blog/self-driving-infrastructure-pulumi-jev/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Self-driving infrastructure with Pulumi and Jev
+                </a>
+                <p class="mb-1 small text-light">An image: a container image and the platforms it’s built for (amd64, arm64, or both). The Pulumi Automation API runs a preview and then an update, with one stack per region.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-29">
+                <a href="https://netflixtechblog.com/trading-a-cloud-identity-for-your-own-workload-attestation-on-managed-compute-516d5a29b252?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Trading a Cloud Identity for Your Own: Workload Attestation on Managed Compute
+                </a>
+                <p class="mb-1 small text-light">On infrastructure you build yourself, you can bootstrap your own identity however you like. The Identity service receives attestation requests, verifies them, and issues certificates.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-29">
+                <a href="https://netflixtechblog.medium.com/netflix-stratum-media-processing-automated-container-right-sizing-ddf9aa68a801?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Netflix Stratum Media Processing: Automated Container Right-Sizing
+                </a>
+                <p class="mb-1 small text-light">Stratum then schedules these containers as batch jobs on Netflix’s Titus compute platform, with upstream services triggering function executions. Continuous Infrastructure & Codec Evolution: Cloud providers regularly upgrade their hardware.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-29">
+                <a href="https://netflixtechblog.medium.com/the-lifecycle-of-llm-as-a-judge-building-aligning-and-monitoring-at-scale-c95bd8283508?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] The Lifecycle of LLM-as-a-Judge: Building, Aligning, and Monitoring at scale
+                </a>
+                <p class="mb-1 small text-light">However, it introduces a new and critical question: Who evaluates the evaluator. This closes the loop by feeding new human-labeled data and updated signals back into the benchmark and development phases.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-29">
+                <a href="https://www.redhat.com/en/blog/red-hat-delivers-peak-performance-kubernetes-cpus-mlperf-inference-v61" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Red Hat delivers peak performance on Kubernetes and CPUs in MLPerf Inference v6.1
+                </a>
+                <p class="mb-1 small text-light">Red Hat is proud to announce our results from the industry-standard MLPerf Inference v6. 1 results highlight 3 things: peak performance on Kubernetes, 1 inference engine (vLLM) spanning graphics processing units (GPUs) and central p.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-29">
+                <a href="https://www.redhat.com/en/blog/agentic-ai-network-operations-smarter-decisions-proven-automation" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Agentic AI for network operations: Smarter decisions on proven automation
+                </a>
+                <p class="mb-1 small text-light">Most telecommunications service providers already know how to manage changes to their network. They have established change windows, built approved playbooks, and used network automation over many years to make the process more reliable.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-29">
+                <a href="https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity
+                </a>
+                <p class="mb-1 small text-light">Quality and reliability have always been a point of pride for Spotify. We run an extraordinarily complex... The post AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-09-29">
+                <a href="https://www.hashicorp.com/blog/secure-ai-agents-with-hashicorp-boundary" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Secure AI agents with HashiCorp Boundary
+                </a>
+                <p class="mb-1 small text-light">To explore this challenge in practice, we used IBM technologies and services to create an AI agent capable of investigating infrastructure incidents through natural-language requests.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-29">
+                <a href="https://kubernetes.io/blog/2026/09/22/sig-apps-spotlight/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on SIG Apps
+                </a>
+                <p class="mb-1 small text-light">As Kubernetes adoption has grown, the conversation has shifted beyond running containers to managing increasingly complex application lifecycles. The problem and the solutionSIG Apps is responsible for the core workload APIs that power how applications run on Kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-29">
+                <a href="https://www.cncf.io/blog/2026/09/22/from-attendee-badge-to-speaker-badge-my-first-kubecon-at-kubecon-cloudnativecon-india-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] From attendee badge to speaker badge: My first KubeCon at KubeCon + CloudNativeCon India 2026
+                </a>
+                <p class="mb-1 small text-light">Thousands of attendees and a massive venue may sound overwhelming, but the community is unusually approachable. India’s cloud native community is enormous and hungry.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-29">
+                <a href="https://blog.cloudflare.com/cloudflare-certificate-authority/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Building a certificate authority for the whole Internet
+                </a>
+                <p class="mb-1 small text-light">As an example, we will make renewal automation a condition of issuance. What happens nextWe are working through the application and approval process with each of the core web root key programs.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-29">
+                <a href="https://blog.cloudflare.com/pq-ca-with-mtcs/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Building a post-quantum certificate authority with Merkle Tree Certificates
+                </a>
+                <p class="mb-1 small text-light">This year, after a successful experimental deployment with Chrome, Cloudflare is full steam ahead on MTCs. Cloudflare launched Certificate Transparency Monitoring in 2019 and recently made it generally available.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-29">
+                <a href="https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Evolving our calendar assistant Reclaim to be AI-native without starting over
+                </a>
+                <p class="mb-1 small text-light">As AI assistants and natural-language interfaces became more capable, they opened up a new way for people to use Reclaim. The result was an agent platform designed to work within Reclaim’s existing architecture.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-29">
+                <a href="https://dropbox.tech/culture/learnings-from-deploying-ai-at-company-scale" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Dropbox CTO Ali Dasdan on moving from AI adoption to transformation
+                </a>
+                <p class="mb-1 small text-light">Problem solving, communication, and leadership become critical to turning AI-enabled output into real value. Or you’re generating significantly more code, which puts additional stress on the tools and infrastructure that support development.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-09-29">
+                <a href="https://www.pulumi.com/blog/neo-kopia-workspace-snapshots/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] AI agents need continuity, not just context
+                </a>
+                <p class="mb-1 small text-light">EFS plus AWS Backup is lovely if your answer to every deployment question is “be on AWS. If the service were the only storage principal, every snapshot and restore would have to flow through the application service.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-09-29">
+                <a href="https://www.docker.com/blog/wearedevelopers-partner-customer-sessions-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Meet the Ecosystem: Partners and Customers at WeAreDevelopers with Docker
+                </a>
+                <p class="mb-1 small text-light">That ecosystem spans model providers, MCP tools and gateways, enterprise applications, data and memory platforms, identity, security, observability, and code quality. Morgan Payments,” Alan Torrance will show how developers can run Unicorn Finance with one command and no API keys.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-09-29
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-29">
+                <a href="https://www.redhat.com/en/blog/balancing-open-science-and-data-privacy-enterprise-red-hat-openshift-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Balancing open science and data privacy with enterprise Red Hat OpenShift AI
+                </a>
+                <p class="mb-1 small text-light">Francesco Giannoccaro, Head of High Performance Computing at the UK Health Security Agency (UKHSA), shared a compelling journey of how an executive agency of the UK Department of Health and Social Care is using open source and AI to protect the public.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-09-29
                     
                 </small>
             </li>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - September 30, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - September 30, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for September 30, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-09-30">2026-09-30 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    12 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Sentry">Sentry</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-09-30">
+                <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Improving infrastructure efficiency for growing demand in the age of AI
+                </a>
+                <p class="mb-1 small text-light">But building new infrastructure is only part of the challenge. When performance declines or newer hardware provides meaningful improvements in capacity, reliability, or efficiency, we can plan a transition.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-30">
+                <a href="https://www.cncf.io/blog/2026/09/24/observability-day-where-the-community-comes-together-at-kubecon-cloudnativecon-north-america-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Observability Day: Where the community comes together at KubeCon + CloudNativeCon North America 2026
+                </a>
+                <p class="mb-1 small text-light">For the wider KubeCon + CloudNativeCon community, Observability Day provides an opportunity to explore these topics through real architectures, operational experience, technical trade-offs, and open source technologies.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-30">
+                <a href="https://blog.cloudflare.com/auto-router/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cut your AI spend with AI Gateway's Auto Router
+                </a>
+                <p class="mb-1 small text-light">First, there is an exploration period as you bring on every new tool, dole out API keys freely, and let the tokens flow. The resultsWe use Auto Router internally at Cloudflare within our OpenCode deployment and within Cloudflare OS, our custom agent harness.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-30">
+                <a href="https://blog.cloudflare.com/real-time-issue-detection/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Detect and send production issues straight to your agent
+                </a>
+                <p class="mb-1 small text-light">Today, we are introducing Issues, built-in error monitoring for Cloudflare Workers (now in open beta. How Issues uncovered and resolved two Workflows bugs in one dayCloudflare Workflows, a primitive that powers long-running, multi-step applications, is built entirely on the Workers platform.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-30">
+                <a href="https://blog.cloudflare.com/simplifying-domains/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Simplifying domains for people and agents
+                </a>
+                <p class="mb-1 small text-light">We designed Cloudflare Registrar to work naturally with agents through the Registrar API, MCP, and our newly launched cf CLI. The Registrar API is available through Cloudflare MCP, giving agents access without requiring a separate integration.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-30">
+                <a href="https://blog.cloudflare.com/monetization-gateway-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Monetization Gateway beta: charge AI agents for consumption with HTTP 402
+                </a>
+                <p class="mb-1 small text-light">Cloudflare AI Gateway: pay for inferenceCloudflare’s AI Gateway is a control plane and model marketplace that allows developers to access hundreds of AI models with a single API key. Previously, customers needed to create an account and obtain an API key before using the service.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-30">
+                <a href="https://www.reddit.com/r/devops/comments/1wtxk1e/has_ai_made_application_development_faster_than/" target="_blank" class="fw-bold text-decoration-none">
+                    Has AI made application development faster than infrastructure teams can safely support?
+                </a>
+                <p class="mb-1 small text-light">Terraform, networking, IAM, Kubernetes, observability, cost and security still require quite a bit of context. So instead of AI removing bottlenecks, are we just moving the bottleneck downstream to DevOps/platform teams.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-30">
+                <a href="https://engineering.fb.com/2026/09/23/security/private-processing-meta-ai-glasses/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Bringing Private Processing to Meta AI Glasses
+                </a>
+                <p class="mb-1 small text-light">That key is never released to the host operating system, the hypervisor, or anyone operating the machine.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-30">
+                <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] An Organizational Second Brain: Building an AI That Learns From Experts
+                </a>
+                <p class="mb-1 small text-light">A self-improvement loop then compiles expert feedback into verified, regression-tested updates without model retraining. Its job is to find problems such as contradictions introduced, edge cases broken, or positions undermined.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-09-30">
+                <a href="https://kubernetes.io/blog/2026/09/14/csi-changed-block-tracking-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes Changed Block Tracking API - Beta Differences
+                </a>
+                <p class="mb-1 small text-light">What's new in BetaThe main change in that release was the promotion of the SnapshotMetadataService CRD from v1alpha1 to v1beta1. Update SnapshotMetadataService manifests to use apiVersion: cbt.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-09-30">
+                <a href="https://www.cncf.io/blog/2026/09/30/from-40-seconds-to-under-10-rebuilding-incident-detection-on-opentelemetry-apache-kafka-and-apache-flink-on-kubernetes/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] From 40 seconds to under 10: rebuilding incident detection on OpenTelemetry, Apache Kafka, and Apache Flink on Kubernetes
+                </a>
+                <p class="mb-1 small text-light">A small Go GraphQL service, the Impact API, serves “who is impacted and how many” questions from those stores. Watching the watcher with OpenTelemetryA detection platform that fails silently is worse than none, because people stop watching the dashboards.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-09-30">
+                <a href="https://blog.cloudflare.com/100-million-donations/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cloudflare Impact reaches $100 million in donations
+                </a>
+                <p class="mb-1 small text-light">Cloudflare launched Project Galileo in 2014 to provide more advanced security services for important but vulnerable people and organizations online, including journalists, human rights defenders, and civil society groups.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-09-30">
+                <a href="https://www.reddit.com/r/devops/comments/1wr7mw9/how_to_maintain_helm_charts_of_multiple/" target="_blank" class="fw-bold text-decoration-none">
+                    How to maintain helm charts of multiple micro-services on k8s at scale ?
+                </a>
+                <p class="mb-1 small text-light">hey everyone, how do you guys manage helm charts for multiple micro services. - how are you maintaining multiple microservices on k8s at scale.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-09-30">
+                <a href="https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Running Apache Spark experiments in my sleep (and on a plane)
+                </a>
+                <p class="mb-1 small text-light">That works for standard software bugs, but it fails completely for big data performance bottlenecks. Why tmux MatteredAll of this ran on Workbench, Netflix’s cloud dev environment, using my laptop as a thin terminal.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-09-30">
+                <a href="https://www.redhat.com/en/blog/building-ai-powered-multimodal-compliance-monitor-training-tracking-chat" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Building an AI-powered multimodal compliance monitor: From training to tracking to chat
+                </a>
+                <p class="mb-1 small text-light">Organizations face a persistent challenge maintaining workplace safety, security, asset tracking, and operational compliance across facilities with multiple video feeds.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-09-30">
+                <a href="https://about.gitlab.com/blog/gitlab-and-claude-code-fast-compliant-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab and Claude Code: Fast, compliant AI
+                </a>
+                <p class="mb-1 small text-light">GitLab Duo Agent Platform, AI orchestration across the software development lifecycle, starts with context already built in.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-09-30">
+                <a href="https://blog.sentry.io/sentry-laravel-ai-integration/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Building Sentry's Laravel AI Integration
+                </a>
+                <p class="mb-1 small text-light">We were also supposed to use AI for that, so the language barrier wasn't a real issue. $source->{$key} will resolve $key to its string value and will access the field.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-09-30">
+                <a href="https://blog.sentry.io/debugging-our-ai-search-assistant-with-agent-tracing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Debugging our AI search assistant with agent tracing
+                </a>
+                <p class="mb-1 small text-light">The search bar enables users to find their data by specifying search terms. This gave us enough information to make a new eval scenario to reproduce and fix the issue.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-09-30">
+                <a href="https://snyk.io/blog/ai-hurricane-is-here/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] The AI Hurricane Is Here
+                </a>
+                <p class="mb-1 small text-light">AI is accelerating software creation and cyberattacks alike. Leaders must secure agents and code at inception, enforce controls at runtime, and validate defenses independently.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-30">
+                <a href="https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Why Spotify Is Not Using Bayesian A/B Testing
+                </a>
+                <p class="mb-1 small text-light">Clearing the confusion about what Bayesian A/B testing is. The post Why Spotify Is Not Using Bayesian A/B Testing appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-30">
+                <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Portal by Spotify cut my Claude Code token usage by 90%
+                </a>
+                <p class="mb-1 small text-light">Most of what an AI coding agent does for me isn't thinking. It's I/O. The post Portal by Spotify cut my Claude Code token usage by 90% appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-30">
+                <a href="https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] When Can LLMs Replace Humans in A/B Tests?
+                </a>
+                <p class="mb-1 small text-light">TL;DR: LLM predictions can stand in for human outcomes in A/B tests, but only by assumption, not by design.... The post When Can LLMs Replace Humans in A/B Tests? appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-09-30">
+                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
+                </a>
+                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-30">
+                <a href="https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable
+                </a>
+                <p class="mb-1 small text-light">However, transitioning to a 2-core fiber ecosystem comes with challenges that affect the fiber and subsea repeaters. 1-core fiber allows the industry to counter-propagate traffic using a pair of fibers.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-30
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-09-30">
+                <a href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] ZGateway: Learnings from Putting a Proxy in Front of ZippyDB
+                </a>
+                <p class="mb-1 small text-light">As a bonus, it also enables admission control, load balancing, cross-region resilience, and richer operations. A proxy decouples them, collapsing the mesh into two bounded hops — a win on efficiency, performance, scalability, and above all reliability.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-09-30
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

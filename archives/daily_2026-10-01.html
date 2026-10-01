@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - October 01, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - October 01, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for October 01, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-10-01">2026-10-01 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-10-01 15:06:07
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,234 +128,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-01">
-                <a href="https://www.ft.com/content/bc178357-793b-45d8-ae3b-d5929159c243" target="_blank" class="fw-bold text-decoration-none">
-                    An AI sovereign wealth fund isn't progressive – it's techno-imperialism
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.ft.com/content/bc178357-793b-45d8-ae3b-d5929159c243 Comments URL: https://news.ycombinator.com/item?id=49921051 Points: 32 # Comments: 19</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-01">
-                <a href="https://www.cnbc.com/2026/09/30/ftc-ai-probe-openai-anthropic.html" target="_blank" class="fw-bold text-decoration-none">
-                    FTC is investigating OpenAI, Anthropic and other AI companies over product risks
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.cnbc.com/2026/09/30/ftc-ai-probe-openai-anthropic.html Comments URL: https://news.ycombinator.com/item?id=49921050 Points: 74 # Comments: 31</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-10-01">
-                <a href="https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Leave the Class Path in the Rearview Mirror
-                </a>
-                <p class="mb-1 small text-light">An IDE formats source, navigates between declarations and usages, presents API documentation, and maintains a compiled view of the project. ja only provides command line ergonomics and tool orchestration, each feature is underpinned by a standalone tool.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-10-01">
-                <a href="https://www.microsoft.com/en-us/sql-server/blog/2026/09/28/sql-server-on-azure-local-is-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] SQL Server on Azure Local is now generally available
-                </a>
-                <p class="mb-1 small text-light">This enables organizations to explore AI-powered applications while keeping sensitive information and processing within their environment.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-01">
-                <a href="https://www.docker.com/blog/docker-sandbox-kit-spec/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] From Dockerfile to Kit: the Docker Sandboxes Kit Specification
-                </a>
-                <p class="mb-1 small text-light">They write code, run tests, install dependencies, call APIs, and work on infrastructure while I do something else. sandbox/credential@1 optional: true config: service: github phase: runtime apiKey: name: GH_TOKEN proxyManaged: true inject: - {domain: api.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-01">
-                <a href="https://www.docker.com/blog/docker-sandbox-kit-spec-cncf/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker and CNCF partner on an open spec for agent permissions
-                </a>
-                <p class="mb-1 small text-light">The same problem, for agents Containers were built for immutable software. Cloud platforms, observability, security, artifact management, content, and agent frameworks are all represented.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-10-01">
-                <a href="https://snyk.io/blog/ai-coding-agents-broken-access-control/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Why AI Coding Agents Keep Writing Broken Access Control
-                </a>
-                <p class="mb-1 small text-light">AI coding agents can produce authorization logic that compiles and passes review while exposing one tenant’s data to another. Learn why broken access control is difficult to detect and how to prevent it.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-10-01">
-                <a href="https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37: Pod-Level Resource Managers graduated to Beta
-                </a>
-                <p class="mb-1 small text-light">First introduced as an Alpha feature in Kubernetes v1. PodResources API Reporting: The v1 PodResources gRPC service (PodResourcesLister) introduces top-level cpu_ids and memory fields on PodResources responses.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-10-01">
-                <a href="https://www.cncf.io/blog/2026/09/28/the-case-for-a-cloud-native-agent-harness/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] The case for a cloud native agent harness
-                </a>
-                <p class="mb-1 small text-light">Kubernetes taught this industry that a monolith in a container is still a monolith. Terminal, API, and application clients that interact with the loop without owning it.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-10-01">
-                <a href="https://www.cncf.io/blog/2026/09/25/security-slam-2026-fall-edition/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] Security Slam 2026 – Fall edition
-                </a>
-                <p class="mb-1 small text-light">Security Slam 2026 – Fall Edition is a 30-day virtual event from October 5 through November 6, 2026. In the case of the Kubernetes Lightning Round, the slam was a day of onboarding new contributors to Kubernetes with a focus on security hygiene improvements to seven different subprojects.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-10-01">
-                <a href="https://blog.cloudflare.com/workers-kv-instant/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Introducing Workers KV Instant — powered by Quicksilver
-                </a>
-                <p class="mb-1 small text-light">Workers KV has been one of our most popular services on the Developer Platform since launching during Birthday Week in 2018. KV Instant mode provides the same API as Workers KV, but powers it using Quicksilver.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-10-01">
-                <a href="https://blog.cloudflare.com/managed-cloudflare-os/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Cloudflare OS: your company’s agent workspace, managed for you
-                </a>
-                <p class="mb-1 small text-light">Today, we're opening the waitlist for fully managed Cloudflare OS deployments. We’ve made significant improvements to the Google Workspace Gatekeeper (a service-specific Worker that sits between Cloudflare OS and an external service).</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-10-01">
-                <a href="https://blog.cloudflare.com/cloudflare-k2-streams/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Announcing Cloudflare K2: serverless event streams
-                </a>
-                <p class="mb-1 small text-light">Today we are launching Cloudflare K2 in public beta to solve this problem. Offloading replication and consensus to the storage layer allows us to make the application layer (K2 in this case) radically simpler, cheaper, and higher performance.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-10-01">
-                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
-                </a>
-                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2026-10-01">
-                <a href="https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
-                    [Lyft Engineering] Rerouting the Stream: How Lyft Moved to the Apache Flink Operator
-                </a>
-                <p class="mb-1 small text-light">Security patches lagged, modern Kubernetes features stayed out of reach, and every quarter we waited made the eventual escape messier. The translation from FlinkApplication to FlinkDeployment happens within our deploy API.</p>
-                <small class="text-secondary">
-                    
-                    Lyft Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-10-01">
-                <a href="https://azure.microsoft.com/en-us/blog/responsible-infrastructure-at-hyperscale-managing-the-full-lifecycle-of-azure-hardware/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Responsible infrastructure at hyperscale: Managing the full lifecycle of Azure hardware
-                </a>
-                <p class="mb-1 small text-light">Every new generation of cloud infrastructure creates two jobs. As new generations of cloud and AI infrastructure are deployed, older hardware is gradually taken out of service.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-01">
-                <a href="https://www.docker.com/blog/manufacturing-trust-for-ai-agents-keynote/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Manufacturing Trust for AI Agents | Docker’s WeAreDevelopers Keynote
-                </a>
-                <p class="mb-1 small text-light">In the keynote, Mark announced Docker Cloud Sandboxes, bringing the same microVM-based isolation from the laptop to Docker-managed cloud compute. Docker provides the trusted foundation underneath, whether agents run locally or in the cloud.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-01">
-                <a href="https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Introducing Cloud Sandboxes: Start on Your Laptop, Finish in the Cloud
-                </a>
-                <p class="mb-1 small text-light">Today, we’re introducing Cloud Sandboxes: the same microVM-based sandbox, running on Docker-managed compute, with one command to move between them. Cloud Sandboxes is the same microVM, running on Docker-managed compute.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-01">
-                <a href="https://engineering.fb.com/2026/09/21/open-source/rebalancer-generic-high-performance-library-assignment-problems/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Open-Sourcing Rebalancer: A Generic, High-Performance Library for Solving Assignment Problems
-                </a>
-                <p class="mb-1 small text-light">The main challenges to designing a reusable framework for solving problems like these are its usability and scalability. Rebalancer addresses both of these challenges by separating a problem’s specification from its solution.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-10-01">
                 <a href="https://kubernetes.io/blog/2026/09/21/kubernetes-v1-37-pvc-last-used-time/" target="_blank" class="fw-bold text-decoration-none">
                     [Kubernetes] Kubernetes v1.37: Tracking When a PersistentVolumeClaim Was Last Used (Beta)
@@ -346,7 +135,7 @@
                 <p class="mb-1 small text-light">How to use itSince the feature is Beta and enabled by default in Kubernetes v1. If you have feedback on this feature, please open an issue in the kubernetes/kubernetes repository.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-10-01
                     
                 </small>
             </li>
@@ -358,7 +147,7 @@
                 <p class="mb-1 small text-light">Here’s the pattern: Between my day-to-day work on Kubernetes platforms and the hallway conversations at KubeCon + CloudNativeCon, I’ve heard enough versions of it that I can basically recite it. Under the gate model, security owns policy, and the platform team implements it.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-10-01
                     
                 </small>
             </li>
@@ -370,7 +159,7 @@
                 <p class="mb-1 small text-light">AI defenses that don't depend on one modelGovernments want to use AI to defend essential services and national infrastructure. So today we're launching a program of hands-on workshops for government cybersecurity agencies and critical infrastructure operators.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-10-01
                     
                 </small>
             </li>
@@ -382,7 +171,7 @@
                 <p class="mb-1 small text-light">Now that Artifacts is in open beta, we’re holding a competition to see who can build the next Git platform on Cloudflare using Workers and Artifacts. Create a new TypeScript Worker project with an ARTIFACTS binding and use it locally to create a repository on Cloudflare.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-10-01
                     
                 </small>
             </li>
@@ -394,7 +183,7 @@
                 <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-10-01
                     
                 </small>
             </li>
@@ -406,7 +195,235 @@
                 <p class="mb-1 small text-light">You can define a network, a database, or an application service once and share it across projects and teams. Managed resources also have an ID from the cloud provider, such as an AWS VPC ID.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-10-01">
+                <a href="https://azure.microsoft.com/en-us/blog/responsible-infrastructure-at-hyperscale-managing-the-full-lifecycle-of-azure-hardware/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Responsible infrastructure at hyperscale: Managing the full lifecycle of Azure hardware
+                </a>
+                <p class="mb-1 small text-light">Every new generation of cloud infrastructure creates two jobs. As new generations of cloud and AI infrastructure are deployed, older hardware is gradually taken out of service.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-01">
+                <a href="https://www.docker.com/blog/manufacturing-trust-for-ai-agents-keynote/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Manufacturing Trust for AI Agents | Docker’s WeAreDevelopers Keynote
+                </a>
+                <p class="mb-1 small text-light">In the keynote, Mark announced Docker Cloud Sandboxes, bringing the same microVM-based isolation from the laptop to Docker-managed cloud compute. Docker provides the trusted foundation underneath, whether agents run locally or in the cloud.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-01">
+                <a href="https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Introducing Cloud Sandboxes: Start on Your Laptop, Finish in the Cloud
+                </a>
+                <p class="mb-1 small text-light">Today, we’re introducing Cloud Sandboxes: the same microVM-based sandbox, running on Docker-managed compute, with one command to move between them. Cloud Sandboxes is the same microVM, running on Docker-managed compute.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-01">
+                <a href="https://engineering.fb.com/2026/09/21/open-source/rebalancer-generic-high-performance-library-assignment-problems/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Open-Sourcing Rebalancer: A Generic, High-Performance Library for Solving Assignment Problems
+                </a>
+                <p class="mb-1 small text-light">The main challenges to designing a reusable framework for solving problems like these are its usability and scalability. Rebalancer addresses both of these challenges by separating a problem’s specification from its solution.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-10-01">
+                <a href="https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: Pod-Level Resource Managers graduated to Beta
+                </a>
+                <p class="mb-1 small text-light">First introduced as an Alpha feature in Kubernetes v1. PodResources API Reporting: The v1 PodResources gRPC service (PodResourcesLister) introduces top-level cpu_ids and memory fields on PodResources responses.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-10-01">
+                <a href="https://www.cncf.io/blog/2026/09/28/the-case-for-a-cloud-native-agent-harness/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] The case for a cloud native agent harness
+                </a>
+                <p class="mb-1 small text-light">Kubernetes taught this industry that a monolith in a container is still a monolith. Terminal, API, and application clients that interact with the loop without owning it.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-10-01">
+                <a href="https://www.cncf.io/blog/2026/09/25/security-slam-2026-fall-edition/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Security Slam 2026 – Fall edition
+                </a>
+                <p class="mb-1 small text-light">Security Slam 2026 – Fall Edition is a 30-day virtual event from October 5 through November 6, 2026. In the case of the Kubernetes Lightning Round, the slam was a day of onboarding new contributors to Kubernetes with a focus on security hygiene improvements to seven different subprojects.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-10-01">
+                <a href="https://blog.cloudflare.com/workers-kv-instant/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Introducing Workers KV Instant — powered by Quicksilver
+                </a>
+                <p class="mb-1 small text-light">Workers KV has been one of our most popular services on the Developer Platform since launching during Birthday Week in 2018. KV Instant mode provides the same API as Workers KV, but powers it using Quicksilver.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-10-01">
+                <a href="https://blog.cloudflare.com/managed-cloudflare-os/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Cloudflare OS: your company’s agent workspace, managed for you
+                </a>
+                <p class="mb-1 small text-light">Today, we're opening the waitlist for fully managed Cloudflare OS deployments. We’ve made significant improvements to the Google Workspace Gatekeeper (a service-specific Worker that sits between Cloudflare OS and an external service).</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-10-01">
+                <a href="https://blog.cloudflare.com/cloudflare-k2-streams/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Announcing Cloudflare K2: serverless event streams
+                </a>
+                <p class="mb-1 small text-light">Today we are launching Cloudflare K2 in public beta to solve this problem. Offloading replication and consensus to the storage layer allows us to make the application layer (K2 in this case) radically simpler, cheaper, and higher performance.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-10-01">
+                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2026-10-01">
+                <a href="https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
+                    [Lyft Engineering] Rerouting the Stream: How Lyft Moved to the Apache Flink Operator
+                </a>
+                <p class="mb-1 small text-light">Security patches lagged, modern Kubernetes features stayed out of reach, and every quarter we waited made the eventual escape messier. The translation from FlinkApplication to FlinkDeployment happens within our deploy API.</p>
+                <small class="text-secondary">
+                    
+                    Lyft Engineering | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-10-01">
+                <a href="https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Leave the Class Path in the Rearview Mirror
+                </a>
+                <p class="mb-1 small text-light">An IDE formats source, navigates between declarations and usages, presents API documentation, and maintains a compiled view of the project. ja only provides command line ergonomics and tool orchestration, each feature is underpinned by a standalone tool.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-10-01">
+                <a href="https://www.microsoft.com/en-us/sql-server/blog/2026/09/28/sql-server-on-azure-local-is-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] SQL Server on Azure Local is now generally available
+                </a>
+                <p class="mb-1 small text-light">This enables organizations to explore AI-powered applications while keeping sensitive information and processing within their environment.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-01">
+                <a href="https://www.docker.com/blog/docker-sandbox-kit-spec/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] From Dockerfile to Kit: the Docker Sandboxes Kit Specification
+                </a>
+                <p class="mb-1 small text-light">They write code, run tests, install dependencies, call APIs, and work on infrastructure while I do something else. sandbox/credential@1 optional: true config: service: github phase: runtime apiKey: name: GH_TOKEN proxyManaged: true inject: - {domain: api.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-01">
+                <a href="https://www.docker.com/blog/docker-sandbox-kit-spec-cncf/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker and CNCF partner on an open spec for agent permissions
+                </a>
+                <p class="mb-1 small text-light">The same problem, for agents Containers were built for immutable software. Cloud platforms, observability, security, artifact management, content, and agent frameworks are all represented.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-10-01">
+                <a href="https://snyk.io/blog/ai-coding-agents-broken-access-control/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Why AI Coding Agents Keep Writing Broken Access Control
+                </a>
+                <p class="mb-1 small text-light">AI coding agents can produce authorization logic that compiles and passes review while exposing one tenant’s data to another. Learn why broken access control is difficult to detect and how to prevent it.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-01">
+                <a href="https://www.ft.com/content/bc178357-793b-45d8-ae3b-d5929159c243" target="_blank" class="fw-bold text-decoration-none">
+                    An AI sovereign wealth fund isn't progressive – it's techno-imperialism
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.ft.com/content/bc178357-793b-45d8-ae3b-d5929159c243 Comments URL: https://news.ycombinator.com/item?id=49921051 Points: 32 # Comments: 19</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-01
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-01">
+                <a href="https://www.cnbc.com/2026/09/30/ftc-ai-probe-openai-anthropic.html" target="_blank" class="fw-bold text-decoration-none">
+                    FTC is investigating OpenAI, Anthropic and other AI companies over product risks
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.cnbc.com/2026/09/30/ftc-ai-probe-openai-anthropic.html Comments URL: https://news.ycombinator.com/item?id=49921050 Points: 74 # Comments: 31</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-01
                     
                 </small>
             </li>

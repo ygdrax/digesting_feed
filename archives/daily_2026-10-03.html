@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - October 03, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - October 03, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for October 03, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-10-03">2026-10-03 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 13 sources • Updated 2026-10-03 13:02:26
+                    Showing 25 total articles from 
+                    13 sources
+                    
                     
                 </span>
             </small>
@@ -113,278 +130,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-03">
-                <a href="https://tej.as/blog/aleph-alpha-kolibri" target="_blank" class="fw-bold text-decoration-none">
-                    Show HN: Germany's new sovereign AI model Kolibri
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-10-03">
+                <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Improving infrastructure efficiency for growing demand in the age of AI
                 </a>
-                <p class="mb-1 small text-light">Article URL: https://tej.as/blog/aleph-alpha-kolibri Comments URL: https://news.ycombinator.com/item?id=49943034 Points: 17 # Comments: 7</p>
+                <p class="mb-1 small text-light">But building new infrastructure is only part of the challenge. When performance declines or newer hardware provides meaningful improvements in capacity, reliability, or efficiency, we can plan a transition.</p>
                 <small class="text-secondary">
                     
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-03">
-                <a href="https://blog.kagi.com/update-orion-linux-windows" target="_blank" class="fw-bold text-decoration-none">
-                    An Update on Orion for Linux and Windows
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://blog.kagi.com/update-orion-linux-windows Comments URL: https://news.ycombinator.com/item?id=49941447 Points: 92 # Comments: 44</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-03">
-                <a href="https://yuka.dev/blog-2026-10-02-linux-m4.html" target="_blank" class="fw-bold text-decoration-none">
-                    The Forgetful CPU (Linux on M4)
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://yuka.dev/blog-2026-10-02-linux-m4.html Comments URL: https://news.ycombinator.com/item?id=49933869 Points: 239 # Comments: 160</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-03">
-                <a href="https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/" target="_blank" class="fw-bold text-decoration-none">
-                    With most information hidden, the game Stratego had stumped AI until now
-                </a>
-                <p class="mb-1 small text-light">https://www.nature.com/articles/s41586-026-11036-yhttps://arxiv.org/abs/2511.07312 Comments URL: https://news.ycombinator.com/item?id=49933740 Points: 236 # Comments: 114</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-10-03">
-                <a href="https://www.reddit.com/r/devops/comments/1wwh2yn/whats_on_your_saturday_fix_it_before_monday/" target="_blank" class="fw-bold text-decoration-none">
-                    What's on your Saturday "fix it before Monday" infrastructure list today?
-                </a>
-                <p class="mb-1 small text-light">Spending 2 quiet hours on Saturday morning deleting complexity always saves 10 hours of firefighting next week. What’s everyone tinkering with or cleaning up in their stack this weekend.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-10-03">
-                <a href="https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Running Apache Spark experiments in my sleep (and on a plane)
-                </a>
-                <p class="mb-1 small text-light">That works for standard software bugs, but it fails completely for big data performance bottlenecks. Why tmux MatteredAll of this ran on Workbench, Netflix’s cloud dev environment, using my laptop as a thin terminal.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-03">
-                <a href="https://www.docker.com/blog/docker-cloud-sandboxes-wearedevelopers-recap/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Trust Docker for the agents you don’t
-                </a>
-                <p class="mb-1 small text-light">Cloud Sandboxes, open Kits, and a developer community building the next generation of AI software Docker Cloud Sandboxes are here. Docker CISO Mark Lechner connected those ideas to security in his keynote, “One Boundary for the Agentic Era”.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-10-03">
-                <a href="https://www.redhat.com/en/blog/what-enterprises-need-to-know-about-the-cyber-resilience-act-and-software-supply-chain-risk" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] What enterprises need to know about the Cyber Resilience Act and software supply chain risk
-                </a>
-                <p class="mb-1 small text-light">In part 1 of this series, we examined why enterprises need more than an inventory of the open source components in their software.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-10-03">
-                <a href="https://www.redhat.com/en/proactive-email-reports-red-hat-lightspeed-planning" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Stay ahead of change: Proactive email reports for Red Hat Lightspeed planning for RHEL
-                </a>
-                <p class="mb-1 small text-light">Earlier this year, we introduced the Red Hat Lightspeed Model Context Protocol toolset so you can query these support timelines programmatically. Today, we’re introducing monthly lifecycle and digital roadmap email reports for Red Hat Lightspeed planning for RHEL on the Hybrid Cloud Console.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-10-03">
-                <a href="https://about.gitlab.com/blog/deepseek-reasonix-vulnerability-discovered/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] DeepSeek-Reasonix: How a poisoned config can hijack an AI coding agent
-                </a>
-                <p class="mb-1 small text-light">To address this vulnerability, you should update to DeepSeek-Reasonix Studio 2. How GitLab can helpGitLab Duo Agent Platform Security Analyst Agent can help you check your codebase for this same pattern.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-10-03">
-                <a href="https://about.gitlab.com/blog/gitlab-and-claude-code-fast-compliant-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab and Claude Code: Fast, compliant AI
-                </a>
-                <p class="mb-1 small text-light">GitLab Duo Agent Platform, AI orchestration across the software development lifecycle, starts with context already built in.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-10-03">
-                <a href="https://blog.sentry.io/sentry-laravel-ai-integration/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Building Sentry's Laravel AI Integration
-                </a>
-                <p class="mb-1 small text-light">We were also supposed to use AI for that, so the language barrier wasn't a real issue. $source->{$key} will resolve $key to its string value and will access the field.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-03">
-                <a href="https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Why Spotify Is Not Using Bayesian A/B Testing
-                </a>
-                <p class="mb-1 small text-light">Clearing the confusion about what Bayesian A/B testing is. The post Why Spotify Is Not Using Bayesian A/B Testing appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-03">
-                <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Portal by Spotify cut my Claude Code token usage by 90%
-                </a>
-                <p class="mb-1 small text-light">Most of what an AI coding agent does for me isn't thinking. It's I/O. The post Portal by Spotify cut my Claude Code token usage by 90% appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-03">
-                <a href="https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] When Can LLMs Replace Humans in A/B Tests?
-                </a>
-                <p class="mb-1 small text-light">TL;DR: LLM predictions can stand in for human outcomes in A/B tests, but only by assumption, not by design.... The post When Can LLMs Replace Humans in A/B Tests? appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-03">
-                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
-                </a>
-                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-03">
-                <a href="https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable
-                </a>
-                <p class="mb-1 small text-light">However, transitioning to a 2-core fiber ecosystem comes with challenges that affect the fiber and subsea repeaters. 1-core fiber allows the industry to counter-propagate traffic using a pair of fibers.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-03">
-                <a href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] ZGateway: Learnings from Putting a Proxy in Front of ZippyDB
-                </a>
-                <p class="mb-1 small text-light">As a bonus, it also enables admission control, load balancing, cross-region resilience, and richer operations. A proxy decouples them, collapsing the mesh into two bounded hops — a win on efficiency, performance, scalability, and above all reliability.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-10-03">
-                <a href="https://kubernetes.io/blog/2026/09/14/csi-changed-block-tracking-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes Changed Block Tracking API - Beta Differences
-                </a>
-                <p class="mb-1 small text-light">What's new in BetaThe main change in that release was the promotion of the SnapshotMetadataService CRD from v1alpha1 to v1beta1. Update SnapshotMetadataService manifests to use apiVersion: cbt.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-10-03">
-                <a href="https://www.cncf.io/blog/2026/10/02/kubecon-cloudnativecon-north-america-2026-join-the-cloud-native-community-at-opentofu-day/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] KubeCon + CloudNativeCon North America 2026: Join the cloud native community at OpenTofu Day
-                </a>
-                <p class="mb-1 small text-light">Most of KubeCon + CloudNativeCon assumes the cluster already exists. Who should attend, and what they’ll take away The day is built for DevOps engineers, platform engineers, and infrastructure leaders.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-10-03">
-                <a href="https://www.reddit.com/r/devops/comments/1wtxk1e/has_ai_made_application_development_faster_than/" target="_blank" class="fw-bold text-decoration-none">
-                    Has AI made application development faster than infrastructure teams can safely support?
-                </a>
-                <p class="mb-1 small text-light">Terraform, networking, IAM, Kubernetes, observability, cost and security still require quite a bit of context. So instead of AI removing bottlenecks, are we just moving the bottleneck downstream to DevOps/platform teams.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-03">
-                <a href="https://engineering.fb.com/2026/09/23/security/private-processing-meta-ai-glasses/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Bringing Private Processing to Meta AI Glasses
-                </a>
-                <p class="mb-1 small text-light">That key is never released to the host operating system, the hypervisor, or anyone operating the machine.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-03">
-                <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] An Organizational Second Brain: Building an AI That Learns From Experts
-                </a>
-                <p class="mb-1 small text-light">A self-improvement loop then compiles expert feedback into verified, regression-tested updates without model retraining. Its job is to find problems such as contradictions introduced, edge cases broken, or positions undermined.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
+                    Dropbox Tech | 2026-10-03
                     
                 </small>
             </li>
@@ -396,19 +149,283 @@
                 <p class="mb-1 small text-light">This routes the API requests, implements the preview relay server described below, and provides hooks for security and access policy. A Cloudflare Access service token authenticates the container workload to the publisher endpoint.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-10-03
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-10-03">
-                <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Improving infrastructure efficiency for growing demand in the age of AI
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-10-03">
+                <a href="https://www.reddit.com/r/devops/comments/1wtxk1e/has_ai_made_application_development_faster_than/" target="_blank" class="fw-bold text-decoration-none">
+                    Has AI made application development faster than infrastructure teams can safely support?
                 </a>
-                <p class="mb-1 small text-light">But building new infrastructure is only part of the challenge. When performance declines or newer hardware provides meaningful improvements in capacity, reliability, or efficiency, we can plan a transition.</p>
+                <p class="mb-1 small text-light">Terraform, networking, IAM, Kubernetes, observability, cost and security still require quite a bit of context. So instead of AI removing bottlenecks, are we just moving the bottleneck downstream to DevOps/platform teams.</p>
                 <small class="text-secondary">
                     
-                    Dropbox Tech
+                    Reddit | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-03">
+                <a href="https://engineering.fb.com/2026/09/23/security/private-processing-meta-ai-glasses/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Bringing Private Processing to Meta AI Glasses
+                </a>
+                <p class="mb-1 small text-light">That key is never released to the host operating system, the hypervisor, or anyone operating the machine.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-03">
+                <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] An Organizational Second Brain: Building an AI That Learns From Experts
+                </a>
+                <p class="mb-1 small text-light">A self-improvement loop then compiles expert feedback into verified, regression-tested updates without model retraining. Its job is to find problems such as contradictions introduced, edge cases broken, or positions undermined.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-10-03">
+                <a href="https://kubernetes.io/blog/2026/09/14/csi-changed-block-tracking-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes Changed Block Tracking API - Beta Differences
+                </a>
+                <p class="mb-1 small text-light">What's new in BetaThe main change in that release was the promotion of the SnapshotMetadataService CRD from v1alpha1 to v1beta1. Update SnapshotMetadataService manifests to use apiVersion: cbt.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-10-03">
+                <a href="https://www.cncf.io/blog/2026/10/02/kubecon-cloudnativecon-north-america-2026-join-the-cloud-native-community-at-opentofu-day/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] KubeCon + CloudNativeCon North America 2026: Join the cloud native community at OpenTofu Day
+                </a>
+                <p class="mb-1 small text-light">Most of KubeCon + CloudNativeCon assumes the cluster already exists. Who should attend, and what they’ll take away The day is built for DevOps engineers, platform engineers, and infrastructure leaders.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-10-03">
+                <a href="https://www.reddit.com/r/devops/comments/1wwh2yn/whats_on_your_saturday_fix_it_before_monday/" target="_blank" class="fw-bold text-decoration-none">
+                    What's on your Saturday "fix it before Monday" infrastructure list today?
+                </a>
+                <p class="mb-1 small text-light">Spending 2 quiet hours on Saturday morning deleting complexity always saves 10 hours of firefighting next week. What’s everyone tinkering with or cleaning up in their stack this weekend.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-10-03">
+                <a href="https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Running Apache Spark experiments in my sleep (and on a plane)
+                </a>
+                <p class="mb-1 small text-light">That works for standard software bugs, but it fails completely for big data performance bottlenecks. Why tmux MatteredAll of this ran on Workbench, Netflix’s cloud dev environment, using my laptop as a thin terminal.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-03">
+                <a href="https://www.docker.com/blog/docker-cloud-sandboxes-wearedevelopers-recap/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Trust Docker for the agents you don’t
+                </a>
+                <p class="mb-1 small text-light">Cloud Sandboxes, open Kits, and a developer community building the next generation of AI software Docker Cloud Sandboxes are here. Docker CISO Mark Lechner connected those ideas to security in his keynote, “One Boundary for the Agentic Era”.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-10-03">
+                <a href="https://www.redhat.com/en/blog/what-enterprises-need-to-know-about-the-cyber-resilience-act-and-software-supply-chain-risk" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] What enterprises need to know about the Cyber Resilience Act and software supply chain risk
+                </a>
+                <p class="mb-1 small text-light">In part 1 of this series, we examined why enterprises need more than an inventory of the open source components in their software.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-10-03">
+                <a href="https://www.redhat.com/en/proactive-email-reports-red-hat-lightspeed-planning" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Stay ahead of change: Proactive email reports for Red Hat Lightspeed planning for RHEL
+                </a>
+                <p class="mb-1 small text-light">Earlier this year, we introduced the Red Hat Lightspeed Model Context Protocol toolset so you can query these support timelines programmatically. Today, we’re introducing monthly lifecycle and digital roadmap email reports for Red Hat Lightspeed planning for RHEL on the Hybrid Cloud Console.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-10-03">
+                <a href="https://about.gitlab.com/blog/deepseek-reasonix-vulnerability-discovered/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] DeepSeek-Reasonix: How a poisoned config can hijack an AI coding agent
+                </a>
+                <p class="mb-1 small text-light">To address this vulnerability, you should update to DeepSeek-Reasonix Studio 2. How GitLab can helpGitLab Duo Agent Platform Security Analyst Agent can help you check your codebase for this same pattern.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-10-03">
+                <a href="https://about.gitlab.com/blog/gitlab-and-claude-code-fast-compliant-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab and Claude Code: Fast, compliant AI
+                </a>
+                <p class="mb-1 small text-light">GitLab Duo Agent Platform, AI orchestration across the software development lifecycle, starts with context already built in.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-10-03">
+                <a href="https://blog.sentry.io/sentry-laravel-ai-integration/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Building Sentry's Laravel AI Integration
+                </a>
+                <p class="mb-1 small text-light">We were also supposed to use AI for that, so the language barrier wasn't a real issue. $source->{$key} will resolve $key to its string value and will access the field.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-03">
+                <a href="https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Why Spotify Is Not Using Bayesian A/B Testing
+                </a>
+                <p class="mb-1 small text-light">Clearing the confusion about what Bayesian A/B testing is. The post Why Spotify Is Not Using Bayesian A/B Testing appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-03">
+                <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Portal by Spotify cut my Claude Code token usage by 90%
+                </a>
+                <p class="mb-1 small text-light">Most of what an AI coding agent does for me isn't thinking. It's I/O. The post Portal by Spotify cut my Claude Code token usage by 90% appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-03">
+                <a href="https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] When Can LLMs Replace Humans in A/B Tests?
+                </a>
+                <p class="mb-1 small text-light">TL;DR: LLM predictions can stand in for human outcomes in A/B tests, but only by assumption, not by design.... The post When Can LLMs Replace Humans in A/B Tests? appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-03">
+                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
+                </a>
+                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-03">
+                <a href="https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable
+                </a>
+                <p class="mb-1 small text-light">However, transitioning to a 2-core fiber ecosystem comes with challenges that affect the fiber and subsea repeaters. 1-core fiber allows the industry to counter-propagate traffic using a pair of fibers.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-03">
+                <a href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] ZGateway: Learnings from Putting a Proxy in Front of ZippyDB
+                </a>
+                <p class="mb-1 small text-light">As a bonus, it also enables admission control, load balancing, cross-region resilience, and richer operations. A proxy decouples them, collapsing the mesh into two bounded hops — a win on efficiency, performance, scalability, and above all reliability.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-03">
+                <a href="https://tej.as/blog/aleph-alpha-kolibri" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: Germany's new sovereign AI model Kolibri
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://tej.as/blog/aleph-alpha-kolibri Comments URL: https://news.ycombinator.com/item?id=49943034 Points: 17 # Comments: 7</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-03">
+                <a href="https://blog.kagi.com/update-orion-linux-windows" target="_blank" class="fw-bold text-decoration-none">
+                    An Update on Orion for Linux and Windows
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://blog.kagi.com/update-orion-linux-windows Comments URL: https://news.ycombinator.com/item?id=49941447 Points: 92 # Comments: 44</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-03">
+                <a href="https://yuka.dev/blog-2026-10-02-linux-m4.html" target="_blank" class="fw-bold text-decoration-none">
+                    The Forgetful CPU (Linux on M4)
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://yuka.dev/blog-2026-10-02-linux-m4.html Comments URL: https://news.ycombinator.com/item?id=49933869 Points: 239 # Comments: 160</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-03
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-03">
+                <a href="https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/" target="_blank" class="fw-bold text-decoration-none">
+                    With most information hidden, the game Stratego had stumped AI until now
+                </a>
+                <p class="mb-1 small text-light">https://www.nature.com/articles/s41586-026-11036-yhttps://arxiv.org/abs/2511.07312 Comments URL: https://news.ycombinator.com/item?id=49933740 Points: 236 # Comments: 114</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-03
                     
                 </small>
             </li>

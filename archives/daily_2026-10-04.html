@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - October 04, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - October 04, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for October 04, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-10-04">2026-10-04 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-10-04 13:41:56
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,270 +128,6 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-04">
-                <a href="https://github.com/allenv0/SCM" target="_blank" class="fw-bold text-decoration-none">
-                    Show HN: AI search for every photo and every frame of video on macOS
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://github.com/allenv0/SCM Comments URL: https://news.ycombinator.com/item?id=49952111 Points: 20 # Comments: 8</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-04">
-                <a href="https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    Why don't more developers “use the platform”?
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/ Comments URL: https://news.ycombinator.com/item?id=49950554 Points: 184 # Comments: 163</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-04">
-                <a href="https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU" target="_blank" class="fw-bold text-decoration-none">
-                    The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU Comments URL: https://news.ycombinator.com/item?id=49946895 Points: 344 # Comments: 57</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-04">
-                <a href="https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/" target="_blank" class="fw-bold text-decoration-none">
-                    LeCun has "zero concerns" about AI wiping out humanity, recent "rogue" incidents
-                </a>
-                <p class="mb-1 small text-light">https://archive.ph/TyDPf Comments URL: https://news.ycombinator.com/item?id=49946228 Points: 204 # Comments: 300</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-10-04">
-                <a href="https://aws.amazon.com/blogs/aws/amazon-s3-tables-now-support-all-apache-iceberg-v3-data-types/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon S3 Tables now support all Apache Iceberg V3 data types
-                </a>
-                <p class="mb-1 small text-light">Among its many improvements, V3 introduces capabilities that address the most common pain points in V2. Upgrading from V2 AWS provides backwards compatibility for both versions to minimize disruption during migration to V3.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-10-04">
-                <a href="https://aws.amazon.com/blogs/aws/amazon-s3-vectors-now-supports-metadata-pre-filtering-for-higher-recall-on-filtered-searches/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon S3 Vectors now supports metadata pre-filtering for higher recall on filtered searches
-                </a>
-                <p class="mb-1 small text-light">Financial services: An investment research platform searches analyst notes, filings, and call transcripts scoped by issuer, document type, and publication date. Third, run a filtered similarity query with the QueryVectors API.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-10-04">
-                <a href="https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Amazon Aurora PostgreSQL now supports direct querying of Apache Iceberg and Parquet data in your data lake
-                </a>
-                <p class="mb-1 small text-light">You do all of this using familiar PostgreSQL syntax and your existing applications and tools. By building this capability around DuckDB, future improvements to the open source engine can continue to bring performance and functionality gains to Aurora and other AWS services.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-10-04">
-                <a href="https://aws.amazon.com/blogs/aws/celebrating-our-newest-aws-heroes-september-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] Celebrating Our Newest AWS Heroes – September 2026
-                </a>
-                <p class="mb-1 small text-light">Today, we’re excited to introduce the newest members of the AWS Heroes program. These individuals make a real difference in helping developers and organizations succeed with AWS.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-10-04">
-                <a href="https://www.reddit.com/r/devops/comments/1wxbzu3/has_anyone_ever_tried_listening_to_their/" target="_blank" class="fw-bold text-decoration-none">
-                    Has anyone ever tried listening to their infrastructure instead of watching it?
-                </a>
-                <p class="mb-1 small text-light">I'm a sound designer and I've been reading about sonification (turning data into sound). It made me wonder about on-call and monitoring.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-10-04">
-                <a href="https://www.reddit.com/r/devops/comments/1wwr7yp/qarelease_eng_w_11_yoe_hard_pivot_to_clouddevops/" target="_blank" class="fw-bold text-decoration-none">
-                    QA/Release Eng w/ 11 YoE, hard pivot to Cloud/Devops, looking for a bit of advice
-                </a>
-                <p class="mb-1 small text-light">Question in regards to pivoting towards cloud/devops. Should I get the AWS and GCP certs.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-10-04">
-                <a href="https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Leave the Class Path in the Rearview Mirror
-                </a>
-                <p class="mb-1 small text-light">An IDE formats source, navigates between declarations and usages, presents API documentation, and maintains a compiled view of the project. ja only provides command line ergonomics and tool orchestration, each feature is underpinned by a standalone tool.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-10-04">
-                <a href="https://www.microsoft.com/en-us/sql-server/blog/2026/09/28/sql-server-on-azure-local-is-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] SQL Server on Azure Local is now generally available
-                </a>
-                <p class="mb-1 small text-light">This enables organizations to explore AI-powered applications while keeping sensitive information and processing within their environment.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-04">
-                <a href="https://www.docker.com/blog/docker-sandbox-kit-spec/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] From Dockerfile to Kit: the Docker Sandboxes Kit Specification
-                </a>
-                <p class="mb-1 small text-light">They write code, run tests, install dependencies, call APIs, and work on infrastructure while I do something else. sandbox/credential@1 optional: true config: service: github phase: runtime apiKey: name: GH_TOKEN proxyManaged: true inject: - {domain: api.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-04">
-                <a href="https://www.docker.com/blog/docker-sandbox-kit-spec-cncf/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Docker and CNCF partner on an open spec for agent permissions
-                </a>
-                <p class="mb-1 small text-light">The same problem, for agents Containers were built for immutable software. Cloud platforms, observability, security, artifact management, content, and agent frameworks are all represented.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-10-04">
-                <a href="https://snyk.io/blog/ai-coding-agents-broken-access-control/" target="_blank" class="fw-bold text-decoration-none">
-                    [Snyk] Why AI Coding Agents Keep Writing Broken Access Control
-                </a>
-                <p class="mb-1 small text-light">AI coding agents can produce authorization logic that compiles and passes review while exposing one tenant’s data to another. Learn why broken access control is difficult to detect and how to prevent it.</p>
-                <small class="text-secondary">
-                    
-                    Snyk
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-04">
-                <a href="https://blog.cloudflare.com/next-git-platform-on-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
-                    We want you to build the next Git platform on Cloudflare
-                </a>
-                <p class="mb-1 small text-light">Article URL: https://blog.cloudflare.com/next-git-platform-on-cloudflare/ Comments URL: https://news.ycombinator.com/item?id=49947051 Points: 158 # Comments: 136</p>
-                <small class="text-secondary">
-                    
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-10-04">
-                <a href="https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Kubernetes v1.37: Pod-Level Resource Managers graduated to Beta
-                </a>
-                <p class="mb-1 small text-light">First introduced as an Alpha feature in Kubernetes v1. PodResources API Reporting: The v1 PodResources gRPC service (PodResourcesLister) introduces top-level cpu_ids and memory fields on PodResources responses.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-10-04">
-                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
-                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
-                </a>
-                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
-                <small class="text-secondary">
-                    
-                    Slack Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2026-10-04">
-                <a href="https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
-                    [Lyft Engineering] Rerouting the Stream: How Lyft Moved to the Apache Flink Operator
-                </a>
-                <p class="mb-1 small text-light">Security patches lagged, modern Kubernetes features stayed out of reach, and every quarter we waited made the eventual escape messier. The translation from FlinkApplication to FlinkDeployment happens within our deploy API.</p>
-                <small class="text-secondary">
-                    
-                    Lyft Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-04">
-                <a href="https://www.docker.com/blog/manufacturing-trust-for-ai-agents-keynote/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Manufacturing Trust for AI Agents | Docker’s WeAreDevelopers Keynote
-                </a>
-                <p class="mb-1 small text-light">In the keynote, Mark announced Docker Cloud Sandboxes, bringing the same microVM-based isolation from the laptop to Docker-managed cloud compute. Docker provides the trusted foundation underneath, whether agents run locally or in the cloud.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-04">
-                <a href="https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Introducing Cloud Sandboxes: Start on Your Laptop, Finish in the Cloud
-                </a>
-                <p class="mb-1 small text-light">Today, we’re introducing Cloud Sandboxes: the same microVM-based sandbox, running on Docker-managed compute, with one command to move between them. Cloud Sandboxes is the same microVM, running on Docker-managed compute.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-04">
-                <a href="https://engineering.fb.com/2026/09/21/open-source/rebalancer-generic-high-performance-library-assignment-problems/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Open-Sourcing Rebalancer: A Generic, High-Performance Library for Solving Assignment Problems
-                </a>
-                <p class="mb-1 small text-light">The main challenges to designing a reusable framework for solving problems like these are its usability and scalability. Rebalancer addresses both of these challenges by separating a problem’s specification from its solution.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-10-04">
                 <a href="https://kubernetes.io/blog/2026/09/21/kubernetes-v1-37-pvc-last-used-time/" target="_blank" class="fw-bold text-decoration-none">
                     [Kubernetes] Kubernetes v1.37: Tracking When a PersistentVolumeClaim Was Last Used (Beta)
@@ -382,7 +135,7 @@
                 <p class="mb-1 small text-light">How to use itSince the feature is Beta and enabled by default in Kubernetes v1. If you have feedback on this feature, please open an issue in the kubernetes/kubernetes repository.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-10-04
                     
                 </small>
             </li>
@@ -394,7 +147,7 @@
                 <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-10-04
                     
                 </small>
             </li>
@@ -406,7 +159,271 @@
                 <p class="mb-1 small text-light">You can define a network, a database, or an application service once and share it across projects and teams. Managed resources also have an ID from the cloud provider, such as an AWS VPC ID.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-04">
+                <a href="https://www.docker.com/blog/manufacturing-trust-for-ai-agents-keynote/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Manufacturing Trust for AI Agents | Docker’s WeAreDevelopers Keynote
+                </a>
+                <p class="mb-1 small text-light">In the keynote, Mark announced Docker Cloud Sandboxes, bringing the same microVM-based isolation from the laptop to Docker-managed cloud compute. Docker provides the trusted foundation underneath, whether agents run locally or in the cloud.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-04">
+                <a href="https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Introducing Cloud Sandboxes: Start on Your Laptop, Finish in the Cloud
+                </a>
+                <p class="mb-1 small text-light">Today, we’re introducing Cloud Sandboxes: the same microVM-based sandbox, running on Docker-managed compute, with one command to move between them. Cloud Sandboxes is the same microVM, running on Docker-managed compute.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-04">
+                <a href="https://engineering.fb.com/2026/09/21/open-source/rebalancer-generic-high-performance-library-assignment-problems/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Open-Sourcing Rebalancer: A Generic, High-Performance Library for Solving Assignment Problems
+                </a>
+                <p class="mb-1 small text-light">The main challenges to designing a reusable framework for solving problems like these are its usability and scalability. Rebalancer addresses both of these challenges by separating a problem’s specification from its solution.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-04">
+                <a href="https://blog.cloudflare.com/next-git-platform-on-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
+                    We want you to build the next Git platform on Cloudflare
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://blog.cloudflare.com/next-git-platform-on-cloudflare/ Comments URL: https://news.ycombinator.com/item?id=49947051 Points: 158 # Comments: 136</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-10-04">
+                <a href="https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.37: Pod-Level Resource Managers graduated to Beta
+                </a>
+                <p class="mb-1 small text-light">First introduced as an Alpha feature in Kubernetes v1. PodResources API Reporting: The v1 PodResources gRPC service (PodResourcesLister) introduces top-level cpu_ids and memory fields on PodResources responses.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-10-04">
+                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2026-10-04">
+                <a href="https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
+                    [Lyft Engineering] Rerouting the Stream: How Lyft Moved to the Apache Flink Operator
+                </a>
+                <p class="mb-1 small text-light">Security patches lagged, modern Kubernetes features stayed out of reach, and every quarter we waited made the eventual escape messier. The translation from FlinkApplication to FlinkDeployment happens within our deploy API.</p>
+                <small class="text-secondary">
+                    
+                    Lyft Engineering | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-10-04">
+                <a href="https://www.reddit.com/r/devops/comments/1wxbzu3/has_anyone_ever_tried_listening_to_their/" target="_blank" class="fw-bold text-decoration-none">
+                    Has anyone ever tried listening to their infrastructure instead of watching it?
+                </a>
+                <p class="mb-1 small text-light">I'm a sound designer and I've been reading about sonification (turning data into sound). It made me wonder about on-call and monitoring.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-10-04">
+                <a href="https://www.reddit.com/r/devops/comments/1wwr7yp/qarelease_eng_w_11_yoe_hard_pivot_to_clouddevops/" target="_blank" class="fw-bold text-decoration-none">
+                    QA/Release Eng w/ 11 YoE, hard pivot to Cloud/Devops, looking for a bit of advice
+                </a>
+                <p class="mb-1 small text-light">Question in regards to pivoting towards cloud/devops. Should I get the AWS and GCP certs.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-10-04">
+                <a href="https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Leave the Class Path in the Rearview Mirror
+                </a>
+                <p class="mb-1 small text-light">An IDE formats source, navigates between declarations and usages, presents API documentation, and maintains a compiled view of the project. ja only provides command line ergonomics and tool orchestration, each feature is underpinned by a standalone tool.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-10-04">
+                <a href="https://www.microsoft.com/en-us/sql-server/blog/2026/09/28/sql-server-on-azure-local-is-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] SQL Server on Azure Local is now generally available
+                </a>
+                <p class="mb-1 small text-light">This enables organizations to explore AI-powered applications while keeping sensitive information and processing within their environment.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-04">
+                <a href="https://www.docker.com/blog/docker-sandbox-kit-spec/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] From Dockerfile to Kit: the Docker Sandboxes Kit Specification
+                </a>
+                <p class="mb-1 small text-light">They write code, run tests, install dependencies, call APIs, and work on infrastructure while I do something else. sandbox/credential@1 optional: true config: service: github phase: runtime apiKey: name: GH_TOKEN proxyManaged: true inject: - {domain: api.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-04">
+                <a href="https://www.docker.com/blog/docker-sandbox-kit-spec-cncf/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker and CNCF partner on an open spec for agent permissions
+                </a>
+                <p class="mb-1 small text-light">The same problem, for agents Containers were built for immutable software. Cloud platforms, observability, security, artifact management, content, and agent frameworks are all represented.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-10-04">
+                <a href="https://snyk.io/blog/ai-coding-agents-broken-access-control/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Why AI Coding Agents Keep Writing Broken Access Control
+                </a>
+                <p class="mb-1 small text-light">AI coding agents can produce authorization logic that compiles and passes review while exposing one tenant’s data to another. Learn why broken access control is difficult to detect and how to prevent it.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-04">
+                <a href="https://github.com/allenv0/SCM" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: AI search for every photo and every frame of video on macOS
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://github.com/allenv0/SCM Comments URL: https://news.ycombinator.com/item?id=49952111 Points: 20 # Comments: 8</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-04">
+                <a href="https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    Why don't more developers “use the platform”?
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/ Comments URL: https://news.ycombinator.com/item?id=49950554 Points: 184 # Comments: 163</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-04">
+                <a href="https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU" target="_blank" class="fw-bold text-decoration-none">
+                    The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU Comments URL: https://news.ycombinator.com/item?id=49946895 Points: 344 # Comments: 57</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-04">
+                <a href="https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/" target="_blank" class="fw-bold text-decoration-none">
+                    LeCun has "zero concerns" about AI wiping out humanity, recent "rogue" incidents
+                </a>
+                <p class="mb-1 small text-light">https://archive.ph/TyDPf Comments URL: https://news.ycombinator.com/item?id=49946228 Points: 204 # Comments: 300</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-10-04">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-s3-tables-now-support-all-apache-iceberg-v3-data-types/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon S3 Tables now support all Apache Iceberg V3 data types
+                </a>
+                <p class="mb-1 small text-light">Among its many improvements, V3 introduces capabilities that address the most common pain points in V2. Upgrading from V2 AWS provides backwards compatibility for both versions to minimize disruption during migration to V3.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-10-04">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-s3-vectors-now-supports-metadata-pre-filtering-for-higher-recall-on-filtered-searches/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon S3 Vectors now supports metadata pre-filtering for higher recall on filtered searches
+                </a>
+                <p class="mb-1 small text-light">Financial services: An investment research platform searches analyst notes, filings, and call transcripts scoped by issuer, document type, and publication date. Third, run a filtered similarity query with the QueryVectors API.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-10-04">
+                <a href="https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Amazon Aurora PostgreSQL now supports direct querying of Apache Iceberg and Parquet data in your data lake
+                </a>
+                <p class="mb-1 small text-light">You do all of this using familiar PostgreSQL syntax and your existing applications and tools. By building this capability around DuckDB, future improvements to the open source engine can continue to bring performance and functionality gains to Aurora and other AWS services.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-10-04
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-10-04">
+                <a href="https://aws.amazon.com/blogs/aws/celebrating-our-newest-aws-heroes-september-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Celebrating Our Newest AWS Heroes – September 2026
+                </a>
+                <p class="mb-1 small text-light">Today, we’re excited to introduce the newest members of the AWS Heroes program. These individuals make a real difference in helping developers and organizations succeed with AWS.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-10-04
                     
                 </small>
             </li>

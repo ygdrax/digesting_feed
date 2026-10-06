@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - October 06, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - October 06, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for October 06, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-10-06">2026-10-06 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 15 sources • Updated 2026-10-06 14:45:02
+                    Showing 25 total articles from 
+                    15 sources
+                    
                     
                 </span>
             </small>
@@ -117,278 +134,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-06">
-                <a href="https://www.parseable.com" target="_blank" class="fw-bold text-decoration-none">
-                    Show HN: Parseable, an open observability datalake, handles 100M time-series/min
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-10-06">
+                <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Improving infrastructure efficiency for growing demand in the age of AI
                 </a>
-                <p class="mb-1 small text-light">Article URL: https://www.parseable.com Comments URL: https://news.ycombinator.com/item?id=49978171 Points: 11 # Comments: 2</p>
+                <p class="mb-1 small text-light">But building new infrastructure is only part of the challenge. When performance declines or newer hardware provides meaningful improvements in capacity, reliability, or efficiency, we can plan a transition.</p>
                 <small class="text-secondary">
                     
-                    Hacker News
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-10-06">
-                <a href="https://www.reddit.com/r/devops/comments/1wyc7mh/are_observability_tools_getting_obselete_due_to/" target="_blank" class="fw-bold text-decoration-none">
-                    Are Observability tools getting obselete due to AI? I need to plan!!!!
-                </a>
-                <p class="mb-1 small text-light">So i implemented lots of observability tools as part of my devops role in the last 10 years but for the last 1 year I am seeing all my stakeholders are just relying on AI incident tools (think of these SRE agents that are being released) And we still keep pumping TBs of data but also keep paying ...</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-10-06">
-                <a href="https://www.reddit.com/r/devops/comments/1wxgt8n/ai_agents_observability_in_backstage_with/" target="_blank" class="fw-bold text-decoration-none">
-                    AI agents observability in backstage with langfuse and OTEL
-                </a>
-                <p class="mb-1 small text-light">Spotify #backstage plugin to manage and observe fleet of agents straight in backstage self hosted https://github.com/acarmisc/backstage-plugin-ai-agents/tree/main. It relay on open telemetry signals and the first available backend it’s #langfuse submitted by /u/acarmisc</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-10-06">
-                <a href="https://www.reddit.com/r/devops/comments/1wvsu17/when_does_self_service_infrastructure_become_too/" target="_blank" class="fw-bold text-decoration-none">
-                    When does self service infrastructure become too much self service?
-                </a>
-                <p class="mb-1 small text-light">We pushed pretty hard to let dev teams handle more of their own infrastructure changes. It worked, but now the platform team spends a lot more time reviewing Terraform, fixing edge cases, and explaining context that isn't obvious from the repo.</p>
-                <small class="text-secondary">
-                    
-                    Reddit
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-10-06">
-                <a href="https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Running Apache Spark experiments in my sleep (and on a plane)
-                </a>
-                <p class="mb-1 small text-light">That works for standard software bugs, but it fails completely for big data performance bottlenecks. Why tmux MatteredAll of this ran on Workbench, Netflix’s cloud dev environment, using my laptop as a thin terminal.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-10-06">
-                <a href="https://azure.microsoft.com/en-us/blog/designing-agent-first-platforms-what-changes-when-agents-do-the-work/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Designing agent-first platforms: What changes when agents do the work
-                </a>
-                <p class="mb-1 small text-light">That change puts pressure on assumptions our platforms were built on, because an application that responds and an agent that acts need very different things underneath them. Azure Container Apps Sandboxes Learn more about designing agent-first platforms with Azure.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-06">
-                <a href="https://www.docker.com/blog/docker-cloud-sandboxes-wearedevelopers-recap/" target="_blank" class="fw-bold text-decoration-none">
-                    [Docker] Trust Docker for the agents you don’t
-                </a>
-                <p class="mb-1 small text-light">Cloud Sandboxes, open Kits, and a developer community building the next generation of AI software Docker Cloud Sandboxes are here. Docker CISO Mark Lechner connected those ideas to security in his keynote, “One Boundary for the Agentic Era”.</p>
-                <small class="text-secondary">
-                    
-                    Docker
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-10-06">
-                <a href="https://www.redhat.com/en/blog/how-red-hats-support-ai-assistant-contributes-accelerating-enterprise-support" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] How Red Hat's support AI assistant contributes to accelerating enterprise support
-                </a>
-                <p class="mb-1 small text-light">In enterprise support, speed and clarity matter most. To break down these operational barriers, the CEE Business Intelligence team at Red Hat developed the Support AI Assistant.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-10-06">
-                <a href="https://about.gitlab.com/blog/deepseek-reasonix-vulnerability-discovered/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] DeepSeek-Reasonix: How a poisoned config can hijack an AI coding agent
-                </a>
-                <p class="mb-1 small text-light">To address this vulnerability, you should update to DeepSeek-Reasonix Studio 2. How GitLab can helpGitLab Duo Agent Platform Security Analyst Agent can help you check your codebase for this same pattern.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-10-06">
-                <a href="https://about.gitlab.com/blog/gitlab-and-claude-code-fast-compliant-ai/" target="_blank" class="fw-bold text-decoration-none">
-                    [GitLab] GitLab and Claude Code: Fast, compliant AI
-                </a>
-                <p class="mb-1 small text-light">GitLab Duo Agent Platform, AI orchestration across the software development lifecycle, starts with context already built in.</p>
-                <small class="text-secondary">
-                    
-                    GitLab
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-10-06">
-                <a href="https://blog.sentry.io/sentry-laravel-ai-integration/" target="_blank" class="fw-bold text-decoration-none">
-                    [Sentry] Building Sentry's Laravel AI Integration
-                </a>
-                <p class="mb-1 small text-light">We were also supposed to use AI for that, so the language barrier wasn't a real issue. $source->{$key} will resolve $key to its string value and will access the field.</p>
-                <small class="text-secondary">
-                    
-                    Sentry
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-06">
-                <a href="https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Why Spotify Is Not Using Bayesian A/B Testing
-                </a>
-                <p class="mb-1 small text-light">Clearing the confusion about what Bayesian A/B testing is. The post Why Spotify Is Not Using Bayesian A/B Testing appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-06">
-                <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Portal by Spotify cut my Claude Code token usage by 90%
-                </a>
-                <p class="mb-1 small text-light">Most of what an AI coding agent does for me isn't thinking. It's I/O. The post Portal by Spotify cut my Claude Code token usage by 90% appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-06">
-                <a href="https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] When Can LLMs Replace Humans in A/B Tests?
-                </a>
-                <p class="mb-1 small text-light">TL;DR: LLM predictions can stand in for human outcomes in A/B tests, but only by assumption, not by design.... The post When Can LLMs Replace Humans in A/B Tests? appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-06">
-                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
-                </a>
-                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-06">
-                <a href="https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable
-                </a>
-                <p class="mb-1 small text-light">However, transitioning to a 2-core fiber ecosystem comes with challenges that affect the fiber and subsea repeaters. 1-core fiber allows the industry to counter-propagate traffic using a pair of fibers.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-06">
-                <a href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] ZGateway: Learnings from Putting a Proxy in Front of ZippyDB
-                </a>
-                <p class="mb-1 small text-light">As a bonus, it also enables admission control, load balancing, cross-region resilience, and richer operations. A proxy decouples them, collapsing the mesh into two bounded hops — a win on efficiency, performance, scalability, and above all reliability.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-10-06">
-                <a href="https://kubernetes.io/blog/2026/10/05/scaling-kubernetes-workloads-with-node-swap/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Scaling Kubernetes Workloads with Node Swap
-                </a>
-                <p class="mb-1 small text-light">Kubernetes' swap support resolves this by relying on cgroup v2, whose separate swap accounting tracks disk swap on its own. Advanced security runtimes (for example: gVisor, Kata Containers): Enabling strict security sandboxing increases memory overhead and normally reduces pod density.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-10-06">
-                <a href="https://www.cncf.io/blog/2026/10/02/kubecon-cloudnativecon-north-america-2026-join-the-cloud-native-community-at-opentofu-day/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] KubeCon + CloudNativeCon North America 2026: Join the cloud native community at OpenTofu Day
-                </a>
-                <p class="mb-1 small text-light">Most of KubeCon + CloudNativeCon assumes the cluster already exists. Who should attend, and what they’ll take away The day is built for DevOps engineers, platform engineers, and infrastructure leaders.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-10-06">
-                <a href="https://www.pulumi.com/blog/building-kubernetes-pr-previews-with-shared-pulumi-components/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] Building Kubernetes PR Previews with Shared Pulumi Components
-                </a>
-                <p class="mb-1 small text-light">My team develops a microservices application on Kubernetes, with hundreds of PRs opened each day. It creates a namespace within our existing Kubernetes cluster, along with resources shared by the services in that environment, including the Secret used to pull images from the container registry.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-10-06">
-                <a href="https://www.pulumi.com/blog/neo-kopia-workspace-snapshots/" target="_blank" class="fw-bold text-decoration-none">
-                    [Pulumi] AI agents need continuity, not just context
-                </a>
-                <p class="mb-1 small text-light">EFS plus AWS Backup is lovely if your answer to every deployment question is “be on AWS. If the service were the only storage principal, every snapshot and restore would have to flow through the application service.</p>
-                <small class="text-secondary">
-                    
-                    Pulumi
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-06">
-                <a href="https://engineering.fb.com/2026/09/23/security/private-processing-meta-ai-glasses/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] Bringing Private Processing to Meta AI Glasses
-                </a>
-                <p class="mb-1 small text-light">That key is never released to the host operating system, the hypervisor, or anyone operating the machine.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-06">
-                <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" target="_blank" class="fw-bold text-decoration-none">
-                    [Engineering at Meta] An Organizational Second Brain: Building an AI That Learns From Experts
-                </a>
-                <p class="mb-1 small text-light">A self-improvement loop then compiles expert feedback into verified, regression-tested updates without model retraining. Its job is to find problems such as contradictions introduced, edge cases broken, or positions undermined.</p>
-                <small class="text-secondary">
-                    
-                    Engineering at Meta
+                    Dropbox Tech | 2026-10-06
                     
                 </small>
             </li>
@@ -400,19 +153,283 @@
                 <p class="mb-1 small text-light">This routes the API requests, implements the preview relay server described below, and provides hooks for security and access policy. A Cloudflare Access service token authenticates the container workload to the publisher endpoint.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-10-06
                     
                 </small>
             </li>
             
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-10-06">
-                <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Improving infrastructure efficiency for growing demand in the age of AI
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-06">
+                <a href="https://engineering.fb.com/2026/09/23/security/private-processing-meta-ai-glasses/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Bringing Private Processing to Meta AI Glasses
                 </a>
-                <p class="mb-1 small text-light">But building new infrastructure is only part of the challenge. When performance declines or newer hardware provides meaningful improvements in capacity, reliability, or efficiency, we can plan a transition.</p>
+                <p class="mb-1 small text-light">That key is never released to the host operating system, the hypervisor, or anyone operating the machine.</p>
                 <small class="text-secondary">
                     
-                    Dropbox Tech
+                    Engineering at Meta | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-06">
+                <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] An Organizational Second Brain: Building an AI That Learns From Experts
+                </a>
+                <p class="mb-1 small text-light">A self-improvement loop then compiles expert feedback into verified, regression-tested updates without model retraining. Its job is to find problems such as contradictions introduced, edge cases broken, or positions undermined.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-10-06">
+                <a href="https://kubernetes.io/blog/2026/10/05/scaling-kubernetes-workloads-with-node-swap/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Scaling Kubernetes Workloads with Node Swap
+                </a>
+                <p class="mb-1 small text-light">Kubernetes' swap support resolves this by relying on cgroup v2, whose separate swap accounting tracks disk swap on its own. Advanced security runtimes (for example: gVisor, Kata Containers): Enabling strict security sandboxing increases memory overhead and normally reduces pod density.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-10-06">
+                <a href="https://www.cncf.io/blog/2026/10/02/kubecon-cloudnativecon-north-america-2026-join-the-cloud-native-community-at-opentofu-day/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] KubeCon + CloudNativeCon North America 2026: Join the cloud native community at OpenTofu Day
+                </a>
+                <p class="mb-1 small text-light">Most of KubeCon + CloudNativeCon assumes the cluster already exists. Who should attend, and what they’ll take away The day is built for DevOps engineers, platform engineers, and infrastructure leaders.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-10-06">
+                <a href="https://www.pulumi.com/blog/building-kubernetes-pr-previews-with-shared-pulumi-components/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Building Kubernetes PR Previews with Shared Pulumi Components
+                </a>
+                <p class="mb-1 small text-light">My team develops a microservices application on Kubernetes, with hundreds of PRs opened each day. It creates a namespace within our existing Kubernetes cluster, along with resources shared by the services in that environment, including the Secret used to pull images from the container registry.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-10-06">
+                <a href="https://www.pulumi.com/blog/neo-kopia-workspace-snapshots/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] AI agents need continuity, not just context
+                </a>
+                <p class="mb-1 small text-light">EFS plus AWS Backup is lovely if your answer to every deployment question is “be on AWS. If the service were the only storage principal, every snapshot and restore would have to flow through the application service.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-10-06">
+                <a href="https://www.reddit.com/r/devops/comments/1wyc7mh/are_observability_tools_getting_obselete_due_to/" target="_blank" class="fw-bold text-decoration-none">
+                    Are Observability tools getting obselete due to AI? I need to plan!!!!
+                </a>
+                <p class="mb-1 small text-light">So i implemented lots of observability tools as part of my devops role in the last 10 years but for the last 1 year I am seeing all my stakeholders are just relying on AI incident tools (think of these SRE agents that are being released) And we still keep pumping TBs of data but also keep paying ...</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-10-06">
+                <a href="https://www.reddit.com/r/devops/comments/1wxgt8n/ai_agents_observability_in_backstage_with/" target="_blank" class="fw-bold text-decoration-none">
+                    AI agents observability in backstage with langfuse and OTEL
+                </a>
+                <p class="mb-1 small text-light">Spotify #backstage plugin to manage and observe fleet of agents straight in backstage self hosted https://github.com/acarmisc/backstage-plugin-ai-agents/tree/main. It relay on open telemetry signals and the first available backend it’s #langfuse submitted by /u/acarmisc</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-10-06">
+                <a href="https://www.reddit.com/r/devops/comments/1wvsu17/when_does_self_service_infrastructure_become_too/" target="_blank" class="fw-bold text-decoration-none">
+                    When does self service infrastructure become too much self service?
+                </a>
+                <p class="mb-1 small text-light">We pushed pretty hard to let dev teams handle more of their own infrastructure changes. It worked, but now the platform team spends a lot more time reviewing Terraform, fixing edge cases, and explaining context that isn't obvious from the repo.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-10-06">
+                <a href="https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Running Apache Spark experiments in my sleep (and on a plane)
+                </a>
+                <p class="mb-1 small text-light">That works for standard software bugs, but it fails completely for big data performance bottlenecks. Why tmux MatteredAll of this ran on Workbench, Netflix’s cloud dev environment, using my laptop as a thin terminal.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-10-06">
+                <a href="https://azure.microsoft.com/en-us/blog/designing-agent-first-platforms-what-changes-when-agents-do-the-work/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Designing agent-first platforms: What changes when agents do the work
+                </a>
+                <p class="mb-1 small text-light">That change puts pressure on assumptions our platforms were built on, because an application that responds and an agent that acts need very different things underneath them. Azure Container Apps Sandboxes Learn more about designing agent-first platforms with Azure.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-06">
+                <a href="https://www.docker.com/blog/docker-cloud-sandboxes-wearedevelopers-recap/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Trust Docker for the agents you don’t
+                </a>
+                <p class="mb-1 small text-light">Cloud Sandboxes, open Kits, and a developer community building the next generation of AI software Docker Cloud Sandboxes are here. Docker CISO Mark Lechner connected those ideas to security in his keynote, “One Boundary for the Agentic Era”.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-10-06">
+                <a href="https://www.redhat.com/en/blog/how-red-hats-support-ai-assistant-contributes-accelerating-enterprise-support" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] How Red Hat's support AI assistant contributes to accelerating enterprise support
+                </a>
+                <p class="mb-1 small text-light">In enterprise support, speed and clarity matter most. To break down these operational barriers, the CEE Business Intelligence team at Red Hat developed the Support AI Assistant.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-10-06">
+                <a href="https://about.gitlab.com/blog/deepseek-reasonix-vulnerability-discovered/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] DeepSeek-Reasonix: How a poisoned config can hijack an AI coding agent
+                </a>
+                <p class="mb-1 small text-light">To address this vulnerability, you should update to DeepSeek-Reasonix Studio 2. How GitLab can helpGitLab Duo Agent Platform Security Analyst Agent can help you check your codebase for this same pattern.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-10-06">
+                <a href="https://about.gitlab.com/blog/gitlab-and-claude-code-fast-compliant-ai/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] GitLab and Claude Code: Fast, compliant AI
+                </a>
+                <p class="mb-1 small text-light">GitLab Duo Agent Platform, AI orchestration across the software development lifecycle, starts with context already built in.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-10-06">
+                <a href="https://blog.sentry.io/sentry-laravel-ai-integration/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Building Sentry's Laravel AI Integration
+                </a>
+                <p class="mb-1 small text-light">We were also supposed to use AI for that, so the language barrier wasn't a real issue. $source->{$key} will resolve $key to its string value and will access the field.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-06">
+                <a href="https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Why Spotify Is Not Using Bayesian A/B Testing
+                </a>
+                <p class="mb-1 small text-light">Clearing the confusion about what Bayesian A/B testing is. The post Why Spotify Is Not Using Bayesian A/B Testing appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-06">
+                <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Portal by Spotify cut my Claude Code token usage by 90%
+                </a>
+                <p class="mb-1 small text-light">Most of what an AI coding agent does for me isn't thinking. It's I/O. The post Portal by Spotify cut my Claude Code token usage by 90% appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-06">
+                <a href="https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] When Can LLMs Replace Humans in A/B Tests?
+                </a>
+                <p class="mb-1 small text-light">TL;DR: LLM predictions can stand in for human outcomes in A/B tests, but only by assumption, not by design.... The post When Can LLMs Replace Humans in A/B Tests? appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-06">
+                <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Indexing the Data Lake for Online Point Queries
+                </a>
+                <p class="mb-1 small text-light">Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-06">
+                <a href="https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable
+                </a>
+                <p class="mb-1 small text-light">However, transitioning to a 2-core fiber ecosystem comes with challenges that affect the fiber and subsea repeaters. 1-core fiber allows the industry to counter-propagate traffic using a pair of fibers.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-06">
+                <a href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] ZGateway: Learnings from Putting a Proxy in Front of ZippyDB
+                </a>
+                <p class="mb-1 small text-light">As a bonus, it also enables admission control, load balancing, cross-region resilience, and richer operations. A proxy decouples them, collapsing the mesh into two bounded hops — a win on efficiency, performance, scalability, and above all reliability.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-10-06
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-06">
+                <a href="https://www.parseable.com" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: Parseable, an open observability datalake, handles 100M time-series/min
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.parseable.com Comments URL: https://news.ycombinator.com/item?id=49978171 Points: 11 # Comments: 2</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-06
                     
                 </small>
             </li>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>🔧 Daily DevOps Digest</title>
+    <title>DevOps Digest - October 08, 2026</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -46,23 +46,38 @@
     <div class="container py-5">
         <h1 class="mb-4 text-center title">
             
-                🔧 Daily DevOps Digest
+                📊 Daily DevOps Digest - October 08, 2026
             
         </h1>
         <p class="text-center text-muted">
             
-                Today's top 25 curated articles from Hacker News, Reddit, and tech blogs.
+                Top 25 articles selected for October 08, 2026
             
         </p>
         
         <!-- Navigation -->
         <div class="mb-3 text-center">
             
-            <a href="archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
-            <a href="history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
             
         </div>
 
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-10-08">2026-10-08 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
         
 
         <!-- Quick Stats -->
@@ -70,7 +85,9 @@
             <small class="text-muted">
                 <span id="statsText">
                     
-                    25 articles from 12 sources • Updated 2026-10-08 15:13:17
+                    Showing 25 total articles from 
+                    12 sources
+                    
                     
                 </span>
             </small>
@@ -111,206 +128,14 @@
 
         <ul class="list-group" id="articleList">
             
-            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-10-08">
-                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-bedrock-managed-agents-powered-by-openai-q3-service-availability-updates-kiro-workflows-and-more-october-5-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [Amazon AWS] AWS Weekly Roundup: Amazon Bedrock Managed Agents powered by OpenAI, Q3 service availability updates, Kiro workflows, and more (October 5, 2026)
-                </a>
-                <p class="mb-1 small text-light">The Amazon Bedrock inference engine delivers the performance, security, and reliability required for production workloads. For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page.</p>
-                <small class="text-secondary">
-                    
-                    Amazon AWS
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-10-08">
-                <a href="https://www.hashicorp.com/blog/secure-ai-agents-with-hashicorp-boundary" target="_blank" class="fw-bold text-decoration-none">
-                    [HashiCorp] Secure AI agents with HashiCorp Boundary
-                </a>
-                <p class="mb-1 small text-light">For example, a platform engineer can ask the agent to analyze a performance issue, gather diagnostic data from a target system, and summarize the findings. This separation of access control from AI reasoning ensures that infrastructure access remains governed by enterprise security policies.</p>
-                <small class="text-secondary">
-                    
-                    HashiCorp
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-10-08">
-                <a href="https://kubernetes.io/blog/2026/09/22/sig-apps-spotlight/" target="_blank" class="fw-bold text-decoration-none">
-                    [Kubernetes] Spotlight on SIG Apps
-                </a>
-                <p class="mb-1 small text-light">As Kubernetes adoption has grown, the conversation has shifted beyond running containers to managing increasingly complex application lifecycles. The problem and the solutionSIG Apps is responsible for the core workload APIs that power how applications run on Kubernetes.</p>
-                <small class="text-secondary">
-                    
-                    Kubernetes
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-10-08">
-                <a href="https://www.cncf.io/blog/2026/10/07/ciliumcon-is-back-at-kubecon-cloudnativecon-north-america-2026/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] CiliumCon is back at KubeCon + CloudNativeCon North America 2026
-                </a>
-                <p class="mb-1 small text-light">The whole Cilium stack runs on eBPF, with Cilium handling networking, Hubble observability, and Tetragon runtime security. A working knowledge of Kubernetes networking and container orchestration is enough for most sessions.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-10-08">
-                <a href="https://www.cncf.io/blog/2026/10/07/backstagecon-comes-to-kubecon-cloudnativecon-north-america-2026-in-salt-lake-city/" target="_blank" class="fw-bold text-decoration-none">
-                    [CNCF] BackstageCon comes to KubeCon + CloudNativeCon North America 2026 in Salt Lake City
-                </a>
-                <p class="mb-1 small text-light">The Backstage project has been shipping AI features for the past year. Backstage usually sits on top of a Kubernetes and cloud native stack, and BackstageCon shows how platform teams make that stack usable for their developers.</p>
-                <small class="text-secondary">
-                    
-                    CNCF
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-10-08">
-                <a href="https://blog.cloudflare.com/radar-redesign/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Bridging technical depth and usability: The story behind Radar’s redesign
-                </a>
-                <p class="mb-1 small text-light">Radar provides a real-time view into global Internet trends, powered by Cloudflare’s global network. To unlock that value, we want to empower every user with real-time insights across security, performance, and traffic.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-10-08">
-                <a href="https://blog.cloudflare.com/birthday-week-2026-wrap-up/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] Everything we launched during Birthday Week 2026
-                </a>
-                <p class="mb-1 small text-light">Tuesday, September 29 - Helping secure the agentic InternetTechnological progress is rapidly changing how we think about application security.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-10-08">
-                <a href="https://blog.cloudflare.com/one-year-later-1111-interns/" target="_blank" class="fw-bold text-decoration-none">
-                    [Cloudflare] One year later: the power of 1.1.1.1 interns
-                </a>
-                <p class="mb-1 small text-light">Managers and mentors remained essential in setting direction, reviewing decisions, and ensuring that what shipped met Cloudflare’s standards. Cloudflare is targeting 2029 for post-quantum security, and you can’t migrate what you can’t see.</p>
-                <small class="text-secondary">
-                    
-                    Cloudflare
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-10-08">
-                <a href="https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Evolving our calendar assistant Reclaim to be AI-native without starting over
-                </a>
-                <p class="mb-1 small text-light">As AI assistants and natural-language interfaces became more capable, they opened up a new way for people to use Reclaim. The result was an agent platform designed to work within Reclaim’s existing architecture.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-10-08">
-                <a href="https://dropbox.tech/culture/learnings-from-deploying-ai-at-company-scale" target="_blank" class="fw-bold text-decoration-none">
-                    [Dropbox Tech] Dropbox CTO Ali Dasdan on moving from AI adoption to transformation
-                </a>
-                <p class="mb-1 small text-light">Problem solving, communication, and leadership become critical to turning AI-enabled output into real value. Or you’re generating significantly more code, which puts additional stress on the tools and infrastructure that support development.</p>
-                <small class="text-secondary">
-                    
-                    Dropbox Tech
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-10-08">
-                <a href="https://netflixtechblog.com/trading-a-cloud-identity-for-your-own-workload-attestation-on-managed-compute-516d5a29b252?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Trading a Cloud Identity for Your Own: Workload Attestation on Managed Compute
-                </a>
-                <p class="mb-1 small text-light">On infrastructure you build yourself, you can bootstrap your own identity however you like. The Identity service receives attestation requests, verifies them, and issues certificates.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-10-08">
-                <a href="https://netflixtechblog.medium.com/netflix-stratum-media-processing-automated-container-right-sizing-ddf9aa68a801?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] Netflix Stratum Media Processing: Automated Container Right-Sizing
-                </a>
-                <p class="mb-1 small text-light">Stratum then schedules these containers as batch jobs on Netflix’s Titus compute platform, with upstream services triggering function executions. Continuous Infrastructure & Codec Evolution: Cloud providers regularly upgrade their hardware.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-10-08">
-                <a href="https://netflixtechblog.medium.com/the-lifecycle-of-llm-as-a-judge-building-aligning-and-monitoring-at-scale-c95bd8283508?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
-                    [Netflix] The Lifecycle of LLM-as-a-Judge: Building, Aligning, and Monitoring at scale
-                </a>
-                <p class="mb-1 small text-light">However, it introduces a new and critical question: Who evaluates the evaluator. This closes the loop by feeding new human-labeled data and updated signals back into the benchmark and development phases.</p>
-                <small class="text-secondary">
-                    
-                    Netflix
-                    
-                </small>
-            </li>
-            
             <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-10-08">
-                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-global-industrial-aiot-platforms/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Global Industrial AIoT Platforms
+                <a href="https://azure.microsoft.com/en-us/blog/ai-transformation-across-the-infrastructure-lifecycle-from-supply-chain-to-fleet-operations/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] AI transformation across the infrastructure lifecycle: From supply chain to fleet operations
                 </a>
-                <p class="mb-1 small text-light">Read the full 2026 Gartner® Magic Quadrant™ for Global Industrial AIoT Platforms report As industrial organizations modernize, they need a foundation that connects operations across cloud and edge environments.</p>
+                <p class="mb-1 small text-light">Once infrastructure is deployed, the challenge becomes keeping it operating reliably for customers. Information about component performance can help teams proactively address potential issues before customers experience them.</p>
                 <small class="text-secondary">
                     
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-10-08">
-                <a href="https://azure.microsoft.com/en-us/blog/responsible-infrastructure-at-hyperscale-managing-the-full-lifecycle-of-azure-hardware/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] Responsible infrastructure at hyperscale: Managing the full lifecycle of Azure hardware
-                </a>
-                <p class="mb-1 small text-light">Every new generation of cloud infrastructure creates two jobs. As new generations of cloud and AI infrastructure are deployed, older hardware is gradually taken out of service.</p>
-                <small class="text-secondary">
-                    
-                    Microsoft Azure
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-10-08">
-                <a href="https://www.redhat.com/en/blog/zero-cves-delivery-why-container-security-belongs-supply-chain" target="_blank" class="fw-bold text-decoration-none">
-                    [Red Hat] Zero CVEs at delivery: Why container security belongs in the supply chain
-                </a>
-                <p class="mb-1 small text-light">Back in 2010, I wrote a small web tool to generate random galactic sectors for a tabletop role playing game. But harmless code running on top of an unmaintained container image is an open door.</p>
-                <small class="text-secondary">
-                    
-                    Red Hat
-                    
-                </small>
-            </li>
-            
-            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-08">
-                <a href="https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity/" target="_blank" class="fw-bold text-decoration-none">
-                    [Spotify Engineering] AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity
-                </a>
-                <p class="mb-1 small text-light">Quality and reliability have always been a point of pride for Spotify. We run an extraordinarily complex... The post AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity appeared first on Spotify Engineering.</p>
-                <small class="text-secondary">
-                    
-                    Spotify Engineering
+                    Microsoft Azure | 2026-10-08
                     
                 </small>
             </li>
@@ -322,7 +147,7 @@
                 <p class="mb-1 small text-light">It automatically correlates utilization metrics, resource configurations, and application topology, and analyzes against Well-Architected best practices across 65+ AWS services.</p>
                 <small class="text-secondary">
                     
-                    Amazon AWS
+                    Amazon AWS | 2026-10-08
                     
                 </small>
             </li>
@@ -334,7 +159,7 @@
                 <p class="mb-1 small text-light">0 The Google Cloud provider is continuously updated alongside Google Cloud services and Terraform itself. x release cycle, the Google Cloud provider introduced support for Terraform list resources, starting with service accounts and expanding across a growing set of Google Cloud resources.</p>
                 <small class="text-secondary">
                     
-                    HashiCorp
+                    HashiCorp | 2026-10-08
                     
                 </small>
             </li>
@@ -346,7 +171,7 @@
                 <p class="mb-1 small text-light">37 brings important storage security features: emptyDir permission modes and bind mount options. Linux storage and permission fundamentalsBefore diving into the new Kubernetes features, let us briefly review the low-level Linux security mechanisms that make them possible.</p>
                 <small class="text-secondary">
                     
-                    Kubernetes
+                    Kubernetes | 2026-10-08
                     
                 </small>
             </li>
@@ -358,7 +183,7 @@
                 <p class="mb-1 small text-light">Running Kubernetes across distributed and resource-constrained environments introduces challenges that can differ considerably from centralized cloud environments.</p>
                 <small class="text-secondary">
                     
-                    CNCF
+                    CNCF | 2026-10-08
                     
                 </small>
             </li>
@@ -370,7 +195,7 @@
                 <p class="mb-1 small text-light">When multiple arrive at the same time, it can quickly overwhelm even a seasoned security analyst. The early beta is available in Cloudflare Managed Defense for eligible application-security alerts and cases.</p>
                 <small class="text-secondary">
                     
-                    Cloudflare
+                    Cloudflare | 2026-10-08
                     
                 </small>
             </li>
@@ -382,7 +207,7 @@
                 <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
                 <small class="text-secondary">
                     
-                    Slack Engineering
+                    Slack Engineering | 2026-10-08
                     
                 </small>
             </li>
@@ -394,19 +219,211 @@
                 <p class="mb-1 small text-light">An image: a container image and the platforms it’s built for (amd64, arm64, or both). The Pulumi Automation API runs a preview and then an update, with one stack per region.</p>
                 <small class="text-secondary">
                     
-                    Pulumi
+                    Pulumi | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-10-08">
+                <a href="https://netflixtechblog.com/trading-a-cloud-identity-for-your-own-workload-attestation-on-managed-compute-516d5a29b252?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Trading a Cloud Identity for Your Own: Workload Attestation on Managed Compute
+                </a>
+                <p class="mb-1 small text-light">On infrastructure you build yourself, you can bootstrap your own identity however you like. The Identity service receives attestation requests, verifies them, and issues certificates.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-10-08">
+                <a href="https://netflixtechblog.medium.com/netflix-stratum-media-processing-automated-container-right-sizing-ddf9aa68a801?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Netflix Stratum Media Processing: Automated Container Right-Sizing
+                </a>
+                <p class="mb-1 small text-light">Stratum then schedules these containers as batch jobs on Netflix’s Titus compute platform, with upstream services triggering function executions. Continuous Infrastructure & Codec Evolution: Cloud providers regularly upgrade their hardware.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-10-08">
+                <a href="https://netflixtechblog.medium.com/the-lifecycle-of-llm-as-a-judge-building-aligning-and-monitoring-at-scale-c95bd8283508?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] The Lifecycle of LLM-as-a-Judge: Building, Aligning, and Monitoring at scale
+                </a>
+                <p class="mb-1 small text-light">However, it introduces a new and critical question: Who evaluates the evaluator. This closes the loop by feeding new human-labeled data and updated signals back into the benchmark and development phases.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-10-08
                     
                 </small>
             </li>
             
             <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-10-08">
-                <a href="https://azure.microsoft.com/en-us/blog/ai-transformation-across-the-infrastructure-lifecycle-from-supply-chain-to-fleet-operations/" target="_blank" class="fw-bold text-decoration-none">
-                    [Microsoft Azure] AI transformation across the infrastructure lifecycle: From supply chain to fleet operations
+                <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-global-industrial-aiot-platforms/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Global Industrial AIoT Platforms
                 </a>
-                <p class="mb-1 small text-light">Once infrastructure is deployed, the challenge becomes keeping it operating reliably for customers. Information about component performance can help teams proactively address potential issues before customers experience them.</p>
+                <p class="mb-1 small text-light">Read the full 2026 Gartner® Magic Quadrant™ for Global Industrial AIoT Platforms report As industrial organizations modernize, they need a foundation that connects operations across cloud and edge environments.</p>
                 <small class="text-secondary">
                     
-                    Microsoft Azure
+                    Microsoft Azure | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-10-08">
+                <a href="https://azure.microsoft.com/en-us/blog/responsible-infrastructure-at-hyperscale-managing-the-full-lifecycle-of-azure-hardware/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Responsible infrastructure at hyperscale: Managing the full lifecycle of Azure hardware
+                </a>
+                <p class="mb-1 small text-light">Every new generation of cloud infrastructure creates two jobs. As new generations of cloud and AI infrastructure are deployed, older hardware is gradually taken out of service.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-10-08">
+                <a href="https://www.redhat.com/en/blog/zero-cves-delivery-why-container-security-belongs-supply-chain" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Zero CVEs at delivery: Why container security belongs in the supply chain
+                </a>
+                <p class="mb-1 small text-light">Back in 2010, I wrote a small web tool to generate random galactic sectors for a tabletop role playing game. But harmless code running on top of an unmaintained container image is an open door.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-08">
+                <a href="https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity
+                </a>
+                <p class="mb-1 small text-light">Quality and reliability have always been a point of pride for Spotify. We run an extraordinarily complex... The post AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-10-08">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-bedrock-managed-agents-powered-by-openai-q3-service-availability-updates-kiro-workflows-and-more-october-5-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Amazon Bedrock Managed Agents powered by OpenAI, Q3 service availability updates, Kiro workflows, and more (October 5, 2026)
+                </a>
+                <p class="mb-1 small text-light">The Amazon Bedrock inference engine delivers the performance, security, and reliability required for production workloads. For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-10-08">
+                <a href="https://www.hashicorp.com/blog/secure-ai-agents-with-hashicorp-boundary" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Secure AI agents with HashiCorp Boundary
+                </a>
+                <p class="mb-1 small text-light">For example, a platform engineer can ask the agent to analyze a performance issue, gather diagnostic data from a target system, and summarize the findings. This separation of access control from AI reasoning ensures that infrastructure access remains governed by enterprise security policies.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-10-08">
+                <a href="https://kubernetes.io/blog/2026/09/22/sig-apps-spotlight/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Spotlight on SIG Apps
+                </a>
+                <p class="mb-1 small text-light">As Kubernetes adoption has grown, the conversation has shifted beyond running containers to managing increasingly complex application lifecycles. The problem and the solutionSIG Apps is responsible for the core workload APIs that power how applications run on Kubernetes.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-10-08">
+                <a href="https://www.cncf.io/blog/2026/10/07/ciliumcon-is-back-at-kubecon-cloudnativecon-north-america-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] CiliumCon is back at KubeCon + CloudNativeCon North America 2026
+                </a>
+                <p class="mb-1 small text-light">The whole Cilium stack runs on eBPF, with Cilium handling networking, Hubble observability, and Tetragon runtime security. A working knowledge of Kubernetes networking and container orchestration is enough for most sessions.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-10-08">
+                <a href="https://www.cncf.io/blog/2026/10/07/backstagecon-comes-to-kubecon-cloudnativecon-north-america-2026-in-salt-lake-city/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] BackstageCon comes to KubeCon + CloudNativeCon North America 2026 in Salt Lake City
+                </a>
+                <p class="mb-1 small text-light">The Backstage project has been shipping AI features for the past year. Backstage usually sits on top of a Kubernetes and cloud native stack, and BackstageCon shows how platform teams make that stack usable for their developers.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-10-08">
+                <a href="https://blog.cloudflare.com/radar-redesign/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Bridging technical depth and usability: The story behind Radar’s redesign
+                </a>
+                <p class="mb-1 small text-light">Radar provides a real-time view into global Internet trends, powered by Cloudflare’s global network. To unlock that value, we want to empower every user with real-time insights across security, performance, and traffic.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-10-08">
+                <a href="https://blog.cloudflare.com/birthday-week-2026-wrap-up/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Everything we launched during Birthday Week 2026
+                </a>
+                <p class="mb-1 small text-light">Tuesday, September 29 - Helping secure the agentic InternetTechnological progress is rapidly changing how we think about application security.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-10-08">
+                <a href="https://blog.cloudflare.com/one-year-later-1111-interns/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] One year later: the power of 1.1.1.1 interns
+                </a>
+                <p class="mb-1 small text-light">Managers and mentors remained essential in setting direction, reviewing decisions, and ensuring that what shipped met Cloudflare’s standards. Cloudflare is targeting 2029 for post-quantum security, and you can’t migrate what you can’t see.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-10-08">
+                <a href="https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Evolving our calendar assistant Reclaim to be AI-native without starting over
+                </a>
+                <p class="mb-1 small text-light">As AI assistants and natural-language interfaces became more capable, they opened up a new way for people to use Reclaim. The result was an agent platform designed to work within Reclaim’s existing architecture.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-10-08
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-10-08">
+                <a href="https://dropbox.tech/culture/learnings-from-deploying-ai-at-company-scale" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Dropbox CTO Ali Dasdan on moving from AI adoption to transformation
+                </a>
+                <p class="mb-1 small text-light">Problem solving, communication, and leadership become critical to turning AI-enabled output into real value. Or you’re generating significantly more code, which puts additional stress on the tools and infrastructure that support development.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-10-08
                     
                 </small>
             </li>

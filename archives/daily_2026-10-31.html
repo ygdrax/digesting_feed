@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - October 31, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - October 31, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for October 31, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-10-31">2026-10-31 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    14 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="Hacker News">Hacker News</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Lyft Engineering">Lyft Engineering</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Sentry">Sentry</option>
+                
+                <option value="Slack Engineering">Slack Engineering</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-10-31">
+                <a href="https://www.pulumi.com/blog/self-hosted-ai-infrastructure-pulumi-aicr/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] AI infrastructure on tap with the Pulumi AICR provider
+                </a>
+                <p class="mb-1 small text-light">Model performance and throughput can change depending on your workload type or model configuration. NVIDIA’s AICR offers a collection of validated GPU infrastructure recipes for various cloud providers.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-10-31">
+                <a href="https://azure.microsoft.com/en-us/blog/azure-cloud-hsm-hardware-audit-logging-verifiable-audit-trails-for-security-and-compliance/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Azure Cloud HSM Hardware Audit Logging: Verifiable audit trails for security and compliance
+                </a>
+                <p class="mb-1 small text-light">Security, compliance, and operations teams can use this hardware-originated evidence for monitoring, compliance reporting, and forensic investigations. Strengthen HSM auditability with verifiable evidence Azure Cloud HSM provides more than log visibility.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-31">
+                <a href="https://www.docker.com/blog/docker-activestate-partnership/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] ActiveState Partners with Docker to Secure the Open Source in Enterprise Containers
+                </a>
+                <p class="mb-1 small text-light">Even security teams that have invested in a hardened base image often can’t say what’s running on top of it. DHI provides secure-by-default, minimal container images, with 4,000+ images built from source, near-zero CVEs, signed SBOMs, and SLSA Build Level 3 provenance.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-10-31">
+                <a href="https://www.hashicorp.com/blog/banking-at-machine-speed-securing-access-across-cloud-ai-and-hybrid-environments" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Banking at machine speed: Securing access across cloud, AI, and hybrid environments
+                </a>
+                <p class="mb-1 small text-light">But cloud adoption, automation, and AI are changing who and what requires access. Where credential risk accumulatesApplications rely on secrets, tokens, certificates, and credentials to connect with databases, APIs, and infrastructure services.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-10-31">
+                <a href="https://slack.engineering/from-ssh-to-rest-a-security-driven-modernization-of-slacks-emr-data-pipelines/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] From SSH to REST: A Security-Driven Modernization of Slack’s EMR Data Pipelines
+                </a>
+                <p class="mb-1 small text-light">The Real Cost of SSH Potential security risks included: Direct SSH access to compute clusters increases the potential attack surface Key distribution and rotation across orchestration workers adds operational overhead Achieving fine-grained audit granularity typically requires correlating logs ac...</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Lyft Engineering" data-date="2026-10-31">
+                <a href="https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250?source=rss----25cd379abb8---4" target="_blank" class="fw-bold text-decoration-none">
+                    [Lyft Engineering] Rerouting the Stream: How Lyft Moved to the Apache Flink Kubernetes Operator
+                </a>
+                <p class="mb-1 small text-light">Security patches lagged, modern Kubernetes features stayed out of reach, and every quarter we waited made the eventual escape messier. The translation from FlinkApplication to FlinkDeployment happens within our deploy API.</p>
+                <small class="text-secondary">
+                    
+                    Lyft Engineering | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-31">
+                <a href="https://engineering.fb.com/2026/10/27/developer-tools/python-typing-survey-2026-ai-tools-checker-landscape/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Python Typing Survey 2026: AI Tools and the Shifting Checker Landscape
+                </a>
+                <p class="mb-1 small text-light">Possible directions include new typing features and checker support tailored to individual libraries and frameworks. Better callable syntax remains a practical area for standards work, especially if improvements keep common typing tasks straightforward.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-10-31">
+                <a href="https://kubernetes.io/blog/2026/10/06/kubernetes-cgroups-v2-shift/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] The Shift to cgroup v2 in Kubernetes: What You Need to Know
+                </a>
+                <p class="mb-1 small text-light">Kubernetes uses cgroups to allocate resources like CPU and memory to containers, ensuring that applications run smoothly without interfering with each other. 36Memory QoS was introduced as an alpha feature in Kubernetes v1.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-10-31">
+                <a href="https://www.cncf.io/blog/2026/10/27/opentelemetry-powered-distributed-tracing-and-kubernetes-events-in-openchoreo/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] OpenTelemetry-powered distributed tracing and Kubernetes events in OpenChoreo
+                </a>
+                <p class="mb-1 small text-light">It uses the OpenTelemetry Collector to deliver two platform features: distributed tracing, and persistent, enriched Kubernetes events. Tracing modules are available today for OpenSearch, OpenObserve, AWS X-Ray, Azure Application Insights, and Google Cloud Trace.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-10-31">
+                <a href="https://blog.cloudflare.com/emudhra-patching/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] 4 real? Tracking exploitation and patching of eMudhra’s weak keys
+                </a>
+                <p class="mb-1 small text-light">We could’ve added a new endpoint, but that would’ve required a slow release of our challenge platform. October 23 16:30, our challenge platform rolled back to a previous version because of an unrelated issue.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-10-31">
+                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-10-31">
+                <a href="https://www.pulumi.com/blog/running-pulumi-neo-in-a-docker-sandbox/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Running Pulumi Neo in a Docker Sandbox: workshop recap
+                </a>
+                <p class="mb-1 small text-light">Mike Coleman is a Principal Solutions Architect at Docker. sbx --cloud run claude runs the sandbox in Docker’s cloud, so it keeps going after you close the laptop.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-10-31">
+                <a href="https://www.docker.com/blog/docker-navigator-partner-program/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Win the Agentic Era, Together: Introducing the Docker Navigator Partner Program
+                </a>
+                <p class="mb-1 small text-light">Identity, observability, supply chain security, MCP gateways, models, and clouds are each building their piece. Whether you build technology, run a cloud, deliver services, or sell through the channel, you extend our reach and turn the Docker platform into a complete, governable stack.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-10-31">
+                <a href="https://blog.sentry.io/beagle-ai-agent-workflows/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] How a beagle-shaped AI agent ships code to madewithvuejs.com
+                </a>
+                <p class="mb-1 small text-light">She's a cloud-hosted model inside a custom harness that lives on our own infrastructure. Milly is connected to our application monitoring service Sentry via their MCP.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-10-31">
+                <a href="https://blog.sentry.io/another-year-another-1-000-000-to-open-source-maintainers/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] We just gave a million dollars to Open Source maintainers
+                </a>
+                <p class="mb-1 small text-light">The PSF also highlighted the need for more funding to grow the team operating this infrastructure. Here's a table of recipients, updated as more maintainers accept our sponsorships.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-31">
+                <a href="https://engineering.atspotify.com/2026/10/advancing-generative-recommendation-inference-our-collaboration-with-nvidia-on-tensorrt-llm/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Advancing Generative Recommendation Inference: our collaboration with NVIDIA on TensorRT LLM
+                </a>
+                <p class="mb-1 small text-light">At Spotify, every surface and interaction is personalized to you as a user: the content on the Home page, the... The post Advancing Generative Recommendation Inference: our collaboration with NVIDIA on TensorRT LLM appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-31">
+                <a href="https://engineering.atspotify.com/2026/10/introducing-spotify-technology-proven-at-spotify-now-yours/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Introducing: Spotify Technology. Proven at Spotify, now yours.
+                </a>
+                <p class="mb-1 small text-light">Introducing Spotify Technology. The post Introducing: Spotify Technology. Proven at Spotify, now yours. appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-31">
+                <a href="https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Why Spotify Is Not Using Bayesian A/B Testing
+                </a>
+                <p class="mb-1 small text-light">Clearing the confusion about what Bayesian A/B testing is. The post Why Spotify Is Not Using Bayesian A/B Testing appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-10-31">
+                <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Portal by Spotify cut my Claude Code token usage by 90%
+                </a>
+                <p class="mb-1 small text-light">Most of what an AI coding agent does for me isn't thinking. It's I/O. The post Portal by Spotify cut my Claude Code token usage by 90% appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-10-31">
+                <a href="https://engineering.fb.com/2026/10/27/security/privacylib/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] PrivacyLib: Privacy Controls at the Data Access Boundary
+                </a>
+                <p class="mb-1 small text-light">It also bounds the surface area: An issue found after deployment is limited to the services running that build. Simulation reveals decision changes before release, while independent service deployments control timing to limit production impact.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-31">
+                <a href="https://www.indiatoday.in/technology/news/story/ai-startup-hacks-anthropic-in-12-hours-gains-access-to-employee-details-and-internal-messages-3025452-2026-10-26" target="_blank" class="fw-bold text-decoration-none">
+                    AI startup hacks Anthropic, gains access to employee details, internal messages
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.indiatoday.in/technology/news/story/ai-startup-hacks-anthropic-in-12-hours-gains-access-to-employee-details-and-internal-messages-3025452-2026-10-26 Comments URL: https://news.ycombinator.com/item?id=50315990 Points: 38 # Comments: 6</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-31">
+                <a href="https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament" target="_blank" class="fw-bold text-decoration-none">
+                    Serbia just elected the world's brainiest parliament
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament Comments URL: https://news.ycombinator.com/item?id=50314654 Points: 457 # Comments: 276</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-10-31">
+                <a href="https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/" target="_blank" class="fw-bold text-decoration-none">
+                    Cisco gives engineer unlimited AI tokens to rewrite legacy code
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/ Comments URL: https://news.ycombinator.com/item?id=50304122 Points: 230 # Comments: 280</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-10-31">
+                <a href="https://aws.amazon.com/blogs/aws/introducing-amazon-ecs-gateway-a-fully-managed-ingress-solution-for-ecs-services/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Introducing Amazon ECS Gateway: A fully-managed ingress solution for ECS services
+                </a>
+                <p class="mb-1 small text-light">When platform teams manage containerized applications at scale on Amazon Elastic Container Service (Amazon ECS), configuring ingress networking for each service often becomes a bottleneck. ECS Gateway introduces a clear separation of responsibilities between platform teams and application teams.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-10-31
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-10-31">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-web-functions-amazon-s3-on-the-vercel-marketplace-and-more-october-19-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: AWS Lambda Web Functions, Amazon S3 on the Vercel Marketplace, and more (October 19, 2026)
+                </a>
+                <p class="mb-1 small text-light">For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page. Check back each week for a quick roundup of interesting news and announcements from AWS.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-10-31
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

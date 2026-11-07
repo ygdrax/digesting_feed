@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - November 07, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - November 07, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for November 07, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-11-07">2026-11-07 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    15 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="GitLab">GitLab</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Microsoft Azure">Microsoft Azure</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Reddit">Reddit</option>
+                
+                <option value="Sentry">Sentry</option>
+                
+                <option value="Slack Engineering">Slack Engineering</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-11-07">
+                <a href="https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-6d8b1909d163?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Single-tenant Titus: VM-level isolation on a multi-tenant container platform
+                </a>
+                <p class="mb-1 small text-light">Using EC2 to run containers provides the VM, but takes away the managed experience. The application team still uses the Titus API, the same delivery pipeline, and the same observability.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-11-07">
+                <a href="https://www.hashicorp.com/blog/terraform-advances-infrastructure-lifecycle-management-for-the-agentic-era" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform advances infrastructure lifecycle management for the agentic era
+                </a>
+                <p class="mb-1 small text-light">Terraform Developer Portal in public preview extends HCP Terraform natively from infrastructure automation into governed self-service for developers and agents.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-11-07">
+                <a href="https://kubernetes.io/blog/2026/10/29/sig-arch-ai-conformance-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] From Working Group to SIG Architecture: spotlight on AI Conformance
+                </a>
+                <p class="mb-1 small text-light">It signals that the community now sees AI infrastructure requirements, things like accelerator scheduling, high-performance networking, workload-aware orchestration, and low-latency inference, as important enough to standardize at the ecosystem level.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-11-07">
+                <a href="https://slack.engineering/slack-ai-the-path-to-multi-cloud/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Slack AI: The Path to Multi-Cloud
+                </a>
+                <p class="mb-1 small text-light">Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. The Attribution Challenge: Accurately tracking the cost per feature internally becomes significantly harder when workloads are shifting dynamically between clouds.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-11-07">
+                <a href="https://www.reddit.com/r/devops/comments/1xq3jjl/across_the_whole_devops_stack_pipelines_terraform/" target="_blank" class="fw-bold text-decoration-none">
+                    Across the whole DevOps stack (Pipelines, Terraform, K8s, Docker, Ansible), how much do you actually write by hand vs prompting or using templates?
+                </a>
+                <p class="mb-1 small text-light">With so many different syntaxes and configs in our daily stack—CI/CD pipelines (GitHub Actions, GitLab), Terraform modules, Kubernetes manifests, Dockerfiles, Ansible playbooks, and Bash scripts—nobody can memorize every block and flag from scratch.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-11-07">
+                <a href="https://netflixtechblog.com/ontology-driven-observability-building-an-end-to-end-knowledge-graph-at-netflix-scale-421392cf5adf?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Ontology-Driven Observability: Building an End-to-End Knowledge Graph at Netflix Scale
+                </a>
+                <p class="mb-1 small text-light">Atlas, our telemetry platform, knows applications and their time series. It acts as the schema, rule set and shared agreement that standardizes how different systems understand entities like applications, services, incidents, deployments, etc.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-11-07">
+                <a href="https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity
+                </a>
+                <p class="mb-1 small text-light">Quality and reliability have always been a point of pride for Spotify. We run an extraordinarily complex... The post AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-11-07">
+                <a href="https://aws.amazon.com/blogs/aws/aws-continuum-for-code-vulnerabilities-is-now-generally-available/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Continuum for code vulnerabilities is now generally available
+                </a>
+                <p class="mb-1 small text-light">Today, we’re announcing the general availability of AWS Continuum for code vulnerabilities. AWS Continuum is a security service that finds and validates code vulnerabilities, then delivers fixes as patches you can automate or as pull requests in your repositories.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-11-07">
+                <a href="https://www.hashicorp.com/blog/introducing-ibm-cloud-secrets-manager-vault-dedicated" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Introducing IBM Cloud Secrets Manager Vault Dedicated: HashiCorp Vault Enterprise, managed by IBM
+                </a>
+                <p class="mb-1 small text-light">A new way for IBM Cloud® customers to consume HashiCorp® Vault® Enterprise on dedicated infrastructure without the operational burden of running it themselves.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-11-07">
+                <a href="https://www.hashicorp.com/blog/announcing-the-public-preview-of-hashicorp-vault-arc-evolve-security-for-emerging" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Announcing the public preview of HashiCorp Vault Arc: Evolve security for emerging workloads
+                </a>
+                <p class="mb-1 small text-light">It's about giving organizations the flexibility to respond as their infrastructure, workloads, and security requirements change. Organizations can progressively evaluate and introduce new capabilities while reducing the disruption and risk traditionally associated with major platform transitions.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-11-07">
+                <a href="https://www.cncf.io/blog/2026/11/07/we-organized-sustainability-month-heres-what-we-learned-%f0%9f%8c%b1/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] We organized Sustainability Month. Here’s what we learned. 🌱
+                </a>
+                <p class="mb-1 small text-light">What do Kubernetes resource allocation, eBPF, carbon observability, and GPUs have in common. This October, we brought these conversations together as part of Cloud Native Sustainability Month.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-11-07">
+                <a href="https://blog.cloudflare.com/personal-agents-visibility-control/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] See the agents, set the terms: new visibility and control for personal agents
+                </a>
+                <p class="mb-1 small text-light">Better visibility into agent activity allows you to decide what access makes sense for your site. You can also make these choices when you add a new zone to Cloudflare.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-11-07">
+                <a href="https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Evolving our calendar assistant Reclaim to be AI-native without starting over
+                </a>
+                <p class="mb-1 small text-light">As AI assistants and natural-language interfaces became more capable, they opened up a new way for people to use Reclaim. The result was an agent platform designed to work within Reclaim’s existing architecture.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-11-07">
+                <a href="https://dropbox.tech/culture/learnings-from-deploying-ai-at-company-scale" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Dropbox CTO Ali Dasdan on moving from AI adoption to transformation
+                </a>
+                <p class="mb-1 small text-light">Problem solving, communication, and leadership become critical to turning AI-enabled output into real value. Or you’re generating significantly more code, which puts additional stress on the tools and infrastructure that support development.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Reddit" data-date="2026-11-07">
+                <a href="https://www.reddit.com/r/devops/comments/1xoq4hx/cleared_devops_engineers_how_do_you_use_ai_tools/" target="_blank" class="fw-bold text-decoration-none">
+                    Cleared DevOps Engineers — How do you use AI tools in restricted DoD environments?
+                </a>
+                <p class="mb-1 small text-light">AI tools like ChatGPT, Claude, and GitHub Copilot have become incredibly useful for writing Terraform configurations, Kubernetes manifests, CI/CD pipelines, Bash/PowerShell scripts, and troubleshooting infrastructure issues.</p>
+                <small class="text-secondary">
+                    
+                    Reddit | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-11-07">
+                <a href="https://netflixtechblog.com/multi-ratio-video-resizing-for-mobile-feed-and-marketing-2e6b42810f49?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Multi‑Ratio Video Resizing for Mobile Feed and Marketing
+                </a>
+                <p class="mb-1 small text-light">We address this challenge by framing video resizing as a tracking and temporal optimization problem. This allows our virtual camera to cut and re-focus on different speakers as the conversation flows.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-11-07">
+                <a href="https://netflixtechblog.com/beyond-api-compatibility-building-a-tool-to-measure-the-blast-radius-of-library-changes-9474f2fd4f90?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Beyond API Compatibility: Building a Tool to Measure the Blast Radius of Library Changes
+                </a>
+                <p class="mb-1 small text-light">For library producers, that shared index helps answer two questions:What changed in the library’s public API. Quasar supplies semantic evidence, an agent reduces migration toil, and the library producer remains responsible for API and release decisions.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Microsoft Azure" data-date="2026-11-07">
+                <a href="https://azure.microsoft.com/en-us/blog/scale-reservoir-uncertainty-analysis-with-agile-reservoir-modeling/" target="_blank" class="fw-bold text-decoration-none">
+                    [Microsoft Azure] Scale reservoir uncertainty analysis with agile reservoir modeling
+                </a>
+                <p class="mb-1 small text-light">OSDU® Technical Standard-aligned services and OSDU Domain Data Management Services (DDMS) manage seismic, wellbore, interpretation, and simulation data.</p>
+                <small class="text-secondary">
+                    
+                    Microsoft Azure | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-11-07">
+                <a href="https://www.docker.com/blog/docker-activestate-trusted-content/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker and ActiveState Extending Secure Defaults to the Packages Developers Install
+                </a>
+                <p class="mb-1 small text-light">Key takeaways When the TeamPCP campaign weaponized a widely trusted security scanner in March, Docker Hardened Images were not affected. Docker Hardened Images reduce the security burden of maintaining container foundations.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-11-07">
+                <a href="https://www.docker.com/blog/docker-blueprint-alliance-agent-baseline/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] The Ecosystem is the Answer: Docker, the Blueprint Alliance, and the Importance of Collaboration in the Agentic Era
+                </a>
+                <p class="mb-1 small text-light">Okta, AWS, CrowdStrike, Databricks, Docker, Google Cloud, Lovable, Proofpoint, Salesforce, ServiceNow, Wiz and Zscaler are founding members, with GE Appliances and World Central Kitchen as strategic advisors. Docker, Snyk and Keycard drafted it, and the current release is v1.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-11-07">
+                <a href="https://www.docker.com/blog/docker-sandbox-code-checkout-workflows/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Where should your code live in a Docker Sandbox?
+                </a>
+                <p class="mb-1 small text-light">Reinstalling on the host can reverse the problem. Those tasks share tools and services, so running servers or changing the environment still needs coordination.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-11-07">
+                <a href="https://www.redhat.com/en/blog/3-recent-enhancements-red-hat-hybrid-cloud-console" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] 3 recent enhancements to Red Hat Hybrid Cloud Console
+                </a>
+                <p class="mb-1 small text-light">The product and engineering teams behind Red Hat Hybrid Cloud Console are always working on ways to improve the user experience.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="GitLab" data-date="2026-11-07">
+                <a href="https://about.gitlab.com/blog/department-of-war-instruction-for-ai-generated-code/" target="_blank" class="fw-bold text-decoration-none">
+                    [GitLab] The Pentagon wants to know who checks code when AI writes it
+                </a>
+                <p class="mb-1 small text-light">Because the evidence stays in the platform, you can change models under managed policy without erasing the history. GitLab Duo Agent Platform Self-Hosted runs on infrastructure you control, including air-gapped networks.</p>
+                <small class="text-secondary">
+                    
+                    GitLab | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-11-07">
+                <a href="https://blog.sentry.io/performance-wins-traces-coding-agent/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] Finding performance wins in our own traces with a coding agent
+                </a>
+                <p class="mb-1 small text-light">You can start with something as general as: Find all the critical paths in my application. I compared database work per request or query so changes in traffic wouldn't be misrepresented as performance improvements.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-11-07
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Sentry" data-date="2026-11-07">
+                <a href="https://blog.sentry.io/beagle-ai-agent-workflows/" target="_blank" class="fw-bold text-decoration-none">
+                    [Sentry] How a beagle-shaped AI agent ships code to madewithvuejs.com
+                </a>
+                <p class="mb-1 small text-light">She's a cloud-hosted model inside a custom harness that lives on our own infrastructure. Milly is connected to our application monitoring service Sentry via their MCP.</p>
+                <small class="text-secondary">
+                    
+                    Sentry | 2026-11-07
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

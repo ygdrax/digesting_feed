@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - November 26, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - November 26, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for November 26, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-11-26">2026-11-26 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    11 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Dropbox Tech">Dropbox Tech</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="Hacker News">Hacker News</option>
+                
+                <option value="Kubernetes">Kubernetes</option>
+                
+                <option value="Netflix">Netflix</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Slack Engineering">Slack Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-11-26">
+                <a href="https://www.cncf.io/blog/2026/11/17/is-your-opentelemetry-pipeline-becoming-a-performance-bottleneck/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Is your OpenTelemetry pipeline becoming a performance bottleneck?
+                </a>
+                <p class="mb-1 small text-light">In some cases, the infrastructure responsible for observing a system can become a performance problem of its own. In Kubernetes, telemetry workloads can fluctuate significantly as applications scale, deployments change, and traffic increases.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-11-26">
+                <a href="https://netflixtechblog.com/engineering-ai-discover-e244944cdc38?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Engineering AI Discover
+                </a>
+                <p class="mb-1 small text-light">This post covers the challenges we designed for and the key decisions we made along the way. Reshaping them took careful work, because agentic orchestration challenges many long-standing assumptions of distributed systems.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-11-26">
+                <a href="https://kubernetes.io/blog/2026/11/23/kubernetes-v1-38-sneak-peek/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Kubernetes v1.38 Sneak Peek
+                </a>
+                <p class="mb-1 small text-light">New features and deprecations are also announced in the Kubernetes release notes. You can see the announcements of changes in the release notes for: Kubernetes v1.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Kubernetes" data-date="2026-11-26">
+                <a href="https://kubernetes.io/blog/2026/11/16/ipvs-removal/" target="_blank" class="fw-bold text-decoration-none">
+                    [Kubernetes] Scheduling the removal of the kube-proxy IPVS backend
+                </a>
+                <p class="mb-1 small text-light">The control-plane problem was solved by not rewriting the entire ruleset on every update. (The kernel IPVS API doesn’t have a way of doing batch updates anyway, so this was essentially forced.</p>
+                <small class="text-secondary">
+                    
+                    Kubernetes | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-11-26">
+                <a href="https://blog.cloudflare.com/probing-dns-at-cloudflare/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] Probing DNS at Cloudflare
+                </a>
+                <p class="mb-1 small text-light">A little backgroundAt Cloudflare we’re obsessed with improving performance and safety for our customers. Flamingo is built from the ground up with Cloudflare’s infrastructure in mind.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-11-26">
+                <a href="https://blog.cloudflare.com/nginx2root/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] nginx2root: Five new nginx vulnerabilities, and how Cloudflare protects origins from the worst of them
+                </a>
+                <p class="mb-1 small text-light">For CVE-2026-123007, Xint's write-up shows how it leaked memory addresses to do exactly that. CVEWhat the attacker needsBehind Cloudflare's HTTP proxyCVE-2026-123007Direct control over HTTP/2 WINDOW_UPDATE, SETTINGS, PING and RST_STREAM on one connection to nginxProtected.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Slack Engineering" data-date="2026-11-26">
+                <a href="https://slack.engineering/shipyard-how-we-built-slacks-next-generation-ec2-platform/" target="_blank" class="fw-bold text-decoration-none">
+                    [Slack Engineering] Shipyard: How We Built Slack’s Next-Generation EC2 Platform
+                </a>
+                <p class="mb-1 small text-light">This flexibility allows teams to optimize for cost, performance, or compatibility without needing separate platform implementations. When foundational components need to change—such as a security patch, monitoring update, or networking improvement—a new slack-zero image is produced.</p>
+                <small class="text-secondary">
+                    
+                    Slack Engineering | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-11-26">
+                <a href="https://dropbox.tech/machine-learning/how-aiassisted-development-helped-us-build-the-new-dropbox-experience" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] How AI-assisted development helped us build the new Dropbox experience
+                </a>
+                <p class="mb-1 small text-light">A web feature could depend on services that desktop didn’t provide in the same way. Next, we needed a way to keep improving both applications without rebuilding the same features twice.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-11-26">
+                <a href="https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Evolving our calendar assistant Reclaim to be AI-native without starting over
+                </a>
+                <p class="mb-1 small text-light">As AI assistants and natural-language interfaces became more capable, they opened up a new way for people to use Reclaim. The result was an agent platform designed to work within Reclaim’s existing architecture.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Dropbox Tech" data-date="2026-11-26">
+                <a href="https://dropbox.tech/culture/learnings-from-deploying-ai-at-company-scale" target="_blank" class="fw-bold text-decoration-none">
+                    [Dropbox Tech] Dropbox CTO Ali Dasdan on moving from AI adoption to transformation
+                </a>
+                <p class="mb-1 small text-light">Problem solving, communication, and leadership become critical to turning AI-enabled output into real value. Or you’re generating significantly more code, which puts additional stress on the tools and infrastructure that support development.</p>
+                <small class="text-secondary">
+                    
+                    Dropbox Tech | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-11-26">
+                <a href="https://www.pulumi.com/blog/fips-images-ga/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] How FIPS led to leaner container images for everyone
+                </a>
+                <p class="mb-1 small text-light">The FIPS images for self-hosted Pulumi Cloud cover three pieces: the API service, the console (the web app), and a small tool that applies database migrations. The container health checks, API integration tests, and local dependency checks now use the same probe.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-11-26">
+                <a href="https://www.pulumi.com/blog/pulumi-cloud-rbac-least-privilege-by-default/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Least privilege by default: what's new in Pulumi Cloud RBAC
+                </a>
+                <p class="mb-1 small text-light">Service principals: an identity for automation A service principal is an identity for work that isn’t done by a person. Give each stack that uses Pulumi Deployments a service principal or a team with access to what that stack needs.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-11-26">
+                <a href="https://netflixtechblog.com/fact-checking-at-scale-building-a-more-accurate-and-efficient-synopsis-factuality-system-d7d85859d808?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Fact-Checking at Scale: Building a More Accurate and Efficient Synopsis Factuality System
+                </a>
+                <p class="mb-1 small text-light">Our new approach tackles both problems at once. 86, and the new factuality service’s explanations now show ~82% overlap with human rationales (up from ~69%).</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-11-26">
+                <a href="https://netflixtechblog.com/multi-ratio-video-resizing-for-mobile-feed-and-marketing-2e6b42810f49?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Multi‑Ratio Video Resizing for Mobile Feed and Marketing
+                </a>
+                <p class="mb-1 small text-light">We address this challenge by framing video resizing as a tracking and temporal optimization problem. This allows our virtual camera to cut and re-focus on different speakers as the conversation flows.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Netflix" data-date="2026-11-26">
+                <a href="https://netflixtechblog.com/beyond-api-compatibility-building-a-tool-to-measure-the-blast-radius-of-library-changes-9474f2fd4f90?source=rss-c3aeaf49d8a4------2" target="_blank" class="fw-bold text-decoration-none">
+                    [Netflix] Beyond API Compatibility: Building a Tool to Measure the Blast Radius of Library Changes
+                </a>
+                <p class="mb-1 small text-light">For library producers, that shared index helps answer two questions:What changed in the library’s public API. Quasar supplies semantic evidence, an agent reduces migration toil, and the library producer remains responsible for API and release decisions.</p>
+                <small class="text-secondary">
+                    
+                    Netflix | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-11-26">
+                <a href="https://www.docker.com/blog/docker-patches-java4shell-and-the-nginx-http-2-with-docker-hardened-images/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] Docker patches Java4Shell and the NGINX HTTP/2 with Docker Hardened Images
+                </a>
+                <p class="mb-1 small text-light">OpenJDK and Oracle disclosed Java4Shell (CVE-2026-114938) on November 17, and NGINX released fixes for two HTTP/2 flaws the next day. The same November update fixes other issues in these lines, so update when new images arrive.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-11-26">
+                <a href="https://engineering.fb.com/2026/11/13/android/cuttlefish-on-mac/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Cuttlefish on Mac: Running Android’s Virtual Device Framework Natively on Apple Silicon
+                </a>
+                <p class="mb-1 small text-light">Every tool required support for two separate platforms, while infrastructure and engineering capacity were divided between them. The AOSP mirrors this exact divide: Goldfish targets application developers, whereas Cuttlefish serves Android platform developers.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-11-26">
+                <a href="https://diseasescuredbyai.com/" target="_blank" class="fw-bold text-decoration-none">
+                    Tracking Diseases Cured by AI
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://diseasescuredbyai.com/ Comments URL: https://news.ycombinator.com/item?id=50657307 Points: 26 # Comments: 6</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-11-26">
+                <a href="https://michidk.github.io/sidebyside/" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: Three Linux VMs in a browser tab, each running a different browser
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://michidk.github.io/sidebyside/ Comments URL: https://news.ycombinator.com/item?id=50656036 Points: 45 # Comments: 14</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-11-26">
+                <a href="https://nextcloud.com/blog/euro-office-comes-to-your-desktop-with-the-nextcloud-office-desktop-app/" target="_blank" class="fw-bold text-decoration-none">
+                    Nextcloud Office Desktop app
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://nextcloud.com/blog/euro-office-comes-to-your-desktop-with-the-nextcloud-office-desktop-app/ Comments URL: https://news.ycombinator.com/item?id=50654289 Points: 346 # Comments: 143</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-11-26">
+                <a href="https://arxiv.org/abs/2611.34924" target="_blank" class="fw-bold text-decoration-none">
+                    An algebraic quantization of gravity from the null cone
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://arxiv.org/abs/2611.34924 Comments URL: https://news.ycombinator.com/item?id=50651863 Points: 147 # Comments: 42</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-11-26">
+                <a href="https://news.ycombinator.com/item?id=50649864" target="_blank" class="fw-bold text-decoration-none">
+                    Tell HN: Lots of Ask HNs again
+                </a>
+                <p class="mb-1 small text-light">There have been questions about why the /ask page (https://news. id=50280719 - Oct 2026 (3 comments)I believe I found the problem.</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-11-26">
+                <a href="https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features" target="_blank" class="fw-bold text-decoration-none">
+                    The New York Times warns photographers not to update Photoshop over AI features
+                </a>
+                <p class="mb-1 small text-light">https://archive.ph/pcUgy Comments URL: https://news.ycombinator.com/item?id=50647673 Points: 567 # Comments: 470</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-11-26">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-local-zone-in-bogota-30-minute-lambda-timeout-and-more-november-24-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: Local Zone in Bogotá, 30-minute Lambda timeout, and more (November 24, 2026)
+                </a>
+                <p class="mb-1 small text-light">A new AWS Local Zone in Bogotá brought AWS infrastructure closer to users in Colombia. Access to the API is controlled with IAM policies, and every call lands in AWS CloudTrail.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-11-26
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-11-26">
+                <a href="https://aws.amazon.com/blogs/aws/aws-lambda-now-supports-gpu-instances-for-event-functions-on-lambda-managed-instances/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Lambda now supports GPU instances for Event Functions on Lambda Managed Instances
+                </a>
+                <p class="mb-1 small text-light">aws/lambda/deep-learning-containers/vllm:cuda-v1 After pushing the image to Amazon ECR, I created the function. Deploy with the same Console, CLI, AWS CloudFormation, AWS CDK, AWS SAM, and Terraform workflow as any Lambda Event Function.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-11-26
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>

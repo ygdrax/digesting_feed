@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Digest - November 27, 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #2a2a2a;
+        }
+
+        .form-select {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .form-select option {
+            background-color: #1e1e1e;
+        }
+
+        .title {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4 text-center title">
+            
+                📊 Daily DevOps Digest - November 27, 2026
+            
+        </h1>
+        <p class="text-center text-muted">
+            
+                Top 25 articles selected for November 27, 2026
+            
+        </p>
+        
+        <!-- Navigation -->
+        <div class="mb-3 text-center">
+            
+            <a href="../index.html" class="btn btn-primary btn-sm me-2">📊 Current Digest</a>
+            <a href="../archives.html" class="btn btn-outline-secondary btn-sm me-2">📚 Browse Archives</a>
+            <a href="../history_report.html" class="btn btn-outline-secondary btn-sm">📊 Historical Report</a>
+            
+        </div>
+
+        
+        <!-- Date Filter with Enhanced Navigation (only for archive pages) -->
+        <div class="mb-3 text-center">
+            <label for="dateFilter" class="form-label me-2">Filter by date:</label>
+            <select id="dateFilter" class="form-select w-auto d-inline-block me-2">
+                <option value="all">All Dates (25 articles)</option>
+                
+                <option value="2026-11-27">2026-11-27 (25 articles)</option>
+                
+            </select>
+            <button id="prevDate" class="btn btn-outline-secondary btn-sm me-1" title="Previous Date">←</button>
+            <button id="nextDate" class="btn btn-outline-secondary btn-sm me-2" title="Next Date">→</button>
+            <button id="todayBtn" class="btn btn-outline-primary btn-sm" title="Today's Articles">Today</button>
+        </div>
+        
+
+        <!-- Quick Stats -->
+        <div class="mb-3 text-center">
+            <small class="text-muted">
+                <span id="statsText">
+                    
+                    Showing 25 total articles from 
+                    11 sources
+                    
+                    
+                </span>
+            </small>
+        </div>
+
+        <!-- Source Filter -->
+        <div class="mb-4 text-center">
+            <label for="sourceFilter" class="form-label me-2">Filter by source:</label>
+            <select id="sourceFilter" class="form-select w-auto d-inline-block">
+                <option value="all">All Sources</option>
+                
+                <option value="Amazon AWS">Amazon AWS</option>
+                
+                <option value="Cloudflare">Cloudflare</option>
+                
+                <option value="CNCF">CNCF</option>
+                
+                <option value="Docker">Docker</option>
+                
+                <option value="Engineering at Meta">Engineering at Meta</option>
+                
+                <option value="Hacker News">Hacker News</option>
+                
+                <option value="HashiCorp">HashiCorp</option>
+                
+                <option value="Pulumi">Pulumi</option>
+                
+                <option value="Red Hat">Red Hat</option>
+                
+                <option value="Snyk">Snyk</option>
+                
+                <option value="Spotify Engineering">Spotify Engineering</option>
+                
+            </select>
+        </div>
+
+        <ul class="list-group" id="articleList">
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-11-27">
+                <a href="https://news.sky.com/story/us-air-forces-cloud-computing-platform-hacked-13617163" target="_blank" class="fw-bold text-decoration-none">
+                    US Air Force's cloud computing platform hacked
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://news.sky.com/story/us-air-forces-cloud-computing-platform-hacked-13617163 Comments URL: https://news.ycombinator.com/item?id=50666375 Points: 204 # Comments: 121</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-11-27">
+                <a href="https://www.hashicorp.com/blog/building-a-secure-foundation-for-ai-on-kubernetes-with-hashicorp-vault" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Building a secure foundation for AI on Kubernetes with HashiCorp Vault
+                </a>
+                <p class="mb-1 small text-light">Moving a model from demo to production introduces challenges across compute, GPU utilization, model serving, networking, storage, observability, cost and most importantly, security.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-11-27">
+                <a href="https://blog.cloudflare.com/ruby2shell-waf-protection/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] How Cloudflare WAF protects against ruby2shell (CVE-2026-132825)
+                </a>
+                <p class="mb-1 small text-light">Our team continues to monitor attack traffic and will update the rules as new techniques appear. Impact on Cloudflare infrastructureCloudflare has patched its systems that use Ruby against ruby2shell.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Cloudflare" data-date="2026-11-27">
+                <a href="https://blog.cloudflare.com/phpaftershell-waf-protection/" target="_blank" class="fw-bold text-decoration-none">
+                    [Cloudflare] How Cloudflare WAF helps protect against phpAfterShell and other critical PHP flaws
+                </a>
+                <p class="mb-1 small text-light">These releases fix 16 other security vulnerabilities, six of them also rated critical. The other critical flawsThe same releases fix six more critical vulnerabilities.</p>
+                <small class="text-secondary">
+                    
+                    Cloudflare | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Pulumi" data-date="2026-11-27">
+                <a href="https://www.pulumi.com/blog/trigger-pulumi-agents-from-infrastructure-events/" target="_blank" class="fw-bold text-decoration-none">
+                    [Pulumi] Trigger Pulumi Agents from Infrastructure Events
+                </a>
+                <p class="mb-1 small text-light">For events in Pulumi Cloud, that choice can be as specific as a failed update on a single stack. Here, agentRoleId is a configuration key that holds the ID of an existing Pulumi Cloud role with stack:read on checkout/prod.</p>
+                <small class="text-secondary">
+                    
+                    Pulumi | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Docker" data-date="2026-11-27">
+                <a href="https://www.docker.com/blog/agentic-ai-security-docker-governance/" target="_blank" class="fw-bold text-decoration-none">
+                    [Docker] The Trust Layer: Securing Agentic AI with Docker AI Governance
+                </a>
+                <p class="mb-1 small text-light">A coding agent may need to install packages, build containers, edit project files, or connect to external services. Docker Hardened Images provide minimal, secure, and production-ready container images, Helm charts, and system packages maintained by Docker.</p>
+                <small class="text-secondary">
+                    
+                    Docker | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-11-27">
+                <a href="https://www.redhat.com/en/blog/why-your-ansible-automation-platform-instance-needs-its-own-disaster-recovery-plan" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] Why your Ansible Automation Platform instance needs its own disaster recovery plan
+                </a>
+                <p class="mb-1 small text-light">At an Ansible Automates event, we asked a room of IT leaders a simple question: Does your automation platform have its own high-availability and disaster recovery plan.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Red Hat" data-date="2026-11-27">
+                <a href="https://www.redhat.com/en/blog/how-build-self-improving-rag-retrieval-pipeline-zenml-and-red-hat-openshift-ai" target="_blank" class="fw-bold text-decoration-none">
+                    [Red Hat] How to build a self-improving RAG retrieval pipeline with ZenML and Red Hat OpenShift AI
+                </a>
+                <p class="mb-1 small text-light">The emergence of retrieval-augmented generation (RAG) applications and AI agents promises to revolutionize how we interact with the vast amount of digital knowledge we have available today.</p>
+                <small class="text-secondary">
+                    
+                    Red Hat | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-11-27">
+                <a href="https://aws.amazon.com/blogs/aws/test-your-applications-against-aws-locally-with-aws-emulator/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Test your applications against AWS locally with AWS Emulator
+                </a>
+                <p class="mb-1 small text-light">Another group picks up an issue, writes tests, implements the behavior, and reviews the change for correctness, performance, and security. How closely it matches AWS varies by service and feature.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-11-27">
+                <a href="https://www.hashicorp.com/blog/nomad-in-2026-a-year-of-scale-security-and-ecosystem-velocity" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Nomad in 2026: A Year of Scale, Security, and Ecosystem Velocity
+                </a>
+                <p class="mb-1 small text-light">Today’s infrastructure demands an orchestration platform that pairs high-throughput scheduling with granular kernel-level security and clean operational automation across them.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-11-27">
+                <a href="https://www.cncf.io/blog/2026/11/19/how-to-support-your-app-on-kubernetes-environments-you-dont-control/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] How to support your app on Kubernetes environments you don’t control
+                </a>
+                <p class="mb-1 small text-light">One may run a managed Kubernetes service in a public cloud. What does a customer need to do if an application release depends on a newer Kubernetes capability.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="CNCF" data-date="2026-11-27">
+                <a href="https://www.cncf.io/blog/2026/11/18/optimizing-kubernetes-admission-control-where-kyvernos-cel-admission-cost-actually-goes/" target="_blank" class="fw-bold text-decoration-none">
+                    [CNCF] Optimizing Kubernetes admission control: Where Kyverno’s CEL admission cost actually goes
+                </a>
+                <p class="mb-1 small text-light">Admission control is a critical process in Kubernetes clusters, and a slow or misconfigured controller can impact cluster operations. Thanks to our community, we have fixed performance issues and added more tests.</p>
+                <small class="text-secondary">
+                    
+                    CNCF | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-11-27">
+                <a href="https://snyk.io/blog/secure-ai-coding-agents-nvidia-openshell/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Evo Agentic Development Security and Evo Dependency Firewall Inside NVIDIA OpenShell
+                </a>
+                <p class="mb-1 small text-light">See how Evo ADS and Dependency Firewall secure Claude Code in NVIDIA OpenShell, from screening agent skills and code to controlling package installs.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-11-27">
+                <a href="https://snyk.io/blog/governing-ai-coding-agents-evo-ads/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Say Yes To MCP, Safely A Guide For Governing AI Coding Agents With Evo ADS
+                </a>
+                <p class="mb-1 small text-light">Learn how to inventory MCP servers, assess risk, monitor policy impact, and block high-risk connections without disrupting developers. Evo ADS helps teams govern AI coding agents with confidence.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Snyk" data-date="2026-11-27">
+                <a href="https://snyk.io/blog/snyk-named-leader-forrester-wave-agentic-development-security-tools-q4-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Snyk] Snyk Named a Leader in The Forrester Wave™: Agentic Development Security Tools, Q4 2026
+                </a>
+                <p class="mb-1 small text-light">Snyk is a Leader in The Forrester Wave™: Agentic Development Security Tools, Q4 2026, with the highest score in the strategy category.</p>
+                <small class="text-secondary">
+                    
+                    Snyk | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-11-27">
+                <a href="https://engineering.atspotify.com/2026/11/september-29-outage-incident-report-what-we-learnt/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] September 29 Outage Incident Report: What we learnt
+                </a>
+                <p class="mb-1 small text-light">On September 29, Spotify experienced an outage that disrupted users’ access to the platform. This outage was... The post September 29 Outage Incident Report: What we learnt appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-11-27">
+                <a href="https://engineering.atspotify.com/2026/10/advancing-generative-recommendation-inference-our-collaboration-with-nvidia-on-tensorrt-llm/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Advancing Generative Recommendation Inference: our collaboration with NVIDIA on TensorRT LLM
+                </a>
+                <p class="mb-1 small text-light">At Spotify, every surface and interaction is personalized to you as a user: the content on the Home page, the... The post Advancing Generative Recommendation Inference: our collaboration with NVIDIA on TensorRT LLM appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Spotify Engineering" data-date="2026-11-27">
+                <a href="https://engineering.atspotify.com/2026/10/introducing-spotify-technology-proven-at-spotify-now-yours/" target="_blank" class="fw-bold text-decoration-none">
+                    [Spotify Engineering] Introducing: Spotify Technology. Proven at Spotify, now yours.
+                </a>
+                <p class="mb-1 small text-light">Introducing Spotify Technology. The post Introducing: Spotify Technology. Proven at Spotify, now yours. appeared first on Spotify Engineering.</p>
+                <small class="text-secondary">
+                    
+                    Spotify Engineering | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Engineering at Meta" data-date="2026-11-27">
+                <a href="https://engineering.fb.com/2026/11/11/ml-applications/intelligent-delivery-serve-better-ads/" target="_blank" class="fw-bold text-decoration-none">
+                    [Engineering at Meta] Intelligent Delivery: Making Every Unit of Compute Serve Better Ads
+                </a>
+                <p class="mb-1 small text-light">It has delivered ~10% incremental ranking performance on top of model and system advancements since 2017. And how will different resource settings affect their outcomes and serving performance.</p>
+                <small class="text-secondary">
+                    
+                    Engineering at Meta | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-11-27">
+                <a href="https://www.webosarchive.org/pivot/2026/11/27/the-story-so-far/" target="_blank" class="fw-bold text-decoration-none">
+                    Show HN: I restored Palm's last device, and brought its OS to other platforms
+                </a>
+                <p class="mb-1 small text-light">0 is the first OTA Update for Palm/HP's TouchPad, modernizing a 15-year old device. Lunacy is its sibling: the webOS experience, and apps, on Android.</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-11-27">
+                <a href="https://construct22.com/" target="_blank" class="fw-bold text-decoration-none">
+                    Group chat where your AI talks behind your back
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://construct22.com/ Comments URL: https://news.ycombinator.com/item?id=50663595 Points: 568 # Comments: 247</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Hacker News" data-date="2026-11-27">
+                <a href="https://blainehansen.me/post/mainstream-verifiable-language/" target="_blank" class="fw-bold text-decoration-none">
+                    The need for a formally verifiable mainstream programming language
+                </a>
+                <p class="mb-1 small text-light">Article URL: https://blainehansen.me/post/mainstream-verifiable-language/ Comments URL: https://news.ycombinator.com/item?id=50663089 Points: 238 # Comments: 251</p>
+                <small class="text-secondary">
+                    
+                    Hacker News | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-11-27">
+                <a href="https://aws.amazon.com/blogs/aws/four-continents-four-new-aws-heroes-closing-out-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] Four Continents, Four New AWS Heroes: Closing Out 2026
+                </a>
+                <p class="mb-1 small text-light">As AWS re:Invent is around the corner, we’re proud to recognize a new group of AWS Heroes. Geethika Guruge – Auckland, New Zealand Community Hero Geethika Guruge is a Principal Consultant at Mantel Group whose work spans serverless, DevOps, cloud infrastructure, and agentic AI.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="Amazon AWS" data-date="2026-11-27">
+                <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-nitro-sandboxes-aws-emulator-and-more-november-16-2026/" target="_blank" class="fw-bold text-decoration-none">
+                    [Amazon AWS] AWS Weekly Roundup: AWS Nitro Sandboxes, AWS Emulator, and more (November 16, 2026)
+                </a>
+                <p class="mb-1 small text-light">Headlines Test your applications against AWS locally with AWS Emulator introduces a generally available local environment for AWS API interactions. For a full list of AWS announcements, be sure to keep an eye on the What’s New with AWS page.</p>
+                <small class="text-secondary">
+                    
+                    Amazon AWS | 2026-11-27
+                    
+                </small>
+            </li>
+            
+            <li class="list-group-item mb-2" data-source="HashiCorp" data-date="2026-11-27">
+                <a href="https://www.hashicorp.com/blog/terraform-introduces-tfpolicy-support-for-stacks-scim-support-and-more" target="_blank" class="fw-bold text-decoration-none">
+                    [HashiCorp] Terraform introduces tfpolicy support for Stacks, SCIM support, and more
+                </a>
+                <p class="mb-1 small text-light">These updates help platform teams streamline large-scale deployments, simplify operations with AI-ready workflows, strengthen security and governance, and manage infrastructure more efficiently.</p>
+                <small class="text-secondary">
+                    
+                    HashiCorp | 2026-11-27
+                    
+                </small>
+            </li>
+            
+        </ul>
+
+        <footer class="mt-5 text-center text-muted">
+            <small>Generated by <strong>digesting_feed</strong>.</small>
+        </footer>
+    </div>
+
+    <script>
+        const sourceFilter = document.getElementById('sourceFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const prevDateBtn = document.getElementById('prevDate');
+        const nextDateBtn = document.getElementById('nextDate');
+        const todayBtn = document.getElementById('todayBtn');
+        const statsText = document.getElementById('statsText');
+        const articleListItems = document.querySelectorAll('#articleList li');
+
+        // Get all unique dates from the filter options
+        const availableDates = Array.from(dateFilter.options)
+            .slice(1) // Skip "All Dates" option
+            .map(option => option.value)
+            .sort((a, b) => new Date(b) - new Date(a)); // Most recent first
+
+        function updateStats() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+            
+            let visibleCount = 0;
+            let sourcesSet = new Set();
+            let datesSet = new Set();
+            
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+                
+                if (matchesSource && matchesDate) {
+                    visibleCount++;
+                    sourcesSet.add(li.dataset.source);
+                    datesSet.add(li.dataset.date);
+                }
+            });
+            
+            let statsMessage = `Showing ${visibleCount} articles from ${sourcesSet.size} sources`;
+            if (datesSet.size > 1) {
+                statsMessage += ` across ${datesSet.size} days`;
+            } else if (datesSet.size === 1) {
+                statsMessage += ` for ${Array.from(datesSet)[0]}`;
+            }
+            
+            statsText.textContent = statsMessage;
+        }
+
+        function filterArticles() {
+            const sourceValue = sourceFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            articleListItems.forEach(li => {
+                const matchesSource = sourceValue === 'all' || li.dataset.source.toLowerCase() === sourceValue;
+                const matchesDate = dateValue === 'all' || li.dataset.date === dateValue;
+
+                if (matchesSource && matchesDate) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            
+            updateStats();
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const currentDate = dateFilter.value;
+            const currentIndex = availableDates.indexOf(currentDate);
+            
+            // Update button states
+            prevDateBtn.disabled = currentDate === 'all' || currentIndex === 0;
+            nextDateBtn.disabled = currentDate === 'all' || currentIndex === availableDates.length - 1;
+            
+            // Check if today's date exists
+            const today = new Date().toISOString().split('T')[0];
+            todayBtn.disabled = !availableDates.includes(today);
+            
+            if (currentDate !== 'all' && availableDates.includes(today) && currentDate === today) {
+                todayBtn.textContent = 'Today ✓';
+            } else {
+                todayBtn.textContent = 'Today';
+            }
+        }
+
+        function navigateDate(direction) {
+            const currentDate = dateFilter.value;
+            if (currentDate === 'all') return;
+            
+            const currentIndex = availableDates.indexOf(currentDate);
+            let newIndex;
+            
+            if (direction === 'prev') {
+                newIndex = Math.max(0, currentIndex - 1);
+            } else {
+                newIndex = Math.min(availableDates.length - 1, currentIndex + 1);
+            }
+            
+            if (newIndex !== currentIndex) {
+                dateFilter.value = availableDates[newIndex];
+                filterArticles();
+            }
+        }
+
+        function goToToday() {
+            const today = new Date().toISOString().split('T')[0];
+            if (availableDates.includes(today)) {
+                dateFilter.value = today;
+                filterArticles();
+            }
+        }
+
+        // Event listeners
+        sourceFilter.addEventListener('change', filterArticles);
+        dateFilter.addEventListener('change', filterArticles);
+        prevDateBtn.addEventListener('click', () => navigateDate('prev'));
+        nextDateBtn.addEventListener('click', () => navigateDate('next'));
+        todayBtn.addEventListener('click', goToToday);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') {
+                return; // Don't interfere with form inputs
+            }
+            
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateDate('prev');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateDate('next');
+            } else if (e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                goToToday();
+            }
+        });
+
+        // Initialize
+        updateNavigationButtons();
+        updateStats();
+    </script>
+</body>
+
+</html>
